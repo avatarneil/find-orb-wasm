@@ -6,7 +6,7 @@ Extracted from the latest `webastrometrica` `origin/main` at `c86e53ccf9fa662bc4
 
 Read the [correctness research](docs/correctness-research.html) for kernel-checked numerical theorems, restricted translation validation of selected WASM functions, and reproduced integrator defects. The [earlier performance study](docs/findings.html) records native/WASM benchmarks and the **6.33 MB** compact data download.
 
-[GitHub release v0.1.0](https://github.com/avatarneil/find-orb-wasm/releases/tag/v0.1.0) preserves the initial unoptimized port at `fe8a88d`, with its runtime, full dataset, corresponding source, license notices, checksums, and seven-case accuracy results. Subsequent optimizations and correctness research are on `main`; the initial release predates them.
+[GitHub release v0.1.0](https://github.com/avatarneil/find-orb-wasm/releases/tag/v0.1.0) preserves the initial unoptimized port at `fe8a88d`, with its runtime, full dataset, corresponding source, license notices, checksums, and seven-case accuracy results. Release [v0.2.0](https://github.com/avatarneil/find-orb-wasm/releases/tag/v0.2.0) ships the optimized runtime with a 6.33 MB compact download; the initial release predates these changes. Compact and full runtime archives each have their own matching manifest and data asset. Do not mix them. Versioned browser assets, source and notices are hosted at https://avatarneil.github.io/find-orb-wasm/v0.2.0/. The [release parity results](results/parity-v0.2.0.json) compare both packs with the unmodified pinned upstream executable.
 
 ## Build
 

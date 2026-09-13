@@ -1,0 +1,200 @@
+{
+  "passed": true,
+  "binarySHA256": "256e850727f91a441f2344217a6a15727dfefcabb91f03b61e8d694d9d03cd57",
+  "reference": "Unmodified pinned upstream native fo, original wall-clock search policy",
+  "results": [
+    {
+      "id": "short-arc-fit",
+      "native": {
+        "rmsArcsec": 0.024825
+      },
+      "full": {
+        "rmsArcsec": 0.024825
+      },
+      "compact": {
+        "rmsArcsec": 0.024825
+      },
+      "upstreamParity": {
+        "maxNativeSkyErrorArcsec": 4.9338428430486316e-8,
+        "nativeElementDeltas": {
+          "a": 2.4870061565707147e-10,
+          "e": 4.799938224664402e-12,
+          "i": 3.370104195710155e-11,
+          "M": 2.2110047126489007e-10,
+          "arg_per": 2.0870061234745663e-10,
+          "asc_node": 2.120259523508139e-11
+        }
+      },
+      "compactParity": {
+        "maxNativeSkyErrorArcsec": 0,
+        "nativeElementDeltas": {
+          "a": 0,
+          "e": 0,
+          "i": 0,
+          "M": 0,
+          "arg_per": 0,
+          "asc_node": 0
+        }
+      }
+    },
+    {
+      "id": "ceres-30d",
+      "native": {
+        "horizonsPositionErrorMeters": [
+          0.00001660870004860371,
+          1.7065869456617402,
+          4.083948889186263,
+          7.06438335509479
+        ]
+      },
+      "full": {
+        "horizonsPositionErrorMeters": [
+          0.00001660870004860371,
+          1.706506978347973,
+          4.0838439187157825,
+          7.06427982656132
+        ]
+      },
+      "compact": {
+        "horizonsPositionErrorMeters": [
+          0.00001660870004860371,
+          1.706506978347973,
+          4.0838439187157825,
+          7.06427982656132
+        ]
+      },
+      "upstreamParity": {
+        "maxNativePositionErrorMeters": 0.00013695884920918852,
+        "maxNativeVelocityErrorMetersPerSecond": 1.8021592934682844e-11
+      },
+      "compactParity": {
+        "maxNativePositionErrorMeters": 0,
+        "maxNativeVelocityErrorMetersPerSecond": 0
+      }
+    },
+    {
+      "id": "ceres-topocentric",
+      "native": {
+        "horizonsSkyErrorArcsec": [
+          0.008334291632378484,
+          0.008426368807383714,
+          0.00851436419232872,
+          0.008584400361870165,
+          0.008663933922692298
+        ]
+      },
+      "full": {
+        "horizonsSkyErrorArcsec": [
+          0.008334291632378484,
+          0.008426368807383714,
+          0.00851436419232872,
+          0.008584400361870165,
+          0.008663933922692298
+        ]
+      },
+      "compact": {
+        "horizonsSkyErrorArcsec": [
+          0.008334291632378484,
+          0.008426368807383714,
+          0.00851436419232872,
+          0.008584400361870165,
+          0.008663933922692298
+        ]
+      },
+      "upstreamParity": {
+        "maxNativeSkyErrorArcsec": 0
+      },
+      "compactParity": {
+        "maxNativeSkyErrorArcsec": 0
+      }
+    },
+    {
+      "id": "eccentricity-0.95",
+      "native": {},
+      "full": {},
+      "compact": {},
+      "upstreamParity": {
+        "maxNativePositionErrorMeters": 0.00011536771758139964,
+        "maxNativeVelocityErrorMetersPerSecond": 3.763498537444007e-11
+      },
+      "compactParity": {
+        "maxNativePositionErrorMeters": 0,
+        "maxNativeVelocityErrorMetersPerSecond": 0
+      }
+    },
+    {
+      "id": "eccentricity-0.999999",
+      "native": {},
+      "full": {},
+      "compact": {},
+      "upstreamParity": {
+        "maxNativePositionErrorMeters": 0.00013286960038882967,
+        "maxNativeVelocityErrorMetersPerSecond": 3.604318586936569e-11
+      },
+      "compactParity": {
+        "maxNativePositionErrorMeters": 0,
+        "maxNativeVelocityErrorMetersPerSecond": 0
+      }
+    },
+    {
+      "id": "eccentricity-1.4",
+      "native": {},
+      "full": {},
+      "compact": {},
+      "upstreamParity": {
+        "maxNativePositionErrorMeters": 0.00013796222415578016,
+        "maxNativeVelocityErrorMetersPerSecond": 3.078688793008319e-11
+      },
+      "compactParity": {
+        "maxNativePositionErrorMeters": 0,
+        "maxNativeVelocityErrorMetersPerSecond": 0
+      }
+    },
+    {
+      "id": "ceres-heldout-fit",
+      "native": {
+        "horizonsSkyErrorArcsec": [
+          0.006598688050968689,
+          0.010909349461108681
+        ],
+        "rmsArcsec": 0.0019829
+      },
+      "full": {
+        "horizonsSkyErrorArcsec": [
+          0.006598688050968689,
+          0.010909349461108681
+        ],
+        "rmsArcsec": 0.0019829
+      },
+      "compact": {
+        "horizonsSkyErrorArcsec": [
+          0.006598688050968689,
+          0.010909349461108681
+        ],
+        "rmsArcsec": 0.0019829
+      },
+      "upstreamParity": {
+        "maxNativeSkyErrorArcsec": 0,
+        "nativeElementDeltas": {
+          "a": 1.0036416142611415e-13,
+          "e": 0,
+          "i": 0,
+          "M": 3.9193537304527126e-11,
+          "arg_per": 3.380762336746557e-11,
+          "asc_node": 9.947598300641403e-14
+        }
+      },
+      "compactParity": {
+        "maxNativeSkyErrorArcsec": 0,
+        "nativeElementDeltas": {
+          "a": 0,
+          "e": 0,
+          "i": 0,
+          "M": 0,
+          "arg_per": 0,
+          "asc_node": 0
+        }
+      }
+    }
+  ]
+}
