@@ -1,0 +1,31 @@
+{
+  "name": "find-orb-wasm",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "license": "GPL-2.0-or-later",
+  "description": "Pinned Find_Orb WebAssembly build and isolated worker runtime",
+  "exports": {
+    ".": {
+      "types": "./src/index.d.ts",
+      "default": "./src/index.js"
+    }
+  },
+  "files": [
+    "src",
+    "dist",
+    "build",
+    "README.md",
+    "LICENSE",
+    "EMSCRIPTEN-LICENSE.txt",
+    "licenses",
+    "NOTICE",
+    "provenance.json"
+  ],
+  "scripts": {
+    "build": "node build/build.mjs"
+  },
+  "engines": {
+    "node": ">=24"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "sourceRepository": "https://github.com/avatarneil/webastrometrica",
+  "sourceRef": "origin/main",
+  "sourceCommit": "c86e53ccf9fa662bc43fb0b3eed67594790e52a2",
+  "sourceDirectory": "packages/find-orb-wasm/",
+  "extractedFilesSHA256": {
+    "packages/find-orb-wasm/EMSCRIPTEN-LICENSE.txt": "2fd38dc06e484cdd7a3f1e2f6577f5d53062052a2fd85131b56b89fbd673731c",
+    "packages/find-orb-wasm/LICENSE": "db296f2f7f35bca3a174efb0eb392b3b17bd94b341851429a3dff411b1c2fc73",
+    "packages/find-orb-wasm/README.md": "3f9dd648ad4eb5a2ac1f386e9430542f99ff5b2603fc490f1f8518679b16c1bb",
+    "packages/find-orb-wasm/build/build.mjs": "97a32a9ac836a3ade2d6603cd86972b916491b182f813fa5eb98895388a68040",
+    "packages/find-orb-wasm/build/patches.mjs": "385984ea4126adf9ad3bbda6e2c2455dd1b8f84e4f6282b389e6aec7f3ec5fef",
+    "packages/find-orb-wasm/build/pins.mjs": "63447b3bdba261263f2b10788fac72fe2a9bf64ff4399aa8fd2571b52579a525",
+    "packages/find-orb-wasm/build/platform.cpp": "a3ff365f8ee73f7aba0180e85ee526a15390e65b19e34cd3cfe148ff5638b995",
+    "packages/find-orb-wasm/package.json": "71a149a2111c5318981288352aaad7a9189616b15b5ef8eb1072b984e960d117",
+    "packages/find-orb-wasm/src/client.js": "0227d79563df1c2235131803b429e2fa534a4a5b9699ab5f11010197554d347b",
+    "packages/find-orb-wasm/src/index.d.ts": "f256d9da7b8bc56d702e6b726754f882be95d52176ed1aaabbc4821987cfba15",
+    "packages/find-orb-wasm/src/index.js": "d6bcee2fc35461b9419d28721d867b17993d96778c540ccbf910ff12c463a5e7",
+    "packages/find-orb-wasm/src/runtime.js": "ac192094791b69088b9426fda68539583c585200f3276e69f54f2a4fbd2fd350",
+    "packages/find-orb-wasm/src/worker.js": "ba357ef2859d35a67149f50f583187c2e51951e1a5b8df104abe2a3b697e41de"
+  }
+}
