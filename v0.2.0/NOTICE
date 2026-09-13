@@ -1,0 +1,40 @@
+Find_Orb WebAssembly port
+
+Original Find_Orb: Bill Gray / Project Pluto
+https://github.com/Bill-Gray/find_orb
+https://www.projectpluto.com/find_orb.htm
+
+Port extracted from WebAstrometrica; exact revision and original file hashes
+are recorded in provenance.json. Port additions: GPL-2.0-or-later.
+
+Pinned dependencies and unmodified license texts:
+- Find_Orb and lunar: GPL-2.0-or-later source notices; GPLv2 license texts.
+- jpl_eph: GPL-2.0-or-later notices in core source; repository LICENSE is GPLv3.
+  Both notices are retained. Distribute combined binaries under GPLv3, using
+  the GPL-2.0-or-later permission of Find_Orb and the port.
+- sat_code: MIT (Copyright 2020 Project Pluto).
+- Emscripten and its runtimes: retain EMSCRIPTEN-LICENSE.txt and the compiler
+  and C/C++ runtime notices included by the pinned build recipe.
+- DE440: JPL planetary/lunar reference data, separately attributed and pinned
+  in build/pins.mjs; this project does not relicense JPL data.
+- Verification helper verification/kernel/RawReplay.lean adapts Lean's
+  declaration replay, Copyright (c) 2023 Kim Morrison, under Apache-2.0.
+  Preserve verification/kernel/LEAN-LICENSE.txt and its file-level notice.
+  Lean/mathlib are proof-development tools and are not linked into the solver.
+
+Scientific modifications include correcting the optional Prince-Dormand
+stage-time indexing and releasing its step workspace. The default Fehlberg
+integrator is unchanged. Exact source hashes, original/corrected comparisons,
+and mathematical limits are recorded in verification/integrator/.
+
+Dependency repositories:
+https://github.com/Bill-Gray/lunar
+https://github.com/Bill-Gray/jpl_eph
+https://github.com/Bill-Gray/sat_code
+https://github.com/emscripten-core/emscripten
+https://ssd.jpl.nasa.gov/planets/eph_export.html
+
+Preserve upstream file-level copyright and license notices. Every distributed
+solver build must include corresponding-source.tar.gz, build recipes, this
+NOTICE, and all license texts. Links alone do not replace corresponding source.
+This is an experimental independent port, not an official Project Pluto release.

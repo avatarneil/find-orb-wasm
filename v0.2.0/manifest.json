@@ -1,0 +1,388 @@
+{
+  "schema": 1,
+  "sources": {
+    "lunar": "d95191818d7975c22613f231fea160341203abbe",
+    "jpl_eph": "a73f25e54d02b99b1c0d9a9d6c61acfbb2fa3a26",
+    "sat_code": "2bbb8cb2e417edb10918e4404464b68e24abcab4",
+    "find_orb": "9cc932997837c5ab994fbf015db59f5d0da852e5"
+  },
+  "sourceLockSHA256": "cfe1a499eaa27516c856fcec984b5f35380b8fbd6ea9515062a464662e992f01",
+  "ephemeris": {
+    "name": "JPL DE-440",
+    "filename": "linux_p1550p2650.440",
+    "url": "https://ssd.jpl.nasa.gov/ftp/eph/planets/Linux/de440/linux_p1550p2650.440",
+    "sha256": "1ed53a803a0f5ccc8c43688cafa8d62c8368599e87c30bf1a30d5959b0dbfb13",
+    "subset": {
+      "method": "Verbatim complete DE440 coefficient records; original constants; date headers updated",
+      "sourceSHA256": "29915576d0a6555766b99485ac3056ee415e86df4fce282611c31afb329ad062",
+      "sourceURL": "https://ssd.jpl.nasa.gov/ftp/eph/planets/Linux/de440/linux_p1550p2650.440",
+      "requestedStartJD": 2451544.5,
+      "requestedEndJD": 2466154.5,
+      "marginRecords": 1,
+      "supportedStartExclusiveJD": 2451504.5,
+      "supportedEndInclusiveJD": 2466192.5,
+      "lowerEndpointReason": "The full reader chooses the preceding record at boundaries; that record is absent at the cropped file start.",
+      "stepDays": 32,
+      "recordBytes": 8144,
+      "firstRecord": 5135,
+      "records": 459,
+      "coefficientSHA256": "1184a8a68baf7b393c1f84765b9a0d785e5a5e56526ffe2b67e1f929ceca0642",
+      "constantsSHA256": "8a1ad39392b0d6c3146726a41f75419d402c75e5709596c28537a661b31d0f1a"
+    }
+  },
+  "emscripten": {
+    "version": "4.0.23",
+    "commit": "c0bb220cb6e6f4e0fabb6f6db9efd53390ef5e56"
+  },
+  "binarySHA256": "256e850727f91a441f2344217a6a15727dfefcabb91f03b61e8d694d9d03cd57",
+  "glueSHA256": "a3bf7d12c91244096c6514d50616dcd216aec46f7ca168d172cbcfb6e5bc649c",
+  "dataSHA256": {
+    "bright.pgm": "3f90027b5e3c77c648add96f482dda76e509911f6f44fc2186e87083aebbdf32",
+    "bright2.pgm": "33b8d8e0d387548a3facc8bbe2111fec8dc495bb0e2d398abf13606a1182292b",
+    "calendar.txt": "7a4ff1a165e3871263360b1a8571a3d152bf23506642e888956d7b5cf17b66d5",
+    "cometdef.sof": "e06f5ae01f8036857a5eebb67d85aa5c982585418b15f14d7b95fa29801884fa",
+    "command.txt": "7c0871364e7a7b961fdc0c94b63c18e971ce08ba15ebdabbea5d10cab268643f",
+    "cospar.txt": "4f7c7bf76de5241dcd2e3aadc54a8c5ceedf04ed8084aca6bd2a8c875ecd4c4b",
+    "details.txt": "e85fefaee8308dec2ed25339a650f5d86f94ff0b58ae2d193567e56a9653e37a",
+    "dosephem.txt": "3cfb79fb391821d12ada22761cfb9e991452656740d0bf7641f3eb93bc8d8b10",
+    "dos_help.txt": "bef9174c05a513ec054b5f01cb843c5d1d9cfea7f76bcfe18bc90dbbe5089b64",
+    "elem_pop.txt": "0fc016687ed3ed990fc60c2d4262f5ae8a71c7ae2f18b65535f164b84a9ce021",
+    "environ.def": "235fec8c4a64b59e165b49c0e4a3354b315cbb0331821268ac27edf81c8b87db",
+    "eph2tle.txt": "c1012bbbd5108d2d9c439547b8627d7f245cf2d7e3b5e650cbefd1220f0a74d8",
+    "eph_expl.txt": "8a6d4d17e5ea4734e90b3409693f35b4bdc57ab3e080faaae20b34425a0e98d7",
+    "eph_type.txt": "01572cc4c61cc40a6bbeb26e106fc95fdb374402779e748e61b2faa0cc9a2f37",
+    "dfindorb.txt": "0bf3556ddf038b01db1932c70fd191a3c839657c55af52d003b12197641143e9",
+    "efindorb.txt": "025ea3c016f7fb6e777e71633e5f5c09d230613827242bc851d8f9d57dd34e17",
+    "ffindorb.txt": "25be6af081b2ee5f29d85bdd4c944cd180e21eed2bd5a76aad6178e541115b3d",
+    "ifindorb.txt": "bcdea267f940c652879457a892c1de6f6f6ae0859df99dceb020e3e69e8e9462",
+    "rfindorb.txt": "5a5b859a83f799008383e1a036d28f3f4a9ce3361ef4bec2a83f58dd07ff4eba",
+    "sfindorb.txt": "bfa634959f049439ba8eb91e1673549fbc3277f6da5571a3b1861a9038e8b610",
+    "frame_he.txt": "292636197b6b66efe5270b254800b40be7c225474b394af03d5ee6eb8c8ff343",
+    "geo_rect.txt": "849a2b1151700cd79e2ff0c2d5e58606f1d936f9f23410f0e466024edf96d153",
+    "header.htm": "870f8d19dc732dd978003a260dbe570d262dda0cd69a75cecd82c4a63e69e253",
+    "hints.def": "643448a694201ba11f92626958d4a251610d0b1c3fd8114ccf5a4f3baa64820e",
+    "jpl_eph.txt": "d0ffcc671eda85b250bf832406aca59c169c057b19edc8a0474725af89fda66b",
+    "link_def.json": "0765fbd3cdb794c5a971c89b8fc6233033ab0c86e286abd965c7a3cb49747aa1",
+    "mpc_area.txt": "121c189085c9ec2a2ed81fdf710cfb96868caf25821767059fad77560eb72770",
+    "mpcorb.hdr": "8a5029330da8240ad8ba032a224869ddee208e57ee12d2b47a3d5718f75df3b1",
+    "mu1.txt": "c236dafbba22a1736feb9b60d435be2939815acda029f63f37cb27cb9a4ccb15",
+    "nongravs.txt": "98c57925dc59371d6d6603284ba1d3a3e181c4b331694d954413e5c95dd4e145",
+    "obj_help.txt": "728eff13cba54bf9849020386654b59ea496ee9bb882d50c558f112d7868236f",
+    "obj_name.txt": "6102d92e15a9ec6bb8c733425571458a6a506fe7057b07eee0b4a918dffde23a",
+    "ObsCodes.htm": "94f6a339fa494e458845fd5c4a8f463c8b8b9974136e4b7d1293d4bb6019199c",
+    "ObsCodesF.html": "a5cbc19a1f36404109544a7a527d73228b99837f335caaa92a7c953036a6fe81",
+    "observer.htm": "9a84a94d5960d17e3d3d9cfb78787553ae432d4be9684e899febeae54beecfcb",
+    "obslinks.htm": "b18d8be6e1c5c083d5925ce45a5c001debf956c6601bd9daba38acc0afbd9f3a",
+    "odd_name.txt": "0ae221aaa89c547531e33b48554da67dd6cdf127af83ef457a847b2ecf3d1163",
+    "openfile.txt": "8d92a9df4d0cb379059a51a9c6be398162fbce91c17b9a3ffeaa6a14807d8d00",
+    "orbitdef.sof": "8f22d9c5edaa356517295f87d5ffe92f533b949c110735440d37572b08d9bd74",
+    "previous.def": "61b218c37d8c28be7b674b0fb176be5d3adc5d52b6a8f40ec60089113d0606f8",
+    "progcode.txt": "d1561137621a1372123686b50e31dd9a25098e0ed90d647e63c1652ff98549ca",
+    "radecfmt.txt": "adc748b4d3252dbc85bfdc70ec1e6386ac9e89d22cd88b8c6cab3f1f74d3acfa",
+    "residfmt.txt": "d93e15314923ae970cd84c33b8ae546df572ae87be3917b3db12c20eb1c4cf3e",
+    "rovers.txt": "17aa1f4a59b83ff65878d1f3fb40aeac6ba5eed2e8e4c3ebbe76d83c1de4f477",
+    "sat_xref.txt": "6af10becfe528845cafd0040e49b2241db1d39c41b35bd418c1db7e029fc0641",
+    "scope.json": "41216e95a9013f381a505a2eab2c56bc8c167a672fc3c794297f310f75e99de7",
+    "scopes.txt": "9a97dff3bf5500884d334eeac0d48002cc678deddd5e1eb7b7da7cbc845f5498",
+    "splash.txt": "dbbe0e1cc2fbc42d4210db876fa1c9fe28fab16fb154a4375d65309224c1696a",
+    "sigma.txt": "5c840b6be6969d023443e931009b11d31c3e83a2c1c3f56230ffac301e109131",
+    "site_310.txt": "177e13684f642261abae72a27eb6f9ae07e40226616a5d85b4b22567803ee42b",
+    "timehelp.txt": "dfdb9c0f95150c21a307db3133f5cf1866c1ea189460e1f9fb6ae780ea74fa88",
+    "xdesig.txt": "9bbd2a0c14e6776d499c620d6cbf3f60e2f65c75ca290283a694bf7acf22f7a9"
+  },
+  "entries": {
+    "data/bright.pgm": {
+      "offset": 0,
+      "size": 6480017,
+      "sha256": "3f90027b5e3c77c648add96f482dda76e509911f6f44fc2186e87083aebbdf32"
+    },
+    "data/bright2.pgm": {
+      "offset": 6480017,
+      "size": 64815,
+      "sha256": "33b8d8e0d387548a3facc8bbe2111fec8dc495bb0e2d398abf13606a1182292b"
+    },
+    "data/calendar.txt": {
+      "offset": 6544832,
+      "size": 135488,
+      "sha256": "7a4ff1a165e3871263360b1a8571a3d152bf23506642e888956d7b5cf17b66d5"
+    },
+    "data/cometdef.sof": {
+      "offset": 6680320,
+      "size": 303,
+      "sha256": "e06f5ae01f8036857a5eebb67d85aa5c982585418b15f14d7b95fa29801884fa"
+    },
+    "data/command.txt": {
+      "offset": 6680623,
+      "size": 7551,
+      "sha256": "7c0871364e7a7b961fdc0c94b63c18e971ce08ba15ebdabbea5d10cab268643f"
+    },
+    "data/cospar.txt": {
+      "offset": 6688174,
+      "size": 25584,
+      "sha256": "4f7c7bf76de5241dcd2e3aadc54a8c5ceedf04ed8084aca6bd2a8c875ecd4c4b"
+    },
+    "data/details.txt": {
+      "offset": 6713758,
+      "size": 99747,
+      "sha256": "e85fefaee8308dec2ed25339a650f5d86f94ff0b58ae2d193567e56a9653e37a"
+    },
+    "data/dosephem.txt": {
+      "offset": 6813505,
+      "size": 10266,
+      "sha256": "3cfb79fb391821d12ada22761cfb9e991452656740d0bf7641f3eb93bc8d8b10"
+    },
+    "data/dos_help.txt": {
+      "offset": 6823771,
+      "size": 21554,
+      "sha256": "bef9174c05a513ec054b5f01cb843c5d1d9cfea7f76bcfe18bc90dbbe5089b64"
+    },
+    "data/elem_pop.txt": {
+      "offset": 6845325,
+      "size": 2793,
+      "sha256": "0fc016687ed3ed990fc60c2d4262f5ae8a71c7ae2f18b65535f164b84a9ce021"
+    },
+    "data/environ.def": {
+      "offset": 6848118,
+      "size": 28452,
+      "sha256": "235fec8c4a64b59e165b49c0e4a3354b315cbb0331821268ac27edf81c8b87db"
+    },
+    "data/eph2tle.txt": {
+      "offset": 6876570,
+      "size": 3866,
+      "sha256": "c1012bbbd5108d2d9c439547b8627d7f245cf2d7e3b5e650cbefd1220f0a74d8"
+    },
+    "data/eph_expl.txt": {
+      "offset": 6880436,
+      "size": 5521,
+      "sha256": "8a6d4d17e5ea4734e90b3409693f35b4bdc57ab3e080faaae20b34425a0e98d7"
+    },
+    "data/eph_type.txt": {
+      "offset": 6885957,
+      "size": 2508,
+      "sha256": "01572cc4c61cc40a6bbeb26e106fc95fdb374402779e748e61b2faa0cc9a2f37"
+    },
+    "data/dfindorb.txt": {
+      "offset": 6888465,
+      "size": 3564,
+      "sha256": "0bf3556ddf038b01db1932c70fd191a3c839657c55af52d003b12197641143e9"
+    },
+    "data/efindorb.txt": {
+      "offset": 6892029,
+      "size": 13777,
+      "sha256": "025ea3c016f7fb6e777e71633e5f5c09d230613827242bc851d8f9d57dd34e17"
+    },
+    "data/ffindorb.txt": {
+      "offset": 6905806,
+      "size": 3792,
+      "sha256": "25be6af081b2ee5f29d85bdd4c944cd180e21eed2bd5a76aad6178e541115b3d"
+    },
+    "data/ifindorb.txt": {
+      "offset": 6909598,
+      "size": 3824,
+      "sha256": "bcdea267f940c652879457a892c1de6f6f6ae0859df99dceb020e3e69e8e9462"
+    },
+    "data/rfindorb.txt": {
+      "offset": 6913422,
+      "size": 3887,
+      "sha256": "5a5b859a83f799008383e1a036d28f3f4a9ce3361ef4bec2a83f58dd07ff4eba"
+    },
+    "data/sfindorb.txt": {
+      "offset": 6917309,
+      "size": 8987,
+      "sha256": "bfa634959f049439ba8eb91e1673549fbc3277f6da5571a3b1861a9038e8b610"
+    },
+    "data/frame_he.txt": {
+      "offset": 6926296,
+      "size": 914,
+      "sha256": "292636197b6b66efe5270b254800b40be7c225474b394af03d5ee6eb8c8ff343"
+    },
+    "data/geo_rect.txt": {
+      "offset": 6927210,
+      "size": 29752,
+      "sha256": "849a2b1151700cd79e2ff0c2d5e58606f1d936f9f23410f0e466024edf96d153"
+    },
+    "data/header.htm": {
+      "offset": 6956962,
+      "size": 1961,
+      "sha256": "870f8d19dc732dd978003a260dbe570d262dda0cd69a75cecd82c4a63e69e253"
+    },
+    "data/hints.def": {
+      "offset": 6958923,
+      "size": 456,
+      "sha256": "643448a694201ba11f92626958d4a251610d0b1c3fd8114ccf5a4f3baa64820e"
+    },
+    "data/jpl_eph.txt": {
+      "offset": 6959379,
+      "size": 5009,
+      "sha256": "d0ffcc671eda85b250bf832406aca59c169c057b19edc8a0474725af89fda66b"
+    },
+    "data/link_def.json": {
+      "offset": 6964388,
+      "size": 1306,
+      "sha256": "0765fbd3cdb794c5a971c89b8fc6233033ab0c86e286abd965c7a3cb49747aa1"
+    },
+    "data/mpc_area.txt": {
+      "offset": 6965694,
+      "size": 1003,
+      "sha256": "121c189085c9ec2a2ed81fdf710cfb96868caf25821767059fad77560eb72770"
+    },
+    "data/mpcorb.hdr": {
+      "offset": 6966697,
+      "size": 1596,
+      "sha256": "8a5029330da8240ad8ba032a224869ddee208e57ee12d2b47a3d5718f75df3b1"
+    },
+    "data/mu1.txt": {
+      "offset": 6968293,
+      "size": 9646,
+      "sha256": "c236dafbba22a1736feb9b60d435be2939815acda029f63f37cb27cb9a4ccb15"
+    },
+    "data/nongravs.txt": {
+      "offset": 6977939,
+      "size": 4342,
+      "sha256": "98c57925dc59371d6d6603284ba1d3a3e181c4b331694d954413e5c95dd4e145"
+    },
+    "data/obj_help.txt": {
+      "offset": 6982281,
+      "size": 537,
+      "sha256": "728eff13cba54bf9849020386654b59ea496ee9bb882d50c558f112d7868236f"
+    },
+    "data/obj_name.txt": {
+      "offset": 6982818,
+      "size": 324,
+      "sha256": "6102d92e15a9ec6bb8c733425571458a6a506fe7057b07eee0b4a918dffde23a"
+    },
+    "data/ObsCodes.htm": {
+      "offset": 6983142,
+      "size": 148590,
+      "sha256": "94f6a339fa494e458845fd5c4a8f463c8b8b9974136e4b7d1293d4bb6019199c"
+    },
+    "data/ObsCodesF.html": {
+      "offset": 7131732,
+      "size": 170409,
+      "sha256": "a5cbc19a1f36404109544a7a527d73228b99837f335caaa92a7c953036a6fe81"
+    },
+    "data/observer.htm": {
+      "offset": 7302141,
+      "size": 30137,
+      "sha256": "9a84a94d5960d17e3d3d9cfb78787553ae432d4be9684e899febeae54beecfcb"
+    },
+    "data/obslinks.htm": {
+      "offset": 7332278,
+      "size": 58051,
+      "sha256": "b18d8be6e1c5c083d5925ce45a5c001debf956c6601bd9daba38acc0afbd9f3a"
+    },
+    "data/odd_name.txt": {
+      "offset": 7390329,
+      "size": 10540,
+      "sha256": "0ae221aaa89c547531e33b48554da67dd6cdf127af83ef457a847b2ecf3d1163"
+    },
+    "data/openfile.txt": {
+      "offset": 7400869,
+      "size": 936,
+      "sha256": "8d92a9df4d0cb379059a51a9c6be398162fbce91c17b9a3ffeaa6a14807d8d00"
+    },
+    "data/orbitdef.sof": {
+      "offset": 7401805,
+      "size": 248,
+      "sha256": "8f22d9c5edaa356517295f87d5ffe92f533b949c110735440d37572b08d9bd74"
+    },
+    "data/previous.def": {
+      "offset": 7402053,
+      "size": 294,
+      "sha256": "61b218c37d8c28be7b674b0fb176be5d3adc5d52b6a8f40ec60089113d0606f8"
+    },
+    "data/progcode.txt": {
+      "offset": 7402347,
+      "size": 42520,
+      "sha256": "d1561137621a1372123686b50e31dd9a25098e0ed90d647e63c1652ff98549ca"
+    },
+    "data/radecfmt.txt": {
+      "offset": 7444867,
+      "size": 875,
+      "sha256": "adc748b4d3252dbc85bfdc70ec1e6386ac9e89d22cd88b8c6cab3f1f74d3acfa"
+    },
+    "data/residfmt.txt": {
+      "offset": 7445742,
+      "size": 1304,
+      "sha256": "d93e15314923ae970cd84c33b8ae546df572ae87be3917b3db12c20eb1c4cf3e"
+    },
+    "data/rovers.txt": {
+      "offset": 7447046,
+      "size": 96625,
+      "sha256": "17aa1f4a59b83ff65878d1f3fb40aeac6ba5eed2e8e4c3ebbe76d83c1de4f477"
+    },
+    "data/sat_xref.txt": {
+      "offset": 7543671,
+      "size": 3912,
+      "sha256": "6af10becfe528845cafd0040e49b2241db1d39c41b35bd418c1db7e029fc0641"
+    },
+    "data/scope.json": {
+      "offset": 7547583,
+      "size": 9485,
+      "sha256": "41216e95a9013f381a505a2eab2c56bc8c167a672fc3c794297f310f75e99de7"
+    },
+    "data/scopes.txt": {
+      "offset": 7557068,
+      "size": 15367,
+      "sha256": "9a97dff3bf5500884d334eeac0d48002cc678deddd5e1eb7b7da7cbc845f5498"
+    },
+    "data/splash.txt": {
+      "offset": 7572435,
+      "size": 14783,
+      "sha256": "dbbe0e1cc2fbc42d4210db876fa1c9fe28fab16fb154a4375d65309224c1696a"
+    },
+    "data/sigma.txt": {
+      "offset": 7587218,
+      "size": 14294,
+      "sha256": "5c840b6be6969d023443e931009b11d31c3e83a2c1c3f56230ffac301e109131"
+    },
+    "data/site_310.txt": {
+      "offset": 7601512,
+      "size": 5667,
+      "sha256": "177e13684f642261abae72a27eb6f9ae07e40226616a5d85b4b22567803ee42b"
+    },
+    "data/timehelp.txt": {
+      "offset": 7607179,
+      "size": 7509,
+      "sha256": "dfdb9c0f95150c21a307db3133f5cf1866c1ea189460e1f9fb6ae780ea74fa88"
+    },
+    "data/xdesig.txt": {
+      "offset": 7614688,
+      "size": 7443,
+      "sha256": "9bbd2a0c14e6776d499c620d6cbf3f60e2f65c75ca290283a694bf7acf22f7a9"
+    },
+    "linux_p1550p2650.440": {
+      "offset": 7622131,
+      "size": 3754384,
+      "sha256": "1ed53a803a0f5ccc8c43688cafa8d62c8368599e87c30bf1a30d5959b0dbfb13"
+    }
+  },
+  "pack": {
+    "filename": "find-orb.data",
+    "size": 11376515,
+    "sha256": "3817fac45a1cd05575e0cb64cada5e6ae2696f1a89a7c28902ef3a01a68cfb28",
+    "encodings": {
+      "gzip": {
+        "filename": "find-orb.data.gz",
+        "size": 6329416,
+        "sha256": "d1b1ec74fb5eb8735ffc566ec6585684c7911473861a89a331ebd40261a0ecc9"
+      },
+      "brotli": {
+        "filename": "find-orb.data.br",
+        "size": 6147947,
+        "sha256": "22bddc46c8320b818a93b0e738cf9ced09763b42d5cfd781478ebef49602b5eb"
+      }
+    }
+  },
+  "numericalPolicy": "wasm32; binary64 double, software binary128 long double; no fast-math; fp-contract=off in all four source projects",
+  "strictEphemeris": true,
+  "ephemerisPolicy": "required; actual JPL queries fail closed outside (start, end] or on evaluation error",
+  "referenceMount": "copy-on-write MEMFS; fresh module, heap and filesystem per command",
+  "compilationPolicy": "One retained immutable WebAssembly.Module per worker; fresh instance, imports, globals and memory per command",
+  "patchesSHA256": "7b840c73f2ea711a4c7b8583dca79d3aafd081ca10f015d50a89b93db4fe0657",
+  "strictEphemerisPatchesSHA256": "fdf778df9e294f1606627e98f467b460a181ee83a19daf235f3a94d285354be2",
+  "platformSHA256": "a3ff365f8ee73f7aba0180e85ee526a15390e65b19e34cd3cfe148ff5638b995",
+  "searchPolicy": "Complete configured statistical-ranging candidate count; external worker timeout rejects incomplete jobs",
+  "configAutocopy": false,
+  "workerSHA256": "1209f6e82df9d9fbe596c9eb0564117732a54ab2e87f5eb2e92907e8d7688797"
+}
