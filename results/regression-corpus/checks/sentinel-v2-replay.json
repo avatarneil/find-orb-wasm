@@ -1,0 +1,647 @@
+{
+  "verified": true,
+  "scientificPass": true,
+  "manifestSHA256": "4c449bcad411dfc2f828e006eaf4c6f631ca87cfc5444bf3f34e1f38d62de6ad",
+  "replayerSHA256": "58c4b12e6443d28a6a5881550df7b733837a07b87d90a30d23bda4d523336129",
+  "sourcePolicy": "Strict recorded current-source hashes; no historical-source migration or changed-policy recomputation.",
+  "archiveAuthenticity": "Internal hash-chain consistency only; no external signature/manifest anchor supplied.",
+  "pairs": 38,
+  "rawFiles": 76,
+  "executionFailuresRetained": 0,
+  "validationFailuresRecomputed": 0,
+  "constructionFailuresRecomputed": 0,
+  "limitation": "No solver/API calls. Process failures without raw result are retained rather than reproduced; only error first lines are compared across stack locations. Source acquisition/normalization is validated separately by regression-corpus/verify.mjs.",
+  "summary": {
+    "pass": true,
+    "pairs": 38,
+    "failedPairs": 0,
+    "groups": [
+      {
+        "class": "IEO",
+        "arc": "one-hour",
+        "kind": "forward",
+        "applicability": "strict",
+        "runs": 1,
+        "objects": [
+          "20163693"
+        ],
+        "objectLabels": {
+          "20163693": "Atira"
+        },
+        "failed": 0,
+        "parityFailures": 0,
+        "degraded": 0,
+        "futurePredictionCount": 3,
+        "medianCandidateErrorArcsec": 0.000035040513030675935,
+        "p95CandidateErrorArcsec": 0.00003883733970033844,
+        "medianPairedErrorChangeArcsec": 0
+      },
+      {
+        "class": "IEO",
+        "arc": "one-hour",
+        "kind": "fit",
+        "applicability": "strict",
+        "runs": 1,
+        "objects": [
+          "20163693"
+        ],
+        "objectLabels": {
+          "20163693": "Atira"
+        },
+        "failed": 0,
+        "parityFailures": 0,
+        "degraded": 0,
+        "futurePredictionCount": 3,
+        "medianCandidateErrorArcsec": 96.88632963505374,
+        "p95CandidateErrorArcsec": 470.7850607170646,
+        "medianPairedErrorChangeArcsec": 1.769602420154115e-8
+      },
+      {
+        "class": "IEO",
+        "arc": "one-week",
+        "kind": "forward",
+        "applicability": "strict",
+        "runs": 1,
+        "objects": [
+          "20163693"
+        ],
+        "objectLabels": {
+          "20163693": "Atira"
+        },
+        "failed": 0,
+        "parityFailures": 0,
+        "degraded": 0,
+        "futurePredictionCount": 3,
+        "medianCandidateErrorArcsec": 0.000044296997415483225,
+        "p95CandidateErrorArcsec": 0.00005478690517741893,
+        "medianPairedErrorChangeArcsec": 0
+      },
+      {
+        "class": "IEO",
+        "arc": "one-week",
+        "kind": "fit",
+        "applicability": "strict",
+        "runs": 1,
+        "objects": [
+          "20163693"
+        ],
+        "objectLabels": {
+          "20163693": "Atira"
+        },
+        "failed": 0,
+        "parityFailures": 0,
+        "degraded": 0,
+        "futurePredictionCount": 3,
+        "medianCandidateErrorArcsec": 0.013828700835021851,
+        "p95CandidateErrorArcsec": 0.034939689160311045,
+        "medianPairedErrorChangeArcsec": 0
+      },
+      {
+        "class": "ATE",
+        "arc": "one-hour",
+        "kind": "forward",
+        "applicability": "model-limited",
+        "runs": 1,
+        "objects": [
+          "20099942"
+        ],
+        "objectLabels": {
+          "20099942": "Apophis"
+        },
+        "failed": 0,
+        "parityFailures": 0,
+        "degraded": 0,
+        "futurePredictionCount": 3,
+        "medianCandidateErrorArcsec": 0.000021343992196513357,
+        "p95CandidateErrorArcsec": 0.000023247918293728963,
+        "medianPairedErrorChangeArcsec": 0
+      },
+      {
+        "class": "ATE",
+        "arc": "one-hour",
+        "kind": "fit",
+        "applicability": "model-limited",
+        "runs": 1,
+        "objects": [
+          "20099942"
+        ],
+        "objectLabels": {
+          "20099942": "Apophis"
+        },
+        "failed": 0,
+        "parityFailures": 0,
+        "degraded": 0,
+        "futurePredictionCount": 3,
+        "medianCandidateErrorArcsec": 666.8729265468545,
+        "p95CandidateErrorArcsec": 3406.6004779647246,
+        "medianPairedErrorChangeArcsec": 0
+      },
+      {
+        "class": "APO",
+        "arc": "one-hour",
+        "kind": "forward",
+        "applicability": "model-limited",
+        "runs": 1,
+        "objects": [
+          "20101955"
+        ],
+        "objectLabels": {
+          "20101955": "Bennu"
+        },
+        "failed": 0,
+        "parityFailures": 0,
+        "degraded": 0,
+        "futurePredictionCount": 3,
+        "medianCandidateErrorArcsec": 0.0001646027893092948,
+        "p95CandidateErrorArcsec": 0.00016575818383645987,
+        "medianPairedErrorChangeArcsec": 0
+      },
+      {
+        "class": "APO",
+        "arc": "one-hour",
+        "kind": "fit",
+        "applicability": "model-limited",
+        "runs": 1,
+        "objects": [
+          "20101955"
+        ],
+        "objectLabels": {
+          "20101955": "Bennu"
+        },
+        "failed": 0,
+        "parityFailures": 0,
+        "degraded": 0,
+        "futurePredictionCount": 3,
+        "medianCandidateErrorArcsec": 2257.2300307595738,
+        "p95CandidateErrorArcsec": 9613.27618098341,
+        "medianPairedErrorChangeArcsec": 0
+      },
+      {
+        "class": "AMO",
+        "arc": "one-hour",
+        "kind": "forward",
+        "applicability": "strict",
+        "runs": 1,
+        "objects": [
+          "20000433"
+        ],
+        "objectLabels": {
+          "20000433": "Eros"
+        },
+        "failed": 0,
+        "parityFailures": 0,
+        "degraded": 0,
+        "futurePredictionCount": 3,
+        "medianCandidateErrorArcsec": 0.000011124386936058683,
+        "p95CandidateErrorArcsec": 0.000012827537644850867,
+        "medianPairedErrorChangeArcsec": 0
+      },
+      {
+        "class": "AMO",
+        "arc": "one-hour",
+        "kind": "fit",
+        "applicability": "strict",
+        "runs": 1,
+        "objects": [
+          "20000433"
+        ],
+        "objectLabels": {
+          "20000433": "Eros"
+        },
+        "failed": 0,
+        "parityFailures": 0,
+        "degraded": 0,
+        "futurePredictionCount": 3,
+        "medianCandidateErrorArcsec": 1044.5107985205043,
+        "p95CandidateErrorArcsec": 4488.971686864108,
+        "medianPairedErrorChangeArcsec": 3.170205786773295e-8
+      },
+      {
+        "class": "IMB",
+        "arc": "one-hour",
+        "kind": "forward",
+        "applicability": "strict",
+        "runs": 1,
+        "objects": [
+          "20000434"
+        ],
+        "objectLabels": {
+          "20000434": "Hungaria"
+        },
+        "failed": 0,
+        "parityFailures": 0,
+        "degraded": 0,
+        "futurePredictionCount": 3,
+        "medianCandidateErrorArcsec": 0.000010687833431078214,
+        "p95CandidateErrorArcsec": 0.00001199905244188533,
+        "medianPairedErrorChangeArcsec": 0
+      },
+      {
+        "class": "IMB",
+        "arc": "one-hour",
+        "kind": "fit",
+        "applicability": "strict",
+        "runs": 1,
+        "objects": [
+          "20000434"
+        ],
+        "objectLabels": {
+          "20000434": "Hungaria"
+        },
+        "failed": 0,
+        "parityFailures": 0,
+        "degraded": 0,
+        "futurePredictionCount": 3,
+        "medianCandidateErrorArcsec": 535.0888795083093,
+        "p95CandidateErrorArcsec": 3222.9754036470413,
+        "medianPairedErrorChangeArcsec": 0
+      },
+      {
+        "class": "MBA",
+        "arc": "one-hour",
+        "kind": "forward",
+        "applicability": "strict",
+        "runs": 4,
+        "objects": [
+          "20000004",
+          "20000001",
+          "20000010",
+          "20000196"
+        ],
+        "objectLabels": {
+          "20000001": "Ceres",
+          "20000004": "Vesta",
+          "20000010": "Hygiea",
+          "20000196": "Philomela"
+        },
+        "failed": 0,
+        "parityFailures": 0,
+        "degraded": 0,
+        "futurePredictionCount": 12,
+        "medianCandidateErrorArcsec": 0.000006509259251174815,
+        "p95CandidateErrorArcsec": 0.00001054220565870763,
+        "medianPairedErrorChangeArcsec": 0
+      },
+      {
+        "class": "MBA",
+        "arc": "one-hour",
+        "kind": "fit",
+        "applicability": "strict",
+        "runs": 4,
+        "objects": [
+          "20000004",
+          "20000001",
+          "20000010",
+          "20000196"
+        ],
+        "objectLabels": {
+          "20000001": "Ceres",
+          "20000004": "Vesta",
+          "20000010": "Hygiea",
+          "20000196": "Philomela"
+        },
+        "failed": 0,
+        "parityFailures": 0,
+        "degraded": 0,
+        "futurePredictionCount": 12,
+        "medianCandidateErrorArcsec": 41.88498017894565,
+        "p95CandidateErrorArcsec": 2787.762605428472,
+        "medianPairedErrorChangeArcsec": 0
+      },
+      {
+        "class": "OMB",
+        "arc": "one-hour",
+        "kind": "forward",
+        "applicability": "strict",
+        "runs": 1,
+        "objects": [
+          "20000153"
+        ],
+        "objectLabels": {
+          "20000153": "Hilda"
+        },
+        "failed": 0,
+        "parityFailures": 0,
+        "degraded": 0,
+        "futurePredictionCount": 3,
+        "medianCandidateErrorArcsec": 0.0000030883527746324024,
+        "p95CandidateErrorArcsec": 0.0000031874993231788863,
+        "medianPairedErrorChangeArcsec": 0
+      },
+      {
+        "class": "OMB",
+        "arc": "one-hour",
+        "kind": "fit",
+        "applicability": "strict",
+        "runs": 1,
+        "objects": [
+          "20000153"
+        ],
+        "objectLabels": {
+          "20000153": "Hilda"
+        },
+        "failed": 0,
+        "parityFailures": 0,
+        "degraded": 0,
+        "futurePredictionCount": 3,
+        "medianCandidateErrorArcsec": 16.22309592163906,
+        "p95CandidateErrorArcsec": 73.18106589813085,
+        "medianPairedErrorChangeArcsec": 0
+      },
+      {
+        "class": "TJN",
+        "arc": "one-hour",
+        "kind": "forward",
+        "applicability": "strict",
+        "runs": 1,
+        "objects": [
+          "20000588"
+        ],
+        "objectLabels": {
+          "20000588": "Achilles"
+        },
+        "failed": 0,
+        "parityFailures": 0,
+        "degraded": 0,
+        "futurePredictionCount": 3,
+        "medianCandidateErrorArcsec": 0.00000538635211338245,
+        "p95CandidateErrorArcsec": 0.0000058008901815677785,
+        "medianPairedErrorChangeArcsec": 0
+      },
+      {
+        "class": "TJN",
+        "arc": "one-hour",
+        "kind": "fit",
+        "applicability": "strict",
+        "runs": 1,
+        "objects": [
+          "20000588"
+        ],
+        "objectLabels": {
+          "20000588": "Achilles"
+        },
+        "failed": 0,
+        "parityFailures": 0,
+        "degraded": 0,
+        "futurePredictionCount": 3,
+        "medianCandidateErrorArcsec": 31.845200033475088,
+        "p95CandidateErrorArcsec": 157.33778504263944,
+        "medianPairedErrorChangeArcsec": 0
+      },
+      {
+        "class": "CEN",
+        "arc": "one-hour",
+        "kind": "forward",
+        "applicability": "strict",
+        "runs": 2,
+        "objects": [
+          "20002060",
+          "20020461"
+        ],
+        "objectLabels": {
+          "20002060": "Chiron",
+          "20020461": "Dioretsa"
+        },
+        "failed": 0,
+        "parityFailures": 0,
+        "degraded": 0,
+        "futurePredictionCount": 6,
+        "medianCandidateErrorArcsec": 9.779895308463908e-7,
+        "p95CandidateErrorArcsec": 0.0000013009345623343454,
+        "medianPairedErrorChangeArcsec": 0
+      },
+      {
+        "class": "CEN",
+        "arc": "one-hour",
+        "kind": "fit",
+        "applicability": "strict",
+        "runs": 2,
+        "objects": [
+          "20002060",
+          "20020461"
+        ],
+        "objectLabels": {
+          "20002060": "Chiron",
+          "20020461": "Dioretsa"
+        },
+        "failed": 0,
+        "parityFailures": 0,
+        "degraded": 0,
+        "futurePredictionCount": 6,
+        "medianCandidateErrorArcsec": 10.566826663125202,
+        "p95CandidateErrorArcsec": 71.29399178796267,
+        "medianPairedErrorChangeArcsec": 0
+      },
+      {
+        "class": "TNO",
+        "arc": "one-hour",
+        "kind": "forward",
+        "applicability": "strict",
+        "runs": 1,
+        "objects": [
+          "20015760"
+        ],
+        "objectLabels": {
+          "20015760": "Albion"
+        },
+        "failed": 0,
+        "parityFailures": 0,
+        "degraded": 0,
+        "futurePredictionCount": 3,
+        "medianCandidateErrorArcsec": 0.0000011603546716276715,
+        "p95CandidateErrorArcsec": 0.0000012396931872556436,
+        "medianPairedErrorChangeArcsec": 0
+      },
+      {
+        "class": "TNO",
+        "arc": "one-hour",
+        "kind": "fit",
+        "applicability": "strict",
+        "runs": 1,
+        "objects": [
+          "20015760"
+        ],
+        "objectLabels": {
+          "20015760": "Albion"
+        },
+        "failed": 0,
+        "parityFailures": 0,
+        "degraded": 0,
+        "futurePredictionCount": 3,
+        "medianCandidateErrorArcsec": 5.850601904057318,
+        "p95CandidateErrorArcsec": 30.82123861782816,
+        "medianPairedErrorChangeArcsec": 0
+      },
+      {
+        "class": "ETc",
+        "arc": "one-hour",
+        "kind": "forward",
+        "applicability": "model-limited",
+        "runs": 1,
+        "objects": [
+          "1000025"
+        ],
+        "objectLabels": {
+          "1000025": "Encke"
+        },
+        "failed": 0,
+        "parityFailures": 0,
+        "degraded": 0,
+        "futurePredictionCount": 3,
+        "medianCandidateErrorArcsec": 0.000006214837324270754,
+        "p95CandidateErrorArcsec": 0.00000838889555368769,
+        "medianPairedErrorChangeArcsec": 0
+      },
+      {
+        "class": "ETc",
+        "arc": "one-hour",
+        "kind": "fit",
+        "applicability": "model-limited",
+        "runs": 1,
+        "objects": [
+          "1000025"
+        ],
+        "objectLabels": {
+          "1000025": "Encke"
+        },
+        "failed": 0,
+        "parityFailures": 0,
+        "degraded": 0,
+        "futurePredictionCount": 3,
+        "medianCandidateErrorArcsec": 12.217546179734157,
+        "p95CandidateErrorArcsec": 59.67924370796522,
+        "medianPairedErrorChangeArcsec": 3.395454406529552e-8
+      },
+      {
+        "class": "HTC",
+        "arc": "one-hour",
+        "kind": "forward",
+        "applicability": "model-limited",
+        "runs": 1,
+        "objects": [
+          "1000036"
+        ],
+        "objectLabels": {
+          "1000036": "Halley"
+        },
+        "failed": 0,
+        "parityFailures": 0,
+        "degraded": 0,
+        "futurePredictionCount": 3,
+        "medianCandidateErrorArcsec": 0.0000019851859362936742,
+        "p95CandidateErrorArcsec": 0.0000022562294749480718,
+        "medianPairedErrorChangeArcsec": 0
+      },
+      {
+        "class": "HTC",
+        "arc": "one-hour",
+        "kind": "fit",
+        "applicability": "model-limited",
+        "runs": 1,
+        "objects": [
+          "1000036"
+        ],
+        "objectLabels": {
+          "1000036": "Halley"
+        },
+        "failed": 0,
+        "parityFailures": 0,
+        "degraded": 0,
+        "futurePredictionCount": 3,
+        "medianCandidateErrorArcsec": 0.290699926198343,
+        "p95CandidateErrorArcsec": 2.1678535425918186,
+        "medianPairedErrorChangeArcsec": 0
+      },
+      {
+        "class": "HYP",
+        "arc": "one-hour",
+        "kind": "forward",
+        "applicability": "model-limited",
+        "runs": 1,
+        "objects": [
+          "1000155"
+        ],
+        "objectLabels": {
+          "1000155": "Brewington"
+        },
+        "failed": 0,
+        "parityFailures": 0,
+        "degraded": 0,
+        "futurePredictionCount": 3,
+        "medianCandidateErrorArcsec": 0.0000018837181119086976,
+        "p95CandidateErrorArcsec": 0.0000021591906596174727,
+        "medianPairedErrorChangeArcsec": 0
+      },
+      {
+        "class": "HYP",
+        "arc": "one-hour",
+        "kind": "fit",
+        "applicability": "model-limited",
+        "runs": 1,
+        "objects": [
+          "1000155"
+        ],
+        "objectLabels": {
+          "1000155": "Brewington"
+        },
+        "failed": 0,
+        "parityFailures": 0,
+        "degraded": 0,
+        "futurePredictionCount": 3,
+        "medianCandidateErrorArcsec": 1.5389364279241315,
+        "p95CandidateErrorArcsec": 6.148793718473757,
+        "medianPairedErrorChangeArcsec": 0
+      },
+      {
+        "class": "COM",
+        "arc": "one-hour",
+        "kind": "forward",
+        "applicability": "model-limited",
+        "runs": 1,
+        "objects": [
+          "1000131"
+        ],
+        "objectLabels": {
+          "1000131": "Hyakutake"
+        },
+        "failed": 0,
+        "parityFailures": 0,
+        "degraded": 0,
+        "futurePredictionCount": 3,
+        "medianCandidateErrorArcsec": 8.671889749707547e-7,
+        "p95CandidateErrorArcsec": 0.0000020289133045863236,
+        "medianPairedErrorChangeArcsec": 0
+      },
+      {
+        "class": "COM",
+        "arc": "one-hour",
+        "kind": "fit",
+        "applicability": "model-limited",
+        "runs": 1,
+        "objects": [
+          "1000131"
+        ],
+        "objectLabels": {
+          "1000131": "Hyakutake"
+        },
+        "failed": 0,
+        "parityFailures": 0,
+        "degraded": 0,
+        "futurePredictionCount": 3,
+        "medianCandidateErrorArcsec": 1.1573768203985642,
+        "p95CandidateErrorArcsec": 5.415784506997717,
+        "medianPairedErrorChangeArcsec": 0
+      }
+    ],
+    "interpretation": "Repeated geometries/arcs/noise of one object are correlated. Counts are coverage, not independent samples; paired accuracy flags are descriptive, not posterior calibration or proof of element identifiability.",
+    "complete": true,
+    "validationScope": {
+      "checks": "all",
+      "forwardControlsRun": true,
+      "inverseFitsRun": true,
+      "fullSelectedProtocolPassed": true,
+      "fitGate": "parity",
+      "interpretation": "Pass applies only to explicitly selected checks and cases; fit-only runs do not validate the independent forward-state reference floor."
+    }
+  }
+}

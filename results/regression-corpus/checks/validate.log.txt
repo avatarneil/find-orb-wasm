@@ -1,0 +1,40 @@
+
+> find-orb-wasm@0.2.0 regression:validate
+> node experiments/regression-corpus/verify.mjs && node experiments/regression-suite/run.mjs --validate-corpus
+
+{
+  "verified": true,
+  "corpusSha256": "66a801d3e4b1207acd07e96bb7a83fdffdcd677412a0c79e34b89f9f021df14e",
+  "plannedObjects": 96,
+  "completedObjects": 96,
+  "usableObjects": 96,
+  "usableCases": 194,
+  "coreCases": 192,
+  "temporalSupplementCases": 2,
+  "unavailableObjects": 0,
+  "sentinelCases": 18,
+  "arcProblems": 970,
+  "astrometryPositions": 7178,
+  "matchedStateElementPairs": 1164,
+  "rawFiles": 414,
+  "rawCompressedBytes": 2449931,
+  "rawDecodedBytes": 6778998,
+  "splitObjects": {
+    "development": 55,
+    "regression-holdout": 41
+  },
+  "applicabilityCases": {
+    "strict": 126,
+    "model-limited": 68
+  },
+  "offlineReplayByteIdentical": true
+}
+{
+  "validation": {
+    "valid": true,
+    "cases": 194,
+    "objects": 96,
+    "corpusSHA256": "66a801d3e4b1207acd07e96bb7a83fdffdcd677412a0c79e34b89f9f021df14e",
+    "scope": "Entire corpus structure, finite values, index ordering, physical applicability and TT/UTC target grids; source response hash integrity is the corpus generator validator responsibility."
+  }
+}

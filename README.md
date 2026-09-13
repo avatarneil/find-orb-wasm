@@ -129,6 +129,27 @@ These builders require unused experimental work directories. They create `.nativ
 
 On the measured Apple ARM host, native `long double` has 53 significand bits and WASM has 113. Native-versus-WASM timing therefore compares the actual implementations with their different extended-precision costs. The port preserves the WASM precision policy.
 
+## Use the broader regression corpus
+
+The [regression corpus report](docs/regression-corpus.html) describes 96 frozen catalog identities across 18 orbital categories, two core observing geometries per object, and Apophis/Encke temporal supplements. Nested arcs span one hour to one month, with separate future predictions. The broad core uses geocentric MPC 500; the earlier visible F52 cases remain a station-specific supplement. Comets, nongravitational forces, and special/unknown trajectory models have explicit applicability flags.
+
+```sh
+npm run regression:validate
+npm run test:regression
+npm run regression:sentinel -- --dry-run
+npm run regression:full
+npm run regression:sentinel -- --output results/local/regression-sentinel
+# Broad independent-state controls without running all orbit fits:
+npm run regression:full -- --checks forward --arcs one-hour --execute --output results/local/regression-forward
+npm run regression:replay -- --directory results/local/regression-sentinel
+```
+
+Offline validation replays frozen SBDB/Horizons responses and checks the entire corpus without compiled engines or API access. The lightweight GitHub workflow runs these checks and pure harness tests. Actual solver comparisons require `.native-engine` and `dist-compact`; use `--baseline-dir`, `--candidate-dir`, and their `--*-kind` options to compare other verified builds. Full mode prints a plan by default; `--execute` starts the potentially expensive full run. Every execution requires a new output directory and retains raw commands, results, failures, hashes, and the exact case plan.
+
+Unchanged ports use the default `--fit-gate parity`. Intentional algorithm experiments must use `--fit-gate report`, which retains structural and forward-propagation gates while reporting fit differences and paired errors against independent reference trajectories. This mode does not certify improved accuracy. Short-arc element errors remain informational because the observations may not identify a unique orbit. The native `fo-count` reference fixes the initial ranging budget, but upstream refinement still contains time limits; optional original `fo` runs are explicitly diagnostic. See the [frozen regression protocol](experiments/regression-suite/protocol.json) for thresholds and limitations.
+
+Forecast comparisons set `DISABLE_LIGHT_BENDING=1` to match Horizons quantity 1. Find_Orb ordinarily includes differential solar light deflection relative to background stars; this explained the largest initial reference discrepancy. The switch affects emitted ephemerides only. Its internal fitting model still includes that term, so the raw Horizons observations remain an approximation to CCD-relative astrometry, especially near the Sun. Original default-output comparisons and their source snapshots are retained separately.
+
 ## Reproduce the correctness research
 
 After building the solver, keep its pinned source checkouts in `.wasm-engine/sources/` and full DE440 file in `.cache/linux_p1550p2650.440`. Use Python 3.12+ (the SDK's Python 3.13 is suitable):

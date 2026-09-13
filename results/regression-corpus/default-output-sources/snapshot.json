@@ -1,0 +1,14 @@
+{
+  "purpose": "Historical source for original default-output comparisons before the DLD convention correction. These results include differential light deflection in emitted ephemerides.",
+  "files": {
+    "benchmark/accuracy.mjs": "ee99aa6bd1724df27dc326083175953f5f15401bde438fc64c3e3a4ad38f273b",
+    "benchmark/cases.mjs": "d56eb63f16c1cc1a2e07303ac39aa92b5cfc4fa752d2a5a1ca9c07222b9b4d5c",
+    "benchmark/engines.mjs": "afa0690f4126f3da2358ce3a3aefd26f7cfbae3ff9b3e56c9e510559457a16f2",
+    "build/pins.mjs": "63447b3bdba261263f2b10788fac72fe2a9bf64ff4399aa8fd2571b52579a525",
+    "experiments/regression-suite/core.mjs": "ab29d33ed777cebfbbbfa14e991b2dfe7701a312a205cdb7328cabe100c3dc96",
+    "experiments/regression-suite/protocol.json": "1952fff0ad9072ad94e637b5e852c604b8af93c368ea2d38597fbfa6367e83ff",
+    "experiments/regression-suite/replay.mjs": "58c4b12e6443d28a6a5881550df7b733837a07b87d90a30d23bda4d523336129",
+    "experiments/regression-suite/run.mjs": "193e0ab3b75897a56c6c01b885861e03fc66fb1547def420ad9b39ceb5a22328",
+    "experiments/short-arcs/methods.mjs": "3701fd406a0c064405c39ffd75a9199b1472af3a9ae543086a5da7307c19d2c6"
+  }
+}

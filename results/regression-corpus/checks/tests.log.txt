@@ -1,0 +1,52 @@
+
+> find-orb-wasm@0.2.0 test:regression
+> node --test tests/regression/*.test.mjs experiments/regression-corpus/integrity.test.mjs
+
+✔ complete frozen corpus verifies and replays byte-identically offline (1024.881875ms)
+✔ missing raw source fails closed without overwriting corpus (201.202208ms)
+✔ corrupt compressed source fails closed (201.150458ms)
+✔ self-consistent cache URL tampering is rejected (90.093125ms)
+✔ equivalent response recompression still violates pinned source identity (370.120417ms)
+✔ nondecimal RA cannot be silently coerced into a valid number (86.547125ms)
+✔ mixed Horizons orbit solution IDs cannot pass orbital invariant checks alone (77.851917ms)
+✔ malformed API signature cannot be classified as scientific unavailability (103.359208ms)
+✔ partial publication is rejected before any offline reconstruction (164.374041ms)
+✔ falsified coverage counts cannot mark a completed corpus accepted (115.002875ms)
+✔ offline replay verifies complete archive and recomputes every scientific result (210.955042ms)
+✔ recorded execution and validation failures remain failures after replay (61.423416ms)
+✔ command-construction/coverage failures are recomputed without invented raw outputs (16.901ms)
+✔ optional original time-cap diagnostic failures are retained outside scientific pass (28.391667ms)
+✔ missing or corrupt raw output is rejected (51.898792ms)
+✔ raw command alteration is rejected even after its checksum chain is updated (37.033ms)
+✔ invented metrics are rejected by recomputation even with matching saved/index hashes (38.569625ms)
+✔ removing a failed pair cannot produce a complete archive (35.24575ms)
+✔ changing a pair identity, orphaning output or changing declared pass status fails (101.405958ms)
+✔ strict source, corpus, index, summary and external manifest hashes are enforced (119.982833ms)
+✔ execution stack differences are normalized but failure category and message survive (51.999542ms)
+✔ schema rejects incomplete, malformed and contaminated future-label fixtures (2.905125ms)
+✔ sentinel includes preselected short and longer arcs; full has deterministic counts (1.597583ms)
+✔ noise is reproducible, shared across nested arcs, isolated by seed and case (1.95675ms)
+✔ commands preserve independent state epoch and arbitrary UTC prediction grid (0.561959ms)
+✔ v2 aligns forecast light deflection with Horizons while disclosing the unchanged fit model (0.284541ms)
+✔ output validation fails missing/nonfinite/count/force/time/element corruption (1.973542ms)
+✔ parabolic semimajor-axis absence is explicit; primary finite invariants still required (0.274917ms)
+✔ parity compares actual directions, including equal opposing errors around truth (0.284083ms)
+✔ fit report mode does not suppress structural, forward parity or strict source-floor gates (0.22075ms)
+✔ primary-element parity and wrapped orientation differences are distinct from truth recovery (0.172709ms)
+✔ coverage checks input observations, state epochs and prediction epochs (0.19075ms)
+✔ CLI rejects ambiguous/unknown controls and keeps full planning separate from execution (0.280125ms)
+✔ selected check planning counts actual forward, fit and optional original jobs (0.173042ms)
+✔ colliding display names retain distinct SPK IDs through counts, grouping and replay (66.295792ms)
+✔ dry-run and whole-corpus validation require no engine loads or output directory (2.994458ms)
+✔ complete fake paired run archives replayable bytes and refuses evidence overwrite (35.117042ms)
+✔ execution failures remain paired evidence and fail the suite rather than disappear (28.031666ms)
+✔ explicit baseline lock mismatch fails before any solver execution (12.253459ms)
+✔ forward-only and fit-only execution expose omitted checks rather than claim full validation (42.462125ms)
+ℹ tests 40
+ℹ suites 0
+ℹ pass 40
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 2564.415

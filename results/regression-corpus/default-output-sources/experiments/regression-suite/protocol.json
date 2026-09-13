@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "name": "Find_Orb paired regression protocol v1",
+  "observationSigmaArcsec": 0.2,
+  "noise": "exact or independent east/north Gaussian sigma 0.2 arcsec using the recorded SHA256-seeded LCG/Box-Muller generator. Seed is case ID + bank index + replicate; shared bank measurements are identical across nested arcs and both engines. MPC80 additionally rounds time to 0.000001 day, RA to 0.001 time-second and Dec to 0.01 arcsecond.",
+  "defaultRangingBatchCapacity": 100,
+  "gates": {
+    "epochToleranceDays": 1e-7,
+    "forwardParityArcsec": 0.001,
+    "fitParityArcsec": 0.001,
+    "forwardRangeParityAu": 0.000001,
+    "fitRangeParityAu": 0.000001,
+    "elementParity": {"q": 0.000001, "e": 0.000001, "i": 0.000001, "inverseA": 0.000001},
+    "requireAllInputObservationsUsed": true,
+    "strictForwardTruthArcsec": 0.1
+  },
+  "pairedAccuracyAllowance": {
+    "absoluteArcsec": 0.1,
+    "relativeFraction": 0.1,
+    "policy": "Report a degradation when candidate truth error exceeds baseline error * 1.1 + 0.1 arcsec. This predeclared screening allowance is not an accuracy guarantee, statistical significance test, or automatic science acceptance gate. Report by object class, arc and physical-model applicability."
+  },
+  "sentinelPolicy": "Frozen corpus suite.sentinelIds, one-hour arc with exact astrometry; also the one-week arc of the first sentinel ID, chosen without fit outcomes. Explicit --arcs replaces this assignment.",
+  "fullPolicy": "All corpus cases and arcs, exact plus Gaussian noise, replicate 0. Full mode plans by default and requires --execute to run its potentially thousands of jobs.",
+  "checkSelection": "Default --checks all runs independent forward-state controls and inverse fits. --checks forward runs source-model/propagation checks only; --checks fit skips the independent reference floor and must not claim complete scientific validation. Both omissions are explicit in the manifest, plan and summary.",
+  "referenceFloor": "At every selected arc endpoint, propagate its independent Horizons truth state to that epoch and the +1/+3/+7-day targets. Strict cases use the broad 0.1-arcsecond guard; this is not an established universal physical accuracy. Model-limited cases still run and retain all numerical, time-grid, force-model and engine-parity gates, but their absolute Horizons discrepancy is reported separately without a false strict physical-equivalence claim.",
+  "fitGate": "parity enforces paired sky-direction, range and primary-element agreement and matching observation use; report records disagreements when an intentionally changed solver is under investigation. Element absolute tolerances are 1e-6 AU for q, dimensionless for e, degrees for i, and AU^-1 for inverseA. These are broad regression guards, not established scientific accuracy. Truth errors and wrapped node/perihelion-angle differences are reported only; neither mode asserts true orbital-element recovery from underconstrained arcs. Structural and forward gates always remain active.",
+  "searchLimitations": "fo-count and WASM have the same configured deterministic systematic-ranging batch capacity. Retries can exceed this capacity. Upstream outer differential-correction loops still contain wall/CPU-time limits, so whole-fit determinism is not guaranteed. Original native fo retains the upstream half-CPU-second ranging cap and is an optional diagnostic, never the exact-count parity authority.",
+  "timing": "Sequential fresh-job timings are provenance, not a controlled performance benchmark. Dry-run scheduling estimate assumes 5 seconds per fit and 1 second per forward propagation, configurable and explicitly unmeasured."
+}

@@ -1,0 +1,547 @@
+{
+  "verified": true,
+  "scientificPass": true,
+  "manifestSHA256": "aecac8dcf88ff6357152d5aa0f9a6bd398f0a1b18eb71e8ea15682469db6b1da",
+  "replayerSHA256": "58c4b12e6443d28a6a5881550df7b733837a07b87d90a30d23bda4d523336129",
+  "sourcePolicy": "Strict recorded current-source hashes; no historical-source migration or changed-policy recomputation.",
+  "archiveAuthenticity": "Internal hash-chain consistency only; no external signature/manifest anchor supplied.",
+  "pairs": 194,
+  "rawFiles": 388,
+  "executionFailuresRetained": 0,
+  "validationFailuresRecomputed": 0,
+  "constructionFailuresRecomputed": 0,
+  "limitation": "No solver/API calls. Process failures without raw result are retained rather than reproduced; only error first lines are compared across stack locations. Source acquisition/normalization is validated separately by regression-corpus/verify.mjs.",
+  "summary": {
+    "pass": true,
+    "pairs": 194,
+    "failedPairs": 0,
+    "groups": [
+      {
+        "class": "IEO",
+        "arc": "one-hour",
+        "kind": "forward",
+        "applicability": "strict",
+        "runs": 12,
+        "objects": [
+          "20163693",
+          "20164294",
+          "20413563",
+          "20418265",
+          "20434326",
+          "20481817"
+        ],
+        "objectLabels": {
+          "20163693": "Atira",
+          "20164294": "164294",
+          "20413563": "413563",
+          "20418265": "418265",
+          "20434326": "434326",
+          "20481817": "481817"
+        },
+        "failed": 0,
+        "parityFailures": 0,
+        "degraded": 0,
+        "futurePredictionCount": 36,
+        "medianCandidateErrorArcsec": 0.00002678552036181659,
+        "p95CandidateErrorArcsec": 0.00006441647638293446,
+        "medianPairedErrorChangeArcsec": 0
+      },
+      {
+        "class": "ATE",
+        "arc": "one-hour",
+        "kind": "forward",
+        "applicability": "model-limited",
+        "runs": 11,
+        "objects": [
+          "20099942",
+          "20002062",
+          "20002100",
+          "20002340",
+          "20005381"
+        ],
+        "objectLabels": {
+          "20002062": "Aten",
+          "20002100": "Ra-Shalom",
+          "20002340": "Hathor",
+          "20005381": "Sekhmet",
+          "20099942": "Apophis"
+        },
+        "failed": 0,
+        "parityFailures": 0,
+        "degraded": 0,
+        "futurePredictionCount": 33,
+        "medianCandidateErrorArcsec": 0.00002345946563786403,
+        "p95CandidateErrorArcsec": 0.04793258833998469,
+        "medianPairedErrorChangeArcsec": 0
+      },
+      {
+        "class": "ATE",
+        "arc": "one-hour",
+        "kind": "forward",
+        "applicability": "strict",
+        "runs": 6,
+        "objects": [
+          "20003362",
+          "20003554",
+          "20003753"
+        ],
+        "objectLabels": {
+          "20003362": "Khufu",
+          "20003554": "Amun",
+          "20003753": "Cruithne"
+        },
+        "failed": 0,
+        "parityFailures": 0,
+        "degraded": 0,
+        "futurePredictionCount": 18,
+        "medianCandidateErrorArcsec": 0.000018368036528949395,
+        "p95CandidateErrorArcsec": 0.00002465411350150359,
+        "medianPairedErrorChangeArcsec": 0
+      },
+      {
+        "class": "APO",
+        "arc": "one-hour",
+        "kind": "forward",
+        "applicability": "model-limited",
+        "runs": 14,
+        "objects": [
+          "20101955",
+          "20001566",
+          "20003200",
+          "20001620",
+          "20001685",
+          "20001862",
+          "20001865"
+        ],
+        "objectLabels": {
+          "20001566": "Icarus",
+          "20001620": "Geographos",
+          "20001685": "Toro",
+          "20001862": "Apollo",
+          "20001865": "Cerberus",
+          "20003200": "Phaethon",
+          "20101955": "Bennu"
+        },
+        "failed": 0,
+        "parityFailures": 0,
+        "degraded": 0,
+        "futurePredictionCount": 42,
+        "medianCandidateErrorArcsec": 0.000019161816284672392,
+        "p95CandidateErrorArcsec": 0.00016149227491695216,
+        "medianPairedErrorChangeArcsec": 0
+      },
+      {
+        "class": "APO",
+        "arc": "one-hour",
+        "kind": "forward",
+        "applicability": "strict",
+        "runs": 6,
+        "objects": [
+          "20001863",
+          "20001864",
+          "20001866"
+        ],
+        "objectLabels": {
+          "20001863": "Antinous",
+          "20001864": "Daedalus",
+          "20001866": "Sisyphus"
+        },
+        "failed": 0,
+        "parityFailures": 0,
+        "degraded": 0,
+        "futurePredictionCount": 18,
+        "medianCandidateErrorArcsec": 0.000015591395200379322,
+        "p95CandidateErrorArcsec": 0.00003921109765740055,
+        "medianPairedErrorChangeArcsec": 0
+      },
+      {
+        "class": "AMO",
+        "arc": "one-hour",
+        "kind": "forward",
+        "applicability": "strict",
+        "runs": 10,
+        "objects": [
+          "20000433",
+          "20000719",
+          "20000887",
+          "20001036",
+          "20001915"
+        ],
+        "objectLabels": {
+          "20000433": "Eros",
+          "20000719": "Albert",
+          "20000887": "Alinda",
+          "20001036": "Ganymed",
+          "20001915": "Quetzalcoatl"
+        },
+        "failed": 0,
+        "parityFailures": 0,
+        "degraded": 0,
+        "futurePredictionCount": 30,
+        "medianCandidateErrorArcsec": 0.000008627358646360818,
+        "p95CandidateErrorArcsec": 0.0000171567369757253,
+        "medianPairedErrorChangeArcsec": 0
+      },
+      {
+        "class": "AMO",
+        "arc": "one-hour",
+        "kind": "forward",
+        "applicability": "model-limited",
+        "runs": 6,
+        "objects": [
+          "20001221",
+          "20001580",
+          "20001627"
+        ],
+        "objectLabels": {
+          "20001221": "Amor",
+          "20001580": "Betulia",
+          "20001627": "Ivar"
+        },
+        "failed": 0,
+        "parityFailures": 0,
+        "degraded": 0,
+        "futurePredictionCount": 18,
+        "medianCandidateErrorArcsec": 0.000009476251820378354,
+        "p95CandidateErrorArcsec": 0.000014951471372111189,
+        "medianPairedErrorChangeArcsec": 0
+      },
+      {
+        "class": "IMB",
+        "arc": "one-hour",
+        "kind": "forward",
+        "applicability": "strict",
+        "runs": 8,
+        "objects": [
+          "20000434",
+          "20001019",
+          "20001025",
+          "20001103"
+        ],
+        "objectLabels": {
+          "20000434": "Hungaria",
+          "20001019": "Strackea",
+          "20001025": "Riema",
+          "20001103": "Sequoia"
+        },
+        "failed": 0,
+        "parityFailures": 0,
+        "degraded": 0,
+        "futurePredictionCount": 24,
+        "medianCandidateErrorArcsec": 0.000011947849001180373,
+        "p95CandidateErrorArcsec": 0.000026064647153406808,
+        "medianPairedErrorChangeArcsec": 0
+      },
+      {
+        "class": "MBA",
+        "arc": "one-hour",
+        "kind": "forward",
+        "applicability": "strict",
+        "runs": 40,
+        "objects": [
+          "20000004",
+          "20000006",
+          "20000007",
+          "20000008",
+          "20000009",
+          "20000011",
+          "20000001",
+          "20000002",
+          "20000003",
+          "20000005",
+          "20000013",
+          "20000014",
+          "20000010",
+          "20000016",
+          "20000022",
+          "20000024",
+          "20000031",
+          "20000033",
+          "20000196",
+          "20000208"
+        ],
+        "objectLabels": {
+          "20000001": "Ceres",
+          "20000002": "Pallas",
+          "20000003": "Juno",
+          "20000004": "Vesta",
+          "20000005": "Astraea",
+          "20000006": "Hebe",
+          "20000007": "Iris",
+          "20000008": "Flora",
+          "20000009": "Metis",
+          "20000010": "Hygiea",
+          "20000011": "Parthenope",
+          "20000013": "Egeria",
+          "20000014": "Irene",
+          "20000016": "Psyche",
+          "20000022": "Kalliope",
+          "20000024": "Themis",
+          "20000031": "Euphrosyne",
+          "20000033": "Polyhymnia",
+          "20000196": "Philomela",
+          "20000208": "Lacrimosa"
+        },
+        "failed": 0,
+        "parityFailures": 0,
+        "degraded": 0,
+        "futurePredictionCount": 120,
+        "medianCandidateErrorArcsec": 0.000008405230539080291,
+        "p95CandidateErrorArcsec": 0.000021664203699777987,
+        "medianPairedErrorChangeArcsec": 0
+      },
+      {
+        "class": "OMB",
+        "arc": "one-hour",
+        "kind": "forward",
+        "applicability": "strict",
+        "runs": 12,
+        "objects": [
+          "20000153",
+          "20000190",
+          "20000334",
+          "20000361",
+          "20000499",
+          "20000748"
+        ],
+        "objectLabels": {
+          "20000153": "Hilda",
+          "20000190": "Ismene",
+          "20000334": "Chicago",
+          "20000361": "Bononia",
+          "20000499": "Venusia",
+          "20000748": "Simeisa"
+        },
+        "failed": 0,
+        "parityFailures": 0,
+        "degraded": 0,
+        "futurePredictionCount": 36,
+        "medianCandidateErrorArcsec": 0.000007984989483650745,
+        "p95CandidateErrorArcsec": 0.000012347566022117062,
+        "medianPairedErrorChangeArcsec": 0
+      },
+      {
+        "class": "TJN",
+        "arc": "one-hour",
+        "kind": "forward",
+        "applicability": "strict",
+        "runs": 12,
+        "objects": [
+          "20000588",
+          "20000617",
+          "20000624",
+          "20000659",
+          "20000884",
+          "20000911"
+        ],
+        "objectLabels": {
+          "20000588": "Achilles",
+          "20000617": "Patroclus",
+          "20000624": "Hektor",
+          "20000659": "Nestor",
+          "20000884": "Priamus",
+          "20000911": "Agamemnon"
+        },
+        "failed": 0,
+        "parityFailures": 0,
+        "degraded": 0,
+        "futurePredictionCount": 36,
+        "medianCandidateErrorArcsec": 0.000004826324570490567,
+        "p95CandidateErrorArcsec": 0.000006972799564076094,
+        "medianPairedErrorChangeArcsec": 0
+      },
+      {
+        "class": "CEN",
+        "arc": "one-hour",
+        "kind": "forward",
+        "applicability": "strict",
+        "runs": 10,
+        "objects": [
+          "20002060",
+          "20005145",
+          "20000944",
+          "20007066",
+          "20020461"
+        ],
+        "objectLabels": {
+          "20000944": "Hidalgo",
+          "20002060": "Chiron",
+          "20005145": "Pholus",
+          "20007066": "Nessus",
+          "20020461": "Dioretsa"
+        },
+        "failed": 0,
+        "parityFailures": 0,
+        "degraded": 0,
+        "futurePredictionCount": 30,
+        "medianCandidateErrorArcsec": 0.0000015820486376960025,
+        "p95CandidateErrorArcsec": 0.000004503729882110106,
+        "medianPairedErrorChangeArcsec": 0
+      },
+      {
+        "class": "TNO",
+        "arc": "one-hour",
+        "kind": "forward",
+        "applicability": "strict",
+        "runs": 10,
+        "objects": [
+          "20015760",
+          "20020000",
+          "20050000",
+          "20136199",
+          "20065407"
+        ],
+        "objectLabels": {
+          "20015760": "Albion",
+          "20020000": "Varuna",
+          "20050000": "Quaoar",
+          "20065407": "65407",
+          "20136199": "Eris"
+        },
+        "failed": 0,
+        "parityFailures": 0,
+        "degraded": 0,
+        "futurePredictionCount": 30,
+        "medianCandidateErrorArcsec": 0.0000015051956289600335,
+        "p95CandidateErrorArcsec": 0.0000023957187806093167,
+        "medianPairedErrorChangeArcsec": 0
+      },
+      {
+        "class": "ETc",
+        "arc": "one-hour",
+        "kind": "forward",
+        "applicability": "model-limited",
+        "runs": 3,
+        "objects": [
+          "1000025"
+        ],
+        "objectLabels": {
+          "1000025": "Encke"
+        },
+        "failed": 0,
+        "parityFailures": 0,
+        "degraded": 0,
+        "futurePredictionCount": 9,
+        "medianCandidateErrorArcsec": 0.000006214837324270754,
+        "p95CandidateErrorArcsec": 0.005052026097584938,
+        "medianPairedErrorChangeArcsec": 0
+      },
+      {
+        "class": "JFc",
+        "arc": "one-hour",
+        "kind": "forward",
+        "applicability": "model-limited",
+        "runs": 10,
+        "objects": [
+          "1000012",
+          "1000001",
+          "1000002",
+          "1000003",
+          "1000005"
+        ],
+        "objectLabels": {
+          "1000001": "Arend",
+          "1000002": "Arend-Rigaux",
+          "1000003": "Ashbrook-Jackson",
+          "1000005": "Borrelly",
+          "1000012": "Churyumov-Gerasimenko"
+        },
+        "failed": 0,
+        "parityFailures": 0,
+        "degraded": 0,
+        "futurePredictionCount": 30,
+        "medianCandidateErrorArcsec": 0.0000051829805551921715,
+        "p95CandidateErrorArcsec": 0.00005384568805363339,
+        "medianPairedErrorChangeArcsec": 0
+      },
+      {
+        "class": "HTC",
+        "arc": "one-hour",
+        "kind": "forward",
+        "applicability": "model-limited",
+        "runs": 8,
+        "objects": [
+          "1000036",
+          "1000009",
+          "1000016",
+          "1000042"
+        ],
+        "objectLabels": {
+          "1000009": "Brorsen-Metcalf",
+          "1000016": "Crommelin",
+          "1000036": "Halley",
+          "1000042": "Hartley-IRAS"
+        },
+        "failed": 0,
+        "parityFailures": 0,
+        "degraded": 0,
+        "futurePredictionCount": 24,
+        "medianCandidateErrorArcsec": 0.000001876498518604934,
+        "p95CandidateErrorArcsec": 0.0002931513253113625,
+        "medianPairedErrorChangeArcsec": 0
+      },
+      {
+        "class": "HYP",
+        "arc": "one-hour",
+        "kind": "forward",
+        "applicability": "model-limited",
+        "runs": 8,
+        "objects": [
+          "1000155",
+          "1000170",
+          "1000173",
+          "1000175"
+        ],
+        "objectLabels": {
+          "1000155": "Brewington",
+          "1000170": "Meunier-Dupouy",
+          "1000173": "Mueller",
+          "1000175": "NEAT"
+        },
+        "failed": 0,
+        "parityFailures": 0,
+        "degraded": 0,
+        "futurePredictionCount": 24,
+        "medianCandidateErrorArcsec": 0.0000013359691977841562,
+        "p95CandidateErrorArcsec": 0.000002182525487006675,
+        "medianPairedErrorChangeArcsec": 0
+      },
+      {
+        "class": "COM",
+        "arc": "one-hour",
+        "kind": "forward",
+        "applicability": "model-limited",
+        "runs": 8,
+        "objects": [
+          "1000131",
+          "1000132",
+          "1000171",
+          "1000174"
+        ],
+        "objectLabels": {
+          "1000131": "Hyakutake",
+          "1000132": "Hale-Bopp",
+          "1000171": "Montani",
+          "1000174": "Mueller"
+        },
+        "failed": 0,
+        "parityFailures": 0,
+        "degraded": 0,
+        "futurePredictionCount": 24,
+        "medianCandidateErrorArcsec": 0.0000013032476214745234,
+        "p95CandidateErrorArcsec": 0.0000022744565806301176,
+        "medianPairedErrorChangeArcsec": 0
+      }
+    ],
+    "interpretation": "Repeated geometries/arcs/noise of one object are correlated. Counts are coverage, not independent samples; paired accuracy flags are descriptive, not posterior calibration or proof of element identifiability.",
+    "complete": true,
+    "validationScope": {
+      "checks": "forward",
+      "forwardControlsRun": true,
+      "inverseFitsRun": false,
+      "fullSelectedProtocolPassed": false,
+      "fitGate": "parity",
+      "interpretation": "Pass applies only to explicitly selected checks and cases; fit-only runs do not validate the independent forward-state reference floor."
+    }
+  }
+}

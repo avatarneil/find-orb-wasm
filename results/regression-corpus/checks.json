@@ -1,0 +1,234 @@
+{
+  "schemaVersion": 1,
+  "corpus": {
+    "verified": true,
+    "corpusSha256": "66a801d3e4b1207acd07e96bb7a83fdffdcd677412a0c79e34b89f9f021df14e",
+    "plannedObjects": 96,
+    "completedObjects": 96,
+    "usableObjects": 96,
+    "usableCases": 194,
+    "coreCases": 192,
+    "temporalSupplementCases": 2,
+    "unavailableObjects": 0,
+    "sentinelCases": 18,
+    "arcProblems": 970,
+    "astrometryPositions": 7178,
+    "matchedStateElementPairs": 1164,
+    "rawFiles": 414,
+    "rawCompressedBytes": 2449931,
+    "rawDecodedBytes": 6778998,
+    "splitObjects": {
+      "development": 55,
+      "regression-holdout": 41
+    },
+    "applicabilityCases": {
+      "strict": 126,
+      "model-limited": 68
+    },
+    "offlineReplayByteIdentical": true
+  },
+  "sourceSHA256": "643a4e8d6c3fee7f972d3cf149fbe0d3ccfb6055ff6af1f5ec0ee23790156da6",
+  "tests": {
+    "command": "npm run test:regression",
+    "tests": 40,
+    "pass": 40,
+    "fail": 0,
+    "skipped": 0,
+    "log": "checks/tests.log.txt",
+    "sha256": "6e0a62d6c85d53d9820649bccb28f0e8debcb9788087a5f50595b3ee0f577575"
+  },
+  "runs": {
+    "forward-v1": {
+      "pairs": 194,
+      "passedPairs": 194,
+      "failedPairs": 0,
+      "objects": 96,
+      "cases": 194,
+      "rawRecords": 388,
+      "manifestSHA256": "364631048bae69aae73df533204511521809d08ff8637f9415c734105849f69a",
+      "summaryFile": "forward-v1/summary.json",
+      "replayFile": "checks/forward-v1-replay.json",
+      "validationScope": {
+        "checks": "forward",
+        "forwardControlsRun": true,
+        "inverseFitsRun": false,
+        "fullSelectedProtocolPassed": false,
+        "fitGate": "parity",
+        "interpretation": "Pass applies only to explicitly selected checks and cases; fit-only runs do not validate the independent forward-state reference floor."
+      },
+      "maxEngineDirectionDifferenceArcsec": 9.902495180749853e-8,
+      "maxEngineRangeDifferenceAu": 0,
+      "independentForwardReference": {
+        "strict": {
+          "cases": 126,
+          "maxArcsec": 0.09190431022486457,
+          "worstCase": "sb-20000334-2026-08-01",
+          "absoluteGuardEnforced": true
+        },
+        "model-limited": {
+          "cases": 68,
+          "maxArcsec": 0.1116658671647343,
+          "worstCase": "sb-20099942-apophis-2029-encounter",
+          "absoluteGuardEnforced": false
+        }
+      }
+    },
+    "sentinel-v1": {
+      "pairs": 38,
+      "passedPairs": 38,
+      "failedPairs": 0,
+      "objects": 18,
+      "cases": 18,
+      "rawRecords": 76,
+      "manifestSHA256": "bd4a6d3a40b99902f53c7e76d7c59fd87cfc1ac77635e84175c7c9c6e89cf4d7",
+      "summaryFile": "sentinel-v1/summary.json",
+      "replayFile": "checks/sentinel-v1-replay.json",
+      "validationScope": {
+        "checks": "all",
+        "forwardControlsRun": true,
+        "inverseFitsRun": true,
+        "fullSelectedProtocolPassed": true,
+        "fitGate": "parity",
+        "interpretation": "Pass applies only to explicitly selected checks and cases; fit-only runs do not validate the independent forward-state reference floor."
+      },
+      "maxEngineDirectionDifferenceArcsec": 7.194213490558323e-8,
+      "maxEngineRangeDifferenceAu": 6.10999251193789e-10,
+      "independentForwardReference": {
+        "strict": {
+          "cases": 13,
+          "maxArcsec": 0.053300950624995826,
+          "worstCase": "sb-20000004-2026-02-01",
+          "absoluteGuardEnforced": true
+        },
+        "model-limited": {
+          "cases": 6,
+          "maxArcsec": 0.009488881972943215,
+          "worstCase": "sb-20099942-2026-02-01",
+          "absoluteGuardEnforced": false
+        }
+      },
+      "fitReferenceDiagnostic": {
+        "worstSevenDayCase": "sb-20101955-2026-02-01",
+        "arc": "one-hour",
+        "sevenDayErrorArcsec": 10430.603280059364,
+        "interpretation": "Informational truth error, not a passing accuracy claim. Geocentric short-arc fits can be nonidentifiable; physical/input-convention differences also remain."
+      }
+    },
+    "forward-v2": {
+      "pairs": 194,
+      "passedPairs": 194,
+      "failedPairs": 0,
+      "objects": 96,
+      "cases": 194,
+      "rawRecords": 388,
+      "manifestSHA256": "aecac8dcf88ff6357152d5aa0f9a6bd398f0a1b18eb71e8ea15682469db6b1da",
+      "summaryFile": "forward-v2/summary.json",
+      "replayFile": "checks/forward-v2-replay.json",
+      "validationScope": {
+        "checks": "forward",
+        "forwardControlsRun": true,
+        "inverseFitsRun": false,
+        "fullSelectedProtocolPassed": false,
+        "fitGate": "parity",
+        "interpretation": "Pass applies only to explicitly selected checks and cases; fit-only runs do not validate the independent forward-state reference floor."
+      },
+      "maxEngineDirectionDifferenceArcsec": 1.2483550090727505e-7,
+      "maxEngineRangeDifferenceAu": 0,
+      "independentForwardReference": {
+        "strict": {
+          "cases": 126,
+          "maxArcsec": 0.00009464941590866804,
+          "worstCase": "sb-20418265-2026-02-01",
+          "absoluteGuardEnforced": true
+        },
+        "model-limited": {
+          "cases": 68,
+          "maxArcsec": 0.10201308759467305,
+          "worstCase": "sb-20099942-apophis-2029-encounter",
+          "absoluteGuardEnforced": false
+        }
+      }
+    },
+    "sentinel-v2": {
+      "pairs": 38,
+      "passedPairs": 38,
+      "failedPairs": 0,
+      "objects": 18,
+      "cases": 18,
+      "rawRecords": 76,
+      "manifestSHA256": "4c449bcad411dfc2f828e006eaf4c6f631ca87cfc5444bf3f34e1f38d62de6ad",
+      "summaryFile": "sentinel-v2/summary.json",
+      "replayFile": "checks/sentinel-v2-replay.json",
+      "validationScope": {
+        "checks": "all",
+        "forwardControlsRun": true,
+        "inverseFitsRun": true,
+        "fullSelectedProtocolPassed": true,
+        "fitGate": "parity",
+        "interpretation": "Pass applies only to explicitly selected checks and cases; fit-only runs do not validate the independent forward-state reference floor."
+      },
+      "maxEngineDirectionDifferenceArcsec": 7.194213485361785e-8,
+      "maxEngineRangeDifferenceAu": 6.10999251193789e-10,
+      "independentForwardReference": {
+        "strict": {
+          "cases": 13,
+          "maxArcsec": 0.00005595245048430067,
+          "worstCase": "sb-20163693-2026-02-01",
+          "absoluteGuardEnforced": true
+        },
+        "model-limited": {
+          "cases": 6,
+          "maxArcsec": 0.00016588656100614488,
+          "worstCase": "sb-20101955-2026-02-01",
+          "absoluteGuardEnforced": false
+        }
+      },
+      "fitReferenceDiagnostic": {
+        "worstSevenDayCase": "sb-20101955-2026-02-01",
+        "arc": "one-hour",
+        "sevenDayErrorArcsec": 10430.614642119393,
+        "interpretation": "Informational truth error, not a passing accuracy claim. Geocentric short-arc fits can be nonidentifiable; physical/input-convention differences also remain."
+      }
+    }
+  },
+  "coordinateConventionControl": {
+    "executableCommandsCompared": 388,
+    "onlyChange": "DISABLE_LIGHT_BENDING=1 in emitted ephemerides; the internal fit measurement model is unchanged.",
+    "chicago": {
+      "caseId": "sb-20000334-2026-08-01",
+      "rows": [
+        {
+          "jdUtc": 2461253.541666667,
+          "defaultErrorArcsec": 0.01667273070278493,
+          "matchedConventionErrorArcsec": 0.000007435723353360214
+        },
+        {
+          "jdUtc": 2461254.541666667,
+          "defaultErrorArcsec": 0.01892455763017108,
+          "matchedConventionErrorArcsec": 0.00000977066594232412
+        },
+        {
+          "jdUtc": 2461256.541666667,
+          "defaultErrorArcsec": 0.025898908969223332,
+          "matchedConventionErrorArcsec": 0.000008153555790936479
+        },
+        {
+          "jdUtc": 2461260.541666667,
+          "defaultErrorArcsec": 0.09190431022486457,
+          "matchedConventionErrorArcsec": 0.000012703788071730501
+        }
+      ]
+    },
+    "interpretation": "The default-output reference disagreement includes differential solar light deflection. Preserve it as convention evidence; use v2 for matched forecast-coordinate comparisons."
+  },
+  "scope": "194 one-hour-endpoint independent-state propagation pairs, plus 19 sentinel propagation and 19 sentinel fit pairs (18 objects; one additional week-long arc). The full 5,820-call noise/arc plan was not run. Passing port parity does not assert accurate short-arc orbital recovery.",
+  "visual": {
+    "browser": "Chromium",
+    "desktopWidth": 1400,
+    "mobileWidth": 390,
+    "scriptErrors": [],
+    "mobileOverflow": false,
+    "apophisFilterCases": 3,
+    "inspection": "Desktop and mobile report screenshots inspected; filters checked against the final 194-case corpus."
+  }
+}
