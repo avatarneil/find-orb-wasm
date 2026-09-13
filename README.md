@@ -4,6 +4,8 @@ A standalone WebAssembly port of [Bill Gray / Project Pluto’s Find_Orb](https:
 
 Extracted from the latest `webastrometrica` `origin/main` at `c86e53ccf9fa662bc43fb0b3eed67594790e52a2`. See [provenance.json](provenance.json) for exact source-file hashes. The browser application and its job policy remain in WebAstrometrica.
 
+Read the [measured findings and limitations](docs/findings.html) for native/WASM performance, targeted formal verification, and the **6.33 MB** compact data download.
+
 ## Build
 
 Requires Node 24+, Git, GNU make, Python 3.10+, and a C/C++ toolchain on macOS or Linux. All downloads and builds remain local.
@@ -16,21 +18,100 @@ git -C .wasm-toolchain checkout --detach c0bb220cb6e6f4e0fabb6f6db9efd53390ef5e5
 npm run build
 ```
 
-The build pins Find_Orb, lunar, jpl_eph, sat_code, Emscripten, and the full JPL DE440 ephemeris. To reuse a downloaded DE440 file, pass `npm run build -- --ephemeris /absolute/path/linux_p1550p2650.440`; its SHA-256 is verified. Optional `--sdk`, `--work`, and `--dist` select local directories.
+The build pins Find_Orb, lunar, jpl_eph, sat_code, Emscripten, and the full JPL DE440 ephemeris. To reuse a downloaded DE440 file, pass `npm run build -- --ephemeris /absolute/path/linux_p1550p2650.440`; its SHA-256 is verified. Optional `--sdk`, `--work`, and `--dist` select local directories. The local SDK's Python is selected automatically on macOS; Linux needs Python 3.10+ on its path.
 
 ## Use
 
 Import `createSession` from `src/index.js`, supply the built `dist/find-orb-worker.js` source, and call `initialize(dataArrayBuffer, signal)` with `dist/find-orb.data`. Call `execute(args, files, outputPaths, signal)` and always `close()` the session in `finally`. Inputs and outputs are bounded text files under `/job/`; astronomical reference files live under `/engine/`. The low-level interface accepts trusted CLI arguments. Applications must validate observation and job policy.
 
-Each command receives a fresh module, heap, and filesystem. The worker supports cancellation and timeouts; initialization verifies the data and WASM checksums. See `src/index.d.ts` for the API.
+Each command receives a fresh instance, heap, globals, and filesystem. The session retains the immutable compiled `WebAssembly.Module`, so repeated commands can reuse compiled code without retaining solver state. The worker supports cancellation and timeouts; initialization verifies the data and WASM checksums before compilation. See `src/index.d.ts` for the API.
 
-The initial reference pack is 109,894,483 bytes. It contains astronomical reference data, not precomputed fitted orbits. Build outputs also include `manifest.json`, `fo.wasm`, `fo.js`, `fo.cjs`, license notices, and `corresponding-source.tar.gz`.
+Reference files use copy-on-write storage: jobs share verified bytes for reads and receive private copies if they write or truncate a reference file. Solver state is never shared between commands.
+
+## Compact data without file selection
+
+```sh
+npm run data:compact
+```
+
+This creates `dist-compact/` with the unchanged solver and losslessly selected DE440 records for 2000–2040, plus boundary margins. The default pack retains **every auxiliary file**. It is 11,376,515 bytes raw or **6,329,416 bytes gzip**, versus the full pack's 109,894,483 bytes raw. The exact supported interval is `(1999-11-22, 2040-02-08]` in the ephemeris time scale. J2000 coverage is required by upstream's state-command initialization.
+
+Applications can load the compressed pack automatically from their static host:
+
+```js
+import {createSessionFromUrls} from 'find-orb-wasm';
+// Bundle or pin the corresponding manifest with your application.
+const session = await createSessionFromUrls({
+  workerURL: '/solver/find-orb-worker.js',
+  dataURL: '/solver/find-orb.data.gz',
+  compression: 'gzip',
+  manifest: trustedBuildManifest,
+  signal: abortController.signal,
+});
+try {
+  const result = await session.execute(trustedArgs, jobFiles, outputPaths);
+} finally {
+  session.close();
+}
+```
+
+The explicit API call starts the download, verifies both assets, and initializes the worker. No manual data selection is needed. Serve the `.gz` file as `application/gzip`; ordinary HTTP `Content-Encoding: gzip` is also handled. Initialization uses bounded decompression and supports cancellation. Once initialized, calculations need no network. First-load offline support still requires the host application to package or cache the assets.
+
+Every actual JPL query must fit the supported interval, including intermediate integration, initialization, and light-time evaluations. Out-of-range, missing, or unreadable ephemerides **fail the job**; approximate fallback is disabled. Use the full pack for historical work or choose a wider window with `--start-jd` and `--end-jd`. See [dataset findings](docs/dataset.html) and [machine-readable evidence](results/dataset.json).
+
+## Validation and benchmarks
+
+Keep a copy of the pinned full DE440 file at `.cache/linux_p1550p2650.440`, or extract it from the full pack:
+
+```sh
+mkdir -p .cache
+node --input-type=module -e "import fs from 'node:fs'; const m=JSON.parse(fs.readFileSync('dist/manifest.json')); const e=m.entries[m.ephemeris.filename]; fs.writeFileSync('.cache/'+m.ephemeris.filename,fs.readFileSync('dist/find-orb.data').subarray(e.offset,e.offset+e.size));"
+npm run build:native
+npm ci
+npm test
+npx playwright install chromium
+npm run test:browser
+npm run verify:data
+npm run benchmark -- --output results/local/benchmark.json --warmup 2 --repetitions 7
+```
+
+The suite benchmarks the original native executable, a separately labeled native comparator with a matched ranging budget, and actual WASM. It covers short-arc fitting, independent JPL Horizons propagation and topocentric predictions, held-out recovery, and high-eccentricity/near-parabolic/hyperbolic propagation. Reports retain raw outputs, individual timings, setup costs, source/fixture hashes, host details, and accuracy checks. See [benchmark instructions](benchmark/README.md).
+
+Run the source-anchored proofs and compiler probes separately:
+
+```sh
+python3 -m venv .venv/verification
+.venv/verification/bin/pip install -r verification/requirements.txt
+npm run verify:proofs
+npm run verify:compiler
+npm run verify:experimental
+```
+
+Proof obligations cover selected search/vector operations, floating-point counterexamples, and DE440 record-selection equivalence. Compiler probes compare extracted actual routines across native and WASM optimization levels and native sanitizers. The [verification report](docs/verification.html) defines each guarantee, assumptions, trusted components, and limitations.
+
+The experimental command checks a separately built exact integer multiplication helper, including its 31 proof obligations and binary128 differential corpus. This helper is not enabled in the shipping solver: its measured fitting gain was too small to establish an improvement. Default port obligations and experiments remain separately identified in the evidence.
 
 ## Numerical policy
 
-Preserve upstream orbital arithmetic: binary64 `double`, Emscripten software binary128 `long double`, no fast-math, and disabled FP contraction in Find_Orb. Keep a fresh C runtime for each job. Checked portability patches replace a mismatched function-pointer cast, disable unsupported POSIX process controls in WASM, and complete the configured statistical-ranging candidate budget instead of stopping after a CPU-dependent half second. External timeouts reject incomplete jobs.
+Preserve upstream orbital arithmetic: binary64 `double`, Emscripten software binary128 `long double`, no fast-math, and disabled FP contraction throughout all four source projects. Keep a fresh C runtime for each job. Checked portability patches replace a mismatched function-pointer cast, disable unsupported POSIX process controls in WASM, and complete the configured statistical-ranging candidate budget instead of stopping after a CPU-dependent half second. External timeouts reject incomplete jobs.
 
 Native/WASM agreement is a port regression check, not independent astronomical truth or a proof of universal numerical accuracy.
+
+On the measured Apple ARM host, native `long double` has 53 significand bits and WASM has 113. Native-versus-WASM timing therefore compares the actual implementations with their different extended-precision costs. The port preserves the WASM precision policy.
+
+## Rebuild corresponding source
+
+Every build includes `corresponding-source.tar.gz`, the patched upstream code, local build/runtime/data recipes, all license notices, and a source-file checksum lock. With the SDK and full DE440 already available, rebuild directly from the archive without Git or source-network access:
+
+```sh
+mkdir source-release
+tar -xzf dist/corresponding-source.tar.gz -C source-release
+node source-release/build/build.mjs --sources source-release/sources \
+  --sdk "$PWD/.wasm-toolchain" --work "$PWD/.wasm-engine-from-source" \
+  --dist "$PWD/dist-from-source" --ephemeris "$PWD/.cache/linux_p1550p2650.440"
+```
+
+The archive rebuild requires an empty work directory and verifies source hashes before compilation. Retain the complete distribution, including the corresponding source archive and notices, when hosting the worker and data.
 
 ## License and attribution
 

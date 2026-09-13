@@ -1,0 +1,37 @@
+{
+  "createdAt": "2026-09-13T16:34:18.082571+00:00",
+  "archiveSHA256": "8234d48c4c85ad9f71b14e2a401220b54c9fc7dfcaba04ef7c054931202755b4",
+  "binarySHA256": "cffccd0ce9026bee08316d3e3b99d935cf6e6c6342bccbfdfb8e4fc260e4af71",
+  "sourceLockSHA256": "5349862f6ece31aaf4452419e94bfc3c07dee456595352cc7b201e43425f49d9",
+  "fullPackSHA256": "3023e789b5c74e062ca5734d1953ef6ffbcd31049ce6b21263c210f809a7a195",
+  "workerSHA256": "c126804ae36d0517e8e88578c99fe45e012ef11aca88eb0e5aefdad4c75bc5f5",
+  "upstreamGitNeeded": false,
+  "result": "Final corresponding-source archive reproduces WASM, glue, worker, manifest, data pack and source lock byte-for-byte",
+  "command": "node extracted/build/build.mjs --sources extracted/sources --sdk .wasm-toolchain --work EMPTY_WORK --dist OUTPUT --ephemeris .cache/linux_p1550p2650.440",
+  "files": {
+    "fo.wasm": {
+      "original": "cffccd0ce9026bee08316d3e3b99d935cf6e6c6342bccbfdfb8e4fc260e4af71",
+      "rebuilt": "cffccd0ce9026bee08316d3e3b99d935cf6e6c6342bccbfdfb8e4fc260e4af71"
+    },
+    "fo.js": {
+      "original": "a3bf7d12c91244096c6514d50616dcd216aec46f7ca168d172cbcfb6e5bc649c",
+      "rebuilt": "a3bf7d12c91244096c6514d50616dcd216aec46f7ca168d172cbcfb6e5bc649c"
+    },
+    "find-orb-worker.js": {
+      "original": "c126804ae36d0517e8e88578c99fe45e012ef11aca88eb0e5aefdad4c75bc5f5",
+      "rebuilt": "c126804ae36d0517e8e88578c99fe45e012ef11aca88eb0e5aefdad4c75bc5f5"
+    },
+    "find-orb.data": {
+      "original": "3023e789b5c74e062ca5734d1953ef6ffbcd31049ce6b21263c210f809a7a195",
+      "rebuilt": "3023e789b5c74e062ca5734d1953ef6ffbcd31049ce6b21263c210f809a7a195"
+    },
+    "manifest.json": {
+      "original": "f9f694c567452fc7f47f35dfea97d357787b87cf4639b4a5aefe468dc1187018",
+      "rebuilt": "f9f694c567452fc7f47f35dfea97d357787b87cf4639b4a5aefe468dc1187018"
+    },
+    "source-lock.json": {
+      "original": "5349862f6ece31aaf4452419e94bfc3c07dee456595352cc7b201e43425f49d9",
+      "rebuilt": "5349862f6ece31aaf4452419e94bfc3c07dee456595352cc7b201e43425f49d9"
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "schema": 1,
+  "source": {
+    "path": "benchmark/quad-wide-multiply.h",
+    "sha256": "9e5532166d4193d4016ac8d051e9cfb2a345de551ad9cd2d2dadeaa32145dfb3"
+  },
+  "cases": 36868,
+  "corpus": {
+    "edgePairs": 484,
+    "oneHotPairs": 16384,
+    "deterministicRandomPairs": 10000,
+    "forcedZeroLow64Pairs": 10000,
+    "genericInputs": 14457,
+    "swapInputs": 14258,
+    "specializedInputs": 22411
+  },
+  "oracle": "JavaScript BigInt exact unbounded multiplication; unsigned raw128 inputs",
+  "hashes": {
+    "nativeO3Sanitized": "01ba0c0b783ceef501b43f5bac6360682fa02799be4bf97c8ae87508f457efae",
+    "wasmO0": "01ba0c0b783ceef501b43f5bac6360682fa02799be4bf97c8ae87508f457efae",
+    "wasmO3": "01ba0c0b783ceef501b43f5bac6360682fa02799be4bf97c8ae87508f457efae"
+  },
+  "scope": "Actual header compiled native O3 address/undefined sanitizers and wasm O0/O3; finite machine-code corpus, not proof of compiler or linked solver."
+}

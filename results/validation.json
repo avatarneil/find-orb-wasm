@@ -1,0 +1,80 @@
+{
+  "createdAt": "2026-09-13T16:32:32.562873+00:00",
+  "nodeTests": {
+    "command": "npm test",
+    "passed": 23,
+    "failed": 0
+  },
+  "browserTests": {
+    "command": "npm run test:browser",
+    "engine": "Chromium",
+    "passed": 3,
+    "failed": 0
+  },
+  "dataset": {
+    "command": "npm run verify:data",
+    "bitwiseEqualNativeComponents": 5866668,
+    "epochs": 2859,
+    "wasmWorkloads": 7,
+    "failClosedGuards": 5,
+    "evidence": "results/dataset.json"
+  },
+  "targetedSMT": {
+    "portObligations": 23,
+    "experimentalHelperObligations": 31,
+    "evidence": [
+      "verification/evidence/proofs.json",
+      "verification/evidence/wide-multiply-proofs.json"
+    ],
+    "scope": "Source-anchored mathematical models; not a whole-solver or compiler correctness proof"
+  },
+  "compilerChecks": {
+    "searchCases": 21229,
+    "vectorCases": 50121,
+    "builds": [
+      "native O0",
+      "native O3",
+      "native sanitizer",
+      "WASM O0",
+      "WASM O3"
+    ],
+    "evidence": "verification/evidence/compiler-checks.json"
+  },
+  "experimentalHelper": {
+    "exactIntegerPairs": 36868,
+    "ieeeRandomPairs": 1000000,
+    "ieeeEdgePairs": 36864,
+    "shippingEnabled": false,
+    "evidence": [
+      "verification/evidence/wide-multiply-compiler.json",
+      "results/quad-differential.json"
+    ]
+  },
+  "performance": {
+    "warmup": 2,
+    "repetitions": 8,
+    "workloads": 7,
+    "naturalGC": [
+      "results/baseline-natural.json",
+      "results/final-natural.json",
+      "results/final-natural-comparison.json"
+    ],
+    "controlledGC": "results/paired.json"
+  },
+  "buildReview": {
+    "freshLockedInputs": true,
+    "sanitizedCompilerEnvironment": true,
+    "freshArchives": true,
+    "reviewFindingsRemaining": 0,
+    "evidence": "results/build-integrity.json"
+  },
+  "htmlQA": {
+    "viewports": [
+      1440,
+      390
+    ],
+    "horizontalPageOverflow": false,
+    "missingLocalLinks": []
+  },
+  "sourceRebuildEvidence": "results/source-rebuild.json"
+}

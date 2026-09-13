@@ -6,6 +6,36 @@
 })(typeof globalThis==='object' ? globalThis : this,function() {
   'use strict';
   const MAX_OUTPUT=5000000;
+  async function prepare(factory,wasm) {
+    // Keep immutable compiled code alive for the session. Each call still
+    // creates a new instance, with that call's imports, globals and memory.
+    const compiled=await WebAssembly.compile(wasm);
+    return options=>factory({...options,instantiateWasm(imports,receive) {
+      const instance=new WebAssembly.Instance(compiled,imports);
+      receive(instance,compiled);
+      return instance.exports;
+    }});
+  }
+  // Pin this adapter to Emscripten's MEMFS implementation. Reference data stays
+  // shared until a command writes it; that command then gets a private copy.
+  // Sharing the read-only bytes saves a full ~110 MB copy for every fresh job.
+  function mountReference(fs,path,bytes) {
+    fs.writeFile(path,bytes,{canOwn:true});
+    const node=fs.lookupPath(path).node;
+    let shared=true;
+    const detach=() => {
+      if (shared) {node.contents=node.contents.slice();shared=false;}
+    };
+    const streams=node.stream_ops,operations=node.node_ops;
+    node.stream_ops={...streams};
+    for (const name of ['write','allocate','msync']) if (streams[name]) {
+      node.stream_ops[name]=function(...args) {detach();return streams[name](...args);};
+    }
+    node.node_ops={...operations,setattr(target,attributes) {
+      if (attributes.size!==undefined) detach();
+      return operations.setattr(target,attributes);
+    }};
+  }
   async function sha256(bytes) {
     const result=await crypto.subtle.digest('SHA-256',bytes);
     return Array.from(new Uint8Array(result),x => x.toString(16).padStart(2,'0')).join('');
@@ -42,7 +72,7 @@
     fs.mkdir('/engine'); fs.mkdir('/engine/data'); fs.mkdir('/job');
     for(const name of new Set(outputs.filter(validDirectory))) fs.mkdir(name.slice(0,-1));
     for (const [name,entry] of Object.entries(manifest.entries)) {
-      fs.writeFile('/engine/'+name,new Uint8Array(pack,entry.offset,entry.size));
+      mountReference(fs,'/engine/'+name,new Uint8Array(pack,entry.offset,entry.size));
     }
     for (const [name,text] of Object.entries(files)) fs.writeFile(name,text);
     fs.chdir('/job');
@@ -67,5 +97,5 @@
     }
     return result;
   }
-  return {verify,execute,sha256};
+  return {verify,prepare,execute,sha256,mountReference};
 });

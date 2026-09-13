@@ -13,3 +13,18 @@ export interface Session {
   close(message?: string): void;
 }
 export function createSession(workerSource: string, options?: {timeoutMs?: number}): Session;
+export interface TrustedManifest {
+  schema: 1;
+  workerSHA256: string;
+  pack: {size: number; sha256: string};
+}
+/** Explicitly downloads verified assets; resolves to an initialized session. */
+export function createSessionFromUrls(options: {
+  workerURL: string | URL;
+  dataURL: string | URL;
+  /** Pin or bundle this manifest with the application. */
+  manifest: TrustedManifest;
+  compression?: 'none' | 'gzip';
+  signal?: AbortSignal;
+  timeoutMs?: number;
+}): Promise<Session>;

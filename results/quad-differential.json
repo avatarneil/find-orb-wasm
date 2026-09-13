@@ -1,0 +1,110 @@
+{
+  "schema": 1,
+  "kernel": "benchmark/quad-wide-multiply.h",
+  "reference": "Pinned SDK compiler-rt multf3.c, unmodified",
+  "edgePairs": 36864,
+  "randomPairs": 1000000,
+  "seeds": [
+    305419896,
+    3735928559,
+    2654435769,
+    2882400001
+  ],
+  "passed": true,
+  "elapsedMs": 30.125083000000018,
+  "performanceSamples": {
+    "fullWidth": {
+      "reference": [
+        {
+          "elapsedMs": 24.016332999999918,
+          "checksum": -519645100
+        },
+        {
+          "elapsedMs": 23.934000000000083,
+          "checksum": -519645100
+        },
+        {
+          "elapsedMs": 23.317999999999984,
+          "checksum": -519645100
+        },
+        {
+          "elapsedMs": 25.099083999999948,
+          "checksum": -519645100
+        },
+        {
+          "elapsedMs": 24.9407920000001,
+          "checksum": -519645100
+        }
+      ],
+      "candidate": [
+        {
+          "elapsedMs": 24.227584000000093,
+          "checksum": -519645100
+        },
+        {
+          "elapsedMs": 23.71291700000006,
+          "checksum": -519645100
+        },
+        {
+          "elapsedMs": 23.86641700000007,
+          "checksum": -519645100
+        },
+        {
+          "elapsedMs": 25.362333000000035,
+          "checksum": -519645100
+        },
+        {
+          "elapsedMs": 25.54270900000006,
+          "checksum": -519645100
+        }
+      ]
+    },
+    "widenedDouble": {
+      "reference": [
+        {
+          "elapsedMs": 24.132749999999987,
+          "checksum": -1329412381
+        },
+        {
+          "elapsedMs": 23.79083300000002,
+          "checksum": -1329412381
+        },
+        {
+          "elapsedMs": 22.97225000000003,
+          "checksum": -1329412381
+        },
+        {
+          "elapsedMs": 23.260874999999942,
+          "checksum": -1329412381
+        },
+        {
+          "elapsedMs": 23.839666999999963,
+          "checksum": -1329412381
+        }
+      ],
+      "candidate": [
+        {
+          "elapsedMs": 22.0651670000002,
+          "checksum": -1329412381
+        },
+        {
+          "elapsedMs": 22.488207999999986,
+          "checksum": -1329412381
+        },
+        {
+          "elapsedMs": 22.173042000000123,
+          "checksum": -1329412381
+        },
+        {
+          "elapsedMs": 22.66554199999996,
+          "checksum": -1329412381
+        },
+        {
+          "elapsedMs": 23.06295799999998,
+          "checksum": -1329412381
+        }
+      ]
+    }
+  },
+  "method": "Exact 128-bit result representation equality, including NaN payload/sign; full original rounding and special-value code retained"
+}

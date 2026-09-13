@@ -1,0 +1,27 @@
+{
+  "source": "https://github.com/avatarneil/webastrometrica",
+  "commit": "c86e53ccf9fa662bc43fb0b3eed67594790e52a2",
+  "files": {
+    "ceres-horizons.json": {
+      "path": "tests/fixtures/ceres-horizons.json",
+      "sha256": "25d36463a5c4c4a8009b16b524596cb629270a4a0394abc7aa4ed6bd25880abc"
+    },
+    "ceres-horizons-f52.json": {
+      "path": "tests/fixtures/ceres-horizons-f52.json",
+      "sha256": "baed2054c82db756fe7402aef71a36f821b3411fa2fd8ae8f4a965892d89f965"
+    },
+    "ceres-horizons-recovery.json": {
+      "path": "tests/fixtures/ceres-horizons-recovery.json",
+      "sha256": "bb8b1203e157343491660f1af3a03ce3373649de2b5af430a4336b884d3ecfbf"
+    },
+    "fcs5000.mpc": {
+      "path": "tests/fixtures/fcs5000.mpc",
+      "sha256": "3e66b8c5c4358aadfaa27f1ee024fb266870df995c869286ce668c4ea505a1bd"
+    },
+    "fcs5000-2026-09-12.mpc": {
+      "path": "tests/fixtures/fcs5000-2026-09-12.mpc",
+      "sha256": "cfdf1eb59a09f73db751c4906ad0fc25ec5c0bc53c632bed6ca44fb52bef9e59"
+    }
+  },
+  "note": "Copied byte-for-byte from origin/main; JPL Horizons fixtures retain their original query/result metadata. MPC records are supplied observations, not independent orbital truth."
+}

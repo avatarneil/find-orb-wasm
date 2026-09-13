@@ -1,0 +1,438 @@
+{
+  "schema": 1,
+  "measuredOn": "2026-09-13",
+  "sizes": {
+    "schema": 1,
+    "method": "Verbatim complete DE440 coefficient records; original constants; date headers updated",
+    "sourceSHA256": "29915576d0a6555766b99485ac3056ee415e86df4fce282611c31afb329ad062",
+    "sourceURL": "https://ssd.jpl.nasa.gov/ftp/eph/planets/Linux/de440/linux_p1550p2650.440",
+    "requestedStartJD": 2451544.5,
+    "requestedEndJD": 2466154.5,
+    "marginRecords": 1,
+    "supportedStartExclusiveJD": 2451504.5,
+    "supportedEndInclusiveJD": 2466192.5,
+    "lowerEndpointReason": "The full reader chooses the preceding record at boundaries; that record is absent at the cropped file start.",
+    "stepDays": 32,
+    "recordBytes": 8144,
+    "firstRecord": 5135,
+    "records": 459,
+    "coefficientSHA256": "1184a8a68baf7b393c1f84765b9a0d785e5a5e56526ffe2b67e1f929ceca0642",
+    "constantsSHA256": "8a1ad39392b0d6c3146726a41f75419d402c75e5709596c28537a661b31d0f1a",
+    "fullPack": {
+      "raw": 109894483,
+      "gzip9": 103202774,
+      "brotli5": 102744370
+    },
+    "compactPack": {
+      "raw": 11376515,
+      "gzip9": 6329416,
+      "brotli5": 6147947
+    },
+    "reductionPercent": 89.64778331956846,
+    "unchangedEngineSHA256": "cffccd0ce9026bee08316d3e3b99d935cf6e6c6342bccbfdfb8e4fc260e4af71",
+    "auxiliaryFiles": [
+      {
+        "name": "data/bright.pgm",
+        "bytes": 6480017
+      },
+      {
+        "name": "data/ObsCodesF.html",
+        "bytes": 170409
+      },
+      {
+        "name": "data/ObsCodes.htm",
+        "bytes": 148590
+      },
+      {
+        "name": "data/calendar.txt",
+        "bytes": 135488
+      },
+      {
+        "name": "data/details.txt",
+        "bytes": 99747
+      },
+      {
+        "name": "data/rovers.txt",
+        "bytes": 96625
+      },
+      {
+        "name": "data/bright2.pgm",
+        "bytes": 64815
+      },
+      {
+        "name": "data/obslinks.htm",
+        "bytes": 58051
+      },
+      {
+        "name": "data/progcode.txt",
+        "bytes": 42520
+      },
+      {
+        "name": "data/observer.htm",
+        "bytes": 30137
+      },
+      {
+        "name": "data/geo_rect.txt",
+        "bytes": 29752
+      },
+      {
+        "name": "data/environ.def",
+        "bytes": 28452
+      },
+      {
+        "name": "data/cospar.txt",
+        "bytes": 25584
+      },
+      {
+        "name": "data/dos_help.txt",
+        "bytes": 21554
+      },
+      {
+        "name": "data/scopes.txt",
+        "bytes": 15367
+      },
+      {
+        "name": "data/splash.txt",
+        "bytes": 14783
+      },
+      {
+        "name": "data/sigma.txt",
+        "bytes": 14294
+      },
+      {
+        "name": "data/efindorb.txt",
+        "bytes": 13777
+      },
+      {
+        "name": "data/odd_name.txt",
+        "bytes": 10540
+      },
+      {
+        "name": "data/dosephem.txt",
+        "bytes": 10266
+      },
+      {
+        "name": "data/mu1.txt",
+        "bytes": 9646
+      },
+      {
+        "name": "data/scope.json",
+        "bytes": 9485
+      },
+      {
+        "name": "data/sfindorb.txt",
+        "bytes": 8987
+      },
+      {
+        "name": "data/command.txt",
+        "bytes": 7551
+      },
+      {
+        "name": "data/timehelp.txt",
+        "bytes": 7509
+      },
+      {
+        "name": "data/xdesig.txt",
+        "bytes": 7443
+      },
+      {
+        "name": "data/site_310.txt",
+        "bytes": 5667
+      },
+      {
+        "name": "data/eph_expl.txt",
+        "bytes": 5521
+      },
+      {
+        "name": "data/jpl_eph.txt",
+        "bytes": 5009
+      },
+      {
+        "name": "data/nongravs.txt",
+        "bytes": 4342
+      },
+      {
+        "name": "data/sat_xref.txt",
+        "bytes": 3912
+      },
+      {
+        "name": "data/rfindorb.txt",
+        "bytes": 3887
+      },
+      {
+        "name": "data/eph2tle.txt",
+        "bytes": 3866
+      },
+      {
+        "name": "data/ifindorb.txt",
+        "bytes": 3824
+      },
+      {
+        "name": "data/ffindorb.txt",
+        "bytes": 3792
+      },
+      {
+        "name": "data/dfindorb.txt",
+        "bytes": 3564
+      },
+      {
+        "name": "data/elem_pop.txt",
+        "bytes": 2793
+      },
+      {
+        "name": "data/eph_type.txt",
+        "bytes": 2508
+      },
+      {
+        "name": "data/header.htm",
+        "bytes": 1961
+      },
+      {
+        "name": "data/mpcorb.hdr",
+        "bytes": 1596
+      },
+      {
+        "name": "data/link_def.json",
+        "bytes": 1306
+      },
+      {
+        "name": "data/residfmt.txt",
+        "bytes": 1304
+      },
+      {
+        "name": "data/mpc_area.txt",
+        "bytes": 1003
+      },
+      {
+        "name": "data/openfile.txt",
+        "bytes": 936
+      },
+      {
+        "name": "data/frame_he.txt",
+        "bytes": 914
+      },
+      {
+        "name": "data/radecfmt.txt",
+        "bytes": 875
+      },
+      {
+        "name": "data/obj_help.txt",
+        "bytes": 537
+      },
+      {
+        "name": "data/hints.def",
+        "bytes": 456
+      },
+      {
+        "name": "data/obj_name.txt",
+        "bytes": 324
+      },
+      {
+        "name": "data/cometdef.sof",
+        "bytes": 303
+      },
+      {
+        "name": "data/previous.def",
+        "bytes": 294
+      },
+      {
+        "name": "data/orbitdef.sof",
+        "bytes": 248
+      }
+    ],
+    "scope": "All auxiliary files retained. No coefficient truncation, quantization, body removal, or analytic fallback."
+  },
+  "native": {
+    "epochs": 2859,
+    "readerCallsPerFile": 989214,
+    "bitwiseEqualComponents": 5866668,
+    "absentQuantityPairs": 11436,
+    "supportedStartExclusiveJD": 2451504.5,
+    "supportedEndInclusiveJD": 2466192.5,
+    "outOfRangeRejected": true,
+    "source": "a73f25e54d02b99b1c0d9a9d6c61acfbb2fa3a26",
+    "fullSHA256": "29915576d0a6555766b99485ac3056ee415e86df4fce282611c31afb329ad062",
+    "compactSHA256": "1ed53a803a0f5ccc8c43688cafa8d62c8368599e87c30bf1a30d5959b0dbfb13",
+    "compiler": "Apple clang version 21.0.0 (clang-2100.1.1.101)\nTarget: arm64-apple-darwin25.6.0\nThread model: posix\nInstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin",
+    "flags": [
+      "-std=c++17",
+      "-O2",
+      "-ffp-contract=off",
+      "-I",
+      "$REPO/.wasm-engine/sources/jpl_eph",
+      "-I",
+      "$REPO/.wasm-engine/sources/lunar",
+      "$REPO/data/verify-jpl.cpp",
+      "$REPO/.wasm-engine/sources/jpl_eph/jpleph.cpp",
+      "-o",
+      "$REPO/.cache/dataset-verification/verify-jpl"
+    ],
+    "subset": {
+      "method": "Verbatim complete DE440 coefficient records; original constants; date headers updated",
+      "sourceSHA256": "29915576d0a6555766b99485ac3056ee415e86df4fce282611c31afb329ad062",
+      "sourceURL": "https://ssd.jpl.nasa.gov/ftp/eph/planets/Linux/de440/linux_p1550p2650.440",
+      "requestedStartJD": 2451544.5,
+      "requestedEndJD": 2466154.5,
+      "marginRecords": 1,
+      "supportedStartExclusiveJD": 2451504.5,
+      "supportedEndInclusiveJD": 2466192.5,
+      "lowerEndpointReason": "The full reader chooses the preceding record at boundaries; that record is absent at the cropped file start.",
+      "stepDays": 32,
+      "recordBytes": 8144,
+      "firstRecord": 5135,
+      "records": 459,
+      "coefficientSHA256": "1184a8a68baf7b393c1f84765b9a0d785e5a5e56526ffe2b67e1f929ceca0642",
+      "constantsSHA256": "8a1ad39392b0d6c3146726a41f75419d402c75e5709596c28537a661b31d0f1a"
+    }
+  },
+  "wasm": {
+    "schema": 1,
+    "engineSHA256": "cffccd0ce9026bee08316d3e3b99d935cf6e6c6342bccbfdfb8e4fc260e4af71",
+    "fullPackSHA256": "3023e789b5c74e062ca5734d1953ef6ffbcd31049ce6b21263c210f809a7a195",
+    "compactPackSHA256": "3817fac45a1cd05575e0cb64cada5e6ae2696f1a89a7c28902ef3a01a68cfb28",
+    "ignoredMetadata": [
+      "elements.txt: # Elements written wall-clock line",
+      "elements.json: created and created iso wall-clock fields"
+    ],
+    "cases": [
+      {
+        "id": "short-arc-fit",
+        "exactScientificOutputs": true,
+        "files": [
+          "/job/elements.txt",
+          "/job/elements.json",
+          "/job/sky.json"
+        ],
+        "accuracy": {
+          "rmsArcsec": 0.024825
+        }
+      },
+      {
+        "id": "ceres-30d",
+        "exactScientificOutputs": true,
+        "files": [
+          "/job/elements.txt",
+          "/job/vectors.txt"
+        ],
+        "accuracy": {
+          "horizonsPositionErrorMeters": [
+            0.00001660870004860371,
+            1.706506978347973,
+            4.0838439187157825,
+            7.06427982656132
+          ]
+        }
+      },
+      {
+        "id": "ceres-topocentric",
+        "exactScientificOutputs": true,
+        "files": [
+          "/job/elements.txt",
+          "/job/sky.json"
+        ],
+        "accuracy": {
+          "horizonsSkyErrorArcsec": [
+            0.008334291632378484,
+            0.008426368807383714,
+            0.00851436419232872,
+            0.008584400361870165,
+            0.008663933922692298
+          ]
+        }
+      },
+      {
+        "id": "eccentricity-0.95",
+        "exactScientificOutputs": true,
+        "files": [
+          "/job/elements.txt",
+          "/job/vectors.txt"
+        ],
+        "accuracy": {}
+      },
+      {
+        "id": "eccentricity-0.999999",
+        "exactScientificOutputs": true,
+        "files": [
+          "/job/elements.txt",
+          "/job/vectors.txt"
+        ],
+        "accuracy": {}
+      },
+      {
+        "id": "eccentricity-1.4",
+        "exactScientificOutputs": true,
+        "files": [
+          "/job/elements.txt",
+          "/job/vectors.txt"
+        ],
+        "accuracy": {}
+      },
+      {
+        "id": "ceres-heldout-fit",
+        "exactScientificOutputs": true,
+        "files": [
+          "/job/elements.txt",
+          "/job/elements.json",
+          "/job/sky.json"
+        ],
+        "accuracy": {
+          "horizonsSkyErrorArcsec": [
+            0.006598688050968689,
+            0.010909349461108681
+          ],
+          "rmsArcsec": 0.0019829
+        }
+      }
+    ],
+    "guards": [
+      {
+        "id": "before-start",
+        "rejected": true,
+        "epoch": 2451503.5,
+        "message": "Find_Orb failed (70). JPL ephemeris unavailable or JD 2451503.5 outside supported (start, end] range.\n"
+      },
+      {
+        "id": "after-end",
+        "rejected": true,
+        "epoch": 2466193.5,
+        "message": "Find_Orb failed (70). JPL ephemeris unavailable or JD 2466193.5 outside supported (start, end] range.\n"
+      },
+      {
+        "id": "excluded-lower-endpoint",
+        "rejected": true,
+        "epoch": 2451504.5,
+        "message": "Find_Orb failed (70). JPL ephemeris unavailable or JD 2451504.5 outside supported (start, end] range.\n"
+      },
+      {
+        "id": "reader-truncated-after-header",
+        "rejected": true
+      },
+      {
+        "id": "missing-ephemeris",
+        "rejected": true
+      }
+    ]
+  },
+  "transportReductionPercent": 93.86700981506563,
+  "commands": [
+    "node data/compact.mjs",
+    "node data/verify-native.mjs",
+    "node data/verify-wasm.mjs",
+    "node --test tests/data/*.test.mjs",
+    "node data/report.mjs"
+  ],
+  "limitations": [
+    "The supported interval applies to every actual JPL query, including intermediate integration and light-time epochs. Requested dates alone do not guarantee acceptance.",
+    "The lower endpoint is excluded to preserve the full reader's record-boundary convention.",
+    "Upstream state-vector commands create a 2000-01-01 dummy observation. The distribution generator requires J2000 coverage.",
+    "All auxiliary files are retained, including the 6.48 MB full-resolution sky brightness map.",
+    "Exact coefficient preservation and the finite native/WASM regression suite are not a formal proof of the complete orbit solver.",
+    "Compressed size reduces download and initialization costs; it does not accelerate orbital integration arithmetic."
+  ],
+  "primarySources": {
+    "originalFindOrb": "https://github.com/Bill-Gray/find_orb",
+    "upstreamSubset": "https://github.com/Bill-Gray/jpl_eph/blob/a73f25e54d02b99b1c0d9a9d6c61acfbb2fa3a26/sub_eph.cpp",
+    "jplData": "https://ssd.jpl.nasa.gov/planets/eph_export.html",
+    "jplAttribution": "https://ssd.jpl.nasa.gov/about/"
+  }
+}

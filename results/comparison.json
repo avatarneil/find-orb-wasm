@@ -1,0 +1,117 @@
+{
+  "before": "results/baseline.json",
+  "after": "results/optimized.json",
+  "cases": [
+    {
+      "id": "short-arc-fit",
+      "beforeMs": 442.8762499999998,
+      "afterMs": 439.2020420000001,
+      "speedup": 1.0083656441651965,
+      "beforeMountMs": 5.417249999999967,
+      "afterMountMs": 1.1955410000000484,
+      "beforeSolveMs": 436.31058400000006,
+      "afterSolveMs": 436.59233300000005,
+      "accuracy": {
+        "maxNativeSkyErrorArcsec": 0,
+        "nativeElementDeltas": {
+          "a": 0,
+          "e": 0,
+          "i": 0,
+          "M": 0,
+          "arg_per": 0,
+          "asc_node": 0
+        }
+      }
+    },
+    {
+      "id": "ceres-30d",
+      "beforeMs": 12.456041999999798,
+      "afterMs": 9.95458299999973,
+      "speedup": 1.2512871709442912,
+      "beforeMountMs": 3.900832999999693,
+      "afterMountMs": 1.1377909999996518,
+      "beforeSolveMs": 7.172417000000223,
+      "afterSolveMs": 7.6193749999997635,
+      "accuracy": {
+        "maxNativePositionErrorMeters": 0,
+        "maxNativeVelocityErrorMetersPerSecond": 0
+      }
+    },
+    {
+      "id": "ceres-topocentric",
+      "beforeMs": 14.817000000000007,
+      "afterMs": 10.193624999999884,
+      "speedup": 1.4535555310304407,
+      "beforeMountMs": 6.6141670000001795,
+      "afterMountMs": 1.0048750000000837,
+      "beforeSolveMs": 6.904708000000028,
+      "afterSolveMs": 7.0199579999998605,
+      "accuracy": {
+        "maxNativeSkyErrorArcsec": 0
+      }
+    },
+    {
+      "id": "eccentricity-0.95",
+      "beforeMs": 26.52604199999996,
+      "afterMs": 16.88079199999993,
+      "speedup": 1.5713742577954917,
+      "beforeMountMs": 9.28229199999987,
+      "afterMountMs": 0.8064589999999043,
+      "beforeSolveMs": 14.987874999999804,
+      "afterSolveMs": 14.476874999999836,
+      "accuracy": {
+        "maxNativePositionErrorMeters": 0,
+        "maxNativeVelocityErrorMetersPerSecond": 0
+      }
+    },
+    {
+      "id": "eccentricity-0.999999",
+      "beforeMs": 25.552500000000236,
+      "afterMs": 18.28316700000005,
+      "speedup": 1.3975970355683,
+      "beforeMountMs": 9.397167000000081,
+      "afterMountMs": 1.2611669999996593,
+      "beforeSolveMs": 14.710500000000138,
+      "afterSolveMs": 15.476208000000042,
+      "accuracy": {
+        "maxNativePositionErrorMeters": 0,
+        "maxNativeVelocityErrorMetersPerSecond": 0
+      }
+    },
+    {
+      "id": "eccentricity-1.4",
+      "beforeMs": 22.077208000000155,
+      "afterMs": 20.19991600000003,
+      "speedup": 1.0929356339897711,
+      "beforeMountMs": 3.199000000000069,
+      "afterMountMs": 1.0254589999999553,
+      "beforeSolveMs": 17.291834000000108,
+      "afterSolveMs": 17.34270800000013,
+      "accuracy": {
+        "maxNativePositionErrorMeters": 0,
+        "maxNativeVelocityErrorMetersPerSecond": 0
+      }
+    },
+    {
+      "id": "ceres-heldout-fit",
+      "beforeMs": 2290.5666250000013,
+      "afterMs": 2327.7217919999994,
+      "speedup": 0.9840379691732516,
+      "beforeMountMs": 3.7860839999993914,
+      "afterMountMs": 1.0773330000001806,
+      "beforeSolveMs": 2282.772416,
+      "afterSolveMs": 2325.248292,
+      "accuracy": {
+        "maxNativeSkyErrorArcsec": 0,
+        "nativeElementDeltas": {
+          "a": 0,
+          "e": 0,
+          "i": 0,
+          "M": 0,
+          "arg_per": 0,
+          "asc_node": 0
+        }
+      }
+    }
+  ]
+}

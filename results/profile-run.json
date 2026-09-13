@@ -1,0 +1,956 @@
+{
+  "schema": 1,
+  "createdAt": "2026-09-13T15:51:55.052Z",
+  "host": {
+    "platform": "darwin",
+    "arch": "arm64",
+    "release": "25.6.0",
+    "cpu": "Apple M5 Pro",
+    "node": "v25.9.0"
+  },
+  "methodology": {
+    "repetitions": 2,
+    "warmup": 1,
+    "freshRuntimePerCommand": true,
+    "execution": "Node.js WebAssembly versus native executable; no browser worker transfer time",
+    "wasmSolve": "callMain only; V8 JIT may continue warming during repetitions",
+    "nativeSolve": "process launch + dynamic loader + command; OS file cache is warm after warmup",
+    "setup": "Pack read and cryptographic verification measured separately once, excluded from per-command timing",
+    "comparison": "Accuracy parity uses native-count (same SR candidate count); native-original retains upstream half-second CPU cap and is separately reported",
+    "limitations": [
+      "One host; timing is not a universal speed claim.",
+      "Numerical regression and external-reference checks are not formal proof.",
+      "No non-gravitational forces or asteroid perturber ephemeris."
+    ]
+  },
+  "fixtures": {
+    "source": "https://github.com/avatarneil/webastrometrica",
+    "commit": "c86e53ccf9fa662bc43fb0b3eed67594790e52a2",
+    "files": {
+      "ceres-horizons.json": {
+        "path": "tests/fixtures/ceres-horizons.json",
+        "sha256": "25d36463a5c4c4a8009b16b524596cb629270a4a0394abc7aa4ed6bd25880abc"
+      },
+      "ceres-horizons-f52.json": {
+        "path": "tests/fixtures/ceres-horizons-f52.json",
+        "sha256": "baed2054c82db756fe7402aef71a36f821b3411fa2fd8ae8f4a965892d89f965"
+      },
+      "ceres-horizons-recovery.json": {
+        "path": "tests/fixtures/ceres-horizons-recovery.json",
+        "sha256": "bb8b1203e157343491660f1af3a03ce3373649de2b5af430a4336b884d3ecfbf"
+      },
+      "fcs5000.mpc": {
+        "path": "tests/fixtures/fcs5000.mpc",
+        "sha256": "3e66b8c5c4358aadfaa27f1ee024fb266870df995c869286ce668c4ea505a1bd"
+      },
+      "fcs5000-2026-09-12.mpc": {
+        "path": "tests/fixtures/fcs5000-2026-09-12.mpc",
+        "sha256": "cfdf1eb59a09f73db751c4906ad0fc25ec5c0bc53c632bed6ca44fb52bef9e59"
+      }
+    },
+    "note": "Copied byte-for-byte from origin/main; JPL Horizons fixtures retain their original query/result metadata. MPC records are supplied observations, not independent orbital truth."
+  },
+  "engines": {
+    "native-count": {
+      "root": "/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/.native-engine",
+      "manifest": {
+        "schema": 1,
+        "sources": {
+          "lunar": "d95191818d7975c22613f231fea160341203abbe",
+          "jpl_eph": "a73f25e54d02b99b1c0d9a9d6c61acfbb2fa3a26",
+          "sat_code": "2bbb8cb2e417edb10918e4404464b68e24abcab4",
+          "find_orb": "9cc932997837c5ab994fbf015db59f5d0da852e5"
+        },
+        "ephemeris": {
+          "name": "JPL DE-440",
+          "filename": "linux_p1550p2650.440",
+          "url": "https://ssd.jpl.nasa.gov/ftp/eph/planets/Linux/de440/linux_p1550p2650.440",
+          "sha256": "29915576d0a6555766b99485ac3056ee415e86df4fce282611c31afb329ad062"
+        },
+        "dataSHA256": {
+          "ObsCodes.htm": "94f6a339fa494e458845fd5c4a8f463c8b8b9974136e4b7d1293d4bb6019199c",
+          "ObsCodesF.html": "a5cbc19a1f36404109544a7a527d73228b99837f335caaa92a7c953036a6fe81",
+          "bright.pgm": "3f90027b5e3c77c648add96f482dda76e509911f6f44fc2186e87083aebbdf32",
+          "bright2.pgm": "33b8d8e0d387548a3facc8bbe2111fec8dc495bb0e2d398abf13606a1182292b",
+          "calendar.txt": "7a4ff1a165e3871263360b1a8571a3d152bf23506642e888956d7b5cf17b66d5",
+          "cometdef.sof": "e06f5ae01f8036857a5eebb67d85aa5c982585418b15f14d7b95fa29801884fa",
+          "command.txt": "7c0871364e7a7b961fdc0c94b63c18e971ce08ba15ebdabbea5d10cab268643f",
+          "cospar.txt": "4f7c7bf76de5241dcd2e3aadc54a8c5ceedf04ed8084aca6bd2a8c875ecd4c4b",
+          "details.txt": "e85fefaee8308dec2ed25339a650f5d86f94ff0b58ae2d193567e56a9653e37a",
+          "dfindorb.txt": "0bf3556ddf038b01db1932c70fd191a3c839657c55af52d003b12197641143e9",
+          "dos_help.txt": "bef9174c05a513ec054b5f01cb843c5d1d9cfea7f76bcfe18bc90dbbe5089b64",
+          "dosephem.txt": "3cfb79fb391821d12ada22761cfb9e991452656740d0bf7641f3eb93bc8d8b10",
+          "efindorb.txt": "025ea3c016f7fb6e777e71633e5f5c09d230613827242bc851d8f9d57dd34e17",
+          "elem_pop.txt": "0fc016687ed3ed990fc60c2d4262f5ae8a71c7ae2f18b65535f164b84a9ce021",
+          "environ.def": "235fec8c4a64b59e165b49c0e4a3354b315cbb0331821268ac27edf81c8b87db",
+          "eph2tle.txt": "c1012bbbd5108d2d9c439547b8627d7f245cf2d7e3b5e650cbefd1220f0a74d8",
+          "eph_expl.txt": "8a6d4d17e5ea4734e90b3409693f35b4bdc57ab3e080faaae20b34425a0e98d7",
+          "eph_type.txt": "01572cc4c61cc40a6bbeb26e106fc95fdb374402779e748e61b2faa0cc9a2f37",
+          "ffindorb.txt": "25be6af081b2ee5f29d85bdd4c944cd180e21eed2bd5a76aad6178e541115b3d",
+          "frame_he.txt": "292636197b6b66efe5270b254800b40be7c225474b394af03d5ee6eb8c8ff343",
+          "geo_rect.txt": "849a2b1151700cd79e2ff0c2d5e58606f1d936f9f23410f0e466024edf96d153",
+          "header.htm": "870f8d19dc732dd978003a260dbe570d262dda0cd69a75cecd82c4a63e69e253",
+          "hints.def": "643448a694201ba11f92626958d4a251610d0b1c3fd8114ccf5a4f3baa64820e",
+          "ifindorb.txt": "bcdea267f940c652879457a892c1de6f6f6ae0859df99dceb020e3e69e8e9462",
+          "jpl_eph.txt": "d0ffcc671eda85b250bf832406aca59c169c057b19edc8a0474725af89fda66b",
+          "link_def.json": "0765fbd3cdb794c5a971c89b8fc6233033ab0c86e286abd965c7a3cb49747aa1",
+          "mpc_area.txt": "121c189085c9ec2a2ed81fdf710cfb96868caf25821767059fad77560eb72770",
+          "mpcorb.hdr": "8a5029330da8240ad8ba032a224869ddee208e57ee12d2b47a3d5718f75df3b1",
+          "mu1.txt": "c236dafbba22a1736feb9b60d435be2939815acda029f63f37cb27cb9a4ccb15",
+          "nongravs.txt": "98c57925dc59371d6d6603284ba1d3a3e181c4b331694d954413e5c95dd4e145",
+          "obj_help.txt": "728eff13cba54bf9849020386654b59ea496ee9bb882d50c558f112d7868236f",
+          "obj_name.txt": "6102d92e15a9ec6bb8c733425571458a6a506fe7057b07eee0b4a918dffde23a",
+          "observer.htm": "9a84a94d5960d17e3d3d9cfb78787553ae432d4be9684e899febeae54beecfcb",
+          "obslinks.htm": "b18d8be6e1c5c083d5925ce45a5c001debf956c6601bd9daba38acc0afbd9f3a",
+          "odd_name.txt": "0ae221aaa89c547531e33b48554da67dd6cdf127af83ef457a847b2ecf3d1163",
+          "openfile.txt": "8d92a9df4d0cb379059a51a9c6be398162fbce91c17b9a3ffeaa6a14807d8d00",
+          "orbitdef.sof": "8f22d9c5edaa356517295f87d5ffe92f533b949c110735440d37572b08d9bd74",
+          "previous.def": "61b218c37d8c28be7b674b0fb176be5d3adc5d52b6a8f40ec60089113d0606f8",
+          "progcode.txt": "d1561137621a1372123686b50e31dd9a25098e0ed90d647e63c1652ff98549ca",
+          "radecfmt.txt": "adc748b4d3252dbc85bfdc70ec1e6386ac9e89d22cd88b8c6cab3f1f74d3acfa",
+          "residfmt.txt": "d93e15314923ae970cd84c33b8ae546df572ae87be3917b3db12c20eb1c4cf3e",
+          "rfindorb.txt": "5a5b859a83f799008383e1a036d28f3f4a9ce3361ef4bec2a83f58dd07ff4eba",
+          "rovers.txt": "17aa1f4a59b83ff65878d1f3fb40aeac6ba5eed2e8e4c3ebbe76d83c1de4f477",
+          "sat_xref.txt": "6af10becfe528845cafd0040e49b2241db1d39c41b35bd418c1db7e029fc0641",
+          "scope.json": "41216e95a9013f381a505a2eab2c56bc8c167a672fc3c794297f310f75e99de7",
+          "scopes.txt": "9a97dff3bf5500884d334eeac0d48002cc678deddd5e1eb7b7da7cbc845f5498",
+          "sfindorb.txt": "bfa634959f049439ba8eb91e1673549fbc3277f6da5571a3b1861a9038e8b610",
+          "sigma.txt": "5c840b6be6969d023443e931009b11d31c3e83a2c1c3f56230ffac301e109131",
+          "site_310.txt": "177e13684f642261abae72a27eb6f9ae07e40226616a5d85b4b22567803ee42b",
+          "splash.txt": "dbbe0e1cc2fbc42d4210db876fa1c9fe28fab16fb154a4375d65309224c1696a",
+          "timehelp.txt": "dfdb9c0f95150c21a307db3133f5cf1866c1ea189460e1f9fb6ae780ea74fa88",
+          "xdesig.txt": "9bbd2a0c14e6776d499c620d6cbf3f60e2f65c75ca290283a694bf7acf22f7a9"
+        },
+        "binaries": {
+          "fo": "6198023d34b732f3d465a29cdc3c4b711eeef232f097441e359195c1e2770b2d",
+          "fo-count": "6198023d34b732f3d465a29cdc3c4b711eeef232f097441e359195c1e2770b2d"
+        },
+        "compiler": "Apple clang version 21.0.0 (clang-2100.1.1.101)\nTarget: arm64-apple-darwin25.6.0\nThread model: posix\nInstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin",
+        "platform": "darwin",
+        "arch": "arm64",
+        "numericalPolicy": "Upstream native defaults; Find_Orb -fno-fast-math -ffp-contract=off; dependency defaults (baseline policy)",
+        "searchPolicy": {
+          "fo": "Unmodified original upstream CPU-time-limited statistical ranging",
+          "fo-count": "Only statistical-ranging loop changed to complete configured candidate count"
+        },
+        "configAutocopy": false,
+        "builtAt": "2026-09-13T15:47:06.132Z"
+      }
+    },
+    "native-original": {
+      "root": "/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/.native-engine",
+      "manifest": {
+        "schema": 1,
+        "sources": {
+          "lunar": "d95191818d7975c22613f231fea160341203abbe",
+          "jpl_eph": "a73f25e54d02b99b1c0d9a9d6c61acfbb2fa3a26",
+          "sat_code": "2bbb8cb2e417edb10918e4404464b68e24abcab4",
+          "find_orb": "9cc932997837c5ab994fbf015db59f5d0da852e5"
+        },
+        "ephemeris": {
+          "name": "JPL DE-440",
+          "filename": "linux_p1550p2650.440",
+          "url": "https://ssd.jpl.nasa.gov/ftp/eph/planets/Linux/de440/linux_p1550p2650.440",
+          "sha256": "29915576d0a6555766b99485ac3056ee415e86df4fce282611c31afb329ad062"
+        },
+        "dataSHA256": {
+          "ObsCodes.htm": "94f6a339fa494e458845fd5c4a8f463c8b8b9974136e4b7d1293d4bb6019199c",
+          "ObsCodesF.html": "a5cbc19a1f36404109544a7a527d73228b99837f335caaa92a7c953036a6fe81",
+          "bright.pgm": "3f90027b5e3c77c648add96f482dda76e509911f6f44fc2186e87083aebbdf32",
+          "bright2.pgm": "33b8d8e0d387548a3facc8bbe2111fec8dc495bb0e2d398abf13606a1182292b",
+          "calendar.txt": "7a4ff1a165e3871263360b1a8571a3d152bf23506642e888956d7b5cf17b66d5",
+          "cometdef.sof": "e06f5ae01f8036857a5eebb67d85aa5c982585418b15f14d7b95fa29801884fa",
+          "command.txt": "7c0871364e7a7b961fdc0c94b63c18e971ce08ba15ebdabbea5d10cab268643f",
+          "cospar.txt": "4f7c7bf76de5241dcd2e3aadc54a8c5ceedf04ed8084aca6bd2a8c875ecd4c4b",
+          "details.txt": "e85fefaee8308dec2ed25339a650f5d86f94ff0b58ae2d193567e56a9653e37a",
+          "dfindorb.txt": "0bf3556ddf038b01db1932c70fd191a3c839657c55af52d003b12197641143e9",
+          "dos_help.txt": "bef9174c05a513ec054b5f01cb843c5d1d9cfea7f76bcfe18bc90dbbe5089b64",
+          "dosephem.txt": "3cfb79fb391821d12ada22761cfb9e991452656740d0bf7641f3eb93bc8d8b10",
+          "efindorb.txt": "025ea3c016f7fb6e777e71633e5f5c09d230613827242bc851d8f9d57dd34e17",
+          "elem_pop.txt": "0fc016687ed3ed990fc60c2d4262f5ae8a71c7ae2f18b65535f164b84a9ce021",
+          "environ.def": "235fec8c4a64b59e165b49c0e4a3354b315cbb0331821268ac27edf81c8b87db",
+          "eph2tle.txt": "c1012bbbd5108d2d9c439547b8627d7f245cf2d7e3b5e650cbefd1220f0a74d8",
+          "eph_expl.txt": "8a6d4d17e5ea4734e90b3409693f35b4bdc57ab3e080faaae20b34425a0e98d7",
+          "eph_type.txt": "01572cc4c61cc40a6bbeb26e106fc95fdb374402779e748e61b2faa0cc9a2f37",
+          "ffindorb.txt": "25be6af081b2ee5f29d85bdd4c944cd180e21eed2bd5a76aad6178e541115b3d",
+          "frame_he.txt": "292636197b6b66efe5270b254800b40be7c225474b394af03d5ee6eb8c8ff343",
+          "geo_rect.txt": "849a2b1151700cd79e2ff0c2d5e58606f1d936f9f23410f0e466024edf96d153",
+          "header.htm": "870f8d19dc732dd978003a260dbe570d262dda0cd69a75cecd82c4a63e69e253",
+          "hints.def": "643448a694201ba11f92626958d4a251610d0b1c3fd8114ccf5a4f3baa64820e",
+          "ifindorb.txt": "bcdea267f940c652879457a892c1de6f6f6ae0859df99dceb020e3e69e8e9462",
+          "jpl_eph.txt": "d0ffcc671eda85b250bf832406aca59c169c057b19edc8a0474725af89fda66b",
+          "link_def.json": "0765fbd3cdb794c5a971c89b8fc6233033ab0c86e286abd965c7a3cb49747aa1",
+          "mpc_area.txt": "121c189085c9ec2a2ed81fdf710cfb96868caf25821767059fad77560eb72770",
+          "mpcorb.hdr": "8a5029330da8240ad8ba032a224869ddee208e57ee12d2b47a3d5718f75df3b1",
+          "mu1.txt": "c236dafbba22a1736feb9b60d435be2939815acda029f63f37cb27cb9a4ccb15",
+          "nongravs.txt": "98c57925dc59371d6d6603284ba1d3a3e181c4b331694d954413e5c95dd4e145",
+          "obj_help.txt": "728eff13cba54bf9849020386654b59ea496ee9bb882d50c558f112d7868236f",
+          "obj_name.txt": "6102d92e15a9ec6bb8c733425571458a6a506fe7057b07eee0b4a918dffde23a",
+          "observer.htm": "9a84a94d5960d17e3d3d9cfb78787553ae432d4be9684e899febeae54beecfcb",
+          "obslinks.htm": "b18d8be6e1c5c083d5925ce45a5c001debf956c6601bd9daba38acc0afbd9f3a",
+          "odd_name.txt": "0ae221aaa89c547531e33b48554da67dd6cdf127af83ef457a847b2ecf3d1163",
+          "openfile.txt": "8d92a9df4d0cb379059a51a9c6be398162fbce91c17b9a3ffeaa6a14807d8d00",
+          "orbitdef.sof": "8f22d9c5edaa356517295f87d5ffe92f533b949c110735440d37572b08d9bd74",
+          "previous.def": "61b218c37d8c28be7b674b0fb176be5d3adc5d52b6a8f40ec60089113d0606f8",
+          "progcode.txt": "d1561137621a1372123686b50e31dd9a25098e0ed90d647e63c1652ff98549ca",
+          "radecfmt.txt": "adc748b4d3252dbc85bfdc70ec1e6386ac9e89d22cd88b8c6cab3f1f74d3acfa",
+          "residfmt.txt": "d93e15314923ae970cd84c33b8ae546df572ae87be3917b3db12c20eb1c4cf3e",
+          "rfindorb.txt": "5a5b859a83f799008383e1a036d28f3f4a9ce3361ef4bec2a83f58dd07ff4eba",
+          "rovers.txt": "17aa1f4a59b83ff65878d1f3fb40aeac6ba5eed2e8e4c3ebbe76d83c1de4f477",
+          "sat_xref.txt": "6af10becfe528845cafd0040e49b2241db1d39c41b35bd418c1db7e029fc0641",
+          "scope.json": "41216e95a9013f381a505a2eab2c56bc8c167a672fc3c794297f310f75e99de7",
+          "scopes.txt": "9a97dff3bf5500884d334eeac0d48002cc678deddd5e1eb7b7da7cbc845f5498",
+          "sfindorb.txt": "bfa634959f049439ba8eb91e1673549fbc3277f6da5571a3b1861a9038e8b610",
+          "sigma.txt": "5c840b6be6969d023443e931009b11d31c3e83a2c1c3f56230ffac301e109131",
+          "site_310.txt": "177e13684f642261abae72a27eb6f9ae07e40226616a5d85b4b22567803ee42b",
+          "splash.txt": "dbbe0e1cc2fbc42d4210db876fa1c9fe28fab16fb154a4375d65309224c1696a",
+          "timehelp.txt": "dfdb9c0f95150c21a307db3133f5cf1866c1ea189460e1f9fb6ae780ea74fa88",
+          "xdesig.txt": "9bbd2a0c14e6776d499c620d6cbf3f60e2f65c75ca290283a694bf7acf22f7a9"
+        },
+        "binaries": {
+          "fo": "6198023d34b732f3d465a29cdc3c4b711eeef232f097441e359195c1e2770b2d",
+          "fo-count": "6198023d34b732f3d465a29cdc3c4b711eeef232f097441e359195c1e2770b2d"
+        },
+        "compiler": "Apple clang version 21.0.0 (clang-2100.1.1.101)\nTarget: arm64-apple-darwin25.6.0\nThread model: posix\nInstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin",
+        "platform": "darwin",
+        "arch": "arm64",
+        "numericalPolicy": "Upstream native defaults; Find_Orb -fno-fast-math -ffp-contract=off; dependency defaults (baseline policy)",
+        "searchPolicy": {
+          "fo": "Unmodified original upstream CPU-time-limited statistical ranging",
+          "fo-count": "Only statistical-ranging loop changed to complete configured candidate count"
+        },
+        "configAutocopy": false,
+        "builtAt": "2026-09-13T15:47:06.132Z"
+      }
+    },
+    "wasm": {
+      "root": "/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/dist",
+      "manifest": {
+        "schema": 1,
+        "sources": {
+          "lunar": "d95191818d7975c22613f231fea160341203abbe",
+          "jpl_eph": "a73f25e54d02b99b1c0d9a9d6c61acfbb2fa3a26",
+          "sat_code": "2bbb8cb2e417edb10918e4404464b68e24abcab4",
+          "find_orb": "9cc932997837c5ab994fbf015db59f5d0da852e5"
+        },
+        "ephemeris": {
+          "name": "JPL DE-440",
+          "filename": "linux_p1550p2650.440",
+          "url": "https://ssd.jpl.nasa.gov/ftp/eph/planets/Linux/de440/linux_p1550p2650.440",
+          "sha256": "29915576d0a6555766b99485ac3056ee415e86df4fce282611c31afb329ad062"
+        },
+        "emscripten": {
+          "version": "4.0.23",
+          "commit": "c0bb220cb6e6f4e0fabb6f6db9efd53390ef5e56"
+        },
+        "binarySHA256": "cffccd0ce9026bee08316d3e3b99d935cf6e6c6342bccbfdfb8e4fc260e4af71",
+        "glueSHA256": "a3bf7d12c91244096c6514d50616dcd216aec46f7ca168d172cbcfb6e5bc649c",
+        "dataSHA256": {
+          "bright.pgm": "3f90027b5e3c77c648add96f482dda76e509911f6f44fc2186e87083aebbdf32",
+          "bright2.pgm": "33b8d8e0d387548a3facc8bbe2111fec8dc495bb0e2d398abf13606a1182292b",
+          "calendar.txt": "7a4ff1a165e3871263360b1a8571a3d152bf23506642e888956d7b5cf17b66d5",
+          "cometdef.sof": "e06f5ae01f8036857a5eebb67d85aa5c982585418b15f14d7b95fa29801884fa",
+          "command.txt": "7c0871364e7a7b961fdc0c94b63c18e971ce08ba15ebdabbea5d10cab268643f",
+          "cospar.txt": "4f7c7bf76de5241dcd2e3aadc54a8c5ceedf04ed8084aca6bd2a8c875ecd4c4b",
+          "details.txt": "e85fefaee8308dec2ed25339a650f5d86f94ff0b58ae2d193567e56a9653e37a",
+          "dosephem.txt": "3cfb79fb391821d12ada22761cfb9e991452656740d0bf7641f3eb93bc8d8b10",
+          "dos_help.txt": "bef9174c05a513ec054b5f01cb843c5d1d9cfea7f76bcfe18bc90dbbe5089b64",
+          "elem_pop.txt": "0fc016687ed3ed990fc60c2d4262f5ae8a71c7ae2f18b65535f164b84a9ce021",
+          "environ.def": "235fec8c4a64b59e165b49c0e4a3354b315cbb0331821268ac27edf81c8b87db",
+          "eph2tle.txt": "c1012bbbd5108d2d9c439547b8627d7f245cf2d7e3b5e650cbefd1220f0a74d8",
+          "eph_expl.txt": "8a6d4d17e5ea4734e90b3409693f35b4bdc57ab3e080faaae20b34425a0e98d7",
+          "eph_type.txt": "01572cc4c61cc40a6bbeb26e106fc95fdb374402779e748e61b2faa0cc9a2f37",
+          "dfindorb.txt": "0bf3556ddf038b01db1932c70fd191a3c839657c55af52d003b12197641143e9",
+          "efindorb.txt": "025ea3c016f7fb6e777e71633e5f5c09d230613827242bc851d8f9d57dd34e17",
+          "ffindorb.txt": "25be6af081b2ee5f29d85bdd4c944cd180e21eed2bd5a76aad6178e541115b3d",
+          "ifindorb.txt": "bcdea267f940c652879457a892c1de6f6f6ae0859df99dceb020e3e69e8e9462",
+          "rfindorb.txt": "5a5b859a83f799008383e1a036d28f3f4a9ce3361ef4bec2a83f58dd07ff4eba",
+          "sfindorb.txt": "bfa634959f049439ba8eb91e1673549fbc3277f6da5571a3b1861a9038e8b610",
+          "frame_he.txt": "292636197b6b66efe5270b254800b40be7c225474b394af03d5ee6eb8c8ff343",
+          "geo_rect.txt": "849a2b1151700cd79e2ff0c2d5e58606f1d936f9f23410f0e466024edf96d153",
+          "header.htm": "870f8d19dc732dd978003a260dbe570d262dda0cd69a75cecd82c4a63e69e253",
+          "hints.def": "643448a694201ba11f92626958d4a251610d0b1c3fd8114ccf5a4f3baa64820e",
+          "jpl_eph.txt": "d0ffcc671eda85b250bf832406aca59c169c057b19edc8a0474725af89fda66b",
+          "link_def.json": "0765fbd3cdb794c5a971c89b8fc6233033ab0c86e286abd965c7a3cb49747aa1",
+          "mpc_area.txt": "121c189085c9ec2a2ed81fdf710cfb96868caf25821767059fad77560eb72770",
+          "mpcorb.hdr": "8a5029330da8240ad8ba032a224869ddee208e57ee12d2b47a3d5718f75df3b1",
+          "mu1.txt": "c236dafbba22a1736feb9b60d435be2939815acda029f63f37cb27cb9a4ccb15",
+          "nongravs.txt": "98c57925dc59371d6d6603284ba1d3a3e181c4b331694d954413e5c95dd4e145",
+          "obj_help.txt": "728eff13cba54bf9849020386654b59ea496ee9bb882d50c558f112d7868236f",
+          "obj_name.txt": "6102d92e15a9ec6bb8c733425571458a6a506fe7057b07eee0b4a918dffde23a",
+          "ObsCodes.htm": "94f6a339fa494e458845fd5c4a8f463c8b8b9974136e4b7d1293d4bb6019199c",
+          "ObsCodesF.html": "a5cbc19a1f36404109544a7a527d73228b99837f335caaa92a7c953036a6fe81",
+          "observer.htm": "9a84a94d5960d17e3d3d9cfb78787553ae432d4be9684e899febeae54beecfcb",
+          "obslinks.htm": "b18d8be6e1c5c083d5925ce45a5c001debf956c6601bd9daba38acc0afbd9f3a",
+          "odd_name.txt": "0ae221aaa89c547531e33b48554da67dd6cdf127af83ef457a847b2ecf3d1163",
+          "openfile.txt": "8d92a9df4d0cb379059a51a9c6be398162fbce91c17b9a3ffeaa6a14807d8d00",
+          "orbitdef.sof": "8f22d9c5edaa356517295f87d5ffe92f533b949c110735440d37572b08d9bd74",
+          "previous.def": "61b218c37d8c28be7b674b0fb176be5d3adc5d52b6a8f40ec60089113d0606f8",
+          "progcode.txt": "d1561137621a1372123686b50e31dd9a25098e0ed90d647e63c1652ff98549ca",
+          "radecfmt.txt": "adc748b4d3252dbc85bfdc70ec1e6386ac9e89d22cd88b8c6cab3f1f74d3acfa",
+          "residfmt.txt": "d93e15314923ae970cd84c33b8ae546df572ae87be3917b3db12c20eb1c4cf3e",
+          "rovers.txt": "17aa1f4a59b83ff65878d1f3fb40aeac6ba5eed2e8e4c3ebbe76d83c1de4f477",
+          "sat_xref.txt": "6af10becfe528845cafd0040e49b2241db1d39c41b35bd418c1db7e029fc0641",
+          "scope.json": "41216e95a9013f381a505a2eab2c56bc8c167a672fc3c794297f310f75e99de7",
+          "scopes.txt": "9a97dff3bf5500884d334eeac0d48002cc678deddd5e1eb7b7da7cbc845f5498",
+          "splash.txt": "dbbe0e1cc2fbc42d4210db876fa1c9fe28fab16fb154a4375d65309224c1696a",
+          "sigma.txt": "5c840b6be6969d023443e931009b11d31c3e83a2c1c3f56230ffac301e109131",
+          "site_310.txt": "177e13684f642261abae72a27eb6f9ae07e40226616a5d85b4b22567803ee42b",
+          "timehelp.txt": "dfdb9c0f95150c21a307db3133f5cf1866c1ea189460e1f9fb6ae780ea74fa88",
+          "xdesig.txt": "9bbd2a0c14e6776d499c620d6cbf3f60e2f65c75ca290283a694bf7acf22f7a9"
+        },
+        "entries": {
+          "data/bright.pgm": {
+            "offset": 0,
+            "size": 6480017,
+            "sha256": "3f90027b5e3c77c648add96f482dda76e509911f6f44fc2186e87083aebbdf32"
+          },
+          "data/bright2.pgm": {
+            "offset": 6480017,
+            "size": 64815,
+            "sha256": "33b8d8e0d387548a3facc8bbe2111fec8dc495bb0e2d398abf13606a1182292b"
+          },
+          "data/calendar.txt": {
+            "offset": 6544832,
+            "size": 135488,
+            "sha256": "7a4ff1a165e3871263360b1a8571a3d152bf23506642e888956d7b5cf17b66d5"
+          },
+          "data/cometdef.sof": {
+            "offset": 6680320,
+            "size": 303,
+            "sha256": "e06f5ae01f8036857a5eebb67d85aa5c982585418b15f14d7b95fa29801884fa"
+          },
+          "data/command.txt": {
+            "offset": 6680623,
+            "size": 7551,
+            "sha256": "7c0871364e7a7b961fdc0c94b63c18e971ce08ba15ebdabbea5d10cab268643f"
+          },
+          "data/cospar.txt": {
+            "offset": 6688174,
+            "size": 25584,
+            "sha256": "4f7c7bf76de5241dcd2e3aadc54a8c5ceedf04ed8084aca6bd2a8c875ecd4c4b"
+          },
+          "data/details.txt": {
+            "offset": 6713758,
+            "size": 99747,
+            "sha256": "e85fefaee8308dec2ed25339a650f5d86f94ff0b58ae2d193567e56a9653e37a"
+          },
+          "data/dosephem.txt": {
+            "offset": 6813505,
+            "size": 10266,
+            "sha256": "3cfb79fb391821d12ada22761cfb9e991452656740d0bf7641f3eb93bc8d8b10"
+          },
+          "data/dos_help.txt": {
+            "offset": 6823771,
+            "size": 21554,
+            "sha256": "bef9174c05a513ec054b5f01cb843c5d1d9cfea7f76bcfe18bc90dbbe5089b64"
+          },
+          "data/elem_pop.txt": {
+            "offset": 6845325,
+            "size": 2793,
+            "sha256": "0fc016687ed3ed990fc60c2d4262f5ae8a71c7ae2f18b65535f164b84a9ce021"
+          },
+          "data/environ.def": {
+            "offset": 6848118,
+            "size": 28452,
+            "sha256": "235fec8c4a64b59e165b49c0e4a3354b315cbb0331821268ac27edf81c8b87db"
+          },
+          "data/eph2tle.txt": {
+            "offset": 6876570,
+            "size": 3866,
+            "sha256": "c1012bbbd5108d2d9c439547b8627d7f245cf2d7e3b5e650cbefd1220f0a74d8"
+          },
+          "data/eph_expl.txt": {
+            "offset": 6880436,
+            "size": 5521,
+            "sha256": "8a6d4d17e5ea4734e90b3409693f35b4bdc57ab3e080faaae20b34425a0e98d7"
+          },
+          "data/eph_type.txt": {
+            "offset": 6885957,
+            "size": 2508,
+            "sha256": "01572cc4c61cc40a6bbeb26e106fc95fdb374402779e748e61b2faa0cc9a2f37"
+          },
+          "data/dfindorb.txt": {
+            "offset": 6888465,
+            "size": 3564,
+            "sha256": "0bf3556ddf038b01db1932c70fd191a3c839657c55af52d003b12197641143e9"
+          },
+          "data/efindorb.txt": {
+            "offset": 6892029,
+            "size": 13777,
+            "sha256": "025ea3c016f7fb6e777e71633e5f5c09d230613827242bc851d8f9d57dd34e17"
+          },
+          "data/ffindorb.txt": {
+            "offset": 6905806,
+            "size": 3792,
+            "sha256": "25be6af081b2ee5f29d85bdd4c944cd180e21eed2bd5a76aad6178e541115b3d"
+          },
+          "data/ifindorb.txt": {
+            "offset": 6909598,
+            "size": 3824,
+            "sha256": "bcdea267f940c652879457a892c1de6f6f6ae0859df99dceb020e3e69e8e9462"
+          },
+          "data/rfindorb.txt": {
+            "offset": 6913422,
+            "size": 3887,
+            "sha256": "5a5b859a83f799008383e1a036d28f3f4a9ce3361ef4bec2a83f58dd07ff4eba"
+          },
+          "data/sfindorb.txt": {
+            "offset": 6917309,
+            "size": 8987,
+            "sha256": "bfa634959f049439ba8eb91e1673549fbc3277f6da5571a3b1861a9038e8b610"
+          },
+          "data/frame_he.txt": {
+            "offset": 6926296,
+            "size": 914,
+            "sha256": "292636197b6b66efe5270b254800b40be7c225474b394af03d5ee6eb8c8ff343"
+          },
+          "data/geo_rect.txt": {
+            "offset": 6927210,
+            "size": 29752,
+            "sha256": "849a2b1151700cd79e2ff0c2d5e58606f1d936f9f23410f0e466024edf96d153"
+          },
+          "data/header.htm": {
+            "offset": 6956962,
+            "size": 1961,
+            "sha256": "870f8d19dc732dd978003a260dbe570d262dda0cd69a75cecd82c4a63e69e253"
+          },
+          "data/hints.def": {
+            "offset": 6958923,
+            "size": 456,
+            "sha256": "643448a694201ba11f92626958d4a251610d0b1c3fd8114ccf5a4f3baa64820e"
+          },
+          "data/jpl_eph.txt": {
+            "offset": 6959379,
+            "size": 5009,
+            "sha256": "d0ffcc671eda85b250bf832406aca59c169c057b19edc8a0474725af89fda66b"
+          },
+          "data/link_def.json": {
+            "offset": 6964388,
+            "size": 1306,
+            "sha256": "0765fbd3cdb794c5a971c89b8fc6233033ab0c86e286abd965c7a3cb49747aa1"
+          },
+          "data/mpc_area.txt": {
+            "offset": 6965694,
+            "size": 1003,
+            "sha256": "121c189085c9ec2a2ed81fdf710cfb96868caf25821767059fad77560eb72770"
+          },
+          "data/mpcorb.hdr": {
+            "offset": 6966697,
+            "size": 1596,
+            "sha256": "8a5029330da8240ad8ba032a224869ddee208e57ee12d2b47a3d5718f75df3b1"
+          },
+          "data/mu1.txt": {
+            "offset": 6968293,
+            "size": 9646,
+            "sha256": "c236dafbba22a1736feb9b60d435be2939815acda029f63f37cb27cb9a4ccb15"
+          },
+          "data/nongravs.txt": {
+            "offset": 6977939,
+            "size": 4342,
+            "sha256": "98c57925dc59371d6d6603284ba1d3a3e181c4b331694d954413e5c95dd4e145"
+          },
+          "data/obj_help.txt": {
+            "offset": 6982281,
+            "size": 537,
+            "sha256": "728eff13cba54bf9849020386654b59ea496ee9bb882d50c558f112d7868236f"
+          },
+          "data/obj_name.txt": {
+            "offset": 6982818,
+            "size": 324,
+            "sha256": "6102d92e15a9ec6bb8c733425571458a6a506fe7057b07eee0b4a918dffde23a"
+          },
+          "data/ObsCodes.htm": {
+            "offset": 6983142,
+            "size": 148590,
+            "sha256": "94f6a339fa494e458845fd5c4a8f463c8b8b9974136e4b7d1293d4bb6019199c"
+          },
+          "data/ObsCodesF.html": {
+            "offset": 7131732,
+            "size": 170409,
+            "sha256": "a5cbc19a1f36404109544a7a527d73228b99837f335caaa92a7c953036a6fe81"
+          },
+          "data/observer.htm": {
+            "offset": 7302141,
+            "size": 30137,
+            "sha256": "9a84a94d5960d17e3d3d9cfb78787553ae432d4be9684e899febeae54beecfcb"
+          },
+          "data/obslinks.htm": {
+            "offset": 7332278,
+            "size": 58051,
+            "sha256": "b18d8be6e1c5c083d5925ce45a5c001debf956c6601bd9daba38acc0afbd9f3a"
+          },
+          "data/odd_name.txt": {
+            "offset": 7390329,
+            "size": 10540,
+            "sha256": "0ae221aaa89c547531e33b48554da67dd6cdf127af83ef457a847b2ecf3d1163"
+          },
+          "data/openfile.txt": {
+            "offset": 7400869,
+            "size": 936,
+            "sha256": "8d92a9df4d0cb379059a51a9c6be398162fbce91c17b9a3ffeaa6a14807d8d00"
+          },
+          "data/orbitdef.sof": {
+            "offset": 7401805,
+            "size": 248,
+            "sha256": "8f22d9c5edaa356517295f87d5ffe92f533b949c110735440d37572b08d9bd74"
+          },
+          "data/previous.def": {
+            "offset": 7402053,
+            "size": 294,
+            "sha256": "61b218c37d8c28be7b674b0fb176be5d3adc5d52b6a8f40ec60089113d0606f8"
+          },
+          "data/progcode.txt": {
+            "offset": 7402347,
+            "size": 42520,
+            "sha256": "d1561137621a1372123686b50e31dd9a25098e0ed90d647e63c1652ff98549ca"
+          },
+          "data/radecfmt.txt": {
+            "offset": 7444867,
+            "size": 875,
+            "sha256": "adc748b4d3252dbc85bfdc70ec1e6386ac9e89d22cd88b8c6cab3f1f74d3acfa"
+          },
+          "data/residfmt.txt": {
+            "offset": 7445742,
+            "size": 1304,
+            "sha256": "d93e15314923ae970cd84c33b8ae546df572ae87be3917b3db12c20eb1c4cf3e"
+          },
+          "data/rovers.txt": {
+            "offset": 7447046,
+            "size": 96625,
+            "sha256": "17aa1f4a59b83ff65878d1f3fb40aeac6ba5eed2e8e4c3ebbe76d83c1de4f477"
+          },
+          "data/sat_xref.txt": {
+            "offset": 7543671,
+            "size": 3912,
+            "sha256": "6af10becfe528845cafd0040e49b2241db1d39c41b35bd418c1db7e029fc0641"
+          },
+          "data/scope.json": {
+            "offset": 7547583,
+            "size": 9485,
+            "sha256": "41216e95a9013f381a505a2eab2c56bc8c167a672fc3c794297f310f75e99de7"
+          },
+          "data/scopes.txt": {
+            "offset": 7557068,
+            "size": 15367,
+            "sha256": "9a97dff3bf5500884d334eeac0d48002cc678deddd5e1eb7b7da7cbc845f5498"
+          },
+          "data/splash.txt": {
+            "offset": 7572435,
+            "size": 14783,
+            "sha256": "dbbe0e1cc2fbc42d4210db876fa1c9fe28fab16fb154a4375d65309224c1696a"
+          },
+          "data/sigma.txt": {
+            "offset": 7587218,
+            "size": 14294,
+            "sha256": "5c840b6be6969d023443e931009b11d31c3e83a2c1c3f56230ffac301e109131"
+          },
+          "data/site_310.txt": {
+            "offset": 7601512,
+            "size": 5667,
+            "sha256": "177e13684f642261abae72a27eb6f9ae07e40226616a5d85b4b22567803ee42b"
+          },
+          "data/timehelp.txt": {
+            "offset": 7607179,
+            "size": 7509,
+            "sha256": "dfdb9c0f95150c21a307db3133f5cf1866c1ea189460e1f9fb6ae780ea74fa88"
+          },
+          "data/xdesig.txt": {
+            "offset": 7614688,
+            "size": 7443,
+            "sha256": "9bbd2a0c14e6776d499c620d6cbf3f60e2f65c75ca290283a694bf7acf22f7a9"
+          },
+          "linux_p1550p2650.440": {
+            "offset": 7622131,
+            "size": 102272352,
+            "sha256": "29915576d0a6555766b99485ac3056ee415e86df4fce282611c31afb329ad062"
+          }
+        },
+        "pack": {
+          "filename": "find-orb.data",
+          "size": 109894483,
+          "sha256": "3023e789b5c74e062ca5734d1953ef6ffbcd31049ce6b21263c210f809a7a195"
+        },
+        "numericalPolicy": "wasm32; binary64 double, software binary128 long double; no fast-math; fp-contract=off in all four source projects",
+        "strictEphemeris": true,
+        "ephemerisPolicy": "required; actual JPL queries fail closed outside (start, end] or on evaluation error",
+        "referenceMount": "copy-on-write MEMFS; fresh module, heap and filesystem per command",
+        "patchesSHA256": "d5004b26d5bc27b7b07fd971b22bb9c1f07e943e11d44c80b77bc4d831b76655",
+        "strictEphemerisPatchesSHA256": "fdf778df9e294f1606627e98f467b460a181ee83a19daf235f3a94d285354be2",
+        "platformSHA256": "a3ff365f8ee73f7aba0180e85ee526a15390e65b19e34cd3cfe148ff5638b995",
+        "searchPolicy": "Complete configured statistical-ranging candidate count; external worker timeout rejects incomplete jobs",
+        "configAutocopy": false,
+        "workerSHA256": "3bdcac91b113f678884889895f09335ce0d3e49767b86b8e9a81f4a7a373aecd"
+      },
+      "setup": {
+        "readMs": 31.172167,
+        "verifyMs": 56.664708000000005,
+        "totalMs": 87.838834
+      }
+    }
+  },
+  "cases": [
+    {
+      "id": "ceres-heldout-fit",
+      "kind": "fit",
+      "command": {
+        "id": "ceres-heldout-fit",
+        "kind": "fit",
+        "args": [
+          "/job/observations.mpc",
+          "-x/engine/data/",
+          "-D/engine/data/environ.def",
+          "-D/job/job.env",
+          "-O/job/",
+          "-i",
+          "-q",
+          "-V",
+          "-h0",
+          "-tEJD2460995.5",
+          "-e/job/sky.txt",
+          "-E3,9,16,17,20,25",
+          "-CF52"
+        ],
+        "files": {
+          "/job/observations.mpc": "COM Posn sigma 0.05\n     CER0001  C2025 11 01.41666700 34 43.291-11 07 29.32                     F52\n     CER0001  C2025 11 06.41666700 32 01.764-11 00 00.30                     F52\n     CER0001  C2025 11 11.41666700 29 51.428-10 47 53.99                     F52\n     CER0001  C2025 11 16.41666700 28 14.227-10 31 23.73                     F52\n     CER0001  C2025 11 21.41666700 27 11.421-10 10 45.13                     F52\n     CER0001  C2025 11 26.41666700 26 43.435-09 46 16.80                     F52\n     CER0001  C2025 12 01.41666700 26 49.882-09 18 19.48                     F52\n",
+          "/job/job.env": "JPL_FILENAME=/engine/linux_p1550p2650.440\nLINUX_JPL_FILENAME=/engine/linux_p1550p2650.440\nPERTURBERS=7fe\nVECTOR_OPTS=1,1,1\nMOTION_UNITS='/hr\nJSON_ELEMENTS_NAME=/job/elements.json\nJSON_EPHEM_NAME=/job/sky.json\nMAX_SR_ORBITS=100\nSETTINGS=N,4,12,0,2,1\nSETTINGS2=1,99,0,0,0\nIOD_TIMEOUT=0\nEPHEM_START=JD2461010.916666667\nEPHEM_STEPS=11\nEPHEM_STEP_SIZE=24h\nEPHEMERIS_TIMESCALE=UTC\nSIGMA_MULTIPLIER=1\n"
+        },
+        "outputs": [
+          "/job/elements.txt",
+          "/job/elements.json",
+          "/job/sky.json"
+        ],
+        "start": 2461010.916666667,
+        "count": 11,
+        "stepDays": 1,
+        "designation": "CER0001",
+        "observations": 7,
+        "truth": [
+          [
+            "2461015.916666667",
+            " ",
+            "m",
+            "   6.873697480",
+            "  -8.787389740",
+            ""
+          ],
+          [
+            "2461020.916666667",
+            " ",
+            "m",
+            "   7.172765019",
+            "  -8.222614043",
+            ""
+          ]
+        ]
+      },
+      "engines": {
+        "native-count": {
+          "phases": {
+            "mountMs": {
+              "median": 0.7494375000000275,
+              "min": 0.7314170000000217,
+              "max": 0.7674580000000333,
+              "samples": [
+                0.7314170000000217,
+                0.7674580000000333
+              ]
+            },
+            "processAndSolveMs": {
+              "median": 146.4488745,
+              "min": 142.02429099999995,
+              "max": 150.87345800000003,
+              "samples": [
+                142.02429099999995,
+                150.87345800000003
+              ]
+            },
+            "collectMs": {
+              "median": 0.7003959999999836,
+              "min": 0.5750419999999394,
+              "max": 0.8257500000000277,
+              "samples": [
+                0.8257500000000277,
+                0.5750419999999394
+              ]
+            },
+            "totalMs": {
+              "median": 147.898708,
+              "min": 143.581458,
+              "max": 152.215958,
+              "samples": [
+                143.581458,
+                152.215958
+              ]
+            }
+          },
+          "samples": [
+            {
+              "files": {
+                "/job/elements.txt": "Orbital elements:  CER0001\n   Perihelion 2027 Jul 13.495366147719 +/- 0.499 TT = 11:53:19.6351629 (JD 2461599.995366147719)\nEpoch 2025 Nov 16.0 TT = JDT 2460995.5                           Find_Orb\nM 230.457541763578035 +/- 0.12\nn   0.214298513257445 +/- 2.54e-5     Peri.   73.308489438302 +/- 0.10\na   2.765603676715892 +/- 0.000218    Node    80.249881085037 +/- 0.0020\ne   0.07956832255553 +/- 4.48e-5      Incl.   10.587862165504 +/- 0.00022\nP   4.59923            U  5.7\nq 2.545549231306199 +/- 9.71e-5    Q 2.985658122125585 +/- 0.000354\nFrom 7 observations 2025 Nov. 1-Dec. 1; mean residual 0\".00\n# State vector (heliocentric ecliptic J2000):\n#   +2.738139003200  +0.880197898831  -0.476571756787 AU\n#   -3.390515649276  +9.147354715612  +0.914189973690 mAU/day\n# MOIDs: Me  2.172652 Ve  1.833835 Ea  1.581369 Ma  0.927290\n# MOIDs: Ju  2.090639 Sa  6.327804 Ur 15.767278 Ne 26.950992\n# 1 oppositions\n# Elements written: 13 Sep 2026 15:51:55 (JD 2461297.161057)\n# Full range of obs: 2025 Nov. 1-Dec. 1 (7 observations)\n# Find_Orb ver: 2026 Aug 29\n# Perturbers: 000007fe (Merc-Pluto plus Luna);  JPL DE-440\n# Score: -0.322139\n#  $Name=CER0001  $Ty=2027  $Tm=07  $Td=13.495366  $MA=230.45754\n#  $ecc=0.0795683  $Eqnx=2000.\n#  $a=2.7656037  $Peri=73.30849  $Node=80.24988  $Incl=10.58786\n#  $EpJD=2460995.500  $q=2.545549  $T=2461599.995366  $H=0.0\n# Sigmas avail: 1\n",
+                "/job/elements.json": "{\n  \"num\": 1,\n  \"ids\":\n  [\n    \"CER0001\"\n  ],\n  \"objects\":\n  {\n    \"CER0001\":\n    {\n      \"object\": \"CER0001\",\n      \"packed\": \"CER0001\",\n      \"created\": 2461297.16106,\n      \"created iso\": \"2026-09-13T15:51:55Z\",\n      \"Find_Orb_version\": 2461281.50000,\n      \"Find_Orb_version_iso\": \"2026-08-29T00:00:00Z\",\n      \"elements\":\n      {\n        \"central body\": \"Sun\",\n        \"frame\": \"J2000\",\n        \"reference\": \"Find_Orb\",\n        \"epoch_iso\": \"2025-11-16T00:00:00Z\",\n        \"epoch\":  2460995.50000000,\n        \"P\": 1679.8996620546659, \"P sigma\": 0.199,\n        \"M\": 230.4575417635780, \"M sigma\": 0.12,\n        \"n\":   0.2142985132574, \"n sigma\": 2.54e-5,\n        \"a\":   2.7656036767159, \"a sigma\": 0.000218,\n        \"e\":   0.0795683225555, \"e sigma\": 4.48e-5,\n        \"q\":   2.5455492313062, \"q sigma\": 9.71e-5,\n        \"Q\":   2.9856581221256, \"Q sigma\": 0.000354,\n        \"i\":  10.5878621655039, \"i sigma\": 0.00022,\n        \"arg_per\":   73.3084894383018, \"arg_per sigma\":  0.10,\n        \"asc_node\":  80.2498810850368, \"asc_node sigma\": 0.0020,\n        \"Tp\": 2461599.99536615, \"Tp sigma\": 0.499,\n        \"Tp_iso\": \"2027-07-13T11:53:19.635Z\",\n        \"rms_residual\": 0.0019829,\n        \"weighted_rms_residual\": 0.0396,\n        \"n_resids\": 14,\n        \"U\": 5.6955,\n        \"p_NEO\": 0.0000,\n        \"MOIDs\":\n        {\n          \"Mercury\" : 2.172652,\n          \"Venus\" : 1.833835,\n          \"Earth\" : 1.581369,\n          \"Mars\" : 0.927290,\n          \"Jupiter\" : 2.090639,\n          \"Saturn\" : 6.327804,\n          \"Uranus\" : 15.767278,\n          \"Neptune\" : 26.950992 \n        }\n      },\n      \"observations\":\n      {\n        \"count\": 7,\n        \"used\": 7,\n        \"earliest\": 2460980.91666700,\n        \"latest\": 2461010.91666700,\n        \"earliest iso\": \"2025-11-01T10:00:00.028Z\",\n        \"latest iso\": \"2025-12-01T10:00:00.028Z\",\n        \"earliest_used\": 2460980.91666700,\n        \"latest_used\": 2461010.91666700,\n        \"earliest_used iso\": \"2025-11-01T10:00:00.028Z\",\n        \"latest_used iso\": \"2025-12-01T10:00:00.028Z\",\n        \"earliest_unbanned\": 2460980.91666700,\n        \"latest_unbanned\": 2461010.91666700,\n        \"earliest_unbanned iso\": \"2025-11-01T10:00:00.028Z\",\n        \"latest_unbanned iso\": \"2025-12-01T10:00:00.028Z\",\n        \"residuals\":\n        [\n          {\"JD\": 2460980.916667, \"iso date\": \"2025-11-01T10:00:00.028Z\", \"obscode\": \"F52\",\n                 \"RA\" : 8.680379, \"Dec\": -11.124811,\n                 \"dRA\" : -0.00109, \"dDec\": 0.00009, \"dTime\": 0.173, \"cross\": -0.00004,\n                 \"reference\" : \"     \",  \"packed\" : \"     CER0001\",\n                 \"sigma_1\" : 0.050000,\n                 \"sigma_2\" : 0.050000,\n                 \"normalized_resid_1\" : -0.021683,\n                 \"normalized_resid_2\" : 0.000793,\n                 \"posn_sigma_theta\" : 0.000000,\n                 \"RAMotion\" : -0.3761,\n                 \"decMotion\" : 0.0440,\n                 \"TotalMotion\" : 0.3787,\n                 \"PAMotion\" : 276.68,\n                 \"net\" : \" \",\n                 \"note1\" : \" \",\n                 \"note2\" : \"C\",\n                 \"discovery_asterisk\" : \" \",\n                 \"flags\" : 0,\n                 \"incl\" : 1,\n                 \"ecliptic_lon\" : 3.487688,\n                 \"ecliptic_lat\" : -13.646489,\n                 \"earth_ecliptic_lon\" : 40.590478 },\n          {\"JD\": 2460985.916667, \"iso date\": \"2025-11-06T10:00:00.028Z\", \"obscode\": \"F52\",\n                 \"RA\" : 8.007350, \"Dec\": -11.000083,\n                 \"dRA\" : 0.00287, \"dDec\": 0.00119, \"dTime\": -0.456, \"cross\": 0.00188,\n                 \"reference\" : \"     \",  \"packed\" : \"     CER0001\",\n                 \"sigma_1\" : 0.050000,\n                 \"sigma_2\" : 0.050000,\n                 \"normalized_resid_1\" : 0.049110,\n                 \"normalized_resid_2\" : -0.037700,\n                 \"posn_sigma_theta\" : 0.000000,\n                 \"RAMotion\" : -0.3138,\n                 \"decMotion\" : 0.0837,\n                 \"TotalMotion\" : 0.3247,\n                 \"PAMotion\" : 284.93,\n                 \"net\" : \" \",\n                 \"note1\" : \" \",\n                 \"note2\" : \"C\",\n                 \"discovery_asterisk\" : \" \",\n                 \"flags\" : 0,\n                 \"incl\" : 1,\n                 \"ecliptic_lon\" : 2.918515,\n                 \"ecliptic_lat\" : -13.265134,\n                 \"earth_ecliptic_lon\" : 45.518523 },\n          {\"JD\": 2460990.916667, \"iso date\": \"2025-11-11T10:00:00.028Z\", \"obscode\": \"F52\",\n                 \"RA\" : 7.464283, \"Dec\": -10.798331,\n                 \"dRA\" : -0.00118, \"dDec\": -0.00090, \"dTime\": 0.145, \"cross\": -0.00133,\n                 \"reference\" : \"     \",  \"packed\" : \"     CER0001\",\n                 \"sigma_1\" : 0.050000,\n                 \"sigma_2\" : 0.050000,\n                 \"normalized_resid_1\" : -0.013259,\n                 \"normalized_resid_2\" : 0.026542,\n                 \"posn_sigma_theta\" : 0.000000,\n                 \"RAMotion\" : -0.2468,\n                 \"decMotion\" : 0.1215,\n                 \"TotalMotion\" : 0.2750,\n                 \"PAMotion\" : 296.21,\n                 \"net\" : \" \",\n                 \"note1\" : \" \",\n                 \"note2\" : \"C\",\n                 \"discovery_asterisk\" : \" \",\n                 \"flags\" : 0,\n                 \"incl\" : 1,\n                 \"ecliptic_lon\" : 2.501694,\n                 \"ecliptic_lat\" : -12.864858,\n                 \"earth_ecliptic_lon\" : 50.446569 },\n          {\"JD\": 2460995.916667, \"iso date\": \"2025-11-16T10:00:00.028Z\", \"obscode\": \"F52\",\n                 \"RA\" : 7.059279, \"Dec\": -10.523258,\n                 \"dRA\" : -0.00298, \"dDec\": -0.00344, \"dTime\": -0.017, \"cross\": -0.00455,\n                 \"reference\" : \"     \",  \"packed\" : \"     CER0001\",\n                 \"sigma_1\" : 0.050000,\n                 \"sigma_2\" : 0.050000,\n                 \"normalized_resid_1\" : 0.001338,\n                 \"normalized_resid_2\" : 0.091033,\n                 \"posn_sigma_theta\" : 0.000000,\n                 \"RAMotion\" : -0.1763,\n                 \"decMotion\" : 0.1572,\n                 \"TotalMotion\" : 0.2362,\n                 \"PAMotion\" : 311.73,\n                 \"net\" : \" \",\n                 \"note1\" : \" \",\n                 \"note2\" : \"C\",\n                 \"discovery_asterisk\" : \" \",\n                 \"flags\" : 0,\n                 \"incl\" : 1,\n                 \"ecliptic_lon\" : 2.242628,\n                 \"ecliptic_lat\" : -12.452320,\n                 \"earth_ecliptic_lon\" : 55.374614 },\n          {\"JD\": 2461000.916667, \"iso date\": \"2025-11-21T10:00:00.028Z\", \"obscode\": \"F52\",\n                 \"RA\" : 6.797587, \"Dec\": -10.179203,\n                 \"dRA\" : 0.00284, \"dDec\": 0.00328, \"dTime\": 0.420, \"cross\": 0.00406,\n                 \"reference\" : \"     \",  \"packed\" : \"     CER0001\",\n                 \"sigma_1\" : 0.050000,\n                 \"sigma_2\" : 0.050000,\n                 \"normalized_resid_1\" : -0.030327,\n                 \"normalized_resid_2\" : -0.081230,\n                 \"posn_sigma_theta\" : 0.000000,\n                 \"RAMotion\" : -0.1039,\n                 \"decMotion\" : 0.1906,\n                 \"TotalMotion\" : 0.2170,\n                 \"PAMotion\" : 331.40,\n                 \"net\" : \" \",\n                 \"note1\" : \" \",\n                 \"note2\" : \"C\",\n                 \"discovery_asterisk\" : \" \",\n                 \"flags\" : 0,\n                 \"incl\" : 1,\n                 \"ecliptic_lon\" : 2.143921,\n                 \"ecliptic_lat\" : -12.033583,\n                 \"earth_ecliptic_lon\" : 60.302660 },\n          {\"JD\": 2461005.916667, \"iso date\": \"2025-11-26T10:00:00.028Z\", \"obscode\": \"F52\",\n                 \"RA\" : 6.680979, \"Dec\": -9.771333,\n                 \"dRA\" : 0.000205, \"dDec\": 0.000884, \"dTime\": 0.228, \"cross\": 0.000327,\n                 \"reference\" : \"     \",  \"packed\" : \"     CER0001\",\n                 \"sigma_1\" : 0.050000,\n                 \"sigma_2\" : 0.050000,\n                 \"normalized_resid_1\" : -0.016890,\n                 \"normalized_resid_2\" : -0.006540,\n                 \"posn_sigma_theta\" : 0.000000,\n                 \"RAMotion\" : -0.0313,\n                 \"decMotion\" : 0.2211,\n                 \"TotalMotion\" : 0.2233,\n                 \"PAMotion\" : 351.93,\n                 \"net\" : \" \",\n                 \"note1\" : \" \",\n                 \"note2\" : \"C\",\n                 \"discovery_asterisk\" : \" \",\n                 \"flags\" : 0,\n                 \"incl\" : 1,\n                 \"ecliptic_lon\" : 2.204749,\n                 \"ecliptic_lat\" : -11.614057,\n                 \"earth_ecliptic_lon\" : 65.230705 },\n          {\"JD\": 2461010.916667, \"iso date\": \"2025-12-01T10:00:00.028Z\", \"obscode\": \"F52\",\n                 \"RA\" : 6.707842, \"Dec\": -9.305411,\n                 \"dRA\" : -0.00066, \"dDec\": -0.00109, \"dTime\": -0.283, \"cross\": -0.00048,\n                 \"reference\" : \"     \",  \"packed\" : \"     CER0001\",\n                 \"sigma_1\" : 0.050000,\n                 \"sigma_2\" : 0.050000,\n                 \"normalized_resid_1\" : -0.023633,\n                 \"normalized_resid_2\" : -0.009650,\n                 \"posn_sigma_theta\" : 0.000000,\n                 \"RAMotion\" : 0.0398,\n                 \"decMotion\" : 0.2486,\n                 \"TotalMotion\" : 0.2517,\n                 \"PAMotion\" : 9.10,\n                 \"net\" : \" \",\n                 \"note1\" : \" \",\n                 \"note2\" : \"C\",\n                 \"discovery_asterisk\" : \" \",\n                 \"flags\" : 0,\n                 \"incl\" : 1,\n                 \"ecliptic_lon\" : 2.421044,\n                 \"ecliptic_lat\" : -11.198327,\n                 \"earth_ecliptic_lon\" : 70.158751 } \n        ]\n      }\n    }\n  }\n}\n",
+                "/job/sky.json": "{\n  \"ephemeris\":\n  {\n    \"obscode\": \"F52\",\n    \"packed\": \"CER0001\",\n    \"count\": 11,\n    \"start\": 2461010.916667,\n    \"step\": 1.000000000,\n    \"n_steps\": 11,\n    \"start iso\": \"2025-12-01T10:00:00.000Z\",\n    \"entries\":\n    {\n      \"0\": {\"JD\": 2461010.916666667, \"ISO_time\": \"2025-12-01T10:00:00Z\", \"RA\": 6.70784184817, \"RA60\": \"00 26 49.882\", \"Dec\": -9.30541084016, \"Dec60\": \"-09 18 19.48\", \"delta\": 2.377687076829, \"r\": 2.906304869378, \"elong\": 112.84791, \"LuElo\": 21.25701, \"RAvel\": 0.039807, \"decvel\": 0.248570, \"alt\": 26.3362, \"az\": 247.8488, \"Sal\": -86.5095, \"sigPos\": 0.025, \"sigPA\": 71 },\n      \"1\": {\"JD\": 2461011.916666667, \"ISO_time\": \"2025-12-02T10:00:00Z\", \"RA\": 6.73007501786, \"RA60\": \"00 26 55.218\", \"Dec\": -9.20578864476, \"Dec60\": \"-09 12 20.84\", \"delta\": 2.389868194311, \"r\": 2.905701711130, \"elong\": 111.92372, \"LuElo\": 34.14103, \"RAvel\": 0.053751, \"decvel\": 0.253704, \"alt\": 25.5473, \"az\": 248.4501, \"Sal\": -86.3764, \"sigPos\": 0.031, \"sigPA\": 71 },\n      \"2\": {\"JD\": 2461012.916666667, \"ISO_time\": \"2025-12-03T10:00:00Z\", \"RA\": 6.75782557562, \"RA60\": \"00 27 01.878\", \"Dec\": -9.10413147142, \"Dec60\": \"-09 06 14.87\", \"delta\": 2.402136010378, \"r\": 2.905096648725, \"elong\": 111.00408, \"LuElo\": 48.43885, \"RAvel\": 0.067584, \"decvel\": 0.258721, \"alt\": 24.7600, \"az\": 249.0404, \"Sal\": -86.2407, \"sigPos\": 0.037, \"sigPA\": 71 },\n      \"3\": {\"JD\": 2461013.916666667, \"ISO_time\": \"2025-12-04T10:00:00Z\", \"RA\": 6.79104516143, \"RA60\": \"00 27 09.851\", \"Dec\": -9.00048448445, \"Dec60\": \"-09 00 01.74\", \"delta\": 2.414486864011, \"r\": 2.904489688248, \"elong\": 110.08896, \"LuElo\": 63.29680, \"RAvel\": 0.081303, \"decvel\": 0.263626, \"alt\": 23.9746, \"az\": 249.6204, \"Sal\": -86.1035, \"sigPos\": 0.043, \"sigPA\": 71 },\n      \"4\": {\"JD\": 2461014.916666667, \"ISO_time\": \"2025-12-05T10:00:00Z\", \"RA\": 6.82968526669, \"RA60\": \"00 27 19.124\", \"Dec\": -8.89489082769, \"Dec60\": \"-08 53 41.61\", \"delta\": 2.426917238533, \"r\": 2.903880835810, \"elong\": 109.17832, \"LuElo\": 78.31354, \"RAvel\": 0.094909, \"decvel\": 0.268425, \"alt\": 23.1911, \"az\": 250.1906, \"Sal\": -85.9654, \"sigPos\": 0.049, \"sigPA\": 72 },\n      \"5\": {\"JD\": 2461015.916666667, \"ISO_time\": \"2025-12-06T10:00:00Z\", \"RA\": 6.87369820159, \"RA60\": \"00 27 29.688\", \"Dec\": -8.78739142856, \"Dec60\": \"-08 47 14.61\", \"delta\": 2.439423722622, \"r\": 2.903270097543, \"elong\": 108.27215, \"LuElo\": 93.20011, \"RAvel\": 0.108405, \"decvel\": 0.273123, \"alt\": 22.4097, \"az\": 250.7513, \"Sal\": -85.8272, \"sigPos\": 0.055, \"sigPA\": 72 },\n      \"6\": {\"JD\": 2461016.916666667, \"ISO_time\": \"2025-12-07T10:00:00Z\", \"RA\": 6.92303759062, \"RA60\": \"00 27 41.529\", \"Dec\": -8.67802511170, \"Dec60\": \"-08 40 40.89\", \"delta\": 2.452002958996, \"r\": 2.902657479603, \"elong\": 107.37039, \"LuElo\": 107.73092, \"RAvel\": 0.121795, \"decvel\": 0.277724, \"alt\": 21.6303, \"az\": 251.3031, \"Sal\": -85.6894, \"sigPos\": 0.062, \"sigPA\": 72 },\n      \"7\": {\"JD\": 2461017.916666667, \"ISO_time\": \"2025-12-08T10:00:00Z\", \"RA\": 6.97765832215, \"RA60\": \"00 27 54.638\", \"Dec\": -8.56682897528, \"Dec60\": \"-08 34 00.58\", \"delta\": 2.464651594891, \"r\": 2.902042988169, \"elong\": 106.47304, \"LuElo\": 121.73837, \"RAvel\": 0.135080, \"decvel\": 0.282233, \"alt\": 20.8532, \"az\": 251.8464, \"Sal\": -85.5526, \"sigPos\": 0.068, \"sigPA\": 72 },\n      \"8\": {\"JD\": 2461018.916666667, \"ISO_time\": \"2025-12-09T10:00:00Z\", \"RA\": 7.03751608396, \"RA60\": \"00 28 09.004\", \"Dec\": -8.45383889221, \"Dec60\": \"-08 27 13.82\", \"delta\": 2.477366246235, \"r\": 2.901426629444, \"elong\": 105.58006, \"LuElo\": 135.09462, \"RAvel\": 0.148262, \"decvel\": 0.286653, \"alt\": 20.0785, \"az\": 252.3815, \"Sal\": -85.4171, \"sigPos\": 0.075, \"sigPA\": 72 },\n      \"9\": {\"JD\": 2461019.916666667, \"ISO_time\": \"2025-12-10T10:00:00Z\", \"RA\": 7.10256672383, \"RA60\": \"00 28 24.616\", \"Dec\": -8.33908998883, \"Dec60\": \"-08 20 20.72\", \"delta\": 2.490143480026, \"r\": 2.900808409655, \"elong\": 104.69143, \"LuElo\": 147.64402, \"RAvel\": 0.161340, \"decvel\": 0.290984, \"alt\": 19.3061, \"az\": 252.9089, \"Sal\": -85.2833, \"sigPos\": 0.082, \"sigPA\": 72 },\n      \"10\": {\"JD\": 2461020.916666667, \"ISO_time\": \"2025-12-11T10:00:00Z\", \"RA\": 7.17276564921, \"RA60\": \"00 28 41.464\", \"Dec\": -8.22261700849, \"Dec60\": \"-08 13 21.42\", \"delta\": 2.502979812323, \"r\": 2.900188335052, \"elong\": 103.80714, \"LuElo\": 158.95269, \"RAvel\": 0.174313, \"decvel\": 0.295227, \"alt\": 18.5362, \"az\": 253.4289, \"Sal\": -85.1514, \"sigPos\": 0.090, \"sigPA\": 73 }\n    }\n  }\n}\n"
+              },
+              "stdout": "",
+              "exitCode": 0,
+              "phases": {
+                "mountMs": 0.7314170000000217,
+                "processAndSolveMs": 142.02429099999995,
+                "collectMs": 0.8257500000000277,
+                "totalMs": 143.581458
+              },
+              "accuracy": {
+                "horizonsSkyErrorArcsec": [
+                  0.006598688050968689,
+                  0.010909349461108681
+                ],
+                "rmsArcsec": 0.0019829,
+                "maxNativeSkyErrorArcsec": 0,
+                "nativeElementDeltas": {
+                  "a": 0,
+                  "e": 0,
+                  "i": 0,
+                  "M": 0,
+                  "arg_per": 0,
+                  "asc_node": 0
+                }
+              }
+            },
+            {
+              "files": {
+                "/job/elements.txt": "Orbital elements:  CER0001\n   Perihelion 2027 Jul 13.495366147719 +/- 0.499 TT = 11:53:19.6351629 (JD 2461599.995366147719)\nEpoch 2025 Nov 16.0 TT = JDT 2460995.5                           Find_Orb\nM 230.457541763578035 +/- 0.12\nn   0.214298513257445 +/- 2.54e-5     Peri.   73.308489438302 +/- 0.10\na   2.765603676715892 +/- 0.000218    Node    80.249881085037 +/- 0.0020\ne   0.07956832255553 +/- 4.48e-5      Incl.   10.587862165504 +/- 0.00022\nP   4.59923            U  5.7\nq 2.545549231306199 +/- 9.71e-5    Q 2.985658122125585 +/- 0.000354\nFrom 7 observations 2025 Nov. 1-Dec. 1; mean residual 0\".00\n# State vector (heliocentric ecliptic J2000):\n#   +2.738139003200  +0.880197898831  -0.476571756787 AU\n#   -3.390515649276  +9.147354715612  +0.914189973690 mAU/day\n# MOIDs: Me  2.172652 Ve  1.833835 Ea  1.581369 Ma  0.927290\n# MOIDs: Ju  2.090639 Sa  6.327804 Ur 15.767278 Ne 26.950992\n# 1 oppositions\n# Elements written: 13 Sep 2026 15:51:55 (JD 2461297.161059)\n# Full range of obs: 2025 Nov. 1-Dec. 1 (7 observations)\n# Find_Orb ver: 2026 Aug 29\n# Perturbers: 000007fe (Merc-Pluto plus Luna);  JPL DE-440\n# Score: -0.322139\n#  $Name=CER0001  $Ty=2027  $Tm=07  $Td=13.495366  $MA=230.45754\n#  $ecc=0.0795683  $Eqnx=2000.\n#  $a=2.7656037  $Peri=73.30849  $Node=80.24988  $Incl=10.58786\n#  $EpJD=2460995.500  $q=2.545549  $T=2461599.995366  $H=0.0\n# Sigmas avail: 1\n",
+                "/job/elements.json": "{\n  \"num\": 1,\n  \"ids\":\n  [\n    \"CER0001\"\n  ],\n  \"objects\":\n  {\n    \"CER0001\":\n    {\n      \"object\": \"CER0001\",\n      \"packed\": \"CER0001\",\n      \"created\": 2461297.16106,\n      \"created iso\": \"2026-09-13T15:51:55Z\",\n      \"Find_Orb_version\": 2461281.50000,\n      \"Find_Orb_version_iso\": \"2026-08-29T00:00:00Z\",\n      \"elements\":\n      {\n        \"central body\": \"Sun\",\n        \"frame\": \"J2000\",\n        \"reference\": \"Find_Orb\",\n        \"epoch_iso\": \"2025-11-16T00:00:00Z\",\n        \"epoch\":  2460995.50000000,\n        \"P\": 1679.8996620546659, \"P sigma\": 0.199,\n        \"M\": 230.4575417635780, \"M sigma\": 0.12,\n        \"n\":   0.2142985132574, \"n sigma\": 2.54e-5,\n        \"a\":   2.7656036767159, \"a sigma\": 0.000218,\n        \"e\":   0.0795683225555, \"e sigma\": 4.48e-5,\n        \"q\":   2.5455492313062, \"q sigma\": 9.71e-5,\n        \"Q\":   2.9856581221256, \"Q sigma\": 0.000354,\n        \"i\":  10.5878621655039, \"i sigma\": 0.00022,\n        \"arg_per\":   73.3084894383018, \"arg_per sigma\":  0.10,\n        \"asc_node\":  80.2498810850368, \"asc_node sigma\": 0.0020,\n        \"Tp\": 2461599.99536615, \"Tp sigma\": 0.499,\n        \"Tp_iso\": \"2027-07-13T11:53:19.635Z\",\n        \"rms_residual\": 0.0019829,\n        \"weighted_rms_residual\": 0.0396,\n        \"n_resids\": 14,\n        \"U\": 5.6955,\n        \"p_NEO\": 0.0000,\n        \"MOIDs\":\n        {\n          \"Mercury\" : 2.172652,\n          \"Venus\" : 1.833835,\n          \"Earth\" : 1.581369,\n          \"Mars\" : 0.927290,\n          \"Jupiter\" : 2.090639,\n          \"Saturn\" : 6.327804,\n          \"Uranus\" : 15.767278,\n          \"Neptune\" : 26.950992 \n        }\n      },\n      \"observations\":\n      {\n        \"count\": 7,\n        \"used\": 7,\n        \"earliest\": 2460980.91666700,\n        \"latest\": 2461010.91666700,\n        \"earliest iso\": \"2025-11-01T10:00:00.028Z\",\n        \"latest iso\": \"2025-12-01T10:00:00.028Z\",\n        \"earliest_used\": 2460980.91666700,\n        \"latest_used\": 2461010.91666700,\n        \"earliest_used iso\": \"2025-11-01T10:00:00.028Z\",\n        \"latest_used iso\": \"2025-12-01T10:00:00.028Z\",\n        \"earliest_unbanned\": 2460980.91666700,\n        \"latest_unbanned\": 2461010.91666700,\n        \"earliest_unbanned iso\": \"2025-11-01T10:00:00.028Z\",\n        \"latest_unbanned iso\": \"2025-12-01T10:00:00.028Z\",\n        \"residuals\":\n        [\n          {\"JD\": 2460980.916667, \"iso date\": \"2025-11-01T10:00:00.028Z\", \"obscode\": \"F52\",\n                 \"RA\" : 8.680379, \"Dec\": -11.124811,\n                 \"dRA\" : -0.00109, \"dDec\": 0.00009, \"dTime\": 0.173, \"cross\": -0.00004,\n                 \"reference\" : \"     \",  \"packed\" : \"     CER0001\",\n                 \"sigma_1\" : 0.050000,\n                 \"sigma_2\" : 0.050000,\n                 \"normalized_resid_1\" : -0.021683,\n                 \"normalized_resid_2\" : 0.000793,\n                 \"posn_sigma_theta\" : 0.000000,\n                 \"RAMotion\" : -0.3761,\n                 \"decMotion\" : 0.0440,\n                 \"TotalMotion\" : 0.3787,\n                 \"PAMotion\" : 276.68,\n                 \"net\" : \" \",\n                 \"note1\" : \" \",\n                 \"note2\" : \"C\",\n                 \"discovery_asterisk\" : \" \",\n                 \"flags\" : 0,\n                 \"incl\" : 1,\n                 \"ecliptic_lon\" : 3.487688,\n                 \"ecliptic_lat\" : -13.646489,\n                 \"earth_ecliptic_lon\" : 40.590478 },\n          {\"JD\": 2460985.916667, \"iso date\": \"2025-11-06T10:00:00.028Z\", \"obscode\": \"F52\",\n                 \"RA\" : 8.007350, \"Dec\": -11.000083,\n                 \"dRA\" : 0.00287, \"dDec\": 0.00119, \"dTime\": -0.456, \"cross\": 0.00188,\n                 \"reference\" : \"     \",  \"packed\" : \"     CER0001\",\n                 \"sigma_1\" : 0.050000,\n                 \"sigma_2\" : 0.050000,\n                 \"normalized_resid_1\" : 0.049110,\n                 \"normalized_resid_2\" : -0.037700,\n                 \"posn_sigma_theta\" : 0.000000,\n                 \"RAMotion\" : -0.3138,\n                 \"decMotion\" : 0.0837,\n                 \"TotalMotion\" : 0.3247,\n                 \"PAMotion\" : 284.93,\n                 \"net\" : \" \",\n                 \"note1\" : \" \",\n                 \"note2\" : \"C\",\n                 \"discovery_asterisk\" : \" \",\n                 \"flags\" : 0,\n                 \"incl\" : 1,\n                 \"ecliptic_lon\" : 2.918515,\n                 \"ecliptic_lat\" : -13.265134,\n                 \"earth_ecliptic_lon\" : 45.518523 },\n          {\"JD\": 2460990.916667, \"iso date\": \"2025-11-11T10:00:00.028Z\", \"obscode\": \"F52\",\n                 \"RA\" : 7.464283, \"Dec\": -10.798331,\n                 \"dRA\" : -0.00118, \"dDec\": -0.00090, \"dTime\": 0.145, \"cross\": -0.00133,\n                 \"reference\" : \"     \",  \"packed\" : \"     CER0001\",\n                 \"sigma_1\" : 0.050000,\n                 \"sigma_2\" : 0.050000,\n                 \"normalized_resid_1\" : -0.013259,\n                 \"normalized_resid_2\" : 0.026542,\n                 \"posn_sigma_theta\" : 0.000000,\n                 \"RAMotion\" : -0.2468,\n                 \"decMotion\" : 0.1215,\n                 \"TotalMotion\" : 0.2750,\n                 \"PAMotion\" : 296.21,\n                 \"net\" : \" \",\n                 \"note1\" : \" \",\n                 \"note2\" : \"C\",\n                 \"discovery_asterisk\" : \" \",\n                 \"flags\" : 0,\n                 \"incl\" : 1,\n                 \"ecliptic_lon\" : 2.501694,\n                 \"ecliptic_lat\" : -12.864858,\n                 \"earth_ecliptic_lon\" : 50.446569 },\n          {\"JD\": 2460995.916667, \"iso date\": \"2025-11-16T10:00:00.028Z\", \"obscode\": \"F52\",\n                 \"RA\" : 7.059279, \"Dec\": -10.523258,\n                 \"dRA\" : -0.00298, \"dDec\": -0.00344, \"dTime\": -0.017, \"cross\": -0.00455,\n                 \"reference\" : \"     \",  \"packed\" : \"     CER0001\",\n                 \"sigma_1\" : 0.050000,\n                 \"sigma_2\" : 0.050000,\n                 \"normalized_resid_1\" : 0.001338,\n                 \"normalized_resid_2\" : 0.091033,\n                 \"posn_sigma_theta\" : 0.000000,\n                 \"RAMotion\" : -0.1763,\n                 \"decMotion\" : 0.1572,\n                 \"TotalMotion\" : 0.2362,\n                 \"PAMotion\" : 311.73,\n                 \"net\" : \" \",\n                 \"note1\" : \" \",\n                 \"note2\" : \"C\",\n                 \"discovery_asterisk\" : \" \",\n                 \"flags\" : 0,\n                 \"incl\" : 1,\n                 \"ecliptic_lon\" : 2.242628,\n                 \"ecliptic_lat\" : -12.452320,\n                 \"earth_ecliptic_lon\" : 55.374614 },\n          {\"JD\": 2461000.916667, \"iso date\": \"2025-11-21T10:00:00.028Z\", \"obscode\": \"F52\",\n                 \"RA\" : 6.797587, \"Dec\": -10.179203,\n                 \"dRA\" : 0.00284, \"dDec\": 0.00328, \"dTime\": 0.420, \"cross\": 0.00406,\n                 \"reference\" : \"     \",  \"packed\" : \"     CER0001\",\n                 \"sigma_1\" : 0.050000,\n                 \"sigma_2\" : 0.050000,\n                 \"normalized_resid_1\" : -0.030327,\n                 \"normalized_resid_2\" : -0.081230,\n                 \"posn_sigma_theta\" : 0.000000,\n                 \"RAMotion\" : -0.1039,\n                 \"decMotion\" : 0.1906,\n                 \"TotalMotion\" : 0.2170,\n                 \"PAMotion\" : 331.40,\n                 \"net\" : \" \",\n                 \"note1\" : \" \",\n                 \"note2\" : \"C\",\n                 \"discovery_asterisk\" : \" \",\n                 \"flags\" : 0,\n                 \"incl\" : 1,\n                 \"ecliptic_lon\" : 2.143921,\n                 \"ecliptic_lat\" : -12.033583,\n                 \"earth_ecliptic_lon\" : 60.302660 },\n          {\"JD\": 2461005.916667, \"iso date\": \"2025-11-26T10:00:00.028Z\", \"obscode\": \"F52\",\n                 \"RA\" : 6.680979, \"Dec\": -9.771333,\n                 \"dRA\" : 0.000205, \"dDec\": 0.000884, \"dTime\": 0.228, \"cross\": 0.000327,\n                 \"reference\" : \"     \",  \"packed\" : \"     CER0001\",\n                 \"sigma_1\" : 0.050000,\n                 \"sigma_2\" : 0.050000,\n                 \"normalized_resid_1\" : -0.016890,\n                 \"normalized_resid_2\" : -0.006540,\n                 \"posn_sigma_theta\" : 0.000000,\n                 \"RAMotion\" : -0.0313,\n                 \"decMotion\" : 0.2211,\n                 \"TotalMotion\" : 0.2233,\n                 \"PAMotion\" : 351.93,\n                 \"net\" : \" \",\n                 \"note1\" : \" \",\n                 \"note2\" : \"C\",\n                 \"discovery_asterisk\" : \" \",\n                 \"flags\" : 0,\n                 \"incl\" : 1,\n                 \"ecliptic_lon\" : 2.204749,\n                 \"ecliptic_lat\" : -11.614057,\n                 \"earth_ecliptic_lon\" : 65.230705 },\n          {\"JD\": 2461010.916667, \"iso date\": \"2025-12-01T10:00:00.028Z\", \"obscode\": \"F52\",\n                 \"RA\" : 6.707842, \"Dec\": -9.305411,\n                 \"dRA\" : -0.00066, \"dDec\": -0.00109, \"dTime\": -0.283, \"cross\": -0.00048,\n                 \"reference\" : \"     \",  \"packed\" : \"     CER0001\",\n                 \"sigma_1\" : 0.050000,\n                 \"sigma_2\" : 0.050000,\n                 \"normalized_resid_1\" : -0.023633,\n                 \"normalized_resid_2\" : -0.009650,\n                 \"posn_sigma_theta\" : 0.000000,\n                 \"RAMotion\" : 0.0398,\n                 \"decMotion\" : 0.2486,\n                 \"TotalMotion\" : 0.2517,\n                 \"PAMotion\" : 9.10,\n                 \"net\" : \" \",\n                 \"note1\" : \" \",\n                 \"note2\" : \"C\",\n                 \"discovery_asterisk\" : \" \",\n                 \"flags\" : 0,\n                 \"incl\" : 1,\n                 \"ecliptic_lon\" : 2.421044,\n                 \"ecliptic_lat\" : -11.198327,\n                 \"earth_ecliptic_lon\" : 70.158751 } \n        ]\n      }\n    }\n  }\n}\n",
+                "/job/sky.json": "{\n  \"ephemeris\":\n  {\n    \"obscode\": \"F52\",\n    \"packed\": \"CER0001\",\n    \"count\": 11,\n    \"start\": 2461010.916667,\n    \"step\": 1.000000000,\n    \"n_steps\": 11,\n    \"start iso\": \"2025-12-01T10:00:00.000Z\",\n    \"entries\":\n    {\n      \"0\": {\"JD\": 2461010.916666667, \"ISO_time\": \"2025-12-01T10:00:00Z\", \"RA\": 6.70784184817, \"RA60\": \"00 26 49.882\", \"Dec\": -9.30541084016, \"Dec60\": \"-09 18 19.48\", \"delta\": 2.377687076829, \"r\": 2.906304869378, \"elong\": 112.84791, \"LuElo\": 21.25701, \"RAvel\": 0.039807, \"decvel\": 0.248570, \"alt\": 26.3362, \"az\": 247.8488, \"Sal\": -86.5095, \"sigPos\": 0.025, \"sigPA\": 71 },\n      \"1\": {\"JD\": 2461011.916666667, \"ISO_time\": \"2025-12-02T10:00:00Z\", \"RA\": 6.73007501786, \"RA60\": \"00 26 55.218\", \"Dec\": -9.20578864476, \"Dec60\": \"-09 12 20.84\", \"delta\": 2.389868194311, \"r\": 2.905701711130, \"elong\": 111.92372, \"LuElo\": 34.14103, \"RAvel\": 0.053751, \"decvel\": 0.253704, \"alt\": 25.5473, \"az\": 248.4501, \"Sal\": -86.3764, \"sigPos\": 0.031, \"sigPA\": 71 },\n      \"2\": {\"JD\": 2461012.916666667, \"ISO_time\": \"2025-12-03T10:00:00Z\", \"RA\": 6.75782557562, \"RA60\": \"00 27 01.878\", \"Dec\": -9.10413147142, \"Dec60\": \"-09 06 14.87\", \"delta\": 2.402136010378, \"r\": 2.905096648725, \"elong\": 111.00408, \"LuElo\": 48.43885, \"RAvel\": 0.067584, \"decvel\": 0.258721, \"alt\": 24.7600, \"az\": 249.0404, \"Sal\": -86.2407, \"sigPos\": 0.037, \"sigPA\": 71 },\n      \"3\": {\"JD\": 2461013.916666667, \"ISO_time\": \"2025-12-04T10:00:00Z\", \"RA\": 6.79104516143, \"RA60\": \"00 27 09.851\", \"Dec\": -9.00048448445, \"Dec60\": \"-09 00 01.74\", \"delta\": 2.414486864011, \"r\": 2.904489688248, \"elong\": 110.08896, \"LuElo\": 63.29680, \"RAvel\": 0.081303, \"decvel\": 0.263626, \"alt\": 23.9746, \"az\": 249.6204, \"Sal\": -86.1035, \"sigPos\": 0.043, \"sigPA\": 71 },\n      \"4\": {\"JD\": 2461014.916666667, \"ISO_time\": \"2025-12-05T10:00:00Z\", \"RA\": 6.82968526669, \"RA60\": \"00 27 19.124\", \"Dec\": -8.89489082769, \"Dec60\": \"-08 53 41.61\", \"delta\": 2.426917238533, \"r\": 2.903880835810, \"elong\": 109.17832, \"LuElo\": 78.31354, \"RAvel\": 0.094909, \"decvel\": 0.268425, \"alt\": 23.1911, \"az\": 250.1906, \"Sal\": -85.9654, \"sigPos\": 0.049, \"sigPA\": 72 },\n      \"5\": {\"JD\": 2461015.916666667, \"ISO_time\": \"2025-12-06T10:00:00Z\", \"RA\": 6.87369820159, \"RA60\": \"00 27 29.688\", \"Dec\": -8.78739142856, \"Dec60\": \"-08 47 14.61\", \"delta\": 2.439423722622, \"r\": 2.903270097543, \"elong\": 108.27215, \"LuElo\": 93.20011, \"RAvel\": 0.108405, \"decvel\": 0.273123, \"alt\": 22.4097, \"az\": 250.7513, \"Sal\": -85.8272, \"sigPos\": 0.055, \"sigPA\": 72 },\n      \"6\": {\"JD\": 2461016.916666667, \"ISO_time\": \"2025-12-07T10:00:00Z\", \"RA\": 6.92303759062, \"RA60\": \"00 27 41.529\", \"Dec\": -8.67802511170, \"Dec60\": \"-08 40 40.89\", \"delta\": 2.452002958996, \"r\": 2.902657479603, \"elong\": 107.37039, \"LuElo\": 107.73092, \"RAvel\": 0.121795, \"decvel\": 0.277724, \"alt\": 21.6303, \"az\": 251.3031, \"Sal\": -85.6894, \"sigPos\": 0.062, \"sigPA\": 72 },\n      \"7\": {\"JD\": 2461017.916666667, \"ISO_time\": \"2025-12-08T10:00:00Z\", \"RA\": 6.97765832215, \"RA60\": \"00 27 54.638\", \"Dec\": -8.56682897528, \"Dec60\": \"-08 34 00.58\", \"delta\": 2.464651594891, \"r\": 2.902042988169, \"elong\": 106.47304, \"LuElo\": 121.73837, \"RAvel\": 0.135080, \"decvel\": 0.282233, \"alt\": 20.8532, \"az\": 251.8464, \"Sal\": -85.5526, \"sigPos\": 0.068, \"sigPA\": 72 },\n      \"8\": {\"JD\": 2461018.916666667, \"ISO_time\": \"2025-12-09T10:00:00Z\", \"RA\": 7.03751608396, \"RA60\": \"00 28 09.004\", \"Dec\": -8.45383889221, \"Dec60\": \"-08 27 13.82\", \"delta\": 2.477366246235, \"r\": 2.901426629444, \"elong\": 105.58006, \"LuElo\": 135.09462, \"RAvel\": 0.148262, \"decvel\": 0.286653, \"alt\": 20.0785, \"az\": 252.3815, \"Sal\": -85.4171, \"sigPos\": 0.075, \"sigPA\": 72 },\n      \"9\": {\"JD\": 2461019.916666667, \"ISO_time\": \"2025-12-10T10:00:00Z\", \"RA\": 7.10256672383, \"RA60\": \"00 28 24.616\", \"Dec\": -8.33908998883, \"Dec60\": \"-08 20 20.72\", \"delta\": 2.490143480026, \"r\": 2.900808409655, \"elong\": 104.69143, \"LuElo\": 147.64402, \"RAvel\": 0.161340, \"decvel\": 0.290984, \"alt\": 19.3061, \"az\": 252.9089, \"Sal\": -85.2833, \"sigPos\": 0.082, \"sigPA\": 72 },\n      \"10\": {\"JD\": 2461020.916666667, \"ISO_time\": \"2025-12-11T10:00:00Z\", \"RA\": 7.17276564921, \"RA60\": \"00 28 41.464\", \"Dec\": -8.22261700849, \"Dec60\": \"-08 13 21.42\", \"delta\": 2.502979812323, \"r\": 2.900188335052, \"elong\": 103.80714, \"LuElo\": 158.95269, \"RAvel\": 0.174313, \"decvel\": 0.295227, \"alt\": 18.5362, \"az\": 253.4289, \"Sal\": -85.1514, \"sigPos\": 0.090, \"sigPA\": 73 }\n    }\n  }\n}\n"
+              },
+              "stdout": "",
+              "exitCode": 0,
+              "phases": {
+                "mountMs": 0.7674580000000333,
+                "processAndSolveMs": 150.87345800000003,
+                "collectMs": 0.5750419999999394,
+                "totalMs": 152.215958
+              },
+              "accuracy": {
+                "horizonsSkyErrorArcsec": [
+                  0.006598688050968689,
+                  0.010909349461108681
+                ],
+                "rmsArcsec": 0.0019829,
+                "maxNativeSkyErrorArcsec": 0,
+                "nativeElementDeltas": {
+                  "a": 0,
+                  "e": 0,
+                  "i": 0,
+                  "M": 0,
+                  "arg_per": 0,
+                  "asc_node": 0
+                }
+              }
+            }
+          ]
+        },
+        "native-original": {
+          "phases": {
+            "mountMs": {
+              "median": 0.6671875000000114,
+              "min": 0.6281669999999622,
+              "max": 0.7062080000000606,
+              "samples": [
+                0.6281669999999622,
+                0.7062080000000606
+              ]
+            },
+            "processAndSolveMs": {
+              "median": 129.42170800000002,
+              "min": 128.44491600000003,
+              "max": 130.3985,
+              "samples": [
+                128.44491600000003,
+                130.3985
+              ]
+            },
+            "collectMs": {
+              "median": 1.0640000000000214,
+              "min": 1.0627920000000586,
+              "max": 1.0652079999999842,
+              "samples": [
+                1.0627920000000586,
+                1.0652079999999842
+              ]
+            },
+            "totalMs": {
+              "median": 131.15289550000006,
+              "min": 130.13587500000006,
+              "max": 132.16991600000006,
+              "samples": [
+                130.13587500000006,
+                132.16991600000006
+              ]
+            }
+          },
+          "samples": [
+            {
+              "files": {
+                "/job/elements.txt": "Orbital elements:  CER0001\n   Perihelion 2027 Jul 13.495366147719 +/- 0.499 TT = 11:53:19.6351629 (JD 2461599.995366147719)\nEpoch 2025 Nov 16.0 TT = JDT 2460995.5                           Find_Orb\nM 230.457541763578035 +/- 0.12\nn   0.214298513257445 +/- 2.54e-5     Peri.   73.308489438302 +/- 0.10\na   2.765603676715892 +/- 0.000218    Node    80.249881085037 +/- 0.0020\ne   0.07956832255553 +/- 4.48e-5      Incl.   10.587862165504 +/- 0.00022\nP   4.59923            U  5.7\nq 2.545549231306199 +/- 9.71e-5    Q 2.985658122125585 +/- 0.000354\nFrom 7 observations 2025 Nov. 1-Dec. 1; mean residual 0\".00\n# State vector (heliocentric ecliptic J2000):\n#   +2.738139003200  +0.880197898831  -0.476571756787 AU\n#   -3.390515649276  +9.147354715612  +0.914189973690 mAU/day\n# MOIDs: Me  2.172652 Ve  1.833835 Ea  1.581369 Ma  0.927290\n# MOIDs: Ju  2.090639 Sa  6.327804 Ur 15.767278 Ne 26.950992\n# 1 oppositions\n# Elements written: 13 Sep 2026 15:51:55 (JD 2461297.161062)\n# Full range of obs: 2025 Nov. 1-Dec. 1 (7 observations)\n# Find_Orb ver: 2026 Aug 29\n# Perturbers: 000007fe (Merc-Pluto plus Luna);  JPL DE-440\n# Score: -0.322139\n#  $Name=CER0001  $Ty=2027  $Tm=07  $Td=13.495366  $MA=230.45754\n#  $ecc=0.0795683  $Eqnx=2000.\n#  $a=2.7656037  $Peri=73.30849  $Node=80.24988  $Incl=10.58786\n#  $EpJD=2460995.500  $q=2.545549  $T=2461599.995366  $H=0.0\n# Sigmas avail: 1\n",
+                "/job/elements.json": "{\n  \"num\": 1,\n  \"ids\":\n  [\n    \"CER0001\"\n  ],\n  \"objects\":\n  {\n    \"CER0001\":\n    {\n      \"object\": \"CER0001\",\n      \"packed\": \"CER0001\",\n      \"created\": 2461297.16106,\n      \"created iso\": \"2026-09-13T15:51:55Z\",\n      \"Find_Orb_version\": 2461281.50000,\n      \"Find_Orb_version_iso\": \"2026-08-29T00:00:00Z\",\n      \"elements\":\n      {\n        \"central body\": \"Sun\",\n        \"frame\": \"J2000\",\n        \"reference\": \"Find_Orb\",\n        \"epoch_iso\": \"2025-11-16T00:00:00Z\",\n        \"epoch\":  2460995.50000000,\n        \"P\": 1679.8996620546659, \"P sigma\": 0.199,\n        \"M\": 230.4575417635780, \"M sigma\": 0.12,\n        \"n\":   0.2142985132574, \"n sigma\": 2.54e-5,\n        \"a\":   2.7656036767159, \"a sigma\": 0.000218,\n        \"e\":   0.0795683225555, \"e sigma\": 4.48e-5,\n        \"q\":   2.5455492313062, \"q sigma\": 9.71e-5,\n        \"Q\":   2.9856581221256, \"Q sigma\": 0.000354,\n        \"i\":  10.5878621655039, \"i sigma\": 0.00022,\n        \"arg_per\":   73.3084894383018, \"arg_per sigma\":  0.10,\n        \"asc_node\":  80.2498810850368, \"asc_node sigma\": 0.0020,\n        \"Tp\": 2461599.99536615, \"Tp sigma\": 0.499,\n        \"Tp_iso\": \"2027-07-13T11:53:19.635Z\",\n        \"rms_residual\": 0.0019829,\n        \"weighted_rms_residual\": 0.0396,\n        \"n_resids\": 14,\n        \"U\": 5.6955,\n        \"p_NEO\": 0.0000,\n        \"MOIDs\":\n        {\n          \"Mercury\" : 2.172652,\n          \"Venus\" : 1.833835,\n          \"Earth\" : 1.581369,\n          \"Mars\" : 0.927290,\n          \"Jupiter\" : 2.090639,\n          \"Saturn\" : 6.327804,\n          \"Uranus\" : 15.767278,\n          \"Neptune\" : 26.950992 \n        }\n      },\n      \"observations\":\n      {\n        \"count\": 7,\n        \"used\": 7,\n        \"earliest\": 2460980.91666700,\n        \"latest\": 2461010.91666700,\n        \"earliest iso\": \"2025-11-01T10:00:00.028Z\",\n        \"latest iso\": \"2025-12-01T10:00:00.028Z\",\n        \"earliest_used\": 2460980.91666700,\n        \"latest_used\": 2461010.91666700,\n        \"earliest_used iso\": \"2025-11-01T10:00:00.028Z\",\n        \"latest_used iso\": \"2025-12-01T10:00:00.028Z\",\n        \"earliest_unbanned\": 2460980.91666700,\n        \"latest_unbanned\": 2461010.91666700,\n        \"earliest_unbanned iso\": \"2025-11-01T10:00:00.028Z\",\n        \"latest_unbanned iso\": \"2025-12-01T10:00:00.028Z\",\n        \"residuals\":\n        [\n          {\"JD\": 2460980.916667, \"iso date\": \"2025-11-01T10:00:00.028Z\", \"obscode\": \"F52\",\n                 \"RA\" : 8.680379, \"Dec\": -11.124811,\n                 \"dRA\" : -0.00109, \"dDec\": 0.00009, \"dTime\": 0.173, \"cross\": -0.00004,\n                 \"reference\" : \"     \",  \"packed\" : \"     CER0001\",\n                 \"sigma_1\" : 0.050000,\n                 \"sigma_2\" : 0.050000,\n                 \"normalized_resid_1\" : -0.021683,\n                 \"normalized_resid_2\" : 0.000793,\n                 \"posn_sigma_theta\" : 0.000000,\n                 \"RAMotion\" : -0.3761,\n                 \"decMotion\" : 0.0440,\n                 \"TotalMotion\" : 0.3787,\n                 \"PAMotion\" : 276.68,\n                 \"net\" : \" \",\n                 \"note1\" : \" \",\n                 \"note2\" : \"C\",\n                 \"discovery_asterisk\" : \" \",\n                 \"flags\" : 0,\n                 \"incl\" : 1,\n                 \"ecliptic_lon\" : 3.487688,\n                 \"ecliptic_lat\" : -13.646489,\n                 \"earth_ecliptic_lon\" : 40.590478 },\n          {\"JD\": 2460985.916667, \"iso date\": \"2025-11-06T10:00:00.028Z\", \"obscode\": \"F52\",\n                 \"RA\" : 8.007350, \"Dec\": -11.000083,\n                 \"dRA\" : 0.00287, \"dDec\": 0.00119, \"dTime\": -0.456, \"cross\": 0.00188,\n                 \"reference\" : \"     \",  \"packed\" : \"     CER0001\",\n                 \"sigma_1\" : 0.050000,\n                 \"sigma_2\" : 0.050000,\n                 \"normalized_resid_1\" : 0.049110,\n                 \"normalized_resid_2\" : -0.037700,\n                 \"posn_sigma_theta\" : 0.000000,\n                 \"RAMotion\" : -0.3138,\n                 \"decMotion\" : 0.0837,\n                 \"TotalMotion\" : 0.3247,\n                 \"PAMotion\" : 284.93,\n                 \"net\" : \" \",\n                 \"note1\" : \" \",\n                 \"note2\" : \"C\",\n                 \"discovery_asterisk\" : \" \",\n                 \"flags\" : 0,\n                 \"incl\" : 1,\n                 \"ecliptic_lon\" : 2.918515,\n                 \"ecliptic_lat\" : -13.265134,\n                 \"earth_ecliptic_lon\" : 45.518523 },\n          {\"JD\": 2460990.916667, \"iso date\": \"2025-11-11T10:00:00.028Z\", \"obscode\": \"F52\",\n                 \"RA\" : 7.464283, \"Dec\": -10.798331,\n                 \"dRA\" : -0.00118, \"dDec\": -0.00090, \"dTime\": 0.145, \"cross\": -0.00133,\n                 \"reference\" : \"     \",  \"packed\" : \"     CER0001\",\n                 \"sigma_1\" : 0.050000,\n                 \"sigma_2\" : 0.050000,\n                 \"normalized_resid_1\" : -0.013259,\n                 \"normalized_resid_2\" : 0.026542,\n                 \"posn_sigma_theta\" : 0.000000,\n                 \"RAMotion\" : -0.2468,\n                 \"decMotion\" : 0.1215,\n                 \"TotalMotion\" : 0.2750,\n                 \"PAMotion\" : 296.21,\n                 \"net\" : \" \",\n                 \"note1\" : \" \",\n                 \"note2\" : \"C\",\n                 \"discovery_asterisk\" : \" \",\n                 \"flags\" : 0,\n                 \"incl\" : 1,\n                 \"ecliptic_lon\" : 2.501694,\n                 \"ecliptic_lat\" : -12.864858,\n                 \"earth_ecliptic_lon\" : 50.446569 },\n          {\"JD\": 2460995.916667, \"iso date\": \"2025-11-16T10:00:00.028Z\", \"obscode\": \"F52\",\n                 \"RA\" : 7.059279, \"Dec\": -10.523258,\n                 \"dRA\" : -0.00298, \"dDec\": -0.00344, \"dTime\": -0.017, \"cross\": -0.00455,\n                 \"reference\" : \"     \",  \"packed\" : \"     CER0001\",\n                 \"sigma_1\" : 0.050000,\n                 \"sigma_2\" : 0.050000,\n                 \"normalized_resid_1\" : 0.001338,\n                 \"normalized_resid_2\" : 0.091033,\n                 \"posn_sigma_theta\" : 0.000000,\n                 \"RAMotion\" : -0.1763,\n                 \"decMotion\" : 0.1572,\n                 \"TotalMotion\" : 0.2362,\n                 \"PAMotion\" : 311.73,\n                 \"net\" : \" \",\n                 \"note1\" : \" \",\n                 \"note2\" : \"C\",\n                 \"discovery_asterisk\" : \" \",\n                 \"flags\" : 0,\n                 \"incl\" : 1,\n                 \"ecliptic_lon\" : 2.242628,\n                 \"ecliptic_lat\" : -12.452320,\n                 \"earth_ecliptic_lon\" : 55.374614 },\n          {\"JD\": 2461000.916667, \"iso date\": \"2025-11-21T10:00:00.028Z\", \"obscode\": \"F52\",\n                 \"RA\" : 6.797587, \"Dec\": -10.179203,\n                 \"dRA\" : 0.00284, \"dDec\": 0.00328, \"dTime\": 0.420, \"cross\": 0.00406,\n                 \"reference\" : \"     \",  \"packed\" : \"     CER0001\",\n                 \"sigma_1\" : 0.050000,\n                 \"sigma_2\" : 0.050000,\n                 \"normalized_resid_1\" : -0.030327,\n                 \"normalized_resid_2\" : -0.081230,\n                 \"posn_sigma_theta\" : 0.000000,\n                 \"RAMotion\" : -0.1039,\n                 \"decMotion\" : 0.1906,\n                 \"TotalMotion\" : 0.2170,\n                 \"PAMotion\" : 331.40,\n                 \"net\" : \" \",\n                 \"note1\" : \" \",\n                 \"note2\" : \"C\",\n                 \"discovery_asterisk\" : \" \",\n                 \"flags\" : 0,\n                 \"incl\" : 1,\n                 \"ecliptic_lon\" : 2.143921,\n                 \"ecliptic_lat\" : -12.033583,\n                 \"earth_ecliptic_lon\" : 60.302660 },\n          {\"JD\": 2461005.916667, \"iso date\": \"2025-11-26T10:00:00.028Z\", \"obscode\": \"F52\",\n                 \"RA\" : 6.680979, \"Dec\": -9.771333,\n                 \"dRA\" : 0.000205, \"dDec\": 0.000884, \"dTime\": 0.228, \"cross\": 0.000327,\n                 \"reference\" : \"     \",  \"packed\" : \"     CER0001\",\n                 \"sigma_1\" : 0.050000,\n                 \"sigma_2\" : 0.050000,\n                 \"normalized_resid_1\" : -0.016890,\n                 \"normalized_resid_2\" : -0.006540,\n                 \"posn_sigma_theta\" : 0.000000,\n                 \"RAMotion\" : -0.0313,\n                 \"decMotion\" : 0.2211,\n                 \"TotalMotion\" : 0.2233,\n                 \"PAMotion\" : 351.93,\n                 \"net\" : \" \",\n                 \"note1\" : \" \",\n                 \"note2\" : \"C\",\n                 \"discovery_asterisk\" : \" \",\n                 \"flags\" : 0,\n                 \"incl\" : 1,\n                 \"ecliptic_lon\" : 2.204749,\n                 \"ecliptic_lat\" : -11.614057,\n                 \"earth_ecliptic_lon\" : 65.230705 },\n          {\"JD\": 2461010.916667, \"iso date\": \"2025-12-01T10:00:00.028Z\", \"obscode\": \"F52\",\n                 \"RA\" : 6.707842, \"Dec\": -9.305411,\n                 \"dRA\" : -0.00066, \"dDec\": -0.00109, \"dTime\": -0.283, \"cross\": -0.00048,\n                 \"reference\" : \"     \",  \"packed\" : \"     CER0001\",\n                 \"sigma_1\" : 0.050000,\n                 \"sigma_2\" : 0.050000,\n                 \"normalized_resid_1\" : -0.023633,\n                 \"normalized_resid_2\" : -0.009650,\n                 \"posn_sigma_theta\" : 0.000000,\n                 \"RAMotion\" : 0.0398,\n                 \"decMotion\" : 0.2486,\n                 \"TotalMotion\" : 0.2517,\n                 \"PAMotion\" : 9.10,\n                 \"net\" : \" \",\n                 \"note1\" : \" \",\n                 \"note2\" : \"C\",\n                 \"discovery_asterisk\" : \" \",\n                 \"flags\" : 0,\n                 \"incl\" : 1,\n                 \"ecliptic_lon\" : 2.421044,\n                 \"ecliptic_lat\" : -11.198327,\n                 \"earth_ecliptic_lon\" : 70.158751 } \n        ]\n      }\n    }\n  }\n}\n",
+                "/job/sky.json": "{\n  \"ephemeris\":\n  {\n    \"obscode\": \"F52\",\n    \"packed\": \"CER0001\",\n    \"count\": 11,\n    \"start\": 2461010.916667,\n    \"step\": 1.000000000,\n    \"n_steps\": 11,\n    \"start iso\": \"2025-12-01T10:00:00.000Z\",\n    \"entries\":\n    {\n      \"0\": {\"JD\": 2461010.916666667, \"ISO_time\": \"2025-12-01T10:00:00Z\", \"RA\": 6.70784184817, \"RA60\": \"00 26 49.882\", \"Dec\": -9.30541084016, \"Dec60\": \"-09 18 19.48\", \"delta\": 2.377687076829, \"r\": 2.906304869378, \"elong\": 112.84791, \"LuElo\": 21.25701, \"RAvel\": 0.039807, \"decvel\": 0.248570, \"alt\": 26.3362, \"az\": 247.8488, \"Sal\": -86.5095, \"sigPos\": 0.025, \"sigPA\": 71 },\n      \"1\": {\"JD\": 2461011.916666667, \"ISO_time\": \"2025-12-02T10:00:00Z\", \"RA\": 6.73007501786, \"RA60\": \"00 26 55.218\", \"Dec\": -9.20578864476, \"Dec60\": \"-09 12 20.84\", \"delta\": 2.389868194311, \"r\": 2.905701711130, \"elong\": 111.92372, \"LuElo\": 34.14103, \"RAvel\": 0.053751, \"decvel\": 0.253704, \"alt\": 25.5473, \"az\": 248.4501, \"Sal\": -86.3764, \"sigPos\": 0.031, \"sigPA\": 71 },\n      \"2\": {\"JD\": 2461012.916666667, \"ISO_time\": \"2025-12-03T10:00:00Z\", \"RA\": 6.75782557562, \"RA60\": \"00 27 01.878\", \"Dec\": -9.10413147142, \"Dec60\": \"-09 06 14.87\", \"delta\": 2.402136010378, \"r\": 2.905096648725, \"elong\": 111.00408, \"LuElo\": 48.43885, \"RAvel\": 0.067584, \"decvel\": 0.258721, \"alt\": 24.7600, \"az\": 249.0404, \"Sal\": -86.2407, \"sigPos\": 0.037, \"sigPA\": 71 },\n      \"3\": {\"JD\": 2461013.916666667, \"ISO_time\": \"2025-12-04T10:00:00Z\", \"RA\": 6.79104516143, \"RA60\": \"00 27 09.851\", \"Dec\": -9.00048448445, \"Dec60\": \"-09 00 01.74\", \"delta\": 2.414486864011, \"r\": 2.904489688248, \"elong\": 110.08896, \"LuElo\": 63.29680, \"RAvel\": 0.081303, \"decvel\": 0.263626, \"alt\": 23.9746, \"az\": 249.6204, \"Sal\": -86.1035, \"sigPos\": 0.043, \"sigPA\": 71 },\n      \"4\": {\"JD\": 2461014.916666667, \"ISO_time\": \"2025-12-05T10:00:00Z\", \"RA\": 6.82968526669, \"RA60\": \"00 27 19.124\", \"Dec\": -8.89489082769, \"Dec60\": \"-08 53 41.61\", \"delta\": 2.426917238533, \"r\": 2.903880835810, \"elong\": 109.17832, \"LuElo\": 78.31354, \"RAvel\": 0.094909, \"decvel\": 0.268425, \"alt\": 23.1911, \"az\": 250.1906, \"Sal\": -85.9654, \"sigPos\": 0.049, \"sigPA\": 72 },\n      \"5\": {\"JD\": 2461015.916666667, \"ISO_time\": \"2025-12-06T10:00:00Z\", \"RA\": 6.87369820159, \"RA60\": \"00 27 29.688\", \"Dec\": -8.78739142856, \"Dec60\": \"-08 47 14.61\", \"delta\": 2.439423722622, \"r\": 2.903270097543, \"elong\": 108.27215, \"LuElo\": 93.20011, \"RAvel\": 0.108405, \"decvel\": 0.273123, \"alt\": 22.4097, \"az\": 250.7513, \"Sal\": -85.8272, \"sigPos\": 0.055, \"sigPA\": 72 },\n      \"6\": {\"JD\": 2461016.916666667, \"ISO_time\": \"2025-12-07T10:00:00Z\", \"RA\": 6.92303759062, \"RA60\": \"00 27 41.529\", \"Dec\": -8.67802511170, \"Dec60\": \"-08 40 40.89\", \"delta\": 2.452002958996, \"r\": 2.902657479603, \"elong\": 107.37039, \"LuElo\": 107.73092, \"RAvel\": 0.121795, \"decvel\": 0.277724, \"alt\": 21.6303, \"az\": 251.3031, \"Sal\": -85.6894, \"sigPos\": 0.062, \"sigPA\": 72 },\n      \"7\": {\"JD\": 2461017.916666667, \"ISO_time\": \"2025-12-08T10:00:00Z\", \"RA\": 6.97765832215, \"RA60\": \"00 27 54.638\", \"Dec\": -8.56682897528, \"Dec60\": \"-08 34 00.58\", \"delta\": 2.464651594891, \"r\": 2.902042988169, \"elong\": 106.47304, \"LuElo\": 121.73837, \"RAvel\": 0.135080, \"decvel\": 0.282233, \"alt\": 20.8532, \"az\": 251.8464, \"Sal\": -85.5526, \"sigPos\": 0.068, \"sigPA\": 72 },\n      \"8\": {\"JD\": 2461018.916666667, \"ISO_time\": \"2025-12-09T10:00:00Z\", \"RA\": 7.03751608396, \"RA60\": \"00 28 09.004\", \"Dec\": -8.45383889221, \"Dec60\": \"-08 27 13.82\", \"delta\": 2.477366246235, \"r\": 2.901426629444, \"elong\": 105.58006, \"LuElo\": 135.09462, \"RAvel\": 0.148262, \"decvel\": 0.286653, \"alt\": 20.0785, \"az\": 252.3815, \"Sal\": -85.4171, \"sigPos\": 0.075, \"sigPA\": 72 },\n      \"9\": {\"JD\": 2461019.916666667, \"ISO_time\": \"2025-12-10T10:00:00Z\", \"RA\": 7.10256672383, \"RA60\": \"00 28 24.616\", \"Dec\": -8.33908998883, \"Dec60\": \"-08 20 20.72\", \"delta\": 2.490143480026, \"r\": 2.900808409655, \"elong\": 104.69143, \"LuElo\": 147.64402, \"RAvel\": 0.161340, \"decvel\": 0.290984, \"alt\": 19.3061, \"az\": 252.9089, \"Sal\": -85.2833, \"sigPos\": 0.082, \"sigPA\": 72 },\n      \"10\": {\"JD\": 2461020.916666667, \"ISO_time\": \"2025-12-11T10:00:00Z\", \"RA\": 7.17276564921, \"RA60\": \"00 28 41.464\", \"Dec\": -8.22261700849, \"Dec60\": \"-08 13 21.42\", \"delta\": 2.502979812323, \"r\": 2.900188335052, \"elong\": 103.80714, \"LuElo\": 158.95269, \"RAvel\": 0.174313, \"decvel\": 0.295227, \"alt\": 18.5362, \"az\": 253.4289, \"Sal\": -85.1514, \"sigPos\": 0.090, \"sigPA\": 73 }\n    }\n  }\n}\n"
+              },
+              "stdout": "",
+              "exitCode": 0,
+              "phases": {
+                "mountMs": 0.6281669999999622,
+                "processAndSolveMs": 128.44491600000003,
+                "collectMs": 1.0627920000000586,
+                "totalMs": 130.13587500000006
+              },
+              "accuracy": {
+                "horizonsSkyErrorArcsec": [
+                  0.006598688050968689,
+                  0.010909349461108681
+                ],
+                "rmsArcsec": 0.0019829
+              }
+            },
+            {
+              "files": {
+                "/job/elements.txt": "Orbital elements:  CER0001\n   Perihelion 2027 Jul 13.495366147719 +/- 0.499 TT = 11:53:19.6351629 (JD 2461599.995366147719)\nEpoch 2025 Nov 16.0 TT = JDT 2460995.5                           Find_Orb\nM 230.457541763578035 +/- 0.12\nn   0.214298513257445 +/- 2.54e-5     Peri.   73.308489438302 +/- 0.10\na   2.765603676715892 +/- 0.000218    Node    80.249881085037 +/- 0.0020\ne   0.07956832255553 +/- 4.48e-5      Incl.   10.587862165504 +/- 0.00022\nP   4.59923            U  5.7\nq 2.545549231306199 +/- 9.71e-5    Q 2.985658122125585 +/- 0.000354\nFrom 7 observations 2025 Nov. 1-Dec. 1; mean residual 0\".00\n# State vector (heliocentric ecliptic J2000):\n#   +2.738139003200  +0.880197898831  -0.476571756787 AU\n#   -3.390515649276  +9.147354715612  +0.914189973690 mAU/day\n# MOIDs: Me  2.172652 Ve  1.833835 Ea  1.581369 Ma  0.927290\n# MOIDs: Ju  2.090639 Sa  6.327804 Ur 15.767278 Ne 26.950992\n# 1 oppositions\n# Elements written: 13 Sep 2026 15:51:55 (JD 2461297.161064)\n# Full range of obs: 2025 Nov. 1-Dec. 1 (7 observations)\n# Find_Orb ver: 2026 Aug 29\n# Perturbers: 000007fe (Merc-Pluto plus Luna);  JPL DE-440\n# Score: -0.322139\n#  $Name=CER0001  $Ty=2027  $Tm=07  $Td=13.495366  $MA=230.45754\n#  $ecc=0.0795683  $Eqnx=2000.\n#  $a=2.7656037  $Peri=73.30849  $Node=80.24988  $Incl=10.58786\n#  $EpJD=2460995.500  $q=2.545549  $T=2461599.995366  $H=0.0\n# Sigmas avail: 1\n",
+                "/job/elements.json": "{\n  \"num\": 1,\n  \"ids\":\n  [\n    \"CER0001\"\n  ],\n  \"objects\":\n  {\n    \"CER0001\":\n    {\n      \"object\": \"CER0001\",\n      \"packed\": \"CER0001\",\n      \"created\": 2461297.16106,\n      \"created iso\": \"2026-09-13T15:51:55Z\",\n      \"Find_Orb_version\": 2461281.50000,\n      \"Find_Orb_version_iso\": \"2026-08-29T00:00:00Z\",\n      \"elements\":\n      {\n        \"central body\": \"Sun\",\n        \"frame\": \"J2000\",\n        \"reference\": \"Find_Orb\",\n        \"epoch_iso\": \"2025-11-16T00:00:00Z\",\n        \"epoch\":  2460995.50000000,\n        \"P\": 1679.8996620546659, \"P sigma\": 0.199,\n        \"M\": 230.4575417635780, \"M sigma\": 0.12,\n        \"n\":   0.2142985132574, \"n sigma\": 2.54e-5,\n        \"a\":   2.7656036767159, \"a sigma\": 0.000218,\n        \"e\":   0.0795683225555, \"e sigma\": 4.48e-5,\n        \"q\":   2.5455492313062, \"q sigma\": 9.71e-5,\n        \"Q\":   2.9856581221256, \"Q sigma\": 0.000354,\n        \"i\":  10.5878621655039, \"i sigma\": 0.00022,\n        \"arg_per\":   73.3084894383018, \"arg_per sigma\":  0.10,\n        \"asc_node\":  80.2498810850368, \"asc_node sigma\": 0.0020,\n        \"Tp\": 2461599.99536615, \"Tp sigma\": 0.499,\n        \"Tp_iso\": \"2027-07-13T11:53:19.635Z\",\n        \"rms_residual\": 0.0019829,\n        \"weighted_rms_residual\": 0.0396,\n        \"n_resids\": 14,\n        \"U\": 5.6955,\n        \"p_NEO\": 0.0000,\n        \"MOIDs\":\n        {\n          \"Mercury\" : 2.172652,\n          \"Venus\" : 1.833835,\n          \"Earth\" : 1.581369,\n          \"Mars\" : 0.927290,\n          \"Jupiter\" : 2.090639,\n          \"Saturn\" : 6.327804,\n          \"Uranus\" : 15.767278,\n          \"Neptune\" : 26.950992 \n        }\n      },\n      \"observations\":\n      {\n        \"count\": 7,\n        \"used\": 7,\n        \"earliest\": 2460980.91666700,\n        \"latest\": 2461010.91666700,\n        \"earliest iso\": \"2025-11-01T10:00:00.028Z\",\n        \"latest iso\": \"2025-12-01T10:00:00.028Z\",\n        \"earliest_used\": 2460980.91666700,\n        \"latest_used\": 2461010.91666700,\n        \"earliest_used iso\": \"2025-11-01T10:00:00.028Z\",\n        \"latest_used iso\": \"2025-12-01T10:00:00.028Z\",\n        \"earliest_unbanned\": 2460980.91666700,\n        \"latest_unbanned\": 2461010.91666700,\n        \"earliest_unbanned iso\": \"2025-11-01T10:00:00.028Z\",\n        \"latest_unbanned iso\": \"2025-12-01T10:00:00.028Z\",\n        \"residuals\":\n        [\n          {\"JD\": 2460980.916667, \"iso date\": \"2025-11-01T10:00:00.028Z\", \"obscode\": \"F52\",\n                 \"RA\" : 8.680379, \"Dec\": -11.124811,\n                 \"dRA\" : -0.00109, \"dDec\": 0.00009, \"dTime\": 0.173, \"cross\": -0.00004,\n                 \"reference\" : \"     \",  \"packed\" : \"     CER0001\",\n                 \"sigma_1\" : 0.050000,\n                 \"sigma_2\" : 0.050000,\n                 \"normalized_resid_1\" : -0.021683,\n                 \"normalized_resid_2\" : 0.000793,\n                 \"posn_sigma_theta\" : 0.000000,\n                 \"RAMotion\" : -0.3761,\n                 \"decMotion\" : 0.0440,\n                 \"TotalMotion\" : 0.3787,\n                 \"PAMotion\" : 276.68,\n                 \"net\" : \" \",\n                 \"note1\" : \" \",\n                 \"note2\" : \"C\",\n                 \"discovery_asterisk\" : \" \",\n                 \"flags\" : 0,\n                 \"incl\" : 1,\n                 \"ecliptic_lon\" : 3.487688,\n                 \"ecliptic_lat\" : -13.646489,\n                 \"earth_ecliptic_lon\" : 40.590478 },\n          {\"JD\": 2460985.916667, \"iso date\": \"2025-11-06T10:00:00.028Z\", \"obscode\": \"F52\",\n                 \"RA\" : 8.007350, \"Dec\": -11.000083,\n                 \"dRA\" : 0.00287, \"dDec\": 0.00119, \"dTime\": -0.456, \"cross\": 0.00188,\n                 \"reference\" : \"     \",  \"packed\" : \"     CER0001\",\n                 \"sigma_1\" : 0.050000,\n                 \"sigma_2\" : 0.050000,\n                 \"normalized_resid_1\" : 0.049110,\n                 \"normalized_resid_2\" : -0.037700,\n                 \"posn_sigma_theta\" : 0.000000,\n                 \"RAMotion\" : -0.3138,\n                 \"decMotion\" : 0.0837,\n                 \"TotalMotion\" : 0.3247,\n                 \"PAMotion\" : 284.93,\n                 \"net\" : \" \",\n                 \"note1\" : \" \",\n                 \"note2\" : \"C\",\n                 \"discovery_asterisk\" : \" \",\n                 \"flags\" : 0,\n                 \"incl\" : 1,\n                 \"ecliptic_lon\" : 2.918515,\n                 \"ecliptic_lat\" : -13.265134,\n                 \"earth_ecliptic_lon\" : 45.518523 },\n          {\"JD\": 2460990.916667, \"iso date\": \"2025-11-11T10:00:00.028Z\", \"obscode\": \"F52\",\n                 \"RA\" : 7.464283, \"Dec\": -10.798331,\n                 \"dRA\" : -0.00118, \"dDec\": -0.00090, \"dTime\": 0.145, \"cross\": -0.00133,\n                 \"reference\" : \"     \",  \"packed\" : \"     CER0001\",\n                 \"sigma_1\" : 0.050000,\n                 \"sigma_2\" : 0.050000,\n                 \"normalized_resid_1\" : -0.013259,\n                 \"normalized_resid_2\" : 0.026542,\n                 \"posn_sigma_theta\" : 0.000000,\n                 \"RAMotion\" : -0.2468,\n                 \"decMotion\" : 0.1215,\n                 \"TotalMotion\" : 0.2750,\n                 \"PAMotion\" : 296.21,\n                 \"net\" : \" \",\n                 \"note1\" : \" \",\n                 \"note2\" : \"C\",\n                 \"discovery_asterisk\" : \" \",\n                 \"flags\" : 0,\n                 \"incl\" : 1,\n                 \"ecliptic_lon\" : 2.501694,\n                 \"ecliptic_lat\" : -12.864858,\n                 \"earth_ecliptic_lon\" : 50.446569 },\n          {\"JD\": 2460995.916667, \"iso date\": \"2025-11-16T10:00:00.028Z\", \"obscode\": \"F52\",\n                 \"RA\" : 7.059279, \"Dec\": -10.523258,\n                 \"dRA\" : -0.00298, \"dDec\": -0.00344, \"dTime\": -0.017, \"cross\": -0.00455,\n                 \"reference\" : \"     \",  \"packed\" : \"     CER0001\",\n                 \"sigma_1\" : 0.050000,\n                 \"sigma_2\" : 0.050000,\n                 \"normalized_resid_1\" : 0.001338,\n                 \"normalized_resid_2\" : 0.091033,\n                 \"posn_sigma_theta\" : 0.000000,\n                 \"RAMotion\" : -0.1763,\n                 \"decMotion\" : 0.1572,\n                 \"TotalMotion\" : 0.2362,\n                 \"PAMotion\" : 311.73,\n                 \"net\" : \" \",\n                 \"note1\" : \" \",\n                 \"note2\" : \"C\",\n                 \"discovery_asterisk\" : \" \",\n                 \"flags\" : 0,\n                 \"incl\" : 1,\n                 \"ecliptic_lon\" : 2.242628,\n                 \"ecliptic_lat\" : -12.452320,\n                 \"earth_ecliptic_lon\" : 55.374614 },\n          {\"JD\": 2461000.916667, \"iso date\": \"2025-11-21T10:00:00.028Z\", \"obscode\": \"F52\",\n                 \"RA\" : 6.797587, \"Dec\": -10.179203,\n                 \"dRA\" : 0.00284, \"dDec\": 0.00328, \"dTime\": 0.420, \"cross\": 0.00406,\n                 \"reference\" : \"     \",  \"packed\" : \"     CER0001\",\n                 \"sigma_1\" : 0.050000,\n                 \"sigma_2\" : 0.050000,\n                 \"normalized_resid_1\" : -0.030327,\n                 \"normalized_resid_2\" : -0.081230,\n                 \"posn_sigma_theta\" : 0.000000,\n                 \"RAMotion\" : -0.1039,\n                 \"decMotion\" : 0.1906,\n                 \"TotalMotion\" : 0.2170,\n                 \"PAMotion\" : 331.40,\n                 \"net\" : \" \",\n                 \"note1\" : \" \",\n                 \"note2\" : \"C\",\n                 \"discovery_asterisk\" : \" \",\n                 \"flags\" : 0,\n                 \"incl\" : 1,\n                 \"ecliptic_lon\" : 2.143921,\n                 \"ecliptic_lat\" : -12.033583,\n                 \"earth_ecliptic_lon\" : 60.302660 },\n          {\"JD\": 2461005.916667, \"iso date\": \"2025-11-26T10:00:00.028Z\", \"obscode\": \"F52\",\n                 \"RA\" : 6.680979, \"Dec\": -9.771333,\n                 \"dRA\" : 0.000205, \"dDec\": 0.000884, \"dTime\": 0.228, \"cross\": 0.000327,\n                 \"reference\" : \"     \",  \"packed\" : \"     CER0001\",\n                 \"sigma_1\" : 0.050000,\n                 \"sigma_2\" : 0.050000,\n                 \"normalized_resid_1\" : -0.016890,\n                 \"normalized_resid_2\" : -0.006540,\n                 \"posn_sigma_theta\" : 0.000000,\n                 \"RAMotion\" : -0.0313,\n                 \"decMotion\" : 0.2211,\n                 \"TotalMotion\" : 0.2233,\n                 \"PAMotion\" : 351.93,\n                 \"net\" : \" \",\n                 \"note1\" : \" \",\n                 \"note2\" : \"C\",\n                 \"discovery_asterisk\" : \" \",\n                 \"flags\" : 0,\n                 \"incl\" : 1,\n                 \"ecliptic_lon\" : 2.204749,\n                 \"ecliptic_lat\" : -11.614057,\n                 \"earth_ecliptic_lon\" : 65.230705 },\n          {\"JD\": 2461010.916667, \"iso date\": \"2025-12-01T10:00:00.028Z\", \"obscode\": \"F52\",\n                 \"RA\" : 6.707842, \"Dec\": -9.305411,\n                 \"dRA\" : -0.00066, \"dDec\": -0.00109, \"dTime\": -0.283, \"cross\": -0.00048,\n                 \"reference\" : \"     \",  \"packed\" : \"     CER0001\",\n                 \"sigma_1\" : 0.050000,\n                 \"sigma_2\" : 0.050000,\n                 \"normalized_resid_1\" : -0.023633,\n                 \"normalized_resid_2\" : -0.009650,\n                 \"posn_sigma_theta\" : 0.000000,\n                 \"RAMotion\" : 0.0398,\n                 \"decMotion\" : 0.2486,\n                 \"TotalMotion\" : 0.2517,\n                 \"PAMotion\" : 9.10,\n                 \"net\" : \" \",\n                 \"note1\" : \" \",\n                 \"note2\" : \"C\",\n                 \"discovery_asterisk\" : \" \",\n                 \"flags\" : 0,\n                 \"incl\" : 1,\n                 \"ecliptic_lon\" : 2.421044,\n                 \"ecliptic_lat\" : -11.198327,\n                 \"earth_ecliptic_lon\" : 70.158751 } \n        ]\n      }\n    }\n  }\n}\n",
+                "/job/sky.json": "{\n  \"ephemeris\":\n  {\n    \"obscode\": \"F52\",\n    \"packed\": \"CER0001\",\n    \"count\": 11,\n    \"start\": 2461010.916667,\n    \"step\": 1.000000000,\n    \"n_steps\": 11,\n    \"start iso\": \"2025-12-01T10:00:00.000Z\",\n    \"entries\":\n    {\n      \"0\": {\"JD\": 2461010.916666667, \"ISO_time\": \"2025-12-01T10:00:00Z\", \"RA\": 6.70784184817, \"RA60\": \"00 26 49.882\", \"Dec\": -9.30541084016, \"Dec60\": \"-09 18 19.48\", \"delta\": 2.377687076829, \"r\": 2.906304869378, \"elong\": 112.84791, \"LuElo\": 21.25701, \"RAvel\": 0.039807, \"decvel\": 0.248570, \"alt\": 26.3362, \"az\": 247.8488, \"Sal\": -86.5095, \"sigPos\": 0.025, \"sigPA\": 71 },\n      \"1\": {\"JD\": 2461011.916666667, \"ISO_time\": \"2025-12-02T10:00:00Z\", \"RA\": 6.73007501786, \"RA60\": \"00 26 55.218\", \"Dec\": -9.20578864476, \"Dec60\": \"-09 12 20.84\", \"delta\": 2.389868194311, \"r\": 2.905701711130, \"elong\": 111.92372, \"LuElo\": 34.14103, \"RAvel\": 0.053751, \"decvel\": 0.253704, \"alt\": 25.5473, \"az\": 248.4501, \"Sal\": -86.3764, \"sigPos\": 0.031, \"sigPA\": 71 },\n      \"2\": {\"JD\": 2461012.916666667, \"ISO_time\": \"2025-12-03T10:00:00Z\", \"RA\": 6.75782557562, \"RA60\": \"00 27 01.878\", \"Dec\": -9.10413147142, \"Dec60\": \"-09 06 14.87\", \"delta\": 2.402136010378, \"r\": 2.905096648725, \"elong\": 111.00408, \"LuElo\": 48.43885, \"RAvel\": 0.067584, \"decvel\": 0.258721, \"alt\": 24.7600, \"az\": 249.0404, \"Sal\": -86.2407, \"sigPos\": 0.037, \"sigPA\": 71 },\n      \"3\": {\"JD\": 2461013.916666667, \"ISO_time\": \"2025-12-04T10:00:00Z\", \"RA\": 6.79104516143, \"RA60\": \"00 27 09.851\", \"Dec\": -9.00048448445, \"Dec60\": \"-09 00 01.74\", \"delta\": 2.414486864011, \"r\": 2.904489688248, \"elong\": 110.08896, \"LuElo\": 63.29680, \"RAvel\": 0.081303, \"decvel\": 0.263626, \"alt\": 23.9746, \"az\": 249.6204, \"Sal\": -86.1035, \"sigPos\": 0.043, \"sigPA\": 71 },\n      \"4\": {\"JD\": 2461014.916666667, \"ISO_time\": \"2025-12-05T10:00:00Z\", \"RA\": 6.82968526669, \"RA60\": \"00 27 19.124\", \"Dec\": -8.89489082769, \"Dec60\": \"-08 53 41.61\", \"delta\": 2.426917238533, \"r\": 2.903880835810, \"elong\": 109.17832, \"LuElo\": 78.31354, \"RAvel\": 0.094909, \"decvel\": 0.268425, \"alt\": 23.1911, \"az\": 250.1906, \"Sal\": -85.9654, \"sigPos\": 0.049, \"sigPA\": 72 },\n      \"5\": {\"JD\": 2461015.916666667, \"ISO_time\": \"2025-12-06T10:00:00Z\", \"RA\": 6.87369820159, \"RA60\": \"00 27 29.688\", \"Dec\": -8.78739142856, \"Dec60\": \"-08 47 14.61\", \"delta\": 2.439423722622, \"r\": 2.903270097543, \"elong\": 108.27215, \"LuElo\": 93.20011, \"RAvel\": 0.108405, \"decvel\": 0.273123, \"alt\": 22.4097, \"az\": 250.7513, \"Sal\": -85.8272, \"sigPos\": 0.055, \"sigPA\": 72 },\n      \"6\": {\"JD\": 2461016.916666667, \"ISO_time\": \"2025-12-07T10:00:00Z\", \"RA\": 6.92303759062, \"RA60\": \"00 27 41.529\", \"Dec\": -8.67802511170, \"Dec60\": \"-08 40 40.89\", \"delta\": 2.452002958996, \"r\": 2.902657479603, \"elong\": 107.37039, \"LuElo\": 107.73092, \"RAvel\": 0.121795, \"decvel\": 0.277724, \"alt\": 21.6303, \"az\": 251.3031, \"Sal\": -85.6894, \"sigPos\": 0.062, \"sigPA\": 72 },\n      \"7\": {\"JD\": 2461017.916666667, \"ISO_time\": \"2025-12-08T10:00:00Z\", \"RA\": 6.97765832215, \"RA60\": \"00 27 54.638\", \"Dec\": -8.56682897528, \"Dec60\": \"-08 34 00.58\", \"delta\": 2.464651594891, \"r\": 2.902042988169, \"elong\": 106.47304, \"LuElo\": 121.73837, \"RAvel\": 0.135080, \"decvel\": 0.282233, \"alt\": 20.8532, \"az\": 251.8464, \"Sal\": -85.5526, \"sigPos\": 0.068, \"sigPA\": 72 },\n      \"8\": {\"JD\": 2461018.916666667, \"ISO_time\": \"2025-12-09T10:00:00Z\", \"RA\": 7.03751608396, \"RA60\": \"00 28 09.004\", \"Dec\": -8.45383889221, \"Dec60\": \"-08 27 13.82\", \"delta\": 2.477366246235, \"r\": 2.901426629444, \"elong\": 105.58006, \"LuElo\": 135.09462, \"RAvel\": 0.148262, \"decvel\": 0.286653, \"alt\": 20.0785, \"az\": 252.3815, \"Sal\": -85.4171, \"sigPos\": 0.075, \"sigPA\": 72 },\n      \"9\": {\"JD\": 2461019.916666667, \"ISO_time\": \"2025-12-10T10:00:00Z\", \"RA\": 7.10256672383, \"RA60\": \"00 28 24.616\", \"Dec\": -8.33908998883, \"Dec60\": \"-08 20 20.72\", \"delta\": 2.490143480026, \"r\": 2.900808409655, \"elong\": 104.69143, \"LuElo\": 147.64402, \"RAvel\": 0.161340, \"decvel\": 0.290984, \"alt\": 19.3061, \"az\": 252.9089, \"Sal\": -85.2833, \"sigPos\": 0.082, \"sigPA\": 72 },\n      \"10\": {\"JD\": 2461020.916666667, \"ISO_time\": \"2025-12-11T10:00:00Z\", \"RA\": 7.17276564921, \"RA60\": \"00 28 41.464\", \"Dec\": -8.22261700849, \"Dec60\": \"-08 13 21.42\", \"delta\": 2.502979812323, \"r\": 2.900188335052, \"elong\": 103.80714, \"LuElo\": 158.95269, \"RAvel\": 0.174313, \"decvel\": 0.295227, \"alt\": 18.5362, \"az\": 253.4289, \"Sal\": -85.1514, \"sigPos\": 0.090, \"sigPA\": 73 }\n    }\n  }\n}\n"
+              },
+              "stdout": "",
+              "exitCode": 0,
+              "phases": {
+                "mountMs": 0.7062080000000606,
+                "processAndSolveMs": 130.3985,
+                "collectMs": 1.0652079999999842,
+                "totalMs": 132.16991600000006
+              },
+              "accuracy": {
+                "horizonsSkyErrorArcsec": [
+                  0.006598688050968689,
+                  0.010909349461108681
+                ],
+                "rmsArcsec": 0.0019829
+              }
+            }
+          ]
+        },
+        "wasm": {
+          "phases": {
+            "instantiateMs": {
+              "median": 1.672937499999989,
+              "min": 1.4141669999999067,
+              "max": 1.9317080000000715,
+              "samples": [
+                1.9317080000000715,
+                1.4141669999999067
+              ]
+            },
+            "mountMs": {
+              "median": 1.5175830000000587,
+              "min": 1.4865829999998823,
+              "max": 1.5485830000002352,
+              "samples": [
+                1.5485830000002352,
+                1.4865829999998823
+              ]
+            },
+            "solveMs": {
+              "median": 2318.2841045,
+              "min": 2298.047625,
+              "max": 2338.520584,
+              "samples": [
+                2338.520584,
+                2298.047625
+              ]
+            },
+            "collectMs": {
+              "median": 0.13768750000008367,
+              "min": 0.1226249999999709,
+              "max": 0.15275000000019645,
+              "samples": [
+                0.15275000000019645,
+                0.1226249999999709
+              ]
+            },
+            "totalMs": {
+              "median": 2321.6123125000004,
+              "min": 2301.071,
+              "max": 2342.1536250000004,
+              "samples": [
+                2342.1536250000004,
+                2301.071
+              ]
+            }
+          },
+          "samples": [
+            {
+              "files": {
+                "/job/elements.txt": "Orbital elements:  CER0001\n   Perihelion 2027 Jul 13.495366147254 +/- 0.499 TT = 11:53:19.6351227 (JD 2461599.995366147254)\nEpoch 2025 Nov 16.0 TT = JDT 2460995.5                           Find_Orb\nM 230.457541763617229 +/- 0.12\nn   0.214298513257438 +/- 2.54e-5     Peri.   73.308489438268 +/- 0.10\na   2.765603676715954 +/- 0.000218    Node    80.249881085037 +/- 0.0020\ne   0.07956832255554 +/- 4.48e-5      Incl.   10.587862165504 +/- 0.00022\nP   4.59923            U  5.7\nq 2.545549231306215 +/- 9.71e-5    Q 2.985658122125694 +/- 0.000354\nFrom 7 observations 2025 Nov. 1-Dec. 1; mean residual 0\".00\n# State vector (heliocentric ecliptic J2000):\n#   +2.738139003200  +0.880197898831  -0.476571756787 AU\n#   -3.390515649276  +9.147354715612  +0.914189973690 mAU/day\n# MOIDs: Me  2.172652 Ve  1.833835 Ea  1.581369 Ma  0.927290\n# MOIDs: Ju  2.090639 Sa  6.327804 Ur 15.767278 Ne 26.950992\n# 1 oppositions\n# Elements written: 13 Sep 2026 15:52:00 (JD 2461297.161119)\n# Full range of obs: 2025 Nov. 1-Dec. 1 (7 observations)\n# Find_Orb ver: 2026 Aug 29\n# Perturbers: 000007fe (Merc-Pluto plus Luna);  JPL DE-440\n# Score: -0.322139\n#  $Name=CER0001  $Ty=2027  $Tm=07  $Td=13.495366  $MA=230.45754\n#  $ecc=0.0795683  $Eqnx=2000.\n#  $a=2.7656037  $Peri=73.30849  $Node=80.24988  $Incl=10.58786\n#  $EpJD=2460995.500  $q=2.545549  $T=2461599.995366  $H=0.0\n# Sigmas avail: 1\n",
+                "/job/elements.json": "{\n  \"num\": 1,\n  \"ids\":\n  [\n    \"CER0001\"\n  ],\n  \"objects\":\n  {\n    \"CER0001\":\n    {\n      \"object\": \"CER0001\",\n      \"packed\": \"CER0001\",\n      \"created\": 2461297.16112,\n      \"created iso\": \"2026-09-13T15:52:00Z\",\n      \"Find_Orb_version\": 2461281.50000,\n      \"Find_Orb_version_iso\": \"2026-08-29T00:00:00Z\",\n      \"elements\":\n      {\n        \"central body\": \"Sun\",\n        \"frame\": \"J2000\",\n        \"reference\": \"Find_Orb\",\n        \"epoch_iso\": \"2025-11-16T00:00:00Z\",\n        \"epoch\":  2460995.50000000,\n        \"P\": 1679.8996620547225, \"P sigma\": 0.199,\n        \"M\": 230.4575417636172, \"M sigma\": 0.12,\n        \"n\":   0.2142985132574, \"n sigma\": 2.54e-5,\n        \"a\":   2.7656036767160, \"a sigma\": 0.000218,\n        \"e\":   0.0795683225555, \"e sigma\": 4.48e-5,\n        \"q\":   2.5455492313062, \"q sigma\": 9.71e-5,\n        \"Q\":   2.9856581221257, \"Q sigma\": 0.000354,\n        \"i\":  10.5878621655039, \"i sigma\": 0.00022,\n        \"arg_per\":   73.3084894382680, \"arg_per sigma\":  0.10,\n        \"asc_node\":  80.2498810850367, \"asc_node sigma\": 0.0020,\n        \"Tp\": 2461599.99536615, \"Tp sigma\": 0.499,\n        \"Tp_iso\": \"2027-07-13T11:53:19.635Z\",\n        \"rms_residual\": 0.0019829,\n        \"weighted_rms_residual\": 0.0396,\n        \"n_resids\": 14,\n        \"U\": 5.6955,\n        \"p_NEO\": 0.0000,\n        \"MOIDs\":\n        {\n          \"Mercury\" : 2.172652,\n          \"Venus\" : 1.833835,\n          \"Earth\" : 1.581369,\n          \"Mars\" : 0.927290,\n          \"Jupiter\" : 2.090639,\n          \"Saturn\" : 6.327804,\n          \"Uranus\" : 15.767278,\n          \"Neptune\" : 26.950992 \n        }\n      },\n      \"observations\":\n      {\n        \"count\": 7,\n        \"used\": 7,\n        \"earliest\": 2460980.91666700,\n        \"latest\": 2461010.91666700,\n        \"earliest iso\": \"2025-11-01T10:00:00.028Z\",\n        \"latest iso\": \"2025-12-01T10:00:00.028Z\",\n        \"earliest_used\": 2460980.91666700,\n        \"latest_used\": 2461010.91666700,\n        \"earliest_used iso\": \"2025-11-01T10:00:00.028Z\",\n        \"latest_used iso\": \"2025-12-01T10:00:00.028Z\",\n        \"earliest_unbanned\": 2460980.91666700,\n        \"latest_unbanned\": 2461010.91666700,\n        \"earliest_unbanned iso\": \"2025-11-01T10:00:00.028Z\",\n        \"latest_unbanned iso\": \"2025-12-01T10:00:00.028Z\",\n        \"residuals\":\n        [\n          {\"JD\": 2460980.916667, \"iso date\": \"2025-11-01T10:00:00.028Z\", \"obscode\": \"F52\",\n                 \"RA\" : 8.680379, \"Dec\": -11.124811,\n                 \"dRA\" : -0.00109, \"dDec\": 0.00009, \"dTime\": 0.173, \"cross\": -0.00004,\n                 \"reference\" : \"     \",  \"packed\" : \"     CER0001\",\n                 \"sigma_1\" : 0.050000,\n                 \"sigma_2\" : 0.050000,\n                 \"normalized_resid_1\" : -0.021683,\n                 \"normalized_resid_2\" : 0.000793,\n                 \"posn_sigma_theta\" : 0.000000,\n                 \"RAMotion\" : -0.3761,\n                 \"decMotion\" : 0.0440,\n                 \"TotalMotion\" : 0.3787,\n                 \"PAMotion\" : 276.68,\n                 \"net\" : \" \",\n                 \"note1\" : \" \",\n                 \"note2\" : \"C\",\n                 \"discovery_asterisk\" : \" \",\n                 \"flags\" : 0,\n                 \"incl\" : 1,\n                 \"ecliptic_lon\" : 3.487688,\n                 \"ecliptic_lat\" : -13.646489,\n                 \"earth_ecliptic_lon\" : 40.590478 },\n          {\"JD\": 2460985.916667, \"iso date\": \"2025-11-06T10:00:00.028Z\", \"obscode\": \"F52\",\n                 \"RA\" : 8.007350, \"Dec\": -11.000083,\n                 \"dRA\" : 0.00287, \"dDec\": 0.00119, \"dTime\": -0.456, \"cross\": 0.00188,\n                 \"reference\" : \"     \",  \"packed\" : \"     CER0001\",\n                 \"sigma_1\" : 0.050000,\n                 \"sigma_2\" : 0.050000,\n                 \"normalized_resid_1\" : 0.049110,\n                 \"normalized_resid_2\" : -0.037700,\n                 \"posn_sigma_theta\" : 0.000000,\n                 \"RAMotion\" : -0.3138,\n                 \"decMotion\" : 0.0837,\n                 \"TotalMotion\" : 0.3247,\n                 \"PAMotion\" : 284.93,\n                 \"net\" : \" \",\n                 \"note1\" : \" \",\n                 \"note2\" : \"C\",\n                 \"discovery_asterisk\" : \" \",\n                 \"flags\" : 0,\n                 \"incl\" : 1,\n                 \"ecliptic_lon\" : 2.918515,\n                 \"ecliptic_lat\" : -13.265134,\n                 \"earth_ecliptic_lon\" : 45.518523 },\n          {\"JD\": 2460990.916667, \"iso date\": \"2025-11-11T10:00:00.028Z\", \"obscode\": \"F52\",\n                 \"RA\" : 7.464283, \"Dec\": -10.798331,\n                 \"dRA\" : -0.00118, \"dDec\": -0.00090, \"dTime\": 0.145, \"cross\": -0.00133,\n                 \"reference\" : \"     \",  \"packed\" : \"     CER0001\",\n                 \"sigma_1\" : 0.050000,\n                 \"sigma_2\" : 0.050000,\n                 \"normalized_resid_1\" : -0.013259,\n                 \"normalized_resid_2\" : 0.026542,\n                 \"posn_sigma_theta\" : 0.000000,\n                 \"RAMotion\" : -0.2468,\n                 \"decMotion\" : 0.1215,\n                 \"TotalMotion\" : 0.2750,\n                 \"PAMotion\" : 296.21,\n                 \"net\" : \" \",\n                 \"note1\" : \" \",\n                 \"note2\" : \"C\",\n                 \"discovery_asterisk\" : \" \",\n                 \"flags\" : 0,\n                 \"incl\" : 1,\n                 \"ecliptic_lon\" : 2.501694,\n                 \"ecliptic_lat\" : -12.864858,\n                 \"earth_ecliptic_lon\" : 50.446569 },\n          {\"JD\": 2460995.916667, \"iso date\": \"2025-11-16T10:00:00.028Z\", \"obscode\": \"F52\",\n                 \"RA\" : 7.059279, \"Dec\": -10.523258,\n                 \"dRA\" : -0.00298, \"dDec\": -0.00344, \"dTime\": -0.017, \"cross\": -0.00455,\n                 \"reference\" : \"     \",  \"packed\" : \"     CER0001\",\n                 \"sigma_1\" : 0.050000,\n                 \"sigma_2\" : 0.050000,\n                 \"normalized_resid_1\" : 0.001338,\n                 \"normalized_resid_2\" : 0.091033,\n                 \"posn_sigma_theta\" : 0.000000,\n                 \"RAMotion\" : -0.1763,\n                 \"decMotion\" : 0.1572,\n                 \"TotalMotion\" : 0.2362,\n                 \"PAMotion\" : 311.73,\n                 \"net\" : \" \",\n                 \"note1\" : \" \",\n                 \"note2\" : \"C\",\n                 \"discovery_asterisk\" : \" \",\n                 \"flags\" : 0,\n                 \"incl\" : 1,\n                 \"ecliptic_lon\" : 2.242628,\n                 \"ecliptic_lat\" : -12.452320,\n                 \"earth_ecliptic_lon\" : 55.374614 },\n          {\"JD\": 2461000.916667, \"iso date\": \"2025-11-21T10:00:00.028Z\", \"obscode\": \"F52\",\n                 \"RA\" : 6.797587, \"Dec\": -10.179203,\n                 \"dRA\" : 0.00284, \"dDec\": 0.00328, \"dTime\": 0.420, \"cross\": 0.00406,\n                 \"reference\" : \"     \",  \"packed\" : \"     CER0001\",\n                 \"sigma_1\" : 0.050000,\n                 \"sigma_2\" : 0.050000,\n                 \"normalized_resid_1\" : -0.030327,\n                 \"normalized_resid_2\" : -0.081230,\n                 \"posn_sigma_theta\" : 0.000000,\n                 \"RAMotion\" : -0.1039,\n                 \"decMotion\" : 0.1906,\n                 \"TotalMotion\" : 0.2170,\n                 \"PAMotion\" : 331.40,\n                 \"net\" : \" \",\n                 \"note1\" : \" \",\n                 \"note2\" : \"C\",\n                 \"discovery_asterisk\" : \" \",\n                 \"flags\" : 0,\n                 \"incl\" : 1,\n                 \"ecliptic_lon\" : 2.143921,\n                 \"ecliptic_lat\" : -12.033583,\n                 \"earth_ecliptic_lon\" : 60.302660 },\n          {\"JD\": 2461005.916667, \"iso date\": \"2025-11-26T10:00:00.028Z\", \"obscode\": \"F52\",\n                 \"RA\" : 6.680979, \"Dec\": -9.771333,\n                 \"dRA\" : 0.000205, \"dDec\": 0.000884, \"dTime\": 0.228, \"cross\": 0.000327,\n                 \"reference\" : \"     \",  \"packed\" : \"     CER0001\",\n                 \"sigma_1\" : 0.050000,\n                 \"sigma_2\" : 0.050000,\n                 \"normalized_resid_1\" : -0.016890,\n                 \"normalized_resid_2\" : -0.006540,\n                 \"posn_sigma_theta\" : 0.000000,\n                 \"RAMotion\" : -0.0313,\n                 \"decMotion\" : 0.2211,\n                 \"TotalMotion\" : 0.2233,\n                 \"PAMotion\" : 351.93,\n                 \"net\" : \" \",\n                 \"note1\" : \" \",\n                 \"note2\" : \"C\",\n                 \"discovery_asterisk\" : \" \",\n                 \"flags\" : 0,\n                 \"incl\" : 1,\n                 \"ecliptic_lon\" : 2.204749,\n                 \"ecliptic_lat\" : -11.614057,\n                 \"earth_ecliptic_lon\" : 65.230705 },\n          {\"JD\": 2461010.916667, \"iso date\": \"2025-12-01T10:00:00.028Z\", \"obscode\": \"F52\",\n                 \"RA\" : 6.707842, \"Dec\": -9.305411,\n                 \"dRA\" : -0.00066, \"dDec\": -0.00109, \"dTime\": -0.283, \"cross\": -0.00048,\n                 \"reference\" : \"     \",  \"packed\" : \"     CER0001\",\n                 \"sigma_1\" : 0.050000,\n                 \"sigma_2\" : 0.050000,\n                 \"normalized_resid_1\" : -0.023633,\n                 \"normalized_resid_2\" : -0.009650,\n                 \"posn_sigma_theta\" : 0.000000,\n                 \"RAMotion\" : 0.0398,\n                 \"decMotion\" : 0.2486,\n                 \"TotalMotion\" : 0.2517,\n                 \"PAMotion\" : 9.10,\n                 \"net\" : \" \",\n                 \"note1\" : \" \",\n                 \"note2\" : \"C\",\n                 \"discovery_asterisk\" : \" \",\n                 \"flags\" : 0,\n                 \"incl\" : 1,\n                 \"ecliptic_lon\" : 2.421044,\n                 \"ecliptic_lat\" : -11.198327,\n                 \"earth_ecliptic_lon\" : 70.158751 } \n        ]\n      }\n    }\n  }\n}\n",
+                "/job/sky.json": "{\n  \"ephemeris\":\n  {\n    \"obscode\": \"F52\",\n    \"packed\": \"CER0001\",\n    \"count\": 11,\n    \"start\": 2461010.916667,\n    \"step\": 1.000000000,\n    \"n_steps\": 11,\n    \"start iso\": \"2025-12-01T10:00:00.000Z\",\n    \"entries\":\n    {\n      \"0\": {\"JD\": 2461010.916666667, \"ISO_time\": \"2025-12-01T10:00:00Z\", \"RA\": 6.70784184817, \"RA60\": \"00 26 49.882\", \"Dec\": -9.30541084016, \"Dec60\": \"-09 18 19.48\", \"delta\": 2.377687076829, \"r\": 2.906304869378, \"elong\": 112.84791, \"LuElo\": 21.25701, \"RAvel\": 0.039807, \"decvel\": 0.248570, \"alt\": 26.3362, \"az\": 247.8488, \"Sal\": -86.5095, \"sigPos\": 0.025, \"sigPA\": 71 },\n      \"1\": {\"JD\": 2461011.916666667, \"ISO_time\": \"2025-12-02T10:00:00Z\", \"RA\": 6.73007501786, \"RA60\": \"00 26 55.218\", \"Dec\": -9.20578864476, \"Dec60\": \"-09 12 20.84\", \"delta\": 2.389868194311, \"r\": 2.905701711130, \"elong\": 111.92372, \"LuElo\": 34.14103, \"RAvel\": 0.053751, \"decvel\": 0.253704, \"alt\": 25.5473, \"az\": 248.4501, \"Sal\": -86.3764, \"sigPos\": 0.031, \"sigPA\": 71 },\n      \"2\": {\"JD\": 2461012.916666667, \"ISO_time\": \"2025-12-03T10:00:00Z\", \"RA\": 6.75782557562, \"RA60\": \"00 27 01.878\", \"Dec\": -9.10413147142, \"Dec60\": \"-09 06 14.87\", \"delta\": 2.402136010378, \"r\": 2.905096648725, \"elong\": 111.00408, \"LuElo\": 48.43885, \"RAvel\": 0.067584, \"decvel\": 0.258721, \"alt\": 24.7600, \"az\": 249.0404, \"Sal\": -86.2407, \"sigPos\": 0.037, \"sigPA\": 71 },\n      \"3\": {\"JD\": 2461013.916666667, \"ISO_time\": \"2025-12-04T10:00:00Z\", \"RA\": 6.79104516143, \"RA60\": \"00 27 09.851\", \"Dec\": -9.00048448445, \"Dec60\": \"-09 00 01.74\", \"delta\": 2.414486864011, \"r\": 2.904489688248, \"elong\": 110.08896, \"LuElo\": 63.29680, \"RAvel\": 0.081303, \"decvel\": 0.263626, \"alt\": 23.9746, \"az\": 249.6204, \"Sal\": -86.1035, \"sigPos\": 0.043, \"sigPA\": 71 },\n      \"4\": {\"JD\": 2461014.916666667, \"ISO_time\": \"2025-12-05T10:00:00Z\", \"RA\": 6.82968526669, \"RA60\": \"00 27 19.124\", \"Dec\": -8.89489082769, \"Dec60\": \"-08 53 41.61\", \"delta\": 2.426917238533, \"r\": 2.903880835810, \"elong\": 109.17832, \"LuElo\": 78.31354, \"RAvel\": 0.094909, \"decvel\": 0.268425, \"alt\": 23.1911, \"az\": 250.1906, \"Sal\": -85.9654, \"sigPos\": 0.049, \"sigPA\": 72 },\n      \"5\": {\"JD\": 2461015.916666667, \"ISO_time\": \"2025-12-06T10:00:00Z\", \"RA\": 6.87369820159, \"RA60\": \"00 27 29.688\", \"Dec\": -8.78739142856, \"Dec60\": \"-08 47 14.61\", \"delta\": 2.439423722622, \"r\": 2.903270097543, \"elong\": 108.27215, \"LuElo\": 93.20011, \"RAvel\": 0.108405, \"decvel\": 0.273123, \"alt\": 22.4097, \"az\": 250.7513, \"Sal\": -85.8272, \"sigPos\": 0.055, \"sigPA\": 72 },\n      \"6\": {\"JD\": 2461016.916666667, \"ISO_time\": \"2025-12-07T10:00:00Z\", \"RA\": 6.92303759062, \"RA60\": \"00 27 41.529\", \"Dec\": -8.67802511170, \"Dec60\": \"-08 40 40.89\", \"delta\": 2.452002958996, \"r\": 2.902657479603, \"elong\": 107.37039, \"LuElo\": 107.73092, \"RAvel\": 0.121795, \"decvel\": 0.277724, \"alt\": 21.6303, \"az\": 251.3031, \"Sal\": -85.6894, \"sigPos\": 0.062, \"sigPA\": 72 },\n      \"7\": {\"JD\": 2461017.916666667, \"ISO_time\": \"2025-12-08T10:00:00Z\", \"RA\": 6.97765832215, \"RA60\": \"00 27 54.638\", \"Dec\": -8.56682897528, \"Dec60\": \"-08 34 00.58\", \"delta\": 2.464651594891, \"r\": 2.902042988169, \"elong\": 106.47304, \"LuElo\": 121.73837, \"RAvel\": 0.135080, \"decvel\": 0.282233, \"alt\": 20.8532, \"az\": 251.8464, \"Sal\": -85.5526, \"sigPos\": 0.068, \"sigPA\": 72 },\n      \"8\": {\"JD\": 2461018.916666667, \"ISO_time\": \"2025-12-09T10:00:00Z\", \"RA\": 7.03751608396, \"RA60\": \"00 28 09.004\", \"Dec\": -8.45383889221, \"Dec60\": \"-08 27 13.82\", \"delta\": 2.477366246235, \"r\": 2.901426629444, \"elong\": 105.58006, \"LuElo\": 135.09462, \"RAvel\": 0.148262, \"decvel\": 0.286653, \"alt\": 20.0785, \"az\": 252.3815, \"Sal\": -85.4171, \"sigPos\": 0.075, \"sigPA\": 72 },\n      \"9\": {\"JD\": 2461019.916666667, \"ISO_time\": \"2025-12-10T10:00:00Z\", \"RA\": 7.10256672383, \"RA60\": \"00 28 24.616\", \"Dec\": -8.33908998883, \"Dec60\": \"-08 20 20.72\", \"delta\": 2.490143480026, \"r\": 2.900808409655, \"elong\": 104.69143, \"LuElo\": 147.64402, \"RAvel\": 0.161340, \"decvel\": 0.290984, \"alt\": 19.3061, \"az\": 252.9089, \"Sal\": -85.2833, \"sigPos\": 0.082, \"sigPA\": 72 },\n      \"10\": {\"JD\": 2461020.916666667, \"ISO_time\": \"2025-12-11T10:00:00Z\", \"RA\": 7.17276564921, \"RA60\": \"00 28 41.464\", \"Dec\": -8.22261700849, \"Dec60\": \"-08 13 21.42\", \"delta\": 2.502979812323, \"r\": 2.900188335052, \"elong\": 103.80714, \"LuElo\": 158.95269, \"RAvel\": 0.174313, \"decvel\": 0.295227, \"alt\": 18.5362, \"az\": 253.4289, \"Sal\": -85.1514, \"sigPos\": 0.090, \"sigPA\": 73 }\n    }\n  }\n}\n"
+              },
+              "stdout": "",
+              "exitCode": 0,
+              "phases": {
+                "instantiateMs": 1.9317080000000715,
+                "mountMs": 1.5485830000002352,
+                "solveMs": 2338.520584,
+                "collectMs": 0.15275000000019645,
+                "totalMs": 2342.1536250000004
+              },
+              "accuracy": {
+                "horizonsSkyErrorArcsec": [
+                  0.006598688050968689,
+                  0.010909349461108681
+                ],
+                "rmsArcsec": 0.0019829,
+                "maxNativeSkyErrorArcsec": 0,
+                "nativeElementDeltas": {
+                  "a": 1.0036416142611415e-13,
+                  "e": 0,
+                  "i": 0,
+                  "M": 3.9193537304527126e-11,
+                  "arg_per": 3.380762336746557e-11,
+                  "asc_node": 9.947598300641403e-14
+                }
+              }
+            },
+            {
+              "files": {
+                "/job/elements.txt": "Orbital elements:  CER0001\n   Perihelion 2027 Jul 13.495366147254 +/- 0.499 TT = 11:53:19.6351227 (JD 2461599.995366147254)\nEpoch 2025 Nov 16.0 TT = JDT 2460995.5                           Find_Orb\nM 230.457541763617229 +/- 0.12\nn   0.214298513257438 +/- 2.54e-5     Peri.   73.308489438268 +/- 0.10\na   2.765603676715954 +/- 0.000218    Node    80.249881085037 +/- 0.0020\ne   0.07956832255554 +/- 4.48e-5      Incl.   10.587862165504 +/- 0.00022\nP   4.59923            U  5.7\nq 2.545549231306215 +/- 9.71e-5    Q 2.985658122125694 +/- 0.000354\nFrom 7 observations 2025 Nov. 1-Dec. 1; mean residual 0\".00\n# State vector (heliocentric ecliptic J2000):\n#   +2.738139003200  +0.880197898831  -0.476571756787 AU\n#   -3.390515649276  +9.147354715612  +0.914189973690 mAU/day\n# MOIDs: Me  2.172652 Ve  1.833835 Ea  1.581369 Ma  0.927290\n# MOIDs: Ju  2.090639 Sa  6.327804 Ur 15.767278 Ne 26.950992\n# 1 oppositions\n# Elements written: 13 Sep 2026 15:52:02 (JD 2461297.161145)\n# Full range of obs: 2025 Nov. 1-Dec. 1 (7 observations)\n# Find_Orb ver: 2026 Aug 29\n# Perturbers: 000007fe (Merc-Pluto plus Luna);  JPL DE-440\n# Score: -0.322139\n#  $Name=CER0001  $Ty=2027  $Tm=07  $Td=13.495366  $MA=230.45754\n#  $ecc=0.0795683  $Eqnx=2000.\n#  $a=2.7656037  $Peri=73.30849  $Node=80.24988  $Incl=10.58786\n#  $EpJD=2460995.500  $q=2.545549  $T=2461599.995366  $H=0.0\n# Sigmas avail: 1\n",
+                "/job/elements.json": "{\n  \"num\": 1,\n  \"ids\":\n  [\n    \"CER0001\"\n  ],\n  \"objects\":\n  {\n    \"CER0001\":\n    {\n      \"object\": \"CER0001\",\n      \"packed\": \"CER0001\",\n      \"created\": 2461297.16115,\n      \"created iso\": \"2026-09-13T15:52:02Z\",\n      \"Find_Orb_version\": 2461281.50000,\n      \"Find_Orb_version_iso\": \"2026-08-29T00:00:00Z\",\n      \"elements\":\n      {\n        \"central body\": \"Sun\",\n        \"frame\": \"J2000\",\n        \"reference\": \"Find_Orb\",\n        \"epoch_iso\": \"2025-11-16T00:00:00Z\",\n        \"epoch\":  2460995.50000000,\n        \"P\": 1679.8996620547225, \"P sigma\": 0.199,\n        \"M\": 230.4575417636172, \"M sigma\": 0.12,\n        \"n\":   0.2142985132574, \"n sigma\": 2.54e-5,\n        \"a\":   2.7656036767160, \"a sigma\": 0.000218,\n        \"e\":   0.0795683225555, \"e sigma\": 4.48e-5,\n        \"q\":   2.5455492313062, \"q sigma\": 9.71e-5,\n        \"Q\":   2.9856581221257, \"Q sigma\": 0.000354,\n        \"i\":  10.5878621655039, \"i sigma\": 0.00022,\n        \"arg_per\":   73.3084894382680, \"arg_per sigma\":  0.10,\n        \"asc_node\":  80.2498810850367, \"asc_node sigma\": 0.0020,\n        \"Tp\": 2461599.99536615, \"Tp sigma\": 0.499,\n        \"Tp_iso\": \"2027-07-13T11:53:19.635Z\",\n        \"rms_residual\": 0.0019829,\n        \"weighted_rms_residual\": 0.0396,\n        \"n_resids\": 14,\n        \"U\": 5.6955,\n        \"p_NEO\": 0.0000,\n        \"MOIDs\":\n        {\n          \"Mercury\" : 2.172652,\n          \"Venus\" : 1.833835,\n          \"Earth\" : 1.581369,\n          \"Mars\" : 0.927290,\n          \"Jupiter\" : 2.090639,\n          \"Saturn\" : 6.327804,\n          \"Uranus\" : 15.767278,\n          \"Neptune\" : 26.950992 \n        }\n      },\n      \"observations\":\n      {\n        \"count\": 7,\n        \"used\": 7,\n        \"earliest\": 2460980.91666700,\n        \"latest\": 2461010.91666700,\n        \"earliest iso\": \"2025-11-01T10:00:00.028Z\",\n        \"latest iso\": \"2025-12-01T10:00:00.028Z\",\n        \"earliest_used\": 2460980.91666700,\n        \"latest_used\": 2461010.91666700,\n        \"earliest_used iso\": \"2025-11-01T10:00:00.028Z\",\n        \"latest_used iso\": \"2025-12-01T10:00:00.028Z\",\n        \"earliest_unbanned\": 2460980.91666700,\n        \"latest_unbanned\": 2461010.91666700,\n        \"earliest_unbanned iso\": \"2025-11-01T10:00:00.028Z\",\n        \"latest_unbanned iso\": \"2025-12-01T10:00:00.028Z\",\n        \"residuals\":\n        [\n          {\"JD\": 2460980.916667, \"iso date\": \"2025-11-01T10:00:00.028Z\", \"obscode\": \"F52\",\n                 \"RA\" : 8.680379, \"Dec\": -11.124811,\n                 \"dRA\" : -0.00109, \"dDec\": 0.00009, \"dTime\": 0.173, \"cross\": -0.00004,\n                 \"reference\" : \"     \",  \"packed\" : \"     CER0001\",\n                 \"sigma_1\" : 0.050000,\n                 \"sigma_2\" : 0.050000,\n                 \"normalized_resid_1\" : -0.021683,\n                 \"normalized_resid_2\" : 0.000793,\n                 \"posn_sigma_theta\" : 0.000000,\n                 \"RAMotion\" : -0.3761,\n                 \"decMotion\" : 0.0440,\n                 \"TotalMotion\" : 0.3787,\n                 \"PAMotion\" : 276.68,\n                 \"net\" : \" \",\n                 \"note1\" : \" \",\n                 \"note2\" : \"C\",\n                 \"discovery_asterisk\" : \" \",\n                 \"flags\" : 0,\n                 \"incl\" : 1,\n                 \"ecliptic_lon\" : 3.487688,\n                 \"ecliptic_lat\" : -13.646489,\n                 \"earth_ecliptic_lon\" : 40.590478 },\n          {\"JD\": 2460985.916667, \"iso date\": \"2025-11-06T10:00:00.028Z\", \"obscode\": \"F52\",\n                 \"RA\" : 8.007350, \"Dec\": -11.000083,\n                 \"dRA\" : 0.00287, \"dDec\": 0.00119, \"dTime\": -0.456, \"cross\": 0.00188,\n                 \"reference\" : \"     \",  \"packed\" : \"     CER0001\",\n                 \"sigma_1\" : 0.050000,\n                 \"sigma_2\" : 0.050000,\n                 \"normalized_resid_1\" : 0.049110,\n                 \"normalized_resid_2\" : -0.037700,\n                 \"posn_sigma_theta\" : 0.000000,\n                 \"RAMotion\" : -0.3138,\n                 \"decMotion\" : 0.0837,\n                 \"TotalMotion\" : 0.3247,\n                 \"PAMotion\" : 284.93,\n                 \"net\" : \" \",\n                 \"note1\" : \" \",\n                 \"note2\" : \"C\",\n                 \"discovery_asterisk\" : \" \",\n                 \"flags\" : 0,\n                 \"incl\" : 1,\n                 \"ecliptic_lon\" : 2.918515,\n                 \"ecliptic_lat\" : -13.265134,\n                 \"earth_ecliptic_lon\" : 45.518523 },\n          {\"JD\": 2460990.916667, \"iso date\": \"2025-11-11T10:00:00.028Z\", \"obscode\": \"F52\",\n                 \"RA\" : 7.464283, \"Dec\": -10.798331,\n                 \"dRA\" : -0.00118, \"dDec\": -0.00090, \"dTime\": 0.145, \"cross\": -0.00133,\n                 \"reference\" : \"     \",  \"packed\" : \"     CER0001\",\n                 \"sigma_1\" : 0.050000,\n                 \"sigma_2\" : 0.050000,\n                 \"normalized_resid_1\" : -0.013259,\n                 \"normalized_resid_2\" : 0.026542,\n                 \"posn_sigma_theta\" : 0.000000,\n                 \"RAMotion\" : -0.2468,\n                 \"decMotion\" : 0.1215,\n                 \"TotalMotion\" : 0.2750,\n                 \"PAMotion\" : 296.21,\n                 \"net\" : \" \",\n                 \"note1\" : \" \",\n                 \"note2\" : \"C\",\n                 \"discovery_asterisk\" : \" \",\n                 \"flags\" : 0,\n                 \"incl\" : 1,\n                 \"ecliptic_lon\" : 2.501694,\n                 \"ecliptic_lat\" : -12.864858,\n                 \"earth_ecliptic_lon\" : 50.446569 },\n          {\"JD\": 2460995.916667, \"iso date\": \"2025-11-16T10:00:00.028Z\", \"obscode\": \"F52\",\n                 \"RA\" : 7.059279, \"Dec\": -10.523258,\n                 \"dRA\" : -0.00298, \"dDec\": -0.00344, \"dTime\": -0.017, \"cross\": -0.00455,\n                 \"reference\" : \"     \",  \"packed\" : \"     CER0001\",\n                 \"sigma_1\" : 0.050000,\n                 \"sigma_2\" : 0.050000,\n                 \"normalized_resid_1\" : 0.001338,\n                 \"normalized_resid_2\" : 0.091033,\n                 \"posn_sigma_theta\" : 0.000000,\n                 \"RAMotion\" : -0.1763,\n                 \"decMotion\" : 0.1572,\n                 \"TotalMotion\" : 0.2362,\n                 \"PAMotion\" : 311.73,\n                 \"net\" : \" \",\n                 \"note1\" : \" \",\n                 \"note2\" : \"C\",\n                 \"discovery_asterisk\" : \" \",\n                 \"flags\" : 0,\n                 \"incl\" : 1,\n                 \"ecliptic_lon\" : 2.242628,\n                 \"ecliptic_lat\" : -12.452320,\n                 \"earth_ecliptic_lon\" : 55.374614 },\n          {\"JD\": 2461000.916667, \"iso date\": \"2025-11-21T10:00:00.028Z\", \"obscode\": \"F52\",\n                 \"RA\" : 6.797587, \"Dec\": -10.179203,\n                 \"dRA\" : 0.00284, \"dDec\": 0.00328, \"dTime\": 0.420, \"cross\": 0.00406,\n                 \"reference\" : \"     \",  \"packed\" : \"     CER0001\",\n                 \"sigma_1\" : 0.050000,\n                 \"sigma_2\" : 0.050000,\n                 \"normalized_resid_1\" : -0.030327,\n                 \"normalized_resid_2\" : -0.081230,\n                 \"posn_sigma_theta\" : 0.000000,\n                 \"RAMotion\" : -0.1039,\n                 \"decMotion\" : 0.1906,\n                 \"TotalMotion\" : 0.2170,\n                 \"PAMotion\" : 331.40,\n                 \"net\" : \" \",\n                 \"note1\" : \" \",\n                 \"note2\" : \"C\",\n                 \"discovery_asterisk\" : \" \",\n                 \"flags\" : 0,\n                 \"incl\" : 1,\n                 \"ecliptic_lon\" : 2.143921,\n                 \"ecliptic_lat\" : -12.033583,\n                 \"earth_ecliptic_lon\" : 60.302660 },\n          {\"JD\": 2461005.916667, \"iso date\": \"2025-11-26T10:00:00.028Z\", \"obscode\": \"F52\",\n                 \"RA\" : 6.680979, \"Dec\": -9.771333,\n                 \"dRA\" : 0.000205, \"dDec\": 0.000884, \"dTime\": 0.228, \"cross\": 0.000327,\n                 \"reference\" : \"     \",  \"packed\" : \"     CER0001\",\n                 \"sigma_1\" : 0.050000,\n                 \"sigma_2\" : 0.050000,\n                 \"normalized_resid_1\" : -0.016890,\n                 \"normalized_resid_2\" : -0.006540,\n                 \"posn_sigma_theta\" : 0.000000,\n                 \"RAMotion\" : -0.0313,\n                 \"decMotion\" : 0.2211,\n                 \"TotalMotion\" : 0.2233,\n                 \"PAMotion\" : 351.93,\n                 \"net\" : \" \",\n                 \"note1\" : \" \",\n                 \"note2\" : \"C\",\n                 \"discovery_asterisk\" : \" \",\n                 \"flags\" : 0,\n                 \"incl\" : 1,\n                 \"ecliptic_lon\" : 2.204749,\n                 \"ecliptic_lat\" : -11.614057,\n                 \"earth_ecliptic_lon\" : 65.230705 },\n          {\"JD\": 2461010.916667, \"iso date\": \"2025-12-01T10:00:00.028Z\", \"obscode\": \"F52\",\n                 \"RA\" : 6.707842, \"Dec\": -9.305411,\n                 \"dRA\" : -0.00066, \"dDec\": -0.00109, \"dTime\": -0.283, \"cross\": -0.00048,\n                 \"reference\" : \"     \",  \"packed\" : \"     CER0001\",\n                 \"sigma_1\" : 0.050000,\n                 \"sigma_2\" : 0.050000,\n                 \"normalized_resid_1\" : -0.023633,\n                 \"normalized_resid_2\" : -0.009650,\n                 \"posn_sigma_theta\" : 0.000000,\n                 \"RAMotion\" : 0.0398,\n                 \"decMotion\" : 0.2486,\n                 \"TotalMotion\" : 0.2517,\n                 \"PAMotion\" : 9.10,\n                 \"net\" : \" \",\n                 \"note1\" : \" \",\n                 \"note2\" : \"C\",\n                 \"discovery_asterisk\" : \" \",\n                 \"flags\" : 0,\n                 \"incl\" : 1,\n                 \"ecliptic_lon\" : 2.421044,\n                 \"ecliptic_lat\" : -11.198327,\n                 \"earth_ecliptic_lon\" : 70.158751 } \n        ]\n      }\n    }\n  }\n}\n",
+                "/job/sky.json": "{\n  \"ephemeris\":\n  {\n    \"obscode\": \"F52\",\n    \"packed\": \"CER0001\",\n    \"count\": 11,\n    \"start\": 2461010.916667,\n    \"step\": 1.000000000,\n    \"n_steps\": 11,\n    \"start iso\": \"2025-12-01T10:00:00.000Z\",\n    \"entries\":\n    {\n      \"0\": {\"JD\": 2461010.916666667, \"ISO_time\": \"2025-12-01T10:00:00Z\", \"RA\": 6.70784184817, \"RA60\": \"00 26 49.882\", \"Dec\": -9.30541084016, \"Dec60\": \"-09 18 19.48\", \"delta\": 2.377687076829, \"r\": 2.906304869378, \"elong\": 112.84791, \"LuElo\": 21.25701, \"RAvel\": 0.039807, \"decvel\": 0.248570, \"alt\": 26.3362, \"az\": 247.8488, \"Sal\": -86.5095, \"sigPos\": 0.025, \"sigPA\": 71 },\n      \"1\": {\"JD\": 2461011.916666667, \"ISO_time\": \"2025-12-02T10:00:00Z\", \"RA\": 6.73007501786, \"RA60\": \"00 26 55.218\", \"Dec\": -9.20578864476, \"Dec60\": \"-09 12 20.84\", \"delta\": 2.389868194311, \"r\": 2.905701711130, \"elong\": 111.92372, \"LuElo\": 34.14103, \"RAvel\": 0.053751, \"decvel\": 0.253704, \"alt\": 25.5473, \"az\": 248.4501, \"Sal\": -86.3764, \"sigPos\": 0.031, \"sigPA\": 71 },\n      \"2\": {\"JD\": 2461012.916666667, \"ISO_time\": \"2025-12-03T10:00:00Z\", \"RA\": 6.75782557562, \"RA60\": \"00 27 01.878\", \"Dec\": -9.10413147142, \"Dec60\": \"-09 06 14.87\", \"delta\": 2.402136010378, \"r\": 2.905096648725, \"elong\": 111.00408, \"LuElo\": 48.43885, \"RAvel\": 0.067584, \"decvel\": 0.258721, \"alt\": 24.7600, \"az\": 249.0404, \"Sal\": -86.2407, \"sigPos\": 0.037, \"sigPA\": 71 },\n      \"3\": {\"JD\": 2461013.916666667, \"ISO_time\": \"2025-12-04T10:00:00Z\", \"RA\": 6.79104516143, \"RA60\": \"00 27 09.851\", \"Dec\": -9.00048448445, \"Dec60\": \"-09 00 01.74\", \"delta\": 2.414486864011, \"r\": 2.904489688248, \"elong\": 110.08896, \"LuElo\": 63.29680, \"RAvel\": 0.081303, \"decvel\": 0.263626, \"alt\": 23.9746, \"az\": 249.6204, \"Sal\": -86.1035, \"sigPos\": 0.043, \"sigPA\": 71 },\n      \"4\": {\"JD\": 2461014.916666667, \"ISO_time\": \"2025-12-05T10:00:00Z\", \"RA\": 6.82968526669, \"RA60\": \"00 27 19.124\", \"Dec\": -8.89489082769, \"Dec60\": \"-08 53 41.61\", \"delta\": 2.426917238533, \"r\": 2.903880835810, \"elong\": 109.17832, \"LuElo\": 78.31354, \"RAvel\": 0.094909, \"decvel\": 0.268425, \"alt\": 23.1911, \"az\": 250.1906, \"Sal\": -85.9654, \"sigPos\": 0.049, \"sigPA\": 72 },\n      \"5\": {\"JD\": 2461015.916666667, \"ISO_time\": \"2025-12-06T10:00:00Z\", \"RA\": 6.87369820159, \"RA60\": \"00 27 29.688\", \"Dec\": -8.78739142856, \"Dec60\": \"-08 47 14.61\", \"delta\": 2.439423722622, \"r\": 2.903270097543, \"elong\": 108.27215, \"LuElo\": 93.20011, \"RAvel\": 0.108405, \"decvel\": 0.273123, \"alt\": 22.4097, \"az\": 250.7513, \"Sal\": -85.8272, \"sigPos\": 0.055, \"sigPA\": 72 },\n      \"6\": {\"JD\": 2461016.916666667, \"ISO_time\": \"2025-12-07T10:00:00Z\", \"RA\": 6.92303759062, \"RA60\": \"00 27 41.529\", \"Dec\": -8.67802511170, \"Dec60\": \"-08 40 40.89\", \"delta\": 2.452002958996, \"r\": 2.902657479603, \"elong\": 107.37039, \"LuElo\": 107.73092, \"RAvel\": 0.121795, \"decvel\": 0.277724, \"alt\": 21.6303, \"az\": 251.3031, \"Sal\": -85.6894, \"sigPos\": 0.062, \"sigPA\": 72 },\n      \"7\": {\"JD\": 2461017.916666667, \"ISO_time\": \"2025-12-08T10:00:00Z\", \"RA\": 6.97765832215, \"RA60\": \"00 27 54.638\", \"Dec\": -8.56682897528, \"Dec60\": \"-08 34 00.58\", \"delta\": 2.464651594891, \"r\": 2.902042988169, \"elong\": 106.47304, \"LuElo\": 121.73837, \"RAvel\": 0.135080, \"decvel\": 0.282233, \"alt\": 20.8532, \"az\": 251.8464, \"Sal\": -85.5526, \"sigPos\": 0.068, \"sigPA\": 72 },\n      \"8\": {\"JD\": 2461018.916666667, \"ISO_time\": \"2025-12-09T10:00:00Z\", \"RA\": 7.03751608396, \"RA60\": \"00 28 09.004\", \"Dec\": -8.45383889221, \"Dec60\": \"-08 27 13.82\", \"delta\": 2.477366246235, \"r\": 2.901426629444, \"elong\": 105.58006, \"LuElo\": 135.09462, \"RAvel\": 0.148262, \"decvel\": 0.286653, \"alt\": 20.0785, \"az\": 252.3815, \"Sal\": -85.4171, \"sigPos\": 0.075, \"sigPA\": 72 },\n      \"9\": {\"JD\": 2461019.916666667, \"ISO_time\": \"2025-12-10T10:00:00Z\", \"RA\": 7.10256672383, \"RA60\": \"00 28 24.616\", \"Dec\": -8.33908998883, \"Dec60\": \"-08 20 20.72\", \"delta\": 2.490143480026, \"r\": 2.900808409655, \"elong\": 104.69143, \"LuElo\": 147.64402, \"RAvel\": 0.161340, \"decvel\": 0.290984, \"alt\": 19.3061, \"az\": 252.9089, \"Sal\": -85.2833, \"sigPos\": 0.082, \"sigPA\": 72 },\n      \"10\": {\"JD\": 2461020.916666667, \"ISO_time\": \"2025-12-11T10:00:00Z\", \"RA\": 7.17276564921, \"RA60\": \"00 28 41.464\", \"Dec\": -8.22261700849, \"Dec60\": \"-08 13 21.42\", \"delta\": 2.502979812323, \"r\": 2.900188335052, \"elong\": 103.80714, \"LuElo\": 158.95269, \"RAvel\": 0.174313, \"decvel\": 0.295227, \"alt\": 18.5362, \"az\": 253.4289, \"Sal\": -85.1514, \"sigPos\": 0.090, \"sigPA\": 73 }\n    }\n  }\n}\n"
+              },
+              "stdout": "",
+              "exitCode": 0,
+              "phases": {
+                "instantiateMs": 1.4141669999999067,
+                "mountMs": 1.4865829999998823,
+                "solveMs": 2298.047625,
+                "collectMs": 0.1226249999999709,
+                "totalMs": 2301.071
+              },
+              "accuracy": {
+                "horizonsSkyErrorArcsec": [
+                  0.006598688050968689,
+                  0.010909349461108681
+                ],
+                "rmsArcsec": 0.0019829,
+                "maxNativeSkyErrorArcsec": 0,
+                "nativeElementDeltas": {
+                  "a": 1.0036416142611415e-13,
+                  "e": 0,
+                  "i": 0,
+                  "M": 3.9193537304527126e-11,
+                  "arg_per": 3.380762336746557e-11,
+                  "asc_node": 9.947598300641403e-14
+                }
+              }
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

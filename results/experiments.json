@@ -1,0 +1,225 @@
+{
+  "schema": 1,
+  "decision": {
+    "shipping": "Copy-on-write MEMFS plus strict unchanged-precision builds",
+    "lto": "Do not ship: larger binary and slower fits in exploratory measurements",
+    "quad": "Do not ship: kernel proofs/differential checks pass but end-to-end gain is within observed host variation"
+  },
+  "profile": {
+    "artifact": "results/heldout.cpuprofile",
+    "wasmSamples": 4676,
+    "topFunctions": [
+      {
+        "name": "__multf3",
+        "samples": 1582,
+        "fraction": 0.3383233532934132
+      },
+      {
+        "name": "__addtf3",
+        "samples": 779,
+        "fraction": 0.16659538066723695
+      },
+      {
+        "name": "__divtf3",
+        "samples": 591,
+        "fraction": 0.12639007698887939
+      },
+      {
+        "name": "__multi3",
+        "samples": 462,
+        "fraction": 0.09880239520958084
+      },
+      {
+        "name": "calc_derivativesl(long double, long double const*, long double*, int)",
+        "samples": 276,
+        "fraction": 0.05902480752780154
+      },
+      {
+        "name": "__trunctfdf2",
+        "samples": 257,
+        "fraction": 0.054961505560307954
+      },
+      {
+        "name": "__extenddftf2",
+        "samples": 175,
+        "fraction": 0.0374251497005988
+      },
+      {
+        "name": "planet_posn(int, double, double*)",
+        "samples": 153,
+        "fraction": 0.03272027373823781
+      },
+      {
+        "name": "integrate_orbitl(long double*, long double, long double)",
+        "samples": 91,
+        "fraction": 0.019461077844311378
+      },
+      {
+        "name": "__lshrti3",
+        "samples": 77,
+        "fraction": 0.016467065868263474
+      },
+      {
+        "name": "sqrtl",
+        "samples": 64,
+        "fraction": 0.013686911890504704
+      },
+      {
+        "name": "__floatscan",
+        "samples": 24,
+        "fraction": 0.0051325919589392645
+      }
+    ]
+  },
+  "experiments": {
+    "cow": {
+      "artifact": "results/optimized.json",
+      "binarySHA256": "cffccd0ce9026bee08316d3e3b99d935cf6e6c6342bccbfdfb8e4fc260e4af71",
+      "cases": [
+        {
+          "id": "short-arc-fit",
+          "medianTotalMs": 439.2020420000001,
+          "medianSolveMs": 436.59233300000005,
+          "allAccuracyChecksPassed": true
+        },
+        {
+          "id": "ceres-30d",
+          "medianTotalMs": 9.95458299999973,
+          "medianSolveMs": 7.6193749999997635,
+          "allAccuracyChecksPassed": true
+        },
+        {
+          "id": "ceres-topocentric",
+          "medianTotalMs": 10.193624999999884,
+          "medianSolveMs": 7.0199579999998605,
+          "allAccuracyChecksPassed": true
+        },
+        {
+          "id": "eccentricity-0.95",
+          "medianTotalMs": 16.88079199999993,
+          "medianSolveMs": 14.476874999999836,
+          "allAccuracyChecksPassed": true
+        },
+        {
+          "id": "eccentricity-0.999999",
+          "medianTotalMs": 18.28316700000005,
+          "medianSolveMs": 15.476208000000042,
+          "allAccuracyChecksPassed": true
+        },
+        {
+          "id": "eccentricity-1.4",
+          "medianTotalMs": 20.19991600000003,
+          "medianSolveMs": 17.34270800000013,
+          "allAccuracyChecksPassed": true
+        },
+        {
+          "id": "ceres-heldout-fit",
+          "medianTotalMs": 2327.7217919999994,
+          "medianSolveMs": 2325.248292,
+          "allAccuracyChecksPassed": true
+        }
+      ]
+    },
+    "lto": {
+      "artifact": "results/lto-exploratory.json",
+      "binarySHA256": "a85ef1268fa9c06f8b44b0d14c817d7593c2891ad2951ae6802f8015223f18a7",
+      "cases": [
+        {
+          "id": "short-arc-fit",
+          "medianTotalMs": 484.41537500000004,
+          "medianSolveMs": 482.07879100000036,
+          "allAccuracyChecksPassed": true
+        },
+        {
+          "id": "ceres-30d",
+          "medianTotalMs": 9.355333999999857,
+          "medianSolveMs": 6.817500000000109,
+          "allAccuracyChecksPassed": true
+        },
+        {
+          "id": "ceres-topocentric",
+          "medianTotalMs": 9.287834000000203,
+          "medianSolveMs": 6.797125000000051,
+          "allAccuracyChecksPassed": true
+        },
+        {
+          "id": "eccentricity-0.95",
+          "medianTotalMs": 17.77429200000006,
+          "medianSolveMs": 15.5,
+          "allAccuracyChecksPassed": true
+        },
+        {
+          "id": "eccentricity-0.999999",
+          "medianTotalMs": 17.871374999999716,
+          "medianSolveMs": 15.414041999999881,
+          "allAccuracyChecksPassed": true
+        },
+        {
+          "id": "eccentricity-1.4",
+          "medianTotalMs": 20.148417000000336,
+          "medianSolveMs": 18.090374999999767,
+          "allAccuracyChecksPassed": true
+        },
+        {
+          "id": "ceres-heldout-fit",
+          "medianTotalMs": 2701.2665000000015,
+          "medianSolveMs": 2698.816500000001,
+          "allAccuracyChecksPassed": true
+        }
+      ]
+    },
+    "quad": {
+      "artifact": "results/quad-exploratory.json",
+      "binarySHA256": "92fffd3780e128992f45d95242430ec3b1e9dbcfe47c1ff2a52ebd49ffbcd83e",
+      "cases": [
+        {
+          "id": "short-arc-fit",
+          "medianTotalMs": 434.1361670000001,
+          "medianSolveMs": 430.85354099999995,
+          "allAccuracyChecksPassed": true
+        },
+        {
+          "id": "ceres-30d",
+          "medianTotalMs": 10.38525000000027,
+          "medianSolveMs": 6.814624999999978,
+          "allAccuracyChecksPassed": true
+        },
+        {
+          "id": "ceres-topocentric",
+          "medianTotalMs": 9.915541999999732,
+          "medianSolveMs": 6.834958999999799,
+          "allAccuracyChecksPassed": true
+        },
+        {
+          "id": "eccentricity-0.95",
+          "medianTotalMs": 17.348417000000154,
+          "medianSolveMs": 14.45416699999987,
+          "allAccuracyChecksPassed": true
+        },
+        {
+          "id": "eccentricity-0.999999",
+          "medianTotalMs": 18.185292000000118,
+          "medianSolveMs": 15.625874999999724,
+          "allAccuracyChecksPassed": true
+        },
+        {
+          "id": "eccentricity-1.4",
+          "medianTotalMs": 18.79337499999974,
+          "medianSolveMs": 16.578624999999192,
+          "allAccuracyChecksPassed": true
+        },
+        {
+          "id": "ceres-heldout-fit",
+          "medianTotalMs": 2289.360584,
+          "medianSolveMs": 2285.731916999999,
+          "allAccuracyChecksPassed": true
+        }
+      ]
+    }
+  },
+  "limitations": [
+    "Exploratory runs preceded final isolated-native-data runner and final paired timing; use paired.json for final native/end-to-end timing claims.",
+    "Measured host Apple arm64 native uses53-bit long double vs WASM113-bit long double; backend timing includes this precision-cost difference.",
+    "Integer-helper proofs do not prove the orbit solver or compiler."
+  ]
+}

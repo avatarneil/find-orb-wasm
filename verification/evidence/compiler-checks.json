@@ -1,0 +1,101 @@
+{
+  "schema": 1,
+  "nativeCompiler": "Apple clang version 21.0.0 (clang-2100.1.1.101)",
+  "wasmCompiler": "emcc (Emscripten gcc/clang-like replacement + linker emulating GNU ld) 4.0.23 (7a5d93b50f6a3a35e85a0d2fc9e667b8498e6aed)",
+  "sourceContracts": {
+    "bsearch_ext_r": {
+      "repository": "find_orb",
+      "file": "shellsor.cpp",
+      "commit": "9cc932997837c5ab994fbf015db59f5d0da852e5",
+      "sha256": "9a2593e2ea60022099d8ff57873e6a4190949dc56ee8db7c3a7bdfc5ef3683f2"
+    },
+    "bsearch_ext": {
+      "repository": "find_orb",
+      "file": "shellsor.cpp",
+      "commit": "9cc932997837c5ab994fbf015db59f5d0da852e5",
+      "sha256": "11b11ada407a22b46d4c5f443cfc4988cf1b25bab0bca107885461d78176e231"
+    },
+    "dot_product": {
+      "repository": "lunar",
+      "file": "miscell.cpp",
+      "commit": "d95191818d7975c22613f231fea160341203abbe",
+      "sha256": "1b76708ea5eee5ae15d0f1196fee7c576d172f32da44ad9b4bdd1ef9869660de"
+    },
+    "vector_cross_product": {
+      "repository": "lunar",
+      "file": "miscell.cpp",
+      "commit": "d95191818d7975c22613f231fea160341203abbe",
+      "sha256": "09ac309ee577cca8372ef559eb6367fccd32d2e5b7591bbae6500d65a0503faf"
+    },
+    "jpl_state": {
+      "repository": "jpl_eph",
+      "file": "jpleph.cpp",
+      "commit": "a73f25e54d02b99b1c0d9a9d6c61acfbb2fa3a26",
+      "sha256": "de2404e5264c4fdd4331d0c47d45d230644257d3959145d334a850afe8fd2042"
+    }
+  },
+  "runs": {
+    "nativeO0": {
+      "pointerBytes": 8,
+      "doubleBytes": 8,
+      "doubleMantissaBits": 53,
+      "longDoubleBytes": 8,
+      "longDoubleMantissaBits": 53,
+      "searchCases": 21229,
+      "kernelCases": 50121,
+      "kernelHash": "4da3ea23d2a54053",
+      "splitWitness": 0,
+      "fmaWitness": -5.551115123125783e-17
+    },
+    "nativeO3": {
+      "pointerBytes": 8,
+      "doubleBytes": 8,
+      "doubleMantissaBits": 53,
+      "longDoubleBytes": 8,
+      "longDoubleMantissaBits": 53,
+      "searchCases": 21229,
+      "kernelCases": 50121,
+      "kernelHash": "4da3ea23d2a54053",
+      "splitWitness": 0,
+      "fmaWitness": -5.551115123125783e-17
+    },
+    "nativeSanitized": {
+      "pointerBytes": 8,
+      "doubleBytes": 8,
+      "doubleMantissaBits": 53,
+      "longDoubleBytes": 8,
+      "longDoubleMantissaBits": 53,
+      "searchCases": 21229,
+      "kernelCases": 50121,
+      "kernelHash": "4da3ea23d2a54053",
+      "splitWitness": 0,
+      "fmaWitness": -5.551115123125783e-17
+    },
+    "wasmO0": {
+      "pointerBytes": 4,
+      "doubleBytes": 8,
+      "doubleMantissaBits": 53,
+      "longDoubleBytes": 16,
+      "longDoubleMantissaBits": 113,
+      "searchCases": 21229,
+      "kernelCases": 50121,
+      "kernelHash": "4da3ea23d2a54053",
+      "splitWitness": 0,
+      "fmaWitness": -5.551115123125783e-17
+    },
+    "wasmO3": {
+      "pointerBytes": 4,
+      "doubleBytes": 8,
+      "doubleMantissaBits": 53,
+      "longDoubleBytes": 16,
+      "longDoubleMantissaBits": 113,
+      "searchCases": 21229,
+      "kernelCases": 50121,
+      "kernelHash": "4da3ea23d2a54053",
+      "splitWitness": 0,
+      "fmaWitness": -5.551115123125783e-17
+    }
+  },
+  "llvmAudit": "No relaxed floating-point instruction flags or llvm.fma intrinsic in extracted kernels at -O3",
+  "limits": "Finite corpus, extracted functions, no full-program sanitizer coverage, no compiler proof. Hash normalizes NaN payload/sign only. ABI probes expose rather than erase long-double differences."
+}

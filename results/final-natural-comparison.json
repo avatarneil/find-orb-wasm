@@ -1,0 +1,174 @@
+{
+  "before": "results/baseline-natural.json",
+  "after": "results/final-natural.json",
+  "statistic": "Ratio of separately measured medians; observed ranges are not confidence intervals",
+  "cases": [
+    {
+      "id": "short-arc-fit",
+      "beforeMs": 441.5306879999998,
+      "afterMs": 436.6749790000001,
+      "speedup": 1.011119732600937,
+      "beforeRangeMs": [
+        440.61029099999996,
+        445.04399999999987
+      ],
+      "afterRangeMs": [
+        435.6808340000007,
+        442.2385839999997
+      ],
+      "beforeMountMs": 3.850021000000197,
+      "afterMountMs": 1.66274999999996,
+      "beforeSolveMs": 436.49695850000035,
+      "afterSolveMs": 434.1203955000001,
+      "accuracy": {
+        "maxNativeSkyErrorArcsec": 0,
+        "nativeElementDeltas": {
+          "a": 0,
+          "e": 0,
+          "i": 0,
+          "M": 0,
+          "arg_per": 0,
+          "asc_node": 0
+        }
+      }
+    },
+    {
+      "id": "ceres-30d",
+      "beforeMs": 12.673416499999803,
+      "afterMs": 9.142937499999789,
+      "speedup": 1.386142746792275,
+      "beforeRangeMs": [
+        11.35174999999981,
+        18.20116700000017
+      ],
+      "afterRangeMs": [
+        8.7647079999997,
+        9.976458000000093
+      ],
+      "beforeMountMs": 3.9020000000000437,
+      "afterMountMs": 1.0083334999999352,
+      "beforeSolveMs": 7.124062499999582,
+      "afterSolveMs": 7.392666499999905,
+      "accuracy": {
+        "maxNativePositionErrorMeters": 0,
+        "maxNativeVelocityErrorMetersPerSecond": 0
+      }
+    },
+    {
+      "id": "ceres-topocentric",
+      "beforeMs": 12.209104000000025,
+      "afterMs": 8.545187000000169,
+      "speedup": 1.4287696688205633,
+      "beforeRangeMs": [
+        11.390666000000238,
+        17.22095900000022
+      ],
+      "afterRangeMs": [
+        8.012416999999914,
+        8.705665999999837
+      ],
+      "beforeMountMs": 3.728124999999636,
+      "afterMountMs": 1.0901664999996683,
+      "beforeSolveMs": 6.967979000000014,
+      "afterSolveMs": 6.694666500000494,
+      "accuracy": {
+        "maxNativeSkyErrorArcsec": 0
+      }
+    },
+    {
+      "id": "eccentricity-0.95",
+      "beforeMs": 19.584500000000844,
+      "afterMs": 16.446041499999865,
+      "speedup": 1.1908336726501028,
+      "beforeRangeMs": [
+        18.901958000000377,
+        19.77770899999996
+      ],
+      "afterRangeMs": [
+        16.08758299999954,
+        16.87445800000023
+      ],
+      "beforeMountMs": 3.145499999999629,
+      "afterMountMs": 1.1633749999996326,
+      "beforeSolveMs": 14.676187500000196,
+      "afterSolveMs": 14.590582999999697,
+      "accuracy": {
+        "maxNativePositionErrorMeters": 0,
+        "maxNativeVelocityErrorMetersPerSecond": 0
+      }
+    },
+    {
+      "id": "eccentricity-0.999999",
+      "beforeMs": 19.254104000000552,
+      "afterMs": 16.419416499999897,
+      "speedup": 1.1726424017565225,
+      "beforeRangeMs": [
+        18.8989160000001,
+        19.455791999998837
+      ],
+      "afterRangeMs": [
+        16.185708000000886,
+        16.757958999998664
+      ],
+      "beforeMountMs": 3.098458500000561,
+      "afterMountMs": 1.3772714999995515,
+      "beforeSolveMs": 14.59081249999872,
+      "afterSolveMs": 14.478374499999518,
+      "accuracy": {
+        "maxNativePositionErrorMeters": 0,
+        "maxNativeVelocityErrorMetersPerSecond": 0
+      }
+    },
+    {
+      "id": "eccentricity-1.4",
+      "beforeMs": 21.48010400000021,
+      "afterMs": 18.730687000000216,
+      "speedup": 1.146786767618292,
+      "beforeRangeMs": [
+        21.054415999999037,
+        21.900292000000263
+      ],
+      "afterRangeMs": [
+        18.114458000000013,
+        18.99120799999946
+      ],
+      "beforeMountMs": 3.040667000001122,
+      "afterMountMs": 1.380333499999324,
+      "beforeSolveMs": 16.842936999999438,
+      "afterSolveMs": 16.808187500000713,
+      "accuracy": {
+        "maxNativePositionErrorMeters": 0,
+        "maxNativeVelocityErrorMetersPerSecond": 0
+      }
+    },
+    {
+      "id": "ceres-heldout-fit",
+      "beforeMs": 2303.5520419999993,
+      "afterMs": 2308.908896000001,
+      "speedup": 0.9976799197191012,
+      "beforeRangeMs": [
+        2300.608917000005,
+        2321.4101249999985
+      ],
+      "afterRangeMs": [
+        2284.4817090000033,
+        2345.441666999999
+      ],
+      "beforeMountMs": 3.84118750000016,
+      "afterMountMs": 1.2192085000006045,
+      "beforeSolveMs": 2298.6700210000017,
+      "afterSolveMs": 2306.703292,
+      "accuracy": {
+        "maxNativeSkyErrorArcsec": 0,
+        "nativeElementDeltas": {
+          "a": 0,
+          "e": 0,
+          "i": 0,
+          "M": 0,
+          "arg_per": 0,
+          "asc_node": 0
+        }
+      }
+    }
+  ]
+}

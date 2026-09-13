@@ -1,5 +1,6 @@
 // Explicit, checked portability patches against the pinned upstream sources.
 // No orbital arithmetic is changed. Keep this file with corresponding source.
+import {strictEphemerisPatches} from '../data/patches.mjs';
 export const patches=[{
   file:'fo.cpp',
   from:'#if defined( __linux) || defined( __unix__) || defined( __APPLE__)',
@@ -32,4 +33,4 @@ export const patches=[{
    for( i = 0; i < max_orbits && clock( ) < end_clock; i++)
 #endif`,
   reason:'Finish the candidate count instead of silently truncating the search after half a CPU-second.',
-}];
+},...strictEphemerisPatches];

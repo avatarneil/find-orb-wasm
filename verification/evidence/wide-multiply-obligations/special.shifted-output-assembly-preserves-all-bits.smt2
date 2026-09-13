@@ -1,0 +1,17 @@
+; benchmark generated from python API
+(set-info :status unknown)
+(declare-fun output0 () (_ BitVec 32))
+(declare-fun output1 () (_ BitVec 32))
+(declare-fun output2 () (_ BitVec 32))
+(declare-fun output3 () (_ BitVec 32))
+(declare-fun output4 () (_ BitVec 32))
+(declare-fun output5 () (_ BitVec 32))
+(assert
+ (let ((?x134 (concat (concat (concat (concat output5 output4) output3) output2) output1)))
+(let ((?x137 (bvor (bvor (_ bv0 128) (bvshl ((_ zero_extend 96) (_ bv0 32)) (_ bv0 128))) (bvshl ((_ zero_extend 96) (_ bv0 32)) (_ bv32 128)))))
+(let ((?x22 (bvor (bvor ?x137 (bvshl ((_ zero_extend 96) output0) (_ bv64 128))) (bvshl ((_ zero_extend 96) output1) (_ bv96 128)))))
+(let ((?x36 (bvor (bvor (_ bv0 128) (bvshl ((_ zero_extend 96) output2) (_ bv0 128))) (bvshl ((_ zero_extend 96) output3) (_ bv32 128)))))
+(let ((?x227 (bvor (bvor ?x36 (bvshl ((_ zero_extend 96) output4) (_ bv64 128))) (bvshl ((_ zero_extend 96) output5) (_ bv96 128)))))
+(let (($x97 (= (concat ?x227 ?x22) (concat (concat ?x134 output0) (_ bv0 64)))))
+(not $x97))))))))
+(check-sat)

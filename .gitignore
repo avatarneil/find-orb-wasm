@@ -3,8 +3,12 @@ dist*/
 .wasm-toolchain/
 .wasm-engine*/
 .native-engine*/
+.performance-*/
 .venv/
 .cache/
 __pycache__/
 .DS_Store
 results/local/
+*.log
+test-results/
+playwright-report/

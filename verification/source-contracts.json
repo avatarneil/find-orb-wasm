@@ -1,0 +1,32 @@
+{
+  "bsearch_ext_r": {
+    "repository": "find_orb",
+    "file": "shellsor.cpp",
+    "commit": "9cc932997837c5ab994fbf015db59f5d0da852e5",
+    "sha256": "9a2593e2ea60022099d8ff57873e6a4190949dc56ee8db7c3a7bdfc5ef3683f2"
+  },
+  "bsearch_ext": {
+    "repository": "find_orb",
+    "file": "shellsor.cpp",
+    "commit": "9cc932997837c5ab994fbf015db59f5d0da852e5",
+    "sha256": "11b11ada407a22b46d4c5f443cfc4988cf1b25bab0bca107885461d78176e231"
+  },
+  "dot_product": {
+    "repository": "lunar",
+    "file": "miscell.cpp",
+    "commit": "d95191818d7975c22613f231fea160341203abbe",
+    "sha256": "1b76708ea5eee5ae15d0f1196fee7c576d172f32da44ad9b4bdd1ef9869660de"
+  },
+  "vector_cross_product": {
+    "repository": "lunar",
+    "file": "miscell.cpp",
+    "commit": "d95191818d7975c22613f231fea160341203abbe",
+    "sha256": "09ac309ee577cca8372ef559eb6367fccd32d2e5b7591bbae6500d65a0503faf"
+  },
+  "jpl_state": {
+    "repository": "jpl_eph",
+    "file": "jpleph.cpp",
+    "commit": "a73f25e54d02b99b1c0d9a9d6c61acfbb2fa3a26",
+    "sha256": "de2404e5264c4fdd4331d0c47d45d230644257d3959145d334a850afe8fd2042"
+  }
+}

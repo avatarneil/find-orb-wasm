@@ -1,0 +1,169 @@
+{
+  "schema": 1,
+  "solver": "4.15.4",
+  "source": {
+    "path": "benchmark/quad-wide-multiply.h",
+    "sha256": "9e5532166d4193d4016ac8d051e9cfb2a345de551ad9cd2d2dadeaa32145dfb3"
+  },
+  "obligations": [
+    {
+      "name": "limbs.uint64-accumulator-does-not-overflow",
+      "result": "unsat",
+      "seconds": 0.009339665999999996
+    },
+    {
+      "name": "limbs.partial-sums-do-not-overflow",
+      "result": "unsat",
+      "seconds": 0.002213709000000008
+    },
+    {
+      "name": "limbs.divmod-preserves-value-and-ranges",
+      "result": "unsat",
+      "seconds": 0.001188583000000007
+    },
+    {
+      "name": "limbs.cast-and-shift-reconstruct-uint64",
+      "result": "unsat",
+      "seconds": 3.6416999999996924e-05
+    },
+    {
+      "name": "limbs.input-slicing-preserves-all-128-bits",
+      "result": "unsat",
+      "seconds": 4.412499999999209e-05
+    },
+    {
+      "name": "limbs.row-0-carry-destination-is-zero",
+      "result": "unsat",
+      "seconds": 2.0834000000011232e-05
+    },
+    {
+      "name": "limbs.row-0-weighted-product-invariant",
+      "result": "unsat",
+      "seconds": 0.000253041999999995
+    },
+    {
+      "name": "limbs.row-1-carry-destination-is-zero",
+      "result": "unsat",
+      "seconds": 2.5916000000000827e-05
+    },
+    {
+      "name": "limbs.row-1-weighted-product-invariant",
+      "result": "unsat",
+      "seconds": 0.00035758299999999466
+    },
+    {
+      "name": "limbs.row-2-carry-destination-is-zero",
+      "result": "unsat",
+      "seconds": 2.4583999999994166e-05
+    },
+    {
+      "name": "limbs.row-2-weighted-product-invariant",
+      "result": "unsat",
+      "seconds": 0.00037987500000000174
+    },
+    {
+      "name": "limbs.row-3-carry-destination-is-zero",
+      "result": "unsat",
+      "seconds": 3.1458000000011976e-05
+    },
+    {
+      "name": "limbs.row-3-weighted-product-invariant",
+      "result": "unsat",
+      "seconds": 0.0003948329999999972
+    },
+    {
+      "name": "limbs.complete-128-by-128-product",
+      "result": "unsat",
+      "seconds": 0.0004655830000000055
+    },
+    {
+      "name": "limbs.output-assembly-preserves-all-256-bits",
+      "result": "unsat",
+      "seconds": 7.287500000000002e-05
+    },
+    {
+      "name": "limbs.all-array-accesses-in-bounds",
+      "result": "unsat",
+      "seconds": 0.0007449580000000039
+    },
+    {
+      "name": "limbs.product-fits-256-bits",
+      "result": "unsat",
+      "seconds": 0.00045112499999999667
+    },
+    {
+      "name": "special.swap-preserves-product",
+      "result": "unsat",
+      "seconds": 2.89170000000033e-05
+    },
+    {
+      "name": "special.zero-low64-implies-exact-factorization",
+      "result": "unsat",
+      "seconds": 0.0006356669999999925
+    },
+    {
+      "name": "special.row-0-carry-destination-is-zero",
+      "result": "unsat",
+      "seconds": 2.458300000000857e-05
+    },
+    {
+      "name": "special.row-0-weighted-product-invariant",
+      "result": "unsat",
+      "seconds": 0.00021199999999998997
+    },
+    {
+      "name": "special.row-1-carry-destination-is-zero",
+      "result": "unsat",
+      "seconds": 2.108300000000507e-05
+    },
+    {
+      "name": "special.row-1-weighted-product-invariant",
+      "result": "unsat",
+      "seconds": 0.002595666999999996
+    },
+    {
+      "name": "special.row-2-carry-destination-is-zero",
+      "result": "unsat",
+      "seconds": 2.504100000000342e-05
+    },
+    {
+      "name": "special.row-2-weighted-product-invariant",
+      "result": "unsat",
+      "seconds": 0.0008658750000000021
+    },
+    {
+      "name": "special.row-3-carry-destination-is-zero",
+      "result": "unsat",
+      "seconds": 2.3458000000003976e-05
+    },
+    {
+      "name": "special.row-3-weighted-product-invariant",
+      "result": "unsat",
+      "seconds": 0.0004220000000000057
+    },
+    {
+      "name": "special.complete-product-after-exact-64bit-shift",
+      "result": "unsat",
+      "seconds": 0.0004386660000000042
+    },
+    {
+      "name": "special.shifted-output-assembly-preserves-all-bits",
+      "result": "unsat",
+      "seconds": 7.258299999998719e-05
+    },
+    {
+      "name": "special.all-array-accesses-in-bounds",
+      "result": "unsat",
+      "seconds": 0.001899084000000023
+    },
+    {
+      "name": "special.intermediate-product-fits-192-bits",
+      "result": "unsat",
+      "seconds": 0.00040829200000000454
+    }
+  ],
+  "claim": "Exact 128x128 -> 256 unsigned integer product for every input pair, including swapped low64-zero specialization and generic path, with uint64 accumulator bounds, correct carries, limb extraction/assembly, and array indices; conditional on manually reviewed source-to-model correspondence.",
+  "composition": "Substitution into otherwise unchanged compiler-rt fp_mul_impl.inc preserves the productHi/productLo bits consumed by normalization and IEEE binary128 rounding. Independent binary128 implementation correctness and compiler translation are not proved.",
+  "preconditions": "rep_t is unsigned 128 bits; uint32_t/uint64_t have the named widths; hi and lo point to distinct writable rep_t objects; standard unsigned shifts/casts and no compiler miscompilation.",
+  "trustedBase": "Z3, Python, source hash, source-to-model mapping, standard unsigned C arithmetic; no independent proof kernel certificate check."
+}
