@@ -1,5 +1,13 @@
 # Verification
 
+The expanded [correctness research](../docs/correctness-research.html) adds Lean
+kernel proofs, source-to-WASM translation validation, and integrator analysis.
+Run it with `npm run verify:research` after the root README's proof-tool setup.
+Its modules and trusted boundaries are documented in [kernel/](kernel/README.md),
+[ephemeris/](ephemeris/README.md), [translation/](translation/README.md), and
+[integrator/](integrator/README.md). The commands below retain the earlier,
+separately scoped port and experimental-helper checks.
+
 Run targeted formal obligations and executable compiler checks against the
 pinned sources fetched by `npm run build`. These do **not** verify the entire
 orbit solver. Read [the scope and findings](../docs/verification.html).

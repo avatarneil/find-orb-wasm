@@ -1,0 +1,24 @@
+{
+  "lean": {
+    "version": "4.24.0",
+    "commit": "797c613eb9b6d4ec95db23e3e00af9ac6657f24b",
+    "releaseBaseURL": "https://github.com/leanprover/lean4/releases/download/v4.24.0/",
+    "assets": {
+      "Darwin-arm64": {"name": "lean-4.24.0-darwin_aarch64.tar.zst", "sha256": "17ee554702c199fc03f37b1c3708245671c93f5d932dcff55a03fa6cdb5e5adf"},
+      "Darwin-x86_64": {"name": "lean-4.24.0-darwin.tar.zst", "sha256": "a5ef0fb0e14645eaa0e60bc6ba39a07e7deeeec73dc93ce7195b837eb9de2c9f"},
+      "Linux-aarch64": {"name": "lean-4.24.0-linux_aarch64.tar.zst", "sha256": "237f8ef43fb40d16681871fb04b2c56f023afc02a5a3877831d35dd493823c23"},
+      "Linux-x86_64": {"name": "lean-4.24.0-linux.tar.zst", "sha256": "b14f5e5159219dd1a1956c3b806813319f5e94ccd5bdfd56f54520609a5bb5ec"}
+    }
+  },
+  "mathlib": {
+    "repository": "https://github.com/leanprover-community/mathlib4.git",
+    "commit": "f897ebcf72cd16f89ab4577d0c826cd14afaafc7",
+    "tag": "v4.24.0",
+    "cacheModules": [
+      "Mathlib.Tactic.Ring", "Mathlib.Tactic.Linarith", "Mathlib.Tactic.NormNum",
+      "Mathlib.Data.Real.Basic", "Mathlib.Algebra.Polynomial.Derivative",
+      "Mathlib.Analysis.Calculus.Deriv.Polynomial"
+    ]
+  },
+  "provenance": "Lean asset SHA256s from official GitHub release API; mathlib tag resolved by git. Downloads remain under .cache; no global installation."
+}

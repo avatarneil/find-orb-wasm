@@ -1,0 +1,473 @@
+{
+  "schema": 1,
+  "certificateSHA256": "fb6ab69a9b9c928e7afe79598829084d07fd6878df4c9734fd9fddd07c5ce5b8",
+  "checked": {
+    "schema": 1,
+    "nodesChecked": 1084,
+    "polynomialIdentitiesChecked": 102,
+    "coefficientsChecked": 12756896,
+    "outputs": [
+      {
+        "profile": "mercury",
+        "quantity": "position",
+        "errorExact": "31740237527755605735469/1267650600228229401496703205376",
+        "errorDecimalUpper": "2.50386325081E-8",
+        "units": "km"
+      },
+      {
+        "profile": "mercury",
+        "quantity": "velocity",
+        "errorExact": "626279672245205526613/158456325028528675187087900672",
+        "errorDecimalUpper": "3.95238039336E-9",
+        "units": "km/day"
+      },
+      {
+        "profile": "mercury",
+        "quantity": "acceleration",
+        "errorExact": "1150287115447901915231/1267650600228229401496703205376",
+        "errorDecimalUpper": "9.07416535157E-10",
+        "units": "km/day^2"
+      },
+      {
+        "profile": "venus",
+        "quantity": "position",
+        "errorExact": "702059405811972943997/19807040628566084398385987584",
+        "errorDecimalUpper": "3.54449419769E-8",
+        "units": "km"
+      },
+      {
+        "profile": "venus",
+        "quantity": "velocity",
+        "errorExact": "2194582782613729472351/1267650600228229401496703205376",
+        "errorDecimalUpper": "1.73122056048E-9",
+        "units": "km/day"
+      },
+      {
+        "profile": "venus",
+        "quantity": "acceleration",
+        "errorExact": "76133576641569937361/633825300114114700748351602688",
+        "errorDecimalUpper": "1.20117604375E-10",
+        "units": "km/day^2"
+      },
+      {
+        "profile": "earth-moon-barycenter",
+        "quantity": "position",
+        "errorExact": "26672948048831020531551/633825300114114700748351602688",
+        "errorDecimalUpper": "4.20824918855E-8",
+        "units": "km"
+      },
+      {
+        "profile": "earth-moon-barycenter",
+        "quantity": "velocity",
+        "errorExact": "1549361788061795029781/1267650600228229401496703205376",
+        "errorDecimalUpper": "1.22223094265E-9",
+        "units": "km/day"
+      },
+      {
+        "profile": "earth-moon-barycenter",
+        "quantity": "acceleration",
+        "errorExact": "70599353573765486605/1267650600228229401496703205376",
+        "errorDecimalUpper": "5.56930699683E-11",
+        "units": "km/day^2"
+      },
+      {
+        "profile": "mars",
+        "quantity": "position",
+        "errorExact": "88709938048245314046171/1267650600228229401496703205376",
+        "errorDecimalUpper": "6.99798020309E-8",
+        "units": "km"
+      },
+      {
+        "profile": "mars",
+        "quantity": "velocity",
+        "errorExact": "692908657062654634487/633825300114114700748351602688",
+        "errorDecimalUpper": "1.09321710090E-9",
+        "units": "km/day"
+      },
+      {
+        "profile": "mars",
+        "quantity": "acceleration",
+        "errorExact": "18812927804922091409/633825300114114700748351602688",
+        "errorDecimalUpper": "2.96815665161E-11",
+        "units": "km/day^2"
+      },
+      {
+        "profile": "jupiter",
+        "quantity": "position",
+        "errorExact": "237416900602012164312855/1267650600228229401496703205376",
+        "errorDecimalUpper": "1.87288911124E-7",
+        "units": "km"
+      },
+      {
+        "profile": "jupiter",
+        "quantity": "velocity",
+        "errorExact": "257767634671013557445/633825300114114700748351602688",
+        "errorDecimalUpper": "4.06685619247E-10",
+        "units": "km/day"
+      },
+      {
+        "profile": "jupiter",
+        "quantity": "acceleration",
+        "errorExact": "2373095972556478491/1267650600228229401496703205376",
+        "errorDecimalUpper": "1.87204263709E-12",
+        "units": "km/day^2"
+      },
+      {
+        "profile": "saturn",
+        "quantity": "position",
+        "errorExact": "410435465777621972099049/1267650600228229401496703205376",
+        "errorDecimalUpper": "3.23776493069E-7",
+        "units": "km"
+      },
+      {
+        "profile": "saturn",
+        "quantity": "velocity",
+        "errorExact": "381715822077886299881/1267650600228229401496703205376",
+        "errorDecimalUpper": "3.01120688942E-10",
+        "units": "km/day"
+      },
+      {
+        "profile": "saturn",
+        "quantity": "acceleration",
+        "errorExact": "326916348555929503/633825300114114700748351602688",
+        "errorDecimalUpper": "5.15783053307E-13",
+        "units": "km/day^2"
+      },
+      {
+        "profile": "uranus",
+        "quantity": "position",
+        "errorExact": "850851868407359564736837/1267650600228229401496703205376",
+        "errorDecimalUpper": "6.71203775121E-7",
+        "units": "km"
+      },
+      {
+        "profile": "uranus",
+        "quantity": "velocity",
+        "errorExact": "252818982672011637649/1267650600228229401496703205376",
+        "errorDecimalUpper": "1.99439011528E-10",
+        "units": "km/day"
+      },
+      {
+        "profile": "uranus",
+        "quantity": "acceleration",
+        "errorExact": "169189880256761317/1267650600228229401496703205376",
+        "errorDecimalUpper": "1.33467282094E-13",
+        "units": "km/day^2"
+      },
+      {
+        "profile": "neptune",
+        "quantity": "position",
+        "errorExact": "1277787839837009120618725/1267650600228229401496703205376",
+        "errorDecimalUpper": "0.00000100799687202",
+        "units": "km"
+      },
+      {
+        "profile": "neptune",
+        "quantity": "velocity",
+        "errorExact": "200354276882901407457/1267650600228229401496703205376",
+        "errorDecimalUpper": "1.58051656227E-10",
+        "units": "km/day"
+      },
+      {
+        "profile": "neptune",
+        "quantity": "acceleration",
+        "errorExact": "3941155424916015/79228162514264337593543950336",
+        "errorDecimalUpper": "4.97443749779E-14",
+        "units": "km/day^2"
+      },
+      {
+        "profile": "pluto",
+        "quantity": "position",
+        "errorExact": "1880365119878256843960533/1267650600228229401496703205376",
+        "errorDecimalUpper": "0.00000148334653062",
+        "units": "km"
+      },
+      {
+        "profile": "pluto",
+        "quantity": "velocity",
+        "errorExact": "202711431078225023599/1267650600228229401496703205376",
+        "errorDecimalUpper": "1.59911123020E-10",
+        "units": "km/day"
+      },
+      {
+        "profile": "pluto",
+        "quantity": "acceleration",
+        "errorExact": "28628236024550009/633825300114114700748351602688",
+        "errorDecimalUpper": "4.51673923705E-14",
+        "units": "km/day^2"
+      },
+      {
+        "profile": "geocentric-moon",
+        "quantity": "position",
+        "errorExact": "274182396347652117839/1267650600228229401496703205376",
+        "errorDecimalUpper": "2.16291773379E-10",
+        "units": "km"
+      },
+      {
+        "profile": "geocentric-moon",
+        "quantity": "velocity",
+        "errorExact": "62831303242999331601/633825300114114700748351602688",
+        "errorDecimalUpper": "9.91303175050E-11",
+        "units": "km/day"
+      },
+      {
+        "profile": "geocentric-moon",
+        "quantity": "acceleration",
+        "errorExact": "35047777099433689481/633825300114114700748351602688",
+        "errorDecimalUpper": "5.52956423373E-11",
+        "units": "km/day^2"
+      },
+      {
+        "profile": "barycentric-sun",
+        "quantity": "position",
+        "errorExact": "412135298570199303427/1267650600228229401496703205376",
+        "errorDecimalUpper": "3.25117424704E-10",
+        "units": "km"
+      },
+      {
+        "profile": "barycentric-sun",
+        "quantity": "velocity",
+        "errorExact": "595668692960948621/1267650600228229401496703205376",
+        "errorDecimalUpper": "4.69899744341E-13",
+        "units": "km/day"
+      },
+      {
+        "profile": "barycentric-sun",
+        "quantity": "acceleration",
+        "errorExact": "3426259477408311/1267650600228229401496703205376",
+        "errorDecimalUpper": "2.70284215288E-15",
+        "units": "km/day^2"
+      },
+      {
+        "profile": "nutations",
+        "quantity": "position",
+        "errorExact": "23264884029/633825300114114700748351602688",
+        "errorDecimalUpper": "3.67055149500E-20",
+        "units": "radian"
+      },
+      {
+        "profile": "nutations",
+        "quantity": "velocity",
+        "errorExact": "18968975941/1267650600228229401496703205376",
+        "errorDecimalUpper": "1.49638835320E-20",
+        "units": "radian/day"
+      },
+      {
+        "profile": "nutations",
+        "quantity": "acceleration",
+        "errorExact": "16520186545/1267650600228229401496703205376",
+        "errorDecimalUpper": "1.30321293124E-20",
+        "units": "radian/day^2"
+      },
+      {
+        "profile": "librations",
+        "quantity": "position",
+        "errorExact": "4022772641879229801/316912650057057350374175801344",
+        "errorDecimalUpper": "1.26936322711E-11",
+        "units": "radian"
+      },
+      {
+        "profile": "librations",
+        "quantity": "velocity",
+        "errorExact": "49840071488385/633825300114114700748351602688",
+        "errorDecimalUpper": "7.86337678213E-17",
+        "units": "radian/day"
+      },
+      {
+        "profile": "librations",
+        "quantity": "acceleration",
+        "errorExact": "1450716145683/1267650600228229401496703205376",
+        "errorDecimalUpper": "1.14441325191E-18",
+        "units": "radian/day^2"
+      }
+    ],
+    "scope": "Per-component absolute arithmetic error at the return of source-ordered interp(), relative to exact evaluation of the same stored polynomial. Bounds stop BEFORE km-to-AU conversion, barycentric/heliocentric subtraction, Earth/Moon combinations, and target-center combinations. They exclude JPL model/fit error, coefficient-generation error, time-scale conversion error, and whole-orbit error.",
+    "checker": "Independent Python exact-rational checker; see Lean export for kernel arithmetic checks",
+    "trustedBase": [
+      "Python interpreter/arbitrary-precision integer and Fraction implementation",
+      "Source extractor, hash contract, and restricted arithmetic parser",
+      "IEEE binary64 nearest-even rounding error theorem and gradual underflow (explicit real-rounding premise in Lean)",
+      "Standalone Python arithmetic claims are independently strengthened by Lean polynomial/L1 proofs and the instantiated rounded DAG",
+      "Correct source-to-compiler correspondence, caller preconditions, successful I/O, and runtime implementation are separate obligations"
+    ]
+  },
+  "control": {
+    "schema": 1,
+    "z3Version": "4.15.4",
+    "proved": [
+      {
+        "name": "subinterval.index-in-bounds-including-right-endpoint",
+        "result": "unsat"
+      },
+      {
+        "name": "subinterval.tc-in-closed-unit-interval",
+        "result": "unsat"
+      },
+      {
+        "name": "subinterval.right-endpoint-is-last-record-tc-one",
+        "result": "unsat"
+      },
+      {
+        "name": "subinterval.left-endpoint-is-first-record-tc-minus-one",
+        "result": "unsat"
+      },
+      {
+        "name": "subinterval.all-coordinate-numerators-fit-53-significant-bits",
+        "result": "unsat"
+      },
+      {
+        "name": "coefficient.read-in-bounds",
+        "result": "unsat"
+      },
+      {
+        "name": "coefficient.one-past-pointer-in-bounds",
+        "result": "unsat"
+      },
+      {
+        "name": "position.basis-read-in-bounds",
+        "result": "unsat"
+      },
+      {
+        "name": "velocity.omits-zero-derivative-only",
+        "result": "unsat"
+      },
+      {
+        "name": "recurrences.all-array-reads-and-writes-in-bounds",
+        "result": "unsat"
+      },
+      {
+        "name": "recurrences.counter-decreases-and-stops-at-ncf",
+        "result": "unsat"
+      },
+      {
+        "name": "cache.hit-with-larger-prefix-covers-smaller-request",
+        "result": "unsat"
+      },
+      {
+        "name": "outputs.position-velocity-acceleration-in-bounds",
+        "result": "unsat"
+      },
+      {
+        "name": "outputs.position-velocity-acceleration-injective-and-disjoint",
+        "result": "unsat"
+      },
+      {
+        "name": "all-interp-pointer-products-fit-wasm32",
+        "result": "unsat"
+      },
+      {
+        "name": "cache.extending-prefix-preserves-every-certified-bound",
+        "result": "unsat"
+      },
+      {
+        "name": "cache.position-reset-restores-exact-two-element-seed",
+        "result": "unsat"
+      },
+      {
+        "name": "cache.cold-start-sentinel-always-forces-reset",
+        "result": "unsat"
+      },
+      {
+        "name": "record-cache.successful-io-or-valid-hit-has-correct-record",
+        "result": "unsat"
+      },
+      {
+        "name": "record-read-address-within-pinned-data",
+        "result": "unsat"
+      }
+    ],
+    "counterexample": {
+      "name": "record-cache.failed-io-retry",
+      "result": "sat",
+      "model": "[nr = 3772, contents = 3773, cached = 3772]",
+      "mitigation": "Strict Find_Orb wrapper terminates on any failed JPL evaluation; cache validity is asserted only for successful I/O, never for recovery after ignored read failure."
+    },
+    "scope": "Integer/real source-anchored loop and cache invariant obligations. Z3/Python are trusted here; dumped SMT-LIB is reproducible but not kernel checked.",
+    "coordinateExactness": "For finite DE440 JDs in [2^21,2^22), the binary64 grid is2^-31 days. Subtraction of .5-aligned endpoints yields <2^53-bit dyadic numerators; division by32, multiplication by1/2/4/8, fractional-part extraction, and2*frac-1 preserve representability. This arithmetic representation argument supplies the integer ticks abstraction."
+  },
+  "mutations": {
+    "schema": 1,
+    "controls": [
+      {
+        "name": "rounding-bound-set-to-zero",
+        "rejected": true,
+        "message": "Rounding error bound too small at 6"
+      },
+      {
+        "name": "wrong-derivative-polynomial",
+        "rejected": true,
+        "message": "Polynomial certificate mismatch at 42"
+      },
+      {
+        "name": "recurrence-subtraction-changed-to-addition",
+        "rejected": true,
+        "message": "Polynomial certificate mismatch at 6"
+      },
+      {
+        "name": "coefficient-sum-skips-last-accumulation",
+        "rejected": true,
+        "message": "Coefficient sum order or range changed"
+      },
+      {
+        "name": "wrong-velocity-time-scale",
+        "rejected": true,
+        "message": "Nonexact or unsupported derivative scaling"
+      },
+      {
+        "name": "subnormal-error-ignored",
+        "rejected": true,
+        "message": "Rounding model changed"
+      },
+      {
+        "name": "unsupported-function-call-in-arithmetic-parser",
+        "rejected": true,
+        "message": "Unsupported C arithmetic syntax: Call(func=Name(id='hypot', ctx=Load()), args=[Name(id='p1', ctx=Load()), Name(id='p2', ctx=Load())])"
+      },
+      {
+        "name": "actual-source-derivative-term-deleted",
+        "rejected": true,
+        "message": "Source contract changed: interp"
+      },
+      {
+        "name": "actual-source-coefficient-loop-off-by-one",
+        "rejected": true,
+        "message": "Source contract changed: interp"
+      },
+      {
+        "name": "actual-source-endpoint-correction-deleted",
+        "rejected": true,
+        "message": "Source contract changed: interp"
+      },
+      {
+        "name": "understated-real-data-coefficient-envelope",
+        "rejected": true,
+        "message": "Coefficient envelope violated: mercury/0/0"
+      },
+      {
+        "name": "consistently-relabeled-planet-and-units",
+        "rejected": true,
+        "message": "Canonical profile names/order mismatch"
+      }
+    ],
+    "acceptedBadCertificates": 0
+  },
+  "kernel": {
+    "performed": false,
+    "reason": "--certificates-only: delegated to the central kernel runner",
+    "report": "verification/kernel/evidence/report.json",
+    "negativeControlsReport": "verification/ephemeris/evidence/kernel-negatives.json",
+    "requiredNextCommands": [
+      "python verification/kernel/check.py",
+      "python verification/ephemeris/kernel_negatives.py"
+    ]
+  },
+  "primarySources": [
+    "https://github.com/Bill-Gray/jpl_eph/blob/a73f25e54d02b99b1c0d9a9d6c61acfbb2fa3a26/jpleph.cpp",
+    "https://ssd.jpl.nasa.gov/planets/eph_export.html",
+    "https://dlmf.nist.gov/18.9.E21",
+    "https://dlmf.nist.gov/18.9.T1",
+    "https://gappa.gitlabpages.inria.fr/gappa/arithmetic.html",
+    "https://gappa.gitlabpages.inria.fr/gappa/invoking.html",
+    "https://flocq.gitlabpages.inria.fr/theos.html"
+  ]
+}

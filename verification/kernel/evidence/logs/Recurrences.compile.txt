@@ -1,0 +1,7 @@
+'FindOrbEphemeris.position_derivative' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemeris.velocity_derivative' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemeris.position_second_derivative' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemeris.linear_combination_derivative' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemeris.position_affine_time_derivative' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemeris.velocity_affine_time_derivative' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemeris.position_affine_time_second_derivative' depends on axioms: [propext, Classical.choice, Quot.sound]

@@ -1,0 +1,697 @@
+{
+  "schema": 1,
+  "status": "verified",
+  "sourceContract": {
+    "repository": "lunar",
+    "commit": "d95191818d7975c22613f231fea160341203abbe",
+    "file": "miscell.cpp",
+    "functions": {
+      "dot_product": "1b76708ea5eee5ae15d0f1196fee7c576d172f32da44ad9b4bdd1ef9869660de",
+      "vector_cross_product": "09ac309ee577cca8372ef559eb6367fccd32d2e5b7591bbae6500d65a0503faf",
+      "vector3_length": "97582037afef8f27e75ad6bbd9fadd7a69beb1d8985842f24a8837c8b0ab47b8",
+      "normalize_vect3": "c4858dfd98f72778703bbe0d762989fbe4260290b84bdf168cf6089110000e34"
+    }
+  },
+  "sourceSHA256": "489a972ea8250478395e9a687e95cf304328640a2f0ab91f6edce335bf40840a",
+  "astSHA256": "73a272df6a11993ddf49d08849f5e73ab67b2b8b575b53239b9a9c1ba9fb98e2",
+  "modules": {
+    "O0": {
+      "path": "verification/translation/evidence/kernels-O0.wasm",
+      "sha256": "d8a9911034d6bb7c66fbdb2b4aab2a356a6e92fc004320264a1d2479b9fa7c11",
+      "bytes": 1492,
+      "functions": {
+        "dot_product": {
+          "status": "verified",
+          "index": 1,
+          "debugName": "dot_product",
+          "bodySHA256": "7a1df201b91f30c547d2b6c2e2b454ffc06526c6b6c2fd1ea44b22d2cd8e5064",
+          "obligation": "O0-dot_product"
+        },
+        "vector_cross_product": {
+          "status": "verified",
+          "index": 2,
+          "debugName": "vector_cross_product",
+          "bodySHA256": "91c2952a0af6958474ef2a320249d6a833160fe55ac3e7db4dade30f43308a32",
+          "obligation": "O0-vector_cross_product"
+        },
+        "vector3_length": {
+          "status": "verified",
+          "index": 3,
+          "debugName": "vector3_length",
+          "bodySHA256": "fa8d532e8ccc422efa13ef9534019e47f88e7ae13a7548af617bc2160d2d7199",
+          "obligation": "O0-vector3_length"
+        },
+        "normalize_vect3": {
+          "status": "verified",
+          "index": 4,
+          "debugName": "normalize_vect3",
+          "bodySHA256": "47b2c0bb23190b683114d6b2998643eeb3c57939c9e93923571a1462586941fd",
+          "obligation": "O0-normalize_vect3"
+        }
+      }
+    },
+    "O3": {
+      "path": "verification/translation/evidence/kernels-O3.wasm",
+      "sha256": "4ba42e5222f224ded3240d1077d85671da843f43803c20d30cba50534a29873c",
+      "bytes": 684,
+      "functions": {
+        "dot_product": {
+          "status": "verified",
+          "index": 0,
+          "debugName": "dot_product",
+          "bodySHA256": "15d960f3111e6490ed105d17329f642a16d727d089c7ffaf4da030a8b00083ca",
+          "obligation": "O3-dot_product"
+        },
+        "vector_cross_product": {
+          "status": "verified",
+          "index": 1,
+          "debugName": "vector_cross_product",
+          "bodySHA256": "d3fddd8147e09d390752559c6f99b034998b0b867939aac9026fc9f4e9139ab9",
+          "obligation": "O3-vector_cross_product"
+        },
+        "vector3_length": {
+          "status": "verified",
+          "index": 2,
+          "debugName": "vector3_length",
+          "bodySHA256": "510eeaab89d4fca86fcf7b762d0135624ed00a28715974103dc3c7864a570fb5",
+          "obligation": "O3-vector3_length"
+        },
+        "normalize_vect3": {
+          "status": "verified",
+          "index": 3,
+          "debugName": "normalize_vect3",
+          "bodySHA256": "c521b668ca26d04deafb6a1f8382b7741681383272f34208b40fcf8c48e76adc",
+          "obligation": "O3-normalize_vect3"
+        }
+      }
+    },
+    "shipped": {
+      "path": "dist/fo.wasm",
+      "sha256": "256e850727f91a441f2344217a6a15727dfefcabb91f03b61e8d694d9d03cd57",
+      "bytes": 667077,
+      "functions": {
+        "dot_product": {
+          "status": "unavailable",
+          "reason": "No retained name/body; possibly inlined or eliminated. Extracted proofs do not validate these inlined production call sites."
+        },
+        "vector_cross_product": {
+          "status": "verified",
+          "index": 234,
+          "debugName": "vector_cross_product",
+          "bodySHA256": "d3fddd8147e09d390752559c6f99b034998b0b867939aac9026fc9f4e9139ab9",
+          "obligation": "shipped-vector_cross_product"
+        },
+        "vector3_length": {
+          "status": "unavailable",
+          "reason": "No retained name/body; possibly inlined or eliminated. Extracted proofs do not validate these inlined production call sites."
+        },
+        "normalize_vect3": {
+          "status": "unavailable",
+          "reason": "No retained name/body; possibly inlined or eliminated. Extracted proofs do not validate these inlined production call sites."
+        }
+      }
+    }
+  },
+  "commands": {
+    "O0": [
+      "/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/.wasm-toolchain/python/3.13.3_64bit/bin/python3",
+      "/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/.wasm-toolchain/upstream/emscripten/emcc.py",
+      "-std=c++17",
+      "-fno-fast-math",
+      "-ffp-contract=off",
+      "-g2",
+      "-O0",
+      "/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/translation/evidence/kernels.cpp",
+      "-sSTANDALONE_WASM=1",
+      "-Wl,--no-entry",
+      "-Wl,--export=dot_product",
+      "-Wl,--export=vector_cross_product",
+      "-Wl,--export=vector3_length",
+      "-Wl,--export=normalize_vect3",
+      "-o",
+      "/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/translation/evidence/kernels-O0.wasm"
+    ],
+    "O3": [
+      "/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/.wasm-toolchain/python/3.13.3_64bit/bin/python3",
+      "/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/.wasm-toolchain/upstream/emscripten/emcc.py",
+      "-std=c++17",
+      "-fno-fast-math",
+      "-ffp-contract=off",
+      "-g2",
+      "-O3",
+      "/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/translation/evidence/kernels.cpp",
+      "-sSTANDALONE_WASM=1",
+      "-Wl,--no-entry",
+      "-Wl,--export=dot_product",
+      "-Wl,--export=vector_cross_product",
+      "-Wl,--export=vector3_length",
+      "-Wl,--export=normalize_vect3",
+      "-o",
+      "/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/translation/evidence/kernels-O3.wasm"
+    ]
+  },
+  "distributionProvenance": {
+    "manifestSHA256": "dc055014846ee95d22b100aea61a3f2acf569095ff9f82d478bf82a184d4c4c5",
+    "sourceLockSHA256": "cfe1a499eaa27516c856fcec984b5f35380b8fbd6ea9515062a464662e992f01",
+    "upstreamFileSHA256": "533d9c3ec87628851c166567ff87ac1a2f95c8359df824c04f86eb62bef796ff",
+    "emscriptenVersion": "4.0.23"
+  },
+  "checkerSHA256": {
+    "model.py": "319b900e0e94560d07ce173bfce0676abd6803410875d9ebdeacc1ac31c144d5",
+    "wasm.py": "66aee1cd82425aeec1420be16e76223aa9ecc11920ee1fe2190dbb1b852032c9",
+    "verify.py": "48c3c73060dd88221359203e0e4171a30c4b5af1656565f8c6a3b3dbc0faba6c",
+    "mutations.py": "1ee3a9e5943a441f606a1e3344814eb20ff2e357d27478b308aa13f1e3762f2e",
+    "replay-witness.mjs": "c3f10da5d805271874ad45e13af93c857d5eaf8c443b0b5469788f007b9f3d77"
+  },
+  "solvers": {
+    "z3": "4.15.4",
+    "cvc5": "1.3.4"
+  },
+  "obligations": [
+    {
+      "name": "lemma-sqrt-zero",
+      "z3": "unsat",
+      "cvc5": "unsat",
+      "z3Seconds": 0.15229220874607563,
+      "cvc5Seconds": 2.4535233327187598,
+      "smt2SHA256": "0c834b5ff9b2b439fc96c7e3200ae159d3f90818829bfab185f256d6a4c54d53"
+    },
+    {
+      "name": "O0-dot_product",
+      "z3": "unsat",
+      "cvc5": "unsat",
+      "z3Seconds": 6.379187107086182e-05,
+      "cvc5Seconds": 0.001494457945227623,
+      "smt2SHA256": "d9e55df80b5725fe937378af578bf3c47286ba50169c8e6099f68eb8acffb1c4",
+      "dependsOn": [
+        "lemma-sqrt-zero"
+      ],
+      "method": "UNSAT sound congruence overapproximation of concrete IEEE formula; exact substitution round-trip checked",
+      "arithmeticTerms": 5,
+      "paths": 1,
+      "opcodes": [
+        "f64.add",
+        "f64.load",
+        "f64.mul",
+        "global.get",
+        "i32.const",
+        "i32.load",
+        "i32.store",
+        "i32.sub",
+        "local.get",
+        "local.set",
+        "return"
+      ],
+      "sourceCells": 6,
+      "sourceReturn": true
+    },
+    {
+      "name": "O0-vector_cross_product",
+      "z3": "unsat",
+      "cvc5": "unsat",
+      "z3Seconds": 3.00002284348011e-05,
+      "cvc5Seconds": 0.0009429589845240116,
+      "smt2SHA256": "ee2e35216db9416ff0586e3a91352c93815d440a014e4b2197322c32c2ede81d",
+      "dependsOn": [
+        "lemma-sqrt-zero"
+      ],
+      "method": "UNSAT sound congruence overapproximation of concrete IEEE formula; exact substitution round-trip checked",
+      "arithmeticTerms": 9,
+      "paths": 1,
+      "opcodes": [
+        "f64.load",
+        "f64.mul",
+        "f64.store",
+        "f64.sub",
+        "global.get",
+        "i32.const",
+        "i32.load",
+        "i32.store",
+        "i32.sub",
+        "local.get",
+        "local.set",
+        "return"
+      ],
+      "sourceCells": 9,
+      "sourceReturn": false
+    },
+    {
+      "name": "O0-vector3_length",
+      "z3": "unsat",
+      "cvc5": "unsat",
+      "z3Seconds": 3.695813938975334e-05,
+      "cvc5Seconds": 0.0009369170293211937,
+      "smt2SHA256": "bbd6e86e5473c433d95aef683bfa03517ea6c5e6a5b0525f9a912d85197353e5",
+      "dependsOn": [
+        "lemma-sqrt-zero"
+      ],
+      "method": "UNSAT sound congruence overapproximation of concrete IEEE formula; exact substitution round-trip checked",
+      "arithmeticTerms": 6,
+      "paths": 1,
+      "opcodes": [
+        "f64.add",
+        "f64.load",
+        "f64.mul",
+        "f64.sqrt",
+        "global.get",
+        "i32.const",
+        "i32.load",
+        "i32.store",
+        "i32.sub",
+        "local.get",
+        "local.set",
+        "return"
+      ],
+      "sourceCells": 3,
+      "sourceReturn": true
+    },
+    {
+      "name": "O0-normalize_vect3",
+      "z3": "unsat",
+      "cvc5": "unsat",
+      "z3Seconds": 0.014332041144371033,
+      "cvc5Seconds": 0.04043208295479417,
+      "smt2SHA256": "2f73db705fe915f5e8af283d07266eca81d855ad0fabb08fdca41ef505bfc510",
+      "dependsOn": [
+        "lemma-sqrt-zero"
+      ],
+      "method": "UNSAT sound congruence overapproximation of concrete IEEE formula; exact substitution round-trip checked",
+      "arithmeticTerms": 9,
+      "paths": 2,
+      "opcodes": [
+        "block",
+        "br_if",
+        "f64.add",
+        "f64.convert_i32_s",
+        "f64.div",
+        "f64.load",
+        "f64.mul",
+        "f64.ne",
+        "f64.sqrt",
+        "f64.store",
+        "global.get",
+        "i32.and",
+        "i32.const",
+        "i32.eqz",
+        "i32.load",
+        "i32.store",
+        "i32.sub",
+        "local.get",
+        "local.set",
+        "return"
+      ],
+      "sourceCells": 3,
+      "sourceReturn": true
+    },
+    {
+      "name": "O3-dot_product",
+      "z3": "unsat",
+      "cvc5": "unsat",
+      "z3Seconds": 5.8582983911037445e-05,
+      "cvc5Seconds": 0.0012921253219246864,
+      "smt2SHA256": "fa8b438464cd1fa0850abd5efcb5a3c84c39b776b2e7f0d1fc2e24a1e0ce1117",
+      "dependsOn": [
+        "lemma-sqrt-zero"
+      ],
+      "method": "UNSAT sound congruence overapproximation of concrete IEEE formula; exact substitution round-trip checked",
+      "arithmeticTerms": 5,
+      "paths": 1,
+      "opcodes": [
+        "f64.add",
+        "f64.load",
+        "f64.mul",
+        "local.get"
+      ],
+      "sourceCells": 6,
+      "sourceReturn": true
+    },
+    {
+      "name": "O3-vector_cross_product",
+      "z3": "unsat",
+      "cvc5": "unsat",
+      "z3Seconds": 3.5833101719617844e-05,
+      "cvc5Seconds": 0.0010107923299074173,
+      "smt2SHA256": "3fa27e945bbb3fa54a2f5763c6fdf055641f02fb1917e5429c1337f67bd7f32b",
+      "dependsOn": [
+        "lemma-sqrt-zero"
+      ],
+      "method": "UNSAT sound congruence overapproximation of concrete IEEE formula; exact substitution round-trip checked",
+      "arithmeticTerms": 9,
+      "paths": 1,
+      "opcodes": [
+        "f64.load",
+        "f64.mul",
+        "f64.store",
+        "f64.sub",
+        "local.get"
+      ],
+      "sourceCells": 9,
+      "sourceReturn": false
+    },
+    {
+      "name": "O3-vector3_length",
+      "z3": "unsat",
+      "cvc5": "unsat",
+      "z3Seconds": 3.479188308119774e-05,
+      "cvc5Seconds": 0.000879041850566864,
+      "smt2SHA256": "a4986b772c590ac1bba48ede5169f31c70989d4de77cf2e82eaaa79f44a7a371",
+      "dependsOn": [
+        "lemma-sqrt-zero"
+      ],
+      "method": "UNSAT sound congruence overapproximation of concrete IEEE formula; exact substitution round-trip checked",
+      "arithmeticTerms": 6,
+      "paths": 1,
+      "opcodes": [
+        "f64.add",
+        "f64.load",
+        "f64.mul",
+        "f64.sqrt",
+        "local.get",
+        "local.tee"
+      ],
+      "sourceCells": 3,
+      "sourceReturn": true
+    },
+    {
+      "name": "O3-normalize_vect3",
+      "z3": "unsat",
+      "cvc5": "unsat",
+      "z3Seconds": 0.012099958024919033,
+      "cvc5Seconds": 0.0171936247497797,
+      "smt2SHA256": "1a31215eb891773931c010933b81cacc80bf09ab898a3cd278907f76896cdcff",
+      "dependsOn": [
+        "lemma-sqrt-zero"
+      ],
+      "method": "UNSAT sound congruence overapproximation of concrete IEEE formula; exact substitution round-trip checked",
+      "arithmeticTerms": 9,
+      "paths": 2,
+      "opcodes": [
+        "f64.add",
+        "f64.const",
+        "f64.div",
+        "f64.load",
+        "f64.mul",
+        "f64.ne",
+        "f64.sqrt",
+        "f64.store",
+        "if",
+        "local.get",
+        "local.set",
+        "local.tee"
+      ],
+      "sourceCells": 3,
+      "sourceReturn": true
+    },
+    {
+      "name": "shipped-vector_cross_product",
+      "z3": "unsat",
+      "cvc5": "unsat",
+      "z3Seconds": 6.250012665987015e-05,
+      "cvc5Seconds": 0.0012198337353765965,
+      "smt2SHA256": "8e23ce018457a57c76cf425ce4c6a79f83f75acb6d4d52e1dd25bd5868e9c2f3",
+      "dependsOn": [
+        "lemma-sqrt-zero"
+      ],
+      "method": "UNSAT sound congruence overapproximation of concrete IEEE formula; exact substitution round-trip checked",
+      "arithmeticTerms": 9,
+      "paths": 1,
+      "opcodes": [
+        "f64.load",
+        "f64.mul",
+        "f64.store",
+        "f64.sub",
+        "local.get"
+      ],
+      "sourceCells": 9,
+      "sourceReturn": false
+    },
+    {
+      "name": "negative-add-to-sub",
+      "z3": "sat",
+      "cvc5": "sat",
+      "z3Seconds": 0.002495750319212675,
+      "cvc5Seconds": 0.0035207075998187065,
+      "smt2SHA256": "5c6fed64f65a7e454e678553b58f6c3544af29dec26153e695ff43fdc9ba2078"
+    },
+    {
+      "name": "negative-multiply-to-add",
+      "z3": "sat",
+      "cvc5": "sat",
+      "z3Seconds": 0.0022224579006433487,
+      "cvc5Seconds": 0.003455166704952717,
+      "smt2SHA256": "1119bf29cd37d3700e5d3fb3dcddd144db8fe6c4879328cdd89d157715946d47"
+    },
+    {
+      "name": "negative-invert-normalize-branch",
+      "z3": "sat",
+      "cvc5": "sat",
+      "z3Seconds": 0.0018579582683742046,
+      "cvc5Seconds": 0.0037234160117805004,
+      "smt2SHA256": "a204831ec22d9553249db84dee04b61740739ab1d6d6a23c897a30e589a0e6ac"
+    },
+    {
+      "name": "negative-wrong-cross-store",
+      "z3": "sat",
+      "cvc5": "sat",
+      "z3Seconds": 0.0023207920603454113,
+      "cvc5Seconds": 0.00303862476721406,
+      "smt2SHA256": "52a1d67048da8323e6a62ab62f3a7a412fdc968c457b2ae28b8ee66da4619ab6"
+    }
+  ],
+  "negativeControls": [
+    {
+      "name": "add-to-sub",
+      "result": "concrete-counterexample",
+      "sha256": "b8e8a6a416f82b41669a9acd229eee28a4572e25f96ab91622ec64a6a5953946",
+      "obligation": "negative-add-to-sub",
+      "inputArrays": [
+        [
+          1.0,
+          2.0,
+          3.0
+        ],
+        [
+          4.0,
+          5.0,
+          6.0
+        ]
+      ],
+      "actualWasmReplay": {
+        "before": {
+          "result": "4040000000000000",
+          "arrays": [
+            [
+              "3ff0000000000000",
+              "4000000000000000",
+              "4008000000000000"
+            ],
+            [
+              "4010000000000000",
+              "4014000000000000",
+              "4018000000000000"
+            ]
+          ]
+        },
+        "after": {
+          "result": "4028000000000000",
+          "arrays": [
+            [
+              "3ff0000000000000",
+              "4000000000000000",
+              "4008000000000000"
+            ],
+            [
+              "4010000000000000",
+              "4014000000000000",
+              "4018000000000000"
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "name": "multiply-to-add",
+      "result": "concrete-counterexample",
+      "sha256": "1bf1bbc610bb50fa9c617b1db3c35e0796e33dce5a68512ac743ae0650e1d111",
+      "obligation": "negative-multiply-to-add",
+      "inputArrays": [
+        [
+          1.0,
+          2.0,
+          3.0
+        ],
+        [
+          4.0,
+          5.0,
+          6.0
+        ]
+      ],
+      "actualWasmReplay": {
+        "before": {
+          "result": "4040000000000000",
+          "arrays": [
+            [
+              "3ff0000000000000",
+              "4000000000000000",
+              "4008000000000000"
+            ],
+            [
+              "4010000000000000",
+              "4014000000000000",
+              "4018000000000000"
+            ]
+          ]
+        },
+        "after": {
+          "result": "4040800000000000",
+          "arrays": [
+            [
+              "3ff0000000000000",
+              "4000000000000000",
+              "4008000000000000"
+            ],
+            [
+              "4010000000000000",
+              "4014000000000000",
+              "4018000000000000"
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "name": "invert-normalize-branch",
+      "result": "concrete-counterexample",
+      "sha256": "aeaf889e6c56fbb4751cdd8c5600f94a1be9bba9bac7d88dbe133ade3b347fae",
+      "obligation": "negative-invert-normalize-branch",
+      "inputArrays": [
+        [
+          1.0,
+          2.0,
+          3.0
+        ]
+      ],
+      "actualWasmReplay": {
+        "before": {
+          "result": "400deeea11683f49",
+          "arrays": [
+            [
+              "3fd11acee560242a",
+              "3fe11acee560242a",
+              "3fe9a8365810363f"
+            ]
+          ]
+        },
+        "after": {
+          "result": "400deeea11683f49",
+          "arrays": [
+            [
+              "3ff0000000000000",
+              "4000000000000000",
+              "4008000000000000"
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "name": "wrong-cross-store",
+      "result": "concrete-counterexample",
+      "sha256": "45c9158b2aebdf2b785cd4232cea6e98fcee36d3870b2a7fde9f5a80270984d9",
+      "obligation": "negative-wrong-cross-store",
+      "inputArrays": [
+        [
+          1.0,
+          2.0,
+          3.0
+        ],
+        [
+          4.0,
+          5.0,
+          6.0
+        ],
+        [
+          7.0,
+          8.0,
+          9.0
+        ]
+      ],
+      "actualWasmReplay": {
+        "before": {
+          "result": null,
+          "arrays": [
+            [
+              "c008000000000000",
+              "4018000000000000",
+              "c008000000000000"
+            ],
+            [
+              "4010000000000000",
+              "4014000000000000",
+              "4018000000000000"
+            ],
+            [
+              "401c000000000000",
+              "4020000000000000",
+              "4022000000000000"
+            ]
+          ]
+        },
+        "after": {
+          "result": null,
+          "arrays": [
+            [
+              "3ff0000000000000",
+              "4018000000000000",
+              "c008000000000000"
+            ],
+            [
+              "4010000000000000",
+              "4014000000000000",
+              "4018000000000000"
+            ],
+            [
+              "401c000000000000",
+              "4020000000000000",
+              "4022000000000000"
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "name": "out-of-bounds-read",
+      "result": "rejected-unsupported-or-invalid-memory",
+      "reason": "Invalid aligned object access: Pointer(region='a', offset=24), f64",
+      "sha256": "354edad887576ae6bce8ad0751e27dcd1af8e6eff3fa51de7058f4157063161c"
+    },
+    {
+      "name": "unsupported-f64-min",
+      "result": "rejected-unsupported-or-invalid-memory",
+      "reason": "Unsupported WASM opcode 0xa4 at 270",
+      "sha256": "4c886587b67c6958e30cf524c9cf5291273925d86ccd1f92933973f636f7755e"
+    },
+    {
+      "name": "invalid-i32-add",
+      "result": "rejected-invalid-binary",
+      "sha256": "44a39ab6f9a32c044fa31eba1a2cd83c38f96b73216e17a5d0166e8227e79394"
+    },
+    {
+      "name": "unsupported-source-operator",
+      "result": "rejected-unsupported-ast"
+    }
+  ],
+  "guarantee": "For every modeled binary64 input, return values and caller-visible memory agree between the restricted Clang AST semantics and each actual WASM function body. NaN payload/sign are quotiented out; signed zero, infinities, and subnormals are distinguished.",
+  "preconditions": [
+    "Arguments are distinct aligned 24-byte double objects, non-overlapping each other and stack; valid wasm32 addresses without wrapping. Disjointness is a verification restriction, not a claim that all C++ aliases are undefined; callers have not been proved to satisfy it.",
+    "512 bytes of valid stack scratch; no concurrency, volatile, floating-environment, errno, NaN-payload/sign observation, or caller observation of scratch stack bytes.",
+    "IEEE binary64 round-to-nearest ties-to-even operations; sqrt has IEEE sqrt semantics; no fast math or contraction."
+  ],
+  "trustedBase": [
+    "Source extraction and Clang parser/AST",
+    "Custom source interpreter, WASM binary decoder, affine-object memory abstraction, and WASM interpreter",
+    "Z3 and independently replaying cvc5; no proof-kernel-checked certificates",
+    "Host binary validation; wasm engines implementing the WebAssembly specification"
+  ],
+  "limits": "Four functions and supported opcodes only; no loops, calls, SIMD, overlapping-object aliases, arbitrary pointer bit operations, or whole-solver/compiler guarantee."
+}

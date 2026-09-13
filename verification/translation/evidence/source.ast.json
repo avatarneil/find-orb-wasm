@@ -1,0 +1,2485 @@
+{
+  "dot_product": {
+    "kind": "FunctionDecl",
+    "name": "dot_product",
+    "type": {
+      "qualType": "double (const double *, const double *)"
+    },
+    "inner": [
+      {
+        "kind": "ParmVarDecl",
+        "name": "a",
+        "type": {
+          "qualType": "const double *"
+        }
+      },
+      {
+        "kind": "ParmVarDecl",
+        "name": "b",
+        "type": {
+          "qualType": "const double *"
+        }
+      },
+      {
+        "kind": "CompoundStmt",
+        "inner": [
+          {
+            "kind": "ReturnStmt",
+            "inner": [
+              {
+                "kind": "ParenExpr",
+                "type": {
+                  "qualType": "double"
+                },
+                "valueCategory": "prvalue",
+                "inner": [
+                  {
+                    "kind": "BinaryOperator",
+                    "type": {
+                      "qualType": "double"
+                    },
+                    "valueCategory": "prvalue",
+                    "opcode": "+",
+                    "inner": [
+                      {
+                        "kind": "BinaryOperator",
+                        "type": {
+                          "qualType": "double"
+                        },
+                        "valueCategory": "prvalue",
+                        "opcode": "+",
+                        "inner": [
+                          {
+                            "kind": "BinaryOperator",
+                            "type": {
+                              "qualType": "double"
+                            },
+                            "valueCategory": "prvalue",
+                            "opcode": "*",
+                            "inner": [
+                              {
+                                "kind": "ImplicitCastExpr",
+                                "type": {
+                                  "qualType": "double"
+                                },
+                                "valueCategory": "prvalue",
+                                "castKind": "LValueToRValue",
+                                "inner": [
+                                  {
+                                    "kind": "ArraySubscriptExpr",
+                                    "type": {
+                                      "qualType": "const double"
+                                    },
+                                    "valueCategory": "lvalue",
+                                    "inner": [
+                                      {
+                                        "kind": "ImplicitCastExpr",
+                                        "type": {
+                                          "qualType": "const double *"
+                                        },
+                                        "valueCategory": "prvalue",
+                                        "castKind": "LValueToRValue",
+                                        "inner": [
+                                          {
+                                            "kind": "DeclRefExpr",
+                                            "type": {
+                                              "qualType": "const double *"
+                                            },
+                                            "valueCategory": "lvalue",
+                                            "referencedDecl": {
+                                              "kind": "ParmVarDecl",
+                                              "name": "a",
+                                              "type": {
+                                                "qualType": "const double *"
+                                              }
+                                            }
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "kind": "IntegerLiteral",
+                                        "type": {
+                                          "qualType": "int"
+                                        },
+                                        "valueCategory": "prvalue",
+                                        "value": "0"
+                                      }
+                                    ]
+                                  }
+                                ]
+                              },
+                              {
+                                "kind": "ImplicitCastExpr",
+                                "type": {
+                                  "qualType": "double"
+                                },
+                                "valueCategory": "prvalue",
+                                "castKind": "LValueToRValue",
+                                "inner": [
+                                  {
+                                    "kind": "ArraySubscriptExpr",
+                                    "type": {
+                                      "qualType": "const double"
+                                    },
+                                    "valueCategory": "lvalue",
+                                    "inner": [
+                                      {
+                                        "kind": "ImplicitCastExpr",
+                                        "type": {
+                                          "qualType": "const double *"
+                                        },
+                                        "valueCategory": "prvalue",
+                                        "castKind": "LValueToRValue",
+                                        "inner": [
+                                          {
+                                            "kind": "DeclRefExpr",
+                                            "type": {
+                                              "qualType": "const double *"
+                                            },
+                                            "valueCategory": "lvalue",
+                                            "referencedDecl": {
+                                              "kind": "ParmVarDecl",
+                                              "name": "b",
+                                              "type": {
+                                                "qualType": "const double *"
+                                              }
+                                            }
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "kind": "IntegerLiteral",
+                                        "type": {
+                                          "qualType": "int"
+                                        },
+                                        "valueCategory": "prvalue",
+                                        "value": "0"
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "kind": "BinaryOperator",
+                            "type": {
+                              "qualType": "double"
+                            },
+                            "valueCategory": "prvalue",
+                            "opcode": "*",
+                            "inner": [
+                              {
+                                "kind": "ImplicitCastExpr",
+                                "type": {
+                                  "qualType": "double"
+                                },
+                                "valueCategory": "prvalue",
+                                "castKind": "LValueToRValue",
+                                "inner": [
+                                  {
+                                    "kind": "ArraySubscriptExpr",
+                                    "type": {
+                                      "qualType": "const double"
+                                    },
+                                    "valueCategory": "lvalue",
+                                    "inner": [
+                                      {
+                                        "kind": "ImplicitCastExpr",
+                                        "type": {
+                                          "qualType": "const double *"
+                                        },
+                                        "valueCategory": "prvalue",
+                                        "castKind": "LValueToRValue",
+                                        "inner": [
+                                          {
+                                            "kind": "DeclRefExpr",
+                                            "type": {
+                                              "qualType": "const double *"
+                                            },
+                                            "valueCategory": "lvalue",
+                                            "referencedDecl": {
+                                              "kind": "ParmVarDecl",
+                                              "name": "a",
+                                              "type": {
+                                                "qualType": "const double *"
+                                              }
+                                            }
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "kind": "IntegerLiteral",
+                                        "type": {
+                                          "qualType": "int"
+                                        },
+                                        "valueCategory": "prvalue",
+                                        "value": "1"
+                                      }
+                                    ]
+                                  }
+                                ]
+                              },
+                              {
+                                "kind": "ImplicitCastExpr",
+                                "type": {
+                                  "qualType": "double"
+                                },
+                                "valueCategory": "prvalue",
+                                "castKind": "LValueToRValue",
+                                "inner": [
+                                  {
+                                    "kind": "ArraySubscriptExpr",
+                                    "type": {
+                                      "qualType": "const double"
+                                    },
+                                    "valueCategory": "lvalue",
+                                    "inner": [
+                                      {
+                                        "kind": "ImplicitCastExpr",
+                                        "type": {
+                                          "qualType": "const double *"
+                                        },
+                                        "valueCategory": "prvalue",
+                                        "castKind": "LValueToRValue",
+                                        "inner": [
+                                          {
+                                            "kind": "DeclRefExpr",
+                                            "type": {
+                                              "qualType": "const double *"
+                                            },
+                                            "valueCategory": "lvalue",
+                                            "referencedDecl": {
+                                              "kind": "ParmVarDecl",
+                                              "name": "b",
+                                              "type": {
+                                                "qualType": "const double *"
+                                              }
+                                            }
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "kind": "IntegerLiteral",
+                                        "type": {
+                                          "qualType": "int"
+                                        },
+                                        "valueCategory": "prvalue",
+                                        "value": "1"
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "kind": "BinaryOperator",
+                        "type": {
+                          "qualType": "double"
+                        },
+                        "valueCategory": "prvalue",
+                        "opcode": "*",
+                        "inner": [
+                          {
+                            "kind": "ImplicitCastExpr",
+                            "type": {
+                              "qualType": "double"
+                            },
+                            "valueCategory": "prvalue",
+                            "castKind": "LValueToRValue",
+                            "inner": [
+                              {
+                                "kind": "ArraySubscriptExpr",
+                                "type": {
+                                  "qualType": "const double"
+                                },
+                                "valueCategory": "lvalue",
+                                "inner": [
+                                  {
+                                    "kind": "ImplicitCastExpr",
+                                    "type": {
+                                      "qualType": "const double *"
+                                    },
+                                    "valueCategory": "prvalue",
+                                    "castKind": "LValueToRValue",
+                                    "inner": [
+                                      {
+                                        "kind": "DeclRefExpr",
+                                        "type": {
+                                          "qualType": "const double *"
+                                        },
+                                        "valueCategory": "lvalue",
+                                        "referencedDecl": {
+                                          "kind": "ParmVarDecl",
+                                          "name": "a",
+                                          "type": {
+                                            "qualType": "const double *"
+                                          }
+                                        }
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "kind": "IntegerLiteral",
+                                    "type": {
+                                      "qualType": "int"
+                                    },
+                                    "valueCategory": "prvalue",
+                                    "value": "2"
+                                  }
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "kind": "ImplicitCastExpr",
+                            "type": {
+                              "qualType": "double"
+                            },
+                            "valueCategory": "prvalue",
+                            "castKind": "LValueToRValue",
+                            "inner": [
+                              {
+                                "kind": "ArraySubscriptExpr",
+                                "type": {
+                                  "qualType": "const double"
+                                },
+                                "valueCategory": "lvalue",
+                                "inner": [
+                                  {
+                                    "kind": "ImplicitCastExpr",
+                                    "type": {
+                                      "qualType": "const double *"
+                                    },
+                                    "valueCategory": "prvalue",
+                                    "castKind": "LValueToRValue",
+                                    "inner": [
+                                      {
+                                        "kind": "DeclRefExpr",
+                                        "type": {
+                                          "qualType": "const double *"
+                                        },
+                                        "valueCategory": "lvalue",
+                                        "referencedDecl": {
+                                          "kind": "ParmVarDecl",
+                                          "name": "b",
+                                          "type": {
+                                            "qualType": "const double *"
+                                          }
+                                        }
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "kind": "IntegerLiteral",
+                                    "type": {
+                                      "qualType": "int"
+                                    },
+                                    "valueCategory": "prvalue",
+                                    "value": "2"
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "vector_cross_product": {
+    "kind": "FunctionDecl",
+    "name": "vector_cross_product",
+    "type": {
+      "qualType": "void (double *, const double *, const double *)"
+    },
+    "inner": [
+      {
+        "kind": "ParmVarDecl",
+        "name": "xprod",
+        "type": {
+          "qualType": "double *"
+        }
+      },
+      {
+        "kind": "ParmVarDecl",
+        "name": "a",
+        "type": {
+          "qualType": "const double *"
+        }
+      },
+      {
+        "kind": "ParmVarDecl",
+        "name": "b",
+        "type": {
+          "qualType": "const double *"
+        }
+      },
+      {
+        "kind": "CompoundStmt",
+        "inner": [
+          {
+            "kind": "BinaryOperator",
+            "type": {
+              "qualType": "double"
+            },
+            "valueCategory": "lvalue",
+            "opcode": "=",
+            "inner": [
+              {
+                "kind": "ArraySubscriptExpr",
+                "type": {
+                  "qualType": "double"
+                },
+                "valueCategory": "lvalue",
+                "inner": [
+                  {
+                    "kind": "ImplicitCastExpr",
+                    "type": {
+                      "qualType": "double *"
+                    },
+                    "valueCategory": "prvalue",
+                    "castKind": "LValueToRValue",
+                    "inner": [
+                      {
+                        "kind": "DeclRefExpr",
+                        "type": {
+                          "qualType": "double *"
+                        },
+                        "valueCategory": "lvalue",
+                        "referencedDecl": {
+                          "kind": "ParmVarDecl",
+                          "name": "xprod",
+                          "type": {
+                            "qualType": "double *"
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "IntegerLiteral",
+                    "type": {
+                      "qualType": "int"
+                    },
+                    "valueCategory": "prvalue",
+                    "value": "0"
+                  }
+                ]
+              },
+              {
+                "kind": "BinaryOperator",
+                "type": {
+                  "qualType": "double"
+                },
+                "valueCategory": "prvalue",
+                "opcode": "-",
+                "inner": [
+                  {
+                    "kind": "BinaryOperator",
+                    "type": {
+                      "qualType": "double"
+                    },
+                    "valueCategory": "prvalue",
+                    "opcode": "*",
+                    "inner": [
+                      {
+                        "kind": "ImplicitCastExpr",
+                        "type": {
+                          "qualType": "double"
+                        },
+                        "valueCategory": "prvalue",
+                        "castKind": "LValueToRValue",
+                        "inner": [
+                          {
+                            "kind": "ArraySubscriptExpr",
+                            "type": {
+                              "qualType": "const double"
+                            },
+                            "valueCategory": "lvalue",
+                            "inner": [
+                              {
+                                "kind": "ImplicitCastExpr",
+                                "type": {
+                                  "qualType": "const double *"
+                                },
+                                "valueCategory": "prvalue",
+                                "castKind": "LValueToRValue",
+                                "inner": [
+                                  {
+                                    "kind": "DeclRefExpr",
+                                    "type": {
+                                      "qualType": "const double *"
+                                    },
+                                    "valueCategory": "lvalue",
+                                    "referencedDecl": {
+                                      "kind": "ParmVarDecl",
+                                      "name": "a",
+                                      "type": {
+                                        "qualType": "const double *"
+                                      }
+                                    }
+                                  }
+                                ]
+                              },
+                              {
+                                "kind": "IntegerLiteral",
+                                "type": {
+                                  "qualType": "int"
+                                },
+                                "valueCategory": "prvalue",
+                                "value": "1"
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "kind": "ImplicitCastExpr",
+                        "type": {
+                          "qualType": "double"
+                        },
+                        "valueCategory": "prvalue",
+                        "castKind": "LValueToRValue",
+                        "inner": [
+                          {
+                            "kind": "ArraySubscriptExpr",
+                            "type": {
+                              "qualType": "const double"
+                            },
+                            "valueCategory": "lvalue",
+                            "inner": [
+                              {
+                                "kind": "ImplicitCastExpr",
+                                "type": {
+                                  "qualType": "const double *"
+                                },
+                                "valueCategory": "prvalue",
+                                "castKind": "LValueToRValue",
+                                "inner": [
+                                  {
+                                    "kind": "DeclRefExpr",
+                                    "type": {
+                                      "qualType": "const double *"
+                                    },
+                                    "valueCategory": "lvalue",
+                                    "referencedDecl": {
+                                      "kind": "ParmVarDecl",
+                                      "name": "b",
+                                      "type": {
+                                        "qualType": "const double *"
+                                      }
+                                    }
+                                  }
+                                ]
+                              },
+                              {
+                                "kind": "IntegerLiteral",
+                                "type": {
+                                  "qualType": "int"
+                                },
+                                "valueCategory": "prvalue",
+                                "value": "2"
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "BinaryOperator",
+                    "type": {
+                      "qualType": "double"
+                    },
+                    "valueCategory": "prvalue",
+                    "opcode": "*",
+                    "inner": [
+                      {
+                        "kind": "ImplicitCastExpr",
+                        "type": {
+                          "qualType": "double"
+                        },
+                        "valueCategory": "prvalue",
+                        "castKind": "LValueToRValue",
+                        "inner": [
+                          {
+                            "kind": "ArraySubscriptExpr",
+                            "type": {
+                              "qualType": "const double"
+                            },
+                            "valueCategory": "lvalue",
+                            "inner": [
+                              {
+                                "kind": "ImplicitCastExpr",
+                                "type": {
+                                  "qualType": "const double *"
+                                },
+                                "valueCategory": "prvalue",
+                                "castKind": "LValueToRValue",
+                                "inner": [
+                                  {
+                                    "kind": "DeclRefExpr",
+                                    "type": {
+                                      "qualType": "const double *"
+                                    },
+                                    "valueCategory": "lvalue",
+                                    "referencedDecl": {
+                                      "kind": "ParmVarDecl",
+                                      "name": "a",
+                                      "type": {
+                                        "qualType": "const double *"
+                                      }
+                                    }
+                                  }
+                                ]
+                              },
+                              {
+                                "kind": "IntegerLiteral",
+                                "type": {
+                                  "qualType": "int"
+                                },
+                                "valueCategory": "prvalue",
+                                "value": "2"
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "kind": "ImplicitCastExpr",
+                        "type": {
+                          "qualType": "double"
+                        },
+                        "valueCategory": "prvalue",
+                        "castKind": "LValueToRValue",
+                        "inner": [
+                          {
+                            "kind": "ArraySubscriptExpr",
+                            "type": {
+                              "qualType": "const double"
+                            },
+                            "valueCategory": "lvalue",
+                            "inner": [
+                              {
+                                "kind": "ImplicitCastExpr",
+                                "type": {
+                                  "qualType": "const double *"
+                                },
+                                "valueCategory": "prvalue",
+                                "castKind": "LValueToRValue",
+                                "inner": [
+                                  {
+                                    "kind": "DeclRefExpr",
+                                    "type": {
+                                      "qualType": "const double *"
+                                    },
+                                    "valueCategory": "lvalue",
+                                    "referencedDecl": {
+                                      "kind": "ParmVarDecl",
+                                      "name": "b",
+                                      "type": {
+                                        "qualType": "const double *"
+                                      }
+                                    }
+                                  }
+                                ]
+                              },
+                              {
+                                "kind": "IntegerLiteral",
+                                "type": {
+                                  "qualType": "int"
+                                },
+                                "valueCategory": "prvalue",
+                                "value": "1"
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "kind": "BinaryOperator",
+            "type": {
+              "qualType": "double"
+            },
+            "valueCategory": "lvalue",
+            "opcode": "=",
+            "inner": [
+              {
+                "kind": "ArraySubscriptExpr",
+                "type": {
+                  "qualType": "double"
+                },
+                "valueCategory": "lvalue",
+                "inner": [
+                  {
+                    "kind": "ImplicitCastExpr",
+                    "type": {
+                      "qualType": "double *"
+                    },
+                    "valueCategory": "prvalue",
+                    "castKind": "LValueToRValue",
+                    "inner": [
+                      {
+                        "kind": "DeclRefExpr",
+                        "type": {
+                          "qualType": "double *"
+                        },
+                        "valueCategory": "lvalue",
+                        "referencedDecl": {
+                          "kind": "ParmVarDecl",
+                          "name": "xprod",
+                          "type": {
+                            "qualType": "double *"
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "IntegerLiteral",
+                    "type": {
+                      "qualType": "int"
+                    },
+                    "valueCategory": "prvalue",
+                    "value": "1"
+                  }
+                ]
+              },
+              {
+                "kind": "BinaryOperator",
+                "type": {
+                  "qualType": "double"
+                },
+                "valueCategory": "prvalue",
+                "opcode": "-",
+                "inner": [
+                  {
+                    "kind": "BinaryOperator",
+                    "type": {
+                      "qualType": "double"
+                    },
+                    "valueCategory": "prvalue",
+                    "opcode": "*",
+                    "inner": [
+                      {
+                        "kind": "ImplicitCastExpr",
+                        "type": {
+                          "qualType": "double"
+                        },
+                        "valueCategory": "prvalue",
+                        "castKind": "LValueToRValue",
+                        "inner": [
+                          {
+                            "kind": "ArraySubscriptExpr",
+                            "type": {
+                              "qualType": "const double"
+                            },
+                            "valueCategory": "lvalue",
+                            "inner": [
+                              {
+                                "kind": "ImplicitCastExpr",
+                                "type": {
+                                  "qualType": "const double *"
+                                },
+                                "valueCategory": "prvalue",
+                                "castKind": "LValueToRValue",
+                                "inner": [
+                                  {
+                                    "kind": "DeclRefExpr",
+                                    "type": {
+                                      "qualType": "const double *"
+                                    },
+                                    "valueCategory": "lvalue",
+                                    "referencedDecl": {
+                                      "kind": "ParmVarDecl",
+                                      "name": "a",
+                                      "type": {
+                                        "qualType": "const double *"
+                                      }
+                                    }
+                                  }
+                                ]
+                              },
+                              {
+                                "kind": "IntegerLiteral",
+                                "type": {
+                                  "qualType": "int"
+                                },
+                                "valueCategory": "prvalue",
+                                "value": "2"
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "kind": "ImplicitCastExpr",
+                        "type": {
+                          "qualType": "double"
+                        },
+                        "valueCategory": "prvalue",
+                        "castKind": "LValueToRValue",
+                        "inner": [
+                          {
+                            "kind": "ArraySubscriptExpr",
+                            "type": {
+                              "qualType": "const double"
+                            },
+                            "valueCategory": "lvalue",
+                            "inner": [
+                              {
+                                "kind": "ImplicitCastExpr",
+                                "type": {
+                                  "qualType": "const double *"
+                                },
+                                "valueCategory": "prvalue",
+                                "castKind": "LValueToRValue",
+                                "inner": [
+                                  {
+                                    "kind": "DeclRefExpr",
+                                    "type": {
+                                      "qualType": "const double *"
+                                    },
+                                    "valueCategory": "lvalue",
+                                    "referencedDecl": {
+                                      "kind": "ParmVarDecl",
+                                      "name": "b",
+                                      "type": {
+                                        "qualType": "const double *"
+                                      }
+                                    }
+                                  }
+                                ]
+                              },
+                              {
+                                "kind": "IntegerLiteral",
+                                "type": {
+                                  "qualType": "int"
+                                },
+                                "valueCategory": "prvalue",
+                                "value": "0"
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "BinaryOperator",
+                    "type": {
+                      "qualType": "double"
+                    },
+                    "valueCategory": "prvalue",
+                    "opcode": "*",
+                    "inner": [
+                      {
+                        "kind": "ImplicitCastExpr",
+                        "type": {
+                          "qualType": "double"
+                        },
+                        "valueCategory": "prvalue",
+                        "castKind": "LValueToRValue",
+                        "inner": [
+                          {
+                            "kind": "ArraySubscriptExpr",
+                            "type": {
+                              "qualType": "const double"
+                            },
+                            "valueCategory": "lvalue",
+                            "inner": [
+                              {
+                                "kind": "ImplicitCastExpr",
+                                "type": {
+                                  "qualType": "const double *"
+                                },
+                                "valueCategory": "prvalue",
+                                "castKind": "LValueToRValue",
+                                "inner": [
+                                  {
+                                    "kind": "DeclRefExpr",
+                                    "type": {
+                                      "qualType": "const double *"
+                                    },
+                                    "valueCategory": "lvalue",
+                                    "referencedDecl": {
+                                      "kind": "ParmVarDecl",
+                                      "name": "a",
+                                      "type": {
+                                        "qualType": "const double *"
+                                      }
+                                    }
+                                  }
+                                ]
+                              },
+                              {
+                                "kind": "IntegerLiteral",
+                                "type": {
+                                  "qualType": "int"
+                                },
+                                "valueCategory": "prvalue",
+                                "value": "0"
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "kind": "ImplicitCastExpr",
+                        "type": {
+                          "qualType": "double"
+                        },
+                        "valueCategory": "prvalue",
+                        "castKind": "LValueToRValue",
+                        "inner": [
+                          {
+                            "kind": "ArraySubscriptExpr",
+                            "type": {
+                              "qualType": "const double"
+                            },
+                            "valueCategory": "lvalue",
+                            "inner": [
+                              {
+                                "kind": "ImplicitCastExpr",
+                                "type": {
+                                  "qualType": "const double *"
+                                },
+                                "valueCategory": "prvalue",
+                                "castKind": "LValueToRValue",
+                                "inner": [
+                                  {
+                                    "kind": "DeclRefExpr",
+                                    "type": {
+                                      "qualType": "const double *"
+                                    },
+                                    "valueCategory": "lvalue",
+                                    "referencedDecl": {
+                                      "kind": "ParmVarDecl",
+                                      "name": "b",
+                                      "type": {
+                                        "qualType": "const double *"
+                                      }
+                                    }
+                                  }
+                                ]
+                              },
+                              {
+                                "kind": "IntegerLiteral",
+                                "type": {
+                                  "qualType": "int"
+                                },
+                                "valueCategory": "prvalue",
+                                "value": "2"
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "kind": "BinaryOperator",
+            "type": {
+              "qualType": "double"
+            },
+            "valueCategory": "lvalue",
+            "opcode": "=",
+            "inner": [
+              {
+                "kind": "ArraySubscriptExpr",
+                "type": {
+                  "qualType": "double"
+                },
+                "valueCategory": "lvalue",
+                "inner": [
+                  {
+                    "kind": "ImplicitCastExpr",
+                    "type": {
+                      "qualType": "double *"
+                    },
+                    "valueCategory": "prvalue",
+                    "castKind": "LValueToRValue",
+                    "inner": [
+                      {
+                        "kind": "DeclRefExpr",
+                        "type": {
+                          "qualType": "double *"
+                        },
+                        "valueCategory": "lvalue",
+                        "referencedDecl": {
+                          "kind": "ParmVarDecl",
+                          "name": "xprod",
+                          "type": {
+                            "qualType": "double *"
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "IntegerLiteral",
+                    "type": {
+                      "qualType": "int"
+                    },
+                    "valueCategory": "prvalue",
+                    "value": "2"
+                  }
+                ]
+              },
+              {
+                "kind": "BinaryOperator",
+                "type": {
+                  "qualType": "double"
+                },
+                "valueCategory": "prvalue",
+                "opcode": "-",
+                "inner": [
+                  {
+                    "kind": "BinaryOperator",
+                    "type": {
+                      "qualType": "double"
+                    },
+                    "valueCategory": "prvalue",
+                    "opcode": "*",
+                    "inner": [
+                      {
+                        "kind": "ImplicitCastExpr",
+                        "type": {
+                          "qualType": "double"
+                        },
+                        "valueCategory": "prvalue",
+                        "castKind": "LValueToRValue",
+                        "inner": [
+                          {
+                            "kind": "ArraySubscriptExpr",
+                            "type": {
+                              "qualType": "const double"
+                            },
+                            "valueCategory": "lvalue",
+                            "inner": [
+                              {
+                                "kind": "ImplicitCastExpr",
+                                "type": {
+                                  "qualType": "const double *"
+                                },
+                                "valueCategory": "prvalue",
+                                "castKind": "LValueToRValue",
+                                "inner": [
+                                  {
+                                    "kind": "DeclRefExpr",
+                                    "type": {
+                                      "qualType": "const double *"
+                                    },
+                                    "valueCategory": "lvalue",
+                                    "referencedDecl": {
+                                      "kind": "ParmVarDecl",
+                                      "name": "a",
+                                      "type": {
+                                        "qualType": "const double *"
+                                      }
+                                    }
+                                  }
+                                ]
+                              },
+                              {
+                                "kind": "IntegerLiteral",
+                                "type": {
+                                  "qualType": "int"
+                                },
+                                "valueCategory": "prvalue",
+                                "value": "0"
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "kind": "ImplicitCastExpr",
+                        "type": {
+                          "qualType": "double"
+                        },
+                        "valueCategory": "prvalue",
+                        "castKind": "LValueToRValue",
+                        "inner": [
+                          {
+                            "kind": "ArraySubscriptExpr",
+                            "type": {
+                              "qualType": "const double"
+                            },
+                            "valueCategory": "lvalue",
+                            "inner": [
+                              {
+                                "kind": "ImplicitCastExpr",
+                                "type": {
+                                  "qualType": "const double *"
+                                },
+                                "valueCategory": "prvalue",
+                                "castKind": "LValueToRValue",
+                                "inner": [
+                                  {
+                                    "kind": "DeclRefExpr",
+                                    "type": {
+                                      "qualType": "const double *"
+                                    },
+                                    "valueCategory": "lvalue",
+                                    "referencedDecl": {
+                                      "kind": "ParmVarDecl",
+                                      "name": "b",
+                                      "type": {
+                                        "qualType": "const double *"
+                                      }
+                                    }
+                                  }
+                                ]
+                              },
+                              {
+                                "kind": "IntegerLiteral",
+                                "type": {
+                                  "qualType": "int"
+                                },
+                                "valueCategory": "prvalue",
+                                "value": "1"
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "BinaryOperator",
+                    "type": {
+                      "qualType": "double"
+                    },
+                    "valueCategory": "prvalue",
+                    "opcode": "*",
+                    "inner": [
+                      {
+                        "kind": "ImplicitCastExpr",
+                        "type": {
+                          "qualType": "double"
+                        },
+                        "valueCategory": "prvalue",
+                        "castKind": "LValueToRValue",
+                        "inner": [
+                          {
+                            "kind": "ArraySubscriptExpr",
+                            "type": {
+                              "qualType": "const double"
+                            },
+                            "valueCategory": "lvalue",
+                            "inner": [
+                              {
+                                "kind": "ImplicitCastExpr",
+                                "type": {
+                                  "qualType": "const double *"
+                                },
+                                "valueCategory": "prvalue",
+                                "castKind": "LValueToRValue",
+                                "inner": [
+                                  {
+                                    "kind": "DeclRefExpr",
+                                    "type": {
+                                      "qualType": "const double *"
+                                    },
+                                    "valueCategory": "lvalue",
+                                    "referencedDecl": {
+                                      "kind": "ParmVarDecl",
+                                      "name": "a",
+                                      "type": {
+                                        "qualType": "const double *"
+                                      }
+                                    }
+                                  }
+                                ]
+                              },
+                              {
+                                "kind": "IntegerLiteral",
+                                "type": {
+                                  "qualType": "int"
+                                },
+                                "valueCategory": "prvalue",
+                                "value": "1"
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "kind": "ImplicitCastExpr",
+                        "type": {
+                          "qualType": "double"
+                        },
+                        "valueCategory": "prvalue",
+                        "castKind": "LValueToRValue",
+                        "inner": [
+                          {
+                            "kind": "ArraySubscriptExpr",
+                            "type": {
+                              "qualType": "const double"
+                            },
+                            "valueCategory": "lvalue",
+                            "inner": [
+                              {
+                                "kind": "ImplicitCastExpr",
+                                "type": {
+                                  "qualType": "const double *"
+                                },
+                                "valueCategory": "prvalue",
+                                "castKind": "LValueToRValue",
+                                "inner": [
+                                  {
+                                    "kind": "DeclRefExpr",
+                                    "type": {
+                                      "qualType": "const double *"
+                                    },
+                                    "valueCategory": "lvalue",
+                                    "referencedDecl": {
+                                      "kind": "ParmVarDecl",
+                                      "name": "b",
+                                      "type": {
+                                        "qualType": "const double *"
+                                      }
+                                    }
+                                  }
+                                ]
+                              },
+                              {
+                                "kind": "IntegerLiteral",
+                                "type": {
+                                  "qualType": "int"
+                                },
+                                "valueCategory": "prvalue",
+                                "value": "0"
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "vector3_length": {
+    "kind": "FunctionDecl",
+    "name": "vector3_length",
+    "type": {
+      "qualType": "double (const double *)"
+    },
+    "inner": [
+      {
+        "kind": "ParmVarDecl",
+        "name": "vect",
+        "type": {
+          "qualType": "const double *"
+        }
+      },
+      {
+        "kind": "CompoundStmt",
+        "inner": [
+          {
+            "kind": "ReturnStmt",
+            "inner": [
+              {
+                "kind": "ParenExpr",
+                "type": {
+                  "qualType": "double"
+                },
+                "valueCategory": "prvalue",
+                "inner": [
+                  {
+                    "kind": "CallExpr",
+                    "type": {
+                      "qualType": "double"
+                    },
+                    "valueCategory": "prvalue",
+                    "inner": [
+                      {
+                        "kind": "ImplicitCastExpr",
+                        "type": {
+                          "qualType": "double (*)(double)"
+                        },
+                        "valueCategory": "prvalue",
+                        "castKind": "FunctionToPointerDecay",
+                        "inner": [
+                          {
+                            "kind": "DeclRefExpr",
+                            "type": {
+                              "qualType": "double (double)"
+                            },
+                            "valueCategory": "lvalue",
+                            "referencedDecl": {
+                              "kind": "FunctionDecl",
+                              "name": "sqrt",
+                              "type": {
+                                "qualType": "double (double)"
+                              }
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "kind": "BinaryOperator",
+                        "type": {
+                          "qualType": "double"
+                        },
+                        "valueCategory": "prvalue",
+                        "opcode": "+",
+                        "inner": [
+                          {
+                            "kind": "BinaryOperator",
+                            "type": {
+                              "qualType": "double"
+                            },
+                            "valueCategory": "prvalue",
+                            "opcode": "+",
+                            "inner": [
+                              {
+                                "kind": "BinaryOperator",
+                                "type": {
+                                  "qualType": "double"
+                                },
+                                "valueCategory": "prvalue",
+                                "opcode": "*",
+                                "inner": [
+                                  {
+                                    "kind": "ImplicitCastExpr",
+                                    "type": {
+                                      "qualType": "double"
+                                    },
+                                    "valueCategory": "prvalue",
+                                    "castKind": "LValueToRValue",
+                                    "inner": [
+                                      {
+                                        "kind": "ArraySubscriptExpr",
+                                        "type": {
+                                          "qualType": "const double"
+                                        },
+                                        "valueCategory": "lvalue",
+                                        "inner": [
+                                          {
+                                            "kind": "ImplicitCastExpr",
+                                            "type": {
+                                              "qualType": "const double *"
+                                            },
+                                            "valueCategory": "prvalue",
+                                            "castKind": "LValueToRValue",
+                                            "inner": [
+                                              {
+                                                "kind": "DeclRefExpr",
+                                                "type": {
+                                                  "qualType": "const double *"
+                                                },
+                                                "valueCategory": "lvalue",
+                                                "referencedDecl": {
+                                                  "kind": "ParmVarDecl",
+                                                  "name": "vect",
+                                                  "type": {
+                                                    "qualType": "const double *"
+                                                  }
+                                                }
+                                              }
+                                            ]
+                                          },
+                                          {
+                                            "kind": "IntegerLiteral",
+                                            "type": {
+                                              "qualType": "int"
+                                            },
+                                            "valueCategory": "prvalue",
+                                            "value": "0"
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "kind": "ImplicitCastExpr",
+                                    "type": {
+                                      "qualType": "double"
+                                    },
+                                    "valueCategory": "prvalue",
+                                    "castKind": "LValueToRValue",
+                                    "inner": [
+                                      {
+                                        "kind": "ArraySubscriptExpr",
+                                        "type": {
+                                          "qualType": "const double"
+                                        },
+                                        "valueCategory": "lvalue",
+                                        "inner": [
+                                          {
+                                            "kind": "ImplicitCastExpr",
+                                            "type": {
+                                              "qualType": "const double *"
+                                            },
+                                            "valueCategory": "prvalue",
+                                            "castKind": "LValueToRValue",
+                                            "inner": [
+                                              {
+                                                "kind": "DeclRefExpr",
+                                                "type": {
+                                                  "qualType": "const double *"
+                                                },
+                                                "valueCategory": "lvalue",
+                                                "referencedDecl": {
+                                                  "kind": "ParmVarDecl",
+                                                  "name": "vect",
+                                                  "type": {
+                                                    "qualType": "const double *"
+                                                  }
+                                                }
+                                              }
+                                            ]
+                                          },
+                                          {
+                                            "kind": "IntegerLiteral",
+                                            "type": {
+                                              "qualType": "int"
+                                            },
+                                            "valueCategory": "prvalue",
+                                            "value": "0"
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              },
+                              {
+                                "kind": "BinaryOperator",
+                                "type": {
+                                  "qualType": "double"
+                                },
+                                "valueCategory": "prvalue",
+                                "opcode": "*",
+                                "inner": [
+                                  {
+                                    "kind": "ImplicitCastExpr",
+                                    "type": {
+                                      "qualType": "double"
+                                    },
+                                    "valueCategory": "prvalue",
+                                    "castKind": "LValueToRValue",
+                                    "inner": [
+                                      {
+                                        "kind": "ArraySubscriptExpr",
+                                        "type": {
+                                          "qualType": "const double"
+                                        },
+                                        "valueCategory": "lvalue",
+                                        "inner": [
+                                          {
+                                            "kind": "ImplicitCastExpr",
+                                            "type": {
+                                              "qualType": "const double *"
+                                            },
+                                            "valueCategory": "prvalue",
+                                            "castKind": "LValueToRValue",
+                                            "inner": [
+                                              {
+                                                "kind": "DeclRefExpr",
+                                                "type": {
+                                                  "qualType": "const double *"
+                                                },
+                                                "valueCategory": "lvalue",
+                                                "referencedDecl": {
+                                                  "kind": "ParmVarDecl",
+                                                  "name": "vect",
+                                                  "type": {
+                                                    "qualType": "const double *"
+                                                  }
+                                                }
+                                              }
+                                            ]
+                                          },
+                                          {
+                                            "kind": "IntegerLiteral",
+                                            "type": {
+                                              "qualType": "int"
+                                            },
+                                            "valueCategory": "prvalue",
+                                            "value": "1"
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "kind": "ImplicitCastExpr",
+                                    "type": {
+                                      "qualType": "double"
+                                    },
+                                    "valueCategory": "prvalue",
+                                    "castKind": "LValueToRValue",
+                                    "inner": [
+                                      {
+                                        "kind": "ArraySubscriptExpr",
+                                        "type": {
+                                          "qualType": "const double"
+                                        },
+                                        "valueCategory": "lvalue",
+                                        "inner": [
+                                          {
+                                            "kind": "ImplicitCastExpr",
+                                            "type": {
+                                              "qualType": "const double *"
+                                            },
+                                            "valueCategory": "prvalue",
+                                            "castKind": "LValueToRValue",
+                                            "inner": [
+                                              {
+                                                "kind": "DeclRefExpr",
+                                                "type": {
+                                                  "qualType": "const double *"
+                                                },
+                                                "valueCategory": "lvalue",
+                                                "referencedDecl": {
+                                                  "kind": "ParmVarDecl",
+                                                  "name": "vect",
+                                                  "type": {
+                                                    "qualType": "const double *"
+                                                  }
+                                                }
+                                              }
+                                            ]
+                                          },
+                                          {
+                                            "kind": "IntegerLiteral",
+                                            "type": {
+                                              "qualType": "int"
+                                            },
+                                            "valueCategory": "prvalue",
+                                            "value": "1"
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "kind": "BinaryOperator",
+                            "type": {
+                              "qualType": "double"
+                            },
+                            "valueCategory": "prvalue",
+                            "opcode": "*",
+                            "inner": [
+                              {
+                                "kind": "ImplicitCastExpr",
+                                "type": {
+                                  "qualType": "double"
+                                },
+                                "valueCategory": "prvalue",
+                                "castKind": "LValueToRValue",
+                                "inner": [
+                                  {
+                                    "kind": "ArraySubscriptExpr",
+                                    "type": {
+                                      "qualType": "const double"
+                                    },
+                                    "valueCategory": "lvalue",
+                                    "inner": [
+                                      {
+                                        "kind": "ImplicitCastExpr",
+                                        "type": {
+                                          "qualType": "const double *"
+                                        },
+                                        "valueCategory": "prvalue",
+                                        "castKind": "LValueToRValue",
+                                        "inner": [
+                                          {
+                                            "kind": "DeclRefExpr",
+                                            "type": {
+                                              "qualType": "const double *"
+                                            },
+                                            "valueCategory": "lvalue",
+                                            "referencedDecl": {
+                                              "kind": "ParmVarDecl",
+                                              "name": "vect",
+                                              "type": {
+                                                "qualType": "const double *"
+                                              }
+                                            }
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "kind": "IntegerLiteral",
+                                        "type": {
+                                          "qualType": "int"
+                                        },
+                                        "valueCategory": "prvalue",
+                                        "value": "2"
+                                      }
+                                    ]
+                                  }
+                                ]
+                              },
+                              {
+                                "kind": "ImplicitCastExpr",
+                                "type": {
+                                  "qualType": "double"
+                                },
+                                "valueCategory": "prvalue",
+                                "castKind": "LValueToRValue",
+                                "inner": [
+                                  {
+                                    "kind": "ArraySubscriptExpr",
+                                    "type": {
+                                      "qualType": "const double"
+                                    },
+                                    "valueCategory": "lvalue",
+                                    "inner": [
+                                      {
+                                        "kind": "ImplicitCastExpr",
+                                        "type": {
+                                          "qualType": "const double *"
+                                        },
+                                        "valueCategory": "prvalue",
+                                        "castKind": "LValueToRValue",
+                                        "inner": [
+                                          {
+                                            "kind": "DeclRefExpr",
+                                            "type": {
+                                              "qualType": "const double *"
+                                            },
+                                            "valueCategory": "lvalue",
+                                            "referencedDecl": {
+                                              "kind": "ParmVarDecl",
+                                              "name": "vect",
+                                              "type": {
+                                                "qualType": "const double *"
+                                              }
+                                            }
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "kind": "IntegerLiteral",
+                                        "type": {
+                                          "qualType": "int"
+                                        },
+                                        "valueCategory": "prvalue",
+                                        "value": "2"
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "normalize_vect3": {
+    "kind": "FunctionDecl",
+    "name": "normalize_vect3",
+    "type": {
+      "qualType": "double (double *)"
+    },
+    "inner": [
+      {
+        "kind": "ParmVarDecl",
+        "name": "vect",
+        "type": {
+          "qualType": "double *"
+        }
+      },
+      {
+        "kind": "CompoundStmt",
+        "inner": [
+          {
+            "kind": "DeclStmt",
+            "inner": [
+              {
+                "kind": "VarDecl",
+                "name": "d2",
+                "type": {
+                  "qualType": "const double"
+                },
+                "init": "c",
+                "inner": [
+                  {
+                    "kind": "BinaryOperator",
+                    "type": {
+                      "qualType": "double"
+                    },
+                    "valueCategory": "prvalue",
+                    "opcode": "+",
+                    "inner": [
+                      {
+                        "kind": "BinaryOperator",
+                        "type": {
+                          "qualType": "double"
+                        },
+                        "valueCategory": "prvalue",
+                        "opcode": "+",
+                        "inner": [
+                          {
+                            "kind": "BinaryOperator",
+                            "type": {
+                              "qualType": "double"
+                            },
+                            "valueCategory": "prvalue",
+                            "opcode": "*",
+                            "inner": [
+                              {
+                                "kind": "ImplicitCastExpr",
+                                "type": {
+                                  "qualType": "double"
+                                },
+                                "valueCategory": "prvalue",
+                                "castKind": "LValueToRValue",
+                                "inner": [
+                                  {
+                                    "kind": "ArraySubscriptExpr",
+                                    "type": {
+                                      "qualType": "double"
+                                    },
+                                    "valueCategory": "lvalue",
+                                    "inner": [
+                                      {
+                                        "kind": "ImplicitCastExpr",
+                                        "type": {
+                                          "qualType": "double *"
+                                        },
+                                        "valueCategory": "prvalue",
+                                        "castKind": "LValueToRValue",
+                                        "inner": [
+                                          {
+                                            "kind": "DeclRefExpr",
+                                            "type": {
+                                              "qualType": "double *"
+                                            },
+                                            "valueCategory": "lvalue",
+                                            "referencedDecl": {
+                                              "kind": "ParmVarDecl",
+                                              "name": "vect",
+                                              "type": {
+                                                "qualType": "double *"
+                                              }
+                                            }
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "kind": "IntegerLiteral",
+                                        "type": {
+                                          "qualType": "int"
+                                        },
+                                        "valueCategory": "prvalue",
+                                        "value": "0"
+                                      }
+                                    ]
+                                  }
+                                ]
+                              },
+                              {
+                                "kind": "ImplicitCastExpr",
+                                "type": {
+                                  "qualType": "double"
+                                },
+                                "valueCategory": "prvalue",
+                                "castKind": "LValueToRValue",
+                                "inner": [
+                                  {
+                                    "kind": "ArraySubscriptExpr",
+                                    "type": {
+                                      "qualType": "double"
+                                    },
+                                    "valueCategory": "lvalue",
+                                    "inner": [
+                                      {
+                                        "kind": "ImplicitCastExpr",
+                                        "type": {
+                                          "qualType": "double *"
+                                        },
+                                        "valueCategory": "prvalue",
+                                        "castKind": "LValueToRValue",
+                                        "inner": [
+                                          {
+                                            "kind": "DeclRefExpr",
+                                            "type": {
+                                              "qualType": "double *"
+                                            },
+                                            "valueCategory": "lvalue",
+                                            "referencedDecl": {
+                                              "kind": "ParmVarDecl",
+                                              "name": "vect",
+                                              "type": {
+                                                "qualType": "double *"
+                                              }
+                                            }
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "kind": "IntegerLiteral",
+                                        "type": {
+                                          "qualType": "int"
+                                        },
+                                        "valueCategory": "prvalue",
+                                        "value": "0"
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "kind": "BinaryOperator",
+                            "type": {
+                              "qualType": "double"
+                            },
+                            "valueCategory": "prvalue",
+                            "opcode": "*",
+                            "inner": [
+                              {
+                                "kind": "ImplicitCastExpr",
+                                "type": {
+                                  "qualType": "double"
+                                },
+                                "valueCategory": "prvalue",
+                                "castKind": "LValueToRValue",
+                                "inner": [
+                                  {
+                                    "kind": "ArraySubscriptExpr",
+                                    "type": {
+                                      "qualType": "double"
+                                    },
+                                    "valueCategory": "lvalue",
+                                    "inner": [
+                                      {
+                                        "kind": "ImplicitCastExpr",
+                                        "type": {
+                                          "qualType": "double *"
+                                        },
+                                        "valueCategory": "prvalue",
+                                        "castKind": "LValueToRValue",
+                                        "inner": [
+                                          {
+                                            "kind": "DeclRefExpr",
+                                            "type": {
+                                              "qualType": "double *"
+                                            },
+                                            "valueCategory": "lvalue",
+                                            "referencedDecl": {
+                                              "kind": "ParmVarDecl",
+                                              "name": "vect",
+                                              "type": {
+                                                "qualType": "double *"
+                                              }
+                                            }
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "kind": "IntegerLiteral",
+                                        "type": {
+                                          "qualType": "int"
+                                        },
+                                        "valueCategory": "prvalue",
+                                        "value": "1"
+                                      }
+                                    ]
+                                  }
+                                ]
+                              },
+                              {
+                                "kind": "ImplicitCastExpr",
+                                "type": {
+                                  "qualType": "double"
+                                },
+                                "valueCategory": "prvalue",
+                                "castKind": "LValueToRValue",
+                                "inner": [
+                                  {
+                                    "kind": "ArraySubscriptExpr",
+                                    "type": {
+                                      "qualType": "double"
+                                    },
+                                    "valueCategory": "lvalue",
+                                    "inner": [
+                                      {
+                                        "kind": "ImplicitCastExpr",
+                                        "type": {
+                                          "qualType": "double *"
+                                        },
+                                        "valueCategory": "prvalue",
+                                        "castKind": "LValueToRValue",
+                                        "inner": [
+                                          {
+                                            "kind": "DeclRefExpr",
+                                            "type": {
+                                              "qualType": "double *"
+                                            },
+                                            "valueCategory": "lvalue",
+                                            "referencedDecl": {
+                                              "kind": "ParmVarDecl",
+                                              "name": "vect",
+                                              "type": {
+                                                "qualType": "double *"
+                                              }
+                                            }
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "kind": "IntegerLiteral",
+                                        "type": {
+                                          "qualType": "int"
+                                        },
+                                        "valueCategory": "prvalue",
+                                        "value": "1"
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "kind": "BinaryOperator",
+                        "type": {
+                          "qualType": "double"
+                        },
+                        "valueCategory": "prvalue",
+                        "opcode": "*",
+                        "inner": [
+                          {
+                            "kind": "ImplicitCastExpr",
+                            "type": {
+                              "qualType": "double"
+                            },
+                            "valueCategory": "prvalue",
+                            "castKind": "LValueToRValue",
+                            "inner": [
+                              {
+                                "kind": "ArraySubscriptExpr",
+                                "type": {
+                                  "qualType": "double"
+                                },
+                                "valueCategory": "lvalue",
+                                "inner": [
+                                  {
+                                    "kind": "ImplicitCastExpr",
+                                    "type": {
+                                      "qualType": "double *"
+                                    },
+                                    "valueCategory": "prvalue",
+                                    "castKind": "LValueToRValue",
+                                    "inner": [
+                                      {
+                                        "kind": "DeclRefExpr",
+                                        "type": {
+                                          "qualType": "double *"
+                                        },
+                                        "valueCategory": "lvalue",
+                                        "referencedDecl": {
+                                          "kind": "ParmVarDecl",
+                                          "name": "vect",
+                                          "type": {
+                                            "qualType": "double *"
+                                          }
+                                        }
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "kind": "IntegerLiteral",
+                                    "type": {
+                                      "qualType": "int"
+                                    },
+                                    "valueCategory": "prvalue",
+                                    "value": "2"
+                                  }
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "kind": "ImplicitCastExpr",
+                            "type": {
+                              "qualType": "double"
+                            },
+                            "valueCategory": "prvalue",
+                            "castKind": "LValueToRValue",
+                            "inner": [
+                              {
+                                "kind": "ArraySubscriptExpr",
+                                "type": {
+                                  "qualType": "double"
+                                },
+                                "valueCategory": "lvalue",
+                                "inner": [
+                                  {
+                                    "kind": "ImplicitCastExpr",
+                                    "type": {
+                                      "qualType": "double *"
+                                    },
+                                    "valueCategory": "prvalue",
+                                    "castKind": "LValueToRValue",
+                                    "inner": [
+                                      {
+                                        "kind": "DeclRefExpr",
+                                        "type": {
+                                          "qualType": "double *"
+                                        },
+                                        "valueCategory": "lvalue",
+                                        "referencedDecl": {
+                                          "kind": "ParmVarDecl",
+                                          "name": "vect",
+                                          "type": {
+                                            "qualType": "double *"
+                                          }
+                                        }
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "kind": "IntegerLiteral",
+                                    "type": {
+                                      "qualType": "int"
+                                    },
+                                    "valueCategory": "prvalue",
+                                    "value": "2"
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "kind": "DeclStmt",
+            "inner": [
+              {
+                "kind": "VarDecl",
+                "name": "d",
+                "type": {
+                  "qualType": "const double"
+                },
+                "init": "c",
+                "inner": [
+                  {
+                    "kind": "CallExpr",
+                    "type": {
+                      "qualType": "double"
+                    },
+                    "valueCategory": "prvalue",
+                    "inner": [
+                      {
+                        "kind": "ImplicitCastExpr",
+                        "type": {
+                          "qualType": "double (*)(double)"
+                        },
+                        "valueCategory": "prvalue",
+                        "castKind": "FunctionToPointerDecay",
+                        "inner": [
+                          {
+                            "kind": "DeclRefExpr",
+                            "type": {
+                              "qualType": "double (double)"
+                            },
+                            "valueCategory": "lvalue",
+                            "referencedDecl": {
+                              "kind": "FunctionDecl",
+                              "name": "sqrt",
+                              "type": {
+                                "qualType": "double (double)"
+                              }
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "kind": "ImplicitCastExpr",
+                        "type": {
+                          "qualType": "double"
+                        },
+                        "valueCategory": "prvalue",
+                        "castKind": "LValueToRValue",
+                        "inner": [
+                          {
+                            "kind": "DeclRefExpr",
+                            "type": {
+                              "qualType": "const double"
+                            },
+                            "valueCategory": "lvalue",
+                            "referencedDecl": {
+                              "kind": "VarDecl",
+                              "name": "d2",
+                              "type": {
+                                "qualType": "const double"
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "kind": "IfStmt",
+            "inner": [
+              {
+                "kind": "ImplicitCastExpr",
+                "type": {
+                  "qualType": "bool"
+                },
+                "valueCategory": "prvalue",
+                "castKind": "FloatingToBoolean",
+                "inner": [
+                  {
+                    "kind": "ImplicitCastExpr",
+                    "type": {
+                      "qualType": "double"
+                    },
+                    "valueCategory": "prvalue",
+                    "castKind": "LValueToRValue",
+                    "inner": [
+                      {
+                        "kind": "DeclRefExpr",
+                        "type": {
+                          "qualType": "const double"
+                        },
+                        "valueCategory": "lvalue",
+                        "referencedDecl": {
+                          "kind": "VarDecl",
+                          "name": "d",
+                          "type": {
+                            "qualType": "const double"
+                          }
+                        }
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "kind": "CompoundStmt",
+                "inner": [
+                  {
+                    "kind": "CompoundAssignOperator",
+                    "type": {
+                      "qualType": "double"
+                    },
+                    "valueCategory": "lvalue",
+                    "opcode": "/=",
+                    "inner": [
+                      {
+                        "kind": "ArraySubscriptExpr",
+                        "type": {
+                          "qualType": "double"
+                        },
+                        "valueCategory": "lvalue",
+                        "inner": [
+                          {
+                            "kind": "ImplicitCastExpr",
+                            "type": {
+                              "qualType": "double *"
+                            },
+                            "valueCategory": "prvalue",
+                            "castKind": "LValueToRValue",
+                            "inner": [
+                              {
+                                "kind": "DeclRefExpr",
+                                "type": {
+                                  "qualType": "double *"
+                                },
+                                "valueCategory": "lvalue",
+                                "referencedDecl": {
+                                  "kind": "ParmVarDecl",
+                                  "name": "vect",
+                                  "type": {
+                                    "qualType": "double *"
+                                  }
+                                }
+                              }
+                            ]
+                          },
+                          {
+                            "kind": "IntegerLiteral",
+                            "type": {
+                              "qualType": "int"
+                            },
+                            "valueCategory": "prvalue",
+                            "value": "0"
+                          }
+                        ]
+                      },
+                      {
+                        "kind": "ImplicitCastExpr",
+                        "type": {
+                          "qualType": "double"
+                        },
+                        "valueCategory": "prvalue",
+                        "castKind": "LValueToRValue",
+                        "inner": [
+                          {
+                            "kind": "DeclRefExpr",
+                            "type": {
+                              "qualType": "const double"
+                            },
+                            "valueCategory": "lvalue",
+                            "referencedDecl": {
+                              "kind": "VarDecl",
+                              "name": "d",
+                              "type": {
+                                "qualType": "const double"
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "CompoundAssignOperator",
+                    "type": {
+                      "qualType": "double"
+                    },
+                    "valueCategory": "lvalue",
+                    "opcode": "/=",
+                    "inner": [
+                      {
+                        "kind": "ArraySubscriptExpr",
+                        "type": {
+                          "qualType": "double"
+                        },
+                        "valueCategory": "lvalue",
+                        "inner": [
+                          {
+                            "kind": "ImplicitCastExpr",
+                            "type": {
+                              "qualType": "double *"
+                            },
+                            "valueCategory": "prvalue",
+                            "castKind": "LValueToRValue",
+                            "inner": [
+                              {
+                                "kind": "DeclRefExpr",
+                                "type": {
+                                  "qualType": "double *"
+                                },
+                                "valueCategory": "lvalue",
+                                "referencedDecl": {
+                                  "kind": "ParmVarDecl",
+                                  "name": "vect",
+                                  "type": {
+                                    "qualType": "double *"
+                                  }
+                                }
+                              }
+                            ]
+                          },
+                          {
+                            "kind": "IntegerLiteral",
+                            "type": {
+                              "qualType": "int"
+                            },
+                            "valueCategory": "prvalue",
+                            "value": "1"
+                          }
+                        ]
+                      },
+                      {
+                        "kind": "ImplicitCastExpr",
+                        "type": {
+                          "qualType": "double"
+                        },
+                        "valueCategory": "prvalue",
+                        "castKind": "LValueToRValue",
+                        "inner": [
+                          {
+                            "kind": "DeclRefExpr",
+                            "type": {
+                              "qualType": "const double"
+                            },
+                            "valueCategory": "lvalue",
+                            "referencedDecl": {
+                              "kind": "VarDecl",
+                              "name": "d",
+                              "type": {
+                                "qualType": "const double"
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "CompoundAssignOperator",
+                    "type": {
+                      "qualType": "double"
+                    },
+                    "valueCategory": "lvalue",
+                    "opcode": "/=",
+                    "inner": [
+                      {
+                        "kind": "ArraySubscriptExpr",
+                        "type": {
+                          "qualType": "double"
+                        },
+                        "valueCategory": "lvalue",
+                        "inner": [
+                          {
+                            "kind": "ImplicitCastExpr",
+                            "type": {
+                              "qualType": "double *"
+                            },
+                            "valueCategory": "prvalue",
+                            "castKind": "LValueToRValue",
+                            "inner": [
+                              {
+                                "kind": "DeclRefExpr",
+                                "type": {
+                                  "qualType": "double *"
+                                },
+                                "valueCategory": "lvalue",
+                                "referencedDecl": {
+                                  "kind": "ParmVarDecl",
+                                  "name": "vect",
+                                  "type": {
+                                    "qualType": "double *"
+                                  }
+                                }
+                              }
+                            ]
+                          },
+                          {
+                            "kind": "IntegerLiteral",
+                            "type": {
+                              "qualType": "int"
+                            },
+                            "valueCategory": "prvalue",
+                            "value": "2"
+                          }
+                        ]
+                      },
+                      {
+                        "kind": "ImplicitCastExpr",
+                        "type": {
+                          "qualType": "double"
+                        },
+                        "valueCategory": "prvalue",
+                        "castKind": "LValueToRValue",
+                        "inner": [
+                          {
+                            "kind": "DeclRefExpr",
+                            "type": {
+                              "qualType": "const double"
+                            },
+                            "valueCategory": "lvalue",
+                            "referencedDecl": {
+                              "kind": "VarDecl",
+                              "name": "d",
+                              "type": {
+                                "qualType": "const double"
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "kind": "ReturnStmt",
+            "inner": [
+              {
+                "kind": "ImplicitCastExpr",
+                "type": {
+                  "qualType": "double"
+                },
+                "valueCategory": "prvalue",
+                "castKind": "LValueToRValue",
+                "inner": [
+                  {
+                    "kind": "ParenExpr",
+                    "type": {
+                      "qualType": "const double"
+                    },
+                    "valueCategory": "lvalue",
+                    "inner": [
+                      {
+                        "kind": "DeclRefExpr",
+                        "type": {
+                          "qualType": "const double"
+                        },
+                        "valueCategory": "lvalue",
+                        "referencedDecl": {
+                          "kind": "VarDecl",
+                          "name": "d",
+                          "type": {
+                            "qualType": "const double"
+                          }
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

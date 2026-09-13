@@ -1,0 +1,290 @@
+{
+  "schema": 1,
+  "nodesChecked": 1084,
+  "polynomialIdentitiesChecked": 102,
+  "coefficientsChecked": 12756896,
+  "outputs": [
+    {
+      "profile": "mercury",
+      "quantity": "position",
+      "errorExact": "31740237527755605735469/1267650600228229401496703205376",
+      "errorDecimalUpper": "2.50386325081E-8",
+      "units": "km"
+    },
+    {
+      "profile": "mercury",
+      "quantity": "velocity",
+      "errorExact": "626279672245205526613/158456325028528675187087900672",
+      "errorDecimalUpper": "3.95238039336E-9",
+      "units": "km/day"
+    },
+    {
+      "profile": "mercury",
+      "quantity": "acceleration",
+      "errorExact": "1150287115447901915231/1267650600228229401496703205376",
+      "errorDecimalUpper": "9.07416535157E-10",
+      "units": "km/day^2"
+    },
+    {
+      "profile": "venus",
+      "quantity": "position",
+      "errorExact": "702059405811972943997/19807040628566084398385987584",
+      "errorDecimalUpper": "3.54449419769E-8",
+      "units": "km"
+    },
+    {
+      "profile": "venus",
+      "quantity": "velocity",
+      "errorExact": "2194582782613729472351/1267650600228229401496703205376",
+      "errorDecimalUpper": "1.73122056048E-9",
+      "units": "km/day"
+    },
+    {
+      "profile": "venus",
+      "quantity": "acceleration",
+      "errorExact": "76133576641569937361/633825300114114700748351602688",
+      "errorDecimalUpper": "1.20117604375E-10",
+      "units": "km/day^2"
+    },
+    {
+      "profile": "earth-moon-barycenter",
+      "quantity": "position",
+      "errorExact": "26672948048831020531551/633825300114114700748351602688",
+      "errorDecimalUpper": "4.20824918855E-8",
+      "units": "km"
+    },
+    {
+      "profile": "earth-moon-barycenter",
+      "quantity": "velocity",
+      "errorExact": "1549361788061795029781/1267650600228229401496703205376",
+      "errorDecimalUpper": "1.22223094265E-9",
+      "units": "km/day"
+    },
+    {
+      "profile": "earth-moon-barycenter",
+      "quantity": "acceleration",
+      "errorExact": "70599353573765486605/1267650600228229401496703205376",
+      "errorDecimalUpper": "5.56930699683E-11",
+      "units": "km/day^2"
+    },
+    {
+      "profile": "mars",
+      "quantity": "position",
+      "errorExact": "88709938048245314046171/1267650600228229401496703205376",
+      "errorDecimalUpper": "6.99798020309E-8",
+      "units": "km"
+    },
+    {
+      "profile": "mars",
+      "quantity": "velocity",
+      "errorExact": "692908657062654634487/633825300114114700748351602688",
+      "errorDecimalUpper": "1.09321710090E-9",
+      "units": "km/day"
+    },
+    {
+      "profile": "mars",
+      "quantity": "acceleration",
+      "errorExact": "18812927804922091409/633825300114114700748351602688",
+      "errorDecimalUpper": "2.96815665161E-11",
+      "units": "km/day^2"
+    },
+    {
+      "profile": "jupiter",
+      "quantity": "position",
+      "errorExact": "237416900602012164312855/1267650600228229401496703205376",
+      "errorDecimalUpper": "1.87288911124E-7",
+      "units": "km"
+    },
+    {
+      "profile": "jupiter",
+      "quantity": "velocity",
+      "errorExact": "257767634671013557445/633825300114114700748351602688",
+      "errorDecimalUpper": "4.06685619247E-10",
+      "units": "km/day"
+    },
+    {
+      "profile": "jupiter",
+      "quantity": "acceleration",
+      "errorExact": "2373095972556478491/1267650600228229401496703205376",
+      "errorDecimalUpper": "1.87204263709E-12",
+      "units": "km/day^2"
+    },
+    {
+      "profile": "saturn",
+      "quantity": "position",
+      "errorExact": "410435465777621972099049/1267650600228229401496703205376",
+      "errorDecimalUpper": "3.23776493069E-7",
+      "units": "km"
+    },
+    {
+      "profile": "saturn",
+      "quantity": "velocity",
+      "errorExact": "381715822077886299881/1267650600228229401496703205376",
+      "errorDecimalUpper": "3.01120688942E-10",
+      "units": "km/day"
+    },
+    {
+      "profile": "saturn",
+      "quantity": "acceleration",
+      "errorExact": "326916348555929503/633825300114114700748351602688",
+      "errorDecimalUpper": "5.15783053307E-13",
+      "units": "km/day^2"
+    },
+    {
+      "profile": "uranus",
+      "quantity": "position",
+      "errorExact": "850851868407359564736837/1267650600228229401496703205376",
+      "errorDecimalUpper": "6.71203775121E-7",
+      "units": "km"
+    },
+    {
+      "profile": "uranus",
+      "quantity": "velocity",
+      "errorExact": "252818982672011637649/1267650600228229401496703205376",
+      "errorDecimalUpper": "1.99439011528E-10",
+      "units": "km/day"
+    },
+    {
+      "profile": "uranus",
+      "quantity": "acceleration",
+      "errorExact": "169189880256761317/1267650600228229401496703205376",
+      "errorDecimalUpper": "1.33467282094E-13",
+      "units": "km/day^2"
+    },
+    {
+      "profile": "neptune",
+      "quantity": "position",
+      "errorExact": "1277787839837009120618725/1267650600228229401496703205376",
+      "errorDecimalUpper": "0.00000100799687202",
+      "units": "km"
+    },
+    {
+      "profile": "neptune",
+      "quantity": "velocity",
+      "errorExact": "200354276882901407457/1267650600228229401496703205376",
+      "errorDecimalUpper": "1.58051656227E-10",
+      "units": "km/day"
+    },
+    {
+      "profile": "neptune",
+      "quantity": "acceleration",
+      "errorExact": "3941155424916015/79228162514264337593543950336",
+      "errorDecimalUpper": "4.97443749779E-14",
+      "units": "km/day^2"
+    },
+    {
+      "profile": "pluto",
+      "quantity": "position",
+      "errorExact": "1880365119878256843960533/1267650600228229401496703205376",
+      "errorDecimalUpper": "0.00000148334653062",
+      "units": "km"
+    },
+    {
+      "profile": "pluto",
+      "quantity": "velocity",
+      "errorExact": "202711431078225023599/1267650600228229401496703205376",
+      "errorDecimalUpper": "1.59911123020E-10",
+      "units": "km/day"
+    },
+    {
+      "profile": "pluto",
+      "quantity": "acceleration",
+      "errorExact": "28628236024550009/633825300114114700748351602688",
+      "errorDecimalUpper": "4.51673923705E-14",
+      "units": "km/day^2"
+    },
+    {
+      "profile": "geocentric-moon",
+      "quantity": "position",
+      "errorExact": "274182396347652117839/1267650600228229401496703205376",
+      "errorDecimalUpper": "2.16291773379E-10",
+      "units": "km"
+    },
+    {
+      "profile": "geocentric-moon",
+      "quantity": "velocity",
+      "errorExact": "62831303242999331601/633825300114114700748351602688",
+      "errorDecimalUpper": "9.91303175050E-11",
+      "units": "km/day"
+    },
+    {
+      "profile": "geocentric-moon",
+      "quantity": "acceleration",
+      "errorExact": "35047777099433689481/633825300114114700748351602688",
+      "errorDecimalUpper": "5.52956423373E-11",
+      "units": "km/day^2"
+    },
+    {
+      "profile": "barycentric-sun",
+      "quantity": "position",
+      "errorExact": "412135298570199303427/1267650600228229401496703205376",
+      "errorDecimalUpper": "3.25117424704E-10",
+      "units": "km"
+    },
+    {
+      "profile": "barycentric-sun",
+      "quantity": "velocity",
+      "errorExact": "595668692960948621/1267650600228229401496703205376",
+      "errorDecimalUpper": "4.69899744341E-13",
+      "units": "km/day"
+    },
+    {
+      "profile": "barycentric-sun",
+      "quantity": "acceleration",
+      "errorExact": "3426259477408311/1267650600228229401496703205376",
+      "errorDecimalUpper": "2.70284215288E-15",
+      "units": "km/day^2"
+    },
+    {
+      "profile": "nutations",
+      "quantity": "position",
+      "errorExact": "23264884029/633825300114114700748351602688",
+      "errorDecimalUpper": "3.67055149500E-20",
+      "units": "radian"
+    },
+    {
+      "profile": "nutations",
+      "quantity": "velocity",
+      "errorExact": "18968975941/1267650600228229401496703205376",
+      "errorDecimalUpper": "1.49638835320E-20",
+      "units": "radian/day"
+    },
+    {
+      "profile": "nutations",
+      "quantity": "acceleration",
+      "errorExact": "16520186545/1267650600228229401496703205376",
+      "errorDecimalUpper": "1.30321293124E-20",
+      "units": "radian/day^2"
+    },
+    {
+      "profile": "librations",
+      "quantity": "position",
+      "errorExact": "4022772641879229801/316912650057057350374175801344",
+      "errorDecimalUpper": "1.26936322711E-11",
+      "units": "radian"
+    },
+    {
+      "profile": "librations",
+      "quantity": "velocity",
+      "errorExact": "49840071488385/633825300114114700748351602688",
+      "errorDecimalUpper": "7.86337678213E-17",
+      "units": "radian/day"
+    },
+    {
+      "profile": "librations",
+      "quantity": "acceleration",
+      "errorExact": "1450716145683/1267650600228229401496703205376",
+      "errorDecimalUpper": "1.14441325191E-18",
+      "units": "radian/day^2"
+    }
+  ],
+  "scope": "Per-component absolute arithmetic error at the return of source-ordered interp(), relative to exact evaluation of the same stored polynomial. Bounds stop BEFORE km-to-AU conversion, barycentric/heliocentric subtraction, Earth/Moon combinations, and target-center combinations. They exclude JPL model/fit error, coefficient-generation error, time-scale conversion error, and whole-orbit error.",
+  "checker": "Independent Python exact-rational checker; see Lean export for kernel arithmetic checks",
+  "trustedBase": [
+    "Python interpreter/arbitrary-precision integer and Fraction implementation",
+    "Source extractor, hash contract, and restricted arithmetic parser",
+    "IEEE binary64 nearest-even rounding error theorem and gradual underflow (explicit real-rounding premise in Lean)",
+    "Standalone Python arithmetic claims are independently strengthened by Lean polynomial/L1 proofs and the instantiated rounded DAG",
+    "Correct source-to-compiler correspondence, caller preconditions, successful I/O, and runtime implementation are separate obligations"
+  ]
+}

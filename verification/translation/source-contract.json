@@ -1,0 +1,11 @@
+{
+  "repository": "lunar",
+  "commit": "d95191818d7975c22613f231fea160341203abbe",
+  "file": "miscell.cpp",
+  "functions": {
+    "dot_product": "1b76708ea5eee5ae15d0f1196fee7c576d172f32da44ad9b4bdd1ef9869660de",
+    "vector_cross_product": "09ac309ee577cca8372ef559eb6367fccd32d2e5b7591bbae6500d65a0503faf",
+    "vector3_length": "97582037afef8f27e75ad6bbd9fadd7a69beb1d8985842f24a8837c8b0ab47b8",
+    "normalize_vect3": "c4858dfd98f72778703bbe0d762989fbe4260290b84bdf168cf6089110000e34"
+  }
+}

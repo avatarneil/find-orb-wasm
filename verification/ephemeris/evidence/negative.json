@@ -1,0 +1,66 @@
+{
+  "schema": 1,
+  "controls": [
+    {
+      "name": "rounding-bound-set-to-zero",
+      "rejected": true,
+      "message": "Rounding error bound too small at 6"
+    },
+    {
+      "name": "wrong-derivative-polynomial",
+      "rejected": true,
+      "message": "Polynomial certificate mismatch at 42"
+    },
+    {
+      "name": "recurrence-subtraction-changed-to-addition",
+      "rejected": true,
+      "message": "Polynomial certificate mismatch at 6"
+    },
+    {
+      "name": "coefficient-sum-skips-last-accumulation",
+      "rejected": true,
+      "message": "Coefficient sum order or range changed"
+    },
+    {
+      "name": "wrong-velocity-time-scale",
+      "rejected": true,
+      "message": "Nonexact or unsupported derivative scaling"
+    },
+    {
+      "name": "subnormal-error-ignored",
+      "rejected": true,
+      "message": "Rounding model changed"
+    },
+    {
+      "name": "unsupported-function-call-in-arithmetic-parser",
+      "rejected": true,
+      "message": "Unsupported C arithmetic syntax: Call(func=Name(id='hypot', ctx=Load()), args=[Name(id='p1', ctx=Load()), Name(id='p2', ctx=Load())])"
+    },
+    {
+      "name": "actual-source-derivative-term-deleted",
+      "rejected": true,
+      "message": "Source contract changed: interp"
+    },
+    {
+      "name": "actual-source-coefficient-loop-off-by-one",
+      "rejected": true,
+      "message": "Source contract changed: interp"
+    },
+    {
+      "name": "actual-source-endpoint-correction-deleted",
+      "rejected": true,
+      "message": "Source contract changed: interp"
+    },
+    {
+      "name": "understated-real-data-coefficient-envelope",
+      "rejected": true,
+      "message": "Coefficient envelope violated: mercury/0/0"
+    },
+    {
+      "name": "consistently-relabeled-planet-and-units",
+      "rejected": true,
+      "message": "Canonical profile names/order mismatch"
+    }
+  ],
+  "acceptedBadCertificates": 0
+}

@@ -4,7 +4,7 @@ A standalone WebAssembly port of [Bill Gray / Project Pluto’s Find_Orb](https:
 
 Extracted from the latest `webastrometrica` `origin/main` at `c86e53ccf9fa662bc43fb0b3eed67594790e52a2`. See [provenance.json](provenance.json) for exact source-file hashes. The browser application and its job policy remain in WebAstrometrica.
 
-Read the [measured findings and limitations](docs/findings.html) for native/WASM performance, targeted formal verification, and the **6.33 MB** compact data download.
+Read the [correctness research](docs/correctness-research.html) for kernel-checked numerical theorems, restricted translation validation of selected WASM functions, and reproduced integrator defects. The [earlier performance study](docs/findings.html) records native/WASM benchmarks and the **6.33 MB** compact data download.
 
 ## Build
 
@@ -93,11 +93,29 @@ The experimental command checks a separately built exact integer multiplication 
 
 ## Numerical policy
 
-Preserve upstream orbital arithmetic: binary64 `double`, Emscripten software binary128 `long double`, no fast-math, and disabled FP contraction throughout all four source projects. Keep a fresh C runtime for each job. Checked portability patches replace a mismatched function-pointer cast, disable unsupported POSIX process controls in WASM, and complete the configured statistical-ranging candidate budget instead of stopping after a CPU-dependent half second. External timeouts reject incomplete jobs.
+Preserve upstream precision: binary64 `double`, Emscripten software binary128 `long double`, no fast-math, and disabled FP contraction throughout all four source projects. Keep a fresh C runtime for each job. Checked portability patches replace a mismatched function-pointer cast, disable unsupported POSIX process controls in WASM, and complete the configured statistical-ranging candidate budget instead of stopping after a CPU-dependent half second. External timeouts reject incomplete jobs.
+
+Research identified and corrected a shifted stage-time array and an unreleased workspace in the optional Prince–Dormand integration path. The default Fehlberg path is unchanged. The original PD path returned approximately `0.328675` for a one-step `y'=t` problem whose exact answer is `0.5`. Both original and corrected bodies are tested against exact arithmetic models; see [integrator evidence](verification/integrator/README.md). All patches are explicit in `build/patches.mjs`.
 
 Native/WASM agreement is a port regression check, not independent astronomical truth or a proof of universal numerical accuracy.
 
 On the measured Apple ARM host, native `long double` has 53 significand bits and WASM has 113. Native-versus-WASM timing therefore compares the actual implementations with their different extended-precision costs. The port preserves the WASM precision policy.
+
+## Reproduce the correctness research
+
+After building the solver, keep its pinned source checkouts in `.wasm-engine/sources/` and full DE440 file in `.cache/linux_p1550p2650.440`. Use Python 3.12+ (the SDK's Python 3.13 is suitable):
+
+```sh
+.wasm-toolchain/python/3.13.3_64bit/bin/python3 -m venv .venv/research
+.venv/research/bin/python -m pip install -r verification/research-requirements.txt
+npm run setup:proof-tools
+npm run verify:research
+npm run report:research
+```
+
+The first command uses the macOS SDK's Python; on Linux, substitute an installed Python 3.12+ executable. The setup downloads checksum-pinned Lean 4.24.0 and a pinned mathlib/dependency tree into `.cache/`; allow several GB of disk space. Verification uses local tools and data. A complete run takes several minutes and writes `verification/research-evidence.json`; failed reruns invalidate success. `npm run verify:kernel` checks only existing Lean artifacts and does not regenerate their source/data correspondence evidence.
+
+The suite combines explicit real/rational theorems checked and replayed from an empty Lean kernel environment, source-anchored coefficient scans and certificates, restricted source-to-WASM equivalence checked by Z3 and cvc5, native/WASM integrator comparisons, and deliberately invalid proofs/programs. See the [kernel trusted base](verification/kernel/README.md), [ephemeris scope](verification/ephemeris/README.md), and [compiler scope](verification/translation/README.md). It does **not** prove the complete solver, compiler toolchain, astronomical model, or browser correct.
 
 ## Rebuild corresponding source
 

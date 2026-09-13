@@ -1,0 +1,38 @@
+[
+  {
+    "symbol": "arithmetic_0",
+    "originalSMT": "(fp.sub roundNearestTiesToEven\n        (fp.mul roundNearestTiesToEven a_1 b_2)\n        (fp.mul roundNearestTiesToEven a_2 b_1))"
+  },
+  {
+    "symbol": "arithmetic_1",
+    "originalSMT": "(fp.mul roundNearestTiesToEven a_1 b_2)"
+  },
+  {
+    "symbol": "arithmetic_2",
+    "originalSMT": "(fp.mul roundNearestTiesToEven a_2 b_1)"
+  },
+  {
+    "symbol": "arithmetic_3",
+    "originalSMT": "(fp.sub roundNearestTiesToEven\n        (fp.mul roundNearestTiesToEven a_2 b_0)\n        (fp.mul roundNearestTiesToEven a_0 b_2))"
+  },
+  {
+    "symbol": "arithmetic_4",
+    "originalSMT": "(fp.mul roundNearestTiesToEven a_2 b_0)"
+  },
+  {
+    "symbol": "arithmetic_5",
+    "originalSMT": "(fp.mul roundNearestTiesToEven a_0 b_2)"
+  },
+  {
+    "symbol": "arithmetic_6",
+    "originalSMT": "(fp.sub roundNearestTiesToEven\n        (fp.mul roundNearestTiesToEven a_0 b_1)\n        (fp.mul roundNearestTiesToEven a_1 b_0))"
+  },
+  {
+    "symbol": "arithmetic_7",
+    "originalSMT": "(fp.mul roundNearestTiesToEven a_0 b_1)"
+  },
+  {
+    "symbol": "arithmetic_8",
+    "originalSMT": "(fp.mul roundNearestTiesToEven a_1 b_0)"
+  }
+]

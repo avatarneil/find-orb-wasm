@@ -17,6 +17,15 @@ Pinned dependencies and unmodified license texts:
   and C/C++ runtime notices included by the pinned build recipe.
 - DE440: JPL planetary/lunar reference data, separately attributed and pinned
   in build/pins.mjs; this project does not relicense JPL data.
+- Verification helper verification/kernel/RawReplay.lean adapts Lean's
+  declaration replay, Copyright (c) 2023 Kim Morrison, under Apache-2.0.
+  Preserve verification/kernel/LEAN-LICENSE.txt and its file-level notice.
+  Lean/mathlib are proof-development tools and are not linked into the solver.
+
+Scientific modifications include correcting the optional Prince-Dormand
+stage-time indexing and releasing its step workspace. The default Fehlberg
+integrator is unchanged. Exact source hashes, original/corrected comparisons,
+and mathematical limits are recorded in verification/integrator/.
 
 Dependency repositories:
 https://github.com/Bill-Gray/lunar

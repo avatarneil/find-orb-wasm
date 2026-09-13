@@ -1,0 +1,30 @@
+{
+  "schema": 1,
+  "recordedAt": "2026-09-13T17:37:31.190Z",
+  "binarySHA256": "256e850727f91a441f2344217a6a15727dfefcabb91f03b61e8d694d9d03cd57",
+  "sourceLockSHA256": "cfe1a499eaa27516c856fcec984b5f35380b8fbd6ea9515062a464662e992f01",
+  "passed": true,
+  "commands": [
+    {
+      "command": "npm test",
+      "exitCode": 0,
+      "testsPassed": 23
+    },
+    {
+      "command": "npm run test:browser",
+      "exitCode": 0,
+      "testsPassed": 3
+    },
+    {
+      "command": "npm run verify:data",
+      "exitCode": 0,
+      "scientificWorkloads": 7,
+      "ephemerisFailureGuards": 5
+    }
+  ],
+  "datasetEvidenceSHA256": "7adda11a5e17373f019ff5e6a9ef952203c97fca7d7fed8460913c450aca4420",
+  "portProofEvidenceSHA256": "5611a9bf702531ae0ffa40509cc4ba50e9b8136e4ad1a0b6d4e9edf6b407c126",
+  "portProofObligations": 23,
+  "scope": "Empirical regression of rebuilt default solver, real Chromium loader/runtime and full/compact equivalence. Default selector uses Fehlberg. Optional PD correctness is separately tested by extracted original/corrected integrator kernels. Not a universal proof.",
+  "observation": "All commands completed successfully in this session. Scientific evidence is retained in results/dataset.json; command timing/output was not recorded as a benchmark."
+}

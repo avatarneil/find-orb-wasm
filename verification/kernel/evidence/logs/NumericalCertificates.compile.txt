@@ -1,0 +1,1649 @@
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/ephemeris/NumericalCertificates.lean:12:21: warning: 'ring' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/ephemeris/NumericalCertificates.lean:12:21: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/ephemeris/NumericalCertificates.lean:15:21: warning: 'ring' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/ephemeris/NumericalCertificates.lean:15:21: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/ephemeris/NumericalCertificates.lean:18:21: warning: 'ring' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/ephemeris/NumericalCertificates.lean:18:21: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/ephemeris/NumericalCertificates.lean:21:17: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/ephemeris/NumericalCertificates.lean:24:31: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/ephemeris/NumericalCertificates.lean:28:45: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/ephemeris/NumericalCertificates.lean:32:45: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/ephemeris/NumericalCertificates.lean:36:45: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/ephemeris/NumericalCertificates.lean:40:45: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/ephemeris/NumericalCertificates.lean:44:45: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/ephemeris/NumericalCertificates.lean:48:46: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/ephemeris/NumericalCertificates.lean:52:47: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/ephemeris/NumericalCertificates.lean:56:47: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/ephemeris/NumericalCertificates.lean:60:47: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/ephemeris/NumericalCertificates.lean:64:48: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/ephemeris/NumericalCertificates.lean:68:47: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/ephemeris/NumericalCertificates.lean:72:48: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/ephemeris/NumericalCertificates.lean:76:47: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/ephemeris/NumericalCertificates.lean:80:48: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/ephemeris/NumericalCertificates.lean:84:47: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/ephemeris/NumericalCertificates.lean:88:48: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/ephemeris/NumericalCertificates.lean:92:47: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/ephemeris/NumericalCertificates.lean:96:48: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/ephemeris/NumericalCertificates.lean:100:47: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/ephemeris/NumericalCertificates.lean:104:48: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/ephemeris/NumericalCertificates.lean:108:47: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/ephemeris/NumericalCertificates.lean:112:48: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/ephemeris/NumericalCertificates.lean:116:47: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/ephemeris/NumericalCertificates.lean:120:48: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/ephemeris/NumericalCertificates.lean:124:47: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/ephemeris/NumericalCertificates.lean:128:48: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/ephemeris/NumericalCertificates.lean:132:47: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/ephemeris/NumericalCertificates.lean:136:48: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/ephemeris/NumericalCertificates.lean:140:47: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/ephemeris/NumericalCertificates.lean:144:48: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/ephemeris/NumericalCertificates.lean:148:46: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/ephemeris/NumericalCertificates.lean:152:47: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/ephemeris/NumericalCertificates.lean:156:47: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/ephemeris/NumericalCertificates.lean:160:47: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/ephemeris/NumericalCertificates.lean:164:47: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/ephemeris/NumericalCertificates.lean:168:47: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/ephemeris/NumericalCertificates.lean:172:47: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/ephemeris/NumericalCertificates.lean:176:47: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/ephemeris/NumericalCertificates.lean:180:47: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/ephemeris/NumericalCertificates.lean:184:47: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/ephemeris/NumericalCertificates.lean:188:47: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/ephemeris/NumericalCertificates.lean:192:48: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/ephemeris/NumericalCertificates.lean:196:47: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/ephemeris/NumericalCertificates.lean:200:48: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/ephemeris/NumericalCertificates.lean:204:48: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/ephemeris/NumericalCertificates.lean:208:48: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/ephemeris/NumericalCertificates.lean:212:47: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/ephemeris/NumericalCertificates.lean:216:48: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/ephemeris/NumericalCertificates.lean:220:48: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/ephemeris/NumericalCertificates.lean:224:48: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/ephemeris/NumericalCertificates.lean:228:47: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/ephemeris/NumericalCertificates.lean:232:48: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/ephemeris/NumericalCertificates.lean:236:48: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/ephemeris/NumericalCertificates.lean:240:48: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/ephemeris/NumericalCertificates.lean:244:47: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/ephemeris/NumericalCertificates.lean:248:48: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/ephemeris/NumericalCertificates.lean:252:48: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/ephemeris/NumericalCertificates.lean:256:48: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/ephemeris/NumericalCertificates.lean:260:47: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/ephemeris/NumericalCertificates.lean:264:48: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/ephemeris/NumericalCertificates.lean:268:48: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/ephemeris/NumericalCertificates.lean:272:48: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/ephemeris/NumericalCertificates.lean:276:47: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/ephemeris/NumericalCertificates.lean:280:48: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/ephemeris/NumericalCertificates.lean:284:48: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/ephemeris/NumericalCertificates.lean:288:48: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/ephemeris/NumericalCertificates.lean:292:47: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/ephemeris/NumericalCertificates.lean:296:48: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/ephemeris/NumericalCertificates.lean:300:48: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/ephemeris/NumericalCertificates.lean:304:48: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/ephemeris/NumericalCertificates.lean:308:47: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/ephemeris/NumericalCertificates.lean:312:48: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/ephemeris/NumericalCertificates.lean:316:48: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/ephemeris/NumericalCertificates.lean:320:48: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/ephemeris/NumericalCertificates.lean:324:47: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/ephemeris/NumericalCertificates.lean:328:48: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/ephemeris/NumericalCertificates.lean:332:48: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/ephemeris/NumericalCertificates.lean:336:48: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/ephemeris/NumericalCertificates.lean:340:47: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/ephemeris/NumericalCertificates.lean:344:48: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/ephemeris/NumericalCertificates.lean:348:48: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/ephemeris/NumericalCertificates.lean:352:48: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/ephemeris/NumericalCertificates.lean:356:47: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/ephemeris/NumericalCertificates.lean:360:48: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/ephemeris/NumericalCertificates.lean:364:48: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/ephemeris/NumericalCertificates.lean:368:48: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/ephemeris/NumericalCertificates.lean:372:47: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/ephemeris/NumericalCertificates.lean:376:48: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/ephemeris/NumericalCertificates.lean:380:48: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/ephemeris/NumericalCertificates.lean:384:48: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/ephemeris/NumericalCertificates.lean:388:22: warning: 'ring' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/ephemeris/NumericalCertificates.lean:388:22: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/ephemeris/NumericalCertificates.lean:391:47: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/ephemeris/NumericalCertificates.lean:395:46: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/ephemeris/NumericalCertificates.lean:399:48: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/ephemeris/NumericalCertificates.lean:403:47: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/ephemeris/NumericalCertificates.lean:407:23: warning: 'ring' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/ephemeris/NumericalCertificates.lean:407:23: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/ephemeris/NumericalCertificates.lean:410:50: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/ephemeris/NumericalCertificates.lean:414:48: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/ephemeris/NumericalCertificates.lean:418:51: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/ephemeris/NumericalCertificates.lean:422:49: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/ephemeris/NumericalCertificates.lean:426:23: warning: 'ring' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/ephemeris/NumericalCertificates.lean:426:23: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/ephemeris/NumericalCertificates.lean:429:50: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/ephemeris/NumericalCertificates.lean:433:49: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/ephemeris/NumericalCertificates.lean:437:51: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/ephemeris/NumericalCertificates.lean:441:50: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/ephemeris/NumericalCertificates.lean:445:23: warning: 'ring' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/ephemeris/NumericalCertificates.lean:445:23: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/ephemeris/NumericalCertificates.lean:448:50: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/ephemeris/NumericalCertificates.lean:452:49: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/ephemeris/NumericalCertificates.lean:456:51: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/ephemeris/NumericalCertificates.lean:460:51: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/ephemeris/NumericalCertificates.lean:464:23: warning: 'ring' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/ephemeris/NumericalCertificates.lean:464:23: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/ephemeris/NumericalCertificates.lean:467:50: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/ephemeris/NumericalCertificates.lean:471:49: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/ephemeris/NumericalCertificates.lean:475:51: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/ephemeris/NumericalCertificates.lean:479:51: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/ephemeris/NumericalCertificates.lean:483:23: warning: 'ring' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/ephemeris/NumericalCertificates.lean:483:23: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/ephemeris/NumericalCertificates.lean:486:50: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/ephemeris/NumericalCertificates.lean:490:49: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/ephemeris/NumericalCertificates.lean:494:51: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/ephemeris/NumericalCertificates.lean:498:51: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/ephemeris/NumericalCertificates.lean:502:23: warning: 'ring' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/ephemeris/NumericalCertificates.lean:502:23: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/ephemeris/NumericalCertificates.lean:505:50: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/ephemeris/NumericalCertificates.lean:509:49: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/ephemeris/NumericalCertificates.lean:513:51: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/ephemeris/NumericalCertificates.lean:517:51: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/ephemeris/NumericalCertificates.lean:521:23: warning: 'ring' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/ephemeris/NumericalCertificates.lean:521:23: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/ephemeris/NumericalCertificates.lean:524:50: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/ephemeris/NumericalCertificates.lean:528:49: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/ephemeris/NumericalCertificates.lean:532:51: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/ephemeris/NumericalCertificates.lean:536:51: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/ephemeris/NumericalCertificates.lean:540:23: warning: 'ring' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/ephemeris/NumericalCertificates.lean:540:23: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/ephemeris/NumericalCertificates.lean:543:50: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/ephemeris/NumericalCertificates.lean:547:49: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/ephemeris/NumericalCertificates.lean:551:51: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/ephemeris/NumericalCertificates.lean:555:51: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/ephemeris/NumericalCertificates.lean:559:23: warning: 'ring' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/ephemeris/NumericalCertificates.lean:559:23: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/ephemeris/NumericalCertificates.lean:562:50: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/ephemeris/NumericalCertificates.lean:566:49: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/ephemeris/NumericalCertificates.lean:570:51: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/ephemeris/NumericalCertificates.lean:574:51: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/ephemeris/NumericalCertificates.lean:578:23: warning: 'ring' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/ephemeris/NumericalCertificates.lean:578:23: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/ephemeris/NumericalCertificates.lean:581:50: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/ephemeris/NumericalCertificates.lean:585:49: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/ephemeris/NumericalCertificates.lean:589:51: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/ephemeris/NumericalCertificates.lean:593:51: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/ephemeris/NumericalCertificates.lean:597:23: warning: 'ring' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/ephemeris/NumericalCertificates.lean:597:23: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/ephemeris/NumericalCertificates.lean:600:50: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/ephemeris/NumericalCertificates.lean:604:49: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/ephemeris/NumericalCertificates.lean:608:51: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/ephemeris/NumericalCertificates.lean:612:51: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/ephemeris/NumericalCertificates.lean:616:23: warning: 'ring' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/ephemeris/NumericalCertificates.lean:616:23: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/ephemeris/NumericalCertificates.lean:619:50: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/ephemeris/NumericalCertificates.lean:623:49: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/ephemeris/NumericalCertificates.lean:627:51: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/ephemeris/NumericalCertificates.lean:631:51: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/ephemeris/NumericalCertificates.lean:635:23: warning: 'ring' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/ephemeris/NumericalCertificates.lean:635:23: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/ephemeris/NumericalCertificates.lean:638:50: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/ephemeris/NumericalCertificates.lean:642:49: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/ephemeris/NumericalCertificates.lean:646:51: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/ephemeris/NumericalCertificates.lean:650:51: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/ephemeris/NumericalCertificates.lean:654:23: warning: 'ring' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/ephemeris/NumericalCertificates.lean:654:23: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/ephemeris/NumericalCertificates.lean:657:50: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/ephemeris/NumericalCertificates.lean:661:49: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/ephemeris/NumericalCertificates.lean:665:51: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/ephemeris/NumericalCertificates.lean:669:51: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+'FindOrbEphemerisCertificates.polynomial_0' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.polynomial_1' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.polynomial_2' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.polynomial_3' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.polynomial_4' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_4' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.polynomial_5' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_5' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.polynomial_6' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_6' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.polynomial_7' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_7' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.polynomial_8' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_8' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.polynomial_9' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_9' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.polynomial_10' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_10' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.polynomial_11' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_11' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.polynomial_12' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_12' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.polynomial_13' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_13' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.polynomial_14' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_14' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.polynomial_15' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_15' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.polynomial_16' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_16' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.polynomial_17' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_17' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.polynomial_18' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_18' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.polynomial_19' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_19' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.polynomial_20' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_20' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.polynomial_21' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_21' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.polynomial_22' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_22' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.polynomial_23' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_23' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.polynomial_24' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_24' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.polynomial_25' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_25' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.polynomial_26' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_26' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.polynomial_27' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_27' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.polynomial_28' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_28' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.polynomial_29' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_29' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.polynomial_30' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_30' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.polynomial_31' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_31' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.polynomial_32' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_32' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.polynomial_33' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_33' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.polynomial_34' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_34' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.polynomial_35' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_35' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.polynomial_36' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_36' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.polynomial_37' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_37' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.polynomial_38' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_38' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.polynomial_39' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_39' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.polynomial_40' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_40' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.polynomial_41' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_41' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.polynomial_42' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_42' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.polynomial_43' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_43' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.polynomial_44' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_44' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.polynomial_45' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_45' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.polynomial_46' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_46' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.polynomial_47' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_47' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.polynomial_48' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_48' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.polynomial_49' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_49' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.polynomial_50' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_50' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.polynomial_51' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_51' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.polynomial_52' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_52' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.polynomial_53' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_53' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.polynomial_54' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_54' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.polynomial_55' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_55' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.polynomial_56' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_56' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.polynomial_57' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_57' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.polynomial_58' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_58' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.polynomial_59' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_59' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.polynomial_60' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_60' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.polynomial_61' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_61' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.polynomial_62' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_62' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.polynomial_63' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_63' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.polynomial_64' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_64' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.polynomial_65' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_65' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.polynomial_66' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_66' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.polynomial_67' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_67' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.polynomial_68' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_68' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.polynomial_69' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_69' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.polynomial_70' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_70' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.polynomial_71' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_71' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.polynomial_72' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_72' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.polynomial_73' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_73' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.polynomial_74' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_74' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.polynomial_75' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_75' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.polynomial_76' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_76' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.polynomial_77' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_77' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.polynomial_78' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_78' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.polynomial_79' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_79' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.polynomial_80' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_80' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.polynomial_81' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_81' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.polynomial_82' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_82' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.polynomial_83' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_83' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.polynomial_84' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_84' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.polynomial_85' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_85' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.polynomial_86' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_86' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.polynomial_87' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_87' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.polynomial_88' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_88' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.polynomial_89' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_89' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.polynomial_90' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_90' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.polynomial_91' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_91' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.polynomial_92' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_92' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.polynomial_93' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_93' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.polynomial_94' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_94' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.polynomial_95' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.polynomial_96' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_96' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.polynomial_97' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_97' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.polynomial_98' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_98' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.polynomial_99' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_99' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.polynomial_100' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.polynomial_101' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_101' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.polynomial_102' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_102' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.polynomial_103' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_103' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.polynomial_104' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_104' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.polynomial_105' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.polynomial_106' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_106' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.polynomial_107' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_107' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.polynomial_108' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_108' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.polynomial_109' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_109' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.polynomial_110' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.polynomial_111' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_111' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.polynomial_112' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_112' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.polynomial_113' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_113' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.polynomial_114' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_114' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.polynomial_115' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.polynomial_116' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_116' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.polynomial_117' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_117' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.polynomial_118' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_118' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.polynomial_119' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_119' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.polynomial_120' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.polynomial_121' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_121' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.polynomial_122' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_122' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.polynomial_123' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_123' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.polynomial_124' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_124' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.polynomial_125' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.polynomial_126' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_126' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.polynomial_127' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_127' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.polynomial_128' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_128' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.polynomial_129' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_129' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.polynomial_130' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.polynomial_131' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_131' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.polynomial_132' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_132' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.polynomial_133' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_133' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.polynomial_134' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_134' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.polynomial_135' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.polynomial_136' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_136' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.polynomial_137' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_137' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.polynomial_138' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_138' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.polynomial_139' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_139' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.polynomial_140' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.polynomial_141' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_141' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.polynomial_142' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_142' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.polynomial_143' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_143' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.polynomial_144' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_144' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.polynomial_145' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.polynomial_146' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_146' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.polynomial_147' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_147' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.polynomial_148' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_148' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.polynomial_149' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_149' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.polynomial_150' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.polynomial_151' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_151' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.polynomial_152' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_152' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.polynomial_153' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_153' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.polynomial_154' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_154' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.polynomial_155' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.polynomial_156' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_156' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.polynomial_157' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_157' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.polynomial_158' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_158' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.polynomial_159' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_159' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.polynomial_160' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.polynomial_161' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_161' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.polynomial_162' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_162' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.polynomial_163' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_163' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.polynomial_164' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_164' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.polynomial_165' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.polynomial_166' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_166' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.polynomial_167' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_167' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.polynomial_168' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_168' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.polynomial_169' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_169' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_184' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_185' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_186' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_187' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_188' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_189' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_190' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_191' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_192' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_193' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_194' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_195' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_196' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_197' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_198' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_199' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_200' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_201' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_202' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_203' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_204' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_205' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_206' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_207' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_208' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_209' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_210' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_211' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_212' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_213' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_214' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_215' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_216' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_217' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_218' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_219' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_220' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_221' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_222' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_223' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_224' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_225' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_226' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_227' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_228' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_229' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_230' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_231' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_232' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_233' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_234' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_235' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_236' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_237' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_239' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_240' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_241' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_242' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_243' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_244' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_245' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_246' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_247' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_248' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_249' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_250' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_251' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_252' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_253' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_254' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_255' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_256' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_257' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_258' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_259' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_260' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_261' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_262' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_263' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_264' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_265' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_266' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_267' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_269' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_270' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_281' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_282' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_283' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_284' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_285' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_286' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_287' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_288' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_289' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_290' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_291' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_292' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_293' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_294' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_295' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_296' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_297' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_298' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_299' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_300' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_301' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_302' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_303' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_304' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_305' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_306' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_307' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_308' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_309' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_310' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_311' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_312' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_313' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_314' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_315' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_316' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_317' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_318' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_320' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_321' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_322' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_323' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_324' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_325' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_326' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_327' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_328' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_329' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_330' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_331' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_332' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_333' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_334' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_335' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_336' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_337' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_338' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_339' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_340' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_342' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_343' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_357' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_358' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_359' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_360' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_361' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_362' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_363' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_364' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_365' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_366' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_367' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_368' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_369' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_370' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_371' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_372' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_373' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_374' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_375' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_376' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_377' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_378' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_379' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_380' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_381' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_382' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_383' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_384' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_385' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_386' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_387' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_388' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_389' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_390' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_391' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_392' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_393' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_394' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_395' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_396' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_397' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_398' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_399' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_400' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_401' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_402' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_403' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_404' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_405' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_406' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_408' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_409' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_410' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_411' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_412' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_413' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_414' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_415' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_416' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_417' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_418' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_419' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_420' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_421' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_422' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_423' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_424' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_425' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_426' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_427' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_428' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_429' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_430' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_431' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_432' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_433' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_434' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_436' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_437' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_449' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_450' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_451' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_452' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_453' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_454' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_455' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_456' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_457' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_458' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_459' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_460' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_461' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_462' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_463' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_464' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_465' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_466' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_467' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_468' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_469' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_470' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_471' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_472' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_473' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_474' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_475' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_476' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_477' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_478' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_479' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_480' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_481' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_482' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_483' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_484' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_485' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_486' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_487' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_488' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_489' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_490' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_492' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_493' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_494' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_495' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_496' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_497' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_498' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_499' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_500' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_501' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_502' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_503' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_504' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_505' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_506' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_507' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_508' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_509' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_510' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_511' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_512' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_513' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_514' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_516' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_517' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_526' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_527' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_528' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_529' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_530' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_531' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_532' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_533' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_534' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_535' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_536' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_537' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_538' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_539' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_540' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_541' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_542' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_543' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_544' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_545' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_546' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_547' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_548' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_549' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_550' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_551' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_552' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_553' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_554' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_555' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_557' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_558' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_559' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_560' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_561' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_562' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_563' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_564' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_565' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_566' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_567' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_568' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_569' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_570' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_571' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_572' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_573' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_575' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_576' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_584' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_585' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_586' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_587' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_588' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_589' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_590' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_591' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_592' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_593' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_594' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_595' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_596' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_597' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_598' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_599' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_600' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_601' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_602' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_603' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_604' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_605' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_606' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_607' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_608' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_609' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_611' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_612' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_613' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_614' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_615' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_616' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_617' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_618' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_619' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_620' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_621' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_622' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_623' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_624' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_625' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_627' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_628' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_635' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_636' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_637' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_638' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_639' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_640' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_641' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_642' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_643' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_644' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_645' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_646' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_647' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_648' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_649' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_650' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_651' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_652' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_653' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_654' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_655' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_656' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_658' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_659' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_660' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_661' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_662' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_663' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_664' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_665' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_666' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_667' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_668' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_669' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_670' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_672' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_673' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_680' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_681' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_682' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_683' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_684' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_685' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_686' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_687' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_688' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_689' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_690' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_691' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_692' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_693' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_694' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_695' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_696' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_697' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_698' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_699' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_700' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_701' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_703' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_704' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_705' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_706' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_707' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_708' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_709' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_710' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_711' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_712' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_713' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_714' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_715' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_717' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_718' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_725' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_726' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_727' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_728' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_729' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_730' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_731' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_732' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_733' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_734' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_735' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_736' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_737' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_738' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_739' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_740' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_741' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_742' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_743' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_744' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_745' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_746' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_748' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_749' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_750' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_751' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_752' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_753' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_754' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_755' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_756' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_757' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_758' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_759' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_760' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_762' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_763' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_777' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_778' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_779' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_780' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_781' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_782' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_783' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_784' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_785' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_786' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_787' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_788' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_789' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_790' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_791' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_792' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_793' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_794' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_795' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_796' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_797' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_798' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_799' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_800' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_801' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_802' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_803' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_804' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_805' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_806' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_807' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_808' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_809' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_810' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_811' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_812' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_813' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_814' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_815' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_816' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_817' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_818' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_819' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_820' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_821' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_822' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_823' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_824' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_825' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_826' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_828' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_829' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_830' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_831' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_832' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_833' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_834' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_835' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_836' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_837' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_838' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_839' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_840' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_841' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_842' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_843' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_844' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_845' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_846' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_847' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_848' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_849' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_850' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_851' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_852' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_853' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_854' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_856' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_857' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_869' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_870' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_871' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_872' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_873' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_874' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_875' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_876' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_877' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_878' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_879' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_880' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_881' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_882' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_883' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_884' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_885' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_886' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_887' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_888' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_889' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_890' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_891' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_892' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_893' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_894' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_895' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_896' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_897' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_898' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_899' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_900' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_901' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_902' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_903' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_904' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_905' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_906' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_907' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_908' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_909' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_910' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_912' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_913' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_914' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_915' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_916' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_917' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_918' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_919' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_920' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_921' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_922' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_923' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_924' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_925' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_926' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_927' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_928' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_929' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_930' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_931' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_932' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_933' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_934' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_936' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_937' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_948' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_949' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_950' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_951' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_952' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_953' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_954' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_955' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_956' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_957' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_958' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_959' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_960' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_961' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_962' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_963' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_964' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_965' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_966' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_967' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_968' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_969' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_970' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_971' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_972' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_973' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_974' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_975' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_976' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_977' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_978' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_979' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_980' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_981' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_982' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_983' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_984' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_985' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_987' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_988' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_989' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_990' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_991' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_992' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_993' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_994' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_995' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_996' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_997' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_998' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_999' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_1000' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_1001' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_1002' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_1003' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_1004' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_1005' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_1006' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_1007' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_1009' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_1010' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_1021' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_1022' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_1023' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_1024' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_1025' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_1026' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_1027' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_1028' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_1029' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_1030' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_1031' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_1032' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_1033' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_1034' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_1035' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_1036' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_1037' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_1038' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_1039' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_1040' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_1041' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_1042' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_1043' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_1044' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_1045' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_1046' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_1047' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_1048' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_1049' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_1050' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_1051' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_1052' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_1053' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_1054' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_1055' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_1056' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_1057' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_1058' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_1060' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_1061' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_1062' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_1063' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_1064' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_1065' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_1066' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_1067' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_1068' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_1069' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_1070' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_1071' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_1072' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_1073' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_1074' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_1075' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_1076' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_1077' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_1078' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_1079' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_1080' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_1082' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.arithmetic_1083' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbEphemerisCertificates.conservative_underflow' depends on axioms: [propext, Classical.choice, Quot.sound]

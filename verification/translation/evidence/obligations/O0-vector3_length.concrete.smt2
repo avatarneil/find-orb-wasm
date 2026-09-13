@@ -1,0 +1,18 @@
+; benchmark generated from python API
+(set-info :status unknown)
+(declare-fun vect_2 () (_ FloatingPoint 11 53))
+(declare-fun vect_1 () (_ FloatingPoint 11 53))
+(declare-fun vect_0 () (_ FloatingPoint 11 53))
+(assert
+ (let (($x1794 (and (distinct vect_2 vect_2) true)))
+(let (($x103 (and (distinct vect_1 vect_1) true)))
+(let (($x1793 (and (distinct vect_0 vect_0) true)))
+(let ((?x1790 (fp.mul roundNearestTiesToEven vect_2 vect_2)))
+(let ((?x1789 (fp.mul roundNearestTiesToEven vect_1 vect_1)))
+(let ((?x165 (fp.mul roundNearestTiesToEven vect_0 vect_0)))
+(let ((?x30 (fp.add roundNearestTiesToEven ?x165 ?x1789)))
+(let ((?x239 (fp.add roundNearestTiesToEven ?x30 ?x1790)))
+(let ((?x1792 (fp.sqrt roundNearestTiesToEven ?x239)))
+(let (($x16 (not (or true))))
+(or $x16 (and true (or (and (distinct ?x1792 ?x1792) true) $x1793 $x103 $x1794))))))))))))))
+(check-sat)

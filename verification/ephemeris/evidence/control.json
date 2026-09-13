@@ -1,0 +1,94 @@
+{
+  "schema": 1,
+  "z3Version": "4.15.4",
+  "proved": [
+    {
+      "name": "subinterval.index-in-bounds-including-right-endpoint",
+      "result": "unsat"
+    },
+    {
+      "name": "subinterval.tc-in-closed-unit-interval",
+      "result": "unsat"
+    },
+    {
+      "name": "subinterval.right-endpoint-is-last-record-tc-one",
+      "result": "unsat"
+    },
+    {
+      "name": "subinterval.left-endpoint-is-first-record-tc-minus-one",
+      "result": "unsat"
+    },
+    {
+      "name": "subinterval.all-coordinate-numerators-fit-53-significant-bits",
+      "result": "unsat"
+    },
+    {
+      "name": "coefficient.read-in-bounds",
+      "result": "unsat"
+    },
+    {
+      "name": "coefficient.one-past-pointer-in-bounds",
+      "result": "unsat"
+    },
+    {
+      "name": "position.basis-read-in-bounds",
+      "result": "unsat"
+    },
+    {
+      "name": "velocity.omits-zero-derivative-only",
+      "result": "unsat"
+    },
+    {
+      "name": "recurrences.all-array-reads-and-writes-in-bounds",
+      "result": "unsat"
+    },
+    {
+      "name": "recurrences.counter-decreases-and-stops-at-ncf",
+      "result": "unsat"
+    },
+    {
+      "name": "cache.hit-with-larger-prefix-covers-smaller-request",
+      "result": "unsat"
+    },
+    {
+      "name": "outputs.position-velocity-acceleration-in-bounds",
+      "result": "unsat"
+    },
+    {
+      "name": "outputs.position-velocity-acceleration-injective-and-disjoint",
+      "result": "unsat"
+    },
+    {
+      "name": "all-interp-pointer-products-fit-wasm32",
+      "result": "unsat"
+    },
+    {
+      "name": "cache.extending-prefix-preserves-every-certified-bound",
+      "result": "unsat"
+    },
+    {
+      "name": "cache.position-reset-restores-exact-two-element-seed",
+      "result": "unsat"
+    },
+    {
+      "name": "cache.cold-start-sentinel-always-forces-reset",
+      "result": "unsat"
+    },
+    {
+      "name": "record-cache.successful-io-or-valid-hit-has-correct-record",
+      "result": "unsat"
+    },
+    {
+      "name": "record-read-address-within-pinned-data",
+      "result": "unsat"
+    }
+  ],
+  "counterexample": {
+    "name": "record-cache.failed-io-retry",
+    "result": "sat",
+    "model": "[nr = 3772, contents = 3773, cached = 3772]",
+    "mitigation": "Strict Find_Orb wrapper terminates on any failed JPL evaluation; cache validity is asserted only for successful I/O, never for recovery after ignored read failure."
+  },
+  "scope": "Integer/real source-anchored loop and cache invariant obligations. Z3/Python are trusted here; dumped SMT-LIB is reproducible but not kernel checked.",
+  "coordinateExactness": "For finite DE440 JDs in [2^21,2^22), the binary64 grid is2^-31 days. Subtraction of .5-aligned endpoints yields <2^53-bit dyadic numerators; division by32, multiplication by1/2/4/8, fractional-part extraction, and2*frac-1 preserve representability. This arithmetic representation argument supplies the integer ticks abstraction."
+}

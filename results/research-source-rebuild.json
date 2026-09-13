@@ -1,0 +1,177 @@
+{
+  "schema": 1,
+  "passed": true,
+  "status": "complete",
+  "startedAt": "2026-09-13T17:40:03.832Z",
+  "scope": "Byte-for-byte reproduction of six distribution artifacts from the archived corresponding source and archived build recipe",
+  "archive": "/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/dist/corresponding-source.tar.gz",
+  "dist": "/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/dist",
+  "sdk": "/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/.wasm-toolchain",
+  "ephemeris": "/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/.cache/linux_p1550p2650.440",
+  "artifacts": [
+    "fo.wasm",
+    "fo.js",
+    "find-orb-worker.js",
+    "find-orb.data",
+    "manifest.json",
+    "source-lock.json"
+  ],
+  "archiveSHA256": "faf225c77baefadb92f16c8a1cb33592b1f168e8ca19a025e4b76c4da31115a0",
+  "archiveBytes": 6552628,
+  "inputSHA256": {
+    "fo.wasm": "256e850727f91a441f2344217a6a15727dfefcabb91f03b61e8d694d9d03cd57",
+    "fo.js": "a3bf7d12c91244096c6514d50616dcd216aec46f7ca168d172cbcfb6e5bc649c",
+    "find-orb-worker.js": "0f90e34ba762f5e9508e69b99fdff6599ba1811151ab2408c0891563fcdf346a",
+    "find-orb.data": "3023e789b5c74e062ca5734d1953ef6ffbcd31049ce6b21263c210f809a7a195",
+    "manifest.json": "dc055014846ee95d22b100aea61a3f2acf569095ff9f82d478bf82a184d4c4c5",
+    "source-lock.json": "cfe1a499eaa27516c856fcec984b5f35380b8fbd6ea9515062a464662e992f01"
+  },
+  "currentRecipeSHA256": {
+    "build/build.mjs": "e4b747e847517859834c45d704a8d849aadb6ace5fe38c9687b56a32d16fa280",
+    "build/pins.mjs": "63447b3bdba261263f2b10788fac72fe2a9bf64ff4399aa8fd2571b52579a525",
+    "build/patches.mjs": "7b840c73f2ea711a4c7b8583dca79d3aafd081ca10f015d50a89b93db4fe0657",
+    "build/platform.cpp": "a3ff365f8ee73f7aba0180e85ee526a15390e65b19e34cd3cfe148ff5638b995",
+    "data/patches.mjs": "fdf778df9e294f1606627e98f467b460a181ee83a19daf235f3a94d285354be2",
+    "src/runtime.js": "c3423182ae45377c753af751eaac7fd1ea1a6018ebf322a22b7d12c78e5a6edb",
+    "src/worker.js": "ab89518c2571cddc62399ba20dd3586b4b82a3b536a4193499c57e4e357935a8",
+    "scripts/verify-source-rebuild.mjs": "3db4ba1fe9ca7af7fc05effe0c7f1c03f6155e1624c37ba143f6f50ed623fde9"
+  },
+  "ephemerisSHA256": "29915576d0a6555766b99485ac3056ee415e86df4fce282611c31afb329ad062",
+  "sourceIDs": {
+    "sources": {
+      "lunar": "d95191818d7975c22613f231fea160341203abbe",
+      "jpl_eph": "a73f25e54d02b99b1c0d9a9d6c61acfbb2fa3a26",
+      "sat_code": "2bbb8cb2e417edb10918e4404464b68e24abcab4",
+      "find_orb": "9cc932997837c5ab994fbf015db59f5d0da852e5"
+    },
+    "sourceLockSHA256": "cfe1a499eaa27516c856fcec984b5f35380b8fbd6ea9515062a464662e992f01",
+    "patchesObjectSHA256": "421cd7d4f7318c2f49f6f9f65ae90598cfbcaa262fccc4982467fc10af5099f1",
+    "patchesFileSHA256": "7b840c73f2ea711a4c7b8583dca79d3aafd081ca10f015d50a89b93db4fe0657",
+    "strictEphemerisPatchesSHA256": "fdf778df9e294f1606627e98f467b460a181ee83a19daf235f3a94d285354be2",
+    "platformSHA256": "a3ff365f8ee73f7aba0180e85ee526a15390e65b19e34cd3cfe148ff5638b995"
+  },
+  "work": "/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/.cache/src-rebuild-6p4P88",
+  "node": {
+    "executable": "/opt/homebrew/Cellar/node/25.9.0_2/bin/node",
+    "version": "v25.9.0"
+  },
+  "offlineGuardNegativeControls": [
+    {
+      "name": "node-network",
+      "rejected": true
+    },
+    {
+      "name": "python-network",
+      "rejected": true
+    },
+    {
+      "name": "git-executable",
+      "rejected": true
+    }
+  ],
+  "offlinePolicy": {
+    "upstreamSources": "--sources supplies checked archive files; no Git checkout/fetch path",
+    "ephemeris": "Explicit pinned local --ephemeris; download path unused",
+    "sdkCache": "EM_FROZEN_CACHE=1; SDK must already contain required runtime libraries",
+    "guards": "Git/curl/wget blocked on PATH; standard Node and Python network entry points throw and log attempts",
+    "limitation": "Defense-in-depth instrumentation, not an operating-system network sandbox or proof against malicious archived code",
+    "attemptLog": "/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/.cache/src-rebuild-6p4P88/offline/network-attempts.jsonl"
+  },
+  "extractionCommand": [
+    "/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/.wasm-toolchain/python/3.13.3_64bit/bin/python3",
+    "-c",
+    "import json, pathlib, sys, tarfile\narchive, destination = sys.argv[1:]\nwith tarfile.open(archive, 'r:gz') as handle:\n    members = handle.getmembers()\n    for member in members:\n        path = pathlib.PurePosixPath(member.name)\n        if path.is_absolute() or '..' in path.parts or '\\\\' in member.name:\n            raise ValueError('Unsafe archive path: '+member.name)\n        if not (member.isfile() or member.isdir()):\n            raise ValueError('Archive links/devices are not permitted: '+member.name)\n    handle.extractall(destination, members=members, filter='data')\nprint(json.dumps({'membersChecked':len(members),'linksAndDevicesAllowed':False}))\n",
+    "/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/dist/corresponding-source.tar.gz",
+    "/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/.cache/src-rebuild-6p4P88/archive"
+  ],
+  "extraction": {
+    "membersChecked": 1600,
+    "linksAndDevicesAllowed": false
+  },
+  "archivedRecipeSHA256": {
+    "build/build.mjs": "e4b747e847517859834c45d704a8d849aadb6ace5fe38c9687b56a32d16fa280",
+    "build/pins.mjs": "63447b3bdba261263f2b10788fac72fe2a9bf64ff4399aa8fd2571b52579a525",
+    "build/patches.mjs": "7b840c73f2ea711a4c7b8583dca79d3aafd081ca10f015d50a89b93db4fe0657",
+    "build/platform.cpp": "a3ff365f8ee73f7aba0180e85ee526a15390e65b19e34cd3cfe148ff5638b995",
+    "data/patches.mjs": "fdf778df9e294f1606627e98f467b460a181ee83a19daf235f3a94d285354be2",
+    "src/runtime.js": "c3423182ae45377c753af751eaac7fd1ea1a6018ebf322a22b7d12c78e5a6edb",
+    "src/worker.js": "ab89518c2571cddc62399ba20dd3586b4b82a3b536a4193499c57e4e357935a8",
+    "scripts/verify-source-rebuild.mjs": "3db4ba1fe9ca7af7fc05effe0c7f1c03f6155e1624c37ba143f6f50ed623fde9"
+  },
+  "command": [
+    "/opt/homebrew/Cellar/node/25.9.0_2/bin/node",
+    "/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/.cache/src-rebuild-6p4P88/archive/build/build.mjs",
+    "--sdk",
+    "/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/.wasm-toolchain",
+    "--work",
+    "/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/.cache/src-rebuild-6p4P88/work",
+    "--dist",
+    "/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/.cache/src-rebuild-6p4P88/dist",
+    "--ephemeris",
+    "/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/.cache/linux_p1550p2650.440",
+    "--sources",
+    "/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/.cache/src-rebuild-6p4P88/archive/sources"
+  ],
+  "buildLog": "/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/.cache/src-rebuild-6p4P88/build.log",
+  "rebuiltDist": "/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/.cache/src-rebuild-6p4P88/dist",
+  "build": {
+    "exitCode": 0,
+    "signal": null,
+    "elapsedMs": 11867.599041000001
+  },
+  "buildLogSHA256": "8129827f73bfec67e693a70efeb63ef765aade2066d282f7d32e2099fc2c8f80",
+  "outputSHA256": {
+    "fo.wasm": "256e850727f91a441f2344217a6a15727dfefcabb91f03b61e8d694d9d03cd57",
+    "fo.js": "a3bf7d12c91244096c6514d50616dcd216aec46f7ca168d172cbcfb6e5bc649c",
+    "find-orb-worker.js": "0f90e34ba762f5e9508e69b99fdff6599ba1811151ab2408c0891563fcdf346a",
+    "find-orb.data": "3023e789b5c74e062ca5734d1953ef6ffbcd31049ce6b21263c210f809a7a195",
+    "manifest.json": "dc055014846ee95d22b100aea61a3f2acf569095ff9f82d478bf82a184d4c4c5",
+    "source-lock.json": "cfe1a499eaa27516c856fcec984b5f35380b8fbd6ea9515062a464662e992f01"
+  },
+  "comparisons": [
+    {
+      "file": "fo.wasm",
+      "bytes": 667077,
+      "byteForByteEqual": true,
+      "inputSHA256": "256e850727f91a441f2344217a6a15727dfefcabb91f03b61e8d694d9d03cd57",
+      "outputSHA256": "256e850727f91a441f2344217a6a15727dfefcabb91f03b61e8d694d9d03cd57"
+    },
+    {
+      "file": "fo.js",
+      "bytes": 149945,
+      "byteForByteEqual": true,
+      "inputSHA256": "a3bf7d12c91244096c6514d50616dcd216aec46f7ca168d172cbcfb6e5bc649c",
+      "outputSHA256": "a3bf7d12c91244096c6514d50616dcd216aec46f7ca168d172cbcfb6e5bc649c"
+    },
+    {
+      "file": "find-orb-worker.js",
+      "bytes": 1059164,
+      "byteForByteEqual": true,
+      "inputSHA256": "0f90e34ba762f5e9508e69b99fdff6599ba1811151ab2408c0891563fcdf346a",
+      "outputSHA256": "0f90e34ba762f5e9508e69b99fdff6599ba1811151ab2408c0891563fcdf346a"
+    },
+    {
+      "file": "find-orb.data",
+      "bytes": 109894483,
+      "byteForByteEqual": true,
+      "inputSHA256": "3023e789b5c74e062ca5734d1953ef6ffbcd31049ce6b21263c210f809a7a195",
+      "outputSHA256": "3023e789b5c74e062ca5734d1953ef6ffbcd31049ce6b21263c210f809a7a195"
+    },
+    {
+      "file": "manifest.json",
+      "bytes": 15223,
+      "byteForByteEqual": true,
+      "inputSHA256": "dc055014846ee95d22b100aea61a3f2acf569095ff9f82d478bf82a184d4c4c5",
+      "outputSHA256": "dc055014846ee95d22b100aea61a3f2acf569095ff9f82d478bf82a184d4c4c5"
+    },
+    {
+      "file": "source-lock.json",
+      "bytes": 37027,
+      "byteForByteEqual": true,
+      "inputSHA256": "cfe1a499eaa27516c856fcec984b5f35380b8fbd6ea9515062a464662e992f01",
+      "outputSHA256": "cfe1a499eaa27516c856fcec984b5f35380b8fbd6ea9515062a464662e992f01"
+    }
+  ],
+  "forbiddenAttempts": 0,
+  "completedAt": "2026-09-13T17:40:16.989Z"
+}

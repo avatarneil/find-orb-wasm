@@ -1,0 +1,53 @@
+{
+  "repository": "https://github.com/Bill-Gray/jpl_eph",
+  "commit": "a73f25e54d02b99b1c0d9a9d6c61acfbb2fa3a26",
+  "file": "jpleph.cpp",
+  "functions": {
+    "interp": "c0aecfd4356b5ff2446a7f3d13313de74dc9d82f179d4ce34b3f7c52700fac58",
+    "jpl_state": "de2404e5264c4fdd4331d0c47d45d230644257d3959145d334a850afe8fd2042",
+    "jpl_init_ephemeris": "f0c7e499018f8550f08dba7dc88be3f801ef5ac1a1fa493e7daad8da61cb5113"
+  },
+  "headerSHA256": "4505a74cd161955ba63b6220527b311cba187c538c004da7c596f450c58f90a2",
+  "expressions": {
+    "position": {
+      "source": "iinfo->twot * pc_ptr[-1] - pc_ptr[-2]",
+      "replace": {
+        "iinfo->twot": "twot",
+        "pc_ptr[-1]": "p1",
+        "pc_ptr[-2]": "p2"
+      }
+    },
+    "velocity": {
+      "source": "iinfo->twot * vc_ptr[-1] + *pc_ptr + *pc_ptr - vc_ptr[-2]",
+      "replace": {
+        "iinfo->twot": "twot",
+        "vc_ptr[-1]": "d1",
+        "vc_ptr[-2]": "d2",
+        "*pc_ptr": "p1"
+      }
+    },
+    "acceleration": {
+      "source": "4. * iinfo->vel_coeff[i - 1] + iinfo->twot * accel_coeffs[i - 1] - accel_coeffs[i - 2]",
+      "replace": {
+        "iinfo->vel_coeff[i - 1]": "d1",
+        "iinfo->twot": "twot",
+        "accel_coeffs[i - 1]": "a1",
+        "accel_coeffs[i - 2]": "a2"
+      }
+    }
+  },
+  "controlFlow": {
+    "maxCheby": 18,
+    "ncfDomain": [
+      2,
+      17
+    ],
+    "positionSum": "descending ncf-1 through0",
+    "velocitySum": "descending ncf-1 through1",
+    "accelerationSum": "descending ncf-1 through0",
+    "velocityScale": "(na+na)/32",
+    "accelerationScale": "two left-associated multiplications by velocityScale",
+    "endpoint": "if l==na then l-- and tc=1",
+    "cacheReset": "if tc!=posn_coeff[1] then counters=2, posn_coeff[1]=tc, twot=tc+tc"
+  }
+}

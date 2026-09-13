@@ -1,5 +1,5 @@
-// Explicit, checked portability patches against the pinned upstream sources.
-// No orbital arithmetic is changed. Keep this file with corresponding source.
+// Explicit, checked portability and correctness patches against pinned sources.
+// Keep this file with corresponding source; scientific changes need evidence.
 import {strictEphemerisPatches} from '../data/patches.mjs';
 export const patches=[{
   file:'fo.cpp',
@@ -33,4 +33,27 @@ export const patches=[{
    for( i = 0; i < max_orbits && clock( ) < end_clock; i++)
 #endif`,
   reason:'Finish the candidate count instead of silently truncating the search after half a CPU-second.',
+},{
+  file:'runge.cpp',
+  from:`   const ldouble avals[N_EVALS_PLUS_ONE] = { 0, A_1, A_2, A_3, A_4, A_5,
+             A_6, A_7, A_8, A_9, A_10, A_11, A_12, A_13 };`,
+  to:`   const ldouble avals[N_EVALS_PLUS_ONE] = { A_1, A_2, A_3, A_4, A_5,
+             A_6, A_7, A_8, A_9, A_10, A_11, A_12, A_13, 1. };`,
+  reason:'PD stage j uses A_(j+1); the extra leading zero shifted time-dependent force evaluations. Source-extracted native/WASM counterexamples and corrected-step checks: verification/integrator/.',
+},{
+  file:'runge.cpp',
+  from:`      rval += tval * tval;
+      }
+   return( sqrtl( rval * step * step));
+}
+
+#define ORIGINAL_FEHLBERG_CONSTANTS`,
+  to:`      rval += tval * tval;
+      }
+   free( ivals[0]);
+   return( sqrtl( rval * step * step));
+}
+
+#define ORIGINAL_FEHLBERG_CONSTANTS`,
+  reason:'Release the PD step workspace after its last use; checked allocation-balance and native sanitizer evidence: verification/integrator/.',
 },...strictEphemerisPatches];

@@ -29,7 +29,7 @@
       "brotli5": 6147947
     },
     "reductionPercent": 89.64778331956846,
-    "unchangedEngineSHA256": "cffccd0ce9026bee08316d3e3b99d935cf6e6c6342bccbfdfb8e4fc260e4af71",
+    "unchangedEngineSHA256": "256e850727f91a441f2344217a6a15727dfefcabb91f03b61e8d694d9d03cd57",
     "auxiliaryFiles": [
       {
         "name": "data/bright.pgm",
@@ -287,7 +287,7 @@
   },
   "wasm": {
     "schema": 1,
-    "engineSHA256": "cffccd0ce9026bee08316d3e3b99d935cf6e6c6342bccbfdfb8e4fc260e4af71",
+    "engineSHA256": "256e850727f91a441f2344217a6a15727dfefcabb91f03b61e8d694d9d03cd57",
     "fullPackSHA256": "3023e789b5c74e062ca5734d1953ef6ffbcd31049ce6b21263c210f809a7a195",
     "compactPackSHA256": "3817fac45a1cd05575e0cb64cada5e6ae2696f1a89a7c28902ef3a01a68cfb28",
     "ignoredMetadata": [

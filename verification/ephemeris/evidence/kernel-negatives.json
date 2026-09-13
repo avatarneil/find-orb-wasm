@@ -1,0 +1,58 @@
+{
+  "schema": 1,
+  "performed": true,
+  "passed": true,
+  "toolchain": {
+    "leanCommit": "797c613eb9b6d4ec95db23e3e00af9ac6657f24b",
+    "mathlibCommit": "f897ebcf72cd16f89ab4577d0c826cd14afaafc7",
+    "dependencies": {
+      "plausible": "dfd06ebfe8d0e8fa7faba9cb5e5a2e74e7bd2805",
+      "LeanSearchClient": "99657ad92e23804e279f77ea6dbdeebaa1317b98",
+      "importGraph": "d768126816be17600904726ca7976b185786e6b9",
+      "proofwidgets": "556caed0eadb7901e068131d1be208dd907d07a2",
+      "aesop": "725ac8cd67acd70a7beaf47c3725e23484c1ef50",
+      "Qq": "dea6a3361fa36d5a13f87333dc506ada582e025c",
+      "batteries": "8da40b72fece29b7d3fe3d768bac4c8910ce9bee",
+      "Cli": "91c18fa62838ad0ab7384c03c9684d99d306e1da"
+    },
+    "leanVersion": "Lean (version 4.24.0, arm64-apple-darwin23.6.0, commit 797c613eb9b6d4ec95db23e3e00af9ac6657f24b, Release)"
+  },
+  "modules": "/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/.cache/kernel-modules",
+  "trustLevel": 0,
+  "controls": [
+    {
+      "name": "WrongRecurrences",
+      "rejected": true,
+      "returnCode": 1,
+      "mutationSHA256": "775c62abb6c4eec86085bd073cc534285e9faf6a9d1782b1abf032681f787a51",
+      "expectedMessages": [
+        "unsolved goals"
+      ],
+      "log": "kernel-negative.log"
+    },
+    {
+      "name": "WrongRoundedDAG",
+      "rejected": true,
+      "returnCode": 1,
+      "mutationSHA256": "4bdfade6ffe69707bc0596d3a235cb996310cace1b6d403d43878a9cf05fa6af",
+      "expectedMessages": [
+        "Type mismatch",
+        "r4 rnd x c + r3 rnd x c"
+      ],
+      "log": "kernel-bridge-negative.log"
+    }
+  ],
+  "sourceSHA256": {
+    "Recurrences.lean": "fc399ef8341857318747b26b8bc4862a220be50e41c5c0f26da1416afcbb9261",
+    "RoundedDAG.lean": "8026e4ea3d55a5f65239005cb8b8fb567bcb43e054de590a8788083c42836684"
+  },
+  "moduleSHA256": {
+    "Foundations": "7e62479f462239c631f9d20796c502c86bc29b2e45a5666589594a115014cd07",
+    "Roundoff": "79b60035f62570dae522b9887cbfcacff8fa1647a41af91752c005f8c8f2a082",
+    "BridgeSupport": "e12c12170cd18395cce6ccafa2b6934767e7bebc1a0c28f0ae02f1c1b703e0e0"
+  },
+  "deletedDerivativeTermRejected": true,
+  "returnCode": 1,
+  "wrongRoundedOperationRejected": true,
+  "bridgeReturnCode": 1
+}

@@ -1,0 +1,38 @@
+[
+  {
+    "symbol": "arithmetic_0",
+    "originalSMT": "(fp.add roundNearestTiesToEven\n        (fp.add roundNearestTiesToEven\n                (fp.mul roundNearestTiesToEven vect_0 vect_0)\n                (fp.mul roundNearestTiesToEven vect_1 vect_1))\n        (fp.mul roundNearestTiesToEven vect_2 vect_2))"
+  },
+  {
+    "symbol": "arithmetic_1",
+    "originalSMT": "(fp.add roundNearestTiesToEven\n        (fp.mul roundNearestTiesToEven vect_0 vect_0)\n        (fp.mul roundNearestTiesToEven vect_1 vect_1))"
+  },
+  {
+    "symbol": "arithmetic_2",
+    "originalSMT": "(fp.mul roundNearestTiesToEven vect_0 vect_0)"
+  },
+  {
+    "symbol": "arithmetic_3",
+    "originalSMT": "(fp.mul roundNearestTiesToEven vect_1 vect_1)"
+  },
+  {
+    "symbol": "arithmetic_4",
+    "originalSMT": "(fp.mul roundNearestTiesToEven vect_2 vect_2)"
+  },
+  {
+    "symbol": "arithmetic_5",
+    "originalSMT": "(fp.sqrt roundNearestTiesToEven\n         (fp.add roundNearestTiesToEven\n                 (fp.add roundNearestTiesToEven\n                         (fp.mul roundNearestTiesToEven vect_0 vect_0)\n                         (fp.mul roundNearestTiesToEven vect_1 vect_1))\n                 (fp.mul roundNearestTiesToEven vect_2 vect_2)))"
+  },
+  {
+    "symbol": "arithmetic_6",
+    "originalSMT": "(let ((a!1 (fp.sqrt roundNearestTiesToEven\n                    (fp.add roundNearestTiesToEven\n                            (fp.add roundNearestTiesToEven\n                                    (fp.mul roundNearestTiesToEven\n                                            vect_0\n                                            vect_0)\n                                    (fp.mul roundNearestTiesToEven\n                                            vect_1\n                                            vect_1))\n                            (fp.mul roundNearestTiesToEven vect_2 vect_2)))))\n  (fp.div roundNearestTiesToEven vect_0 a!1))"
+  },
+  {
+    "symbol": "arithmetic_7",
+    "originalSMT": "(let ((a!1 (fp.sqrt roundNearestTiesToEven\n                    (fp.add roundNearestTiesToEven\n                            (fp.add roundNearestTiesToEven\n                                    (fp.mul roundNearestTiesToEven\n                                            vect_0\n                                            vect_0)\n                                    (fp.mul roundNearestTiesToEven\n                                            vect_1\n                                            vect_1))\n                            (fp.mul roundNearestTiesToEven vect_2 vect_2)))))\n  (fp.div roundNearestTiesToEven vect_1 a!1))"
+  },
+  {
+    "symbol": "arithmetic_8",
+    "originalSMT": "(let ((a!1 (fp.sqrt roundNearestTiesToEven\n                    (fp.add roundNearestTiesToEven\n                            (fp.add roundNearestTiesToEven\n                                    (fp.mul roundNearestTiesToEven\n                                            vect_0\n                                            vect_0)\n                                    (fp.mul roundNearestTiesToEven\n                                            vect_1\n                                            vect_1))\n                            (fp.mul roundNearestTiesToEven vect_2 vect_2)))))\n  (fp.div roundNearestTiesToEven vect_2 a!1))"
+  }
+]

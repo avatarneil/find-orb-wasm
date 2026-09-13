@@ -12,3 +12,5 @@ results/local/
 *.log
 test-results/
 playwright-report/
+verification/kernel/evidence/smoke-logs/
+verification/kernel/evidence/smoke-report.json

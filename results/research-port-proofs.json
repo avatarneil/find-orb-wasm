@@ -1,0 +1,160 @@
+{
+  "schema": 1,
+  "solver": "4.15.4",
+  "obligations": [
+    {
+      "name": "search.initial-invariant",
+      "result": "unsat",
+      "seconds": 0.0056085423566401005
+    },
+    {
+      "name": "search.read-in-bounds",
+      "result": "unsat",
+      "seconds": 0.003874334041029215
+    },
+    {
+      "name": "search.right-preserves-invariant",
+      "result": "unsat",
+      "seconds": 0.000592375174164772
+    },
+    {
+      "name": "search.right-strictly-decreases",
+      "result": "unsat",
+      "seconds": 0.0004720408469438553
+    },
+    {
+      "name": "search.equal-preserves-invariant",
+      "result": "unsat",
+      "seconds": 0.0003931671380996704
+    },
+    {
+      "name": "search.equal-strictly-decreases",
+      "result": "unsat",
+      "seconds": 0.00032787537202239037
+    },
+    {
+      "name": "search.left-preserves-invariant",
+      "result": "unsat",
+      "seconds": 0.0003443751484155655
+    },
+    {
+      "name": "search.left-strictly-decreases",
+      "result": "unsat",
+      "seconds": 0.0002874997444450855
+    },
+    {
+      "name": "search.terminal-is-first-match-or-insertion",
+      "result": "unsat",
+      "seconds": 0.0010854583233594894
+    },
+    {
+      "name": "search.wasm32-termination-bound",
+      "result": "unsat",
+      "seconds": 0.0010061669163405895
+    },
+    {
+      "name": "search.byte-offset-and-address-fit-wasm32",
+      "result": "unsat",
+      "seconds": 0.1701186248101294
+    },
+    {
+      "name": "de440.crop-selects-identical-record",
+      "result": "unsat",
+      "seconds": 0.0008637499995529652
+    },
+    {
+      "name": "de440.crop-identical-interpolation-coordinate",
+      "result": "unsat",
+      "seconds": 0.0012610829435288906
+    },
+    {
+      "name": "de440.crop-read-in-bounds",
+      "result": "unsat",
+      "seconds": 0.0007004588842391968
+    },
+    {
+      "name": "de440.tick-differences-fit-binary64-significand",
+      "result": "unsat",
+      "seconds": 0.0007281247526407242
+    },
+    {
+      "name": "de440.lower-endpoint-record-mismatch",
+      "result": "unsat",
+      "seconds": 0.00016441615298390388
+    },
+    {
+      "name": "real-vector.dot-symmetry",
+      "result": "unsat",
+      "seconds": 2.745911478996277e-05
+    },
+    {
+      "name": "real-vector.cross-orthogonal-to-a",
+      "result": "unsat",
+      "seconds": 0.0035412912257015705
+    },
+    {
+      "name": "real-vector.cross-orthogonal-to-b",
+      "result": "unsat",
+      "seconds": 0.002946999855339527
+    },
+    {
+      "name": "real-vector.lagrange-identity",
+      "result": "unsat",
+      "seconds": 0.00289862509816885
+    },
+    {
+      "name": "real-vector.squared-length-nonnegative",
+      "result": "unsat",
+      "seconds": 0.002836416009813547
+    },
+    {
+      "name": "binary64.reassociation-counterexample",
+      "result": "unsat",
+      "seconds": 3.0207913368940353e-05
+    },
+    {
+      "name": "binary64.contraction-counterexample",
+      "result": "unsat",
+      "seconds": 2.4042092263698578e-05
+    }
+  ],
+  "sourceContracts": {
+    "bsearch_ext_r": {
+      "repository": "find_orb",
+      "file": "shellsor.cpp",
+      "commit": "9cc932997837c5ab994fbf015db59f5d0da852e5",
+      "sha256": "9a2593e2ea60022099d8ff57873e6a4190949dc56ee8db7c3a7bdfc5ef3683f2"
+    },
+    "bsearch_ext": {
+      "repository": "find_orb",
+      "file": "shellsor.cpp",
+      "commit": "9cc932997837c5ab994fbf015db59f5d0da852e5",
+      "sha256": "11b11ada407a22b46d4c5f443cfc4988cf1b25bab0bca107885461d78176e231"
+    },
+    "dot_product": {
+      "repository": "lunar",
+      "file": "miscell.cpp",
+      "commit": "d95191818d7975c22613f231fea160341203abbe",
+      "sha256": "1b76708ea5eee5ae15d0f1196fee7c576d172f32da44ad9b4bdd1ef9869660de"
+    },
+    "vector_cross_product": {
+      "repository": "lunar",
+      "file": "miscell.cpp",
+      "commit": "d95191818d7975c22613f231fea160341203abbe",
+      "sha256": "09ac309ee577cca8372ef559eb6367fccd32d2e5b7591bbae6500d65a0503faf"
+    },
+    "jpl_state": {
+      "repository": "jpl_eph",
+      "file": "jpleph.cpp",
+      "commit": "a73f25e54d02b99b1c0d9a9d6c61acfbb2fa3a26",
+      "sha256": "de2404e5264c4fdd4331d0c47d45d230644257d3959145d334a850afe8fd2042"
+    }
+  },
+  "scope": {
+    "search": "Inductive proof for all wasm32 counts, sorted records, consistent comparator, valid nonwrapping allocation; source-to-model transition manually reviewed and hash guarded.",
+    "vectors": "Identities over exact real arithmetic, expressions parsed from actual sources; separate input/output arrays.",
+    "ephemeris": "Source-anchored manual model of jpl_state record/fraction selection for exact DE440 binary64 grid, complete 32-day records, exclusive lower endpoint. Does not prove file copying or Chebyshev evaluation.",
+    "floatingPoint": "Concrete IEEE binary64 counterexamples; no end-to-end floating-point error bound.",
+    "trustedBase": "Z3, Python/source extraction, threshold abstraction, C++ compiler and WebAssembly runtime; no independent proof-certificate checking."
+  }
+}
