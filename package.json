@@ -30,6 +30,7 @@
     "test": "node --test tests/build/*.test.mjs tests/runtime/*.test.mjs tests/accuracy/*.test.mjs tests/data/*.test.mjs",
     "test:runtime": "node --test tests/runtime/*.test.mjs",
     "test:accuracy": "node --test tests/accuracy/*.test.mjs",
+    "test:short-arcs": "node --test experiments/short-arcs/*.test.mjs",
     "test:data": "node --test tests/data/*.test.mjs",
     "test:browser": "playwright test",
     "benchmark": "node benchmark/run.mjs",

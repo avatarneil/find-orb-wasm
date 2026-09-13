@@ -1,0 +1,42 @@
+
+> find-orb-wasm@0.2.0 test
+> node --test tests/build/*.test.mjs tests/runtime/*.test.mjs tests/accuracy/*.test.mjs tests/data/*.test.mjs
+
+✔ short-arc-fit (599.332875ms)
+ℹ {"rmsArcsec":0.024825,"maxNativeSkyErrorArcsec":4.9338428430486316e-8,"nativeElementDeltas":{"a":2.4870061565707147e-10,"e":4.799938224664402e-12,"i":3.370104195710155e-11,"M":2.2110047126489007e-10,"arg_per":2.0870061234745663e-10,"asc_node":2.120259523508139e-11}}
+✔ ceres-30d (54.666083ms)
+ℹ {"horizonsPositionErrorMeters":[0.00001660870004860371,1.706506978347973,4.0838439187157825,7.06427982656132],"maxNativePositionErrorMeters":0.00013695884920918852,"maxNativeVelocityErrorMetersPerSecond":1.8021592934682844e-11}
+✔ ceres-topocentric (71.521ms)
+ℹ {"horizonsSkyErrorArcsec":[0.008334291632378484,0.008426368807383714,0.00851436419232872,0.008584400361870165,0.008663933922692298],"maxNativeSkyErrorArcsec":0}
+✔ eccentricity-0.95 (74.309042ms)
+ℹ {"maxNativePositionErrorMeters":0.00011536771758139964,"maxNativeVelocityErrorMetersPerSecond":3.763498537444007e-11}
+✔ eccentricity-0.999999 (71.931291ms)
+ℹ {"maxNativePositionErrorMeters":0.00013286960038882967,"maxNativeVelocityErrorMetersPerSecond":3.604318586936569e-11}
+✔ eccentricity-1.4 (166.971375ms)
+ℹ {"maxNativePositionErrorMeters":0.00013796222415578016,"maxNativeVelocityErrorMetersPerSecond":3.078688793008319e-11}
+✔ ceres-heldout-fit (2731.059375ms)
+ℹ {"horizonsSkyErrorArcsec":[0.006598688050968689,0.010909349461108681],"rmsArcsec":0.0019829,"maxNativeSkyErrorArcsec":0,"nativeElementDeltas":{"a":1.0036416142611415e-13,"e":0,"i":0,"M":3.9193537304527126e-11,"arg_per":3.380762336746557e-11,"asc_node":9.947598300641403e-14}}
+✔ only locked regular inputs enter the fresh compiler tree (22.705709ms)
+✔ ambient make and compiler overrides cannot defeat the recorded policy (0.2845ms)
+✔ crop preserves every selected coefficient and all constants bytes (35.779417ms)
+✔ crop headers report the actual supported interval (0.147208ms)
+✔ untrusted and malformed sources fail before extraction (45.968542ms)
+✔ invalid date windows and missing boundary margins fail (201.571917ms)
+✔ published compact gzip and Brotli reconstruct the verified pack exactly (76.29825ms)
+✔ URL loader verifies assets before worker execution and accepts raw/gzip data (28.955291ms)
+✔ URL loader bounds decompression, rejects corrupt data, and honors cancellation (1.76225ms)
+✔ retaining compiled code preserves independent instances and filesystems (9.313125ms)
+✔ real MEMFS shares reference bytes until write/truncate and preserves the next job (5.0435ms)
+✔ real MEMFS mapped writeback cannot modify shared reference pack (4.190334ms)
+✔ integrity checks reject wrong bytes, missing coverage and unsafe data paths (6.4695ms)
+✔ unsafe job files and unbounded commands are rejected before instantiating native code (0.600458ms)
+✔ output directories collect bounded regular files, reject links, recursion and oversized families (1.200709ms)
+✔ generated runtime has no Node host-shell implementation (31.689583ms)
+ℹ tests 23
+ℹ suites 0
+ℹ pass 23
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 4124.631084

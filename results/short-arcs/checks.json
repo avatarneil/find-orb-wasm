@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "checkedAt": "2026-09-13T21:58:54.775Z",
+  "checks": [
+    {
+      "command": "npm test",
+      "testsPassed": 23,
+      "log": "checks/regressions.log.txt",
+      "sha256": "7b66dce164044897fd916c5e08483d8b373e0d6f6f86b17ca096fb455730a523"
+    },
+    {
+      "command": "node --test experiments/short-arcs/*.test.mjs",
+      "testsPassed": 28,
+      "log": "checks/final-research-tests.log.txt",
+      "sha256": "bbce273a7e492fc27702ae1c2e27776ebc83c23d299c53b6c731c62017d2acd2"
+    },
+    {
+      "command": "node experiments/short-arcs/replay.mjs",
+      "recordsPassed": 796,
+      "recordsFailed": 0,
+      "report": "replay-report.json",
+      "sha256": "fe3766b8a7cb092e286c5e9ecdf5f18e3d7e89671b2ca8e1e768165b750393e7",
+      "scope": "All 796 declared fit records, including unavailable commands and scientifically invalid completed fits. Controls and Jacobian records are outside this replay."
+    }
+  ],
+  "visual": {
+    "headlessBrowser": "Chromium",
+    "consoleErrors": [],
+    "desktopWidth": 1400,
+    "mobileWidth": 390,
+    "unexpectedHorizontalOverflow": false,
+    "explorerRowsAfterFilter": 12,
+    "inspection": "Desktop report header, evidence table, and mobile header screenshots visually inspected."
+  },
+  "publishedWasmSHA256": "256e850727f91a441f2344217a6a15727dfefcabb91f03b61e8d694d9d03cd57"
+}

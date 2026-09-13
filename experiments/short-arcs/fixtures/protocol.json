@@ -1,0 +1,83 @@
+{
+  "schemaVersion": 1,
+  "name": "Unconditional short-arc geometry stress corpus, version 1",
+  "selectionPolicy": "Objects, dates, arc length, sampling and split are fixed before solver evaluation. No visibility or solver-success selection.",
+  "splitPolicy": "Split by object: both epochs of each object remain in the same split. Tune only on development objects; inspect held-out objects after methods are frozen. Achilles is a held-out class stress case.",
+  "observer": "F52",
+  "datesUtc": [
+    "2026-03-01T10:00:00.000Z",
+    "2026-09-01T10:00:00.000Z"
+  ],
+  "observationMinutesAfterStart": [
+    0,
+    10,
+    20,
+    30,
+    40,
+    50,
+    60
+  ],
+  "fourObservationIndices": [
+    0,
+    2,
+    4,
+    6
+  ],
+  "holdoutHoursAfterLastObservation": [
+    6,
+    24,
+    72,
+    168
+  ],
+  "followupPolicy": "The +6 h or +24 h holdout positions may be used as simulated follow-up input only in a separately labeled experiment; evaluate that experiment solely on subsequent unused epochs.",
+  "bodies": [
+    {
+      "number": 1,
+      "name": "Ceres",
+      "class": "main-belt",
+      "split": "development"
+    },
+    {
+      "number": 2,
+      "name": "Pallas",
+      "class": "main-belt",
+      "split": "development"
+    },
+    {
+      "number": 3,
+      "name": "Juno",
+      "class": "main-belt",
+      "split": "held-out"
+    },
+    {
+      "number": 4,
+      "name": "Vesta",
+      "class": "main-belt",
+      "split": "held-out"
+    },
+    {
+      "number": 433,
+      "name": "Eros",
+      "class": "near-Earth (Amor)",
+      "split": "development"
+    },
+    {
+      "number": 99942,
+      "name": "Apophis",
+      "class": "near-Earth (Aten)",
+      "split": "development"
+    },
+    {
+      "number": 101955,
+      "name": "Bennu",
+      "class": "near-Earth (Apollo)",
+      "split": "held-out"
+    },
+    {
+      "number": 588,
+      "name": "Achilles",
+      "class": "Jupiter Trojan",
+      "split": "held-out"
+    }
+  ]
+}

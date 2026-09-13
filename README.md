@@ -6,6 +6,8 @@ Extracted from the latest `webastrometrica` `origin/main` at `c86e53ccf9fa662bc4
 
 Read the [correctness research](docs/correctness-research.html) for kernel-checked numerical theorems, restricted translation validation of selected WASM functions, and reproduced integrator defects. The [earlier performance study](docs/findings.html) records native/WASM benchmarks and the **6.33 MB** compact data download.
 
+The [short-arc accuracy study](docs/short-arc-research.html) separates weak range/range-rate information from propagation error, evaluates three alternative orbit representatives against withheld Horizons predictions, and measures additional-night recovery. Its mixed results preserve the released solver default. Reproducible experiments and hashed raw evidence are included; the study also identifies an upstream ranging/refinement control-flow issue and fixes a native comparator rebuild defect.
+
 [GitHub release v0.1.0](https://github.com/avatarneil/find-orb-wasm/releases/tag/v0.1.0) preserves the initial unoptimized port at `fe8a88d`, with its runtime, full dataset, corresponding source, license notices, checksums, and seven-case accuracy results. Release [v0.2.0](https://github.com/avatarneil/find-orb-wasm/releases/tag/v0.2.0) ships the optimized runtime with a 6.33 MB compact download; the initial release predates these changes. Compact and full runtime archives each have their own matching manifest and data asset. Do not mix them. Versioned browser assets, source and notices are hosted at https://avatarneil.github.io/find-orb-wasm/v0.2.0/. The [release parity results](results/parity-v0.2.0.json) compare both packs with the unmodified pinned upstream executable.
 
 ## Build
@@ -100,6 +102,30 @@ Preserve upstream precision: binary64 `double`, Emscripten software binary128 `l
 Research identified and corrected a shifted stage-time array and an unreleased workspace in the optional Prince–Dormand integration path. The default Fehlberg path is unchanged. The original PD path returned approximately `0.328675` for a one-step `y'=t` problem whose exact answer is `0.5`. Both original and corrected bodies are tested against exact arithmetic models; see [integrator evidence](verification/integrator/README.md). All patches are explicit in `build/patches.mjs`.
 
 Native/WASM agreement is a port regression check, not independent astronomical truth or a proof of universal numerical accuracy.
+
+## Reproduce the short-arc study
+
+```sh
+npm run test:short-arcs
+python3 experiments/short-arcs/archive-evidence.py --verify
+python3 experiments/short-arcs/archive-evidence.py --extract results/local/short-arcs-restored
+node experiments/short-arcs/replay.mjs
+node experiments/short-arcs/analyze.mjs results/local/short-arcs-restored/results/local/short-arcs
+python3 experiments/short-arcs/plot.py
+node experiments/short-arcs/report.mjs
+```
+
+Archive verification/extraction needs standard Python; figure generation needs Matplotlib and NumPy. The sanitizer tests need a C++ compiler and the pinned source checkout; unavailable prerequisites are reported as skips. The [evidence manifest](results/short-arcs/evidence-manifest.json) covers raw commands/results, failures, batch counts, source snapshots, and fixture references. Run the commands from the repository root; extraction refuses an existing target directory.
+
+Fresh solver experiments require the native reference build, pinned SDK, and full DE440 input described above:
+
+```sh
+node experiments/short-arcs/build.mjs native
+node experiments/short-arcs/build.mjs wasm
+node experiments/short-arcs/run.mjs --split development --output results/local/new-development
+```
+
+These builders require unused experimental work directories. They create `.native-engine-short-arcs/` and `dist-short-arcs/`; released artifacts remain separate. Experimental CLI selectors are `SR_SELECTION=position|phase6d|min-rms`; the `predictive1d` method is a research-harness operation using an exported family and additional propagation commands. None changes the candidate family into a calibrated posterior. See the report for frozen object splits, noise assumptions, retrospective protocol amendments, and limitations.
 
 On the measured Apple ARM host, native `long double` has 53 significand bits and WASM has 113. Native-versus-WASM timing therefore compares the actual implementations with their different extended-precision costs. The port preserves the WASM precision policy.
 

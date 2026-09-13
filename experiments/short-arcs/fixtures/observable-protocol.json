@@ -1,0 +1,94 @@
+{
+  "schemaVersion": 1,
+  "name": "Observable short-arc geometry corpus, version 1",
+  "selectionPolicy": "For each predeclared body and UTC anchor, scan at 30-minute cadence for 30 days. Select the earliest three consecutive samples spanning one hour with apparent altitude at least 20 degrees and an empty Horizons solar-presence flag (astronomical night) at all three samples. If absent, scan the predetermined 90-day interval from the same anchor. Record unavailable when no qualifying hour exists. No Find_Orb output or fit quality enters selection.",
+  "splitPolicy": "Split by object: both epochs of each object remain in the same split. Tune only on development objects; inspect held-out objects after methods are frozen. Achilles is a held-out class stress case.",
+  "observer": "F52",
+  "datesUtc": [
+    "2026-03-01T10:00:00.000Z",
+    "2026-09-01T10:00:00.000Z"
+  ],
+  "observationMinutesAfterStart": [
+    0,
+    10,
+    20,
+    30,
+    40,
+    50,
+    60
+  ],
+  "fourObservationIndices": [
+    0,
+    2,
+    4,
+    6
+  ],
+  "holdoutHoursAfterLastObservation": [
+    6,
+    24,
+    72,
+    168
+  ],
+  "followupPolicy": "Future positions remain unfiltered numerical prediction targets. Use +6 h or +24 h as simulated follow-up input only if its own altitude/night metadata permits observation, and evaluate solely on subsequent unused epochs. No follow-up visibility enters the initial-window selection.",
+  "bodies": [
+    {
+      "number": 1,
+      "name": "Ceres",
+      "class": "main-belt",
+      "split": "development"
+    },
+    {
+      "number": 2,
+      "name": "Pallas",
+      "class": "main-belt",
+      "split": "development"
+    },
+    {
+      "number": 3,
+      "name": "Juno",
+      "class": "main-belt",
+      "split": "held-out"
+    },
+    {
+      "number": 4,
+      "name": "Vesta",
+      "class": "main-belt",
+      "split": "held-out"
+    },
+    {
+      "number": 433,
+      "name": "Eros",
+      "class": "near-Earth (Amor)",
+      "split": "development"
+    },
+    {
+      "number": 99942,
+      "name": "Apophis",
+      "class": "near-Earth (Aten)",
+      "split": "development"
+    },
+    {
+      "number": 101955,
+      "name": "Bennu",
+      "class": "near-Earth (Apollo)",
+      "split": "held-out"
+    },
+    {
+      "number": 588,
+      "name": "Achilles",
+      "class": "Jupiter Trojan",
+      "split": "held-out"
+    }
+  ],
+  "visibility": {
+    "scanStepMinutes": 30,
+    "scanDurationsDays": [
+      30,
+      90
+    ],
+    "minimumAltitudeDeg": 20,
+    "requiredSolarPresence": "",
+    "requiredContiguousSamples": 3,
+    "verification": "After selecting a window, fetch at 10-minute cadence and require all seven observation positions to meet the same altitude/night thresholds; fail explicitly if that check disagrees with the coarse scan."
+  }
+}

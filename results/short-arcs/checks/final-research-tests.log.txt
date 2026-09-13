@@ -1,0 +1,37 @@
+✔ astrometric noise has correct spherical length at wrap and poles (0.681375ms)
+✔ MPC formatting carries midnight, RA wrap, and signed declination (0.724209ms)
+✔ deterministic independent normal generator has plausible moments (4.230208ms)
+✔ osculating invariants recover circular, eccentric, parabolic and hyperbolic states (0.201042ms)
+✔ energy score uses exact empirical pair measure and wrap-safe directions (0.162583ms)
+✔ offset inversion preserves upstream RA*cos(dec) convention (3.808041ms)
+✔ truth corpus controls noise reuse, follow-up visibility, and no held-out astrometry leakage (4.536375ms)
+✔ candidate parser rejects nonfinite/missing records (0.873792ms)
+✔ predictive nearest mean minimizes the stated empirical squared-distance loss (0.158625ms)
+✔ additional tracklets preserve existing measurements and enforce visibility (2.96175ms)
+✔ cross-engine parity detects opposite predictions with equal truth error (0.22725ms)
+✔ diagnostic parsers reject missing values and handle whitespace deliberately (0.13525ms)
+✔ source-extracted selector: default (362.431167ms)
+ℹ {"sourceRevision":"9cc932997837c5ab994fbf015db59f5d0da852e5","sourceRoot":"/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/.native-engine/sources/find_orb","sourceSHA256":"e3cdef8899f3631d27e950757d34fe1591eb5014f0e3cb8b4b6d1c80a6ccc929","compiler":"Apple clang version 21.0.0 (clang-2100.1.1.101)","sanitizers":["address","undefined"],"scope":"Actual selector/sorting/export kernels; observation evaluator stubbed."}
+✔ source-extracted selector: phase6d (52.599291ms)
+✔ source-extracted selector: degenerate (52.352167ms)
+✔ source-extracted selector: min-rms (52.319916ms)
+✔ source-extracted selector: csv-unset (49.019208ms)
+✔ selector rejects invalid (24.077708ms)
+✔ selector rejects nonfinite (25.322708ms)
+✔ selector rejects empty (24.748083ms)
+✔ candidate CSV records states and appends batches without observation mutations (58.758583ms)
+✔ requested candidate-output failure is explicit (24.941542ms)
+✔ family CSV preserves exact order after the nominal swap without mutations (51.359084ms)
+✔ actual fixed-count SR loop audits attempts, failures, and candidate-truncating retries (73.242416ms)
+✔ new telemetry rejects family-nonfinite (25.506208ms)
+✔ new telemetry rejects invalid-batch (51.222083ms)
+✔ requested SR_FAMILY_FILE failure is explicit (48.7335ms)
+✔ requested SR_BATCHES_FILE failure is explicit (49.982916ms)
+ℹ tests 28
+ℹ suites 0
+ℹ pass 28
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1358.100833

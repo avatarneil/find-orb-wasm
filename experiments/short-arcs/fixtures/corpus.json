@@ -1,0 +1,3988 @@
+{
+  "schemaVersion": 1,
+  "provenance": {
+    "provider": "NASA/JPL Horizons",
+    "api": "https://ssd.jpl.nasa.gov/api/horizons.api",
+    "documentation": [
+      "https://ssd-api.jpl.nasa.gov/doc/horizons.html",
+      "https://ssd.jpl.nasa.gov/horizons/manual.html"
+    ],
+    "generator": "experiments/short-arcs/fetch-horizons.mjs",
+    "generatorSha256": "24ea6e442a773a31079f0dc774ebcbb2181c5911b2aef91b36eb6236a4c05bb0",
+    "protocolFile": "protocol.json",
+    "protocolSha256": "ea9ade4e6f520cec610f47c63409e9da2e8aeb946d548fa30547188d99bbcc83",
+    "retrievedFrom": "2026-09-13T21:08:21.697Z",
+    "retrievedThrough": "2026-09-13T21:08:48.420Z",
+    "rawResponseCount": 48,
+    "observationCoordinates": "ICRF equatorial astrometric RA/Dec in decimal degrees; Horizons quantity 1, down-leg light-time only, topocentric F52 reception time in UTC (TIME_TYPE=UT in 2026). Apparent altitude is metadata only.",
+    "elementCoordinates": "Geometric heliocentric IAU76/J2000 ecliptic elements in au/degrees and Cartesian state in au and au/day. Reference obliquity 84381.448 arcseconds. initialElements/initialState are at startJdTdb; elements/state are at epochJdTdb (last observation). UTC is converted to TDB using Horizons quantity 30.",
+    "timeScales": "epochJdTdb uses tabulated TDB−UTC; epochJdTt uses TT−UTC=69.184 s for these 2026 dates. The maximum TT−TDB distinction is about 2 ms and must not be silently treated as zero in precision state tests.",
+    "noise": "No random measurement noise is present in these truth fixtures. Runners must record their own angular quantization, timing quantization, injected noise law and seed.",
+    "limitations": [
+      "Numerical reference trajectories are independently computed by Horizons, not observed astrometry or exact physical reality. JPL orbit solutions, Earth orientation and ephemerides can change; cached raw responses are the replay authority.",
+      "Eight selected known numbered bodies at two fixed epochs do not represent the discovery population. Cases may be below the horizon, near the Sun, in daylight, or too faint; all are retained with visibility metadata. These are unconditional geometry stress cases, not a telescope scheduling or survey benchmark.",
+      "All epochs of a held-out object belong to the same split. Repeated epochs and noise realizations are correlated and must not be counted as independent discoveries.",
+      "Horizons uses its own planetary ephemeris, massive-asteroid perturbations and fitted small-body force models. Find_Orb DE440 and configured force models may differ. Bennu, and potentially other near-Earth targets, can include nongravitational parameters; any mismatch limits interpretation of precision residuals and long-term prediction.",
+      "A nominal orbit does not express the full uncertainty in the JPL solution. Formal covariance, catalog systematics, observational selection and real correlated astrometric errors are not sampled by this corpus. Nominal-truth coverage is not calibrated real-world population coverage.",
+      "RA/Dec coordinates have finite Horizons output precision. Retain frame, light-time and time-scale conventions when synthesizing observations; do not use apparent RA/Dec in place of astrometric coordinates."
+    ]
+  },
+  "splitPolicy": "Split by object: both epochs of each object remain in the same split. Tune only on development objects; inspect held-out objects after methods are frozen. Achilles is a held-out class stress case.",
+  "protocol": {
+    "schemaVersion": 1,
+    "name": "Unconditional short-arc geometry stress corpus, version 1",
+    "selectionPolicy": "Objects, dates, arc length, sampling and split are fixed before solver evaluation. No visibility or solver-success selection.",
+    "splitPolicy": "Split by object: both epochs of each object remain in the same split. Tune only on development objects; inspect held-out objects after methods are frozen. Achilles is a held-out class stress case.",
+    "observer": "F52",
+    "datesUtc": [
+      "2026-03-01T10:00:00.000Z",
+      "2026-09-01T10:00:00.000Z"
+    ],
+    "observationMinutesAfterStart": [
+      0,
+      10,
+      20,
+      30,
+      40,
+      50,
+      60
+    ],
+    "fourObservationIndices": [
+      0,
+      2,
+      4,
+      6
+    ],
+    "holdoutHoursAfterLastObservation": [
+      6,
+      24,
+      72,
+      168
+    ],
+    "followupPolicy": "The +6 h or +24 h holdout positions may be used as simulated follow-up input only in a separately labeled experiment; evaluate that experiment solely on subsequent unused epochs.",
+    "bodies": [
+      {
+        "number": 1,
+        "name": "Ceres",
+        "class": "main-belt",
+        "split": "development"
+      },
+      {
+        "number": 2,
+        "name": "Pallas",
+        "class": "main-belt",
+        "split": "development"
+      },
+      {
+        "number": 3,
+        "name": "Juno",
+        "class": "main-belt",
+        "split": "held-out"
+      },
+      {
+        "number": 4,
+        "name": "Vesta",
+        "class": "main-belt",
+        "split": "held-out"
+      },
+      {
+        "number": 433,
+        "name": "Eros",
+        "class": "near-Earth (Amor)",
+        "split": "development"
+      },
+      {
+        "number": 99942,
+        "name": "Apophis",
+        "class": "near-Earth (Aten)",
+        "split": "development"
+      },
+      {
+        "number": 101955,
+        "name": "Bennu",
+        "class": "near-Earth (Apollo)",
+        "split": "held-out"
+      },
+      {
+        "number": 588,
+        "name": "Achilles",
+        "class": "Jupiter Trojan",
+        "split": "held-out"
+      }
+    ]
+  },
+  "cases": [
+    {
+      "id": "ceres-2026-03-01",
+      "split": "development",
+      "object": {
+        "number": 1,
+        "name": "Ceres",
+        "class": "main-belt"
+      },
+      "observer": "F52",
+      "startJdUtc": 2461100.9166666665,
+      "startJdTdb": 2461100.9174674232,
+      "startJdTt": 2461100.9174674074,
+      "epochJdUtc": 2461100.958333333,
+      "epochJdTdb": 2461100.9591340898,
+      "epochJdTt": 2461100.959134074,
+      "observations": [
+        {
+          "jdUtc": 2461100.916666667,
+          "RA": 24.841365039,
+          "Dec": 4.102325681,
+          "altitudeDeg": -33.061241467,
+          "apparentMagnitude": 9.144,
+          "rangeAu": 3.4679273287469,
+          "rangeRateKmPerSecond": 16.0421201,
+          "elongationDeg": 44.3636,
+          "tdbMinusUtcSeconds": 69.185366,
+          "solarPresence": "",
+          "lunarPresence": "m"
+        },
+        {
+          "jdUtc": 2461100.923611111,
+          "RA": 24.843619537,
+          "Dec": 4.103486201,
+          "altitudeDeg": -35.253504178,
+          "apparentMagnitude": 9.144,
+          "rangeAu": 3.46799164443089,
+          "rangeRateKmPerSecond": 16.0288298,
+          "elongationDeg": 44.3591,
+          "tdbMinusUtcSeconds": 69.185366,
+          "solarPresence": "",
+          "lunarPresence": "m"
+        },
+        {
+          "jdUtc": 2461100.930555556,
+          "RA": 24.845875078,
+          "Dec": 4.104646775,
+          "altitudeDeg": -37.42355315,
+          "apparentMagnitude": 9.144,
+          "rangeAu": 3.46805590553552,
+          "rangeRateKmPerSecond": 16.0149072,
+          "elongationDeg": 44.3546,
+          "tdbMinusUtcSeconds": 69.185367,
+          "solarPresence": "",
+          "lunarPresence": "m"
+        },
+        {
+          "jdUtc": 2461100.9375,
+          "RA": 24.848131624,
+          "Dec": 4.105807406,
+          "altitudeDeg": -39.568369155,
+          "apparentMagnitude": 9.144,
+          "rangeAu": 3.46812010957133,
+          "rangeRateKmPerSecond": 16.0003765,
+          "elongationDeg": 44.3501,
+          "tdbMinusUtcSeconds": 69.185367,
+          "solarPresence": "",
+          "lunarPresence": "m"
+        },
+        {
+          "jdUtc": 2461100.944444444,
+          "RA": 24.850389138,
+          "Dec": 4.106968097,
+          "altitudeDeg": -41.684446596,
+          "apparentMagnitude": 9.144,
+          "rangeAu": 3.46818425414902,
+          "rangeRateKmPerSecond": 15.9852627,
+          "elongationDeg": 44.3456,
+          "tdbMinusUtcSeconds": 69.185367,
+          "solarPresence": "",
+          "lunarPresence": "m"
+        },
+        {
+          "jdUtc": 2461100.951388889,
+          "RA": 24.852647579,
+          "Dec": 4.108128851,
+          "altitudeDeg": -43.767700135,
+          "apparentMagnitude": 9.144,
+          "rangeAu": 3.4682483369783,
+          "rangeRateKmPerSecond": 15.9695923,
+          "elongationDeg": 44.341,
+          "tdbMinusUtcSeconds": 69.185367,
+          "solarPresence": "",
+          "lunarPresence": "m"
+        },
+        {
+          "jdUtc": 2461100.958333333,
+          "RA": 24.854906906,
+          "Dec": 4.10928967,
+          "altitudeDeg": -45.813354255,
+          "apparentMagnitude": 9.144,
+          "rangeAu": 3.46831235588944,
+          "rangeRateKmPerSecond": 15.9533925,
+          "elongationDeg": 44.3365,
+          "tdbMinusUtcSeconds": 69.185367,
+          "solarPresence": "",
+          "lunarPresence": "m"
+        }
+      ],
+      "holdout": [
+        {
+          "jdUtc": 2461101.208333333,
+          "RA": 24.936407571,
+          "Dec": 4.151132263,
+          "altitudeDeg": -32.354958218,
+          "apparentMagnitude": 9.144,
+          "rangeAu": 3.47056675670529,
+          "rangeRateKmPerSecond": 15.2963534,
+          "elongationDeg": 44.1758,
+          "tdbMinusUtcSeconds": 69.185373,
+          "solarPresence": "*",
+          "lunarPresence": ""
+        },
+        {
+          "jdUtc": 2461101.958333333,
+          "RA": 25.177823995,
+          "Dec": 4.276565407,
+          "altitudeDeg": -46.248777871,
+          "apparentMagnitude": 9.143,
+          "rangeAu": 3.47731920457014,
+          "rangeRateKmPerSecond": 15.7552433,
+          "elongationDeg": 43.6986,
+          "tdbMinusUtcSeconds": 69.185382,
+          "solarPresence": "",
+          "lunarPresence": "m"
+        },
+        {
+          "jdUtc": 2461103.958333333,
+          "RA": 25.828536398,
+          "Dec": 4.610668399,
+          "altitudeDeg": -47.098953793,
+          "apparentMagnitude": 9.141,
+          "rangeAu": 3.49499516276652,
+          "rangeRateKmPerSecond": 15.3558047,
+          "elongationDeg": 42.4283,
+          "tdbMinusUtcSeconds": 69.185411,
+          "solarPresence": "",
+          "lunarPresence": "m"
+        },
+        {
+          "jdUtc": 2461107.958333333,
+          "RA": 27.149028175,
+          "Dec": 5.276761265,
+          "altitudeDeg": -48.712809782,
+          "apparentMagnitude": 9.135,
+          "rangeAu": 3.52897753660009,
+          "rangeRateKmPerSecond": 14.5418989,
+          "elongationDeg": 39.9093,
+          "tdbMinusUtcSeconds": 69.185464,
+          "solarPresence": "",
+          "lunarPresence": "m"
+        }
+      ],
+      "initialElements": {
+        "e": 0.07963710115067027,
+        "q": 2.545287740561572,
+        "i": 10.5880037534565,
+        "asc_node": 80.24874984405824,
+        "arg_per": 73.30567370090664,
+        "perihelionJdTdb": 2461599.920112268,
+        "meanMotionDegPerDay": 0.2143075149123102,
+        "M": 253.0599832487535,
+        "trueAnomalyDeg": 244.6071855003586,
+        "a": 2.765526232906369,
+        "aphelionAu": 2.985764725251165,
+        "periodDays": 1679.829100474166,
+        "gmAu3PerDay2": 0.0002959122082841195
+      },
+      "initialState": {
+        "positionAu": [
+          2.205058991154932,
+          1.763464923275268,
+          -0.350400914381733
+        ],
+        "velocityAuPerDay": [
+          -0.006646617525760413,
+          0.007396363003416667,
+          0.001458660503014962
+        ]
+      },
+      "elements": {
+        "e": 0.07963712799154175,
+        "q": 2.545287646884014,
+        "i": 10.5880037878619,
+        "asc_node": 80.24874967497088,
+        "arg_per": 73.30567388887474,
+        "perihelionJdTdb": 2461599.920093039,
+        "meanMotionDegPerDay": 0.2143075173685806,
+        "M": 253.0689156239586,
+        "trueAnomalyDeg": 244.6155954554975,
+        "a": 2.765526211775113,
+        "aphelionAu": 2.985764776666211,
+        "periodDays": 1679.829081220924,
+        "gmAu3PerDay2": 0.0002959122082841195
+      },
+      "state": {
+        "positionAu": [
+          2.204782024162215,
+          1.763773085393346,
+          -0.3503401329522511
+        ],
+        "velocityAuPerDay": [
+          -0.006647798106309362,
+          0.00739541863158041,
+          0.001458848107699386
+        ]
+      },
+      "truthSolution": "JPL#48",
+      "observerCenterEphemeris": "DE441",
+      "rawFiles": [
+        {
+          "file": "raw/ceres-2026-03-01-observer.json",
+          "sha256": "e35fcebc6a16acb79a88c209db0b8814e634c581d83ea730b1f4ae1ad8292bde",
+          "responseSha256": "9147230214595a8b4a22b5d378f4e7f9a570624997de90de74fef2e88817bee4",
+          "retrievedAt": "2026-09-13T21:08:21.697Z",
+          "apiVersion": "1.2"
+        },
+        {
+          "file": "raw/ceres-2026-03-01-elements.json",
+          "sha256": "47f1848a11fd320ebc00e8acd61511e8310d9040c67b6edbfe9b895cd6ab79f9",
+          "responseSha256": "2e4a90c1f247a73a2e9511888f07484ced8a9a2d1bbff30683bcd18a17bc9f96",
+          "retrievedAt": "2026-09-13T21:08:22.135Z",
+          "apiVersion": "1.2"
+        },
+        {
+          "file": "raw/ceres-2026-03-01-state.json",
+          "sha256": "4c46e721fb08c2b2d945391ba3e4bdeae69dc8d4f8edf0f728c832ca6a4c0d4c",
+          "responseSha256": "fb5d59f5b3dcc6e0a40ea5bfb418b5c4bd5fe5b994df88dcc6dc84217d4439eb",
+          "retrievedAt": "2026-09-13T21:08:22.495Z",
+          "apiVersion": "1.2"
+        }
+      ]
+    },
+    {
+      "id": "ceres-2026-09-01",
+      "split": "development",
+      "object": {
+        "number": 1,
+        "name": "Ceres",
+        "class": "main-belt"
+      },
+      "observer": "F52",
+      "startJdUtc": 2461284.9166666665,
+      "startJdTdb": 2461284.9174673916,
+      "startJdTt": 2461284.9174674074,
+      "epochJdUtc": 2461284.958333333,
+      "epochJdTdb": 2461284.959134058,
+      "epochJdTt": 2461284.959134074,
+      "observations": [
+        {
+          "jdUtc": 2461284.916666667,
+          "RA": 97.220204512,
+          "Dec": 22.790532844,
+          "altitudeDeg": -19.667628121,
+          "apparentMagnitude": 8.909,
+          "rangeAu": 3.01963180407718,
+          "rangeRateKmPerSecond": -21.9296216,
+          "elongationDeg": 61.971,
+          "tdbMinusUtcSeconds": 69.182641,
+          "solarPresence": "",
+          "lunarPresence": "m"
+        },
+        {
+          "jdUtc": 2461284.923611111,
+          "RA": 97.222788117,
+          "Dec": 22.790668748,
+          "altitudeDeg": -17.734731675,
+          "apparentMagnitude": 8.909,
+          "rangeAu": 3.01954383063631,
+          "rangeRateKmPerSecond": -21.9397475,
+          "elongationDeg": 61.9754,
+          "tdbMinusUtcSeconds": 69.182641,
+          "solarPresence": "",
+          "lunarPresence": "m"
+        },
+        {
+          "jdUtc": 2461284.930555556,
+          "RA": 97.225370286,
+          "Dec": 22.790804911,
+          "altitudeDeg": -15.772268077,
+          "apparentMagnitude": 8.909,
+          "rangeAu": 3.01945581789567,
+          "rangeRateKmPerSecond": -21.9492153,
+          "elongationDeg": 61.9798,
+          "tdbMinusUtcSeconds": 69.182641,
+          "solarPresence": "",
+          "lunarPresence": "m"
+        },
+        {
+          "jdUtc": 2461284.9375,
+          "RA": 97.227950987,
+          "Dec": 22.790941313,
+          "altitudeDeg": -13.782563767,
+          "apparentMagnitude": 8.909,
+          "rangeAu": 3.01936776853052,
+          "rangeRateKmPerSecond": -21.9580083,
+          "elongationDeg": 61.9843,
+          "tdbMinusUtcSeconds": 69.182641,
+          "solarPresence": "",
+          "lunarPresence": "m"
+        },
+        {
+          "jdUtc": 2461284.944444444,
+          "RA": 97.230530187,
+          "Dec": 22.791077931,
+          "altitudeDeg": -11.767740906,
+          "apparentMagnitude": 8.909,
+          "rangeAu": 3.01927968527788,
+          "rangeRateKmPerSecond": -21.9661115,
+          "elongationDeg": 61.9887,
+          "tdbMinusUtcSeconds": 69.182641,
+          "solarPresence": "",
+          "lunarPresence": "m"
+        },
+        {
+          "jdUtc": 2461284.951388889,
+          "RA": 97.233107857,
+          "Dec": 22.791214745,
+          "altitudeDeg": -9.729736004,
+          "apparentMagnitude": 8.909,
+          "rangeAu": 3.019191570939,
+          "rangeRateKmPerSecond": -21.9735108,
+          "elongationDeg": 61.9932,
+          "tdbMinusUtcSeconds": 69.182641,
+          "solarPresence": "",
+          "lunarPresence": "m"
+        },
+        {
+          "jdUtc": 2461284.958333333,
+          "RA": 97.235683973,
+          "Dec": 22.79135173,
+          "altitudeDeg": -7.670316488,
+          "apparentMagnitude": 8.909,
+          "rangeAu": 3.0191034283505,
+          "rangeRateKmPerSecond": -21.9801938,
+          "elongationDeg": 61.9976,
+          "tdbMinusUtcSeconds": 69.182641,
+          "solarPresence": "",
+          "lunarPresence": "m"
+        }
+      ],
+      "holdout": [
+        {
+          "jdUtc": 2461285.208333333,
+          "RA": 97.327408482,
+          "Dec": 22.796201131,
+          "altitudeDeg": 73.059229434,
+          "apparentMagnitude": 8.908,
+          "rangeAu": 3.01593615284413,
+          "rangeRateKmPerSecond": -21.7537051,
+          "elongationDeg": 62.1568,
+          "tdbMinusUtcSeconds": 69.182639,
+          "solarPresence": "*",
+          "lunarPresence": "m"
+        },
+        {
+          "jdUtc": 2461285.958333333,
+          "RA": 97.604001662,
+          "Dec": 22.809091149,
+          "altitudeDeg": -7.152281304,
+          "apparentMagnitude": 8.903,
+          "rangeAu": 3.00659440055803,
+          "rangeRateKmPerSecond": -22.0996261,
+          "elongationDeg": 62.6268,
+          "tdbMinusUtcSeconds": 69.182626,
+          "solarPresence": "",
+          "lunarPresence": "m"
+        },
+        {
+          "jdUtc": 2461287.958333333,
+          "RA": 98.335000536,
+          "Dec": 22.843171225,
+          "altitudeDeg": -6.109021282,
+          "apparentMagnitude": 8.891,
+          "rangeAu": 2.98137391668196,
+          "rangeRateKmPerSecond": -22.3335542,
+          "elongationDeg": 63.8924,
+          "tdbMinusUtcSeconds": 69.182596,
+          "solarPresence": "",
+          "lunarPresence": "m"
+        },
+        {
+          "jdUtc": 2461291.958333333,
+          "RA": 99.77306685,
+          "Dec": 22.906375705,
+          "altitudeDeg": -3.992424667,
+          "apparentMagnitude": 8.866,
+          "rangeAu": 2.93015301068929,
+          "rangeRateKmPerSecond": -22.7767379,
+          "elongationDeg": 66.4537,
+          "tdbMinusUtcSeconds": 69.182544,
+          "solarPresence": "",
+          "lunarPresence": ""
+        }
+      ],
+      "initialElements": {
+        "e": 0.07973665554085439,
+        "q": 2.545296150226485,
+        "i": 10.58765000942373,
+        "asc_node": 80.24897691944561,
+        "arg_per": 73.22771752659176,
+        "perihelionJdTdb": 2461599.571021644,
+        "meanMotionDegPerDay": 0.2142716818928419,
+        "M": 292.5786537166479,
+        "trueAnomalyDeg": 283.8408328702159,
+        "a": 2.76583454676487,
+        "aphelionAu": 2.986372943303255,
+        "periodDays": 1680.1100211648,
+        "gmAu3PerDay2": 0.0002959122082841195
+      },
+      "initialState": {
+        "positionAu": [
+          0.5897640115129438,
+          2.631408128154817,
+          -0.02534094369284343
+        ],
+        "velocityAuPerDay": [
+          -0.01031498354385349,
+          0.001507269077966257,
+          0.001947958159340341
+        ]
+      },
+      "elements": {
+        "e": 0.07973668929275249,
+        "q": 2.545296256665377,
+        "i": 10.58764966552718,
+        "asc_node": 80.24897701513619,
+        "arg_per": 73.22766829612448,
+        "perihelionJdTdb": 2461599.570822998,
+        "meanMotionDegPerDay": 0.2142716566642079,
+        "M": 292.5876322047891,
+        "trueAnomalyDeg": 283.8502430942722,
+        "a": 2.765834763866927,
+        "aphelionAu": 2.986373271068476,
+        "periodDays": 1680.110218983221,
+        "gmAu3PerDay2": 0.0002959122082841195
+      },
+      "state": {
+        "positionAu": [
+          0.5893342128011964,
+          2.631470896568639,
+          -0.02525977843780348
+        ],
+        "velocityAuPerDay": [
+          -0.01031535457738434,
+          0.001505614768630573,
+          0.001947974074193373
+        ]
+      },
+      "truthSolution": "JPL#48",
+      "observerCenterEphemeris": "DE441",
+      "rawFiles": [
+        {
+          "file": "raw/ceres-2026-09-01-observer.json",
+          "sha256": "ba2a94da3de95bc663a38772e3f9629fe0b587d21a9fbb8f06bc0b56d99a474b",
+          "responseSha256": "e9d5169cf50d7675bb2ee6a4d2ab57b7dddc4f879f2d33679de600078e4e789a",
+          "retrievedAt": "2026-09-13T21:08:22.966Z",
+          "apiVersion": "1.2"
+        },
+        {
+          "file": "raw/ceres-2026-09-01-elements.json",
+          "sha256": "d61c5fca1f14444cea129a668d360bfdddfa798d32c5efefafa9b00a889e673f",
+          "responseSha256": "82e29e1ac5bc768d05a2efcb766e29d8a098db12d6a61f9289e6f09764a7df57",
+          "retrievedAt": "2026-09-13T21:08:23.329Z",
+          "apiVersion": "1.2"
+        },
+        {
+          "file": "raw/ceres-2026-09-01-state.json",
+          "sha256": "63316454df987ed8598246c8ede10b95b37ec9cbd80f2f3afc3f1c5781bcd388",
+          "responseSha256": "85ebac8ffda24dd030c82ce971198088246b87127d58bb60e3c4be8e28e22d61",
+          "retrievedAt": "2026-09-13T21:08:23.766Z",
+          "apiVersion": "1.2"
+        }
+      ]
+    },
+    {
+      "id": "pallas-2026-03-01",
+      "split": "development",
+      "object": {
+        "number": 2,
+        "name": "Pallas",
+        "class": "main-belt"
+      },
+      "observer": "F52",
+      "startJdUtc": 2461100.9166666665,
+      "startJdTdb": 2461100.9174674232,
+      "startJdTt": 2461100.9174674074,
+      "epochJdUtc": 2461100.958333333,
+      "epochJdTdb": 2461100.9591340898,
+      "epochJdTt": 2461100.959134074,
+      "observations": [
+        {
+          "jdUtc": 2461100.916666667,
+          "RA": 340.451508681,
+          "Dec": -1.785014136,
+          "altitudeDeg": -69.473435827,
+          "apparentMagnitude": 10.028,
+          "rangeAu": 4.2143842484377,
+          "rangeRateKmPerSecond": -1.3404303,
+          "elongationDeg": 6.0502,
+          "tdbMinusUtcSeconds": 69.185366,
+          "solarPresence": "",
+          "lunarPresence": "m"
+        },
+        {
+          "jdUtc": 2461100.923611111,
+          "RA": 340.453849602,
+          "Dec": -1.784574299,
+          "altitudeDeg": -70.250195173,
+          "apparentMagnitude": 10.028,
+          "rangeAu": 4.21437883012297,
+          "rangeRateKmPerSecond": -1.36146,
+          "elongationDeg": 6.0491,
+          "tdbMinusUtcSeconds": 69.185366,
+          "solarPresence": "",
+          "lunarPresence": "m"
+        },
+        {
+          "jdUtc": 2461100.930555556,
+          "RA": 340.45619062,
+          "Dec": -1.784134468,
+          "altitudeDeg": -70.746001726,
+          "apparentMagnitude": 10.028,
+          "rangeAu": 4.21437332729593,
+          "rangeRateKmPerSecond": -1.3825667,
+          "elongationDeg": 6.0481,
+          "tdbMinusUtcSeconds": 69.185367,
+          "solarPresence": "",
+          "lunarPresence": "m"
+        },
+        {
+          "jdUtc": 2461100.9375,
+          "RA": 340.458531688,
+          "Dec": -1.783694644,
+          "altitudeDeg": -70.938878608,
+          "apparentMagnitude": 10.028,
+          "rangeAu": 4.21436773972071,
+          "rangeRateKmPerSecond": -1.4037142,
+          "elongationDeg": 6.047,
+          "tdbMinusUtcSeconds": 69.185367,
+          "solarPresence": "",
+          "lunarPresence": "m"
+        },
+        {
+          "jdUtc": 2461100.944444444,
+          "RA": 340.460872761,
+          "Dec": -1.783254826,
+          "altitudeDeg": -70.819669007,
+          "apparentMagnitude": 10.028,
+          "rangeAu": 4.21436206730675,
+          "rangeRateKmPerSecond": -1.424866,
+          "elongationDeg": 6.046,
+          "tdbMinusUtcSeconds": 69.185367,
+          "solarPresence": "",
+          "lunarPresence": "m"
+        },
+        {
+          "jdUtc": 2461100.951388889,
+          "RA": 340.463213794,
+          "Dec": -1.782815014,
+          "altitudeDeg": -70.394072868,
+          "apparentMagnitude": 10.028,
+          "rangeAu": 4.21435631010952,
+          "rangeRateKmPerSecond": -1.445986,
+          "elongationDeg": 6.0449,
+          "tdbMinusUtcSeconds": 69.185367,
+          "solarPresence": "",
+          "lunarPresence": "m"
+        },
+        {
+          "jdUtc": 2461100.958333333,
+          "RA": 340.465554741,
+          "Dec": -1.782375209,
+          "altitudeDeg": -69.681364282,
+          "apparentMagnitude": 10.028,
+          "rangeAu": 4.21435046832884,
+          "rangeRateKmPerSecond": -1.4670378,
+          "elongationDeg": 6.0439,
+          "tdbMinusUtcSeconds": 69.185367,
+          "solarPresence": "",
+          "lunarPresence": "m"
+        }
+      ],
+      "holdout": [
+        {
+          "jdUtc": 2461101.208333333,
+          "RA": 340.549449222,
+          "Dec": -1.766541141,
+          "altitudeDeg": 6.31341687,
+          "apparentMagnitude": 10.027,
+          "rangeAu": 4.21409623925898,
+          "rangeRateKmPerSecond": -1.9210388,
+          "elongationDeg": 6.0086,
+          "tdbMinusUtcSeconds": 69.185373,
+          "solarPresence": "*",
+          "lunarPresence": ""
+        },
+        {
+          "jdUtc": 2461101.958333333,
+          "RA": 340.799252956,
+          "Dec": -1.718789375,
+          "altitudeDeg": -69.392771501,
+          "apparentMagnitude": 10.024,
+          "rangeAu": 4.21344538004817,
+          "rangeRateKmPerSecond": -1.7809458,
+          "elongationDeg": 5.9269,
+          "tdbMinusUtcSeconds": 69.185382,
+          "solarPresence": "",
+          "lunarPresence": "m"
+        },
+        {
+          "jdUtc": 2461103.958333333,
+          "RA": 341.466593212,
+          "Dec": -1.590232105,
+          "altitudeDeg": -68.768046252,
+          "apparentMagnitude": 10.02,
+          "rangeAu": 4.21110022579906,
+          "rangeRateKmPerSecond": -2.4079269,
+          "elongationDeg": 5.9185,
+          "tdbMinusUtcSeconds": 69.185411,
+          "solarPresence": "",
+          "lunarPresence": "m"
+        },
+        {
+          "jdUtc": 2461107.958333333,
+          "RA": 342.800820008,
+          "Dec": -1.328030348,
+          "altitudeDeg": -67.347348006,
+          "apparentMagnitude": 10.034,
+          "rangeAu": 4.20427227588632,
+          "rangeRateKmPerSecond": -3.6608787,
+          "elongationDeg": 6.7506,
+          "tdbMinusUtcSeconds": 69.185464,
+          "solarPresence": "",
+          "lunarPresence": "m"
+        }
+      ],
+      "initialElements": {
+        "e": 0.2306760133456192,
+        "q": 2.130855343055241,
+        "i": 34.93059761931832,
+        "asc_node": 172.8870481574402,
+        "arg_per": 310.9489115703083,
+        "perihelionJdTdb": 2461694.977750886,
+        "meanMotionDegPerDay": 0.2138144401387353,
+        "M": 232.9813330828969,
+        "trueAnomalyDeg": 215.2884002480195,
+        "a": 2.769776297138294,
+        "aphelionAu": 3.408697251221347,
+        "periodDays": 1683.702933096618,
+        "gmAu3PerDay2": 0.0002959122082841195
+      },
+      "initialState": {
+        "positionAu": [
+          3.035772049871227,
+          -1.013832814202768,
+          0.4400806602237493
+        ],
+        "velocityAuPerDay": [
+          0.001555563578499236,
+          0.007003543507113382,
+          -0.004988184131133853
+        ]
+      },
+      "elements": {
+        "e": 0.2306760296906033,
+        "q": 2.130855232627219,
+        "i": 34.93059866522033,
+        "asc_node": 172.8870477101442,
+        "arg_per": 310.9489196515722,
+        "perihelionJdTdb": 2461694.977767317,
+        "meanMotionDegPerDay": 0.213814449945579,
+        "M": 232.9902326791907,
+        "trueAnomalyDeg": 215.2947642378965,
+        "a": 2.76977621244566,
+        "aphelionAu": 3.408697192264102,
+        "periodDays": 1683.702855871662,
+        "gmAu3PerDay2": 0.0002959122082841195
+      },
+      "state": {
+        "positionAu": [
+          3.035836841895756,
+          -1.013540992173055,
+          0.4398728158659439
+        ],
+        "velocityAuPerDay": [
+          0.001554453584837341,
+          0.007003913904738143,
+          -0.004988345032356863
+        ]
+      },
+      "truthSolution": "JPL#74",
+      "observerCenterEphemeris": "DE441",
+      "rawFiles": [
+        {
+          "file": "raw/pallas-2026-03-01-observer.json",
+          "sha256": "c4c1f6186512841bcce9e8655e7ac5d17e09463a043090b5413a96552e5eb23d",
+          "responseSha256": "9ccabb019acc93a36e1f4670c95c57f95403be3cd3e3250d403e42786786b4fd",
+          "retrievedAt": "2026-09-13T21:08:24.286Z",
+          "apiVersion": "1.2"
+        },
+        {
+          "file": "raw/pallas-2026-03-01-elements.json",
+          "sha256": "e4583052f171639b055a876c7212b6f3f505d87184c4cc50d2e806722d0142d2",
+          "responseSha256": "ba2d26369bc00fe1b39ecbbd34d76435b45c16d91eb1c85cae35b7b70b4d1885",
+          "retrievedAt": "2026-09-13T21:08:24.700Z",
+          "apiVersion": "1.2"
+        },
+        {
+          "file": "raw/pallas-2026-03-01-state.json",
+          "sha256": "272a5518fbce081d149ebd7c6fd258f5b0709fe7a14fad0e5172dccf91ab33f7",
+          "responseSha256": "1de6555fbb3c09a906486d8a94896ed40b0e95ec2fce26d53537578b74f3df18",
+          "retrievedAt": "2026-09-13T21:08:25.077Z",
+          "apiVersion": "1.2"
+        }
+      ]
+    },
+    {
+      "id": "pallas-2026-09-01",
+      "split": "development",
+      "object": {
+        "number": 2,
+        "name": "Pallas",
+        "class": "main-belt"
+      },
+      "observer": "F52",
+      "startJdUtc": 2461284.9166666665,
+      "startJdTdb": 2461284.9174673916,
+      "startJdTt": 2461284.9174674074,
+      "epochJdUtc": 2461284.958333333,
+      "epochJdTdb": 2461284.959134058,
+      "epochJdTt": 2461284.959134074,
+      "observations": [
+        {
+          "jdUtc": 2461284.916666667,
+          "RA": 24.757764632,
+          "Dec": -4.528751346,
+          "altitudeDeg": 34.247795147,
+          "apparentMagnitude": 8.858,
+          "rangeAu": 2.0790824786821,
+          "rangeRateKmPerSecond": -19.298988,
+          "elongationDeg": 135.6212,
+          "tdbMinusUtcSeconds": 69.182641,
+          "solarPresence": "",
+          "lunarPresence": "m"
+        },
+        {
+          "jdUtc": 2461284.923611111,
+          "RA": 24.757543866,
+          "Dec": -4.530420827,
+          "altitudeDeg": 36.427043841,
+          "apparentMagnitude": 8.858,
+          "rangeAu": 2.07900510482146,
+          "rangeRateKmPerSecond": -19.2841432,
+          "elongationDeg": 135.6281,
+          "tdbMinusUtcSeconds": 69.182641,
+          "solarPresence": "",
+          "lunarPresence": "m"
+        },
+        {
+          "jdUtc": 2461284.930555556,
+          "RA": 24.75732125,
+          "Dec": -4.53209036,
+          "altitudeDeg": 38.582119835,
+          "apparentMagnitude": 8.858,
+          "rangeAu": 2.07892779174999,
+          "rangeRateKmPerSecond": -19.268678,
+          "elongationDeg": 135.6349,
+          "tdbMinusUtcSeconds": 69.182641,
+          "solarPresence": "",
+          "lunarPresence": "m"
+        },
+        {
+          "jdUtc": 2461284.9375,
+          "RA": 24.757096845,
+          "Dec": -4.533759941,
+          "altitudeDeg": 40.709705599,
+          "apparentMagnitude": 8.858,
+          "rangeAu": 2.07885054190881,
+          "rangeRateKmPerSecond": -19.252617,
+          "elongationDeg": 135.6417,
+          "tdbMinusUtcSeconds": 69.182641,
+          "solarPresence": "",
+          "lunarPresence": "m"
+        },
+        {
+          "jdUtc": 2461284.944444444,
+          "RA": 24.756870718,
+          "Dec": -4.535429562,
+          "altitudeDeg": 42.805942575,
+          "apparentMagnitude": 8.857,
+          "rangeAu": 2.07877335763555,
+          "rangeRateKmPerSecond": -19.2359862,
+          "elongationDeg": 135.6486,
+          "tdbMinusUtcSeconds": 69.182641,
+          "solarPresence": "",
+          "lunarPresence": "m"
+        },
+        {
+          "jdUtc": 2461284.951388889,
+          "RA": 24.756642937,
+          "Dec": -4.53709922,
+          "altitudeDeg": 44.866327895,
+          "apparentMagnitude": 8.857,
+          "rangeAu": 2.07869624116675,
+          "rangeRateKmPerSecond": -19.2188128,
+          "elongationDeg": 135.6554,
+          "tdbMinusUtcSeconds": 69.182641,
+          "solarPresence": "",
+          "lunarPresence": "m"
+        },
+        {
+          "jdUtc": 2461284.958333333,
+          "RA": 24.756413573,
+          "Dec": -4.53876891,
+          "altitudeDeg": 46.885592866,
+          "apparentMagnitude": 8.857,
+          "rangeAu": 2.07861919461288,
+          "rangeRateKmPerSecond": -19.2011246,
+          "elongationDeg": 135.6623,
+          "tdbMinusUtcSeconds": 69.182641,
+          "solarPresence": "",
+          "lunarPresence": "m"
+        }
+      ],
+      "holdout": [
+        {
+          "jdUtc": 2461285.208333333,
+          "RA": 24.747818313,
+          "Dec": -4.598881345,
+          "altitudeDeg": 30.909846604,
+          "apparentMagnitude": 8.852,
+          "rangeAu": 2.07589915899883,
+          "rangeRateKmPerSecond": -18.5033881,
+          "elongationDeg": 135.9075,
+          "tdbMinusUtcSeconds": 69.182639,
+          "solarPresence": "*",
+          "lunarPresence": "m"
+        },
+        {
+          "jdUtc": 2461285.958333333,
+          "RA": 24.726080261,
+          "Dec": -4.780489145,
+          "altitudeDeg": 47.543237494,
+          "apparentMagnitude": 8.835,
+          "rangeAu": 2.06778078755582,
+          "rangeRateKmPerSecond": -18.8293224,
+          "elongationDeg": 136.6288,
+          "tdbMinusUtcSeconds": 69.182626,
+          "solarPresence": "",
+          "lunarPresence": "m"
+        },
+        {
+          "jdUtc": 2461287.958333333,
+          "RA": 24.648425763,
+          "Dec": -5.273288331,
+          "altitudeDeg": 48.822666682,
+          "apparentMagnitude": 8.79,
+          "rangeAu": 2.04674849145592,
+          "rangeRateKmPerSecond": -18.0617591,
+          "elongationDeg": 138.5584,
+          "tdbMinusUtcSeconds": 69.182596,
+          "solarPresence": "",
+          "lunarPresence": "m"
+        },
+        {
+          "jdUtc": 2461291.958333333,
+          "RA": 24.425048348,
+          "Dec": -6.293776169,
+          "altitudeDeg": 51.208431381,
+          "apparentMagnitude": 8.701,
+          "rangeAu": 2.00739053464045,
+          "rangeRateKmPerSecond": -16.4297391,
+          "elongationDeg": 142.3851,
+          "tdbMinusUtcSeconds": 69.182544,
+          "solarPresence": "",
+          "lunarPresence": ""
+        }
+      ],
+      "initialElements": {
+        "e": 0.2307036887452867,
+        "q": 2.130500111904162,
+        "i": 34.93362936161176,
+        "asc_node": 172.8868567757046,
+        "arg_per": 310.9831906334747,
+        "perihelionJdTdb": 2461695.068689667,
+        "meanMotionDegPerDay": 0.2138563779132731,
+        "M": 272.286545207352,
+        "trueAnomalyDeg": 246.4658055092262,
+        "a": 2.769414178561887,
+        "aphelionAu": 3.408328245219613,
+        "periodDays": 1683.372754709208,
+        "gmAu3PerDay2": 0.0002959122082841195
+      },
+      "initialState": {
+        "positionAu": [
+          2.821872936808434,
+          0.3633302928167634,
+          -0.4958974678027313
+        ],
+        "velocityAuPerDay": [
+          -0.004131246344553019,
+          0.007560491073716681,
+          -0.004882905848086227
+        ]
+      },
+      "elements": {
+        "e": 0.2307036946728507,
+        "q": 2.13050003947038,
+        "i": 34.93362973058392,
+        "asc_node": 172.8868569782861,
+        "arg_per": 310.9831970030312,
+        "perihelionJdTdb": 2461695.068704369,
+        "meanMotionDegPerDay": 0.2138563863477619,
+        "M": 272.2954492868024,
+        "trueAnomalyDeg": 246.4737717951242,
+        "a": 2.769414105744818,
+        "aphelionAu": 3.408328172019257,
+        "periodDays": 1683.372688317043,
+        "gmAu3PerDay2": 0.0002959122082841195
+      },
+      "state": {
+        "positionAu": [
+          2.821700771454146,
+          0.3636453093995208,
+          -0.4961009169238531
+        ],
+        "velocityAuPerDay": [
+          -0.004132690670014251,
+          0.00756030486879355,
+          -0.004882651944324312
+        ]
+      },
+      "truthSolution": "JPL#74",
+      "observerCenterEphemeris": "DE441",
+      "rawFiles": [
+        {
+          "file": "raw/pallas-2026-09-01-observer.json",
+          "sha256": "53d2bc9cfc4286b7eef66b941a165f33e12ccac6a2c3e41dc6e355e5836f3e2e",
+          "responseSha256": "1648d338a30549c658d82540c2da55653ae47d7b1d6ea40e44797f5e2014d487",
+          "retrievedAt": "2026-09-13T21:08:25.534Z",
+          "apiVersion": "1.2"
+        },
+        {
+          "file": "raw/pallas-2026-09-01-elements.json",
+          "sha256": "0383392aab47c803f4723856b87caa4535d5c87516b1cfaa2017011ba96e863c",
+          "responseSha256": "fe49e5472d7903c05109f2dd75f59ce77ac0e05aeb7b81440171d3b037b9b7df",
+          "retrievedAt": "2026-09-13T21:08:25.913Z",
+          "apiVersion": "1.2"
+        },
+        {
+          "file": "raw/pallas-2026-09-01-state.json",
+          "sha256": "df7a8a1a3ed49333e1036adb87745b40dc9a39a2d45f259dd39e4b697f6914b2",
+          "responseSha256": "57d3a240359a70fcbd85315cf8d14d6aa2286eff100bca3f13be9f8bbc125a68",
+          "retrievedAt": "2026-09-13T21:08:26.280Z",
+          "apiVersion": "1.2"
+        }
+      ]
+    },
+    {
+      "id": "juno-2026-03-01",
+      "split": "held-out",
+      "object": {
+        "number": 3,
+        "name": "Juno",
+        "class": "main-belt"
+      },
+      "observer": "F52",
+      "startJdUtc": 2461100.9166666665,
+      "startJdTdb": 2461100.9174674232,
+      "startJdTt": 2461100.9174674074,
+      "epochJdUtc": 2461100.958333333,
+      "epochJdTdb": 2461100.9591340898,
+      "epochJdTt": 2461100.959134074,
+      "observations": [
+        {
+          "jdUtc": 2461100.916666667,
+          "RA": 291.25340848,
+          "Dec": -11.32150411,
+          "altitudeDeg": -49.260980379,
+          "apparentMagnitude": 11.116,
+          "rangeAu": 3.65919612521032,
+          "rangeRateKmPerSecond": -21.6505025,
+          "elongationDeg": 50.0947,
+          "tdbMinusUtcSeconds": 69.185366,
+          "solarPresence": "",
+          "lunarPresence": "m"
+        },
+        {
+          "jdUtc": 2461100.923611111,
+          "RA": 291.255636523,
+          "Dec": -11.321038802,
+          "altitudeDeg": -46.931875364,
+          "apparentMagnitude": 11.116,
+          "rangeAu": 3.65910926030957,
+          "rangeRateKmPerSecond": -21.6655285,
+          "elongationDeg": 50.0994,
+          "tdbMinusUtcSeconds": 69.185366,
+          "solarPresence": "",
+          "lunarPresence": "m"
+        },
+        {
+          "jdUtc": 2461100.930555556,
+          "RA": 291.257863648,
+          "Dec": -11.320573619,
+          "altitudeDeg": -44.598200221,
+          "apparentMagnitude": 11.116,
+          "rangeAu": 3.65902233626592,
+          "rangeRateKmPerSecond": -21.6799896,
+          "elongationDeg": 50.104,
+          "tdbMinusUtcSeconds": 69.185367,
+          "solarPresence": "",
+          "lunarPresence": "m"
+        },
+        {
+          "jdUtc": 2461100.9375,
+          "RA": 291.260089816,
+          "Dec": -11.320108556,
+          "altitudeDeg": -42.261048365,
+          "apparentMagnitude": 11.115,
+          "rangeAu": 3.65893535539758,
+          "rangeRateKmPerSecond": -21.6938606,
+          "elongationDeg": 50.1087,
+          "tdbMinusUtcSeconds": 69.185367,
+          "solarPresence": "",
+          "lunarPresence": "m"
+        },
+        {
+          "jdUtc": 2461100.944444444,
+          "RA": 291.262314992,
+          "Dec": -11.319643604,
+          "altitudeDeg": -39.921346512,
+          "apparentMagnitude": 11.115,
+          "rangeAu": 3.65884832011955,
+          "rangeRateKmPerSecond": -21.7071177,
+          "elongationDeg": 50.1134,
+          "tdbMinusUtcSeconds": 69.185367,
+          "solarPresence": "",
+          "lunarPresence": "m"
+        },
+        {
+          "jdUtc": 2461100.951388889,
+          "RA": 291.26453914,
+          "Dec": -11.319178755,
+          "altitudeDeg": -37.57989423,
+          "apparentMagnitude": 11.115,
+          "rangeAu": 3.65876123294669,
+          "rangeRateKmPerSecond": -21.7197378,
+          "elongationDeg": 50.1181,
+          "tdbMinusUtcSeconds": 69.185367,
+          "solarPresence": "",
+          "lunarPresence": "m"
+        },
+        {
+          "jdUtc": 2461100.958333333,
+          "RA": 291.26676223,
+          "Dec": -11.318714002,
+          "altitudeDeg": -35.237393131,
+          "apparentMagnitude": 11.115,
+          "rangeAu": 3.65867409646552,
+          "rangeRateKmPerSecond": -21.7316994,
+          "elongationDeg": 50.1228,
+          "tdbMinusUtcSeconds": 69.185367,
+          "solarPresence": "",
+          "lunarPresence": "m"
+        }
+      ],
+      "holdout": [
+        {
+          "jdUtc": 2461101.208333333,
+          "RA": 291.345989856,
+          "Dec": -11.301966402,
+          "altitudeDeg": 44.145613231,
+          "apparentMagnitude": 11.114,
+          "rangeAu": 3.65552992102587,
+          "rangeRateKmPerSecond": -21.6582607,
+          "elongationDeg": 50.2908,
+          "tdbMinusUtcSeconds": 69.185373,
+          "solarPresence": "*",
+          "lunarPresence": ""
+        },
+        {
+          "jdUtc": 2461101.958333333,
+          "RA": 291.583804779,
+          "Dec": -11.250741749,
+          "altitudeDeg": -34.591210086,
+          "apparentMagnitude": 11.111,
+          "rangeAu": 3.64627411587348,
+          "rangeRateKmPerSecond": -21.9202209,
+          "elongationDeg": 50.7866,
+          "tdbMinusUtcSeconds": 69.185382,
+          "solarPresence": "",
+          "lunarPresence": "m"
+        },
+        {
+          "jdUtc": 2461103.958333333,
+          "RA": 292.213087023,
+          "Dec": -11.112371672,
+          "altitudeDeg": -33.293440822,
+          "apparentMagnitude": 11.102,
+          "rangeAu": 3.62115551888864,
+          "rangeRateKmPerSecond": -22.2906878,
+          "elongationDeg": 52.1173,
+          "tdbMinusUtcSeconds": 69.185411,
+          "solarPresence": "",
+          "lunarPresence": "m"
+        },
+        {
+          "jdUtc": 2461107.958333333,
+          "RA": 293.451691009,
+          "Dec": -10.826260063,
+          "altitudeDeg": -30.675737921,
+          "apparentMagnitude": 11.082,
+          "rangeAu": 3.56967808356951,
+          "rangeRateKmPerSecond": -23.0055769,
+          "elongationDeg": 54.7921,
+          "tdbMinusUtcSeconds": 69.185464,
+          "solarPresence": "",
+          "lunarPresence": "m"
+        }
+      ],
+      "initialElements": {
+        "e": 0.2557642537471221,
+        "q": 1.987815225519644,
+        "i": 12.98619307509889,
+        "asc_node": 169.8154594675174,
+        "arg_per": 247.8906778338229,
+        "perihelionJdTdb": 2461631.251221245,
+        "meanMotionDegPerDay": 0.2257905925824701,
+        "M": 240.2556274582188,
+        "trueAnomalyDeg": 218.8044803649449,
+        "a": 2.670948332605647,
+        "aphelionAu": 3.354081439691651,
+        "periodDays": 1594.397693378257,
+        "gmAu3PerDay2": 0.0002959122082841195
+      },
+      "initialState": {
+        "positionAu": [
+          0.3670021085107912,
+          -3.022335100989314,
+          0.6710464005158151
+        ],
+        "velocityAuPerDay": [
+          0.008444715056843952,
+          0.002617178348693486,
+          -0.0009383994463777431
+        ]
+      },
+      "elements": {
+        "e": 0.2557642289181957,
+        "q": 1.987815301689573,
+        "i": 12.98619320404033,
+        "asc_node": 169.8154575547711,
+        "arg_per": 247.8906813054448,
+        "perihelionJdTdb": 2461631.251245944,
+        "meanMotionDegPerDay": 0.225790590903681,
+        "M": 240.2650307129064,
+        "trueAnomalyDeg": 218.8111545208786,
+        "a": 2.670948345844932,
+        "aphelionAu": 3.354081390000291,
+        "periodDays": 1594.397705232858,
+        "gmAu3PerDay2": 0.0002959122082841195
+      },
+      "state": {
+        "positionAu": [
+          0.3673539685282188,
+          -3.022226026275817,
+          0.671007294849983
+        ],
+        "velocityAuPerDay": [
+          0.008444565754146715,
+          0.002618407906103829,
+          -0.0009386725140973245
+        ]
+      },
+      "truthSolution": "JPL#144",
+      "observerCenterEphemeris": "DE441",
+      "rawFiles": [
+        {
+          "file": "raw/juno-2026-03-01-observer.json",
+          "sha256": "53f836611a7e03d1c5b6ec65eea622e64e7fe69b9000c3f9e05a8c71cc00535d",
+          "responseSha256": "26ded9918b3fe871cdbd2a91b9427e5592f9371901663b87859cd3ec91ecf875",
+          "retrievedAt": "2026-09-13T21:08:26.750Z",
+          "apiVersion": "1.2"
+        },
+        {
+          "file": "raw/juno-2026-03-01-elements.json",
+          "sha256": "7724ba43747c84d398a04fdd56f0c238134cefd4d9b450ea88ba3e4b7b3e51fd",
+          "responseSha256": "4f150be7ff9a6a1a729ee7748d5929db01be28c056249da290b166d4814a86f7",
+          "retrievedAt": "2026-09-13T21:08:27.131Z",
+          "apiVersion": "1.2"
+        },
+        {
+          "file": "raw/juno-2026-03-01-state.json",
+          "sha256": "1a48562af675388e7543462cb7a855081da7dc3d8a511dc958d9515430a38341",
+          "responseSha256": "92bb34f9e161bcfd4bc0a759e3ea09ab463841ca3204d18c68c85a8063e93336",
+          "retrievedAt": "2026-09-13T21:08:27.496Z",
+          "apiVersion": "1.2"
+        }
+      ]
+    },
+    {
+      "id": "juno-2026-09-01",
+      "split": "held-out",
+      "object": {
+        "number": 3,
+        "name": "Juno",
+        "class": "main-belt"
+      },
+      "observer": "F52",
+      "startJdUtc": 2461284.9166666665,
+      "startJdTdb": 2461284.9174673916,
+      "startJdTt": 2461284.9174674074,
+      "epochJdUtc": 2461284.958333333,
+      "epochJdTdb": 2461284.959134058,
+      "epochJdTt": 2461284.959134074,
+      "observations": [
+        {
+          "jdUtc": 2461284.916666667,
+          "RA": 295.89528831,
+          "Dec": -9.246400916,
+          "altitudeDeg": 42.113104588,
+          "apparentMagnitude": 9.391,
+          "rangeAu": 1.88481316718565,
+          "rangeRateKmPerSecond": 11.1399971,
+          "elongationDeg": 136.1955,
+          "tdbMinusUtcSeconds": 69.182641,
+          "solarPresence": "",
+          "lunarPresence": "m"
+        },
+        {
+          "jdUtc": 2461284.923611111,
+          "RA": 295.894653976,
+          "Dec": -9.247248533,
+          "altitudeDeg": 40.164551513,
+          "apparentMagnitude": 9.391,
+          "rangeAu": 1.88485788206714,
+          "rangeRateKmPerSecond": 11.1567567,
+          "elongationDeg": 136.1884,
+          "tdbMinusUtcSeconds": 69.182641,
+          "solarPresence": "",
+          "lunarPresence": "m"
+        },
+        {
+          "jdUtc": 2461284.930555556,
+          "RA": 295.894021481,
+          "Dec": -9.248095843,
+          "altitudeDeg": 38.172467061,
+          "apparentMagnitude": 9.391,
+          "rangeAu": 1.88490266310424,
+          "rangeRateKmPerSecond": 11.1729802,
+          "elongationDeg": 136.1813,
+          "tdbMinusUtcSeconds": 69.182641,
+          "solarPresence": "",
+          "lunarPresence": "m"
+        },
+        {
+          "jdUtc": 2461284.9375,
+          "RA": 295.893390902,
+          "Dec": -9.248942857,
+          "altitudeDeg": 36.14174967,
+          "apparentMagnitude": 9.391,
+          "rangeAu": 1.88494750809198,
+          "rangeRateKmPerSecond": 11.1886409,
+          "elongationDeg": 136.1742,
+          "tdbMinusUtcSeconds": 69.182641,
+          "solarPresence": "",
+          "lunarPresence": "m"
+        },
+        {
+          "jdUtc": 2461284.944444444,
+          "RA": 295.892762311,
+          "Dec": -9.249789586,
+          "altitudeDeg": 34.076679331,
+          "apparentMagnitude": 9.391,
+          "rangeAu": 1.88499241472084,
+          "rangeRateKmPerSecond": 11.203713,
+          "elongationDeg": 136.1671,
+          "tdbMinusUtcSeconds": 69.182641,
+          "solarPresence": "",
+          "lunarPresence": "m"
+        },
+        {
+          "jdUtc": 2461284.951388889,
+          "RA": 295.89213578,
+          "Dec": -9.250636044,
+          "altitudeDeg": 31.980999236,
+          "apparentMagnitude": 9.391,
+          "rangeAu": 1.88503738057723,
+          "rangeRateKmPerSecond": 11.2181718,
+          "elongationDeg": 136.16,
+          "tdbMinusUtcSeconds": 69.182641,
+          "solarPresence": "",
+          "lunarPresence": "m"
+        },
+        {
+          "jdUtc": 2461284.958333333,
+          "RA": 295.891511374,
+          "Dec": -9.251482241,
+          "altitudeDeg": 29.857987443,
+          "apparentMagnitude": 9.392,
+          "rangeAu": 1.88508240316013,
+          "rangeRateKmPerSecond": 11.231994,
+          "elongationDeg": 136.1529,
+          "tdbMinusUtcSeconds": 69.182641,
+          "solarPresence": "",
+          "lunarPresence": "m"
+        }
+      ],
+      "holdout": [
+        {
+          "jdUtc": 2461285.208333333,
+          "RA": 295.870682031,
+          "Dec": -9.28189751,
+          "altitudeDeg": -52.908639746,
+          "apparentMagnitude": 9.395,
+          "rangeAu": 1.88671554452798,
+          "rangeRateKmPerSecond": 11.2236452,
+          "elongationDeg": 135.9005,
+          "tdbMinusUtcSeconds": 69.182639,
+          "solarPresence": "*",
+          "lunarPresence": "m"
+        },
+        {
+          "jdUtc": 2461285.958333333,
+          "RA": 295.809563559,
+          "Dec": -9.374000125,
+          "altitudeDeg": 28.885667467,
+          "apparentMagnitude": 9.405,
+          "rangeAu": 1.89146261140142,
+          "rangeRateKmPerSecond": 11.5507495,
+          "elongationDeg": 135.1514,
+          "tdbMinusUtcSeconds": 69.182626,
+          "solarPresence": "",
+          "lunarPresence": "m"
+        },
+        {
+          "jdUtc": 2461287.958333333,
+          "RA": 295.664930491,
+          "Dec": -9.617048271,
+          "altitudeDeg": 26.950793333,
+          "apparentMagnitude": 9.432,
+          "rangeAu": 1.90475801443117,
+          "rangeRateKmPerSecond": 12.1683425,
+          "elongationDeg": 133.1561,
+          "tdbMinusUtcSeconds": 69.182596,
+          "solarPresence": "",
+          "lunarPresence": "m"
+        },
+        {
+          "jdUtc": 2461291.958333333,
+          "RA": 295.454431175,
+          "Dec": -10.093529349,
+          "altitudeDeg": 23.126890345,
+          "apparentMagnitude": 9.485,
+          "rangeAu": 1.93338081227426,
+          "rangeRateKmPerSecond": 13.3198467,
+          "elongationDeg": 129.2032,
+          "tdbMinusUtcSeconds": 69.182544,
+          "solarPresence": "",
+          "lunarPresence": ""
+        }
+      ],
+      "initialElements": {
+        "e": 0.2556646951060076,
+        "q": 1.988135196683785,
+        "i": 12.98688612201959,
+        "asc_node": 169.8101137983853,
+        "arg_per": 247.893665623121,
+        "perihelionJdTdb": 2461631.308040211,
+        "meanMotionDegPerDay": 0.2257813841536457,
+        "M": 281.7914570108404,
+        "trueAnomalyDeg": 252.4595454876844,
+        "a": 2.671020954685112,
+        "aphelionAu": 3.353906712686439,
+        "periodDays": 1594.462720429678,
+        "gmAu3PerDay2": 0.0002959122082841195
+      },
+      "initialState": {
+        "positionAu": [
+          1.752349743280089,
+          -2.023618965536938,
+          0.3878433660512782
+        ],
+        "velocityAuPerDay": [
+          0.005924635132131986,
+          0.008271791813101337,
+          -0.002119337068880165
+        ]
+      },
+      "elements": {
+        "e": 0.2556646837592831,
+        "q": 1.98813521749333,
+        "i": 12.98688627880257,
+        "asc_node": 169.8101132203644,
+        "arg_per": 247.8936666795814,
+        "perihelionJdTdb": 2461631.308046039,
+        "meanMotionDegPerDay": 0.2257813857715627,
+        "M": 281.8008626925433,
+        "trueAnomalyDeg": 252.4684142192162,
+        "a": 2.67102094192501,
+        "aphelionAu": 3.35390666635669,
+        "periodDays": 1594.462709003987,
+        "gmAu3PerDay2": 0.0002959122082841195
+      },
+      "state": {
+        "positionAu": [
+          1.752596580331109,
+          -2.023274281280097,
+          0.387755055305573
+        ],
+        "velocityAuPerDay": [
+          0.005923543268885044,
+          0.008273052505287462,
+          -0.002119578720757832
+        ]
+      },
+      "truthSolution": "JPL#144",
+      "observerCenterEphemeris": "DE441",
+      "rawFiles": [
+        {
+          "file": "raw/juno-2026-09-01-observer.json",
+          "sha256": "97355f44f7a69a20e169e8086eaa71de36dda3ad8b255fa9bd14a81c13ec205e",
+          "responseSha256": "60c4de1c770b5da5375bead2195b8b5a520048b450b3ac2a6ac1aea44b9c7f9d",
+          "retrievedAt": "2026-09-13T21:08:27.942Z",
+          "apiVersion": "1.2"
+        },
+        {
+          "file": "raw/juno-2026-09-01-elements.json",
+          "sha256": "6158fa3d39ebfc774e4c7c2b117df47e517e8b9d17b596b7e1a10f10403d5df8",
+          "responseSha256": "a1c09b3ee1eb4ebb2f77ba71c566b447bf9a2a8b7d55d2616d25e1a6e8bf13d7",
+          "retrievedAt": "2026-09-13T21:08:28.321Z",
+          "apiVersion": "1.2"
+        },
+        {
+          "file": "raw/juno-2026-09-01-state.json",
+          "sha256": "3bec5cb29a5ba959b9ff80fc42aea6ad967b097583fe10b5a2a55ea2cb6891c8",
+          "responseSha256": "62652508938e386837a925a23fd885aa15df3687b1cd2c645496b61498fc5a05",
+          "retrievedAt": "2026-09-13T21:08:28.757Z",
+          "apiVersion": "1.2"
+        }
+      ]
+    },
+    {
+      "id": "vesta-2026-03-01",
+      "split": "held-out",
+      "object": {
+        "number": 4,
+        "name": "Vesta",
+        "class": "main-belt"
+      },
+      "observer": "F52",
+      "startJdUtc": 2461100.9166666665,
+      "startJdTdb": 2461100.9174674232,
+      "startJdTt": 2461100.9174674074,
+      "epochJdUtc": 2461100.958333333,
+      "epochJdTdb": 2461100.9591340898,
+      "epochJdTt": 2461100.959134074,
+      "observations": [
+        {
+          "jdUtc": 2461100.916666667,
+          "RA": 328.129299564,
+          "Dec": -15.925438571,
+          "altitudeDeg": -83.504583206,
+          "apparentMagnitude": 7.937,
+          "rangeAu": 3.18700741452668,
+          "rangeRateKmPerSecond": -3.8089765,
+          "elongationDeg": 15.8626,
+          "tdbMinusUtcSeconds": 69.185366,
+          "solarPresence": "",
+          "lunarPresence": "m"
+        },
+        {
+          "jdUtc": 2461100.923611111,
+          "RA": 328.132842034,
+          "Dec": -15.924408642,
+          "altitudeDeg": -81.748332527,
+          "apparentMagnitude": 7.937,
+          "rangeAu": 3.186992099062,
+          "rangeRateKmPerSecond": -3.828313,
+          "elongationDeg": 15.8661,
+          "tdbMinusUtcSeconds": 69.185366,
+          "solarPresence": "",
+          "lunarPresence": "m"
+        },
+        {
+          "jdUtc": 2461100.930555556,
+          "RA": 328.136384268,
+          "Dec": -15.923379049,
+          "altitudeDeg": -79.739611171,
+          "apparentMagnitude": 7.937,
+          "rangeAu": 3.18697670622687,
+          "rangeRateKmPerSecond": -3.8475526,
+          "elongationDeg": 15.8695,
+          "tdbMinusUtcSeconds": 69.185367,
+          "solarPresence": "",
+          "lunarPresence": "m"
+        },
+        {
+          "jdUtc": 2461100.9375,
+          "RA": 328.139926205,
+          "Dec": -15.92234979,
+          "altitudeDeg": -77.600795654,
+          "apparentMagnitude": 7.937,
+          "rangeAu": 3.18696123647937,
+          "rangeRateKmPerSecond": -3.8666608,
+          "elongationDeg": 15.873,
+          "tdbMinusUtcSeconds": 69.185367,
+          "solarPresence": "",
+          "lunarPresence": "m"
+        },
+        {
+          "jdUtc": 2461100.944444444,
+          "RA": 328.143467783,
+          "Dec": -15.92132086,
+          "altitudeDeg": -75.389215357,
+          "apparentMagnitude": 7.937,
+          "rangeAu": 3.18694569041529,
+          "rangeRateKmPerSecond": -3.8856034,
+          "elongationDeg": 15.8765,
+          "tdbMinusUtcSeconds": 69.185367,
+          "solarPresence": "",
+          "lunarPresence": "m"
+        },
+        {
+          "jdUtc": 2461100.951388889,
+          "RA": 328.147008943,
+          "Dec": -15.920292257,
+          "altitudeDeg": -73.133804465,
+          "apparentMagnitude": 7.937,
+          "rangeAu": 3.18693006876832,
+          "rangeRateKmPerSecond": -3.9043464,
+          "elongationDeg": 15.88,
+          "tdbMinusUtcSeconds": 69.185367,
+          "solarPresence": "",
+          "lunarPresence": "m"
+        },
+        {
+          "jdUtc": 2461100.958333333,
+          "RA": 328.150549624,
+          "Dec": -15.919263976,
+          "altitudeDeg": -70.850398236,
+          "apparentMagnitude": 7.937,
+          "rangeAu": 3.18691437240447,
+          "rangeRateKmPerSecond": -3.9228561,
+          "elongationDeg": 15.8834,
+          "tdbMinusUtcSeconds": 69.185367,
+          "solarPresence": "",
+          "lunarPresence": "m"
+        }
+      ],
+      "holdout": [
+        {
+          "jdUtc": 2461101.208333333,
+          "RA": 328.277311902,
+          "Dec": -15.882375415,
+          "altitudeDeg": 11.908084175,
+          "apparentMagnitude": 7.939,
+          "rangeAu": 3.1863160415271,
+          "rangeRateKmPerSecond": -4.2187597,
+          "elongationDeg": 16.0075,
+          "tdbMinusUtcSeconds": 69.185373,
+          "solarPresence": "*",
+          "lunarPresence": ""
+        },
+        {
+          "jdUtc": 2461101.958333333,
+          "RA": 328.655310287,
+          "Dec": -15.770450788,
+          "altitudeDeg": -70.363535602,
+          "apparentMagnitude": 7.944,
+          "rangeAu": 3.1846815986682,
+          "rangeRateKmPerSecond": -4.0915162,
+          "elongationDeg": 16.3748,
+          "tdbMinusUtcSeconds": 69.185382,
+          "solarPresence": "",
+          "lunarPresence": "m"
+        },
+        {
+          "jdUtc": 2461103.958333333,
+          "RA": 329.660997954,
+          "Dec": -15.470799619,
+          "altitudeDeg": -69.384728945,
+          "apparentMagnitude": 7.958,
+          "rangeAu": 3.17992993188037,
+          "rangeRateKmPerSecond": -4.4285243,
+          "elongationDeg": 17.3586,
+          "tdbMinusUtcSeconds": 69.185411,
+          "solarPresence": "",
+          "lunarPresence": "m"
+        },
+        {
+          "jdUtc": 2461107.958333333,
+          "RA": 331.657109745,
+          "Dec": -14.863991734,
+          "altitudeDeg": -67.407069338,
+          "apparentMagnitude": 7.983,
+          "rangeAu": 3.16928165610184,
+          "rangeRateKmPerSecond": -5.1036839,
+          "elongationDeg": 19.3305,
+          "tdbMinusUtcSeconds": 69.185464,
+          "solarPresence": "",
+          "lunarPresence": "m"
+        }
+      ],
+      "initialElements": {
+        "e": 0.09018090792384197,
+        "q": 2.14853432983175,
+        "i": 7.1440116360704,
+        "asc_node": 103.7021435583183,
+        "arg_per": 151.509908767434,
+        "perihelionJdTdb": 2460901.704901999,
+        "meanMotionDegPerDay": 0.2715958920955521,
+        "M": 54.10531442304511,
+        "trueAnomalyDeg": 63.03091592032014,
+        "a": 2.361496201326036,
+        "aphelionAu": 2.574458072820321,
+        "periodDays": 1325.498693011696,
+        "gmAu3PerDay2": 0.0002959122082841195
+      },
+      "initialState": {
+        "positionAu": [
+          1.66901612017394,
+          -1.500959267220357,
+          -0.1586734588600247
+        ],
+        "velocityAuPerDay": [
+          0.008388944164015685,
+          0.008107280820455252,
+          -0.001262216646550272
+        ]
+      },
+      "elements": {
+        "e": 0.0901809116553384,
+        "q": 2.148534276435414,
+        "i": 7.144011612195135,
+        "asc_node": 103.7021434261424,
+        "arg_per": 151.5098917923347,
+        "perihelionJdTdb": 2460901.704852092,
+        "meanMotionDegPerDay": 0.271595900549417,
+        "M": 54.11664615769924,
+        "trueAnomalyDeg": 63.0433449914003,
+        "a": 2.361496152322424,
+        "aphelionAu": 2.574458028209435,
+        "periodDays": 1325.49865175339,
+        "gmAu3PerDay2": 0.0002959122082841195
+      },
+      "state": {
+        "positionAu": [
+          1.669365621888579,
+          -1.500621430024278,
+          -0.1587260476428636
+        ],
+        "velocityAuPerDay": [
+          0.008387138090620336,
+          0.008108904516724923,
+          -0.00126204492165435
+        ]
+      },
+      "truthSolution": "JPL#36",
+      "observerCenterEphemeris": "DE441",
+      "rawFiles": [
+        {
+          "file": "raw/vesta-2026-03-01-observer.json",
+          "sha256": "3f256e2fec3f31ef58bccc9776972de18b35c3f14a9439cf14f8d0035fabc00f",
+          "responseSha256": "7879d2402f1d592d1427413b35842faf24ec06c7bc25a6b7e6332c8330c7c648",
+          "retrievedAt": "2026-09-13T21:08:29.232Z",
+          "apiVersion": "1.2"
+        },
+        {
+          "file": "raw/vesta-2026-03-01-elements.json",
+          "sha256": "a9586dbdb40af82af24febcc62cd146159608a12bcff8dec280de7ba2c7633fe",
+          "responseSha256": "98cd42261775b4931fb4e6e2b133f4e3820440495bee01f4563ac8335c72178a",
+          "retrievedAt": "2026-09-13T21:08:29.609Z",
+          "apiVersion": "1.2"
+        },
+        {
+          "file": "raw/vesta-2026-03-01-state.json",
+          "sha256": "8e28aa1f5729f1f36beab47e8f262e5d9d215026c2da472ce6b55e8e3073660c",
+          "responseSha256": "92121228bb84fc1345750ed76c547c7b2fcb456a1f05a9074af4ae24cb348eb5",
+          "retrievedAt": "2026-09-13T21:08:30.034Z",
+          "apiVersion": "1.2"
+        }
+      ]
+    },
+    {
+      "id": "vesta-2026-09-01",
+      "split": "held-out",
+      "object": {
+        "number": 4,
+        "name": "Vesta",
+        "class": "main-belt"
+      },
+      "observer": "F52",
+      "startJdUtc": 2461284.9166666665,
+      "startJdTdb": 2461284.9174673916,
+      "startJdTt": 2461284.9174674074,
+      "epochJdUtc": 2461284.958333333,
+      "epochJdTdb": 2461284.959134058,
+      "epochJdTt": 2461284.959134074,
+      "observations": [
+        {
+          "jdUtc": 2461284.916666667,
+          "RA": 29.067241201,
+          "Dec": 0.669068676,
+          "altitudeDeg": 32.702903584,
+          "apparentMagnitude": 7.025,
+          "rangeAu": 1.65074101995838,
+          "rangeRateKmPerSecond": -14.5407709,
+          "elongationDeg": 130.5136,
+          "tdbMinusUtcSeconds": 69.182641,
+          "solarPresence": "",
+          "lunarPresence": "m"
+        },
+        {
+          "jdUtc": 2461284.923611111,
+          "RA": 29.06703065,
+          "Dec": 0.668552647,
+          "altitudeDeg": 34.981779361,
+          "apparentMagnitude": 7.025,
+          "rangeAu": 1.65068272772106,
+          "rangeRateKmPerSecond": -14.5278107,
+          "elongationDeg": 130.5205,
+          "tdbMinusUtcSeconds": 69.182641,
+          "solarPresence": "",
+          "lunarPresence": "m"
+        },
+        {
+          "jdUtc": 2461284.930555556,
+          "RA": 29.066817641,
+          "Dec": 0.668036486,
+          "altitudeDeg": 37.247615803,
+          "apparentMagnitude": 7.025,
+          "rangeAu": 1.65062448879668,
+          "rangeRateKmPerSecond": -14.5141882,
+          "elongationDeg": 130.5274,
+          "tdbMinusUtcSeconds": 69.182641,
+          "solarPresence": "",
+          "lunarPresence": "m"
+        },
+        {
+          "jdUtc": 2461284.9375,
+          "RA": 29.066602248,
+          "Dec": 0.667520194,
+          "altitudeDeg": 39.498399663,
+          "apparentMagnitude": 7.025,
+          "rangeAu": 1.65056630579764,
+          "rangeRateKmPerSecond": -14.4999261,
+          "elongationDeg": 130.5344,
+          "tdbMinusUtcSeconds": 69.182641,
+          "solarPresence": "",
+          "lunarPresence": "m"
+        },
+        {
+          "jdUtc": 2461284.944444444,
+          "RA": 29.066384546,
+          "Dec": 0.667003768,
+          "altitudeDeg": 41.731777582,
+          "apparentMagnitude": 7.025,
+          "rangeAu": 1.65050818124119,
+          "rangeRateKmPerSecond": -14.4850485,
+          "elongationDeg": 130.5413,
+          "tdbMinusUtcSeconds": 69.182641,
+          "solarPresence": "",
+          "lunarPresence": "m"
+        },
+        {
+          "jdUtc": 2461284.951388889,
+          "RA": 29.066164615,
+          "Dec": 0.666487207,
+          "altitudeDeg": 43.944979343,
+          "apparentMagnitude": 7.025,
+          "rangeAu": 1.65045011754978,
+          "rangeRateKmPerSecond": -14.4695806,
+          "elongationDeg": 130.5482,
+          "tdbMinusUtcSeconds": 69.182641,
+          "solarPresence": "",
+          "lunarPresence": "m"
+        },
+        {
+          "jdUtc": 2461284.958333333,
+          "RA": 29.065942539,
+          "Dec": 0.665970511,
+          "altitudeDeg": 46.134722668,
+          "apparentMagnitude": 7.025,
+          "rangeAu": 1.65039211703086,
+          "rangeRateKmPerSecond": -14.4535487,
+          "elongationDeg": 130.5552,
+          "tdbMinusUtcSeconds": 69.182641,
+          "solarPresence": "",
+          "lunarPresence": "m"
+        }
+      ],
+      "holdout": [
+        {
+          "jdUtc": 2461285.208333333,
+          "RA": 29.057396868,
+          "Dec": 0.647276642,
+          "altitudeDeg": 37.111605738,
+          "apparentMagnitude": 7.02,
+          "rangeAu": 1.6483551996399,
+          "rangeRateKmPerSecond": -13.7767403,
+          "elongationDeg": 130.8039,
+          "tdbMinusUtcSeconds": 69.182639,
+          "solarPresence": "*",
+          "lunarPresence": "m"
+        },
+        {
+          "jdUtc": 2461285.958333333,
+          "RA": 29.036864669,
+          "Dec": 0.590402721,
+          "altitudeDeg": 46.975494856,
+          "apparentMagnitude": 7.007,
+          "rangeAu": 1.64227816011472,
+          "rangeRateKmPerSecond": -14.1965975,
+          "elongationDeg": 131.5372,
+          "tdbMinusUtcSeconds": 69.182626,
+          "solarPresence": "",
+          "lunarPresence": "m"
+        },
+        {
+          "jdUtc": 2461287.958333333,
+          "RA": 28.956954639,
+          "Dec": 0.432892719,
+          "altitudeDeg": 48.65358909,
+          "apparentMagnitude": 6.971,
+          "rangeAu": 1.62649589846617,
+          "rangeRateKmPerSecond": -13.6598578,
+          "elongationDeg": 133.5201,
+          "tdbMinusUtcSeconds": 69.182596,
+          "solarPresence": "",
+          "lunarPresence": "m"
+        },
+        {
+          "jdUtc": 2461291.958333333,
+          "RA": 28.709893665,
+          "Dec": 0.093822765,
+          "altitudeDeg": 51.978360698,
+          "apparentMagnitude": 6.899,
+          "rangeAu": 1.59683910914829,
+          "rangeRateKmPerSecond": -12.4903563,
+          "elongationDeg": 137.5579,
+          "tdbMinusUtcSeconds": 69.182544,
+          "solarPresence": "",
+          "lunarPresence": ""
+        }
+      ],
+      "initialElements": {
+        "e": 0.09022552636068631,
+        "q": 2.148230111654458,
+        "i": 7.143879658030166,
+        "asc_node": 103.7000730600293,
+        "arg_per": 151.4460066975804,
+        "perihelionJdTdb": 2460901.525377678,
+        "meanMotionDegPerDay": 0.271633603566186,
+        "M": 104.1421749075767,
+        "trueAnomalyDeg": 113.8522603693088,
+        "a": 2.361277628576484,
+        "aphelionAu": 2.574325145498511,
+        "periodDays": 1325.314671210341,
+        "gmAu3PerDay2": 0.0002959122082841195
+      },
+      "initialState": {
+        "positionAu": [
+          2.382555049766498,
+          0.3757281517994088,
+          -0.301273250226478
+        ],
+        "velocityAuPerDay": [
+          -0.0007914540154948463,
+          0.01083877030140159,
+          -0.0002253651959217275
+        ]
+      },
+      "elements": {
+        "e": 0.09022553413827783,
+        "q": 2.148230042762747,
+        "i": 7.143879653168659,
+        "asc_node": 103.7000725841825,
+        "arg_per": 151.4459926719302,
+        "perihelionJdTdb": 2460901.525337574,
+        "meanMotionDegPerDay": 0.2716336131494742,
+        "M": 104.15350754263,
+        "trueAnomalyDeg": 113.8629115652108,
+        "a": 2.36127757303892,
+        "aphelionAu": 2.574325103315093,
+        "periodDays": 1325.314624452975,
+        "gmAu3PerDay2": 0.0002959122082841195
+      },
+      "state": {
+        "positionAu": [
+          2.382522029904462,
+          0.3761797605032614,
+          -0.3012826350543784
+        ],
+        "velocityAuPerDay": [
+          -0.0007934993412405256,
+          0.01083844742154853,
+          -0.0002251065440129005
+        ]
+      },
+      "truthSolution": "JPL#36",
+      "observerCenterEphemeris": "DE441",
+      "rawFiles": [
+        {
+          "file": "raw/vesta-2026-09-01-observer.json",
+          "sha256": "e6f2deed7f7b4d3dca7066a7abb0f9dee6ce31332c1267bac11a343a53910f59",
+          "responseSha256": "5cf35ec566e7f86aed52d7e0debbda2bf6ac71e5bb37918e22637aa015234c01",
+          "retrievedAt": "2026-09-13T21:08:30.481Z",
+          "apiVersion": "1.2"
+        },
+        {
+          "file": "raw/vesta-2026-09-01-elements.json",
+          "sha256": "b32b610d9770f0a8e7f420a83e630050a32b0feaf27ec8d844e8dd0b04f263da",
+          "responseSha256": "d232078ec853d31d1a34b4f64c97fa176356946bf6bc2ba5d81989ccfa654d46",
+          "retrievedAt": "2026-09-13T21:08:30.872Z",
+          "apiVersion": "1.2"
+        },
+        {
+          "file": "raw/vesta-2026-09-01-state.json",
+          "sha256": "f3dfbbe061e9051cb5471ca72f624b9806e65d97aa09d1f0d3c51fd4adbc3b67",
+          "responseSha256": "61ef1783796325b026712407891f9c6bdce3363e5e830530595d5b2431e0605a",
+          "retrievedAt": "2026-09-13T21:08:31.250Z",
+          "apiVersion": "1.2"
+        }
+      ]
+    },
+    {
+      "id": "eros-2026-03-01",
+      "split": "development",
+      "object": {
+        "number": 433,
+        "name": "Eros",
+        "class": "near-Earth (Amor)"
+      },
+      "observer": "F52",
+      "startJdUtc": 2461100.9166666665,
+      "startJdTdb": 2461100.9174674232,
+      "startJdTt": 2461100.9174674074,
+      "epochJdUtc": 2461100.958333333,
+      "epochJdTdb": 2461100.9591340898,
+      "epochJdTt": 2461100.959134074,
+      "observations": [
+        {
+          "jdUtc": 2461100.916666667,
+          "RA": 72.497252643,
+          "Dec": 18.334470558,
+          "altitudeDeg": 15.323344998,
+          "apparentMagnitude": 10.834,
+          "rangeAu": 0.50970722782724,
+          "rangeRateKmPerSecond": 4.836337,
+          "elongationDeg": 92.9054,
+          "tdbMinusUtcSeconds": 69.185366,
+          "solarPresence": "",
+          "lunarPresence": "m"
+        },
+        {
+          "jdUtc": 2461100.923611111,
+          "RA": 72.504006472,
+          "Dec": 18.332715571,
+          "altitudeDeg": 13.059783948,
+          "apparentMagnitude": 10.835,
+          "rangeAu": 0.50972663360317,
+          "rangeRateKmPerSecond": 4.8395874,
+          "elongationDeg": 92.9045,
+          "tdbMinusUtcSeconds": 69.185366,
+          "solarPresence": "",
+          "lunarPresence": "m"
+        },
+        {
+          "jdUtc": 2461100.930555556,
+          "RA": 72.510769189,
+          "Dec": 18.330960219,
+          "altitudeDeg": 10.804041389,
+          "apparentMagnitude": 10.835,
+          "rangeAu": 0.50974605085861,
+          "rangeRateKmPerSecond": 4.84206,
+          "elongationDeg": 92.9036,
+          "tdbMinusUtcSeconds": 69.185367,
+          "solarPresence": "",
+          "lunarPresence": "m"
+        },
+        {
+          "jdUtc": 2461100.9375,
+          "RA": 72.517540835,
+          "Dec": 18.329204618,
+          "altitudeDeg": 8.556712932,
+          "apparentMagnitude": 10.835,
+          "rangeAu": 0.50976547646518,
+          "rangeRateKmPerSecond": 4.843751,
+          "elongationDeg": 92.9027,
+          "tdbMinusUtcSeconds": 69.185367,
+          "solarPresence": "",
+          "lunarPresence": "m"
+        },
+        {
+          "jdUtc": 2461100.944444444,
+          "RA": 72.524321435,
+          "Dec": 18.327448886,
+          "altitudeDeg": 6.318444362,
+          "apparentMagnitude": 10.835,
+          "rangeAu": 0.50978490728298,
+          "rangeRateKmPerSecond": 4.8446582,
+          "elongationDeg": 92.9018,
+          "tdbMinusUtcSeconds": 69.185367,
+          "solarPresence": "",
+          "lunarPresence": "m"
+        },
+        {
+          "jdUtc": 2461100.951388889,
+          "RA": 72.531110992,
+          "Dec": 18.325693142,
+          "altitudeDeg": 4.089937454,
+          "apparentMagnitude": 10.835,
+          "rangeAu": 0.509804340165,
+          "rangeRateKmPerSecond": 4.8447809,
+          "elongationDeg": 92.9009,
+          "tdbMinusUtcSeconds": 69.185367,
+          "solarPresence": "",
+          "lunarPresence": "m"
+        },
+        {
+          "jdUtc": 2461100.958333333,
+          "RA": 72.537909498,
+          "Dec": 18.323937501,
+          "altitudeDeg": 1.871955682,
+          "apparentMagnitude": 10.835,
+          "rangeAu": 0.50982377196827,
+          "rangeRateKmPerSecond": 4.8441199,
+          "elongationDeg": 92.9001,
+          "tdbMinusUtcSeconds": 69.185367,
+          "solarPresence": "",
+          "lunarPresence": "m"
+        }
+      ],
+      "holdout": [
+        {
+          "jdUtc": 2461101.208333333,
+          "RA": 72.787248353,
+          "Dec": 18.261647896,
+          "altitudeDeg": -50.668737494,
+          "apparentMagnitude": 10.838,
+          "rangeAu": 0.51049976387644,
+          "rangeRateKmPerSecond": 4.4164385,
+          "elongationDeg": 92.8752,
+          "tdbMinusUtcSeconds": 69.185373,
+          "solarPresence": "*",
+          "lunarPresence": ""
+        },
+        {
+          "jdUtc": 2461101.958333333,
+          "RA": 73.514462804,
+          "Dec": 18.079412952,
+          "altitudeDeg": 1.774177652,
+          "apparentMagnitude": 10.847,
+          "rangeAu": 0.51240700727662,
+          "rangeRateKmPerSecond": 4.9224508,
+          "elongationDeg": 92.7913,
+          "tdbMinusUtcSeconds": 69.185382,
+          "solarPresence": "",
+          "lunarPresence": "m"
+        },
+        {
+          "jdUtc": 2461103.958333333,
+          "RA": 75.464642366,
+          "Dec": 17.587084263,
+          "altitudeDeg": 1.574605664,
+          "apparentMagnitude": 10.87,
+          "rangeAu": 0.51771013602078,
+          "rangeRateKmPerSecond": 5.083078,
+          "elongationDeg": 92.5842,
+          "tdbMinusUtcSeconds": 69.185411,
+          "solarPresence": "",
+          "lunarPresence": "m"
+        },
+        {
+          "jdUtc": 2461107.958333333,
+          "RA": 79.349995555,
+          "Dec": 16.590533592,
+          "altitudeDeg": 1.156877185,
+          "apparentMagnitude": 10.918,
+          "rangeAu": 0.52888301030492,
+          "rangeRateKmPerSecond": 5.4181928,
+          "elongationDeg": 92.2082,
+          "tdbMinusUtcSeconds": 69.185464,
+          "solarPresence": "",
+          "lunarPresence": "m"
+        }
+      ],
+      "initialElements": {
+        "e": 0.2229016739267536,
+        "q": 1.133217755986804,
+        "i": 10.82864792137235,
+        "asc_node": 304.2683632593971,
+        "arg_per": 178.9171269505767,
+        "perihelionJdTdb": 2461088.81427584,
+        "meanMotionDegPerDay": 0.559690554930582,
+        "M": 6.774042013647113,
+        "trueAnomalyDeg": 10.91120462597154,
+        "a": 1.458268172720258,
+        "aphelionAu": 1.783318589453711,
+        "periodDays": 643.2125695682868,
+        "gmAu3PerDay2": 0.0002959122082841195
+      },
+      "initialState": {
+        "positionAu": [
+          -0.7883249459535229,
+          0.8184754464034363,
+          -0.03646154852187908
+        ],
+        "velocityAuPerDay": [
+          -0.01296046274464962,
+          -0.01177433595070801,
+          -0.00331684871023268
+        ]
+      },
+      "elements": {
+        "e": 0.2229016768529271,
+        "q": 1.133217754807526,
+        "i": 10.8286478391314,
+        "asc_node": 304.2683631834146,
+        "arg_per": 178.9171253645235,
+        "perihelionJdTdb": 2461088.814274023,
+        "meanMotionDegPerDay": 0.5596905526429581,
+        "M": 6.797363442678318,
+        "trueAnomalyDeg": 10.94860372372522,
+        "a": 1.458268176693845,
+        "aphelionAu": 1.783318598580164,
+        "periodDays": 643.2125721972902,
+        "gmAu3PerDay2": 0.0002959122082841195
+      },
+      "state": {
+        "positionAu": [
+          -0.7888648274313862,
+          0.8179847060592894,
+          -0.03659974417071625
+        ],
+        "velocityAuPerDay": [
+          -0.01295384751315685,
+          -0.01178119980489644,
+          -0.0033165422442912
+        ]
+      },
+      "truthSolution": "JPL#659",
+      "observerCenterEphemeris": "DE441",
+      "rawFiles": [
+        {
+          "file": "raw/eros-2026-03-01-observer.json",
+          "sha256": "45f519d9f68c57b092a93ad3cd4eb14fd9ca8ec38bc9d6d968fba7629425e9ec",
+          "responseSha256": "b2d8c2161b8efcc21840779330845f2ca12715348baf5c05a77d5947acb77cfe",
+          "retrievedAt": "2026-09-13T21:08:31.716Z",
+          "apiVersion": "1.2"
+        },
+        {
+          "file": "raw/eros-2026-03-01-elements.json",
+          "sha256": "17bb9f4de813b3263cf2fabba1a0337a6e4b12f7f6082adc182855e14ce75d57",
+          "responseSha256": "189b5983b33af4432048104f714bb8e922aaac67d58638ccddcace787da20768",
+          "retrievedAt": "2026-09-13T21:08:32.107Z",
+          "apiVersion": "1.2"
+        },
+        {
+          "file": "raw/eros-2026-03-01-state.json",
+          "sha256": "2e4f740d7465b79e83fe736ba8f412e4f3236c852d663bfb587f175ec7ae51c8",
+          "responseSha256": "07d8b47ab261ff90b7202486151dea4df4ed8695abeab40091728184de9fbab2",
+          "retrievedAt": "2026-09-13T21:08:32.497Z",
+          "apiVersion": "1.2"
+        }
+      ]
+    },
+    {
+      "id": "eros-2026-09-01",
+      "split": "development",
+      "object": {
+        "number": 433,
+        "name": "Eros",
+        "class": "near-Earth (Amor)"
+      },
+      "observer": "F52",
+      "startJdUtc": 2461284.9166666665,
+      "startJdTdb": 2461284.9174673916,
+      "startJdTt": 2461284.9174674074,
+      "epochJdUtc": 2461284.958333333,
+      "epochJdTdb": 2461284.959134058,
+      "epochJdTt": 2461284.959134074,
+      "observations": [
+        {
+          "jdUtc": 2461284.916666667,
+          "RA": 216.185617499,
+          "Dec": -22.150784968,
+          "altitudeDeg": -32.500020109,
+          "apparentMagnitude": 13.714,
+          "rangeAu": 1.81715876041386,
+          "rangeRateKmPerSecond": 17.7996172,
+          "elongationDeg": 62.7038,
+          "tdbMinusUtcSeconds": 69.182641,
+          "solarPresence": "",
+          "lunarPresence": "m"
+        },
+        {
+          "jdUtc": 2461284.923611111,
+          "RA": 216.190272118,
+          "Dec": -22.151660279,
+          "altitudeDeg": -34.775065372,
+          "apparentMagnitude": 13.714,
+          "rangeAu": 1.8172301352547,
+          "rangeRateKmPerSecond": 17.7910307,
+          "elongationDeg": 62.7014,
+          "tdbMinusUtcSeconds": 69.182641,
+          "solarPresence": "",
+          "lunarPresence": "m"
+        },
+        {
+          "jdUtc": 2461284.930555556,
+          "RA": 216.19492897,
+          "Dec": -22.152535968,
+          "altitudeDeg": -37.054895961,
+          "apparentMagnitude": 13.714,
+          "rangeAu": 1.817301474324,
+          "rangeRateKmPerSecond": 17.7817819,
+          "elongationDeg": 62.699,
+          "tdbMinusUtcSeconds": 69.182641,
+          "solarPresence": "",
+          "lunarPresence": "m"
+        },
+        {
+          "jdUtc": 2461284.9375,
+          "RA": 216.199587999,
+          "Dec": -22.153412068,
+          "altitudeDeg": -39.339173545,
+          "apparentMagnitude": 13.714,
+          "rangeAu": 1.81737277499848,
+          "rangeRateKmPerSecond": 17.7718883,
+          "elongationDeg": 62.6966,
+          "tdbMinusUtcSeconds": 69.182641,
+          "solarPresence": "",
+          "lunarPresence": "m"
+        },
+        {
+          "jdUtc": 2461284.944444444,
+          "RA": 216.204249138,
+          "Dec": -22.154288613,
+          "altitudeDeg": -41.627576955,
+          "apparentMagnitude": 13.714,
+          "rangeAu": 1.81744403472914,
+          "rangeRateKmPerSecond": 17.7613687,
+          "elongationDeg": 62.6942,
+          "tdbMinusUtcSeconds": 69.182641,
+          "solarPresence": "",
+          "lunarPresence": "m"
+        },
+        {
+          "jdUtc": 2461284.951388889,
+          "RA": 216.208912322,
+          "Dec": -22.155165634,
+          "altitudeDeg": -43.919799775,
+          "apparentMagnitude": 13.714,
+          "rangeAu": 1.8175152510399,
+          "rangeRateKmPerSecond": 17.7502431,
+          "elongationDeg": 62.6918,
+          "tdbMinusUtcSeconds": 69.182641,
+          "solarPresence": "",
+          "lunarPresence": "m"
+        },
+        {
+          "jdUtc": 2461284.958333333,
+          "RA": 216.213577478,
+          "Dec": -22.156043161,
+          "altitudeDeg": -46.215548728,
+          "apparentMagnitude": 13.714,
+          "rangeAu": 1.81758642155133,
+          "rangeRateKmPerSecond": 17.7385324,
+          "elongationDeg": 62.6893,
+          "tdbMinusUtcSeconds": 69.182641,
+          "solarPresence": "",
+          "lunarPresence": "m"
+        }
+      ],
+      "holdout": [
+        {
+          "jdUtc": 2461285.208333333,
+          "RA": 216.382024921,
+          "Dec": -22.18811451,
+          "altitudeDeg": -50.226309872,
+          "apparentMagnitude": 13.717,
+          "rangeAu": 1.82010690671853,
+          "rangeRateKmPerSecond": 17.1675107,
+          "elongationDeg": 62.6047,
+          "tdbMinusUtcSeconds": 69.182639,
+          "solarPresence": "*",
+          "lunarPresence": "m"
+        },
+        {
+          "jdUtc": 2461285.958333333,
+          "RA": 216.87969415,
+          "Dec": -22.283760958,
+          "altitudeDeg": -46.523678673,
+          "apparentMagnitude": 13.726,
+          "rangeAu": 1.82765845123597,
+          "rangeRateKmPerSecond": 17.7269265,
+          "elongationDeg": 62.3501,
+          "tdbMinusUtcSeconds": 69.182626,
+          "solarPresence": "",
+          "lunarPresence": "m"
+        },
+        {
+          "jdUtc": 2461287.958333333,
+          "RA": 218.211971326,
+          "Dec": -22.533911676,
+          "altitudeDeg": -47.137464512,
+          "apparentMagnitude": 13.748,
+          "rangeAu": 1.84778316848955,
+          "rangeRateKmPerSecond": 17.6987574,
+          "elongationDeg": 61.667,
+          "tdbMinusUtcSeconds": 69.182596,
+          "solarPresence": "",
+          "lunarPresence": "m"
+        },
+        {
+          "jdUtc": 2461291.958333333,
+          "RA": 220.877224402,
+          "Dec": -23.012747868,
+          "altitudeDeg": -48.35492507,
+          "apparentMagnitude": 13.79,
+          "rangeAu": 1.88792502475728,
+          "rangeRateKmPerSecond": 17.6183898,
+          "elongationDeg": 60.283,
+          "tdbMinusUtcSeconds": 69.182544,
+          "solarPresence": "",
+          "lunarPresence": ""
+        }
+      ],
+      "initialElements": {
+        "e": 0.2228521457136922,
+        "q": 1.133283562435249,
+        "i": 10.82854177486253,
+        "asc_node": 304.2680596189449,
+        "arg_per": 178.9217841718948,
+        "perihelionJdTdb": 2461088.812724631,
+        "meanMotionDegPerDay": 0.5596953101054702,
+        "M": 109.758904812258,
+        "trueAnomalyDeg": 131.2135811279587,
+        "a": 1.458259913071494,
+        "aphelionAu": 1.783236263707738,
+        "periodDays": 643.2071048302348,
+        "gmAu3PerDay2": 0.0002959122082841195
+      },
+      "initialState": {
+        "positionAu": [
+          -0.4184496625632037,
+          -1.552079031747134,
+          -0.2333064861676639
+        ],
+        "velocityAuPerDay": [
+          0.01125859204366769,
+          -0.005773168472898546,
+          0.001157905351787565
+        ]
+      },
+      "elements": {
+        "e": 0.222852137078016,
+        "q": 1.133283585821488,
+        "i": 10.8285417743434,
+        "asc_node": 304.2680596222212,
+        "arg_per": 178.9217861818958,
+        "perihelionJdTdb": 2461088.812724757,
+        "meanMotionDegPerDay": 0.5596953021098223,
+        "M": 109.78222381121,
+        "trueAnomalyDeg": 131.2319008999193,
+        "a": 1.458259926959685,
+        "aphelionAu": 1.783236268097882,
+        "periodDays": 643.2071140189087,
+        "gmAu3PerDay2": 0.0002959122082841195
+      },
+      "state": {
+        "positionAu": [
+          -0.4179805294907482,
+          -1.552319487410696,
+          -0.2332582261296774
+        ],
+        "velocityAuPerDay": [
+          0.01125979517179931,
+          -0.005768703403252941,
+          0.001158576427381804
+        ]
+      },
+      "truthSolution": "JPL#659",
+      "observerCenterEphemeris": "DE441",
+      "rawFiles": [
+        {
+          "file": "raw/eros-2026-09-01-observer.json",
+          "sha256": "385ba20539f3297cd24e441f489552198cedb2ff72da993ed9f59d934af83d5c",
+          "responseSha256": "c81eb9fb2d0bee7596c265bf7571330a934aee8045e3addbcfc12bc313d74af7",
+          "retrievedAt": "2026-09-13T21:08:33.078Z",
+          "apiVersion": "1.2"
+        },
+        {
+          "file": "raw/eros-2026-09-01-elements.json",
+          "sha256": "135c620011e9efbf28e0bf2cea45d909c99cb4c22c9e632143ada48e878cd431",
+          "responseSha256": "deefe157c9679e90c7ce67b2a5b7a9ce947a72fd4cc5c849cb7ed544c15e9db3",
+          "retrievedAt": "2026-09-13T21:08:33.522Z",
+          "apiVersion": "1.2"
+        },
+        {
+          "file": "raw/eros-2026-09-01-state.json",
+          "sha256": "5be1dee32e2014390bcf82018b08d15b49a6c283a1f5bbce36b85e1a246b9d68",
+          "responseSha256": "24dd0c12433fdd26a7a5f411b74cddeab56bf2b6623a823d348034a832382b15",
+          "retrievedAt": "2026-09-13T21:08:33.903Z",
+          "apiVersion": "1.2"
+        }
+      ]
+    },
+    {
+      "id": "apophis-2026-03-01",
+      "split": "development",
+      "object": {
+        "number": 99942,
+        "name": "Apophis",
+        "class": "near-Earth (Aten)"
+      },
+      "observer": "F52",
+      "startJdUtc": 2461100.9166666665,
+      "startJdTdb": 2461100.9174674232,
+      "startJdTt": 2461100.9174674074,
+      "epochJdUtc": 2461100.958333333,
+      "epochJdTdb": 2461100.9591340898,
+      "epochJdTt": 2461100.959134074,
+      "observations": [
+        {
+          "jdUtc": 2461100.916666667,
+          "RA": 14.939216936,
+          "Dec": 5.213858677,
+          "altitudeDeg": -40.979577192,
+          "apparentMagnitude": 21.088,
+          "rangeAu": 1.47258538312416,
+          "rangeRateKmPerSecond": 1.6592625,
+          "elongationDeg": 35.3213,
+          "tdbMinusUtcSeconds": 69.185366,
+          "solarPresence": "",
+          "lunarPresence": "m"
+        },
+        {
+          "jdUtc": 2461100.923611111,
+          "RA": 14.946951837,
+          "Dec": 5.216746933,
+          "altitudeDeg": -43.035112945,
+          "apparentMagnitude": 21.088,
+          "rangeAu": 1.47259201212061,
+          "rangeRateKmPerSecond": 1.6460801,
+          "elongationDeg": 35.3224,
+          "tdbMinusUtcSeconds": 69.185366,
+          "solarPresence": "",
+          "lunarPresence": "m"
+        },
+        {
+          "jdUtc": 2461100.930555556,
+          "RA": 14.954688513,
+          "Dec": 5.219635229,
+          "altitudeDeg": -45.051468016,
+          "apparentMagnitude": 21.089,
+          "rangeAu": 1.4725985871785,
+          "rangeRateKmPerSecond": 1.6323715,
+          "elongationDeg": 35.3236,
+          "tdbMinusUtcSeconds": 69.185367,
+          "solarPresence": "",
+          "lunarPresence": "m"
+        },
+        {
+          "jdUtc": 2461100.9375,
+          "RA": 14.962426863,
+          "Dec": 5.222523573,
+          "altitudeDeg": -47.023014309,
+          "apparentMagnitude": 21.089,
+          "rangeAu": 1.47260510624292,
+          "rangeRateKmPerSecond": 1.6181647,
+          "elongationDeg": 35.3248,
+          "tdbMinusUtcSeconds": 69.185367,
+          "solarPresence": "",
+          "lunarPresence": "m"
+        },
+        {
+          "jdUtc": 2461100.944444444,
+          "RA": 14.970166782,
+          "Dec": 5.225411974,
+          "altitudeDeg": -48.943188322,
+          "apparentMagnitude": 21.089,
+          "rangeAu": 1.47261156737353,
+          "rangeRateKmPerSecond": 1.6034888,
+          "elongationDeg": 35.3259,
+          "tdbMinusUtcSeconds": 69.185367,
+          "solarPresence": "",
+          "lunarPresence": "m"
+        },
+        {
+          "jdUtc": 2461100.951388889,
+          "RA": 14.977908162,
+          "Dec": 5.228300437,
+          "altitudeDeg": -50.804336367,
+          "apparentMagnitude": 21.089,
+          "rangeAu": 1.47261796874766,
+          "rangeRateKmPerSecond": 1.5883735,
+          "elongationDeg": 35.3271,
+          "tdbMinusUtcSeconds": 69.185367,
+          "solarPresence": "",
+          "lunarPresence": "m"
+        },
+        {
+          "jdUtc": 2461100.958333333,
+          "RA": 14.985650894,
+          "Dec": 5.23118897,
+          "altitudeDeg": -52.597548697,
+          "apparentMagnitude": 21.089,
+          "rangeAu": 1.4726243086655,
+          "rangeRateKmPerSecond": 1.5728496,
+          "elongationDeg": 35.3283,
+          "tdbMinusUtcSeconds": 69.185367,
+          "solarPresence": "",
+          "lunarPresence": "m"
+        }
+      ],
+      "holdout": [
+        {
+          "jdUtc": 2461101.208333333,
+          "RA": 15.264257002,
+          "Dec": 5.335236501,
+          "altitudeDeg": -23.19937723,
+          "apparentMagnitude": 21.091,
+          "rangeAu": 1.47280841556809,
+          "rangeRateKmPerSecond": 1.0278851,
+          "elongationDeg": 35.372,
+          "tdbMinusUtcSeconds": 69.185373,
+          "solarPresence": "*",
+          "lunarPresence": ""
+        },
+        {
+          "jdUtc": 2461101.958333333,
+          "RA": 16.090712784,
+          "Dec": 5.645789312,
+          "altitudeDeg": -52.219793877,
+          "apparentMagnitude": 21.099,
+          "rangeAu": 1.47346102413243,
+          "rangeRateKmPerSecond": 1.7216606,
+          "elongationDeg": 35.5013,
+          "tdbMinusUtcSeconds": 69.185382,
+          "solarPresence": "",
+          "lunarPresence": "m"
+        },
+        {
+          "jdUtc": 2461103.958333333,
+          "RA": 18.293388329,
+          "Dec": 6.46397992,
+          "altitudeDeg": -51.474857327,
+          "apparentMagnitude": 21.12,
+          "rangeAu": 1.47538882447236,
+          "rangeRateKmPerSecond": 2.0142336,
+          "elongationDeg": 35.8359,
+          "tdbMinusUtcSeconds": 69.185411,
+          "solarPresence": "",
+          "lunarPresence": "m"
+        },
+        {
+          "jdUtc": 2461107.958333333,
+          "RA": 22.670894773,
+          "Dec": 8.052755906,
+          "altitudeDeg": -50.029588646,
+          "apparentMagnitude": 21.162,
+          "rangeAu": 1.48023116161128,
+          "rangeRateKmPerSecond": 2.5744594,
+          "elongationDeg": 36.4588,
+          "tdbMinusUtcSeconds": 69.185464,
+          "solarPresence": "",
+          "lunarPresence": "m"
+        }
+      ],
+      "initialElements": {
+        "e": 0.1911453215315282,
+        "q": 0.7460567700897738,
+        "i": 3.340974258577521,
+        "asc_node": 203.898923730409,
+        "arg_per": 126.6739660806709,
+        "perihelionJdTdb": 2461042.918267979,
+        "meanMotionDegPerDay": 1.112633195581908,
+        "M": 64.53183461917179,
+        "trueAnomalyDeg": 86.03729781455728,
+        "a": 0.9223619396037828,
+        "aphelionAu": 1.098667109117792,
+        "periodDays": 323.5567673421065,
+        "gmAu3PerDay2": 0.0002959122082841195
+      },
+      "initialState": {
+        "positionAu": [
+          0.4830097638634013,
+          0.7315746038808275,
+          -0.02762241766395825
+        ],
+        "velocityAuPerDay": [
+          -0.01351029690324906,
+          0.01305330432517799,
+          -0.001016199920795413
+        ]
+      },
+      "elements": {
+        "e": 0.1911453156049724,
+        "q": 0.7460567766097037,
+        "i": 3.340974254904023,
+        "asc_node": 203.8989236898852,
+        "arg_per": 126.673967389078,
+        "perihelionJdTdb": 2461042.91826832,
+        "meanMotionDegPerDay": 1.112633193225198,
+        "M": 64.5781938195431,
+        "trueAnomalyDeg": 86.0876135314927,
+        "a": 0.9223619409062424,
+        "aphelionAu": 1.098667105202781,
+        "periodDays": 323.5567680274442,
+        "gmAu3PerDay2": 0.0002959122082841195
+      },
+      "state": {
+        "positionAu": [
+          0.4824466510372725,
+          0.7321182130160786,
+          -0.02766474880739182
+        ],
+        "velocityAuPerDay": [
+          -0.01351911630732207,
+          0.01303993361664766,
+          -0.001015694876855903
+        ]
+      },
+      "truthSolution": "JPL#220",
+      "observerCenterEphemeris": "DE441",
+      "rawFiles": [
+        {
+          "file": "raw/apophis-2026-03-01-observer.json",
+          "sha256": "7e28cdf6309aaf845138d86641318af65bf6316fcc36e348dc21afbc25848e80",
+          "responseSha256": "83f7c97a932cb2e59064e72bffee4d0d28fc5c930785d95e324fd5cc7e44b3b0",
+          "retrievedAt": "2026-09-13T21:08:34.362Z",
+          "apiVersion": "1.2"
+        },
+        {
+          "file": "raw/apophis-2026-03-01-elements.json",
+          "sha256": "f30f29cd2bf834bf75feb9f1aaad9cabc7a12b010097c24905fd2e0f6b2c31a7",
+          "responseSha256": "0694bf0a235941e426d765a27d4c9a3a76f7b7270c518ed40d85703eef1b8ad5",
+          "retrievedAt": "2026-09-13T21:08:34.804Z",
+          "apiVersion": "1.2"
+        },
+        {
+          "file": "raw/apophis-2026-03-01-state.json",
+          "sha256": "8d797f02e9dc4125656ec37e30e60fae20bfde09de520518d8abfa9a39eaa33b",
+          "responseSha256": "edec2c680fe10d6ef0c2db234c033149d6e7bfddedbdc6593d2f202b9e0c7e54",
+          "retrievedAt": "2026-09-13T21:08:35.158Z",
+          "apiVersion": "1.2"
+        }
+      ]
+    },
+    {
+      "id": "apophis-2026-09-01",
+      "split": "development",
+      "object": {
+        "number": 99942,
+        "name": "Apophis",
+        "class": "near-Earth (Aten)"
+      },
+      "observer": "F52",
+      "startJdUtc": 2461284.9166666665,
+      "startJdTdb": 2461284.9174673916,
+      "startJdTt": 2461284.9174674074,
+      "epochJdUtc": 2461284.958333333,
+      "epochJdTdb": 2461284.959134058,
+      "epochJdTt": 2461284.959134074,
+      "observations": [
+        {
+          "jdUtc": 2461284.916666667,
+          "RA": 187.235280619,
+          "Dec": -2.612389799,
+          "altitudeDeg": -52.979182977,
+          "apparentMagnitude": 21.337,
+          "rangeAu": 1.70476930659164,
+          "rangeRateKmPerSecond": -5.5883394,
+          "elongationDeg": 29.0528,
+          "tdbMinusUtcSeconds": 69.182641,
+          "solarPresence": "",
+          "lunarPresence": "m"
+        },
+        {
+          "jdUtc": 2461284.923611111,
+          "RA": 187.241400393,
+          "Dec": -2.614754544,
+          "altitudeDeg": -55.088248843,
+          "apparentMagnitude": 21.337,
+          "rangeAu": 1.70474685783188,
+          "rangeRateKmPerSecond": -5.6052828,
+          "elongationDeg": 29.0526,
+          "tdbMinusUtcSeconds": 69.182641,
+          "solarPresence": "",
+          "lunarPresence": "m"
+        },
+        {
+          "jdUtc": 2461284.930555556,
+          "RA": 187.24752163,
+          "Dec": -2.617119415,
+          "altitudeDeg": -57.153077203,
+          "apparentMagnitude": 21.337,
+          "rangeAu": 1.70472434025393,
+          "rangeRateKmPerSecond": -5.6226486,
+          "elongationDeg": 29.0523,
+          "tdbMinusUtcSeconds": 69.182641,
+          "solarPresence": "",
+          "lunarPresence": "m"
+        },
+        {
+          "jdUtc": 2461284.9375,
+          "RA": 187.253644233,
+          "Dec": -2.619484413,
+          "altitudeDeg": -59.164569361,
+          "apparentMagnitude": 21.337,
+          "rangeAu": 1.70470175222665,
+          "rangeRateKmPerSecond": -5.6404054,
+          "elongationDeg": 29.0521,
+          "tdbMinusUtcSeconds": 69.182641,
+          "solarPresence": "",
+          "lunarPresence": "m"
+        },
+        {
+          "jdUtc": 2461284.944444444,
+          "RA": 187.259768104,
+          "Dec": -2.621849543,
+          "altitudeDeg": -61.111380606,
+          "apparentMagnitude": 21.337,
+          "rangeAu": 1.70467909224585,
+          "rangeRateKmPerSecond": -5.658521,
+          "elongationDeg": 29.0518,
+          "tdbMinusUtcSeconds": 69.182641,
+          "solarPresence": "",
+          "lunarPresence": "m"
+        },
+        {
+          "jdUtc": 2461284.951388889,
+          "RA": 187.26589314,
+          "Dec": -2.624214805,
+          "altitudeDeg": -62.979335247,
+          "apparentMagnitude": 21.337,
+          "rangeAu": 1.70465635893917,
+          "rangeRateKmPerSecond": -5.6769628,
+          "elongationDeg": 29.0516,
+          "tdbMinusUtcSeconds": 69.182641,
+          "solarPresence": "",
+          "lunarPresence": "m"
+        },
+        {
+          "jdUtc": 2461284.958333333,
+          "RA": 187.272019238,
+          "Dec": -2.626580203,
+          "altitudeDeg": -64.750745461,
+          "apparentMagnitude": 21.337,
+          "rangeAu": 1.70463355106258,
+          "rangeRateKmPerSecond": -5.6956972,
+          "elongationDeg": 29.0513,
+          "tdbMinusUtcSeconds": 69.182641,
+          "solarPresence": "",
+          "lunarPresence": "m"
+        }
+      ],
+      "holdout": [
+        {
+          "jdUtc": 2461285.208333333,
+          "RA": 187.492369966,
+          "Dec": -2.711825175,
+          "altitudeDeg": -18.038602478,
+          "apparentMagnitude": 21.334,
+          "rangeAu": 1.70376379884976,
+          "rangeRateKmPerSecond": -6.2754473,
+          "elongationDeg": 29.0438,
+          "tdbMinusUtcSeconds": 69.182639,
+          "solarPresence": "*",
+          "lunarPresence": "m"
+        },
+        {
+          "jdUtc": 2461285.958333333,
+          "RA": 188.14785339,
+          "Dec": -2.967542251,
+          "altitudeDeg": -65.073153271,
+          "apparentMagnitude": 21.327,
+          "rangeAu": 1.70122858944611,
+          "rangeRateKmPerSecond": -5.8238566,
+          "elongationDeg": 29.0226,
+          "tdbMinusUtcSeconds": 69.182626,
+          "solarPresence": "",
+          "lunarPresence": "m"
+        },
+        {
+          "jdUtc": 2461287.958333333,
+          "RA": 189.909594747,
+          "Dec": -3.65052584,
+          "altitudeDeg": -65.70866335,
+          "apparentMagnitude": 21.307,
+          "rangeAu": 1.69419774670819,
+          "rangeRateKmPerSecond": -6.0807726,
+          "elongationDeg": 28.9726,
+          "tdbMinusUtcSeconds": 69.182596,
+          "solarPresence": "",
+          "lunarPresence": "m"
+        },
+        {
+          "jdUtc": 2461291.958333333,
+          "RA": 193.476680089,
+          "Dec": -5.01875209,
+          "altitudeDeg": -66.93598767,
+          "apparentMagnitude": 21.267,
+          "rangeAu": 1.67924714426233,
+          "rangeRateKmPerSecond": -6.5987592,
+          "elongationDeg": 28.9038,
+          "tdbMinusUtcSeconds": 69.182544,
+          "solarPresence": "",
+          "lunarPresence": ""
+        }
+      ],
+      "initialElements": {
+        "e": 0.1911810913257096,
+        "q": 0.7460010824955575,
+        "i": 3.341087337601079,
+        "asc_node": 203.8926120754724,
+        "arg_per": 126.683871316957,
+        "perihelionJdTdb": 2461366.47137684,
+        "meanMotionDegPerDay": 1.112683968876226,
+        "M": 269.2562723574476,
+        "trueAnomalyDeg": 247.9212201919174,
+        "a": 0.9223338802975122,
+        "aphelionAu": 1.098666678099467,
+        "periodDays": 323.5420030034117,
+        "gmAu3PerDay2": 0.0002959122082841195
+      },
+      "initialState": {
+        "positionAu": [
+          -0.7494780631787661,
+          -0.5956053543949058,
+          0.01406991978503872
+        ],
+        "velocityAuPerDay": [
+          0.01306242971601375,
+          -0.01121880396450264,
+          0.0009076800900811225
+        ]
+      },
+      "elements": {
+        "e": 0.191181097405468,
+        "q": 0.7460010746819791,
+        "i": 3.341087348509188,
+        "asc_node": 203.8926121243173,
+        "arg_per": 126.6838721416737,
+        "perihelionJdTdb": 2461366.471376703,
+        "meanMotionDegPerDay": 1.112683973811729,
+        "M": 269.3026339400448,
+        "trueAnomalyDeg": 247.9634573608933,
+        "a": 0.9223338775700645,
+        "aphelionAu": 1.09866668045815,
+        "periodDays": 323.5420015682851,
+        "gmAu3PerDay2": 0.0002959122082841195
+      },
+      "state": {
+        "positionAu": [
+          -0.748933575935935,
+          -0.5960726301645716,
+          0.01410773566648622
+        ],
+        "velocityAuPerDay": [
+          0.01307295740554836,
+          -0.01121043129608717,
+          0.0009074821169119218
+        ]
+      },
+      "truthSolution": "JPL#220",
+      "observerCenterEphemeris": "DE441",
+      "rawFiles": [
+        {
+          "file": "raw/apophis-2026-09-01-observer.json",
+          "sha256": "996cb1323fdff046c203f4e0e0ba5f12e0aed03ceb9f26f252eca77f690725bb",
+          "responseSha256": "eb08d61b0c55069cd3fe8b3cf0a04974a2d63334b82740c209abc996cae1fbcb",
+          "retrievedAt": "2026-09-13T21:08:35.607Z",
+          "apiVersion": "1.2"
+        },
+        {
+          "file": "raw/apophis-2026-09-01-elements.json",
+          "sha256": "3dd9f201792d4904da28f8e9d8f704a6302f1475c674d5442421167e95639b67",
+          "responseSha256": "a00abc68700c7dbfa9611294ce33928fce091bee0b43d682e9c47ba2cf3a5a97",
+          "retrievedAt": "2026-09-13T21:08:36.062Z",
+          "apiVersion": "1.2"
+        },
+        {
+          "file": "raw/apophis-2026-09-01-state.json",
+          "sha256": "455f2bb42b1c3870b36cda7284c0b801aafb5a648759e50eea3ff4c6a1c65c8a",
+          "responseSha256": "eddb97fd489b64609c0e48620868982cd6e22e63837e743a562212d9292b0027",
+          "retrievedAt": "2026-09-13T21:08:36.489Z",
+          "apiVersion": "1.2"
+        }
+      ]
+    },
+    {
+      "id": "bennu-2026-03-01",
+      "split": "held-out",
+      "object": {
+        "number": 101955,
+        "name": "Bennu",
+        "class": "near-Earth (Apollo)"
+      },
+      "observer": "F52",
+      "startJdUtc": 2461100.9166666665,
+      "startJdTdb": 2461100.9174674232,
+      "startJdTt": 2461100.9174674074,
+      "epochJdUtc": 2461100.958333333,
+      "epochJdTdb": 2461100.9591340898,
+      "epochJdTt": 2461100.959134074,
+      "observations": [
+        {
+          "jdUtc": 2461100.916666667,
+          "RA": 12.55282163,
+          "Dec": 8.41112716,
+          "altitudeDeg": -41.059428529,
+          "apparentMagnitude": 22.841,
+          "rangeAu": 1.52338557342808,
+          "rangeRateKmPerSecond": -4.9402943,
+          "elongationDeg": 34.4564,
+          "tdbMinusUtcSeconds": 69.185366,
+          "solarPresence": "",
+          "lunarPresence": "m"
+        },
+        {
+          "jdUtc": 2461100.923611111,
+          "RA": 12.559803339,
+          "Dec": 8.414402382,
+          "altitudeDeg": -43.002470567,
+          "apparentMagnitude": 22.841,
+          "rangeAu": 1.52336572903129,
+          "rangeRateKmPerSecond": -4.9546472,
+          "elongationDeg": 34.457,
+          "tdbMinusUtcSeconds": 69.185366,
+          "solarPresence": "",
+          "lunarPresence": "m"
+        },
+        {
+          "jdUtc": 2461100.930555556,
+          "RA": 12.566787021,
+          "Dec": 8.41767786,
+          "altitudeDeg": -44.895796338,
+          "apparentMagnitude": 22.841,
+          "rangeAu": 1.52334582605918,
+          "rangeRateKmPerSecond": -4.9694963,
+          "elongationDeg": 34.4576,
+          "tdbMinusUtcSeconds": 69.185367,
+          "solarPresence": "",
+          "lunarPresence": "m"
+        },
+        {
+          "jdUtc": 2461100.9375,
+          "RA": 12.573772573,
+          "Dec": 8.420953605,
+          "altitudeDeg": -46.732804537,
+          "apparentMagnitude": 22.841,
+          "rangeAu": 1.52332586257965,
+          "rangeRateKmPerSecond": -4.9848127,
+          "elongationDeg": 34.4582,
+          "tdbMinusUtcSeconds": 69.185367,
+          "solarPresence": "",
+          "lunarPresence": "m"
+        },
+        {
+          "jdUtc": 2461100.944444444,
+          "RA": 12.580759891,
+          "Dec": 8.424229628,
+          "altitudeDeg": -48.505944252,
+          "apparentMagnitude": 22.841,
+          "rangeAu": 1.52330583677751,
+          "rangeRateKmPerSecond": -5.0005667,
+          "elongationDeg": 34.4588,
+          "tdbMinusUtcSeconds": 69.185367,
+          "solarPresence": "",
+          "lunarPresence": "m"
+        },
+        {
+          "jdUtc": 2461100.951388889,
+          "RA": 12.587748866,
+          "Dec": 8.427505938,
+          "altitudeDeg": -50.206610151,
+          "apparentMagnitude": 22.841,
+          "rangeAu": 1.52328574695969,
+          "rangeRateKmPerSecond": -5.0167278,
+          "elongationDeg": 34.4594,
+          "tdbMinusUtcSeconds": 69.185367,
+          "solarPresence": "",
+          "lunarPresence": "m"
+        },
+        {
+          "jdUtc": 2461100.958333333,
+          "RA": 12.59473939,
+          "Dec": 8.430782545,
+          "altitudeDeg": -51.825052572,
+          "apparentMagnitude": 22.841,
+          "rangeAu": 1.52326559155306,
+          "rangeRateKmPerSecond": -5.0332648,
+          "elongationDeg": 34.4601,
+          "tdbMinusUtcSeconds": 69.185367,
+          "solarPresence": "",
+          "lunarPresence": "m"
+        }
+      ],
+      "holdout": [
+        {
+          "jdUtc": 2461101.208333333,
+          "RA": 12.846419615,
+          "Dec": 8.548952832,
+          "altitudeDeg": -19.648994446,
+          "apparentMagnitude": 22.841,
+          "rangeAu": 1.52249424516277,
+          "rangeRateKmPerSecond": -5.5933016,
+          "elongationDeg": 34.4839,
+          "tdbMinusUtcSeconds": 69.185373,
+          "solarPresence": "*",
+          "lunarPresence": ""
+        },
+        {
+          "jdUtc": 2461101.958333333,
+          "RA": 13.595073184,
+          "Dec": 8.902378018,
+          "altitudeDeg": -51.451589213,
+          "apparentMagnitude": 22.841,
+          "rangeAu": 1.52026580223381,
+          "rangeRateKmPerSecond": -4.9916235,
+          "elongationDeg": 34.556,
+          "tdbMinusUtcSeconds": 69.185382,
+          "solarPresence": "",
+          "lunarPresence": "m"
+        },
+        {
+          "jdUtc": 2461103.958333333,
+          "RA": 15.609501663,
+          "Dec": 9.839918202,
+          "altitudeDeg": -50.695411908,
+          "apparentMagnitude": 22.84,
+          "rangeAu": 1.51434329069224,
+          "rangeRateKmPerSecond": -4.8985988,
+          "elongationDeg": 34.7559,
+          "tdbMinusUtcSeconds": 69.185411,
+          "solarPresence": "",
+          "lunarPresence": "m"
+        },
+        {
+          "jdUtc": 2461107.958333333,
+          "RA": 19.696260757,
+          "Dec": 11.686927165,
+          "altitudeDeg": -49.152663856,
+          "apparentMagnitude": 22.841,
+          "rangeAu": 1.50285649435138,
+          "rangeRateKmPerSecond": -4.676241,
+          "elongationDeg": 35.1859,
+          "tdbMinusUtcSeconds": 69.185464,
+          "solarPresence": "",
+          "lunarPresence": "m"
+        }
+      ],
+      "initialElements": {
+        "e": 0.2036977374298995,
+        "q": 0.8966234992962242,
+        "i": 6.032862545926309,
+        "asc_node": 1.968671863152541,
+        "arg_per": 66.41429692233817,
+        "perihelionJdTdb": 2461112.679032922,
+        "meanMotionDegPerDay": 0.8249085842528734,
+        "M": 350.2977836560737,
+        "trueAnomalyDeg": 345.0771710448064,
+        "a": 1.125983864974001,
+        "aphelionAu": 1.355344230651779,
+        "periodDays": 436.4119938526946,
+        "gmAu3PerDay2": 0.0002959122082841195
+      },
+      "initialState": {
+        "positionAu": [
+          0.5370319342104652,
+          0.7206151484384241,
+          0.07416292605928551
+        ],
+        "velocityAuPerDay": [
+          -0.0164371649705455,
+          0.01103660198364124,
+          0.001225381949953493
+        ]
+      },
+      "elements": {
+        "e": 0.2036977419781958,
+        "q": 0.8966234978037386,
+        "i": 6.032862523034224,
+        "asc_node": 1.968671589148011,
+        "arg_per": 66.41429923567307,
+        "perihelionJdTdb": 2461112.679034492,
+        "meanMotionDegPerDay": 0.8249085792450066,
+        "M": 350.3321536105946,
+        "trueAnomalyDeg": 345.1296355157328,
+        "a": 1.125983869531094,
+        "aphelionAu": 1.355344241258449,
+        "periodDays": 436.4119965020708,
+        "gmAu3PerDay2": 0.0002959122082841195
+      },
+      "state": {
+        "positionAu": [
+          0.5363468642923984,
+          0.7210747543673235,
+          0.0742139576548385
+        ],
+        "velocityAuPerDay": [
+          -0.01644618935755381,
+          0.01102448107271481,
+          0.001224134468582145
+        ]
+      },
+      "truthSolution": "ORX_merged_DE424",
+      "observerCenterEphemeris": "ORX_merged_DE424",
+      "rawFiles": [
+        {
+          "file": "raw/bennu-2026-03-01-observer.json",
+          "sha256": "8fde2dcd3b60570840d80cc5feb635fb6bb227f323d9b6fffc82781cb62ec9c0",
+          "responseSha256": "9a6ed6f82ece37e69a1beaf4c5cb4d9ff01178dd0d3547843da28111425cb93e",
+          "retrievedAt": "2026-09-13T21:08:37.985Z",
+          "apiVersion": "1.2"
+        },
+        {
+          "file": "raw/bennu-2026-03-01-elements.json",
+          "sha256": "dfeacb5a6687ea3294dbe4b9f78617864128d93ad5d90fe5dff4d9b136b1bd55",
+          "responseSha256": "e4e5f51098d41ce5311c2cc166092847cce65b8d40dd06cb731af08516a79ae3",
+          "retrievedAt": "2026-09-13T21:08:39.447Z",
+          "apiVersion": "1.2"
+        },
+        {
+          "file": "raw/bennu-2026-03-01-state.json",
+          "sha256": "458844755e2f25b44e29f42ec9b9da643d5c36007046e1c8fe6e16971e026099",
+          "responseSha256": "4c11c0ef9ad363d23f138b7064c241b8a7a2f1b5c5ffbad5dbc888071d5f4417",
+          "retrievedAt": "2026-09-13T21:08:40.936Z",
+          "apiVersion": "1.2"
+        }
+      ]
+    },
+    {
+      "id": "bennu-2026-09-01",
+      "split": "held-out",
+      "object": {
+        "number": 101955,
+        "name": "Bennu",
+        "class": "near-Earth (Apollo)"
+      },
+      "observer": "F52",
+      "startJdUtc": 2461284.9166666665,
+      "startJdTdb": 2461284.9174673916,
+      "startJdTt": 2461284.9174674074,
+      "epochJdUtc": 2461284.958333333,
+      "epochJdTdb": 2461284.959134058,
+      "epochJdTt": 2461284.959134074,
+      "observations": [
+        {
+          "jdUtc": 2461284.916666667,
+          "RA": 192.877598589,
+          "Dec": -8.33246275,
+          "altitudeDeg": -50.553986906,
+          "apparentMagnitude": 23.841,
+          "rangeAu": 1.98724870210407,
+          "rangeRateKmPerSecond": 9.102516,
+          "elongationDeg": 36.5369,
+          "tdbMinusUtcSeconds": 69.182641,
+          "solarPresence": "",
+          "lunarPresence": "m"
+        },
+        {
+          "jdUtc": 2461284.923611111,
+          "RA": 192.882503699,
+          "Dec": -8.334692747,
+          "altitudeDeg": -52.835407928,
+          "apparentMagnitude": 23.841,
+          "rangeAu": 1.98728518071062,
+          "rangeRateKmPerSecond": 9.0872993,
+          "elongationDeg": 36.5355,
+          "tdbMinusUtcSeconds": 69.182641,
+          "solarPresence": "",
+          "lunarPresence": "m"
+        },
+        {
+          "jdUtc": 2461284.930555556,
+          "RA": 192.887410128,
+          "Dec": -8.336922923,
+          "altitudeDeg": -55.101115908,
+          "apparentMagnitude": 23.841,
+          "rangeAu": 1.98732159730148,
+          "rangeRateKmPerSecond": 9.0715965,
+          "elongationDeg": 36.534,
+          "tdbMinusUtcSeconds": 69.182641,
+          "solarPresence": "",
+          "lunarPresence": "m"
+        },
+        {
+          "jdUtc": 2461284.9375,
+          "RA": 192.892317795,
+          "Dec": -8.339153288,
+          "altitudeDeg": -57.347476258,
+          "apparentMagnitude": 23.841,
+          "rangeAu": 1.98735794998475,
+          "rangeRateKmPerSecond": 9.055437,
+          "elongationDeg": 36.5326,
+          "tdbMinusUtcSeconds": 69.182641,
+          "solarPresence": "",
+          "lunarPresence": "m"
+        },
+        {
+          "jdUtc": 2461284.944444444,
+          "RA": 192.89722662,
+          "Dec": -8.341383848,
+          "altitudeDeg": -59.569850593,
+          "apparentMagnitude": 23.841,
+          "rangeAu": 1.98739423698855,
+          "rangeRateKmPerSecond": 9.0388508,
+          "elongationDeg": 36.5311,
+          "tdbMinusUtcSeconds": 69.182641,
+          "solarPresence": "",
+          "lunarPresence": "m"
+        },
+        {
+          "jdUtc": 2461284.951388889,
+          "RA": 192.902136518,
+          "Dec": -8.343614611,
+          "altitudeDeg": -61.762231425,
+          "apparentMagnitude": 23.841,
+          "rangeAu": 1.9874304566611,
+          "rangeRateKmPerSecond": 9.021869,
+          "elongationDeg": 36.5297,
+          "tdbMinusUtcSeconds": 69.182641,
+          "solarPresence": "",
+          "lunarPresence": "m"
+        },
+        {
+          "jdUtc": 2461284.958333333,
+          "RA": 192.907047404,
+          "Dec": -8.345845584,
+          "altitudeDeg": -63.916721121,
+          "apparentMagnitude": 23.841,
+          "rangeAu": 1.98746660748359,
+          "rangeRateKmPerSecond": 9.0045232,
+          "elongationDeg": 36.5283,
+          "tdbMinusUtcSeconds": 69.182641,
+          "solarPresence": "",
+          "lunarPresence": "m"
+        }
+      ],
+      "holdout": [
+        {
+          "jdUtc": 2461285.208333333,
+          "RA": 193.083720989,
+          "Dec": -8.426308561,
+          "altitudeDeg": -25.220967331,
+          "apparentMagnitude": 23.842,
+          "rangeAu": 1.98872057808357,
+          "rangeRateKmPerSecond": 8.4246144,
+          "elongationDeg": 36.4779,
+          "tdbMinusUtcSeconds": 69.182639,
+          "solarPresence": "*",
+          "lunarPresence": "m"
+        },
+        {
+          "jdUtc": 2461285.958333333,
+          "RA": 193.6076484,
+          "Dec": -8.666721732,
+          "altitudeDeg": -64.321514823,
+          "apparentMagnitude": 23.843,
+          "rangeAu": 1.99255204632524,
+          "rangeRateKmPerSecond": 8.9508665,
+          "elongationDeg": 36.3268,
+          "tdbMinusUtcSeconds": 69.182626,
+          "solarPresence": "",
+          "lunarPresence": "m"
+        },
+        {
+          "jdUtc": 2461287.958333333,
+          "RA": 195.009353056,
+          "Dec": -9.303432686,
+          "altitudeDeg": -65.125127903,
+          "apparentMagnitude": 23.845,
+          "rangeAu": 2.00263125755375,
+          "rangeRateKmPerSecond": 8.8386149,
+          "elongationDeg": 35.9192,
+          "tdbMinusUtcSeconds": 69.182596,
+          "solarPresence": "",
+          "lunarPresence": "m"
+        },
+        {
+          "jdUtc": 2461291.958333333,
+          "RA": 197.816649379,
+          "Dec": -10.555968705,
+          "altitudeDeg": -66.705712797,
+          "apparentMagnitude": 23.848,
+          "rangeAu": 2.02239421432185,
+          "rangeRateKmPerSecond": 8.5919042,
+          "elongationDeg": 35.0857,
+          "tdbMinusUtcSeconds": 69.182544,
+          "solarPresence": "",
+          "lunarPresence": ""
+        }
+      ],
+      "initialElements": {
+        "e": 0.2036780149689451,
+        "q": 0.8965918158762678,
+        "i": 6.033025571461911,
+        "asc_node": 1.966638087203609,
+        "arg_per": 66.40132156879014,
+        "perihelionJdTdb": 2461112.665643236,
+        "meanMotionDegPerDay": 0.8249829583656954,
+        "M": 142.1048194755172,
+        "trueAnomalyDeg": 153.9487080684594,
+        "a": 1.125916190598834,
+        "aphelionAu": 1.355240565321401,
+        "periodDays": 436.3726503068207,
+        "gmAu3PerDay2": 0.0002959122082841195
+      },
+      "initialState": {
+        "positionAu": [
+          -0.9768936497093627,
+          -0.8845425096313907,
+          -0.08988650026981554
+        ],
+        "velocityAuPerDay": [
+          0.008010572173755556,
+          -0.01093846933871493,
+          -0.001184427264296887
+        ]
+      },
+      "elements": {
+        "e": 0.2036780145379815,
+        "q": 0.8965918133145662,
+        "i": 6.033025571229366,
+        "asc_node": 1.966638085323063,
+        "arg_per": 66.40131963924355,
+        "perihelionJdTdb": 2461112.665640788,
+        "meanMotionDegPerDay": 0.8249829625710627,
+        "M": 142.1391965098283,
+        "trueAnomalyDeg": 153.9731598050092,
+        "a": 1.125916186772581,
+        "aphelionAu": 1.355240560230595,
+        "periodDays": 436.3726480824022,
+        "gmAu3PerDay2": 0.0002959122082841195
+      },
+      "state": {
+        "positionAu": [
+          -0.976559767008747,
+          -0.8849981805895004,
+          -0.08993584138629505
+        ],
+        "velocityAuPerDay": [
+          0.00801579703611043,
+          -0.01093373635481605,
+          -0.001183946293959504
+        ]
+      },
+      "truthSolution": "ORX_merged_DE424",
+      "observerCenterEphemeris": "ORX_merged_DE424",
+      "rawFiles": [
+        {
+          "file": "raw/bennu-2026-09-01-observer.json",
+          "sha256": "5f1bc74b683ff3b7d510e7c09c81ef04537aaafdf81e857837b31b019a092f87",
+          "responseSha256": "028e0742800681088f3fe1009d853e3c515faf506951139554dc96482dd2405f",
+          "retrievedAt": "2026-09-13T21:08:42.453Z",
+          "apiVersion": "1.2"
+        },
+        {
+          "file": "raw/bennu-2026-09-01-elements.json",
+          "sha256": "1541d27cdf6d581d2ec67d04e1ed38b1bdb4f5ed2a72ea4e1f65dc118545549c",
+          "responseSha256": "165e9bed88cc76b8c78163f5285a3fdaf394bb6a393193a396b90325de9d7fe5",
+          "retrievedAt": "2026-09-13T21:08:43.834Z",
+          "apiVersion": "1.2"
+        },
+        {
+          "file": "raw/bennu-2026-09-01-state.json",
+          "sha256": "07c1f71ef55a5d7a5a31077ab06d4e026c96046322dd242550127e9be7e35da7",
+          "responseSha256": "d7a002dfe4c653ec5dd8aa9239e262f3d0780017fbc254f91a7ae706bba2179b",
+          "retrievedAt": "2026-09-13T21:08:45.305Z",
+          "apiVersion": "1.2"
+        }
+      ]
+    },
+    {
+      "id": "achilles-2026-03-01",
+      "split": "held-out",
+      "object": {
+        "number": 588,
+        "name": "Achilles",
+        "class": "Jupiter Trojan"
+      },
+      "observer": "F52",
+      "startJdUtc": 2461100.9166666665,
+      "startJdTdb": 2461100.9174674232,
+      "startJdTt": 2461100.9174674074,
+      "epochJdUtc": 2461100.958333333,
+      "epochJdTdb": 2461100.9591340898,
+      "epochJdTt": 2461100.959134074,
+      "observations": [
+        {
+          "jdUtc": 2461100.916666667,
+          "RA": 193.797547898,
+          "Dec": -16.881737103,
+          "altitudeDeg": 34.726063515,
+          "apparentMagnitude": 15.571,
+          "rangeAu": 4.4649775610886,
+          "rangeRateKmPerSecond": -15.7000253,
+          "elongationDeg": 140.087,
+          "tdbMinusUtcSeconds": 69.185366,
+          "solarPresence": "",
+          "lunarPresence": "m"
+        },
+        {
+          "jdUtc": 2461100.923611111,
+          "RA": 193.796907541,
+          "Dec": -16.881729708,
+          "altitudeDeg": 36.496405348,
+          "apparentMagnitude": 15.571,
+          "rangeAu": 4.46491462629703,
+          "rangeRateKmPerSecond": -15.6832833,
+          "elongationDeg": 140.0943,
+          "tdbMinusUtcSeconds": 69.185366,
+          "solarPresence": "",
+          "lunarPresence": "m"
+        },
+        {
+          "jdUtc": 2461100.930555556,
+          "RA": 193.796266425,
+          "Dec": -16.881722018,
+          "altitudeDeg": 38.2106192,
+          "apparentMagnitude": 15.571,
+          "rangeAu": 4.46485175966035,
+          "rangeRateKmPerSecond": -15.6660427,
+          "elongationDeg": 140.1016,
+          "tdbMinusUtcSeconds": 69.185367,
+          "solarPresence": "",
+          "lunarPresence": "m"
+        },
+        {
+          "jdUtc": 2461100.9375,
+          "RA": 193.795624587,
+          "Dec": -16.881714025,
+          "altitudeDeg": 39.862915914,
+          "apparentMagnitude": 15.571,
+          "rangeAu": 4.46478896312429,
+          "rangeRateKmPerSecond": -15.6483312,
+          "elongationDeg": 140.1088,
+          "tdbMinusUtcSeconds": 69.185367,
+          "solarPresence": "",
+          "lunarPresence": "m"
+        },
+        {
+          "jdUtc": 2461100.944444444,
+          "RA": 193.794982063,
+          "Dec": -16.881705722,
+          "altitudeDeg": 41.446943619,
+          "apparentMagnitude": 15.571,
+          "rangeAu": 4.46472623852028,
+          "rangeRateKmPerSecond": -15.6301775,
+          "elongationDeg": 140.1161,
+          "tdbMinusUtcSeconds": 69.185367,
+          "solarPresence": "",
+          "lunarPresence": "m"
+        },
+        {
+          "jdUtc": 2461100.951388889,
+          "RA": 193.794338891,
+          "Dec": -16.881697103,
+          "altitudeDeg": 42.955776968,
+          "apparentMagnitude": 15.571,
+          "rangeAu": 4.4646635875674,
+          "rangeRateKmPerSecond": -15.611611,
+          "elongationDeg": 140.1234,
+          "tdbMinusUtcSeconds": 69.185367,
+          "solarPresence": "",
+          "lunarPresence": "m"
+        },
+        {
+          "jdUtc": 2461100.958333333,
+          "RA": 193.793695109,
+          "Dec": -16.88168816,
+          "altitudeDeg": 44.381927257,
+          "apparentMagnitude": 15.571,
+          "rangeAu": 4.46460101185235,
+          "rangeRateKmPerSecond": -15.592662,
+          "elongationDeg": 140.1307,
+          "tdbMinusUtcSeconds": 69.185367,
+          "solarPresence": "",
+          "lunarPresence": "m"
+        }
+      ],
+      "holdout": [
+        {
+          "jdUtc": 2461101.208333333,
+          "RA": 193.770472026,
+          "Dec": -16.881141296,
+          "altitudeDeg": 16.656910009,
+          "apparentMagnitude": 15.568,
+          "rangeAu": 4.46240095848809,
+          "rangeRateKmPerSecond": -14.9347041,
+          "elongationDeg": 140.3918,
+          "tdbMinusUtcSeconds": 69.185373,
+          "solarPresence": "*",
+          "lunarPresence": ""
+        },
+        {
+          "jdUtc": 2461101.958333333,
+          "RA": 193.702760356,
+          "Dec": -16.879232083,
+          "altitudeDeg": 44.968829936,
+          "apparentMagnitude": 15.56,
+          "rangeAu": 4.45581683759392,
+          "rangeRateKmPerSecond": -15.1841881,
+          "elongationDeg": 141.1664,
+          "tdbMinusUtcSeconds": 69.185382,
+          "solarPresence": "",
+          "lunarPresence": "m"
+        },
+        {
+          "jdUtc": 2461103.958333333,
+          "RA": 193.513804265,
+          "Dec": -16.869938844,
+          "altitudeDeg": 46.097299447,
+          "apparentMagnitude": 15.538,
+          "rangeAu": 4.43895288956119,
+          "rangeRateKmPerSecond": -14.3485977,
+          "elongationDeg": 143.2366,
+          "tdbMinusUtcSeconds": 69.185411,
+          "solarPresence": "",
+          "lunarPresence": "m"
+        },
+        {
+          "jdUtc": 2461107.958333333,
+          "RA": 193.10915541,
+          "Dec": -16.833937034,
+          "altitudeDeg": 48.150355595,
+          "apparentMagnitude": 15.494,
+          "rangeAu": 4.40814202598876,
+          "rangeRateKmPerSecond": -12.6028078,
+          "elongationDeg": 147.3636,
+          "tdbMinusUtcSeconds": 69.185464,
+          "solarPresence": "",
+          "lunarPresence": "m"
+        }
+      ],
+      "initialElements": {
+        "e": 0.1482251616871521,
+        "q": 4.442211906828108,
+        "i": 10.31521931228974,
+        "asc_node": 316.5312528242513,
+        "arg_per": 134.2636218304881,
+        "perihelionJdTdb": 2460072.413696651,
+        "meanMotionDegPerDay": 0.08275464428200502,
+        "M": 85.11346369301307,
+        "trueAnomalyDeg": 102.0575393850622,
+        "a": 5.215241994735385,
+        "aphelionAu": 5.988272082642664,
+        "periodDays": 4350.209019970157,
+        "gmAu3PerDay2": 0.0002959122082841195
+      },
+      "initialState": {
+        "positionAu": [
+          -5.083061678794899,
+          -1.119467158789296,
+          -0.7843314532024631
+        ],
+        "velocityAuPerDay": [
+          0.0006211124964051814,
+          -0.007382772425069952,
+          -0.0008974213538703559
+        ]
+      },
+      "elements": {
+        "e": 0.1482251249624238,
+        "q": 4.442212341810756,
+        "i": 10.31521920195374,
+        "asc_node": 316.531251899525,
+        "arg_per": 134.2636449629912,
+        "perihelionJdTdb": 2460072.413837137,
+        "meanMotionDegPerDay": 0.08275463747898466,
+        "M": 85.11689318010326,
+        "trueAnomalyDeg": 102.0608647346686,
+        "a": 5.215242280555397,
+        "aphelionAu": 5.988272219300036,
+        "periodDays": 4350.209377588309,
+        "gmAu3PerDay2": 0.0002959122082841195
+      },
+      "state": {
+        "positionAu": [
+          -5.083035790148974,
+          -1.119774772339051,
+          -0.7843688443766618
+        ],
+        "velocityAuPerDay": [
+          0.000621542505867715,
+          -0.007382677959304517,
+          -0.0008973550074284432
+        ]
+      },
+      "truthSolution": "JPL#117",
+      "observerCenterEphemeris": "DE441",
+      "rawFiles": [
+        {
+          "file": "raw/achilles-2026-03-01-observer.json",
+          "sha256": "a5d923e25dbeb398656edfbc25752acb82be5888f7c5d11a01b2ea6e6dc9b2ea",
+          "responseSha256": "1873804c04b9ad4617c22cc245f108bd9ee72d9eb02b68efc95b076f28034cb0",
+          "retrievedAt": "2026-09-13T21:08:45.852Z",
+          "apiVersion": "1.2"
+        },
+        {
+          "file": "raw/achilles-2026-03-01-elements.json",
+          "sha256": "c42a9ac94f64c953facdffffc7989a7aefd5e533fcc4950c72109b9f2d4c4034",
+          "responseSha256": "c6e08a24c8457431aafab345be10ed3c11bf1ba1014a8650fd3c825666cc55ac",
+          "retrievedAt": "2026-09-13T21:08:46.332Z",
+          "apiVersion": "1.2"
+        },
+        {
+          "file": "raw/achilles-2026-03-01-state.json",
+          "sha256": "b6265411f106448933a0e7b8755f6662b44f88583e7e108756bc8757df5302ea",
+          "responseSha256": "c70e5282aba667da9bd3ac8e770176bea38a138db18c052996cbfe0e26f2c122",
+          "retrievedAt": "2026-09-13T21:08:46.795Z",
+          "apiVersion": "1.2"
+        }
+      ]
+    },
+    {
+      "id": "achilles-2026-09-01",
+      "split": "held-out",
+      "object": {
+        "number": 588,
+        "name": "Achilles",
+        "class": "Jupiter Trojan"
+      },
+      "observer": "F52",
+      "startJdUtc": 2461284.9166666665,
+      "startJdTdb": 2461284.9174673916,
+      "startJdTt": 2461284.9174674074,
+      "epochJdUtc": 2461284.958333333,
+      "epochJdTdb": 2461284.959134058,
+      "epochJdTt": 2461284.959134074,
+      "observations": [
+        {
+          "jdUtc": 2461284.916666667,
+          "RA": 194.843066458,
+          "Dec": -15.652701251,
+          "altitudeDeg": -50.98333306,
+          "apparentMagnitude": 16.359,
+          "rangeAu": 6.16953572396697,
+          "rangeRateKmPerSecond": 19.3735473,
+          "elongationDeg": 41.8263,
+          "tdbMinusUtcSeconds": 69.182641,
+          "solarPresence": "",
+          "lunarPresence": "m"
+        },
+        {
+          "jdUtc": 2461284.923611111,
+          "RA": 194.844350975,
+          "Dec": -15.653140574,
+          "altitudeDeg": -53.326933756,
+          "apparentMagnitude": 16.359,
+          "rangeAu": 6.16961339446298,
+          "rangeRateKmPerSecond": 19.3575318,
+          "elongationDeg": 41.8209,
+          "tdbMinusUtcSeconds": 69.182641,
+          "solarPresence": "",
+          "lunarPresence": "m"
+        },
+        {
+          "jdUtc": 2461284.930555556,
+          "RA": 194.845635998,
+          "Dec": -15.653580077,
+          "altitudeDeg": -55.669733253,
+          "apparentMagnitude": 16.359,
+          "rangeAu": 6.16969099972037,
+          "rangeRateKmPerSecond": 19.3410192,
+          "elongationDeg": 41.8156,
+          "tdbMinusUtcSeconds": 69.182641,
+          "solarPresence": "",
+          "lunarPresence": "m"
+        },
+        {
+          "jdUtc": 2461284.9375,
+          "RA": 194.846921502,
+          "Dec": -15.654019764,
+          "altitudeDeg": -58.01096473,
+          "apparentMagnitude": 16.359,
+          "rangeAu": 6.16976853779977,
+          "rangeRateKmPerSecond": 19.3240375,
+          "elongationDeg": 41.8102,
+          "tdbMinusUtcSeconds": 69.182641,
+          "solarPresence": "",
+          "lunarPresence": "m"
+        },
+        {
+          "jdUtc": 2461284.944444444,
+          "RA": 194.848207459,
+          "Dec": -15.654459641,
+          "altitudeDeg": -60.349676715,
+          "apparentMagnitude": 16.359,
+          "rangeAu": 6.16984600687729,
+          "rangeRateKmPerSecond": 19.3066156,
+          "elongationDeg": 41.8049,
+          "tdbMinusUtcSeconds": 69.182641,
+          "solarPresence": "",
+          "lunarPresence": "m"
+        },
+        {
+          "jdUtc": 2461284.951388889,
+          "RA": 194.849493843,
+          "Dec": -15.654899711,
+          "altitudeDeg": -62.68465092,
+          "apparentMagnitude": 16.359,
+          "rangeAu": 6.1699234052412,
+          "rangeRateKmPerSecond": 19.2887831,
+          "elongationDeg": 41.7995,
+          "tdbMinusUtcSeconds": 69.182641,
+          "solarPresence": "",
+          "lunarPresence": "m"
+        },
+        {
+          "jdUtc": 2461284.958333333,
+          "RA": 194.850780625,
+          "Dec": -15.65533998,
+          "altitudeDeg": -65.014276186,
+          "apparentMagnitude": 16.359,
+          "rangeAu": 6.17000073131589,
+          "rangeRateKmPerSecond": 19.2705705,
+          "elongationDeg": 41.7942,
+          "tdbMinusUtcSeconds": 69.182641,
+          "solarPresence": "",
+          "lunarPresence": "m"
+        }
+      ],
+      "holdout": [
+        {
+          "jdUtc": 2461285.208333333,
+          "RA": 194.897112746,
+          "Dec": -15.671327927,
+          "altitudeDeg": -29.055395126,
+          "apparentMagnitude": 16.359,
+          "rangeAu": 6.17273388445856,
+          "rangeRateKmPerSecond": 18.6417551,
+          "elongationDeg": 41.6033,
+          "tdbMinusUtcSeconds": 69.182639,
+          "solarPresence": "*",
+          "lunarPresence": "m"
+        },
+        {
+          "jdUtc": 2461285.958333333,
+          "RA": 195.034437853,
+          "Dec": -15.719318559,
+          "altitudeDeg": -65.77523701,
+          "apparentMagnitude": 16.358,
+          "rangeAu": 6.18094557482302,
+          "rangeRateKmPerSecond": 18.9887931,
+          "elongationDeg": 41.0348,
+          "tdbMinusUtcSeconds": 69.182626,
+          "solarPresence": "",
+          "lunarPresence": "m"
+        },
+        {
+          "jdUtc": 2461287.958333333,
+          "RA": 195.404765804,
+          "Dec": -15.848992721,
+          "altitudeDeg": -67.293357967,
+          "apparentMagnitude": 16.356,
+          "rangeAu": 6.20235148434997,
+          "rangeRateKmPerSecond": 18.4151095,
+          "elongationDeg": 39.5195,
+          "tdbMinusUtcSeconds": 69.182596,
+          "solarPresence": "",
+          "lunarPresence": "m"
+        },
+        {
+          "jdUtc": 2461291.958333333,
+          "RA": 196.156995879,
+          "Dec": -16.114962271,
+          "altitudeDeg": -70.313753279,
+          "apparentMagnitude": 16.351,
+          "rangeAu": 6.24317197114178,
+          "rangeRateKmPerSecond": 17.2250926,
+          "elongationDeg": 36.5025,
+          "tdbMinusUtcSeconds": 69.182544,
+          "solarPresence": "",
+          "lunarPresence": ""
+        }
+      ],
+      "initialElements": {
+        "e": 0.1480276414290028,
+        "q": 4.444062273396105,
+        "i": 10.31506931494745,
+        "asc_node": 316.5298063580455,
+        "arg_per": 134.333440039606,
+        "perihelionJdTdb": 2460072.709965192,
+        "meanMotionDegPerDay": 0.08273173402150126,
+        "M": 100.2880286508287,
+        "trueAnomalyDeg": 116.2361115803972,
+        "a": 5.21620476144329,
+        "aphelionAu": 5.988347249490475,
+        "periodDays": 4351.413689775184,
+        "gmAu3PerDay2": 0.0002959122082841195
+      },
+      "initialState": {
+        "positionAu": [
+          -4.802586003364621,
+          -2.426446658663979,
+          -0.9218463831846906
+        ],
+        "velocityAuPerDay": [
+          0.002378970247722899,
+          -0.006757744229433911,
+          -0.0005947180579088556
+        ]
+      },
+      "elements": {
+        "e": 0.1480276038438456,
+        "q": 4.444062584549906,
+        "i": 10.31506929054473,
+        "asc_node": 316.5298059716748,
+        "arg_per": 134.3334482825024,
+        "perihelionJdTdb": 2460072.709972211,
+        "meanMotionDegPerDay": 0.08273173080735377,
+        "M": 100.2914713294151,
+        "trueAnomalyDeg": 116.239216195593,
+        "a": 5.216204896543823,
+        "aphelionAu": 5.988347208537739,
+        "periodDays": 4351.413858828645,
+        "gmAu3PerDay2": 0.0002959122082841195
+      },
+      "state": {
+        "positionAu": [
+          -4.802486872016885,
+          -2.426728227509687,
+          -0.9218711616475757
+        ],
+        "velocityAuPerDay": [
+          0.002379334440975229,
+          -0.006757560361735974,
+          -0.0005946481605258609
+        ]
+      },
+      "truthSolution": "JPL#117",
+      "observerCenterEphemeris": "DE441",
+      "rawFiles": [
+        {
+          "file": "raw/achilles-2026-09-01-observer.json",
+          "sha256": "ff83308f72a9ca29ee046299ee4f174c379d26791bf9c64c9d30d40ebdc36692",
+          "responseSha256": "66f9f3838762c1d611de0da21c7e911bc98424f2a04bba88d65dd624e85055fe",
+          "retrievedAt": "2026-09-13T21:08:47.367Z",
+          "apiVersion": "1.2"
+        },
+        {
+          "file": "raw/achilles-2026-09-01-elements.json",
+          "sha256": "b4ca1340001a6483367480b94c1606064a51ca510feb01b1eeb39da4dfff60c7",
+          "responseSha256": "57fe0c74d9eeb4e5f197bfc346214e4467088881155afb082c6d3e4914af486e",
+          "retrievedAt": "2026-09-13T21:08:47.887Z",
+          "apiVersion": "1.2"
+        },
+        {
+          "file": "raw/achilles-2026-09-01-state.json",
+          "sha256": "79a4d9b6257973e36e12eaa5685272f4534fda7518f24db80d1b89f13bf9759d",
+          "responseSha256": "efd76b667ed6836e324bae335a65c456a9ca6cab2b6acdde5f3aef7fef793cb5",
+          "retrievedAt": "2026-09-13T21:08:48.420Z",
+          "apiVersion": "1.2"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,726 @@
+{
+  "schemaVersion": 1,
+  "provenance": {
+    "provider": "NASA/JPL Horizons",
+    "api": "https://ssd.jpl.nasa.gov/api/horizons.api",
+    "documentation": [
+      "https://ssd-api.jpl.nasa.gov/doc/horizons.html",
+      "https://ssd.jpl.nasa.gov/horizons/manual.html"
+    ],
+    "generator": "experiments/short-arcs/fetch-followup.mjs",
+    "generatorSha256": "44341aeed4dd43aabef9750b5fcbe9771583146cf1c7b698c45bdfe7f61ab664",
+    "protocolFile": "followup-protocol.json",
+    "protocolSha256": "38c3d8cc725a3c5665e8dc4f7c16641949a94a81a898856a627b294ea3f807af",
+    "inputCorpus": "observable-corpus.json",
+    "inputCorpusSha256": "19b825f22d1f8ef13bdca31aee67917b8151c12297d6dc3e15616dd7c12e6e1e",
+    "coordinates": "Horizons quantity 1: ICRF astrometric right ascension/declination in decimal degrees with down-leg light-time only. Reception epochs are UTC (TIME_TYPE=UT in 2026), observer F52. Quantity 4 apparent altitude is used only for visibility selection.",
+    "noise": "No random measurement noise; runners must record the injected noise law and seed. The original first-night realization must remain paired.",
+    "limitations": "Independent numerical ephemerides are not actual observations or exact physical truth. Availability models only altitude and astronomical night, not weather, limiting magnitude, lunar background or observing resources. This exploratory arm follows earlier results; retain original object splits and describe the timing of this intervention honestly.",
+    "rawResponseCount": 7
+  },
+  "protocol": {
+    "schemaVersion": 1,
+    "name": "Exploratory second- and third-night tracklet intervention, version 1",
+    "status": "Declared after initial short-arc and single-follow-up experiments; this is an exploratory observational intervention, not a prospectively held-out method-selection result.",
+    "inputCorpus": "observable-corpus.json",
+    "inputCorpusSha256": "19b825f22d1f8ef13bdca31aee67917b8151c12297d6dc3e15616dd7c12e6e1e",
+    "caseIds": [
+      "observable-ceres-2026-09-01",
+      "observable-pallas-2026-09-01",
+      "observable-juno-2026-03-01",
+      "observable-juno-2026-09-01",
+      "observable-vesta-2026-09-01",
+      "observable-eros-2026-03-01",
+      "observable-achilles-2026-03-01"
+    ],
+    "splitPolicy": "Split by object: both epochs of each object remain in the same split. Tune only on development objects; inspect held-out objects after methods are frozen. Achilles is a held-out class stress case.",
+    "scheduleReference": "Original LAST observation epochJdUtc, in UTC",
+    "night2MinutesAfterLastObservation": [
+      1440,
+      1460,
+      1480,
+      1500
+    ],
+    "night3MinutesAfterLastObservation": [
+      2880,
+      2900,
+      2920,
+      2940
+    ],
+    "selectionPolicy": "Fetch every fixed scheduled position. Mark each complete tracklet available only if all four exposures have apparent altitude >=20 degrees and empty solarPresence (astronomical night). Retain unavailable rows and reasons. No rescheduling and no selection by solver outputs.",
+    "firstNightPolicy": "Keep original four first-night observations, noise realization, weighting and identifiers unchanged in paired experiments.",
+    "heldoutPolicy": "The original +3 day and +7 day positions remain unmodified prediction targets and must not enter a fit. The +1 day target now becomes input and cannot be scored as a held-out prediction."
+  },
+  "cases": [
+    {
+      "id": "observable-ceres-2026-09-01",
+      "object": {
+        "number": 1,
+        "name": "Ceres",
+        "class": "main-belt"
+      },
+      "split": "development",
+      "observer": "F52",
+      "epochJdUtc": 2461285.1041666665,
+      "night2": [
+        {
+          "jdUtc": 2461286.104166667,
+          "RA": 97.657449026,
+          "Dec": 22.81189564,
+          "altitudeDeg": 39.113983579,
+          "solarPresence": "",
+          "lunarPresence": "m"
+        },
+        {
+          "jdUtc": 2461286.118055556,
+          "RA": 97.662503782,
+          "Dec": 22.812158005,
+          "altitudeDeg": 43.685355686,
+          "solarPresence": "",
+          "lunarPresence": "m"
+        },
+        {
+          "jdUtc": 2461286.131944444,
+          "RA": 97.667553341,
+          "Dec": 22.812418823,
+          "altitudeDeg": 48.270990449,
+          "solarPresence": "A",
+          "lunarPresence": "m"
+        },
+        {
+          "jdUtc": 2461286.145833333,
+          "RA": 97.672598074,
+          "Dec": 22.81267795,
+          "altitudeDeg": 52.868441734,
+          "solarPresence": "N",
+          "lunarPresence": "m"
+        }
+      ],
+      "night3": [
+        {
+          "jdUtc": 2461287.104166667,
+          "RA": 98.023619691,
+          "Dec": 22.82909506,
+          "altitudeDeg": 39.680849811,
+          "solarPresence": "",
+          "lunarPresence": "m"
+        },
+        {
+          "jdUtc": 2461287.118055556,
+          "RA": 98.028647338,
+          "Dec": 22.829350971,
+          "altitudeDeg": 44.253761106,
+          "solarPresence": "",
+          "lunarPresence": "m"
+        },
+        {
+          "jdUtc": 2461287.131944444,
+          "RA": 98.033669803,
+          "Dec": 22.829605313,
+          "altitudeDeg": 48.840622458,
+          "solarPresence": "A",
+          "lunarPresence": "m"
+        },
+        {
+          "jdUtc": 2461287.145833333,
+          "RA": 98.038687461,
+          "Dec": 22.829857944,
+          "altitudeDeg": 53.43898833,
+          "solarPresence": "N",
+          "lunarPresence": "m"
+        }
+      ],
+      "night2Available": false,
+      "night3Available": false,
+      "unavailableReasons": {
+        "night2": [
+          "Exposure 3: solar-presence flag 'A' is not astronomical night",
+          "Exposure 4: solar-presence flag 'N' is not astronomical night"
+        ],
+        "night3": [
+          "Exposure 3: solar-presence flag 'A' is not astronomical night",
+          "Exposure 4: solar-presence flag 'N' is not astronomical night"
+        ]
+      },
+      "rawFiles": [
+        {
+          "file": "raw/followup-observable-ceres-2026-09-01.json",
+          "sha256": "7f1ac74ddd848f0d6f4f0802635cf3c2025d42d3171b53979bb2af7d4cdfab69",
+          "responseSha256": "d61890bdb25717e3b0cc966a919e08f1d5c8ada15f38948d4271715dfaedb4d3",
+          "retrievedAt": "2026-09-13T21:33:00.308Z"
+        }
+      ]
+    },
+    {
+      "id": "observable-pallas-2026-09-01",
+      "object": {
+        "number": 2,
+        "name": "Pallas",
+        "class": "main-belt"
+      },
+      "split": "development",
+      "observer": "F52",
+      "epochJdUtc": 2461284.958333333,
+      "night2": [
+        {
+          "jdUtc": 2461285.958333333,
+          "RA": 24.726080261,
+          "Dec": -4.780489145,
+          "altitudeDeg": 47.543237582,
+          "solarPresence": "",
+          "lunarPresence": "m"
+        },
+        {
+          "jdUtc": 2461285.972222222,
+          "RA": 24.725537219,
+          "Dec": -4.783872959,
+          "altitudeDeg": 51.373604315,
+          "solarPresence": "",
+          "lunarPresence": "m"
+        },
+        {
+          "jdUtc": 2461285.986111111,
+          "RA": 24.724988862,
+          "Dec": -4.787256795,
+          "altitudeDeg": 54.932919478,
+          "solarPresence": "",
+          "lunarPresence": "m"
+        },
+        {
+          "jdUtc": 2461286,
+          "RA": 24.724435852,
+          "Dec": -4.790640623,
+          "altitudeDeg": 58.129394337,
+          "solarPresence": "",
+          "lunarPresence": "m"
+        }
+      ],
+      "night3": [
+        {
+          "jdUtc": 2461286.958333333,
+          "RA": 24.690088367,
+          "Dec": -5.025356087,
+          "altitudeDeg": 48.189259027,
+          "solarPresence": "",
+          "lunarPresence": "m"
+        },
+        {
+          "jdUtc": 2461286.972222222,
+          "RA": 24.689465271,
+          "Dec": -5.028783166,
+          "altitudeDeg": 51.956621652,
+          "solarPresence": "",
+          "lunarPresence": "m"
+        },
+        {
+          "jdUtc": 2461286.986111111,
+          "RA": 24.688836967,
+          "Dec": -5.032210211,
+          "altitudeDeg": 55.434556946,
+          "solarPresence": "",
+          "lunarPresence": "m"
+        },
+        {
+          "jdUtc": 2461287,
+          "RA": 24.688204126,
+          "Dec": -5.035637189,
+          "altitudeDeg": 58.526170687,
+          "solarPresence": "",
+          "lunarPresence": "m"
+        }
+      ],
+      "night2Available": true,
+      "night3Available": true,
+      "unavailableReasons": {
+        "night2": [],
+        "night3": []
+      },
+      "rawFiles": [
+        {
+          "file": "raw/followup-observable-pallas-2026-09-01.json",
+          "sha256": "886a2f6511c9a0e8f41925512000d161529dffab47f8f649679b4671b14b1ff9",
+          "responseSha256": "68ec1c0e550cc8a3708ccc545b7f50bc3d0d11ebe46d4320c90869de5df856a5",
+          "retrievedAt": "2026-09-13T21:33:00.779Z"
+        }
+      ]
+    },
+    {
+      "id": "observable-juno-2026-03-01",
+      "object": {
+        "number": 3,
+        "name": "Juno",
+        "class": "main-belt"
+      },
+      "split": "held-out",
+      "observer": "F52",
+      "epochJdUtc": 2461122.1249999995,
+      "night2": [
+        {
+          "jdUtc": 2461123.125,
+          "RA": 297.872828369,
+          "Dec": -9.64291752,
+          "altitudeDeg": 33.635483747,
+          "solarPresence": "",
+          "lunarPresence": ""
+        },
+        {
+          "jdUtc": 2461123.138888889,
+          "RA": 297.876611718,
+          "Dec": -9.641780886,
+          "altitudeDeg": 37.718403715,
+          "solarPresence": "A",
+          "lunarPresence": ""
+        },
+        {
+          "jdUtc": 2461123.152777778,
+          "RA": 297.880391001,
+          "Dec": -9.640643523,
+          "altitudeDeg": 41.646394311,
+          "solarPresence": "N",
+          "lunarPresence": ""
+        },
+        {
+          "jdUtc": 2461123.166666666,
+          "RA": 297.884166564,
+          "Dec": -9.639505383,
+          "altitudeDeg": 45.377911099,
+          "solarPresence": "N",
+          "lunarPresence": ""
+        }
+      ],
+      "night3": [
+        {
+          "jdUtc": 2461124.125,
+          "RA": 298.147115149,
+          "Dec": -9.560347169,
+          "altitudeDeg": 34.269007307,
+          "solarPresence": "",
+          "lunarPresence": ""
+        },
+        {
+          "jdUtc": 2461124.138888889,
+          "RA": 298.150865757,
+          "Dec": -9.559204002,
+          "altitudeDeg": 38.335541596,
+          "solarPresence": "A",
+          "lunarPresence": ""
+        },
+        {
+          "jdUtc": 2461124.152777778,
+          "RA": 298.154612326,
+          "Dec": -9.558060105,
+          "altitudeDeg": 42.24233566,
+          "solarPresence": "N",
+          "lunarPresence": ""
+        },
+        {
+          "jdUtc": 2461124.166666666,
+          "RA": 298.158355209,
+          "Dec": -9.556915431,
+          "altitudeDeg": 45.946261108,
+          "solarPresence": "N",
+          "lunarPresence": ""
+        }
+      ],
+      "night2Available": false,
+      "night3Available": false,
+      "unavailableReasons": {
+        "night2": [
+          "Exposure 2: solar-presence flag 'A' is not astronomical night",
+          "Exposure 3: solar-presence flag 'N' is not astronomical night",
+          "Exposure 4: solar-presence flag 'N' is not astronomical night"
+        ],
+        "night3": [
+          "Exposure 2: solar-presence flag 'A' is not astronomical night",
+          "Exposure 3: solar-presence flag 'N' is not astronomical night",
+          "Exposure 4: solar-presence flag 'N' is not astronomical night"
+        ]
+      },
+      "rawFiles": [
+        {
+          "file": "raw/followup-observable-juno-2026-03-01.json",
+          "sha256": "9871573e2ecb7dcb431ed0b600f4a4744fa3454836ffb576ed362d8e9eeef0e5",
+          "responseSha256": "ed928a99573f0d4c777a57241fe806ad6fbe134f363a8834a192c9800b7b1ee8",
+          "retrievedAt": "2026-09-13T21:33:01.482Z"
+        }
+      ]
+    },
+    {
+      "id": "observable-juno-2026-09-01",
+      "object": {
+        "number": 3,
+        "name": "Juno",
+        "class": "main-belt"
+      },
+      "split": "held-out",
+      "observer": "F52",
+      "epochJdUtc": 2461284.958333333,
+      "night2": [
+        {
+          "jdUtc": 2461285.958333333,
+          "RA": 295.809563559,
+          "Dec": -9.374000125,
+          "altitudeDeg": 28.885667371,
+          "solarPresence": "",
+          "lunarPresence": "m"
+        },
+        {
+          "jdUtc": 2461285.972222222,
+          "RA": 295.808411621,
+          "Dec": -9.375682976,
+          "altitudeDeg": 24.55439184,
+          "solarPresence": "",
+          "lunarPresence": "m"
+        },
+        {
+          "jdUtc": 2461285.986111111,
+          "RA": 295.807268981,
+          "Dec": -9.377364952,
+          "altitudeDeg": 20.147115999,
+          "solarPresence": "",
+          "lunarPresence": "m"
+        },
+        {
+          "jdUtc": 2461286,
+          "RA": 295.806136029,
+          "Dec": -9.379046167,
+          "altitudeDeg": 15.678111211,
+          "solarPresence": "",
+          "lunarPresence": "m"
+        }
+      ],
+      "night3": [
+        {
+          "jdUtc": 2461286.958333333,
+          "RA": 295.734014575,
+          "Dec": -9.495875588,
+          "altitudeDeg": 27.916515668,
+          "solarPresence": "",
+          "lunarPresence": "m"
+        },
+        {
+          "jdUtc": 2461286.972222222,
+          "RA": 295.732953824,
+          "Dec": -9.497548786,
+          "altitudeDeg": 23.571531087,
+          "solarPresence": "",
+          "lunarPresence": "m"
+        },
+        {
+          "jdUtc": 2461286.986111111,
+          "RA": 295.731902447,
+          "Dec": -9.499221114,
+          "altitudeDeg": 19.153405988,
+          "solarPresence": "",
+          "lunarPresence": "m"
+        },
+        {
+          "jdUtc": 2461287,
+          "RA": 295.730860817,
+          "Dec": -9.500892689,
+          "altitudeDeg": 14.675766855,
+          "solarPresence": "",
+          "lunarPresence": "m"
+        }
+      ],
+      "night2Available": false,
+      "night3Available": false,
+      "unavailableReasons": {
+        "night2": [
+          "Exposure 4: altitude 15.678111211 <20 degrees"
+        ],
+        "night3": [
+          "Exposure 3: altitude 19.153405988 <20 degrees",
+          "Exposure 4: altitude 14.675766855 <20 degrees"
+        ]
+      },
+      "rawFiles": [
+        {
+          "file": "raw/followup-observable-juno-2026-09-01.json",
+          "sha256": "0816ff1b777ba5559ef9c629eb3cf8ee9929f26f348f2525fa28607582900631",
+          "responseSha256": "b937ad3f4118ceb019dbd9969c14f4fa288b6138df45708181a185fdc840533a",
+          "retrievedAt": "2026-09-13T21:33:02.098Z"
+        }
+      ]
+    },
+    {
+      "id": "observable-vesta-2026-09-01",
+      "object": {
+        "number": 4,
+        "name": "Vesta",
+        "class": "main-belt"
+      },
+      "split": "held-out",
+      "observer": "F52",
+      "epochJdUtc": 2461284.958333333,
+      "night2": [
+        {
+          "jdUtc": 2461285.958333333,
+          "RA": 29.036864669,
+          "Dec": 0.590402721,
+          "altitudeDeg": 46.975494953,
+          "solarPresence": "",
+          "lunarPresence": "m"
+        },
+        {
+          "jdUtc": 2461285.972222222,
+          "RA": 29.03631219,
+          "Dec": 0.589338792,
+          "altitudeDeg": 51.237995176,
+          "solarPresence": "",
+          "lunarPresence": "m"
+        },
+        {
+          "jdUtc": 2461285.986111111,
+          "RA": 29.035752336,
+          "Dec": 0.588274329,
+          "altitudeDeg": 55.3369207,
+          "solarPresence": "",
+          "lunarPresence": "m"
+        },
+        {
+          "jdUtc": 2461286,
+          "RA": 29.035185902,
+          "Dec": 0.587209327,
+          "altitudeDeg": 59.205243599,
+          "solarPresence": "",
+          "lunarPresence": "m"
+        }
+      ],
+      "night3": [
+        {
+          "jdUtc": 2461286.958333333,
+          "RA": 29.000541462,
+          "Dec": 0.512695008,
+          "altitudeDeg": 47.815301265,
+          "solarPresence": "",
+          "lunarPresence": "m"
+        },
+        {
+          "jdUtc": 2461286.972222222,
+          "RA": 28.999886454,
+          "Dec": 0.511601551,
+          "altitudeDeg": 52.045199774,
+          "solarPresence": "",
+          "lunarPresence": "m"
+        },
+        {
+          "jdUtc": 2461286.986111111,
+          "RA": 28.999224197,
+          "Dec": 0.510507578,
+          "altitudeDeg": 56.099108619,
+          "solarPresence": "",
+          "lunarPresence": "m"
+        },
+        {
+          "jdUtc": 2461287,
+          "RA": 28.998555499,
+          "Dec": 0.509413088,
+          "altitudeDeg": 59.904224845,
+          "solarPresence": "",
+          "lunarPresence": "m"
+        }
+      ],
+      "night2Available": true,
+      "night3Available": true,
+      "unavailableReasons": {
+        "night2": [],
+        "night3": []
+      },
+      "rawFiles": [
+        {
+          "file": "raw/followup-observable-vesta-2026-09-01.json",
+          "sha256": "70e6c9009d78b7ff7cbb8882965cf1abe4d69a12c011cd62cbf103a6098f89d4",
+          "responseSha256": "d5481c342da55f240838acb15208fd46f5554b7f07a5ed9ecf1c97c2eb24de92",
+          "retrievedAt": "2026-09-13T21:33:02.638Z"
+        }
+      ]
+    },
+    {
+      "id": "observable-eros-2026-03-01",
+      "object": {
+        "number": 433,
+        "name": "Eros",
+        "class": "near-Earth (Amor)"
+      },
+      "split": "development",
+      "observer": "F52",
+      "epochJdUtc": 2461101.7916666665,
+      "night2": [
+        {
+          "jdUtc": 2461102.791666667,
+          "RA": 74.329514154,
+          "Dec": 17.876040253,
+          "altitudeDeg": 56.814564222,
+          "solarPresence": "",
+          "lunarPresence": "m"
+        },
+        {
+          "jdUtc": 2461102.805555556,
+          "RA": 74.342736966,
+          "Dec": 17.872549695,
+          "altitudeDeg": 52.13970214,
+          "solarPresence": "",
+          "lunarPresence": "m"
+        },
+        {
+          "jdUtc": 2461102.819444444,
+          "RA": 74.355982551,
+          "Dec": 17.869051069,
+          "altitudeDeg": 47.470717667,
+          "solarPresence": "",
+          "lunarPresence": "m"
+        },
+        {
+          "jdUtc": 2461102.833333333,
+          "RA": 74.369253184,
+          "Dec": 17.865545,
+          "altitudeDeg": 42.810102062,
+          "solarPresence": "",
+          "lunarPresence": "m"
+        }
+      ],
+      "night3": [
+        {
+          "jdUtc": 2461103.791666667,
+          "RA": 75.304244171,
+          "Dec": 17.629494786,
+          "altitudeDeg": 56.757205341,
+          "solarPresence": "",
+          "lunarPresence": "m"
+        },
+        {
+          "jdUtc": 2461103.805555556,
+          "RA": 75.317453755,
+          "Dec": 17.625990961,
+          "altitudeDeg": 52.081200144,
+          "solarPresence": "",
+          "lunarPresence": "m"
+        },
+        {
+          "jdUtc": 2461103.819444444,
+          "RA": 75.330685946,
+          "Dec": 17.622479225,
+          "altitudeDeg": 47.410390214,
+          "solarPresence": "",
+          "lunarPresence": "m"
+        },
+        {
+          "jdUtc": 2461103.833333333,
+          "RA": 75.343943001,
+          "Dec": 17.618960192,
+          "altitudeDeg": 42.747423372,
+          "solarPresence": "",
+          "lunarPresence": "m"
+        }
+      ],
+      "night2Available": true,
+      "night3Available": true,
+      "unavailableReasons": {
+        "night2": [],
+        "night3": []
+      },
+      "rawFiles": [
+        {
+          "file": "raw/followup-observable-eros-2026-03-01.json",
+          "sha256": "a26fa7cc234454b59cc6c2ac1a56b0fc42eba4fd087a0b8261646ce34ca71329",
+          "responseSha256": "343a6b25da6b26c7c754d993eb5513a1bf46593cb17a39057234dffea8042197",
+          "retrievedAt": "2026-09-13T21:33:03.147Z"
+        }
+      ]
+    },
+    {
+      "id": "observable-achilles-2026-03-01",
+      "object": {
+        "number": 588,
+        "name": "Achilles",
+        "class": "Jupiter Trojan"
+      },
+      "split": "held-out",
+      "observer": "F52",
+      "epochJdUtc": 2461100.958333333,
+      "night2": [
+        {
+          "jdUtc": 2461101.958333333,
+          "RA": 193.702760356,
+          "Dec": -16.879232083,
+          "altitudeDeg": 44.968829996,
+          "solarPresence": "",
+          "lunarPresence": "m"
+        },
+        {
+          "jdUtc": 2461101.972222222,
+          "RA": 193.701437262,
+          "Dec": -16.879192675,
+          "altitudeDeg": 47.453951297,
+          "solarPresence": "",
+          "lunarPresence": "m"
+        },
+        {
+          "jdUtc": 2461101.986111111,
+          "RA": 193.7001123,
+          "Dec": -16.879151904,
+          "altitudeDeg": 49.491802427,
+          "solarPresence": "",
+          "lunarPresence": "m"
+        },
+        {
+          "jdUtc": 2461102,
+          "RA": 193.698785813,
+          "Dec": -16.879109739,
+          "altitudeDeg": 51.012040531,
+          "solarPresence": "",
+          "lunarPresence": "m"
+        }
+      ],
+      "night3": [
+        {
+          "jdUtc": 2461102.958333333,
+          "RA": 193.609445,
+          "Dec": -16.875314644,
+          "altitudeDeg": 45.540880859,
+          "solarPresence": "",
+          "lunarPresence": "m"
+        },
+        {
+          "jdUtc": 2461102.972222222,
+          "RA": 193.608088815,
+          "Dec": -16.875254738,
+          "altitudeDeg": 47.93601738,
+          "solarPresence": "",
+          "lunarPresence": "m"
+        },
+        {
+          "jdUtc": 2461102.986111111,
+          "RA": 193.606730843,
+          "Dec": -16.875193461,
+          "altitudeDeg": 49.868523537,
+          "solarPresence": "",
+          "lunarPresence": "m"
+        },
+        {
+          "jdUtc": 2461103,
+          "RA": 193.605371429,
+          "Dec": -16.875130783,
+          "altitudeDeg": 51.268951062,
+          "solarPresence": "",
+          "lunarPresence": "m"
+        }
+      ],
+      "night2Available": true,
+      "night3Available": true,
+      "unavailableReasons": {
+        "night2": [],
+        "night3": []
+      },
+      "rawFiles": [
+        {
+          "file": "raw/followup-observable-achilles-2026-03-01.json",
+          "sha256": "c72d58af14293d17f721689467550be089cd9cbd5b9b9eedcc7658fc0941ac03",
+          "responseSha256": "016e2c59a5ccddbb7713b4535527f518a41cbb69aa0d757a1df53cf2e267768c",
+          "retrievedAt": "2026-09-13T21:33:03.652Z"
+        }
+      ]
+    }
+  ]
+}

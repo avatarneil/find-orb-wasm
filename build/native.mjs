@@ -53,7 +53,9 @@ export async function buildNative({root=resolve('.native-engine'),ephemeris=reso
       if (original.split(from).length!==2) throw new Error('Count comparator patch context changed.');
       try {
         await writeFile(filename,original.replace(from,to));
-        await run('make',['-j2','PREFIX='+prefix,'NO_ERRORS=1','CC=cc','CXX=c++','CPP=c++','ADDED_CXXFLAGS=-UCONFIG_DIR_AUTOCOPY -fno-fast-math -ffp-contract=off','fo'],buildSource);
+        // macOS make can compare mtimes at one-second resolution: a fast first
+        // build and same-second source patch otherwise reuse the original object.
+        await run('make',['-j2','-B','PREFIX='+prefix,'NO_ERRORS=1','CC=cc','CXX=c++','CPP=c++','ADDED_CXXFLAGS=-UCONFIG_DIR_AUTOCOPY -fno-fast-math -ffp-contract=off','fo'],buildSource);
         await copyFile(join(buildSource,'fo'),join(root,'fo-count'));
       } finally {await writeFile(filename,original);}
       await writeFile(join(root,'count-comparator.patch'),JSON.stringify({file:'orb_func.cpp',from,to},null,2)+'\n');

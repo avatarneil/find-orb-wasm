@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "name": "Exploratory second- and third-night tracklet intervention, version 1",
+  "status": "Declared after initial short-arc and single-follow-up experiments; this is an exploratory observational intervention, not a prospectively held-out method-selection result.",
+  "inputCorpus": "observable-corpus.json",
+  "inputCorpusSha256": "19b825f22d1f8ef13bdca31aee67917b8151c12297d6dc3e15616dd7c12e6e1e",
+  "caseIds": [
+    "observable-ceres-2026-09-01",
+    "observable-pallas-2026-09-01",
+    "observable-juno-2026-03-01",
+    "observable-juno-2026-09-01",
+    "observable-vesta-2026-09-01",
+    "observable-eros-2026-03-01",
+    "observable-achilles-2026-03-01"
+  ],
+  "splitPolicy": "Split by object: both epochs of each object remain in the same split. Tune only on development objects; inspect held-out objects after methods are frozen. Achilles is a held-out class stress case.",
+  "scheduleReference": "Original LAST observation epochJdUtc, in UTC",
+  "night2MinutesAfterLastObservation": [
+    1440,
+    1460,
+    1480,
+    1500
+  ],
+  "night3MinutesAfterLastObservation": [
+    2880,
+    2900,
+    2920,
+    2940
+  ],
+  "selectionPolicy": "Fetch every fixed scheduled position. Mark each complete tracklet available only if all four exposures have apparent altitude >=20 degrees and empty solarPresence (astronomical night). Retain unavailable rows and reasons. No rescheduling and no selection by solver outputs.",
+  "firstNightPolicy": "Keep original four first-night observations, noise realization, weighting and identifiers unchanged in paired experiments.",
+  "heldoutPolicy": "The original +3 day and +7 day positions remain unmodified prediction targets and must not enter a fit. The +1 day target now becomes input and cannot be scored as a held-out prediction."
+}

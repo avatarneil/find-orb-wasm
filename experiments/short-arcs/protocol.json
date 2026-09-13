@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "fixedBeforeOutcomeComparison": "2026-09-13T21:13:00Z",
+  "purpose": "Explore short-arc representative selection; no population accuracy or posterior calibration claim from this small corpus.",
+  "split": "Development: Ceres, Pallas, Eros, Apophis. Held-out: Juno, Vesta, Bennu, Achilles. Split by object, not individual observation or epoch.",
+  "corpora": "Preserve unconditional fixed-time corpus as input-validation stress evidence. Use separately preregistered altitude/night-selected corpus for solver accuracy, because below-horizon observations are excluded by upstream.",
+  "methods": ["position", "phase6d", "min-rms", "predictive1d"],
+  "exploratoryAmendment": "After mixed development-only outcomes from phase6d/min-rms, add predictive1d: select an actual accepted candidate minimizing squared chord distance to the unweighted family mean at original last observation UTC +1 day. Horizon/loss are frozen before held-out runs. This targets prediction loss under the existing heuristic candidate measure, not an inferred posterior or guaranteed orbital-element improvement.",
+  "budgets": [100, 500],
+  "budgetMeaning": "Configured initial MAX_SR_ORBITS batch capacity, not necessarily total attempts. Record every SR batch and sum actual attempted trials; retries/expansions remain visible. Compare selectors only with matched families and work counts.",
+  "noise": {
+    "exact": "No injected noise; MPC quantization and independent model differences remain; supplied coordinate sigma 0.2 arcsec.",
+    "gaussian": "Independent zero-mean east/north Gaussian noise, sigma 0.2 arcsec; same draws for paired methods and budgets.",
+    "biased": "Independent sigma 0.2 arcsec plus common tracklet east/north Gaussian bias sigma 0.3 arcsec, solver still told sigma 0.2.",
+    "contaminated": "Independent sigma 0.2 plus a +3 arcsec east outlier at the third of four fitted positions, solver still told sigma 0.2. Stress case, excluded from primary performance aggregates."
+  },
+  "replicates": [0, 1, 2],
+  "primaryComparison": "Paired one-hour arcs: phase6d vs position, same 100-candidate budget, independent Gaussian noise. Report 1-day and 7-day angular prediction error, reciprocal-a error, q/e/i errors, failure/exclusion rate and runtime. Repeat at 500 candidates as a search-budget sensitivity analysis.",
+  "secondaryComparison": "min-rms diagnostic, exact and shared-bias/outlier stress cases. No tuning after held-out results are opened; negative results remain.",
+  "ensembleDiagnostics": "Unweighted heuristic-sample 90% radius, empirical truth inclusion, width, energy score in Cartesian unit sky direction, full support and central-90% inverse-a/e/q/i inclusion. Samples are not posterior draws; none of these intervals has a probability guarantee.",
+  "followup": "Paired experiment adds one prespecified later observation at +1d; evaluate +3d/+7d only. Visibility validation found every +6h target unobservable, so that proposed arm is not run. Every accepted case has a feasible +1d observation. The amendment is based only on visibility, before held-out outcomes. Independently validate the later observation against the same altitude/night rule.",
+  "trackletFollowupAmendment": "Exploratory observational intervention after the single-next-night-point results: four positions spanning one hour at +24h/+24h20m/+24h40m/+25h, then optionally +48h/+48h20m/+48h40m/+49h, all relative to original last observation. Retain the original first-night noise and the exact noisy +24h point; common errors are shared within each tracklet. Retain fixed schedules; unavailable cases remain failures with reasons, never rescheduled. Compare matched observable subsets only. No additional algorithm tuning after held-out results.",
+  "numericalControl": "Propagate each independent truth state with the baseline force model to measure propagation/coordinate floor; verify experimental position equals released port with fixed-count native comparator and matching WASM cases.",
+  "decision": "Do not change release defaults unless evidence supports consistent improvement without important object-class regressions. Small case count limits inference; report object-level distributions, paired wins, tails and raw failures, not just pooled means.",
+  "outstanding": "No formal proof of full solver or compiler. No new probabilistic prior or Jacobian-correct ranging implementation in this selector experiment. No release/publication authorized by this goal."
+}
