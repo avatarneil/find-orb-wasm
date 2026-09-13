@@ -1,0 +1,634 @@
+{
+  "schema": 1,
+  "status": "verified",
+  "passed": true,
+  "inputsSHA256": {
+    "dist/fo.wasm": "256e850727f91a441f2344217a6a15727dfefcabb91f03b61e8d694d9d03cd57",
+    "dist/manifest.json": "dc055014846ee95d22b100aea61a3f2acf569095ff9f82d478bf82a184d4c4c5",
+    "dist/source-lock.json": "cfe1a499eaa27516c856fcec984b5f35380b8fbd6ea9515062a464662e992f01",
+    ".wasm-engine/sources/jpl_eph/jpleph.cpp": "3e0d1591cb4d3042fc7169615beee26182086b9bc0c48332ce1363d1c8f69005",
+    ".wasm-engine/sources/jpl_eph/jpl_int.h": "4505a74cd161955ba63b6220527b311cba187c538c004da7c596f450c58f90a2",
+    "verification/ephemeris/evidence/certificate.json": "fb6ab69a9b9c928e7afe79598829084d07fd6878df4c9734fd9fddd07c5ce5b8",
+    "verification/ephemeris/source-contract.json": "86c2298559be434ed95ce5282c224172600f56d63f24de522207e1980df86652",
+    "verification/ephemeris/source.py": "e3575fbdabdf0345ce4c56327669ba34f4a8a4d16036237fcfc9f325527b89f8",
+    "verification/translation/wasm.py": "66aee1cd82425aeec1420be16e76223aa9ecc11920ee1fe2190dbb1b852032c9",
+    "verification/translation/model.py": "319b900e0e94560d07ce173bfce0676abd6803410875d9ebdeacc1ac31c144d5",
+    "verification/translation/verify.py": "48c3c73060dd88221359203e0e4171a30c4b5af1656565f8c6a3b3dbc0faba6c",
+    "verification/production/decoder.py": "45139d9980cfe62cc7f48455fd18f8d36920289bd82cf603ebdc8192dba1ac8d",
+    "verification/production/run.py": "2a30c352faf5e9bc5b59e93c910aca9d6e6fbd029969b8aa2cabef065aef259b",
+    "verification/production/source_model.py": "2c8dbd4b03e56d499c4972ae1dca50ad6b8e3344813a0da78d993c17c283900d",
+    "verification/production/witness.py": "48e0ea544f57118aec4c2ae588bd65a8d4ac97f95d22e8dd8f662ff61384712e",
+    "verification/production/machine.py": "46bdf6d81a0bdfd1333057d275c33203ff05a2987d0de3452154ec8d39af10eb",
+    "verification/production/test_checker.py": "aff57b35067495eebbb0cc9463d381fbef27950ec7ba2059828a97826fe37896",
+    "verification/production/proofs.py": "e47d380ce0c345492da0347367dda292af190c58461bde2d70fe58009677d8ff",
+    "verification/production/witness.mjs": "196a26aac5596ab1d4a31d0c989a4de0a09a89c42b91921f6b6f1c75267e6bda",
+    ".wasm-toolchain/upstream/bin/clang-22": "538e37cd01bf3acf8239b62e57ac05823c95d6e15e6f3963c4de6df1a4f4ce5f",
+    ".wasm-toolchain/upstream/emscripten/em++.py": "e71423cc294141b49ef763e9d581232315dd5568ae75e595441072861574645b",
+    ".wasm-toolchain/upstream/emscripten/emcc.py": "6cbb02e7e6d685ccbb41b11729ea9718fe5acfe999378a54f0a1c2efcc619d2e",
+    ".wasm-toolchain/.emscripten": "b6fb54bdf3679a42441619c1bf348b99fb7c8e877c4d7fecbac75d4844bdc58f",
+    ".wasm-toolchain/python/3.13.3_64bit/bin/python3.13": "051ecc026af314195484c2a8e3ae3de85db8a09ae7998d9cace75323e7a40d81",
+    "/opt/homebrew/Cellar/node/25.9.0_2/bin/node": "32e234a5b6bec67d72a016f2baadf7fadf3afd328470b395b73af473fdee0d85"
+  },
+  "layoutCompilerCommand": [
+    "/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/.wasm-toolchain/python/3.13.3_64bit/bin/python3",
+    "/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/.wasm-toolchain/upstream/emscripten/em++.py",
+    "-std=c++17",
+    "-fno-fast-math",
+    "-ffp-contract=off",
+    "-fsyntax-only",
+    "/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/production/evidence/layout.cpp",
+    "-I",
+    "/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/.wasm-engine/sources/jpl_eph"
+  ],
+  "software": {
+    "python": "3.13.3 (tags/v3.13.3:6280bb54784, May 27 2025, 22:41:20) [Clang 17.0.0 (clang-1700.0.13.3)]",
+    "z3": "4.15.4",
+    "cvc5": "1.3.4",
+    "node": "v25.9.0"
+  },
+  "production": {
+    "function": "jpl_state",
+    "index": 286,
+    "bodyOffset": 428873,
+    "bodyBytes": 5157,
+    "bodySHA256": "912a31c4f51ef2ebb263359b54f2a13b40d29d14120fbf1487ce8bd2da63d06c",
+    "sliceStart": 429695,
+    "sliceEndExclusive": 431501,
+    "sliceBytes": 1806,
+    "sliceSHA256": "2070c7b194414007f3da890c8d315c734b5f0dea26a653ab70e40251d108f26f",
+    "cfgPath": [
+      16,
+      "body",
+      65,
+      "body",
+      42,
+      "body",
+      17
+    ],
+    "guardStart": 429680,
+    "guardEndExclusive": 429693
+  },
+  "symbolicCases": 14796,
+  "setupCorrespondences": 5265,
+  "elapsedSeconds": 15.911554457619786,
+  "dagBridgeComponentBounds": 114,
+  "solverObligations": [
+    {
+      "name": "numeric-rule-add-commutes",
+      "z3": "unsat",
+      "cvc5": "unsat",
+      "z3Seconds": 0.0010498329065740108,
+      "cvc5Seconds": 0.002616290934383869,
+      "smt2SHA256": "e1a52abddda3e78ea8bf047184375694ede08bf80e4a464a3e7d0eeeb41d7288",
+      "scope": "All 64-bit operand encodings under explicit classified WebAssembly numeric-rule model; NaN payload/sign quotiented",
+      "trustedTransfer": "Reviewed correspondence of classified numeric rules to WebAssembly/IEEE64 add/mul; not a direct SMT floating-point-builtin proof"
+    },
+    {
+      "name": "numeric-rule-mul-commutes",
+      "z3": "unsat",
+      "cvc5": "unsat",
+      "z3Seconds": 0.00024083303287625313,
+      "cvc5Seconds": 0.0015151668339967728,
+      "smt2SHA256": "3c79cca5f78f7a76fd1132e7b498fc3545ec6e5eea93d82b4747a0763f352161",
+      "scope": "All 64-bit operand encodings under explicit classified WebAssembly numeric-rule model; NaN payload/sign quotiented",
+      "trustedTransfer": "Reviewed correspondence of classified numeric rules to WebAssembly/IEEE64 add/mul; not a direct SMT floating-point-builtin proof"
+    },
+    {
+      "name": "coefficient-affine-address-domain",
+      "z3": "unsat",
+      "cvc5": "unsat",
+      "z3Seconds": 0.1072797910310328,
+      "cvc5Seconds": 0.059920750092715025,
+      "smt2SHA256": "60b5a406a3ffa34687ef63197c30e414d55efc5a0d92f7dcc94b3b6484168f3d"
+    },
+    {
+      "name": "unrolled-loop-2-partition",
+      "z3": "unsat",
+      "cvc5": "unsat",
+      "z3Seconds": 0.00482366606593132,
+      "cvc5Seconds": 0.0046368748880922794,
+      "smt2SHA256": "41de8a361c8f05ab66846f8e2c86753a175da265aae6ccbd749adc8f48346f00"
+    },
+    {
+      "name": "unrolled-loop-4-partition",
+      "z3": "unsat",
+      "cvc5": "unsat",
+      "z3Seconds": 0.0019427081570029259,
+      "cvc5Seconds": 0.004599916748702526,
+      "smt2SHA256": "9455ecf678b766b4216e2be975f36ac8e777bf46163f29f88a1f91a646325a8e"
+    },
+    {
+      "name": "finite-cache-self-comparison",
+      "z3": "unsat",
+      "cvc5": "unsat",
+      "z3Seconds": 0.00014079129323363304,
+      "cvc5Seconds": 0.0008816667832434177,
+      "smt2SHA256": "13b088d760568afcbe5f73b6621a30615dfda8d162e290bdea1cd8ce09bfb3a3"
+    },
+    {
+      "name": "actual-selection-guard",
+      "z3": "unsat",
+      "cvc5": "unsat",
+      "z3Seconds": 0.0001498749479651451,
+      "cvc5Seconds": 0.0010055419988930225,
+      "smt2SHA256": "bed3d9e5e3537958da4091499367d0efbf87f0a2e26aaefc855eef767e9c0591"
+    },
+    {
+      "name": "actual-coefficient-base-address",
+      "z3": "unsat",
+      "cvc5": "unsat",
+      "z3Seconds": 0.001311667263507843,
+      "cvc5Seconds": 0.0011545000597834587,
+      "smt2SHA256": "16c5f88fd250558b92f8b5a100c619b64bf369bb4d3785133e37ca06112f765c"
+    },
+    {
+      "name": "source-exact-derivative-scale-1",
+      "z3": "unsat",
+      "cvc5": "unsat",
+      "z3Seconds": 2.8875190764665604e-05,
+      "cvc5Seconds": 0.0015404168516397476,
+      "smt2SHA256": "5fff4d01f463a2f07fe6a7f3c4841ab2a3fada90ca169087090444763b18a295"
+    },
+    {
+      "name": "source-exact-derivative-scale-2",
+      "z3": "unsat",
+      "cvc5": "unsat",
+      "z3Seconds": 4.120822995901108e-05,
+      "cvc5Seconds": 0.0016017500311136246,
+      "smt2SHA256": "1b2fb52bbe2c561a60e3aa1ac693e98c99117076b899efcbe2050b6541a9d798"
+    },
+    {
+      "name": "source-exact-derivative-scale-4",
+      "z3": "unsat",
+      "cvc5": "unsat",
+      "z3Seconds": 2.6792287826538086e-05,
+      "cvc5Seconds": 0.0015127910301089287,
+      "smt2SHA256": "f893488fdfd7245dd5d00292d07ddd7b58a11bf12487052e3c576c2bbb0564aa"
+    },
+    {
+      "name": "source-exact-derivative-scale-8",
+      "z3": "unsat",
+      "cvc5": "unsat",
+      "z3Seconds": 2.5791116058826447e-05,
+      "cvc5Seconds": 0.0014823339879512787,
+      "smt2SHA256": "c65cee91c47cf2d09e29cb103cfc93927866860cd74006416166d0d3c9441045"
+    }
+  ],
+  "negativeControls": [
+    {
+      "name": "position-multiply-to-add",
+      "productionByteOffset": 429886,
+      "fromOpcode": "f64.mul",
+      "rejected": true,
+      "reason": "Source/production memory mismatch [('ephem', 256), ('ephem', 264), ('ephem', 272), ('ephem', 280), ('ephem', 288), ('ephem', 296), ('ephem', 304), ('ephem', 312)]",
+      "actualWasmWitness": {
+        "different": true,
+        "observed": "Caller-visible cache and output; stack scratch excluded",
+        "firstChangedBytes": [
+          {
+            "address": 1284,
+            "original": "e0",
+            "mutated": "00"
+          },
+          {
+            "address": 1285,
+            "original": "bc",
+            "mutated": "03"
+          },
+          {
+            "address": 1286,
+            "original": "e9",
+            "mutated": "d0"
+          },
+          {
+            "address": 1292,
+            "original": "e0",
+            "mutated": "00"
+          },
+          {
+            "address": 1293,
+            "original": "bc",
+            "mutated": "03"
+          },
+          {
+            "address": 1294,
+            "original": "e9",
+            "mutated": "d0"
+          },
+          {
+            "address": 1300,
+            "original": "e0",
+            "mutated": "00"
+          },
+          {
+            "address": 1301,
+            "original": "bc",
+            "mutated": "03"
+          },
+          {
+            "address": 1302,
+            "original": "e9",
+            "mutated": "d0"
+          },
+          {
+            "address": 1309,
+            "original": "2c",
+            "mutated": "ab"
+          },
+          {
+            "address": 1310,
+            "original": "91",
+            "mutated": "bd"
+          },
+          {
+            "address": 1311,
+            "original": "3f",
+            "mutated": "bf"
+          },
+          {
+            "address": 1317,
+            "original": "2c",
+            "mutated": "ab"
+          },
+          {
+            "address": 1318,
+            "original": "91",
+            "mutated": "bd"
+          },
+          {
+            "address": 1319,
+            "original": "3f",
+            "mutated": "bf"
+          },
+          {
+            "address": 1325,
+            "original": "2c",
+            "mutated": "ab"
+          },
+          {
+            "address": 1326,
+            "original": "91",
+            "mutated": "bd"
+          },
+          {
+            "address": 1327,
+            "original": "3f",
+            "mutated": "bf"
+          },
+          {
+            "address": 1332,
+            "original": "c0",
+            "mutated": "80"
+          },
+          {
+            "address": 1333,
+            "original": "b5",
+            "mutated": "98"
+          },
+          {
+            "address": 1334,
+            "original": "c3",
+            "mutated": "b5"
+          },
+          {
+            "address": 1340,
+            "original": "c0",
+            "mutated": "80"
+          },
+          {
+            "address": 1341,
+            "original": "b5",
+            "mutated": "98"
+          },
+          {
+            "address": 1342,
+            "original": "c3",
+            "mutated": "b5"
+          }
+        ]
+      }
+    },
+    {
+      "name": "position-subtract-to-add",
+      "productionByteOffset": 429895,
+      "fromOpcode": "f64.sub",
+      "rejected": true,
+      "reason": "Source/production memory mismatch [('ephem', 256), ('ephem', 264), ('ephem', 272), ('ephem', 280), ('ephem', 288), ('ephem', 296), ('ephem', 304), ('ephem', 312)]",
+      "actualWasmWitness": {
+        "different": true,
+        "observed": "Caller-visible cache and output; stack scratch excluded",
+        "firstChangedBytes": [
+          {
+            "address": 1284,
+            "original": "e0",
+            "mutated": "20"
+          },
+          {
+            "address": 1285,
+            "original": "bc",
+            "mutated": "4b"
+          },
+          {
+            "address": 1286,
+            "original": "e9",
+            "mutated": "e0"
+          },
+          {
+            "address": 1287,
+            "original": "3f",
+            "mutated": "bf"
+          },
+          {
+            "address": 1292,
+            "original": "e0",
+            "mutated": "20"
+          },
+          {
+            "address": 1293,
+            "original": "bc",
+            "mutated": "4b"
+          },
+          {
+            "address": 1294,
+            "original": "e9",
+            "mutated": "e0"
+          },
+          {
+            "address": 1295,
+            "original": "3f",
+            "mutated": "bf"
+          },
+          {
+            "address": 1300,
+            "original": "e0",
+            "mutated": "20"
+          },
+          {
+            "address": 1301,
+            "original": "bc",
+            "mutated": "4b"
+          },
+          {
+            "address": 1302,
+            "original": "e9",
+            "mutated": "e0"
+          },
+          {
+            "address": 1303,
+            "original": "3f",
+            "mutated": "bf"
+          },
+          {
+            "address": 1308,
+            "original": "00",
+            "mutated": "40"
+          },
+          {
+            "address": 1309,
+            "original": "2c",
+            "mutated": "0d"
+          },
+          {
+            "address": 1310,
+            "original": "91",
+            "mutated": "d3"
+          },
+          {
+            "address": 1311,
+            "original": "3f",
+            "mutated": "bf"
+          },
+          {
+            "address": 1316,
+            "original": "00",
+            "mutated": "40"
+          },
+          {
+            "address": 1317,
+            "original": "2c",
+            "mutated": "0d"
+          },
+          {
+            "address": 1318,
+            "original": "91",
+            "mutated": "d3"
+          },
+          {
+            "address": 1319,
+            "original": "3f",
+            "mutated": "bf"
+          },
+          {
+            "address": 1324,
+            "original": "00",
+            "mutated": "40"
+          },
+          {
+            "address": 1325,
+            "original": "2c",
+            "mutated": "0d"
+          },
+          {
+            "address": 1326,
+            "original": "91",
+            "mutated": "d3"
+          },
+          {
+            "address": 1327,
+            "original": "3f",
+            "mutated": "bf"
+          }
+        ]
+      }
+    },
+    {
+      "name": "velocity-branch-inverted",
+      "productionByteOffset": 430355,
+      "fromOpcode": "i32.lt_s",
+      "rejected": true,
+      "reason": "Source/production memory mismatch [('ephem', 280), ('ephem', 288), ('ephem', 296), ('ephem', 304), ('ephem', 312), ('ephem', 320), ('ephem', 504), ('ephem', 512)]",
+      "actualWasmWitness": {
+        "different": true,
+        "observed": "Caller-visible cache and output; stack scratch excluded",
+        "firstChangedBytes": [
+          {
+            "address": 1309,
+            "original": "2c",
+            "mutated": "00"
+          },
+          {
+            "address": 1310,
+            "original": "91",
+            "mutated": "c0"
+          },
+          {
+            "address": 1317,
+            "original": "2c",
+            "mutated": "00"
+          },
+          {
+            "address": 1318,
+            "original": "91",
+            "mutated": "c0"
+          },
+          {
+            "address": 1325,
+            "original": "2c",
+            "mutated": "00"
+          },
+          {
+            "address": 1326,
+            "original": "91",
+            "mutated": "c0"
+          },
+          {
+            "address": 1332,
+            "original": "c0",
+            "mutated": "00"
+          },
+          {
+            "address": 1333,
+            "original": "b5",
+            "mutated": "00"
+          },
+          {
+            "address": 1334,
+            "original": "c3",
+            "mutated": "c0"
+          },
+          {
+            "address": 1335,
+            "original": "bf",
+            "mutated": "3f"
+          },
+          {
+            "address": 1340,
+            "original": "c0",
+            "mutated": "00"
+          },
+          {
+            "address": 1341,
+            "original": "b5",
+            "mutated": "00"
+          },
+          {
+            "address": 1342,
+            "original": "c3",
+            "mutated": "c0"
+          },
+          {
+            "address": 1343,
+            "original": "bf",
+            "mutated": "3f"
+          },
+          {
+            "address": 1348,
+            "original": "c0",
+            "mutated": "00"
+          },
+          {
+            "address": 1349,
+            "original": "b5",
+            "mutated": "00"
+          },
+          {
+            "address": 1350,
+            "original": "c3",
+            "mutated": "c0"
+          },
+          {
+            "address": 1351,
+            "original": "bf",
+            "mutated": "3f"
+          },
+          {
+            "address": 1534,
+            "original": "f8",
+            "mutated": "c0"
+          },
+          {
+            "address": 1542,
+            "original": "f5",
+            "mutated": "c0"
+          },
+          {
+            "address": 1543,
+            "original": "bf",
+            "mutated": "3f"
+          },
+          {
+            "address": 1549,
+            "original": "40",
+            "mutated": "00"
+          },
+          {
+            "address": 1550,
+            "original": "11",
+            "mutated": "c0"
+          },
+          {
+            "address": 1551,
+            "original": "c0",
+            "mutated": "3f"
+          }
+        ]
+      }
+    },
+    {
+      "name": "out-of-domain-twot-load",
+      "productionByteOffset": 429880,
+      "rejected": true,
+      "reason": "Out-of-bounds/unaligned Ptr(region='ephem', offset=4096)/8"
+    },
+    {
+      "name": "unsupported-opcode",
+      "productionByteOffset": 429886,
+      "rejected": true,
+      "reason": "Unsupported executed opcode f64.min"
+    }
+  ],
+  "checkerRegressions": {
+    "passed": true,
+    "tests": 17,
+    "failures": 0,
+    "errors": 0
+  },
+  "caseEvidenceSHA256": "ec7283d07eb210e1996b40ed45f2e36917c37600aa76edd107669fc697542e61",
+  "coverageSHA256": "47f6f659e78794f59724bd9cc909223d0482c433ca9e96ce0ea415f59fcd2cce",
+  "dagBridgeSHA256": "ed10a576c6c99aec46f69f0cdf100e59004615c0de6f7355192e26ff7046195c",
+  "domain": {
+    "ncf": "6..14",
+    "ncm": "1..3",
+    "quantities": "1..3",
+    "na": [
+      1,
+      2,
+      4,
+      8
+    ],
+    "subinterval": "symbolic L, 0<=L<na",
+    "warmCacheCounters": "2<=n_vel_avail<=n_posn_avail<=17",
+    "coldCacheCounters": "arbitrary i32 values; overwritten before read",
+    "floatingInputs": "all binary64 coefficient/cache encodings modulo NaN payload/sign; tc finite in [-1,1]; warm fp.eq(cached_tc,tc), cold not fp.eq(cached_tc,tc)",
+    "scale": "symbolic binary64 vfac; numeric-bound application requires exact vfac=(2*na)/32",
+    "buffers": "valid aligned disjoint coefficient/output/stack storage; output has ncm*quantities doubles; ephemeris fields use checked wasm32 layout; no address wrap"
+  },
+  "guarantee": "The selected actual production CFG slice preserves pinned source interp cache updates and all caller-visible floating outputs, under its entry-state/domain assumptions; arithmetic proof is symbolic, integer control exhaustive.",
+  "entryBoundary": "At the unique selected interpolation branch, after outer jpl_state date/modf/subinterval setup. Caller local-to-source mappings, successful I/O/cache record selection, and entry tc/vfac correctness are preconditions. The actual branch guard and all selected slice control are executed/validated.",
+  "numericBridge": "All 114 profile/component/quantity DAG expressions equal actual production output expressions for cold/recomputed interpolation. Applying existing forward bounds also requires coefficient envelopes, correct input tc, the rounding premise, and valid warm numerical cache prefixes. The comparison quotients NaN payload/sign and assumes they are not observed.",
+  "trustedBase": [
+    "Pinned-source narrow parser and reviewed source loop model",
+    "Binary decoder, bounded interpreter, affine-object memory model, exhaustive enumerator and congruence normalizer",
+    "Z3 and cvc5 for retained SMT lemmas",
+    "Reviewed correspondence of explicit classified add/mul numeric rules to WebAssembly/IEEE64 semantics; the direct native-FP commutativity queries timed out and are NOT counted",
+    "Host binary validator and WebAssembly engine for negative witnesses",
+    "C++ frontend for layout assertions"
+  ],
+  "limits": [
+    "Not a proof of whole jpl_state or the complete solver/compiler",
+    "No proof of reachability/entry mappings from function start, date/modf selection, I/O, absolute memory allocation or concurrency",
+    "No km-to-AU, barycentric subtraction, Earth/Moon combinations or physical ephemeris accuracy bound",
+    "Existing DAG kernel proofs and rounding premise have separate reports; this checker does not kernel-check its own interpreters",
+    "Warm arithmetic cache prefix correctness is external to numerical-bound application; translation equivalence itself permits arbitrary cached floating values"
+  ]
+}

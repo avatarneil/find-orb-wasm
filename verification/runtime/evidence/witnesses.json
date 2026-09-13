@@ -1,0 +1,233 @@
+{
+  "passed": true,
+  "status": "complete",
+  "binarySHA256": "256e850727f91a441f2344217a6a15727dfefcabb91f03b61e8d694d9d03cd57",
+  "inputSHA256": {
+    "dist/fo.wasm": "256e850727f91a441f2344217a6a15727dfefcabb91f03b61e8d694d9d03cd57",
+    "verification/runtime/machine.py": "fe8e84a3ab1dec4f340b9dcff20e81669c6d2094dfd27f51cf76e38f40984f25",
+    "verification/runtime/verify.py": "3a1ca74c0aa043b0f883e88bfe55ef941b0880edfa29febe4822c90176e9e688",
+    "verification/runtime/witnesses.py": "0b69bec599464770763aa46c3dde210f2068a3d827f410d0c27ffad6b0acf6d7",
+    "verification/runtime/replay.mjs": "148c45c68e9a8a6808132b53998024cb2f701f682d975ec9ac1c02a551d854f8"
+  },
+  "finiteCases": 310,
+  "mutations": [
+    {
+      "name": "__ashlti3",
+      "byteOffset": 501279,
+      "originalOpcode": "i64.shl",
+      "mutantOpcodeByte": 136,
+      "mutatedBinarySHA256": "4b10d7dad9b68b9e3388b4c24306d90df760417a2ce96d419f601c708ef8689f",
+      "witness": {
+        "name": "__ashlti3",
+        "lo": "262276",
+        "hi": "4611659114676764672",
+        "shift": 72,
+        "expected": "1238563391661119068067332096"
+      }
+    },
+    {
+      "name": "__lshrti3",
+      "byteOffset": 505122,
+      "originalOpcode": "i64.shr_u",
+      "mutantOpcodeByte": 134,
+      "mutatedBinarySHA256": "81a3f511c074def5b04f07feea6a441e786a96cee10f6686927d08dad0eec8ec",
+      "witness": {
+        "name": "__lshrti3",
+        "lo": "16659826314096686956",
+        "hi": "3603118408076116611",
+        "shift": 98,
+        "expected": "209729094"
+      }
+    },
+    {
+      "name": "__extenddftf2",
+      "byteOffset": 504080,
+      "originalOpcode": "i64.add",
+      "mutantOpcodeByte": 125,
+      "mutatedBinarySHA256": "40e96a5b54b0eb6d317c1d283b9c58f26178132fb8b1629e314b0fb8b20b524f",
+      "witness": {
+        "name": "__extenddftf2",
+        "lo": "6674334647771183841",
+        "hi": "0",
+        "shift": 0,
+        "expected": "87448663691452915693866608534671589376"
+      }
+    },
+    {
+      "name": "__trunctfdf2",
+      "byteOffset": 506976,
+      "originalOpcode": "i64.add",
+      "mutantOpcodeByte": 125,
+      "mutatedBinarySHA256": "1f257f97a1bcbdc00fc9ef3959fe92134caa2ca391f1e2db05f3df0d53955365",
+      "witness": {
+        "name": "__trunctfdf2",
+        "lo": "18137162730501863429",
+        "hi": "4394809548871827455",
+        "shift": 0,
+        "expected": "1141662505538420736"
+      }
+    }
+  ],
+  "checks": [
+    {
+      "name": "__ashlti3-mutated-result",
+      "z3": "sat",
+      "cvc5": "sat",
+      "smt2SHA256": "04ceb5179f1ff697857dbacb8aa3f4fb8765069820300ee86954738d92d7380d",
+      "z3Seconds": 0.015987500082701445,
+      "cvc5Seconds": 0.01317345816642046,
+      "cvc5ExtendedFP": false
+    },
+    {
+      "name": "__lshrti3-mutated-result",
+      "z3": "sat",
+      "cvc5": "sat",
+      "smt2SHA256": "701e7ee2fcf6b97e256920d4a6bc0f94828600c34118d23b25ea25cd444e79e0",
+      "z3Seconds": 0.012970124837011099,
+      "cvc5Seconds": 0.010307374875992537,
+      "cvc5ExtendedFP": false
+    },
+    {
+      "name": "__extenddftf2-mutated-result",
+      "z3": "sat",
+      "cvc5": "sat",
+      "smt2SHA256": "18f06480e21c73542ff1eec4b18cda583b5efd98cfcec8a6d38492a222369631",
+      "z3Seconds": 0.007778292056173086,
+      "cvc5Seconds": 0.012320915702730417,
+      "cvc5ExtendedFP": false
+    },
+    {
+      "name": "__trunctfdf2-mutated-result",
+      "z3": "sat",
+      "cvc5": "sat",
+      "smt2SHA256": "c4c923d248356c1aafa03314817432d0d383f3d7970ba2d770360d9cf40d541e",
+      "z3Seconds": 0.018305832985788584,
+      "cvc5Seconds": 0.011005708016455173,
+      "cvc5ExtendedFP": false
+    }
+  ],
+  "replay": {
+    "passed": true,
+    "node": "v25.9.0",
+    "records": [
+      {
+        "kind": "original",
+        "count": 310,
+        "observed": []
+      },
+      {
+        "kind": "original-witness",
+        "count": 1,
+        "observed": [
+          {
+            "name": "__ashlti3",
+            "lo": "262276",
+            "hi": "4611659114676764672",
+            "shift": 72,
+            "expected": "1238563391661119068067332096",
+            "actual": "1238563391661119068067332096"
+          }
+        ]
+      },
+      {
+        "kind": "mutant",
+        "count": 1,
+        "observed": [
+          {
+            "name": "__ashlti3",
+            "lo": "262276",
+            "hi": "4611659114676764672",
+            "shift": 72,
+            "expected": "1238563391661119068067332096",
+            "actual": "18889465931478580854784"
+          }
+        ]
+      },
+      {
+        "kind": "original-witness",
+        "count": 1,
+        "observed": [
+          {
+            "name": "__lshrti3",
+            "lo": "16659826314096686956",
+            "hi": "3603118408076116611",
+            "shift": 98,
+            "expected": "209729094",
+            "actual": "209729094"
+          }
+        ]
+      },
+      {
+        "kind": "mutant",
+        "count": 1,
+        "observed": [
+          {
+            "name": "__lshrti3",
+            "lo": "16659826314096686956",
+            "hi": "3603118408076116611",
+            "shift": 98,
+            "expected": "209729094",
+            "actual": "8372484228914348032"
+          }
+        ]
+      },
+      {
+        "kind": "original-witness",
+        "count": 1,
+        "observed": [
+          {
+            "name": "__extenddftf2",
+            "lo": "6674334647771183841",
+            "hi": "0",
+            "shift": 0,
+            "expected": "87448663691452915693866608534671589376",
+            "actual": "87448663691452915693866608534671589376"
+          }
+        ]
+      },
+      {
+        "kind": "mutant",
+        "count": 1,
+        "observed": [
+          {
+            "name": "__extenddftf2",
+            "lo": "6674334647771183841",
+            "hi": "0",
+            "shift": 0,
+            "expected": "87448663691452915693866608534671589376",
+            "actual": "268223671118201474408784368732798451712"
+          }
+        ]
+      },
+      {
+        "kind": "original-witness",
+        "count": 1,
+        "observed": [
+          {
+            "name": "__trunctfdf2",
+            "lo": "18137162730501863429",
+            "hi": "4394809548871827455",
+            "shift": 0,
+            "expected": "1141662505538420736",
+            "actual": "1141662505538420736"
+          }
+        ]
+      },
+      {
+        "kind": "mutant",
+        "count": 1,
+        "observed": [
+          {
+            "name": "__trunctfdf2",
+            "lo": "18137162730501863429",
+            "hi": "4394809548871827455",
+            "shift": 0,
+            "expected": "1141662505538420736",
+            "actual": "1141662505538420734"
+          }
+        ]
+      }
+    ]
+  },
+  "scope": "Execution corroboration of unchanged production bodies and four actual opcode mutations. Raw-bit WASM wrappers avoid JavaScript NaN payload conversion. Finite cases share the bit-field specification with the universal proof and are not independent proofs."
+}

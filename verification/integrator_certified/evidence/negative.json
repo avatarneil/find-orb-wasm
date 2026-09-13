@@ -1,0 +1,28 @@
+{
+  "passed": true,
+  "status": "complete",
+  "controls": [
+    {
+      "name": "wrong-first-stage-weight",
+      "rejected": true,
+      "stage": "Lean proof checking",
+      "sourceSHA256": "275ce990b33710e594ee5bee4920bf2f7a0060f2e079dee1cd24595a4e55b66a",
+      "logSHA256": "77736b99eb57ae478bd572bb235e80857c5691fb034d82cea82bf5fce470bbf3"
+    },
+    {
+      "name": "zero-rounding-budget",
+      "rejected": true,
+      "stage": "Lean proof checking",
+      "sourceSHA256": "77296719ec34c2ba73349d5241b7c7cc357f28604cb799ef1b9b4612a3a4f80a",
+      "logSHA256": "c887a26a6a1298c12efd459a0223c21adf119d88b6383b57c809ad639a94f514"
+    },
+    {
+      "name": "shifted-stage-time",
+      "rejected": true,
+      "stage": "strict source-function hash contract",
+      "expectedSHA256": "133a850a5393a2c6240590e42b65223eced81ae3eb7ed5e3d8acaecb003a33de",
+      "mutatedSHA256": "5634104d0b443504a3f2f12fefbf02a7278fa50857b755f2db3dc96bbbf07ff2",
+      "limitation": "The autonomous y'=y mathematical graph is invariant under stage-time changes. This control checks source identity, not sensitivity of the autonomous numerical theorem."
+    }
+  ]
+}

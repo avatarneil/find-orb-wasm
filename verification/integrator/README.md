@@ -87,6 +87,8 @@ These envelopes are exact rational calculations implementing mathematical induct
 
 ## Negative checks and limits
 
+The separate [connected linear-ODE development](../integrator_certified/README.md) now kernel-checks the stored-coefficient graph, exponential remainder, local endpoint bound and repeated-graph stability theorem for the prescribed `y'=y` domain. It retains the source's zero-reference operations and instantiates the [proved finite binary128 rounding model](../rounding/README.md). This extends the earlier Python envelope; it still does not prove the complete compiled integrator or astronomical force bounds.
+
 The analyzer rejects altered source hashes, a weight perturbation, a shifted stage time, an altered stage coefficient, treating PD stored error weights as exact subtraction, and an incorrect rounding-tie interpretation. The compiled driver's exact-zero gate rejects the smallest positive binary128 subnormal in either the state or error norm, even though converting that value to a Python display float produces zero. The original PD implementation itself supplies a compiled negative control. Exact rooted-tree enumeration is checked against known counts; all equation residuals remain inspectable.
 
 No result here proves that the complete astronomical orbit fit is correct, that all LLVM transformations preserve it, that the embedded estimate bounds physical uncertainty, or that a successful sanitizer/corpus run establishes universal memory safety. The strongest results are the source-backed exact Fehlberg order conditions, precisely bounded special domains, and reproduced defects/limitations that would have escaped ordinary orbit-output comparisons.

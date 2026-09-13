@@ -1,0 +1,662 @@
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/integrator_certified/RKFLinear.lean:13:31: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/integrator_certified/RKFLinear.lean:25:31: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/integrator_certified/RKFLinear.lean:37:31: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/integrator_certified/RKFLinear.lean:49:57: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/integrator_certified/RKFLinear.lean:59:94: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/integrator_certified/RKFLinear.lean:66:57: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/integrator_certified/RKFLinear.lean:76:94: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/integrator_certified/RKFLinear.lean:83:31: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/integrator_certified/RKFLinear.lean:95:57: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/integrator_certified/RKFLinear.lean:106:70: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/integrator_certified/RKFLinear.lean:113:57: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/integrator_certified/RKFLinear.lean:123:94: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/integrator_certified/RKFLinear.lean:130:57: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/integrator_certified/RKFLinear.lean:141:70: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/integrator_certified/RKFLinear.lean:148:57: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/integrator_certified/RKFLinear.lean:158:94: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/integrator_certified/RKFLinear.lean:165:58: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/integrator_certified/RKFLinear.lean:175:94: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/integrator_certified/RKFLinear.lean:182:59: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/integrator_certified/RKFLinear.lean:192:95: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/integrator_certified/RKFLinear.lean:199:32: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/integrator_certified/RKFLinear.lean:211:59: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/integrator_certified/RKFLinear.lean:222:71: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/integrator_certified/RKFLinear.lean:229:59: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/integrator_certified/RKFLinear.lean:239:95: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/integrator_certified/RKFLinear.lean:246:32: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/integrator_certified/RKFLinear.lean:258:60: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/integrator_certified/RKFLinear.lean:269:72: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/integrator_certified/RKFLinear.lean:276:60: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/integrator_certified/RKFLinear.lean:286:96: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/integrator_certified/RKFLinear.lean:293:59: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/integrator_certified/RKFLinear.lean:304:71: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/integrator_certified/RKFLinear.lean:311:59: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/integrator_certified/RKFLinear.lean:321:95: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/integrator_certified/RKFLinear.lean:328:59: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/integrator_certified/RKFLinear.lean:338:95: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/integrator_certified/RKFLinear.lean:345:59: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/integrator_certified/RKFLinear.lean:355:95: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/integrator_certified/RKFLinear.lean:362:32: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/integrator_certified/RKFLinear.lean:374:59: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/integrator_certified/RKFLinear.lean:385:71: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/integrator_certified/RKFLinear.lean:392:59: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/integrator_certified/RKFLinear.lean:402:95: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/integrator_certified/RKFLinear.lean:409:32: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/integrator_certified/RKFLinear.lean:421:60: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/integrator_certified/RKFLinear.lean:432:72: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/integrator_certified/RKFLinear.lean:439:60: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/integrator_certified/RKFLinear.lean:449:96: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/integrator_certified/RKFLinear.lean:456:32: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/integrator_certified/RKFLinear.lean:468:60: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/integrator_certified/RKFLinear.lean:479:72: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/integrator_certified/RKFLinear.lean:486:60: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/integrator_certified/RKFLinear.lean:496:96: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/integrator_certified/RKFLinear.lean:503:59: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/integrator_certified/RKFLinear.lean:514:71: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/integrator_certified/RKFLinear.lean:521:59: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/integrator_certified/RKFLinear.lean:531:95: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/integrator_certified/RKFLinear.lean:538:59: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/integrator_certified/RKFLinear.lean:548:95: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/integrator_certified/RKFLinear.lean:555:59: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/integrator_certified/RKFLinear.lean:565:95: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/integrator_certified/RKFLinear.lean:572:32: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/integrator_certified/RKFLinear.lean:584:59: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/integrator_certified/RKFLinear.lean:595:71: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/integrator_certified/RKFLinear.lean:602:59: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/integrator_certified/RKFLinear.lean:612:95: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/integrator_certified/RKFLinear.lean:619:32: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/integrator_certified/RKFLinear.lean:631:60: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/integrator_certified/RKFLinear.lean:642:72: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/integrator_certified/RKFLinear.lean:649:60: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/integrator_certified/RKFLinear.lean:659:96: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/integrator_certified/RKFLinear.lean:666:32: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/integrator_certified/RKFLinear.lean:678:60: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/integrator_certified/RKFLinear.lean:689:72: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/integrator_certified/RKFLinear.lean:696:60: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/integrator_certified/RKFLinear.lean:706:96: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/integrator_certified/RKFLinear.lean:713:32: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/integrator_certified/RKFLinear.lean:725:60: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/integrator_certified/RKFLinear.lean:736:72: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/integrator_certified/RKFLinear.lean:743:60: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/integrator_certified/RKFLinear.lean:753:96: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/integrator_certified/RKFLinear.lean:760:59: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/integrator_certified/RKFLinear.lean:771:71: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/integrator_certified/RKFLinear.lean:778:59: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/integrator_certified/RKFLinear.lean:788:95: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/integrator_certified/RKFLinear.lean:795:59: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/integrator_certified/RKFLinear.lean:805:95: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/integrator_certified/RKFLinear.lean:812:59: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/integrator_certified/RKFLinear.lean:822:95: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/integrator_certified/RKFLinear.lean:829:32: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/integrator_certified/RKFLinear.lean:841:59: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/integrator_certified/RKFLinear.lean:852:71: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/integrator_certified/RKFLinear.lean:859:59: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/integrator_certified/RKFLinear.lean:869:95: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/integrator_certified/RKFLinear.lean:876:32: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/integrator_certified/RKFLinear.lean:888:60: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/integrator_certified/RKFLinear.lean:899:72: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/integrator_certified/RKFLinear.lean:906:60: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/integrator_certified/RKFLinear.lean:916:96: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/integrator_certified/RKFLinear.lean:923:32: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/integrator_certified/RKFLinear.lean:935:60: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/integrator_certified/RKFLinear.lean:946:72: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/integrator_certified/RKFLinear.lean:953:60: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/integrator_certified/RKFLinear.lean:963:96: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/integrator_certified/RKFLinear.lean:970:32: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/integrator_certified/RKFLinear.lean:982:60: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/integrator_certified/RKFLinear.lean:993:72: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/integrator_certified/RKFLinear.lean:1000:60: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/integrator_certified/RKFLinear.lean:1010:96: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/integrator_certified/RKFLinear.lean:1017:32: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/integrator_certified/RKFLinear.lean:1029:60: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/integrator_certified/RKFLinear.lean:1040:72: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/integrator_certified/RKFLinear.lean:1047:60: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/integrator_certified/RKFLinear.lean:1057:96: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/integrator_certified/RKFLinear.lean:1064:59: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/integrator_certified/RKFLinear.lean:1075:71: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/integrator_certified/RKFLinear.lean:1082:59: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/integrator_certified/RKFLinear.lean:1092:95: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/integrator_certified/RKFLinear.lean:1099:59: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/integrator_certified/RKFLinear.lean:1109:95: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/integrator_certified/RKFLinear.lean:1116:59: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/integrator_certified/RKFLinear.lean:1126:95: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/integrator_certified/RKFLinear.lean:1133:32: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/integrator_certified/RKFLinear.lean:1145:59: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/integrator_certified/RKFLinear.lean:1156:71: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/integrator_certified/RKFLinear.lean:1163:59: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/integrator_certified/RKFLinear.lean:1173:95: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/integrator_certified/RKFLinear.lean:1180:32: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/integrator_certified/RKFLinear.lean:1192:60: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/integrator_certified/RKFLinear.lean:1203:72: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/integrator_certified/RKFLinear.lean:1210:60: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/integrator_certified/RKFLinear.lean:1220:96: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/integrator_certified/RKFLinear.lean:1227:32: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/integrator_certified/RKFLinear.lean:1239:60: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/integrator_certified/RKFLinear.lean:1250:72: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/integrator_certified/RKFLinear.lean:1257:60: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/integrator_certified/RKFLinear.lean:1267:96: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/integrator_certified/RKFLinear.lean:1274:32: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/integrator_certified/RKFLinear.lean:1286:60: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/integrator_certified/RKFLinear.lean:1297:72: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/integrator_certified/RKFLinear.lean:1304:60: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/integrator_certified/RKFLinear.lean:1314:96: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/integrator_certified/RKFLinear.lean:1321:32: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/integrator_certified/RKFLinear.lean:1333:60: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/integrator_certified/RKFLinear.lean:1344:72: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/integrator_certified/RKFLinear.lean:1351:60: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/integrator_certified/RKFLinear.lean:1361:96: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/integrator_certified/RKFLinear.lean:1368:32: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/integrator_certified/RKFLinear.lean:1380:60: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/integrator_certified/RKFLinear.lean:1391:72: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/integrator_certified/RKFLinear.lean:1398:60: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/integrator_certified/RKFLinear.lean:1408:96: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/integrator_certified/RKFLinear.lean:1415:59: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/integrator_certified/RKFLinear.lean:1426:71: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/integrator_certified/RKFLinear.lean:1433:59: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/integrator_certified/RKFLinear.lean:1443:95: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/integrator_certified/RKFLinear.lean:1450:59: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/integrator_certified/RKFLinear.lean:1460:95: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/neilgoldader/Documents/projects.nosync/find-orb-wasm/verification/integrator_certified/RKFLinear.lean:1470:62: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+'FindOrbLinear.RKFLinear.stored_vs_taylor' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbLinear.RKFLinear.local_error' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbLinear.RKFLinear.multiple_steps' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbLinear.RKFLinear.polynomial0' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbLinear.RKFLinear.error0' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbLinear.RKFLinear.polynomial1' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbLinear.RKFLinear.error1' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbLinear.RKFLinear.polynomial2' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbLinear.RKFLinear.error2' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbLinear.RKFLinear.polynomial3' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbLinear.RKFLinear.error3' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbLinear.RKFLinear.polynomial4' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbLinear.RKFLinear.error4' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbLinear.RKFLinear.polynomial5' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbLinear.RKFLinear.error5' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbLinear.RKFLinear.polynomial6' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbLinear.RKFLinear.error6' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbLinear.RKFLinear.polynomial7' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbLinear.RKFLinear.error7' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbLinear.RKFLinear.polynomial8' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbLinear.RKFLinear.error8' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbLinear.RKFLinear.polynomial9' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbLinear.RKFLinear.error9' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbLinear.RKFLinear.polynomial10' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbLinear.RKFLinear.error10' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbLinear.RKFLinear.polynomial11' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbLinear.RKFLinear.error11' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbLinear.RKFLinear.polynomial12' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbLinear.RKFLinear.error12' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbLinear.RKFLinear.polynomial13' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbLinear.RKFLinear.error13' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbLinear.RKFLinear.polynomial14' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbLinear.RKFLinear.error14' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbLinear.RKFLinear.polynomial15' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbLinear.RKFLinear.error15' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbLinear.RKFLinear.polynomial16' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbLinear.RKFLinear.error16' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbLinear.RKFLinear.polynomial17' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbLinear.RKFLinear.error17' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbLinear.RKFLinear.polynomial18' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbLinear.RKFLinear.error18' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbLinear.RKFLinear.polynomial19' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbLinear.RKFLinear.error19' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbLinear.RKFLinear.polynomial20' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbLinear.RKFLinear.error20' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbLinear.RKFLinear.polynomial21' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbLinear.RKFLinear.error21' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbLinear.RKFLinear.polynomial22' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbLinear.RKFLinear.error22' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbLinear.RKFLinear.polynomial23' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbLinear.RKFLinear.error23' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbLinear.RKFLinear.polynomial24' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbLinear.RKFLinear.error24' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbLinear.RKFLinear.polynomial25' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbLinear.RKFLinear.error25' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbLinear.RKFLinear.polynomial26' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbLinear.RKFLinear.error26' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbLinear.RKFLinear.polynomial27' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbLinear.RKFLinear.error27' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbLinear.RKFLinear.polynomial28' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbLinear.RKFLinear.error28' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbLinear.RKFLinear.polynomial29' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbLinear.RKFLinear.error29' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbLinear.RKFLinear.polynomial30' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbLinear.RKFLinear.error30' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbLinear.RKFLinear.polynomial31' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbLinear.RKFLinear.error31' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbLinear.RKFLinear.polynomial32' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbLinear.RKFLinear.error32' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbLinear.RKFLinear.polynomial33' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbLinear.RKFLinear.error33' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbLinear.RKFLinear.polynomial34' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbLinear.RKFLinear.error34' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbLinear.RKFLinear.polynomial35' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbLinear.RKFLinear.error35' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbLinear.RKFLinear.polynomial36' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbLinear.RKFLinear.error36' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbLinear.RKFLinear.polynomial37' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbLinear.RKFLinear.error37' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbLinear.RKFLinear.polynomial38' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbLinear.RKFLinear.error38' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbLinear.RKFLinear.polynomial39' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbLinear.RKFLinear.error39' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbLinear.RKFLinear.polynomial40' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbLinear.RKFLinear.error40' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbLinear.RKFLinear.polynomial41' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbLinear.RKFLinear.error41' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbLinear.RKFLinear.polynomial42' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbLinear.RKFLinear.error42' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbLinear.RKFLinear.polynomial43' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbLinear.RKFLinear.error43' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbLinear.RKFLinear.polynomial44' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbLinear.RKFLinear.error44' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbLinear.RKFLinear.polynomial45' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbLinear.RKFLinear.error45' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbLinear.RKFLinear.polynomial46' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbLinear.RKFLinear.error46' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbLinear.RKFLinear.polynomial47' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbLinear.RKFLinear.error47' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbLinear.RKFLinear.polynomial48' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbLinear.RKFLinear.error48' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbLinear.RKFLinear.polynomial49' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbLinear.RKFLinear.error49' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbLinear.RKFLinear.polynomial50' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbLinear.RKFLinear.error50' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbLinear.RKFLinear.polynomial51' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbLinear.RKFLinear.error51' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbLinear.RKFLinear.polynomial52' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbLinear.RKFLinear.error52' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbLinear.RKFLinear.polynomial53' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbLinear.RKFLinear.error53' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbLinear.RKFLinear.polynomial54' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbLinear.RKFLinear.error54' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbLinear.RKFLinear.polynomial55' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbLinear.RKFLinear.error55' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbLinear.RKFLinear.polynomial56' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbLinear.RKFLinear.error56' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbLinear.RKFLinear.polynomial57' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbLinear.RKFLinear.error57' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbLinear.RKFLinear.polynomial58' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbLinear.RKFLinear.error58' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbLinear.RKFLinear.polynomial59' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbLinear.RKFLinear.error59' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbLinear.RKFLinear.polynomial60' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbLinear.RKFLinear.error60' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbLinear.RKFLinear.polynomial61' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbLinear.RKFLinear.error61' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbLinear.RKFLinear.polynomial62' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbLinear.RKFLinear.error62' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbLinear.RKFLinear.polynomial63' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbLinear.RKFLinear.error63' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbLinear.RKFLinear.polynomial64' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbLinear.RKFLinear.error64' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbLinear.RKFLinear.polynomial65' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbLinear.RKFLinear.error65' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbLinear.RKFLinear.polynomial66' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbLinear.RKFLinear.error66' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbLinear.RKFLinear.polynomial67' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbLinear.RKFLinear.error67' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbLinear.RKFLinear.polynomial68' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbLinear.RKFLinear.error68' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbLinear.RKFLinear.polynomial69' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbLinear.RKFLinear.error69' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbLinear.RKFLinear.polynomial70' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbLinear.RKFLinear.error70' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbLinear.RKFLinear.polynomial71' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbLinear.RKFLinear.error71' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbLinear.RKFLinear.polynomial72' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbLinear.RKFLinear.error72' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbLinear.RKFLinear.polynomial73' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbLinear.RKFLinear.error73' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbLinear.RKFLinear.polynomial74' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbLinear.RKFLinear.error74' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbLinear.RKFLinear.polynomial75' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbLinear.RKFLinear.error75' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbLinear.RKFLinear.polynomial76' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbLinear.RKFLinear.error76' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbLinear.RKFLinear.polynomial77' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbLinear.RKFLinear.error77' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbLinear.RKFLinear.polynomial78' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbLinear.RKFLinear.error78' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbLinear.RKFLinear.polynomial79' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbLinear.RKFLinear.error79' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbLinear.RKFLinear.polynomial80' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbLinear.RKFLinear.error80' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbLinear.RKFLinear.polynomial81' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbLinear.RKFLinear.error81' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbLinear.RKFLinear.polynomial82' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbLinear.RKFLinear.error82' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbLinear.RKFLinear.polynomial83' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbLinear.RKFLinear.error83' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbLinear.RKFLinear.polynomial84' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbLinear.RKFLinear.error84' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbLinear.RKFLinear.polynomial85' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbLinear.RKFLinear.error85' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbLinear.RKFLinear.polynomial86' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbLinear.RKFLinear.error86' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbLinear.RKFLinear.polynomial87' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbLinear.RKFLinear.error87' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbLinear.RKFLinear.polynomial88' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbLinear.RKFLinear.error88' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbLinear.RKFLinear.polynomial89' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbLinear.RKFLinear.error89' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbLinear.RKFLinear.polynomial90' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbLinear.RKFLinear.error90' depends on axioms: [propext, Classical.choice, Quot.sound]

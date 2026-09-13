@@ -14,7 +14,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 REPORT = ROOT / 'verification/research-evidence.json'
 GENERATED = {'NumericalCertificates.lean', 'RoundedDAG.lean', 'IntegratorCertificates.lean',
-             'integrator-certificate-manifest.json'}
+             'integrator-certificate-manifest.json', 'RKFLinear.lean', 'PDLinear.lean'}
 
 
 def sha(path: Path) -> str:
@@ -28,7 +28,7 @@ def sha(path: Path) -> str:
 def inputs() -> dict[str, str]:
     files = [p for p in (ROOT / 'verification').rglob('*')
              if p.is_file() and 'evidence' not in p.parts and '__pycache__' not in p.parts
-             and p.suffix in {'.py', '.lean', '.json', '.txt'}
+             and p.suffix in {'.py', '.lean', '.json', '.txt', '.mjs', '.js', '.c', '.cpp', '.h'}
              and p.name not in GENERATED and p != REPORT]
     files += [ROOT / name for name in ['build/patches.mjs', 'build/build.mjs', 'build/pins.mjs',
               'dist/fo.wasm', 'dist/fo.js', 'dist/find-orb-worker.js', 'dist/find-orb.data',
@@ -43,6 +43,9 @@ def inputs() -> dict[str, str]:
     files += [ROOT / '.wasm-toolchain/upstream' / relative for relative in
               ['emscripten/emcc.py', 'emscripten/em++.py', 'emscripten/emscripten-version.txt',
                'bin/clang', 'bin/wasm-ld', 'bin/wasm-opt']]
+    runtime_root = ROOT / '.wasm-toolchain/upstream/emscripten/system/lib/compiler-rt/lib/builtins'
+    files += [runtime_root / name for name in ['extenddftf2.c', 'trunctfdf2.c',
+              'fp_extend_impl.inc', 'fp_trunc_impl.inc', 'ashlti3.c', 'lshrti3.c', 'int_lib.h', 'int_types.h']]
     return {str(p.relative_to(ROOT)): sha(p) for p in sorted(files)}
 
 
@@ -74,8 +77,16 @@ def main() -> None:
             ('ephemeris-certificates', ['verification/ephemeris/run.py', '--certificates-only']),
             ('ephemeris-runner-tests', ['verification/ephemeris/test_runner.py']),
             ('integrator-kernel-export', ['verification/kernel/generate_integrator.py']),
+            ('integrator-connected-export', ['verification/integrator_certified/generate.py']),
+            ('production-interpolation', ['verification/production/run.py']),
+            ('production-checker-tests', ['verification/production/test_checker.py']),
+            ('production-runtime', ['verification/runtime/verify.py']),
+            ('runtime-checker-tests', ['verification/runtime/test_machine.py']),
+            ('runtime-mutation-witnesses', ['verification/runtime/witnesses.py']),
             ('kernel-compile-and-replay', ['verification/kernel/check.py']),
             ('ephemeris-kernel-mutations', ['verification/ephemeris/kernel_negatives.py']),
+            ('rounding-controls', ['verification/rounding/run.py', '--negatives-only', '--modules', '.cache/kernel-modules']),
+            ('integrator-connected-mutations', ['verification/integrator_certified/negative.py']),
         ]
         expected_outputs = {
             'integrator-analysis': ['verification/integrator/evidence/analysis.json'],
@@ -83,8 +94,14 @@ def main() -> None:
             'translation-proof': ['verification/translation/evidence/report.json'],
             'ephemeris-certificates': ['verification/ephemeris/evidence/report.json'],
             'integrator-kernel-export': ['verification/kernel/integrator-certificate-manifest.json'],
+            'integrator-connected-export': ['verification/integrator_certified/evidence/certificate.json'],
+            'production-interpolation': ['verification/production/evidence/report.json'],
+            'production-runtime': ['verification/runtime/evidence/report.json'],
+            'runtime-mutation-witnesses': ['verification/runtime/evidence/witnesses.json'],
             'kernel-compile-and-replay': ['verification/kernel/evidence/report.json'],
             'ephemeris-kernel-mutations': ['verification/ephemeris/evidence/kernel-negatives.json'],
+            'rounding-controls': ['verification/rounding/evidence/central-controls.json'],
+            'integrator-connected-mutations': ['verification/integrator_certified/evidence/negative.json'],
         }
         for name, arguments in stages:
             print('Research stage: ' + name, flush=True)
@@ -120,8 +137,17 @@ def main() -> None:
             'verification/kernel/evidence/report.json',
             'verification/kernel/integrator-certificate-manifest.json',
             'verification/ephemeris/evidence/kernel-negatives.json',
+            'verification/production/evidence/report.json',
+            'verification/runtime/evidence/report.json',
+            'verification/runtime/evidence/witnesses.json',
+            'verification/rounding/evidence/central-controls.json',
+            'verification/integrator_certified/evidence/certificate.json',
+            'verification/integrator_certified/evidence/negative.json',
         ]]
         artifacts += [p for p in (ROOT / 'verification').rglob('*.lean')]
+        artifacts += [p for directory in ['production', 'runtime']
+                      for p in (ROOT / 'verification' / directory / 'evidence').rglob('*')
+                      if p.is_file() and p.suffix in {'.smt2', '.bin', '.wasm', '.json'}]
         report['artifactSHA256'] = {str(p.relative_to(ROOT)): sha(p) for p in sorted(artifacts)}
         report['kernelTheoremCount'] = kernel['theoremCount']
         report['status'], report['passed'] = 'complete', True

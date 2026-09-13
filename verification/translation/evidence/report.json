@@ -172,16 +172,16 @@
       "name": "lemma-sqrt-zero",
       "z3": "unsat",
       "cvc5": "unsat",
-      "z3Seconds": 0.15229220874607563,
-      "cvc5Seconds": 2.4535233327187598,
+      "z3Seconds": 0.15070883417502046,
+      "cvc5Seconds": 2.3414039998315275,
       "smt2SHA256": "0c834b5ff9b2b439fc96c7e3200ae159d3f90818829bfab185f256d6a4c54d53"
     },
     {
       "name": "O0-dot_product",
       "z3": "unsat",
       "cvc5": "unsat",
-      "z3Seconds": 6.379187107086182e-05,
-      "cvc5Seconds": 0.001494457945227623,
+      "z3Seconds": 6.737513467669487e-05,
+      "cvc5Seconds": 0.0014293752610683441,
       "smt2SHA256": "d9e55df80b5725fe937378af578bf3c47286ba50169c8e6099f68eb8acffb1c4",
       "dependsOn": [
         "lemma-sqrt-zero"
@@ -209,8 +209,8 @@
       "name": "O0-vector_cross_product",
       "z3": "unsat",
       "cvc5": "unsat",
-      "z3Seconds": 3.00002284348011e-05,
-      "cvc5Seconds": 0.0009429589845240116,
+      "z3Seconds": 4.650000482797623e-05,
+      "cvc5Seconds": 0.0010667089372873306,
       "smt2SHA256": "ee2e35216db9416ff0586e3a91352c93815d440a014e4b2197322c32c2ede81d",
       "dependsOn": [
         "lemma-sqrt-zero"
@@ -239,8 +239,8 @@
       "name": "O0-vector3_length",
       "z3": "unsat",
       "cvc5": "unsat",
-      "z3Seconds": 3.695813938975334e-05,
-      "cvc5Seconds": 0.0009369170293211937,
+      "z3Seconds": 4.1624996811151505e-05,
+      "cvc5Seconds": 0.0010264590382575989,
       "smt2SHA256": "bbd6e86e5473c433d95aef683bfa03517ea6c5e6a5b0525f9a912d85197353e5",
       "dependsOn": [
         "lemma-sqrt-zero"
@@ -269,8 +269,8 @@
       "name": "O0-normalize_vect3",
       "z3": "unsat",
       "cvc5": "unsat",
-      "z3Seconds": 0.014332041144371033,
-      "cvc5Seconds": 0.04043208295479417,
+      "z3Seconds": 0.01432779198512435,
+      "cvc5Seconds": 0.03879575012251735,
       "smt2SHA256": "2f73db705fe915f5e8af283d07266eca81d855ad0fabb08fdca41ef505bfc510",
       "dependsOn": [
         "lemma-sqrt-zero"
@@ -307,8 +307,8 @@
       "name": "O3-dot_product",
       "z3": "unsat",
       "cvc5": "unsat",
-      "z3Seconds": 5.8582983911037445e-05,
-      "cvc5Seconds": 0.0012921253219246864,
+      "z3Seconds": 6.675021722912788e-05,
+      "cvc5Seconds": 0.0012726252898573875,
       "smt2SHA256": "fa8b438464cd1fa0850abd5efcb5a3c84c39b776b2e7f0d1fc2e24a1e0ce1117",
       "dependsOn": [
         "lemma-sqrt-zero"
@@ -329,8 +329,8 @@
       "name": "O3-vector_cross_product",
       "z3": "unsat",
       "cvc5": "unsat",
-      "z3Seconds": 3.5833101719617844e-05,
-      "cvc5Seconds": 0.0010107923299074173,
+      "z3Seconds": 7.320893928408623e-05,
+      "cvc5Seconds": 0.0011610002256929874,
       "smt2SHA256": "3fa27e945bbb3fa54a2f5763c6fdf055641f02fb1917e5429c1337f67bd7f32b",
       "dependsOn": [
         "lemma-sqrt-zero"
@@ -352,8 +352,8 @@
       "name": "O3-vector3_length",
       "z3": "unsat",
       "cvc5": "unsat",
-      "z3Seconds": 3.479188308119774e-05,
-      "cvc5Seconds": 0.000879041850566864,
+      "z3Seconds": 5.3625088185071945e-05,
+      "cvc5Seconds": 0.0011016246862709522,
       "smt2SHA256": "a4986b772c590ac1bba48ede5169f31c70989d4de77cf2e82eaaa79f44a7a371",
       "dependsOn": [
         "lemma-sqrt-zero"
@@ -376,8 +376,8 @@
       "name": "O3-normalize_vect3",
       "z3": "unsat",
       "cvc5": "unsat",
-      "z3Seconds": 0.012099958024919033,
-      "cvc5Seconds": 0.0171936247497797,
+      "z3Seconds": 0.012448957655578852,
+      "cvc5Seconds": 0.017233291175216436,
       "smt2SHA256": "1a31215eb891773931c010933b81cacc80bf09ab898a3cd278907f76896cdcff",
       "dependsOn": [
         "lemma-sqrt-zero"
@@ -406,8 +406,8 @@
       "name": "shipped-vector_cross_product",
       "z3": "unsat",
       "cvc5": "unsat",
-      "z3Seconds": 6.250012665987015e-05,
-      "cvc5Seconds": 0.0012198337353765965,
+      "z3Seconds": 6.483402103185654e-05,
+      "cvc5Seconds": 0.0012767496518790722,
       "smt2SHA256": "8e23ce018457a57c76cf425ce4c6a79f83f75acb6d4d52e1dd25bd5868e9c2f3",
       "dependsOn": [
         "lemma-sqrt-zero"
@@ -429,33 +429,33 @@
       "name": "negative-add-to-sub",
       "z3": "sat",
       "cvc5": "sat",
-      "z3Seconds": 0.002495750319212675,
-      "cvc5Seconds": 0.0035207075998187065,
-      "smt2SHA256": "5c6fed64f65a7e454e678553b58f6c3544af29dec26153e695ff43fdc9ba2078"
+      "z3Seconds": 0.0023790420964360237,
+      "cvc5Seconds": 0.003382167313247919,
+      "smt2SHA256": "5d4a327da2589ee3266b4bfbf19901eaeb24f2bd924bd8949ad19c37d7fd4848"
     },
     {
       "name": "negative-multiply-to-add",
       "z3": "sat",
       "cvc5": "sat",
-      "z3Seconds": 0.0022224579006433487,
-      "cvc5Seconds": 0.003455166704952717,
-      "smt2SHA256": "1119bf29cd37d3700e5d3fb3dcddd144db8fe6c4879328cdd89d157715946d47"
+      "z3Seconds": 0.002297916915267706,
+      "cvc5Seconds": 0.003346499986946583,
+      "smt2SHA256": "939e3f6b68f20b55e159e9d83daba92f95a63d4fc729f57df2cdf4a206a9dee9"
     },
     {
       "name": "negative-invert-normalize-branch",
       "z3": "sat",
       "cvc5": "sat",
-      "z3Seconds": 0.0018579582683742046,
-      "cvc5Seconds": 0.0037234160117805004,
-      "smt2SHA256": "a204831ec22d9553249db84dee04b61740739ab1d6d6a23c897a30e589a0e6ac"
+      "z3Seconds": 0.0018820418044924736,
+      "cvc5Seconds": 0.00377958407625556,
+      "smt2SHA256": "c3c684699c22bcf2d8487b67663bfa7f48762125edb8559f4e073fed042518bd"
     },
     {
       "name": "negative-wrong-cross-store",
       "z3": "sat",
       "cvc5": "sat",
-      "z3Seconds": 0.0023207920603454113,
-      "cvc5Seconds": 0.00303862476721406,
-      "smt2SHA256": "52a1d67048da8323e6a62ab62f3a7a412fdc968c457b2ae28b8ee66da4619ab6"
+      "z3Seconds": 0.0023034168407320976,
+      "cvc5Seconds": 0.002966166939586401,
+      "smt2SHA256": "e7be429ff96170f5206b3861fcbb39bef3fae648e86c3e8c603f2cb4ebc25efa"
     }
   ],
   "negativeControls": [

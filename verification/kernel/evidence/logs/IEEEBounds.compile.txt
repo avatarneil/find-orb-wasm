@@ -1,0 +1,8 @@
+'FindOrbRounding.power_scale' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbRounding.half_minimum_subnormal' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbRounding.conservative_subnormal' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbRounding.binary64_error' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbRounding.binary128_error' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbRounding.binary64_roundingModel' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbRounding.binary128_conservative_error' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbRounding.binary128_bounded_error' depends on axioms: [propext, Classical.choice, Quot.sound]

@@ -6,6 +6,8 @@ Extracted from the latest `webastrometrica` `origin/main` at `c86e53ccf9fa662bc4
 
 Read the [correctness research](docs/correctness-research.html) for kernel-checked numerical theorems, restricted translation validation of selected WASM functions, and reproduced integrator defects. The [earlier performance study](docs/findings.html) records native/WASM benchmarks and the **6.33 MB** compact data download.
 
+[GitHub release v0.1.0](https://github.com/avatarneil/find-orb-wasm/releases/tag/v0.1.0) preserves the initial unoptimized port at `fe8a88d`, with its runtime, full dataset, corresponding source, license notices, checksums, and seven-case accuracy results. Subsequent optimizations and correctness research are on `main`; the initial release predates them.
+
 ## Build
 
 Requires Node 24+, Git, GNU make, Python 3.10+, and a C/C++ toolchain on macOS or Linux. All downloads and builds remain local.
@@ -116,6 +118,8 @@ npm run report:research
 The first command uses the macOS SDK's Python; on Linux, substitute an installed Python 3.12+ executable. The setup downloads checksum-pinned Lean 4.24.0 and a pinned mathlib/dependency tree into `.cache/`; allow several GB of disk space. Verification uses local tools and data. A complete run takes several minutes and writes `verification/research-evidence.json`; failed reruns invalidate success. `npm run verify:kernel` checks only existing Lean artifacts and does not regenerate their source/data correspondence evidence.
 
 The suite combines explicit real/rational theorems checked and replayed from an empty Lean kernel environment, source-anchored coefficient scans and certificates, restricted source-to-WASM equivalence checked by Z3 and cvc5, native/WASM integrator comparisons, and deliberately invalid proofs/programs. See the [kernel trusted base](verification/kernel/README.md), [ephemeris scope](verification/ephemeris/README.md), and [compiler scope](verification/translation/README.md). It does **not** prove the complete solver, compiler toolchain, astronomical model, or browser correct.
+
+The extended suite derives rounding bounds from [finite-format nearest selection](verification/rounding/README.md), proves connected [linear-ODE integrator bounds](verification/integrator_certified/README.md), validates the [retained production interpolation slice](verification/production/README.md), and checks [production binary128 conversions and shifts](verification/runtime/README.md). Each result states its domain and remaining implementation assumptions.
 
 ## Rebuild corresponding source
 

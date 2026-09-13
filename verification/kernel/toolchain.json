@@ -17,7 +17,10 @@
     "cacheModules": [
       "Mathlib.Tactic.Ring", "Mathlib.Tactic.Linarith", "Mathlib.Tactic.NormNum",
       "Mathlib.Data.Real.Basic", "Mathlib.Algebra.Polynomial.Derivative",
-      "Mathlib.Analysis.Calculus.Deriv.Polynomial"
+      "Mathlib.Analysis.Calculus.Deriv.Polynomial",
+      "Mathlib.Data.Real.Archimedean", "Mathlib.Algebra.Order.Floor.Ring",
+      "Mathlib.Data.Finset.Max", "Mathlib.Data.Fintype.Prod", "Mathlib.Data.Nat.Find",
+      "Mathlib.Analysis.SpecialFunctions.ExpDeriv", "Mathlib.Tactic.Positivity"
     ]
   },
   "provenance": "Lean asset SHA256s from official GitHub release API; mathlib tag resolved by git. Downloads remain under .cache; no global installation."

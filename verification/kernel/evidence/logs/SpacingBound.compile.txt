@@ -1,0 +1,5 @@
+'FindOrbRounding.grid_value_representable' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbRounding.exists_close_value_nonnegative' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbRounding.value_negate' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbRounding.roundFormat_error' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FindOrbRounding.any_nearest_error' depends on axioms: [propext, Classical.choice, Quot.sound]

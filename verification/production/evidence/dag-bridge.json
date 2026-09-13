@@ -1,0 +1,800 @@
+[
+  {
+    "profile": "mercury",
+    "component": 0,
+    "quantity": "position",
+    "certificateNode": 211,
+    "normalizedExpressionSHA256": "d3393e0b6af0eeae1d6f55eac621a80b4279c2be39a0bfc978633a0806fbb470"
+  },
+  {
+    "profile": "mercury",
+    "component": 0,
+    "quantity": "velocity",
+    "certificateNode": 239,
+    "normalizedExpressionSHA256": "3a05a2a327a0aa1ac4e8fdff421c3366ec8a11161535fe942ac5b2f5184b0b8f"
+  },
+  {
+    "profile": "mercury",
+    "component": 0,
+    "quantity": "acceleration",
+    "certificateNode": 270,
+    "normalizedExpressionSHA256": "cc3e16cc638658eb7dd6ffe119607b7a5b0cfed8f5bfd145acabc35e05bc397e"
+  },
+  {
+    "profile": "mercury",
+    "component": 1,
+    "quantity": "position",
+    "certificateNode": 211,
+    "normalizedExpressionSHA256": "cc9eb52ec87d7bc2ec7470dc392a0ba4cd740c0e7436528d4216034cd218a3c4"
+  },
+  {
+    "profile": "mercury",
+    "component": 1,
+    "quantity": "velocity",
+    "certificateNode": 239,
+    "normalizedExpressionSHA256": "0d80e3a976bc2a34b4424640f85f2313159cae95a4811c7cb8cf1a5f47554495"
+  },
+  {
+    "profile": "mercury",
+    "component": 1,
+    "quantity": "acceleration",
+    "certificateNode": 270,
+    "normalizedExpressionSHA256": "e7c09dbcf4a8a1dd249c3bbfcffae4de430d99b034f875e504d9ec36e2811311"
+  },
+  {
+    "profile": "mercury",
+    "component": 2,
+    "quantity": "position",
+    "certificateNode": 211,
+    "normalizedExpressionSHA256": "e3ae31d74fdf45740a32f99273c401cb73abaa4e5e0f2751215cab328007872d"
+  },
+  {
+    "profile": "mercury",
+    "component": 2,
+    "quantity": "velocity",
+    "certificateNode": 239,
+    "normalizedExpressionSHA256": "0d9235e4a806eaebf812d9cbce1bf99fbe9056a8c300daafcefa8461ffc6a9b6"
+  },
+  {
+    "profile": "mercury",
+    "component": 2,
+    "quantity": "acceleration",
+    "certificateNode": 270,
+    "normalizedExpressionSHA256": "9ce7d00fa5fda3bb92b2b307dea71d5fb7b65fd1248b9ac2b0316fba154b70e4"
+  },
+  {
+    "profile": "venus",
+    "component": 0,
+    "quantity": "position",
+    "certificateNode": 300,
+    "normalizedExpressionSHA256": "280cca5d862956782509098611b2426870d332a40917ad3660c45535d5569957"
+  },
+  {
+    "profile": "venus",
+    "component": 0,
+    "quantity": "velocity",
+    "certificateNode": 320,
+    "normalizedExpressionSHA256": "21974a369de4eed5e68c9ebde5b319cb109cb00859b5fc6071ac29bb7670b1be"
+  },
+  {
+    "profile": "venus",
+    "component": 0,
+    "quantity": "acceleration",
+    "certificateNode": 343,
+    "normalizedExpressionSHA256": "4bcbe746e548b98a8fdd1f1318b766ce127303361397a7ba3fb3d6b91e257dfa"
+  },
+  {
+    "profile": "venus",
+    "component": 1,
+    "quantity": "position",
+    "certificateNode": 300,
+    "normalizedExpressionSHA256": "ece11f1ff09b2a8fd74f700c0d339cad9139a7a73730c1839b09d84658f76cfd"
+  },
+  {
+    "profile": "venus",
+    "component": 1,
+    "quantity": "velocity",
+    "certificateNode": 320,
+    "normalizedExpressionSHA256": "89604880e23f7e510b49221562849b54a795b8a53eeedf71f96cdbd03e09dff5"
+  },
+  {
+    "profile": "venus",
+    "component": 1,
+    "quantity": "acceleration",
+    "certificateNode": 343,
+    "normalizedExpressionSHA256": "eb7fcbd79cf5b68d5799a16166316b890a90822bbdca6dd24e3ed107190880ba"
+  },
+  {
+    "profile": "venus",
+    "component": 2,
+    "quantity": "position",
+    "certificateNode": 300,
+    "normalizedExpressionSHA256": "a7e8130d0e9875ff0ebb332c386bd5e070b1120827112402a5333b85b4e1c8ba"
+  },
+  {
+    "profile": "venus",
+    "component": 2,
+    "quantity": "velocity",
+    "certificateNode": 320,
+    "normalizedExpressionSHA256": "aa046a1ca08ecb0d00bd3b7caa3fbb279e00e4baf3172f4ffaf005bfe9234eb9"
+  },
+  {
+    "profile": "venus",
+    "component": 2,
+    "quantity": "acceleration",
+    "certificateNode": 343,
+    "normalizedExpressionSHA256": "8a8e9d17b572acffd3576553dd5e4cff96e305a32b98691815e97ebd6cacb864"
+  },
+  {
+    "profile": "earth-moon-barycenter",
+    "component": 0,
+    "quantity": "position",
+    "certificateNode": 382,
+    "normalizedExpressionSHA256": "69d8a58bdedccbe3031ccd62db96a6ac03bafaf3b47201e1048698854deb8ccc"
+  },
+  {
+    "profile": "earth-moon-barycenter",
+    "component": 0,
+    "quantity": "velocity",
+    "certificateNode": 408,
+    "normalizedExpressionSHA256": "70f9f9b855299e83f03bc56333887d6d01dc12dd15986442b03ba55dd74abeb8"
+  },
+  {
+    "profile": "earth-moon-barycenter",
+    "component": 0,
+    "quantity": "acceleration",
+    "certificateNode": 437,
+    "normalizedExpressionSHA256": "4e4c31d6ef49d338bcdb88a1f1c7a62fcad246b95eaf152a7666f3744de0b5c2"
+  },
+  {
+    "profile": "earth-moon-barycenter",
+    "component": 1,
+    "quantity": "position",
+    "certificateNode": 382,
+    "normalizedExpressionSHA256": "8f3841315cc8022aab1606ea4f3068b7ed5a04ba07b286a7e9155988115bb786"
+  },
+  {
+    "profile": "earth-moon-barycenter",
+    "component": 1,
+    "quantity": "velocity",
+    "certificateNode": 408,
+    "normalizedExpressionSHA256": "1adb8994357a0ec954b1f112884a7caa883db3e185bbbde62c0851b9e8ee10bc"
+  },
+  {
+    "profile": "earth-moon-barycenter",
+    "component": 1,
+    "quantity": "acceleration",
+    "certificateNode": 437,
+    "normalizedExpressionSHA256": "1d5ca98f7935645a34c4a92ab38926040d4dfe841af606b86062429777083b37"
+  },
+  {
+    "profile": "earth-moon-barycenter",
+    "component": 2,
+    "quantity": "position",
+    "certificateNode": 382,
+    "normalizedExpressionSHA256": "1cd6a95530718a4d57546df1ec409503fb36e2916e08921d5fc5f22c80e70e70"
+  },
+  {
+    "profile": "earth-moon-barycenter",
+    "component": 2,
+    "quantity": "velocity",
+    "certificateNode": 408,
+    "normalizedExpressionSHA256": "2acfc7e12fd39779f47d6203aba35b46b5b3010f4de657798476e119846ea6af"
+  },
+  {
+    "profile": "earth-moon-barycenter",
+    "component": 2,
+    "quantity": "acceleration",
+    "certificateNode": 437,
+    "normalizedExpressionSHA256": "77fa3b88c949d22fe7bfca3456582307421792543cfa00a67360b65751e62ddf"
+  },
+  {
+    "profile": "mars",
+    "component": 0,
+    "quantity": "position",
+    "certificateNode": 470,
+    "normalizedExpressionSHA256": "932d1cff42566538fa43b364c757494950621f900b4e96bd26dffa5053880761"
+  },
+  {
+    "profile": "mars",
+    "component": 0,
+    "quantity": "velocity",
+    "certificateNode": 492,
+    "normalizedExpressionSHA256": "578cfae4c2473f3b88a692f864ff63bb97fef5da583cd63baeab40d73250ddf7"
+  },
+  {
+    "profile": "mars",
+    "component": 0,
+    "quantity": "acceleration",
+    "certificateNode": 517,
+    "normalizedExpressionSHA256": "f8b3a9fce1b54fef867b2e4c9bd29699376d46c2e23cc7f326ee94382ae4299c"
+  },
+  {
+    "profile": "mars",
+    "component": 1,
+    "quantity": "position",
+    "certificateNode": 470,
+    "normalizedExpressionSHA256": "65576a2e89f3c21d801c46b76cc80a178bb6238534b978109219384286ff8a2f"
+  },
+  {
+    "profile": "mars",
+    "component": 1,
+    "quantity": "velocity",
+    "certificateNode": 492,
+    "normalizedExpressionSHA256": "db87c7a8b467cdb34c8509695200fa2b8e4cbea6488d35351d1a3e2951f58c13"
+  },
+  {
+    "profile": "mars",
+    "component": 1,
+    "quantity": "acceleration",
+    "certificateNode": 517,
+    "normalizedExpressionSHA256": "98667fa9d617f6014073974741337001e4abc3efcb5dd13d4e70dafd7f870ad1"
+  },
+  {
+    "profile": "mars",
+    "component": 2,
+    "quantity": "position",
+    "certificateNode": 470,
+    "normalizedExpressionSHA256": "e676b04e7269f3032dfe35a166b274fa719b1479d4ae7e5add55c330be6bad78"
+  },
+  {
+    "profile": "mars",
+    "component": 2,
+    "quantity": "velocity",
+    "certificateNode": 492,
+    "normalizedExpressionSHA256": "cf115aba82af2a86c7ce993fafe8ead44c2bd5560df5ca0570b67f06e3666894"
+  },
+  {
+    "profile": "mars",
+    "component": 2,
+    "quantity": "acceleration",
+    "certificateNode": 517,
+    "normalizedExpressionSHA256": "f1703988f2073def744a9bf17c3be637beaeb83c6bdab29a2f4134da9e3772d1"
+  },
+  {
+    "profile": "jupiter",
+    "component": 0,
+    "quantity": "position",
+    "certificateNode": 541,
+    "normalizedExpressionSHA256": "5497ac7712befa83fee81e0483edcb45adccd9316f63b9c12baeed720937d7f9"
+  },
+  {
+    "profile": "jupiter",
+    "component": 0,
+    "quantity": "velocity",
+    "certificateNode": 557,
+    "normalizedExpressionSHA256": "1a9b3f0cacc2663df92aaf3461812040afb6dff4e6ede8381be7aa85146c1a51"
+  },
+  {
+    "profile": "jupiter",
+    "component": 0,
+    "quantity": "acceleration",
+    "certificateNode": 576,
+    "normalizedExpressionSHA256": "4cde2884ed2baed26c5d7221ea7c94ccc433b28f5311d2d061f63235033ff0ba"
+  },
+  {
+    "profile": "jupiter",
+    "component": 1,
+    "quantity": "position",
+    "certificateNode": 541,
+    "normalizedExpressionSHA256": "787c02d43d5930c1e4fdc4203ff193e3a6567085e7c9e696f113731a6ca51b9d"
+  },
+  {
+    "profile": "jupiter",
+    "component": 1,
+    "quantity": "velocity",
+    "certificateNode": 557,
+    "normalizedExpressionSHA256": "8ddcbb2e173d6c134bd45af7df6102c1cb7f938a039305582f71b335456ce6a3"
+  },
+  {
+    "profile": "jupiter",
+    "component": 1,
+    "quantity": "acceleration",
+    "certificateNode": 576,
+    "normalizedExpressionSHA256": "075b17e549861a3d0c84af61086a4d57182f33352919c3a8d80d519e476eb4e6"
+  },
+  {
+    "profile": "jupiter",
+    "component": 2,
+    "quantity": "position",
+    "certificateNode": 541,
+    "normalizedExpressionSHA256": "0f755f64ddd6df753a5a10c037a6e08080c71f72b1fc057449ea32915e121361"
+  },
+  {
+    "profile": "jupiter",
+    "component": 2,
+    "quantity": "velocity",
+    "certificateNode": 557,
+    "normalizedExpressionSHA256": "f41265986ab736343ab80ebbae538c76e03c5c76c9800de059a7668da10d9773"
+  },
+  {
+    "profile": "jupiter",
+    "component": 2,
+    "quantity": "acceleration",
+    "certificateNode": 576,
+    "normalizedExpressionSHA256": "c4c4b7f4f3b2734891720eb48c9f47615887a86dbd4345f81dee82c81b729c0c"
+  },
+  {
+    "profile": "saturn",
+    "component": 0,
+    "quantity": "position",
+    "certificateNode": 597,
+    "normalizedExpressionSHA256": "87677dc947c2d28a652f7262dbd668b249be4443dc9bd411bd735560f68c7c03"
+  },
+  {
+    "profile": "saturn",
+    "component": 0,
+    "quantity": "velocity",
+    "certificateNode": 611,
+    "normalizedExpressionSHA256": "45ef0d98e671d87b198cc9c83a526d237e704404741a2fcce091ab1feb55c26b"
+  },
+  {
+    "profile": "saturn",
+    "component": 0,
+    "quantity": "acceleration",
+    "certificateNode": 628,
+    "normalizedExpressionSHA256": "f70ec04bb20673f0dda32ddf5ff133247e6fcd6ec9b924f3ec1d067f785ec29c"
+  },
+  {
+    "profile": "saturn",
+    "component": 1,
+    "quantity": "position",
+    "certificateNode": 597,
+    "normalizedExpressionSHA256": "699b7e446f06506df816789c446b6f733ce541da26d27916f659a061fdbc425a"
+  },
+  {
+    "profile": "saturn",
+    "component": 1,
+    "quantity": "velocity",
+    "certificateNode": 611,
+    "normalizedExpressionSHA256": "66f19549f71fa56e7d56a1f4571f1d552f01088b9c7b648a46acb14579403726"
+  },
+  {
+    "profile": "saturn",
+    "component": 1,
+    "quantity": "acceleration",
+    "certificateNode": 628,
+    "normalizedExpressionSHA256": "140d628e93f7a198989f2cf2bde745464b5a058eb4c5b54922972f21ea7325af"
+  },
+  {
+    "profile": "saturn",
+    "component": 2,
+    "quantity": "position",
+    "certificateNode": 597,
+    "normalizedExpressionSHA256": "3492fa7bf92423797197dbcb631a1cecd56a8aec2b979a4c4c4432ddd90f7dae"
+  },
+  {
+    "profile": "saturn",
+    "component": 2,
+    "quantity": "velocity",
+    "certificateNode": 611,
+    "normalizedExpressionSHA256": "5146377551584bd3f6221e97915fe3cf60b22ae213803fd12ffc8c3e36b9753a"
+  },
+  {
+    "profile": "saturn",
+    "component": 2,
+    "quantity": "acceleration",
+    "certificateNode": 628,
+    "normalizedExpressionSHA256": "8c20129c6f3df9d00dbddfae6d9e762cc8ef544a4576718947b0b7442713c6c9"
+  },
+  {
+    "profile": "uranus",
+    "component": 0,
+    "quantity": "position",
+    "certificateNode": 646,
+    "normalizedExpressionSHA256": "e1b454b33eae5a1b1621fe54a99f9f876060f369491dc4d0c9cb22e8a4a185ec"
+  },
+  {
+    "profile": "uranus",
+    "component": 0,
+    "quantity": "velocity",
+    "certificateNode": 658,
+    "normalizedExpressionSHA256": "a826603826d9aa421ba6a7e3930874e64858c4dc6d4ee30f9fdf5c05d40c4e25"
+  },
+  {
+    "profile": "uranus",
+    "component": 0,
+    "quantity": "acceleration",
+    "certificateNode": 673,
+    "normalizedExpressionSHA256": "cb2c7a8bf04c7d24fa0e466d7bed8f1d8b629f2b40a39524486e47cf5632dd00"
+  },
+  {
+    "profile": "uranus",
+    "component": 1,
+    "quantity": "position",
+    "certificateNode": 646,
+    "normalizedExpressionSHA256": "d8741756cf8ce267a3fcc91fc0aadb6840ad989414b37c2a93aa3c5af966c6aa"
+  },
+  {
+    "profile": "uranus",
+    "component": 1,
+    "quantity": "velocity",
+    "certificateNode": 658,
+    "normalizedExpressionSHA256": "30feb28f777d1272f71e2e0e1bf8ad1a13218385d441c6047f2f11c737e355de"
+  },
+  {
+    "profile": "uranus",
+    "component": 1,
+    "quantity": "acceleration",
+    "certificateNode": 673,
+    "normalizedExpressionSHA256": "cb8610ac1157300ccbd907b2822f4d5709d29022eee19c0ea24a107b8de34f34"
+  },
+  {
+    "profile": "uranus",
+    "component": 2,
+    "quantity": "position",
+    "certificateNode": 646,
+    "normalizedExpressionSHA256": "e7828e14297e2ddcc205146b5ad5b093362bb53ab1f829291c577bb01ef109da"
+  },
+  {
+    "profile": "uranus",
+    "component": 2,
+    "quantity": "velocity",
+    "certificateNode": 658,
+    "normalizedExpressionSHA256": "2a96e407b37935e7c4f1651fcb6cdbce27b34b7d27eb8c032f1a9844c0abbdb0"
+  },
+  {
+    "profile": "uranus",
+    "component": 2,
+    "quantity": "acceleration",
+    "certificateNode": 673,
+    "normalizedExpressionSHA256": "9e0c56587c9b4dd8eb7befcbf1093050151b9afb3d547ddedae1e83559a8fce6"
+  },
+  {
+    "profile": "neptune",
+    "component": 0,
+    "quantity": "position",
+    "certificateNode": 691,
+    "normalizedExpressionSHA256": "e1b454b33eae5a1b1621fe54a99f9f876060f369491dc4d0c9cb22e8a4a185ec"
+  },
+  {
+    "profile": "neptune",
+    "component": 0,
+    "quantity": "velocity",
+    "certificateNode": 703,
+    "normalizedExpressionSHA256": "a826603826d9aa421ba6a7e3930874e64858c4dc6d4ee30f9fdf5c05d40c4e25"
+  },
+  {
+    "profile": "neptune",
+    "component": 0,
+    "quantity": "acceleration",
+    "certificateNode": 718,
+    "normalizedExpressionSHA256": "cb2c7a8bf04c7d24fa0e466d7bed8f1d8b629f2b40a39524486e47cf5632dd00"
+  },
+  {
+    "profile": "neptune",
+    "component": 1,
+    "quantity": "position",
+    "certificateNode": 691,
+    "normalizedExpressionSHA256": "d8741756cf8ce267a3fcc91fc0aadb6840ad989414b37c2a93aa3c5af966c6aa"
+  },
+  {
+    "profile": "neptune",
+    "component": 1,
+    "quantity": "velocity",
+    "certificateNode": 703,
+    "normalizedExpressionSHA256": "30feb28f777d1272f71e2e0e1bf8ad1a13218385d441c6047f2f11c737e355de"
+  },
+  {
+    "profile": "neptune",
+    "component": 1,
+    "quantity": "acceleration",
+    "certificateNode": 718,
+    "normalizedExpressionSHA256": "cb8610ac1157300ccbd907b2822f4d5709d29022eee19c0ea24a107b8de34f34"
+  },
+  {
+    "profile": "neptune",
+    "component": 2,
+    "quantity": "position",
+    "certificateNode": 691,
+    "normalizedExpressionSHA256": "e7828e14297e2ddcc205146b5ad5b093362bb53ab1f829291c577bb01ef109da"
+  },
+  {
+    "profile": "neptune",
+    "component": 2,
+    "quantity": "velocity",
+    "certificateNode": 703,
+    "normalizedExpressionSHA256": "2a96e407b37935e7c4f1651fcb6cdbce27b34b7d27eb8c032f1a9844c0abbdb0"
+  },
+  {
+    "profile": "neptune",
+    "component": 2,
+    "quantity": "acceleration",
+    "certificateNode": 718,
+    "normalizedExpressionSHA256": "9e0c56587c9b4dd8eb7befcbf1093050151b9afb3d547ddedae1e83559a8fce6"
+  },
+  {
+    "profile": "pluto",
+    "component": 0,
+    "quantity": "position",
+    "certificateNode": 736,
+    "normalizedExpressionSHA256": "e1b454b33eae5a1b1621fe54a99f9f876060f369491dc4d0c9cb22e8a4a185ec"
+  },
+  {
+    "profile": "pluto",
+    "component": 0,
+    "quantity": "velocity",
+    "certificateNode": 748,
+    "normalizedExpressionSHA256": "a826603826d9aa421ba6a7e3930874e64858c4dc6d4ee30f9fdf5c05d40c4e25"
+  },
+  {
+    "profile": "pluto",
+    "component": 0,
+    "quantity": "acceleration",
+    "certificateNode": 763,
+    "normalizedExpressionSHA256": "cb2c7a8bf04c7d24fa0e466d7bed8f1d8b629f2b40a39524486e47cf5632dd00"
+  },
+  {
+    "profile": "pluto",
+    "component": 1,
+    "quantity": "position",
+    "certificateNode": 736,
+    "normalizedExpressionSHA256": "d8741756cf8ce267a3fcc91fc0aadb6840ad989414b37c2a93aa3c5af966c6aa"
+  },
+  {
+    "profile": "pluto",
+    "component": 1,
+    "quantity": "velocity",
+    "certificateNode": 748,
+    "normalizedExpressionSHA256": "30feb28f777d1272f71e2e0e1bf8ad1a13218385d441c6047f2f11c737e355de"
+  },
+  {
+    "profile": "pluto",
+    "component": 1,
+    "quantity": "acceleration",
+    "certificateNode": 763,
+    "normalizedExpressionSHA256": "cb8610ac1157300ccbd907b2822f4d5709d29022eee19c0ea24a107b8de34f34"
+  },
+  {
+    "profile": "pluto",
+    "component": 2,
+    "quantity": "position",
+    "certificateNode": 736,
+    "normalizedExpressionSHA256": "e7828e14297e2ddcc205146b5ad5b093362bb53ab1f829291c577bb01ef109da"
+  },
+  {
+    "profile": "pluto",
+    "component": 2,
+    "quantity": "velocity",
+    "certificateNode": 748,
+    "normalizedExpressionSHA256": "2a96e407b37935e7c4f1651fcb6cdbce27b34b7d27eb8c032f1a9844c0abbdb0"
+  },
+  {
+    "profile": "pluto",
+    "component": 2,
+    "quantity": "acceleration",
+    "certificateNode": 763,
+    "normalizedExpressionSHA256": "9e0c56587c9b4dd8eb7befcbf1093050151b9afb3d547ddedae1e83559a8fce6"
+  },
+  {
+    "profile": "geocentric-moon",
+    "component": 0,
+    "quantity": "position",
+    "certificateNode": 802,
+    "normalizedExpressionSHA256": "69d8a58bdedccbe3031ccd62db96a6ac03bafaf3b47201e1048698854deb8ccc"
+  },
+  {
+    "profile": "geocentric-moon",
+    "component": 0,
+    "quantity": "velocity",
+    "certificateNode": 828,
+    "normalizedExpressionSHA256": "a6e2886012fb8531983c44f6ad72071b90294cad49210821acdb5d54090caa7b"
+  },
+  {
+    "profile": "geocentric-moon",
+    "component": 0,
+    "quantity": "acceleration",
+    "certificateNode": 857,
+    "normalizedExpressionSHA256": "087ee35a8dcc6573e89a93ae5c48abe74289fa12597cc1925d2b072dd64da4f0"
+  },
+  {
+    "profile": "geocentric-moon",
+    "component": 1,
+    "quantity": "position",
+    "certificateNode": 802,
+    "normalizedExpressionSHA256": "8f3841315cc8022aab1606ea4f3068b7ed5a04ba07b286a7e9155988115bb786"
+  },
+  {
+    "profile": "geocentric-moon",
+    "component": 1,
+    "quantity": "velocity",
+    "certificateNode": 828,
+    "normalizedExpressionSHA256": "bf9a422e9a396afa20cf0e856e7bd582ddff2d86541961febfe983eb9a27b416"
+  },
+  {
+    "profile": "geocentric-moon",
+    "component": 1,
+    "quantity": "acceleration",
+    "certificateNode": 857,
+    "normalizedExpressionSHA256": "37cf32db1664c7c8f23a6da67190180cff322fb03ff3f69b4918d07fb2f1c9a9"
+  },
+  {
+    "profile": "geocentric-moon",
+    "component": 2,
+    "quantity": "position",
+    "certificateNode": 802,
+    "normalizedExpressionSHA256": "1cd6a95530718a4d57546df1ec409503fb36e2916e08921d5fc5f22c80e70e70"
+  },
+  {
+    "profile": "geocentric-moon",
+    "component": 2,
+    "quantity": "velocity",
+    "certificateNode": 828,
+    "normalizedExpressionSHA256": "49a814b773be8a02e4f06963bd52e6680a1fe13c337e17b7b2e35a0dc1afd705"
+  },
+  {
+    "profile": "geocentric-moon",
+    "component": 2,
+    "quantity": "acceleration",
+    "certificateNode": 857,
+    "normalizedExpressionSHA256": "31b724bc066690c08f570c8edebe78ff5281cc4bcb4cf33e1968cfb72586938b"
+  },
+  {
+    "profile": "barycentric-sun",
+    "component": 0,
+    "quantity": "position",
+    "certificateNode": 890,
+    "normalizedExpressionSHA256": "932d1cff42566538fa43b364c757494950621f900b4e96bd26dffa5053880761"
+  },
+  {
+    "profile": "barycentric-sun",
+    "component": 0,
+    "quantity": "velocity",
+    "certificateNode": 912,
+    "normalizedExpressionSHA256": "5c233accf741846110c8d238685ebfb70eb54c77f42d414e4e72852e16077121"
+  },
+  {
+    "profile": "barycentric-sun",
+    "component": 0,
+    "quantity": "acceleration",
+    "certificateNode": 937,
+    "normalizedExpressionSHA256": "6732d5d58404be2672ce04cc24575a861b985436bd073fca137c5fcb943e5af9"
+  },
+  {
+    "profile": "barycentric-sun",
+    "component": 1,
+    "quantity": "position",
+    "certificateNode": 890,
+    "normalizedExpressionSHA256": "65576a2e89f3c21d801c46b76cc80a178bb6238534b978109219384286ff8a2f"
+  },
+  {
+    "profile": "barycentric-sun",
+    "component": 1,
+    "quantity": "velocity",
+    "certificateNode": 912,
+    "normalizedExpressionSHA256": "73a7cd89fb568f28ea6d9d88cda8644da006fffd5e97e0f67b1e0ed5750bf4d8"
+  },
+  {
+    "profile": "barycentric-sun",
+    "component": 1,
+    "quantity": "acceleration",
+    "certificateNode": 937,
+    "normalizedExpressionSHA256": "bb0d0f7a8bcc6e3fafea1dcbde30cc2e7f562f2611eaacb59b7be9938cb10565"
+  },
+  {
+    "profile": "barycentric-sun",
+    "component": 2,
+    "quantity": "position",
+    "certificateNode": 890,
+    "normalizedExpressionSHA256": "e676b04e7269f3032dfe35a166b274fa719b1479d4ae7e5add55c330be6bad78"
+  },
+  {
+    "profile": "barycentric-sun",
+    "component": 2,
+    "quantity": "velocity",
+    "certificateNode": 912,
+    "normalizedExpressionSHA256": "b86ca7e2827f60c68adee2b03aa41c67bb9fc0a54fee202528df7719c2a3d912"
+  },
+  {
+    "profile": "barycentric-sun",
+    "component": 2,
+    "quantity": "acceleration",
+    "certificateNode": 937,
+    "normalizedExpressionSHA256": "c0b06ebbe09ff1c30fb9ef46a7b99ab187d3f58ec4369d49a7b48e1ecf109046"
+  },
+  {
+    "profile": "nutations",
+    "component": 0,
+    "quantity": "position",
+    "certificateNode": 967,
+    "normalizedExpressionSHA256": "280cca5d862956782509098611b2426870d332a40917ad3660c45535d5569957"
+  },
+  {
+    "profile": "nutations",
+    "component": 0,
+    "quantity": "velocity",
+    "certificateNode": 987,
+    "normalizedExpressionSHA256": "72e49565bb8a72e4e5ea7f52dca6a9a549a9dd04015a6185f2eb72537f2f7bb9"
+  },
+  {
+    "profile": "nutations",
+    "component": 0,
+    "quantity": "acceleration",
+    "certificateNode": 1010,
+    "normalizedExpressionSHA256": "7dba30d3d82c15bae139e2fde466387388e7b45dabf43720aa52cb057fd51703"
+  },
+  {
+    "profile": "nutations",
+    "component": 1,
+    "quantity": "position",
+    "certificateNode": 967,
+    "normalizedExpressionSHA256": "ece11f1ff09b2a8fd74f700c0d339cad9139a7a73730c1839b09d84658f76cfd"
+  },
+  {
+    "profile": "nutations",
+    "component": 1,
+    "quantity": "velocity",
+    "certificateNode": 987,
+    "normalizedExpressionSHA256": "328a603337446c42ba39e477481e807a7e239d8e551db391fe0079f93a96ac62"
+  },
+  {
+    "profile": "nutations",
+    "component": 1,
+    "quantity": "acceleration",
+    "certificateNode": 1010,
+    "normalizedExpressionSHA256": "53b35f3812053670dbe5eb439dddc09976f0c6cb7185ef348ba17918c0af0a49"
+  },
+  {
+    "profile": "librations",
+    "component": 0,
+    "quantity": "position",
+    "certificateNode": 1040,
+    "normalizedExpressionSHA256": "280cca5d862956782509098611b2426870d332a40917ad3660c45535d5569957"
+  },
+  {
+    "profile": "librations",
+    "component": 0,
+    "quantity": "velocity",
+    "certificateNode": 1060,
+    "normalizedExpressionSHA256": "72e49565bb8a72e4e5ea7f52dca6a9a549a9dd04015a6185f2eb72537f2f7bb9"
+  },
+  {
+    "profile": "librations",
+    "component": 0,
+    "quantity": "acceleration",
+    "certificateNode": 1083,
+    "normalizedExpressionSHA256": "7dba30d3d82c15bae139e2fde466387388e7b45dabf43720aa52cb057fd51703"
+  },
+  {
+    "profile": "librations",
+    "component": 1,
+    "quantity": "position",
+    "certificateNode": 1040,
+    "normalizedExpressionSHA256": "ece11f1ff09b2a8fd74f700c0d339cad9139a7a73730c1839b09d84658f76cfd"
+  },
+  {
+    "profile": "librations",
+    "component": 1,
+    "quantity": "velocity",
+    "certificateNode": 1060,
+    "normalizedExpressionSHA256": "328a603337446c42ba39e477481e807a7e239d8e551db391fe0079f93a96ac62"
+  },
+  {
+    "profile": "librations",
+    "component": 1,
+    "quantity": "acceleration",
+    "certificateNode": 1083,
+    "normalizedExpressionSHA256": "53b35f3812053670dbe5eb439dddc09976f0c6cb7185ef348ba17918c0af0a49"
+  },
+  {
+    "profile": "librations",
+    "component": 2,
+    "quantity": "position",
+    "certificateNode": 1040,
+    "normalizedExpressionSHA256": "a7e8130d0e9875ff0ebb332c386bd5e070b1120827112402a5333b85b4e1c8ba"
+  },
+  {
+    "profile": "librations",
+    "component": 2,
+    "quantity": "velocity",
+    "certificateNode": 1060,
+    "normalizedExpressionSHA256": "47554dc6284d8ee4b69318087d182081544b59fa198e30f5d84ffc0b9252a63d"
+  },
+  {
+    "profile": "librations",
+    "component": 2,
+    "quantity": "acceleration",
+    "certificateNode": 1083,
+    "normalizedExpressionSHA256": "bd1dcbfd4299e044deeb0afb46c59c113b3d5872741acfff89e29ab9c120b9e7"
+  }
+]

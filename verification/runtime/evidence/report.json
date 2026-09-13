@@ -1,0 +1,3006 @@
+{
+  "schema": 1,
+  "passed": true,
+  "status": "complete",
+  "binarySHA256": "256e850727f91a441f2344217a6a15727dfefcabb91f03b61e8d694d9d03cd57",
+  "functions": [
+    {
+      "name": "__ashlti3",
+      "index": 420,
+      "bodySHA256": "45e84428fc9afa847396cd8d97385123a631b87a46b41e6d580b1f99a20c01c0",
+      "bodyBytes": 80,
+      "paths": 3,
+      "memoryAccesses": 6,
+      "calledIndices": [],
+      "visitedInstructions": [
+        {
+          "function": 420,
+          "byteOffset": 501261,
+          "opcode": "block"
+        },
+        {
+          "function": 420,
+          "byteOffset": 501263,
+          "opcode": "local.get"
+        },
+        {
+          "function": 420,
+          "byteOffset": 501265,
+          "opcode": "i32.const"
+        },
+        {
+          "function": 420,
+          "byteOffset": 501268,
+          "opcode": "i32.and"
+        },
+        {
+          "function": 420,
+          "byteOffset": 501269,
+          "opcode": "if"
+        },
+        {
+          "function": 420,
+          "byteOffset": 501271,
+          "opcode": "local.get"
+        },
+        {
+          "function": 420,
+          "byteOffset": 501273,
+          "opcode": "local.get"
+        },
+        {
+          "function": 420,
+          "byteOffset": 501275,
+          "opcode": "i32.const"
+        },
+        {
+          "function": 420,
+          "byteOffset": 501277,
+          "opcode": "i32.add"
+        },
+        {
+          "function": 420,
+          "byteOffset": 501278,
+          "opcode": "i64.extend_i32_u"
+        },
+        {
+          "function": 420,
+          "byteOffset": 501279,
+          "opcode": "i64.shl"
+        },
+        {
+          "function": 420,
+          "byteOffset": 501280,
+          "opcode": "local.set"
+        },
+        {
+          "function": 420,
+          "byteOffset": 501282,
+          "opcode": "i64.const"
+        },
+        {
+          "function": 420,
+          "byteOffset": 501284,
+          "opcode": "local.set"
+        },
+        {
+          "function": 420,
+          "byteOffset": 501286,
+          "opcode": "br"
+        },
+        {
+          "function": 420,
+          "byteOffset": 501289,
+          "opcode": "local.get"
+        },
+        {
+          "function": 420,
+          "byteOffset": 501291,
+          "opcode": "i32.eqz"
+        },
+        {
+          "function": 420,
+          "byteOffset": 501292,
+          "opcode": "br_if"
+        },
+        {
+          "function": 420,
+          "byteOffset": 501294,
+          "opcode": "local.get"
+        },
+        {
+          "function": 420,
+          "byteOffset": 501296,
+          "opcode": "local.get"
+        },
+        {
+          "function": 420,
+          "byteOffset": 501298,
+          "opcode": "i64.extend_i32_u"
+        },
+        {
+          "function": 420,
+          "byteOffset": 501299,
+          "opcode": "local.tee"
+        },
+        {
+          "function": 420,
+          "byteOffset": 501301,
+          "opcode": "i64.shl"
+        },
+        {
+          "function": 420,
+          "byteOffset": 501302,
+          "opcode": "local.get"
+        },
+        {
+          "function": 420,
+          "byteOffset": 501304,
+          "opcode": "i32.const"
+        },
+        {
+          "function": 420,
+          "byteOffset": 501307,
+          "opcode": "local.get"
+        },
+        {
+          "function": 420,
+          "byteOffset": 501309,
+          "opcode": "i32.sub"
+        },
+        {
+          "function": 420,
+          "byteOffset": 501310,
+          "opcode": "i64.extend_i32_u"
+        },
+        {
+          "function": 420,
+          "byteOffset": 501311,
+          "opcode": "i64.shr_u"
+        },
+        {
+          "function": 420,
+          "byteOffset": 501312,
+          "opcode": "i64.or"
+        },
+        {
+          "function": 420,
+          "byteOffset": 501313,
+          "opcode": "local.set"
+        },
+        {
+          "function": 420,
+          "byteOffset": 501315,
+          "opcode": "local.get"
+        },
+        {
+          "function": 420,
+          "byteOffset": 501317,
+          "opcode": "local.get"
+        },
+        {
+          "function": 420,
+          "byteOffset": 501319,
+          "opcode": "i64.shl"
+        },
+        {
+          "function": 420,
+          "byteOffset": 501320,
+          "opcode": "local.set"
+        },
+        {
+          "function": 420,
+          "byteOffset": 501323,
+          "opcode": "local.get"
+        },
+        {
+          "function": 420,
+          "byteOffset": 501325,
+          "opcode": "local.get"
+        },
+        {
+          "function": 420,
+          "byteOffset": 501327,
+          "opcode": "i64.store"
+        },
+        {
+          "function": 420,
+          "byteOffset": 501330,
+          "opcode": "local.get"
+        },
+        {
+          "function": 420,
+          "byteOffset": 501332,
+          "opcode": "local.get"
+        },
+        {
+          "function": 420,
+          "byteOffset": 501334,
+          "opcode": "i64.store"
+        }
+      ]
+    },
+    {
+      "name": "__lshrti3",
+      "index": 431,
+      "bodySHA256": "55a9bd910ad8a40428c3d365644e2fa9d5ede94849cb5561adb24d041483d877",
+      "bodyBytes": 80,
+      "paths": 3,
+      "memoryAccesses": 6,
+      "calledIndices": [],
+      "visitedInstructions": [
+        {
+          "function": 431,
+          "byteOffset": 505104,
+          "opcode": "block"
+        },
+        {
+          "function": 431,
+          "byteOffset": 505106,
+          "opcode": "local.get"
+        },
+        {
+          "function": 431,
+          "byteOffset": 505108,
+          "opcode": "i32.const"
+        },
+        {
+          "function": 431,
+          "byteOffset": 505111,
+          "opcode": "i32.and"
+        },
+        {
+          "function": 431,
+          "byteOffset": 505112,
+          "opcode": "if"
+        },
+        {
+          "function": 431,
+          "byteOffset": 505114,
+          "opcode": "local.get"
+        },
+        {
+          "function": 431,
+          "byteOffset": 505116,
+          "opcode": "local.get"
+        },
+        {
+          "function": 431,
+          "byteOffset": 505118,
+          "opcode": "i32.const"
+        },
+        {
+          "function": 431,
+          "byteOffset": 505120,
+          "opcode": "i32.add"
+        },
+        {
+          "function": 431,
+          "byteOffset": 505121,
+          "opcode": "i64.extend_i32_u"
+        },
+        {
+          "function": 431,
+          "byteOffset": 505122,
+          "opcode": "i64.shr_u"
+        },
+        {
+          "function": 431,
+          "byteOffset": 505123,
+          "opcode": "local.set"
+        },
+        {
+          "function": 431,
+          "byteOffset": 505125,
+          "opcode": "i64.const"
+        },
+        {
+          "function": 431,
+          "byteOffset": 505127,
+          "opcode": "local.set"
+        },
+        {
+          "function": 431,
+          "byteOffset": 505129,
+          "opcode": "br"
+        },
+        {
+          "function": 431,
+          "byteOffset": 505132,
+          "opcode": "local.get"
+        },
+        {
+          "function": 431,
+          "byteOffset": 505134,
+          "opcode": "i32.eqz"
+        },
+        {
+          "function": 431,
+          "byteOffset": 505135,
+          "opcode": "br_if"
+        },
+        {
+          "function": 431,
+          "byteOffset": 505137,
+          "opcode": "local.get"
+        },
+        {
+          "function": 431,
+          "byteOffset": 505139,
+          "opcode": "i32.const"
+        },
+        {
+          "function": 431,
+          "byteOffset": 505142,
+          "opcode": "local.get"
+        },
+        {
+          "function": 431,
+          "byteOffset": 505144,
+          "opcode": "i32.sub"
+        },
+        {
+          "function": 431,
+          "byteOffset": 505145,
+          "opcode": "i64.extend_i32_u"
+        },
+        {
+          "function": 431,
+          "byteOffset": 505146,
+          "opcode": "i64.shl"
+        },
+        {
+          "function": 431,
+          "byteOffset": 505147,
+          "opcode": "local.get"
+        },
+        {
+          "function": 431,
+          "byteOffset": 505149,
+          "opcode": "local.get"
+        },
+        {
+          "function": 431,
+          "byteOffset": 505151,
+          "opcode": "i64.extend_i32_u"
+        },
+        {
+          "function": 431,
+          "byteOffset": 505152,
+          "opcode": "local.tee"
+        },
+        {
+          "function": 431,
+          "byteOffset": 505154,
+          "opcode": "i64.shr_u"
+        },
+        {
+          "function": 431,
+          "byteOffset": 505155,
+          "opcode": "i64.or"
+        },
+        {
+          "function": 431,
+          "byteOffset": 505156,
+          "opcode": "local.set"
+        },
+        {
+          "function": 431,
+          "byteOffset": 505158,
+          "opcode": "local.get"
+        },
+        {
+          "function": 431,
+          "byteOffset": 505160,
+          "opcode": "local.get"
+        },
+        {
+          "function": 431,
+          "byteOffset": 505162,
+          "opcode": "i64.shr_u"
+        },
+        {
+          "function": 431,
+          "byteOffset": 505163,
+          "opcode": "local.set"
+        },
+        {
+          "function": 431,
+          "byteOffset": 505166,
+          "opcode": "local.get"
+        },
+        {
+          "function": 431,
+          "byteOffset": 505168,
+          "opcode": "local.get"
+        },
+        {
+          "function": 431,
+          "byteOffset": 505170,
+          "opcode": "i64.store"
+        },
+        {
+          "function": 431,
+          "byteOffset": 505173,
+          "opcode": "local.get"
+        },
+        {
+          "function": 431,
+          "byteOffset": 505175,
+          "opcode": "local.get"
+        },
+        {
+          "function": 431,
+          "byteOffset": 505177,
+          "opcode": "i64.store"
+        }
+      ]
+    },
+    {
+      "name": "__extenddftf2",
+      "index": 425,
+      "bodySHA256": "705b568642f9e107f443e716cf2c2372ee1b7ebc68c7b8905427819ade413335",
+      "bodyBytes": 246,
+      "paths": 5,
+      "memoryAccesses": 18,
+      "calledIndices": [
+        420
+      ],
+      "visitedInstructions": [
+        {
+          "function": 420,
+          "byteOffset": 501261,
+          "opcode": "block"
+        },
+        {
+          "function": 420,
+          "byteOffset": 501263,
+          "opcode": "local.get"
+        },
+        {
+          "function": 420,
+          "byteOffset": 501265,
+          "opcode": "i32.const"
+        },
+        {
+          "function": 420,
+          "byteOffset": 501268,
+          "opcode": "i32.and"
+        },
+        {
+          "function": 420,
+          "byteOffset": 501269,
+          "opcode": "if"
+        },
+        {
+          "function": 420,
+          "byteOffset": 501271,
+          "opcode": "local.get"
+        },
+        {
+          "function": 420,
+          "byteOffset": 501273,
+          "opcode": "local.get"
+        },
+        {
+          "function": 420,
+          "byteOffset": 501275,
+          "opcode": "i32.const"
+        },
+        {
+          "function": 420,
+          "byteOffset": 501277,
+          "opcode": "i32.add"
+        },
+        {
+          "function": 420,
+          "byteOffset": 501278,
+          "opcode": "i64.extend_i32_u"
+        },
+        {
+          "function": 420,
+          "byteOffset": 501279,
+          "opcode": "i64.shl"
+        },
+        {
+          "function": 420,
+          "byteOffset": 501280,
+          "opcode": "local.set"
+        },
+        {
+          "function": 420,
+          "byteOffset": 501282,
+          "opcode": "i64.const"
+        },
+        {
+          "function": 420,
+          "byteOffset": 501284,
+          "opcode": "local.set"
+        },
+        {
+          "function": 420,
+          "byteOffset": 501286,
+          "opcode": "br"
+        },
+        {
+          "function": 420,
+          "byteOffset": 501289,
+          "opcode": "local.get"
+        },
+        {
+          "function": 420,
+          "byteOffset": 501291,
+          "opcode": "i32.eqz"
+        },
+        {
+          "function": 420,
+          "byteOffset": 501292,
+          "opcode": "br_if"
+        },
+        {
+          "function": 420,
+          "byteOffset": 501294,
+          "opcode": "local.get"
+        },
+        {
+          "function": 420,
+          "byteOffset": 501296,
+          "opcode": "local.get"
+        },
+        {
+          "function": 420,
+          "byteOffset": 501298,
+          "opcode": "i64.extend_i32_u"
+        },
+        {
+          "function": 420,
+          "byteOffset": 501299,
+          "opcode": "local.tee"
+        },
+        {
+          "function": 420,
+          "byteOffset": 501301,
+          "opcode": "i64.shl"
+        },
+        {
+          "function": 420,
+          "byteOffset": 501302,
+          "opcode": "local.get"
+        },
+        {
+          "function": 420,
+          "byteOffset": 501304,
+          "opcode": "i32.const"
+        },
+        {
+          "function": 420,
+          "byteOffset": 501307,
+          "opcode": "local.get"
+        },
+        {
+          "function": 420,
+          "byteOffset": 501309,
+          "opcode": "i32.sub"
+        },
+        {
+          "function": 420,
+          "byteOffset": 501310,
+          "opcode": "i64.extend_i32_u"
+        },
+        {
+          "function": 420,
+          "byteOffset": 501311,
+          "opcode": "i64.shr_u"
+        },
+        {
+          "function": 420,
+          "byteOffset": 501312,
+          "opcode": "i64.or"
+        },
+        {
+          "function": 420,
+          "byteOffset": 501313,
+          "opcode": "local.set"
+        },
+        {
+          "function": 420,
+          "byteOffset": 501315,
+          "opcode": "local.get"
+        },
+        {
+          "function": 420,
+          "byteOffset": 501317,
+          "opcode": "local.get"
+        },
+        {
+          "function": 420,
+          "byteOffset": 501319,
+          "opcode": "i64.shl"
+        },
+        {
+          "function": 420,
+          "byteOffset": 501320,
+          "opcode": "local.set"
+        },
+        {
+          "function": 420,
+          "byteOffset": 501323,
+          "opcode": "local.get"
+        },
+        {
+          "function": 420,
+          "byteOffset": 501325,
+          "opcode": "local.get"
+        },
+        {
+          "function": 420,
+          "byteOffset": 501327,
+          "opcode": "i64.store"
+        },
+        {
+          "function": 420,
+          "byteOffset": 501330,
+          "opcode": "local.get"
+        },
+        {
+          "function": 420,
+          "byteOffset": 501332,
+          "opcode": "local.get"
+        },
+        {
+          "function": 420,
+          "byteOffset": 501334,
+          "opcode": "i64.store"
+        },
+        {
+          "function": 425,
+          "byteOffset": 503995,
+          "opcode": "global.get"
+        },
+        {
+          "function": 425,
+          "byteOffset": 503997,
+          "opcode": "i32.const"
+        },
+        {
+          "function": 425,
+          "byteOffset": 503999,
+          "opcode": "i32.sub"
+        },
+        {
+          "function": 425,
+          "byteOffset": 504000,
+          "opcode": "local.tee"
+        },
+        {
+          "function": 425,
+          "byteOffset": 504002,
+          "opcode": "global.get"
+        },
+        {
+          "function": 425,
+          "byteOffset": 504004,
+          "opcode": "i32.gt_u"
+        },
+        {
+          "function": 425,
+          "byteOffset": 504005,
+          "opcode": "local.get"
+        },
+        {
+          "function": 425,
+          "byteOffset": 504007,
+          "opcode": "global.get"
+        },
+        {
+          "function": 425,
+          "byteOffset": 504009,
+          "opcode": "i32.lt_u"
+        },
+        {
+          "function": 425,
+          "byteOffset": 504010,
+          "opcode": "i32.or"
+        },
+        {
+          "function": 425,
+          "byteOffset": 504011,
+          "opcode": "if"
+        },
+        {
+          "function": 425,
+          "byteOffset": 504018,
+          "opcode": "local.get"
+        },
+        {
+          "function": 425,
+          "byteOffset": 504020,
+          "opcode": "global.set"
+        },
+        {
+          "function": 425,
+          "byteOffset": 504022,
+          "opcode": "local.get"
+        },
+        {
+          "function": 425,
+          "byteOffset": 504024,
+          "opcode": "i64.reinterpret_f64"
+        },
+        {
+          "function": 425,
+          "byteOffset": 504025,
+          "opcode": "local.tee"
+        },
+        {
+          "function": 425,
+          "byteOffset": 504027,
+          "opcode": "i64.const"
+        },
+        {
+          "function": 425,
+          "byteOffset": 504036,
+          "opcode": "i64.and"
+        },
+        {
+          "function": 425,
+          "byteOffset": 504037,
+          "opcode": "local.set"
+        },
+        {
+          "function": 425,
+          "byteOffset": 504039,
+          "opcode": "local.get"
+        },
+        {
+          "function": 425,
+          "byteOffset": 504041,
+          "opcode": "block"
+        },
+        {
+          "function": 425,
+          "byteOffset": 504043,
+          "opcode": "local.get"
+        },
+        {
+          "function": 425,
+          "byteOffset": 504045,
+          "opcode": "i64.const"
+        },
+        {
+          "function": 425,
+          "byteOffset": 504047,
+          "opcode": "i64.shr_u"
+        },
+        {
+          "function": 425,
+          "byteOffset": 504048,
+          "opcode": "i64.const"
+        },
+        {
+          "function": 425,
+          "byteOffset": 504051,
+          "opcode": "i64.and"
+        },
+        {
+          "function": 425,
+          "byteOffset": 504052,
+          "opcode": "local.tee"
+        },
+        {
+          "function": 425,
+          "byteOffset": 504054,
+          "opcode": "i64.const"
+        },
+        {
+          "function": 425,
+          "byteOffset": 504056,
+          "opcode": "i64.ne"
+        },
+        {
+          "function": 425,
+          "byteOffset": 504057,
+          "opcode": "if"
+        },
+        {
+          "function": 425,
+          "byteOffset": 504059,
+          "opcode": "local.get"
+        },
+        {
+          "function": 425,
+          "byteOffset": 504061,
+          "opcode": "i64.const"
+        },
+        {
+          "function": 425,
+          "byteOffset": 504064,
+          "opcode": "i64.ne"
+        },
+        {
+          "function": 425,
+          "byteOffset": 504065,
+          "opcode": "if"
+        },
+        {
+          "function": 425,
+          "byteOffset": 504067,
+          "opcode": "local.get"
+        },
+        {
+          "function": 425,
+          "byteOffset": 504069,
+          "opcode": "i64.const"
+        },
+        {
+          "function": 425,
+          "byteOffset": 504071,
+          "opcode": "i64.shr_u"
+        },
+        {
+          "function": 425,
+          "byteOffset": 504072,
+          "opcode": "local.set"
+        },
+        {
+          "function": 425,
+          "byteOffset": 504074,
+          "opcode": "local.get"
+        },
+        {
+          "function": 425,
+          "byteOffset": 504076,
+          "opcode": "i64.const"
+        },
+        {
+          "function": 425,
+          "byteOffset": 504080,
+          "opcode": "i64.add"
+        },
+        {
+          "function": 425,
+          "byteOffset": 504081,
+          "opcode": "local.set"
+        },
+        {
+          "function": 425,
+          "byteOffset": 504083,
+          "opcode": "local.get"
+        },
+        {
+          "function": 425,
+          "byteOffset": 504085,
+          "opcode": "i64.const"
+        },
+        {
+          "function": 425,
+          "byteOffset": 504087,
+          "opcode": "i64.shl"
+        },
+        {
+          "function": 425,
+          "byteOffset": 504088,
+          "opcode": "br"
+        },
+        {
+          "function": 425,
+          "byteOffset": 504091,
+          "opcode": "local.get"
+        },
+        {
+          "function": 425,
+          "byteOffset": 504093,
+          "opcode": "i64.const"
+        },
+        {
+          "function": 425,
+          "byteOffset": 504095,
+          "opcode": "i64.shr_u"
+        },
+        {
+          "function": 425,
+          "byteOffset": 504096,
+          "opcode": "local.set"
+        },
+        {
+          "function": 425,
+          "byteOffset": 504098,
+          "opcode": "i64.const"
+        },
+        {
+          "function": 425,
+          "byteOffset": 504102,
+          "opcode": "local.set"
+        },
+        {
+          "function": 425,
+          "byteOffset": 504104,
+          "opcode": "local.get"
+        },
+        {
+          "function": 425,
+          "byteOffset": 504106,
+          "opcode": "i64.const"
+        },
+        {
+          "function": 425,
+          "byteOffset": 504108,
+          "opcode": "i64.shl"
+        },
+        {
+          "function": 425,
+          "byteOffset": 504109,
+          "opcode": "br"
+        },
+        {
+          "function": 425,
+          "byteOffset": 504112,
+          "opcode": "local.get"
+        },
+        {
+          "function": 425,
+          "byteOffset": 504114,
+          "opcode": "i64.eqz"
+        },
+        {
+          "function": 425,
+          "byteOffset": 504115,
+          "opcode": "if"
+        },
+        {
+          "function": 425,
+          "byteOffset": 504117,
+          "opcode": "i64.const"
+        },
+        {
+          "function": 425,
+          "byteOffset": 504119,
+          "opcode": "local.set"
+        },
+        {
+          "function": 425,
+          "byteOffset": 504121,
+          "opcode": "i64.const"
+        },
+        {
+          "function": 425,
+          "byteOffset": 504123,
+          "opcode": "br"
+        },
+        {
+          "function": 425,
+          "byteOffset": 504126,
+          "opcode": "local.get"
+        },
+        {
+          "function": 425,
+          "byteOffset": 504128,
+          "opcode": "local.get"
+        },
+        {
+          "function": 425,
+          "byteOffset": 504130,
+          "opcode": "i64.const"
+        },
+        {
+          "function": 425,
+          "byteOffset": 504132,
+          "opcode": "local.get"
+        },
+        {
+          "function": 425,
+          "byteOffset": 504134,
+          "opcode": "i64.clz"
+        },
+        {
+          "function": 425,
+          "byteOffset": 504135,
+          "opcode": "i32.wrap_i64"
+        },
+        {
+          "function": 425,
+          "byteOffset": 504136,
+          "opcode": "local.tee"
+        },
+        {
+          "function": 425,
+          "byteOffset": 504138,
+          "opcode": "i32.const"
+        },
+        {
+          "function": 425,
+          "byteOffset": 504140,
+          "opcode": "i32.add"
+        },
+        {
+          "function": 425,
+          "byteOffset": 504141,
+          "opcode": "call"
+        },
+        {
+          "function": 425,
+          "byteOffset": 504144,
+          "opcode": "local.get"
+        },
+        {
+          "function": 425,
+          "byteOffset": 504146,
+          "opcode": "i64.load"
+        },
+        {
+          "function": 425,
+          "byteOffset": 504149,
+          "opcode": "i64.const"
+        },
+        {
+          "function": 425,
+          "byteOffset": 504158,
+          "opcode": "i64.xor"
+        },
+        {
+          "function": 425,
+          "byteOffset": 504159,
+          "opcode": "local.set"
+        },
+        {
+          "function": 425,
+          "byteOffset": 504161,
+          "opcode": "i32.const"
+        },
+        {
+          "function": 425,
+          "byteOffset": 504165,
+          "opcode": "local.get"
+        },
+        {
+          "function": 425,
+          "byteOffset": 504167,
+          "opcode": "i32.sub"
+        },
+        {
+          "function": 425,
+          "byteOffset": 504168,
+          "opcode": "i64.extend_i32_u"
+        },
+        {
+          "function": 425,
+          "byteOffset": 504169,
+          "opcode": "local.set"
+        },
+        {
+          "function": 425,
+          "byteOffset": 504171,
+          "opcode": "local.get"
+        },
+        {
+          "function": 425,
+          "byteOffset": 504173,
+          "opcode": "i64.load"
+        },
+        {
+          "function": 425,
+          "byteOffset": 504177,
+          "opcode": "i64.store"
+        },
+        {
+          "function": 425,
+          "byteOffset": 504180,
+          "opcode": "local.get"
+        },
+        {
+          "function": 425,
+          "byteOffset": 504182,
+          "opcode": "local.get"
+        },
+        {
+          "function": 425,
+          "byteOffset": 504184,
+          "opcode": "i64.const"
+        },
+        {
+          "function": 425,
+          "byteOffset": 504195,
+          "opcode": "i64.and"
+        },
+        {
+          "function": 425,
+          "byteOffset": 504196,
+          "opcode": "local.get"
+        },
+        {
+          "function": 425,
+          "byteOffset": 504198,
+          "opcode": "i64.const"
+        },
+        {
+          "function": 425,
+          "byteOffset": 504200,
+          "opcode": "i64.shl"
+        },
+        {
+          "function": 425,
+          "byteOffset": 504201,
+          "opcode": "i64.or"
+        },
+        {
+          "function": 425,
+          "byteOffset": 504202,
+          "opcode": "local.get"
+        },
+        {
+          "function": 425,
+          "byteOffset": 504204,
+          "opcode": "i64.or"
+        },
+        {
+          "function": 425,
+          "byteOffset": 504205,
+          "opcode": "i64.store"
+        },
+        {
+          "function": 425,
+          "byteOffset": 504208,
+          "opcode": "local.get"
+        },
+        {
+          "function": 425,
+          "byteOffset": 504210,
+          "opcode": "i32.const"
+        },
+        {
+          "function": 425,
+          "byteOffset": 504212,
+          "opcode": "i32.add"
+        },
+        {
+          "function": 425,
+          "byteOffset": 504213,
+          "opcode": "local.tee"
+        },
+        {
+          "function": 425,
+          "byteOffset": 504215,
+          "opcode": "global.get"
+        },
+        {
+          "function": 425,
+          "byteOffset": 504217,
+          "opcode": "i32.gt_u"
+        },
+        {
+          "function": 425,
+          "byteOffset": 504218,
+          "opcode": "local.get"
+        },
+        {
+          "function": 425,
+          "byteOffset": 504220,
+          "opcode": "global.get"
+        },
+        {
+          "function": 425,
+          "byteOffset": 504222,
+          "opcode": "i32.lt_u"
+        },
+        {
+          "function": 425,
+          "byteOffset": 504223,
+          "opcode": "i32.or"
+        },
+        {
+          "function": 425,
+          "byteOffset": 504224,
+          "opcode": "if"
+        },
+        {
+          "function": 425,
+          "byteOffset": 504231,
+          "opcode": "local.get"
+        },
+        {
+          "function": 425,
+          "byteOffset": 504233,
+          "opcode": "global.set"
+        }
+      ]
+    },
+    {
+      "name": "__trunctfdf2",
+      "index": 439,
+      "bodySHA256": "ef736b74b75c2f1baa34b932fe7d283b6138de8ae1b080e9e3d51e25b1f21c26",
+      "bodyBytes": 551,
+      "paths": 17,
+      "memoryAccesses": 40,
+      "calledIndices": [
+        420,
+        431
+      ],
+      "visitedInstructions": [
+        {
+          "function": 420,
+          "byteOffset": 501261,
+          "opcode": "block"
+        },
+        {
+          "function": 420,
+          "byteOffset": 501263,
+          "opcode": "local.get"
+        },
+        {
+          "function": 420,
+          "byteOffset": 501265,
+          "opcode": "i32.const"
+        },
+        {
+          "function": 420,
+          "byteOffset": 501268,
+          "opcode": "i32.and"
+        },
+        {
+          "function": 420,
+          "byteOffset": 501269,
+          "opcode": "if"
+        },
+        {
+          "function": 420,
+          "byteOffset": 501271,
+          "opcode": "local.get"
+        },
+        {
+          "function": 420,
+          "byteOffset": 501273,
+          "opcode": "local.get"
+        },
+        {
+          "function": 420,
+          "byteOffset": 501275,
+          "opcode": "i32.const"
+        },
+        {
+          "function": 420,
+          "byteOffset": 501277,
+          "opcode": "i32.add"
+        },
+        {
+          "function": 420,
+          "byteOffset": 501278,
+          "opcode": "i64.extend_i32_u"
+        },
+        {
+          "function": 420,
+          "byteOffset": 501279,
+          "opcode": "i64.shl"
+        },
+        {
+          "function": 420,
+          "byteOffset": 501280,
+          "opcode": "local.set"
+        },
+        {
+          "function": 420,
+          "byteOffset": 501282,
+          "opcode": "i64.const"
+        },
+        {
+          "function": 420,
+          "byteOffset": 501284,
+          "opcode": "local.set"
+        },
+        {
+          "function": 420,
+          "byteOffset": 501286,
+          "opcode": "br"
+        },
+        {
+          "function": 420,
+          "byteOffset": 501289,
+          "opcode": "local.get"
+        },
+        {
+          "function": 420,
+          "byteOffset": 501291,
+          "opcode": "i32.eqz"
+        },
+        {
+          "function": 420,
+          "byteOffset": 501292,
+          "opcode": "br_if"
+        },
+        {
+          "function": 420,
+          "byteOffset": 501294,
+          "opcode": "local.get"
+        },
+        {
+          "function": 420,
+          "byteOffset": 501296,
+          "opcode": "local.get"
+        },
+        {
+          "function": 420,
+          "byteOffset": 501298,
+          "opcode": "i64.extend_i32_u"
+        },
+        {
+          "function": 420,
+          "byteOffset": 501299,
+          "opcode": "local.tee"
+        },
+        {
+          "function": 420,
+          "byteOffset": 501301,
+          "opcode": "i64.shl"
+        },
+        {
+          "function": 420,
+          "byteOffset": 501302,
+          "opcode": "local.get"
+        },
+        {
+          "function": 420,
+          "byteOffset": 501304,
+          "opcode": "i32.const"
+        },
+        {
+          "function": 420,
+          "byteOffset": 501307,
+          "opcode": "local.get"
+        },
+        {
+          "function": 420,
+          "byteOffset": 501309,
+          "opcode": "i32.sub"
+        },
+        {
+          "function": 420,
+          "byteOffset": 501310,
+          "opcode": "i64.extend_i32_u"
+        },
+        {
+          "function": 420,
+          "byteOffset": 501311,
+          "opcode": "i64.shr_u"
+        },
+        {
+          "function": 420,
+          "byteOffset": 501312,
+          "opcode": "i64.or"
+        },
+        {
+          "function": 420,
+          "byteOffset": 501313,
+          "opcode": "local.set"
+        },
+        {
+          "function": 420,
+          "byteOffset": 501315,
+          "opcode": "local.get"
+        },
+        {
+          "function": 420,
+          "byteOffset": 501317,
+          "opcode": "local.get"
+        },
+        {
+          "function": 420,
+          "byteOffset": 501319,
+          "opcode": "i64.shl"
+        },
+        {
+          "function": 420,
+          "byteOffset": 501320,
+          "opcode": "local.set"
+        },
+        {
+          "function": 420,
+          "byteOffset": 501323,
+          "opcode": "local.get"
+        },
+        {
+          "function": 420,
+          "byteOffset": 501325,
+          "opcode": "local.get"
+        },
+        {
+          "function": 420,
+          "byteOffset": 501327,
+          "opcode": "i64.store"
+        },
+        {
+          "function": 420,
+          "byteOffset": 501330,
+          "opcode": "local.get"
+        },
+        {
+          "function": 420,
+          "byteOffset": 501332,
+          "opcode": "local.get"
+        },
+        {
+          "function": 420,
+          "byteOffset": 501334,
+          "opcode": "i64.store"
+        },
+        {
+          "function": 431,
+          "byteOffset": 505104,
+          "opcode": "block"
+        },
+        {
+          "function": 431,
+          "byteOffset": 505106,
+          "opcode": "local.get"
+        },
+        {
+          "function": 431,
+          "byteOffset": 505108,
+          "opcode": "i32.const"
+        },
+        {
+          "function": 431,
+          "byteOffset": 505111,
+          "opcode": "i32.and"
+        },
+        {
+          "function": 431,
+          "byteOffset": 505112,
+          "opcode": "if"
+        },
+        {
+          "function": 431,
+          "byteOffset": 505114,
+          "opcode": "local.get"
+        },
+        {
+          "function": 431,
+          "byteOffset": 505116,
+          "opcode": "local.get"
+        },
+        {
+          "function": 431,
+          "byteOffset": 505118,
+          "opcode": "i32.const"
+        },
+        {
+          "function": 431,
+          "byteOffset": 505120,
+          "opcode": "i32.add"
+        },
+        {
+          "function": 431,
+          "byteOffset": 505121,
+          "opcode": "i64.extend_i32_u"
+        },
+        {
+          "function": 431,
+          "byteOffset": 505122,
+          "opcode": "i64.shr_u"
+        },
+        {
+          "function": 431,
+          "byteOffset": 505123,
+          "opcode": "local.set"
+        },
+        {
+          "function": 431,
+          "byteOffset": 505125,
+          "opcode": "i64.const"
+        },
+        {
+          "function": 431,
+          "byteOffset": 505127,
+          "opcode": "local.set"
+        },
+        {
+          "function": 431,
+          "byteOffset": 505129,
+          "opcode": "br"
+        },
+        {
+          "function": 431,
+          "byteOffset": 505132,
+          "opcode": "local.get"
+        },
+        {
+          "function": 431,
+          "byteOffset": 505134,
+          "opcode": "i32.eqz"
+        },
+        {
+          "function": 431,
+          "byteOffset": 505135,
+          "opcode": "br_if"
+        },
+        {
+          "function": 431,
+          "byteOffset": 505137,
+          "opcode": "local.get"
+        },
+        {
+          "function": 431,
+          "byteOffset": 505139,
+          "opcode": "i32.const"
+        },
+        {
+          "function": 431,
+          "byteOffset": 505142,
+          "opcode": "local.get"
+        },
+        {
+          "function": 431,
+          "byteOffset": 505144,
+          "opcode": "i32.sub"
+        },
+        {
+          "function": 431,
+          "byteOffset": 505145,
+          "opcode": "i64.extend_i32_u"
+        },
+        {
+          "function": 431,
+          "byteOffset": 505146,
+          "opcode": "i64.shl"
+        },
+        {
+          "function": 431,
+          "byteOffset": 505147,
+          "opcode": "local.get"
+        },
+        {
+          "function": 431,
+          "byteOffset": 505149,
+          "opcode": "local.get"
+        },
+        {
+          "function": 431,
+          "byteOffset": 505151,
+          "opcode": "i64.extend_i32_u"
+        },
+        {
+          "function": 431,
+          "byteOffset": 505152,
+          "opcode": "local.tee"
+        },
+        {
+          "function": 431,
+          "byteOffset": 505154,
+          "opcode": "i64.shr_u"
+        },
+        {
+          "function": 431,
+          "byteOffset": 505155,
+          "opcode": "i64.or"
+        },
+        {
+          "function": 431,
+          "byteOffset": 505156,
+          "opcode": "local.set"
+        },
+        {
+          "function": 431,
+          "byteOffset": 505158,
+          "opcode": "local.get"
+        },
+        {
+          "function": 431,
+          "byteOffset": 505160,
+          "opcode": "local.get"
+        },
+        {
+          "function": 431,
+          "byteOffset": 505162,
+          "opcode": "i64.shr_u"
+        },
+        {
+          "function": 431,
+          "byteOffset": 505163,
+          "opcode": "local.set"
+        },
+        {
+          "function": 431,
+          "byteOffset": 505166,
+          "opcode": "local.get"
+        },
+        {
+          "function": 431,
+          "byteOffset": 505168,
+          "opcode": "local.get"
+        },
+        {
+          "function": 431,
+          "byteOffset": 505170,
+          "opcode": "i64.store"
+        },
+        {
+          "function": 431,
+          "byteOffset": 505173,
+          "opcode": "local.get"
+        },
+        {
+          "function": 431,
+          "byteOffset": 505175,
+          "opcode": "local.get"
+        },
+        {
+          "function": 431,
+          "byteOffset": 505177,
+          "opcode": "i64.store"
+        },
+        {
+          "function": 439,
+          "byteOffset": 506851,
+          "opcode": "global.get"
+        },
+        {
+          "function": 439,
+          "byteOffset": 506853,
+          "opcode": "i32.const"
+        },
+        {
+          "function": 439,
+          "byteOffset": 506855,
+          "opcode": "i32.sub"
+        },
+        {
+          "function": 439,
+          "byteOffset": 506856,
+          "opcode": "local.tee"
+        },
+        {
+          "function": 439,
+          "byteOffset": 506858,
+          "opcode": "global.get"
+        },
+        {
+          "function": 439,
+          "byteOffset": 506860,
+          "opcode": "i32.gt_u"
+        },
+        {
+          "function": 439,
+          "byteOffset": 506861,
+          "opcode": "local.get"
+        },
+        {
+          "function": 439,
+          "byteOffset": 506863,
+          "opcode": "global.get"
+        },
+        {
+          "function": 439,
+          "byteOffset": 506865,
+          "opcode": "i32.lt_u"
+        },
+        {
+          "function": 439,
+          "byteOffset": 506866,
+          "opcode": "i32.or"
+        },
+        {
+          "function": 439,
+          "byteOffset": 506867,
+          "opcode": "if"
+        },
+        {
+          "function": 439,
+          "byteOffset": 506874,
+          "opcode": "local.get"
+        },
+        {
+          "function": 439,
+          "byteOffset": 506876,
+          "opcode": "global.set"
+        },
+        {
+          "function": 439,
+          "byteOffset": 506878,
+          "opcode": "local.get"
+        },
+        {
+          "function": 439,
+          "byteOffset": 506880,
+          "opcode": "i64.const"
+        },
+        {
+          "function": 439,
+          "byteOffset": 506888,
+          "opcode": "i64.and"
+        },
+        {
+          "function": 439,
+          "byteOffset": 506889,
+          "opcode": "local.set"
+        },
+        {
+          "function": 439,
+          "byteOffset": 506891,
+          "opcode": "block"
+        },
+        {
+          "function": 439,
+          "byteOffset": 506893,
+          "opcode": "local.get"
+        },
+        {
+          "function": 439,
+          "byteOffset": 506895,
+          "opcode": "i64.const"
+        },
+        {
+          "function": 439,
+          "byteOffset": 506897,
+          "opcode": "i64.shr_u"
+        },
+        {
+          "function": 439,
+          "byteOffset": 506898,
+          "opcode": "i64.const"
+        },
+        {
+          "function": 439,
+          "byteOffset": 506902,
+          "opcode": "i64.and"
+        },
+        {
+          "function": 439,
+          "byteOffset": 506903,
+          "opcode": "local.tee"
+        },
+        {
+          "function": 439,
+          "byteOffset": 506905,
+          "opcode": "i32.wrap_i64"
+        },
+        {
+          "function": 439,
+          "byteOffset": 506906,
+          "opcode": "local.tee"
+        },
+        {
+          "function": 439,
+          "byteOffset": 506908,
+          "opcode": "i32.const"
+        },
+        {
+          "function": 439,
+          "byteOffset": 506912,
+          "opcode": "i32.sub"
+        },
+        {
+          "function": 439,
+          "byteOffset": 506913,
+          "opcode": "i32.const"
+        },
+        {
+          "function": 439,
+          "byteOffset": 506916,
+          "opcode": "i32.le_u"
+        },
+        {
+          "function": 439,
+          "byteOffset": 506917,
+          "opcode": "if"
+        },
+        {
+          "function": 439,
+          "byteOffset": 506919,
+          "opcode": "local.get"
+        },
+        {
+          "function": 439,
+          "byteOffset": 506921,
+          "opcode": "i64.const"
+        },
+        {
+          "function": 439,
+          "byteOffset": 506923,
+          "opcode": "i64.shl"
+        },
+        {
+          "function": 439,
+          "byteOffset": 506924,
+          "opcode": "local.get"
+        },
+        {
+          "function": 439,
+          "byteOffset": 506926,
+          "opcode": "i64.const"
+        },
+        {
+          "function": 439,
+          "byteOffset": 506928,
+          "opcode": "i64.shr_u"
+        },
+        {
+          "function": 439,
+          "byteOffset": 506929,
+          "opcode": "i64.or"
+        },
+        {
+          "function": 439,
+          "byteOffset": 506930,
+          "opcode": "local.set"
+        },
+        {
+          "function": 439,
+          "byteOffset": 506932,
+          "opcode": "local.get"
+        },
+        {
+          "function": 439,
+          "byteOffset": 506934,
+          "opcode": "i32.const"
+        },
+        {
+          "function": 439,
+          "byteOffset": 506938,
+          "opcode": "i32.sub"
+        },
+        {
+          "function": 439,
+          "byteOffset": 506939,
+          "opcode": "i64.extend_i32_u"
+        },
+        {
+          "function": 439,
+          "byteOffset": 506940,
+          "opcode": "local.set"
+        },
+        {
+          "function": 439,
+          "byteOffset": 506942,
+          "opcode": "block"
+        },
+        {
+          "function": 439,
+          "byteOffset": 506944,
+          "opcode": "local.get"
+        },
+        {
+          "function": 439,
+          "byteOffset": 506946,
+          "opcode": "i64.const"
+        },
+        {
+          "function": 439,
+          "byteOffset": 506956,
+          "opcode": "i64.and"
+        },
+        {
+          "function": 439,
+          "byteOffset": 506957,
+          "opcode": "local.tee"
+        },
+        {
+          "function": 439,
+          "byteOffset": 506959,
+          "opcode": "i64.const"
+        },
+        {
+          "function": 439,
+          "byteOffset": 506969,
+          "opcode": "i64.ge_u"
+        },
+        {
+          "function": 439,
+          "byteOffset": 506970,
+          "opcode": "if"
+        },
+        {
+          "function": 439,
+          "byteOffset": 506972,
+          "opcode": "local.get"
+        },
+        {
+          "function": 439,
+          "byteOffset": 506974,
+          "opcode": "i64.const"
+        },
+        {
+          "function": 439,
+          "byteOffset": 506976,
+          "opcode": "i64.add"
+        },
+        {
+          "function": 439,
+          "byteOffset": 506977,
+          "opcode": "local.set"
+        },
+        {
+          "function": 439,
+          "byteOffset": 506979,
+          "opcode": "br"
+        },
+        {
+          "function": 439,
+          "byteOffset": 506982,
+          "opcode": "local.get"
+        },
+        {
+          "function": 439,
+          "byteOffset": 506984,
+          "opcode": "i64.const"
+        },
+        {
+          "function": 439,
+          "byteOffset": 506994,
+          "opcode": "i64.ne"
+        },
+        {
+          "function": 439,
+          "byteOffset": 506995,
+          "opcode": "br_if"
+        },
+        {
+          "function": 439,
+          "byteOffset": 506997,
+          "opcode": "local.get"
+        },
+        {
+          "function": 439,
+          "byteOffset": 506999,
+          "opcode": "i64.const"
+        },
+        {
+          "function": 439,
+          "byteOffset": 507001,
+          "opcode": "i64.and"
+        },
+        {
+          "function": 439,
+          "byteOffset": 507002,
+          "opcode": "local.get"
+        },
+        {
+          "function": 439,
+          "byteOffset": 507004,
+          "opcode": "i64.add"
+        },
+        {
+          "function": 439,
+          "byteOffset": 507005,
+          "opcode": "local.set"
+        },
+        {
+          "function": 439,
+          "byteOffset": 507008,
+          "opcode": "i64.const"
+        },
+        {
+          "function": 439,
+          "byteOffset": 507010,
+          "opcode": "local.get"
+        },
+        {
+          "function": 439,
+          "byteOffset": 507012,
+          "opcode": "local.get"
+        },
+        {
+          "function": 439,
+          "byteOffset": 507014,
+          "opcode": "i64.const"
+        },
+        {
+          "function": 439,
+          "byteOffset": 507023,
+          "opcode": "i64.gt_u"
+        },
+        {
+          "function": 439,
+          "byteOffset": 507024,
+          "opcode": "local.tee"
+        },
+        {
+          "function": 439,
+          "byteOffset": 507026,
+          "opcode": "select"
+        },
+        {
+          "function": 439,
+          "byteOffset": 507027,
+          "opcode": "local.set"
+        },
+        {
+          "function": 439,
+          "byteOffset": 507029,
+          "opcode": "local.get"
+        },
+        {
+          "function": 439,
+          "byteOffset": 507031,
+          "opcode": "i64.extend_i32_u"
+        },
+        {
+          "function": 439,
+          "byteOffset": 507032,
+          "opcode": "local.get"
+        },
+        {
+          "function": 439,
+          "byteOffset": 507034,
+          "opcode": "i64.add"
+        },
+        {
+          "function": 439,
+          "byteOffset": 507035,
+          "opcode": "br"
+        },
+        {
+          "function": 439,
+          "byteOffset": 507038,
+          "opcode": "block"
+        },
+        {
+          "function": 439,
+          "byteOffset": 507040,
+          "opcode": "local.get"
+        },
+        {
+          "function": 439,
+          "byteOffset": 507042,
+          "opcode": "local.get"
+        },
+        {
+          "function": 439,
+          "byteOffset": 507044,
+          "opcode": "i64.or"
+        },
+        {
+          "function": 439,
+          "byteOffset": 507045,
+          "opcode": "i64.eqz"
+        },
+        {
+          "function": 439,
+          "byteOffset": 507046,
+          "opcode": "br_if"
+        },
+        {
+          "function": 439,
+          "byteOffset": 507048,
+          "opcode": "local.get"
+        },
+        {
+          "function": 439,
+          "byteOffset": 507050,
+          "opcode": "i64.const"
+        },
+        {
+          "function": 439,
+          "byteOffset": 507054,
+          "opcode": "i64.ne"
+        },
+        {
+          "function": 439,
+          "byteOffset": 507055,
+          "opcode": "br_if"
+        },
+        {
+          "function": 439,
+          "byteOffset": 507057,
+          "opcode": "local.get"
+        },
+        {
+          "function": 439,
+          "byteOffset": 507059,
+          "opcode": "i64.const"
+        },
+        {
+          "function": 439,
+          "byteOffset": 507061,
+          "opcode": "i64.shl"
+        },
+        {
+          "function": 439,
+          "byteOffset": 507062,
+          "opcode": "local.get"
+        },
+        {
+          "function": 439,
+          "byteOffset": 507064,
+          "opcode": "i64.const"
+        },
+        {
+          "function": 439,
+          "byteOffset": 507066,
+          "opcode": "i64.shr_u"
+        },
+        {
+          "function": 439,
+          "byteOffset": 507067,
+          "opcode": "i64.or"
+        },
+        {
+          "function": 439,
+          "byteOffset": 507068,
+          "opcode": "i64.const"
+        },
+        {
+          "function": 439,
+          "byteOffset": 507077,
+          "opcode": "i64.or"
+        },
+        {
+          "function": 439,
+          "byteOffset": 507078,
+          "opcode": "local.set"
+        },
+        {
+          "function": 439,
+          "byteOffset": 507080,
+          "opcode": "i64.const"
+        },
+        {
+          "function": 439,
+          "byteOffset": 507083,
+          "opcode": "br"
+        },
+        {
+          "function": 439,
+          "byteOffset": 507086,
+          "opcode": "local.get"
+        },
+        {
+          "function": 439,
+          "byteOffset": 507088,
+          "opcode": "i32.const"
+        },
+        {
+          "function": 439,
+          "byteOffset": 507092,
+          "opcode": "i32.gt_u"
+        },
+        {
+          "function": 439,
+          "byteOffset": 507093,
+          "opcode": "if"
+        },
+        {
+          "function": 439,
+          "byteOffset": 507095,
+          "opcode": "i64.const"
+        },
+        {
+          "function": 439,
+          "byteOffset": 507097,
+          "opcode": "local.set"
+        },
+        {
+          "function": 439,
+          "byteOffset": 507099,
+          "opcode": "i64.const"
+        },
+        {
+          "function": 439,
+          "byteOffset": 507102,
+          "opcode": "br"
+        },
+        {
+          "function": 439,
+          "byteOffset": 507105,
+          "opcode": "i32.const"
+        },
+        {
+          "function": 439,
+          "byteOffset": 507109,
+          "opcode": "i32.const"
+        },
+        {
+          "function": 439,
+          "byteOffset": 507113,
+          "opcode": "local.get"
+        },
+        {
+          "function": 439,
+          "byteOffset": 507115,
+          "opcode": "i64.eqz"
+        },
+        {
+          "function": 439,
+          "byteOffset": 507116,
+          "opcode": "local.tee"
+        },
+        {
+          "function": 439,
+          "byteOffset": 507118,
+          "opcode": "select"
+        },
+        {
+          "function": 439,
+          "byteOffset": 507119,
+          "opcode": "local.tee"
+        },
+        {
+          "function": 439,
+          "byteOffset": 507121,
+          "opcode": "local.get"
+        },
+        {
+          "function": 439,
+          "byteOffset": 507123,
+          "opcode": "i32.sub"
+        },
+        {
+          "function": 439,
+          "byteOffset": 507124,
+          "opcode": "local.tee"
+        },
+        {
+          "function": 439,
+          "byteOffset": 507126,
+          "opcode": "i32.const"
+        },
+        {
+          "function": 439,
+          "byteOffset": 507129,
+          "opcode": "i32.gt_s"
+        },
+        {
+          "function": 439,
+          "byteOffset": 507130,
+          "opcode": "if"
+        },
+        {
+          "function": 439,
+          "byteOffset": 507132,
+          "opcode": "i64.const"
+        },
+        {
+          "function": 439,
+          "byteOffset": 507134,
+          "opcode": "local.set"
+        },
+        {
+          "function": 439,
+          "byteOffset": 507136,
+          "opcode": "i64.const"
+        },
+        {
+          "function": 439,
+          "byteOffset": 507138,
+          "opcode": "br"
+        },
+        {
+          "function": 439,
+          "byteOffset": 507141,
+          "opcode": "local.get"
+        },
+        {
+          "function": 439,
+          "byteOffset": 507143,
+          "opcode": "local.get"
+        },
+        {
+          "function": 439,
+          "byteOffset": 507145,
+          "opcode": "i64.const"
+        },
+        {
+          "function": 439,
+          "byteOffset": 507154,
+          "opcode": "i64.or"
+        },
+        {
+          "function": 439,
+          "byteOffset": 507155,
+          "opcode": "local.get"
+        },
+        {
+          "function": 439,
+          "byteOffset": 507157,
+          "opcode": "select"
+        },
+        {
+          "function": 439,
+          "byteOffset": 507158,
+          "opcode": "local.set"
+        },
+        {
+          "function": 439,
+          "byteOffset": 507160,
+          "opcode": "i32.const"
+        },
+        {
+          "function": 439,
+          "byteOffset": 507162,
+          "opcode": "local.set"
+        },
+        {
+          "function": 439,
+          "byteOffset": 507164,
+          "opcode": "local.get"
+        },
+        {
+          "function": 439,
+          "byteOffset": 507166,
+          "opcode": "local.get"
+        },
+        {
+          "function": 439,
+          "byteOffset": 507168,
+          "opcode": "i32.ne"
+        },
+        {
+          "function": 439,
+          "byteOffset": 507169,
+          "opcode": "if"
+        },
+        {
+          "function": 439,
+          "byteOffset": 507171,
+          "opcode": "local.get"
+        },
+        {
+          "function": 439,
+          "byteOffset": 507173,
+          "opcode": "i32.const"
+        },
+        {
+          "function": 439,
+          "byteOffset": 507175,
+          "opcode": "i32.add"
+        },
+        {
+          "function": 439,
+          "byteOffset": 507176,
+          "opcode": "local.get"
+        },
+        {
+          "function": 439,
+          "byteOffset": 507178,
+          "opcode": "local.get"
+        },
+        {
+          "function": 439,
+          "byteOffset": 507180,
+          "opcode": "i32.const"
+        },
+        {
+          "function": 439,
+          "byteOffset": 507183,
+          "opcode": "local.get"
+        },
+        {
+          "function": 439,
+          "byteOffset": 507185,
+          "opcode": "i32.sub"
+        },
+        {
+          "function": 439,
+          "byteOffset": 507186,
+          "opcode": "call"
+        },
+        {
+          "function": 439,
+          "byteOffset": 507189,
+          "opcode": "local.get"
+        },
+        {
+          "function": 439,
+          "byteOffset": 507191,
+          "opcode": "i64.load"
+        },
+        {
+          "function": 439,
+          "byteOffset": 507194,
+          "opcode": "local.get"
+        },
+        {
+          "function": 439,
+          "byteOffset": 507196,
+          "opcode": "i64.load"
+        },
+        {
+          "function": 439,
+          "byteOffset": 507199,
+          "opcode": "i64.or"
+        },
+        {
+          "function": 439,
+          "byteOffset": 507200,
+          "opcode": "i64.const"
+        },
+        {
+          "function": 439,
+          "byteOffset": 507202,
+          "opcode": "i64.ne"
+        },
+        {
+          "function": 439,
+          "byteOffset": 507203,
+          "opcode": "local.set"
+        },
+        {
+          "function": 439,
+          "byteOffset": 507206,
+          "opcode": "local.get"
+        },
+        {
+          "function": 439,
+          "byteOffset": 507208,
+          "opcode": "local.get"
+        },
+        {
+          "function": 439,
+          "byteOffset": 507210,
+          "opcode": "local.get"
+        },
+        {
+          "function": 439,
+          "byteOffset": 507212,
+          "opcode": "local.get"
+        },
+        {
+          "function": 439,
+          "byteOffset": 507214,
+          "opcode": "call"
+        },
+        {
+          "function": 439,
+          "byteOffset": 507217,
+          "opcode": "local.get"
+        },
+        {
+          "function": 439,
+          "byteOffset": 507219,
+          "opcode": "i64.load"
+        },
+        {
+          "function": 439,
+          "byteOffset": 507222,
+          "opcode": "i64.const"
+        },
+        {
+          "function": 439,
+          "byteOffset": 507224,
+          "opcode": "i64.shl"
+        },
+        {
+          "function": 439,
+          "byteOffset": 507225,
+          "opcode": "local.get"
+        },
+        {
+          "function": 439,
+          "byteOffset": 507227,
+          "opcode": "i64.load"
+        },
+        {
+          "function": 439,
+          "byteOffset": 507230,
+          "opcode": "local.tee"
+        },
+        {
+          "function": 439,
+          "byteOffset": 507232,
+          "opcode": "i64.const"
+        },
+        {
+          "function": 439,
+          "byteOffset": 507234,
+          "opcode": "i64.shr_u"
+        },
+        {
+          "function": 439,
+          "byteOffset": 507235,
+          "opcode": "i64.or"
+        },
+        {
+          "function": 439,
+          "byteOffset": 507236,
+          "opcode": "local.set"
+        },
+        {
+          "function": 439,
+          "byteOffset": 507238,
+          "opcode": "block"
+        },
+        {
+          "function": 439,
+          "byteOffset": 507240,
+          "opcode": "local.get"
+        },
+        {
+          "function": 439,
+          "byteOffset": 507242,
+          "opcode": "i64.extend_i32_u"
+        },
+        {
+          "function": 439,
+          "byteOffset": 507243,
+          "opcode": "local.get"
+        },
+        {
+          "function": 439,
+          "byteOffset": 507245,
+          "opcode": "i64.const"
+        },
+        {
+          "function": 439,
+          "byteOffset": 507255,
+          "opcode": "i64.and"
+        },
+        {
+          "function": 439,
+          "byteOffset": 507256,
+          "opcode": "i64.or"
+        },
+        {
+          "function": 439,
+          "byteOffset": 507257,
+          "opcode": "local.tee"
+        },
+        {
+          "function": 439,
+          "byteOffset": 507259,
+          "opcode": "i64.const"
+        },
+        {
+          "function": 439,
+          "byteOffset": 507269,
+          "opcode": "i64.ge_u"
+        },
+        {
+          "function": 439,
+          "byteOffset": 507270,
+          "opcode": "if"
+        },
+        {
+          "function": 439,
+          "byteOffset": 507272,
+          "opcode": "local.get"
+        },
+        {
+          "function": 439,
+          "byteOffset": 507274,
+          "opcode": "i64.const"
+        },
+        {
+          "function": 439,
+          "byteOffset": 507276,
+          "opcode": "i64.add"
+        },
+        {
+          "function": 439,
+          "byteOffset": 507277,
+          "opcode": "local.set"
+        },
+        {
+          "function": 439,
+          "byteOffset": 507279,
+          "opcode": "br"
+        },
+        {
+          "function": 439,
+          "byteOffset": 507282,
+          "opcode": "local.get"
+        },
+        {
+          "function": 439,
+          "byteOffset": 507284,
+          "opcode": "i64.const"
+        },
+        {
+          "function": 439,
+          "byteOffset": 507294,
+          "opcode": "i64.ne"
+        },
+        {
+          "function": 439,
+          "byteOffset": 507295,
+          "opcode": "br_if"
+        },
+        {
+          "function": 439,
+          "byteOffset": 507297,
+          "opcode": "local.get"
+        },
+        {
+          "function": 439,
+          "byteOffset": 507299,
+          "opcode": "i64.const"
+        },
+        {
+          "function": 439,
+          "byteOffset": 507301,
+          "opcode": "i64.and"
+        },
+        {
+          "function": 439,
+          "byteOffset": 507302,
+          "opcode": "local.get"
+        },
+        {
+          "function": 439,
+          "byteOffset": 507304,
+          "opcode": "i64.add"
+        },
+        {
+          "function": 439,
+          "byteOffset": 507305,
+          "opcode": "local.set"
+        },
+        {
+          "function": 439,
+          "byteOffset": 507308,
+          "opcode": "local.get"
+        },
+        {
+          "function": 439,
+          "byteOffset": 507310,
+          "opcode": "i64.const"
+        },
+        {
+          "function": 439,
+          "byteOffset": 507319,
+          "opcode": "i64.xor"
+        },
+        {
+          "function": 439,
+          "byteOffset": 507320,
+          "opcode": "local.get"
+        },
+        {
+          "function": 439,
+          "byteOffset": 507322,
+          "opcode": "local.get"
+        },
+        {
+          "function": 439,
+          "byteOffset": 507324,
+          "opcode": "i64.const"
+        },
+        {
+          "function": 439,
+          "byteOffset": 507333,
+          "opcode": "i64.gt_u"
+        },
+        {
+          "function": 439,
+          "byteOffset": 507334,
+          "opcode": "local.tee"
+        },
+        {
+          "function": 439,
+          "byteOffset": 507336,
+          "opcode": "select"
+        },
+        {
+          "function": 439,
+          "byteOffset": 507337,
+          "opcode": "local.set"
+        },
+        {
+          "function": 439,
+          "byteOffset": 507339,
+          "opcode": "local.get"
+        },
+        {
+          "function": 439,
+          "byteOffset": 507341,
+          "opcode": "i64.extend_i32_u"
+        },
+        {
+          "function": 439,
+          "byteOffset": 507343,
+          "opcode": "local.set"
+        },
+        {
+          "function": 439,
+          "byteOffset": 507345,
+          "opcode": "local.get"
+        },
+        {
+          "function": 439,
+          "byteOffset": 507347,
+          "opcode": "i32.const"
+        },
+        {
+          "function": 439,
+          "byteOffset": 507349,
+          "opcode": "i32.add"
+        },
+        {
+          "function": 439,
+          "byteOffset": 507350,
+          "opcode": "local.tee"
+        },
+        {
+          "function": 439,
+          "byteOffset": 507352,
+          "opcode": "global.get"
+        },
+        {
+          "function": 439,
+          "byteOffset": 507354,
+          "opcode": "i32.gt_u"
+        },
+        {
+          "function": 439,
+          "byteOffset": 507355,
+          "opcode": "local.get"
+        },
+        {
+          "function": 439,
+          "byteOffset": 507357,
+          "opcode": "global.get"
+        },
+        {
+          "function": 439,
+          "byteOffset": 507359,
+          "opcode": "i32.lt_u"
+        },
+        {
+          "function": 439,
+          "byteOffset": 507360,
+          "opcode": "i32.or"
+        },
+        {
+          "function": 439,
+          "byteOffset": 507361,
+          "opcode": "if"
+        },
+        {
+          "function": 439,
+          "byteOffset": 507368,
+          "opcode": "local.get"
+        },
+        {
+          "function": 439,
+          "byteOffset": 507370,
+          "opcode": "global.set"
+        },
+        {
+          "function": 439,
+          "byteOffset": 507372,
+          "opcode": "local.get"
+        },
+        {
+          "function": 439,
+          "byteOffset": 507374,
+          "opcode": "i64.const"
+        },
+        {
+          "function": 439,
+          "byteOffset": 507385,
+          "opcode": "i64.and"
+        },
+        {
+          "function": 439,
+          "byteOffset": 507386,
+          "opcode": "local.get"
+        },
+        {
+          "function": 439,
+          "byteOffset": 507388,
+          "opcode": "i64.const"
+        },
+        {
+          "function": 439,
+          "byteOffset": 507390,
+          "opcode": "i64.shl"
+        },
+        {
+          "function": 439,
+          "byteOffset": 507391,
+          "opcode": "i64.or"
+        },
+        {
+          "function": 439,
+          "byteOffset": 507392,
+          "opcode": "local.get"
+        },
+        {
+          "function": 439,
+          "byteOffset": 507394,
+          "opcode": "i64.or"
+        },
+        {
+          "function": 439,
+          "byteOffset": 507395,
+          "opcode": "f64.reinterpret_i64"
+        }
+      ]
+    }
+  ],
+  "checks": [
+    {
+      "name": "__ashlti3-path-coverage",
+      "z3": "unsat",
+      "cvc5": "unsat",
+      "smt2SHA256": "f9c5938f01868a3b99e8482e2332bf2d07c07eff9a263dd5a7b82b0a0ce5abc9",
+      "z3Seconds": 0.00019516702741384506,
+      "cvc5Seconds": 0.0018904581665992737,
+      "cvc5ExtendedFP": false
+    },
+    {
+      "name": "__ashlti3-memory-bounds",
+      "z3": "unsat",
+      "cvc5": "unsat",
+      "smt2SHA256": "a4a3848e465a07d7920258c20f584d1d4b84868fbbd90618f2fb55710e5685cb",
+      "z3Seconds": 0.0017614169046282768,
+      "cvc5Seconds": 0.004352833144366741,
+      "cvc5ExtendedFP": false
+    },
+    {
+      "name": "__ashlti3-result",
+      "z3": "unsat",
+      "cvc5": "unsat",
+      "smt2SHA256": "543926101cd6213b3bd95f9d8987cad374d2fe7a58f9f4cb3d593c40bd42cb15",
+      "z3Seconds": 0.08866887493059039,
+      "cvc5Seconds": 0.8181392499245703,
+      "cvc5ExtendedFP": false
+    },
+    {
+      "name": "__ashlti3-frame-and-globals",
+      "z3": "unsat",
+      "cvc5": "unsat",
+      "smt2SHA256": "a42c355207530dfd9b639b67e00f31ca86fb410a01d69090d4710012c1a9dbef",
+      "z3Seconds": 0.0775427920743823,
+      "cvc5Seconds": 0.11226945789530873,
+      "cvc5ExtendedFP": false
+    },
+    {
+      "name": "__lshrti3-path-coverage",
+      "z3": "unsat",
+      "cvc5": "unsat",
+      "smt2SHA256": "504f11601159d15a852e12e5711d47a1908a67f116aaa885b24c042d16970ef5",
+      "z3Seconds": 0.00017449958249926567,
+      "cvc5Seconds": 0.001242958940565586,
+      "cvc5ExtendedFP": false
+    },
+    {
+      "name": "__lshrti3-memory-bounds",
+      "z3": "unsat",
+      "cvc5": "unsat",
+      "smt2SHA256": "a415a2ef85d70305c1588e7e6f5c80d3fe5ae06b388fbffd2edcb5a9e7751200",
+      "z3Seconds": 0.0019456660374999046,
+      "cvc5Seconds": 0.0042419168166816235,
+      "cvc5ExtendedFP": false
+    },
+    {
+      "name": "__lshrti3-result",
+      "z3": "unsat",
+      "cvc5": "unsat",
+      "smt2SHA256": "dec2f9216bb70fc71f27bdd671951192d8db0f82f2e1b873af60c298dd389235",
+      "z3Seconds": 0.08993683382868767,
+      "cvc5Seconds": 0.788757124915719,
+      "cvc5ExtendedFP": false
+    },
+    {
+      "name": "__lshrti3-frame-and-globals",
+      "z3": "unsat",
+      "cvc5": "unsat",
+      "smt2SHA256": "f8026cf0d90d067e058b5e48256ecf2b484cdc40df0211c1a08b757765a7eb98",
+      "z3Seconds": 0.06795974960550666,
+      "cvc5Seconds": 0.10397133277729154,
+      "cvc5ExtendedFP": false
+    },
+    {
+      "name": "__extenddftf2-path-coverage",
+      "z3": "unsat",
+      "cvc5": "unsat",
+      "smt2SHA256": "b6d5324d5f8ce6def2d02a1b74df184d58be1693763fa45ba9bdf9066a8ca8b4",
+      "z3Seconds": 0.010502665769308805,
+      "cvc5Seconds": 0.009853541851043701,
+      "cvc5ExtendedFP": false
+    },
+    {
+      "name": "__extenddftf2-memory-bounds",
+      "z3": "unsat",
+      "cvc5": "unsat",
+      "smt2SHA256": "cdd7b65e39001571471d507306d0b64b57de107c006a9b0f423fad2df36263df",
+      "z3Seconds": 0.003583416808396578,
+      "cvc5Seconds": 0.009862374980002642,
+      "cvc5ExtendedFP": false
+    },
+    {
+      "name": "__extenddftf2-result",
+      "z3": "unsat",
+      "cvc5": "unsat",
+      "smt2SHA256": "2e0725d85c1c454ab4576e551667d3906af0ec1777ca60d955300c76dfed17c4",
+      "z3Seconds": 0.04058716678991914,
+      "cvc5Seconds": 1.3160722092725337,
+      "cvc5ExtendedFP": false
+    },
+    {
+      "name": "__extenddftf2-frame-and-globals",
+      "z3": "unsat",
+      "cvc5": "unsat",
+      "smt2SHA256": "793a9416432d6120b344df7486808c1a884c0f8a41e969541d57be626ec10841",
+      "z3Seconds": 0.49344362458214164,
+      "cvc5Seconds": 0.26415845891460776,
+      "cvc5ExtendedFP": false
+    },
+    {
+      "name": "__trunctfdf2-path-coverage",
+      "z3": "unsat",
+      "cvc5": "unsat",
+      "smt2SHA256": "ba3bce797252b1623cdcd27897c9caa9b567fc25a80e8bc10b99da5b3fd11607",
+      "z3Seconds": 0.02149929106235504,
+      "cvc5Seconds": 0.016747874673455954,
+      "cvc5ExtendedFP": false
+    },
+    {
+      "name": "__trunctfdf2-memory-bounds",
+      "z3": "unsat",
+      "cvc5": "unsat",
+      "smt2SHA256": "91e62ee7a4a6066c42375d770047038cc6578eb7719853b0c07bc5d7cbbcf42e",
+      "z3Seconds": 0.004032208118587732,
+      "cvc5Seconds": 0.011506542097777128,
+      "cvc5ExtendedFP": false
+    },
+    {
+      "name": "__trunctfdf2-result",
+      "z3": "unsat",
+      "cvc5": "unsat",
+      "smt2SHA256": "8121ec08eb933f93df999af112ff1ef9519f8c234e639251f0d67a4374de3940",
+      "z3Seconds": 0.512744708918035,
+      "cvc5Seconds": 1.4413701249286532,
+      "cvc5ExtendedFP": false
+    },
+    {
+      "name": "__trunctfdf2-frame-and-globals",
+      "z3": "unsat",
+      "cvc5": "unsat",
+      "smt2SHA256": "d9b0bf136c12c35571c7858c6600cfd1674642f7c99f152b1640ebc9eb41fa63",
+      "z3Seconds": 0.9747158330865204,
+      "cvc5Seconds": 0.28585029067471623,
+      "cvc5ExtendedFP": false
+    },
+    {
+      "name": "widening-field-spec-is-IEEE",
+      "z3": "unsat",
+      "cvc5": "unsat",
+      "smt2SHA256": "4853681c2fafd0ebad747e398e08fde5f39a9e85afd3c2e906a9d4be3c89f9ef",
+      "z3Seconds": 0.15243525011464953,
+      "cvc5Seconds": 0.22923937486484647,
+      "cvc5ExtendedFP": true
+    },
+    {
+      "name": "narrowing-field-spec-is-IEEE",
+      "z3": "unsat",
+      "cvc5": "unsat",
+      "smt2SHA256": "2bca79ee96bd0df3ab94a6e2e158c4a2db9e3e649821a9eaefac193ee3128fa1",
+      "z3Seconds": 0.5381208336912096,
+      "cvc5Seconds": 0.8494062083773315,
+      "cvc5ExtendedFP": true
+    },
+    {
+      "name": "binary64-roundtrip-and-NaN-policy",
+      "z3": "unsat",
+      "cvc5": "unsat",
+      "smt2SHA256": "957d41e2cbd160a08894a327857c3d56bddf4c65c45de384e8ce44dd530d631e",
+      "z3Seconds": 0.08463062485679984,
+      "cvc5Seconds": 0.46416012523695827,
+      "cvc5ExtendedFP": false
+    }
+  ],
+  "versions": {
+    "z3": "4.15.4",
+    "cvc5": "1.3.4"
+  },
+  "checkerSHA256": {
+    "machine.py": "fe8e84a3ab1dec4f340b9dcff20e81669c6d2094dfd27f51cf76e38f40984f25",
+    "verify.py": "3a1ca74c0aa043b0f883e88bfe55ef941b0880edfa29febe4822c90176e9e688"
+  },
+  "inputSHA256": {
+    "verification/runtime/machine.py": "fe8e84a3ab1dec4f340b9dcff20e81669c6d2094dfd27f51cf76e38f40984f25",
+    "verification/runtime/verify.py": "3a1ca74c0aa043b0f883e88bfe55ef941b0880edfa29febe4822c90176e9e688",
+    "verification/translation/wasm.py": "66aee1cd82425aeec1420be16e76223aa9ecc11920ee1fe2190dbb1b852032c9",
+    "verification/translation/model.py": "319b900e0e94560d07ce173bfce0676abd6803410875d9ebdeacc1ac31c144d5",
+    "dist/manifest.json": "dc055014846ee95d22b100aea61a3f2acf569095ff9f82d478bf82a184d4c4c5",
+    ".wasm-toolchain/upstream/emscripten/system/lib/compiler-rt/lib/builtins/extenddftf2.c": "d5d52fd1e14e5db84c99319cd3aa363de68cbfbd5fe290c73b39a3acc541cf20",
+    ".wasm-toolchain/upstream/emscripten/system/lib/compiler-rt/lib/builtins/trunctfdf2.c": "46a8ca78c3d3c44a0eb8eff7a86739349cbd26cb7f61e3b5784fb096a5420871",
+    ".wasm-toolchain/upstream/emscripten/system/lib/compiler-rt/lib/builtins/fp_extend_impl.inc": "63f9cd801c0c2a04e8becbd22f189eaaa47b5466bc098acc214fe69fd525f92a",
+    ".wasm-toolchain/upstream/emscripten/system/lib/compiler-rt/lib/builtins/fp_trunc_impl.inc": "17098ba776ada9f2cc568a02cf34317bb0b59b8a603ff8a92ea909b7bc8c214b",
+    ".wasm-toolchain/upstream/emscripten/system/lib/compiler-rt/lib/builtins/ashlti3.c": "39afba4710d9b24c9c27cccdc8e18a18db10ce3616dc60cdcfa494f0a49a3a60",
+    ".wasm-toolchain/upstream/emscripten/system/lib/compiler-rt/lib/builtins/lshrti3.c": "89da91e31e33c3c62128c32ed1c740856a413c17ac1e7cd75702da37d1cf9fa4",
+    ".wasm-toolchain/upstream/emscripten/system/lib/compiler-rt/lib/builtins/int_lib.h": "b31130f10484636895daa13b91b63d47ea82b45547f29e4dd136b48a67854d30",
+    ".wasm-toolchain/upstream/emscripten/system/lib/compiler-rt/lib/builtins/int_types.h": "b4b768e1b2251df4c0161b4c1f120417500ff4883b7008120104d042eeb2151f"
+  },
+  "runtimeSourceCorrespondence": "Source hashes identify the pinned compiler-rt implementation for audit. The theorem validates retained WASM instructions directly against a bit-field specification; no C AST-to-WASM proof is inferred from these hashes.",
+  "solverBoundary": "Actual instruction-to-bitvector specification checks use both solvers in their normal modes. The two IEEE-FP128 specification bridges additionally enable cvc5 fp-exp; cvc5 labels this mode experimental with known issues. These corroborate Z3 but are not independently kernel-checked certificates.",
+  "scope": "Universal direct production WASM instruction refinement for retained 128-bit shifts and binary64/binary128 conversions. Explicit valid disjoint output/stack regions, 32-byte stack reserve, current minimum memory size, and initialized stack instrumentation bounds. No C AST or whole-runtime/compiler proof."
+}

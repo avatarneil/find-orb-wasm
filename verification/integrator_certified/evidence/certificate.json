@@ -1,0 +1,339 @@
+{
+  "schema": 1,
+  "passed": true,
+  "source": {
+    "repository": "https://github.com/Bill-Gray/find_orb",
+    "commit": "9cc932997837c5ab994fbf015db59f5d0da852e5",
+    "originalSha256": "bdb2104b973a575ccdfbc707232644db7ddca9ddde793c780ffc3ea3881bbb2c",
+    "correctedSha256": "112613edaf6ca9e84da2a95c29e2674d83d386f42bb5be0ba9edd03987d64d58",
+    "currentSha256": "112613edaf6ca9e84da2a95c29e2674d83d386f42bb5be0ba9edd03987d64d58",
+    "currentVariant": "corrected"
+  },
+  "domain": "t0=0; zero reference; n_vals=n_orbit_params=6; first coordinate RHS copies its input and other derivatives zero; valid initialized disjoint buffers and successful allocation; |h|<=1/16, |y0|<=1/2; output first coordinate only; finite numerical values modulo zero sign",
+  "rounding": "Explicit real predicate |rnd(z)-z|<=2^-113*|z|+2^-200 for |z|<100; no C++/WASM or IEEE bridge is claimed here",
+  "methods": {
+    "rkf": {
+      "module": "RKFLinear",
+      "nodes": 91,
+      "theoremRoots": 185,
+      "storedPolynomial": "[((1/1 : \u211d), 0, 1), ((144115188075855869/144115188075855872 : \u211d), 1, 1), ((20282409603651669125409358727523/40564819207303340847894502572032 : \u211d), 2, 1), ((974334424887268524898892582104616325508218803687/5846006549323611672814739330865132078623730171904 : \u211d), 3, 1), ((548501519107068632386430083263071233979187581624588297134122545/13164036458569648337239753460458804039861886925068638906788872192 : \u211d), 4, 1), ((56166555556563826821379094913013867503188385384735858917779244529/6739986666787659948666753771754907668409286105635143120275902562304 : \u211d), 5, 1), ((3510409722285239338995912697965686165858456543637906037218655455/3369993333393829974333376885877453834204643052817571560137951281152 : \u211d), 6, 1)]",
+      "coefficientDifferenceBound": {
+        "numerator": "774041074907143501037450970056507330000801037228869012444623154560383859",
+        "denominator": "72201894337085274632779445707499234395631343808656318614702808013131479645159424000",
+        "approx": 1.0720509233364677e-11
+      },
+      "exponentialTailBound": {
+        "numerator": "17",
+        "denominator": "12350635211901892262408283488256000",
+        "approx": 1.3764474222036508e-33
+      },
+      "roundingBound": {
+        "numerator": "282841997123703996521631",
+        "denominator": "1569275433846670190958947355801916604025588861116008628224",
+        "approx": 1.8023731909852847e-34
+      },
+      "totalBound": {
+        "numerator": "258013691635714500345854455214571660957814107774214525690192342592787409",
+        "denominator": "24067298112361758210926481902499744798543781269552106204900936004377159881719808000",
+        "approx": 1.0720509233364677e-11
+      },
+      "advertisedBound": {
+        "numerator": "43",
+        "denominator": "4000000000000",
+        "approx": 1.075e-11
+      },
+      "functionSHA256": "133a850a5393a2c6240590e42b65223eced81ae3eb7ed5e3d8acaecb003a33de"
+    },
+    "pd": {
+      "module": "PDLinear",
+      "nodes": 329,
+      "theoremRoots": 661,
+      "storedPolynomial": "[((1/1 : \u211d), 0, 1), ((144115188075855861/144115188075855872 : \u211d), 1, 1), ((10384593717069659998630494158240837/20769187434139310514121985316880384 : \u211d), 2, 1), ((31178701596392628535375143485826180160972740887103/187072209578355573530071658587684226515959365500928 : \u211d), 3, 1), ((70208194445704891196263368426588352555518660570848673221683798319/1684996666696914987166688442938726917102321526408785780068975640576 : \u211d), 4, 1), ((126475839337612749341454760810649370128141252242212186850615514620375250634885097/15177100720513508366558296147058741458143803430094840009779784451085189728165691392 : \u211d), 5, 1), ((2966648661001267779148665567914924331908388647209681475121757801170414802005052978125360590927/2135987035920910082395021706169552114602704522356652769947041607822219725780640550022962086936576 : \u211d), 6, 1), ((488616148268781253277491516581200033851694077555731542050862989101229998599993155642499732302704327391203641797/2462625387274654950767440006258975862817483704404090416746768337765357610718575663213391640930307227550414249394176 : \u211d), 7, 1), ((550132875817622403464547672870906095213726037948296487994199224767078971402180265371709083300367878018023238574703118210030857/22181357552966518876627313473144669627491496603006532601363836644916970462445004984319795248833116624779129687691228574631793262592 : \u211d), 8, 1), ((31255518709780302098267304764383989574848434912336142351964682752343616188035235372759878528749759607350926264529505786534596681/11356855067118857664833184498250070849275646260739344691898284362197488876771842551971735167402555711886914400097909030211478150447104 : \u211d), 9, 1), ((24787746886975652123235664594431107926050862467553584054047362232230103117038611557477399047561315781881073256555235200818403047130326046298413/102293456496754433437912178025862473506770063938845774671352855253004181137646079840102190385184504910965208878986252219038039267058918532916516487168 : \u211d), 10, 1), ((79837074502931311238385648313018360994078415505515117574553777246852362844476172715154345388987842285995623202252792504841877174898666152115561/3273390607896141870013189696827599152216642046043064789483291368096133796404674554883270092325904157150886684127560071009217256545885393053328527589376 : \u211d), 11, 1), ((-1332018115987858939988847954467464107509145716439132280045866149696349988358711684883825934650784334832483188378128792755438795279341458510125/6546781215792283740026379393655198304433284092086129578966582736192267592809349109766540184651808314301773368255120142018434513091770786106657055178752 : \u211d), 12, 1)]",
+      "coefficientDifferenceBound": {
+        "numerator": "6811385749998772760960612313425539033574217319738582317014245406850549437297055603464573600162342005202723575877955330388567341213298072547747963859904359919",
+        "denominator": "2353245701186302471436662802711171787902758549410752026551487369495065127049294766575646995026876743585800443225069566458014260578597744509370722654302503534991895412342784000",
+        "approx": 2.894464333479952e-18
+      },
+      "exponentialTailBound": {
+        "numerator": "17",
+        "denominator": "12350635211901892262408283488256000",
+        "approx": 1.3764474222036508e-33
+      },
+      "roundingBound": {
+        "numerator": "202418757673687834639497",
+        "denominator": "784637716923335095479473677900958302012794430558004314112",
+        "approx": 2.5797734840914566e-34
+      },
+      "totalBound": {
+        "numerator": "2270461916666258869054559223465779594289140365610357687698726445562852975442853156057598100264816823176641918703282260745309514005455402434919484940020655269",
+        "denominator": "784415233728767490478887600903723929300919516470250675517162456498355042349764922191882331675625581195266814408356522152671420192865914836456907551434167844997298470780928000",
+        "approx": 2.8944643334799535e-18
+      },
+      "advertisedBound": {
+        "numerator": "579",
+        "denominator": "200000000000000000000",
+        "approx": 2.895e-18
+      },
+      "functionSHA256": "2c5aca8cf131313a9f6a49e46bb47fc0a3112abf27e8647e73b1e662f55d61ad"
+    }
+  },
+  "finiteInterpreterCorrespondence": [
+    {
+      "method": "rkf",
+      "step": {
+        "numerator": "1",
+        "denominator": "16",
+        "approx": 0.0625
+      },
+      "exactFiniteNumericalEquality": true
+    },
+    {
+      "method": "rkf",
+      "step": {
+        "numerator": "-1",
+        "denominator": "16",
+        "approx": -0.0625
+      },
+      "exactFiniteNumericalEquality": true
+    },
+    {
+      "method": "rkf",
+      "step": {
+        "numerator": "1",
+        "denominator": "32",
+        "approx": 0.03125
+      },
+      "exactFiniteNumericalEquality": true
+    },
+    {
+      "method": "rkf",
+      "step": {
+        "numerator": "-1",
+        "denominator": "32",
+        "approx": -0.03125
+      },
+      "exactFiniteNumericalEquality": true
+    },
+    {
+      "method": "rkf",
+      "step": {
+        "numerator": "1",
+        "denominator": "64",
+        "approx": 0.015625
+      },
+      "exactFiniteNumericalEquality": true
+    },
+    {
+      "method": "rkf",
+      "step": {
+        "numerator": "-1",
+        "denominator": "64",
+        "approx": -0.015625
+      },
+      "exactFiniteNumericalEquality": true
+    },
+    {
+      "method": "rkf",
+      "step": {
+        "numerator": "1",
+        "denominator": "128",
+        "approx": 0.0078125
+      },
+      "exactFiniteNumericalEquality": true
+    },
+    {
+      "method": "rkf",
+      "step": {
+        "numerator": "-1",
+        "denominator": "128",
+        "approx": -0.0078125
+      },
+      "exactFiniteNumericalEquality": true
+    },
+    {
+      "method": "rkf",
+      "step": {
+        "numerator": "1",
+        "denominator": "256",
+        "approx": 0.00390625
+      },
+      "exactFiniteNumericalEquality": true
+    },
+    {
+      "method": "rkf",
+      "step": {
+        "numerator": "-1",
+        "denominator": "256",
+        "approx": -0.00390625
+      },
+      "exactFiniteNumericalEquality": true
+    },
+    {
+      "method": "pd",
+      "step": {
+        "numerator": "1",
+        "denominator": "16",
+        "approx": 0.0625
+      },
+      "exactFiniteNumericalEquality": true
+    },
+    {
+      "method": "pd",
+      "step": {
+        "numerator": "-1",
+        "denominator": "16",
+        "approx": -0.0625
+      },
+      "exactFiniteNumericalEquality": true
+    },
+    {
+      "method": "pd",
+      "step": {
+        "numerator": "1",
+        "denominator": "32",
+        "approx": 0.03125
+      },
+      "exactFiniteNumericalEquality": true
+    },
+    {
+      "method": "pd",
+      "step": {
+        "numerator": "-1",
+        "denominator": "32",
+        "approx": -0.03125
+      },
+      "exactFiniteNumericalEquality": true
+    },
+    {
+      "method": "pd",
+      "step": {
+        "numerator": "1",
+        "denominator": "64",
+        "approx": 0.015625
+      },
+      "exactFiniteNumericalEquality": true
+    },
+    {
+      "method": "pd",
+      "step": {
+        "numerator": "-1",
+        "denominator": "64",
+        "approx": -0.015625
+      },
+      "exactFiniteNumericalEquality": true
+    },
+    {
+      "method": "pd",
+      "step": {
+        "numerator": "1",
+        "denominator": "128",
+        "approx": 0.0078125
+      },
+      "exactFiniteNumericalEquality": true
+    },
+    {
+      "method": "pd",
+      "step": {
+        "numerator": "-1",
+        "denominator": "128",
+        "approx": -0.0078125
+      },
+      "exactFiniteNumericalEquality": true
+    },
+    {
+      "method": "pd",
+      "step": {
+        "numerator": "1",
+        "denominator": "256",
+        "approx": 0.00390625
+      },
+      "exactFiniteNumericalEquality": true
+    },
+    {
+      "method": "pd",
+      "step": {
+        "numerator": "-1",
+        "denominator": "256",
+        "approx": -0.00390625
+      },
+      "exactFiniteNumericalEquality": true
+    }
+  ],
+  "recordedCompiledCorrespondence": [
+    {
+      "method": "rkf",
+      "configuration": "wasmO0",
+      "step": {
+        "numerator": "1",
+        "denominator": "16",
+        "approx": 0.0625
+      },
+      "initial": {
+        "numerator": "1",
+        "denominator": "2",
+        "approx": 0.5
+      },
+      "valueBits": "3ffe1082b577bbbbbba15bc0ea84bda1",
+      "exactFiniteNumericalEqualityModuloZeroSign": true,
+      "scope": "Corroboration from the recorded source-extracted compiled probe, not a fresh compiler run or universal translation validation"
+    },
+    {
+      "method": "rkf",
+      "configuration": "wasmO3",
+      "step": {
+        "numerator": "1",
+        "denominator": "16",
+        "approx": 0.0625
+      },
+      "initial": {
+        "numerator": "1",
+        "denominator": "2",
+        "approx": 0.5
+      },
+      "valueBits": "3ffe1082b577bbbbbba15bc0ea84bda1",
+      "exactFiniteNumericalEqualityModuloZeroSign": true,
+      "scope": "Corroboration from the recorded source-extracted compiled probe, not a fresh compiler run or universal translation validation"
+    },
+    {
+      "method": "pd",
+      "configuration": "wasmO0",
+      "step": {
+        "numerator": "1",
+        "denominator": "16",
+        "approx": 0.0625
+      },
+      "initial": {
+        "numerator": "1",
+        "denominator": "2",
+        "approx": 0.5
+      },
+      "valueBits": "3ffe1082b577d34ed78d6dabea81fe04",
+      "exactFiniteNumericalEqualityModuloZeroSign": true,
+      "scope": "Corroboration from the recorded source-extracted compiled probe, not a fresh compiler run or universal translation validation"
+    },
+    {
+      "method": "pd",
+      "configuration": "wasmO3",
+      "step": {
+        "numerator": "1",
+        "denominator": "16",
+        "approx": 0.0625
+      },
+      "initial": {
+        "numerator": "1",
+        "denominator": "2",
+        "approx": 0.5
+      },
+      "valueBits": "3ffe1082b577d34ed78d6dabea81fe04",
+      "exactFiniteNumericalEqualityModuloZeroSign": true,
+      "scope": "Corroboration from the recorded source-extracted compiled probe, not a fresh compiler run or universal translation validation"
+    }
+  ],
+  "recordedCompiledEvidenceSHA256": "bdef9a86ab6e31330994917536e20f3f06483d08bd5160b7d230036c361e3bb1",
+  "status": "complete",
+  "generatedLeanSHA256": {
+    "RKFLinear.lean": "590c7cf05803d56e433bf606feeb7cb939b026c1cbda9262dcbd5ddd2cb1e66b",
+    "PDLinear.lean": "ce970f3f586e90c2a4c8b41bdfadb68dc05de8a3c65e9f3208d0d5ddebf029e8"
+  },
+  "generatorSHA256": "ed7199c6a4c00434d2dc554423ea893f3bdf6996ab6c11844f1df9be564f82a1"
+}

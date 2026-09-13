@@ -1,0 +1,402 @@
+{
+  "schema": 1,
+  "passed": true,
+  "toolchain": {
+    "leanCommit": "797c613eb9b6d4ec95db23e3e00af9ac6657f24b",
+    "mathlibCommit": "f897ebcf72cd16f89ab4577d0c826cd14afaafc7",
+    "dependencies": {
+      "plausible": "dfd06ebfe8d0e8fa7faba9cb5e5a2e74e7bd2805",
+      "LeanSearchClient": "99657ad92e23804e279f77ea6dbdeebaa1317b98",
+      "importGraph": "d768126816be17600904726ca7976b185786e6b9",
+      "proofwidgets": "556caed0eadb7901e068131d1be208dd907d07a2",
+      "aesop": "725ac8cd67acd70a7beaf47c3725e23484c1ef50",
+      "Qq": "dea6a3361fa36d5a13f87333dc506ada582e025c",
+      "batteries": "8da40b72fece29b7d3fe3d768bac4c8910ce9bee",
+      "Cli": "91c18fa62838ad0ab7384c03c9684d99d306e1da"
+    },
+    "leanVersion": "Lean (version 4.24.0, arm64-apple-darwin23.6.0, commit 797c613eb9b6d4ec95db23e3e00af9ac6657f24b, Release)"
+  },
+  "sourceSHA256": {
+    "FiniteFormat": "7d0451bac7bca3690cbeb47191fe89eca9cb0a1b1186a9230996ee960fcb8b31",
+    "SpacingBound": "b21c1137a9efa215de566af93ea2fc3e005de3731044c4291a5efad08946abca",
+    "IEEEBounds": "99c520d917afcde87472ebfb3c72e8931ef68b9a4cb053f43bf58a0ecaed5718",
+    "Binary64Bits": "122b8cdea37ef8c154b3ed3b240c24543a257b6ef6ca99aed6dd58f35d6d0e82"
+  },
+  "kernel": {
+    "performed": true,
+    "trustLevel": 0,
+    "checks": [
+      {
+        "source": "FiniteFormat.lean",
+        "sourceSHA256": "7d0451bac7bca3690cbeb47191fe89eca9cb0a1b1186a9230996ee960fcb8b31",
+        "moduleSHA256": "cd867af3c1a45a401ec1f7f1a9faf527e27f24e71bbd9a574a74b3b4515334c9",
+        "theorems": [
+          {
+            "name": "FindOrbRounding.nearestNat_lower",
+            "axioms": [
+              "Classical.choice",
+              "Quot.sound",
+              "propext"
+            ]
+          },
+          {
+            "name": "FindOrbRounding.nearestNat_upper",
+            "axioms": [
+              "Classical.choice",
+              "Quot.sound",
+              "propext"
+            ]
+          },
+          {
+            "name": "FindOrbRounding.nearestNat_error",
+            "axioms": [
+              "Classical.choice",
+              "Quot.sound",
+              "propext"
+            ]
+          },
+          {
+            "name": "FindOrbRounding.nearestNat_half_even",
+            "axioms": [
+              "Classical.choice",
+              "Quot.sound",
+              "propext"
+            ]
+          },
+          {
+            "name": "FindOrbRounding.exists_nearest",
+            "axioms": [
+              "Classical.choice",
+              "Quot.sound",
+              "propext"
+            ]
+          },
+          {
+            "name": "FindOrbRounding.nearestEven_is_nearest",
+            "axioms": [
+              "Classical.choice",
+              "Quot.sound",
+              "propext"
+            ]
+          },
+          {
+            "name": "FindOrbRounding.nearestEven_tie_policy",
+            "axioms": [
+              "Classical.choice",
+              "Quot.sound",
+              "propext"
+            ]
+          },
+          {
+            "name": "FindOrbRounding.roundFormat_le_candidate",
+            "axioms": [
+              "Classical.choice",
+              "Quot.sound",
+              "propext"
+            ]
+          },
+          {
+            "name": "FindOrbRounding.signed_zero_quotient",
+            "axioms": [
+              "Classical.choice",
+              "Quot.sound",
+              "propext"
+            ]
+          },
+          {
+            "name": "FindOrbRounding.roundFormat_exact",
+            "axioms": [
+              "Classical.choice",
+              "Quot.sound",
+              "propext"
+            ]
+          }
+        ]
+      },
+      {
+        "source": "SpacingBound.lean",
+        "sourceSHA256": "b21c1137a9efa215de566af93ea2fc3e005de3731044c4291a5efad08946abca",
+        "moduleSHA256": "4c59bdae708d4bfb1a44719ea4f57036998bf79f57248832c5bbf5e05af443e4",
+        "theorems": [
+          {
+            "name": "FindOrbRounding.grid_value_representable",
+            "axioms": [
+              "Classical.choice",
+              "Quot.sound",
+              "propext"
+            ]
+          },
+          {
+            "name": "FindOrbRounding.exists_close_value_nonnegative",
+            "axioms": [
+              "Classical.choice",
+              "Quot.sound",
+              "propext"
+            ]
+          },
+          {
+            "name": "FindOrbRounding.value_negate",
+            "axioms": [
+              "Classical.choice",
+              "Quot.sound",
+              "propext"
+            ]
+          },
+          {
+            "name": "FindOrbRounding.roundFormat_error",
+            "axioms": [
+              "Classical.choice",
+              "Quot.sound",
+              "propext"
+            ]
+          },
+          {
+            "name": "FindOrbRounding.any_nearest_error",
+            "axioms": [
+              "Classical.choice",
+              "Quot.sound",
+              "propext"
+            ]
+          }
+        ]
+      },
+      {
+        "source": "IEEEBounds.lean",
+        "sourceSHA256": "99c520d917afcde87472ebfb3c72e8931ef68b9a4cb053f43bf58a0ecaed5718",
+        "moduleSHA256": "2e74988d780444811b5e58ceb131337a4fc0e5cbc0423700b71c8501445b8e7b",
+        "theorems": [
+          {
+            "name": "FindOrbRounding.power_scale",
+            "axioms": [
+              "Classical.choice",
+              "Quot.sound",
+              "propext"
+            ]
+          },
+          {
+            "name": "FindOrbRounding.half_minimum_subnormal",
+            "axioms": [
+              "Classical.choice",
+              "Quot.sound",
+              "propext"
+            ]
+          },
+          {
+            "name": "FindOrbRounding.conservative_subnormal",
+            "axioms": [
+              "Classical.choice",
+              "Quot.sound",
+              "propext"
+            ]
+          },
+          {
+            "name": "FindOrbRounding.binary64_error",
+            "axioms": [
+              "Classical.choice",
+              "Quot.sound",
+              "propext"
+            ]
+          },
+          {
+            "name": "FindOrbRounding.binary128_error",
+            "axioms": [
+              "Classical.choice",
+              "Quot.sound",
+              "propext"
+            ]
+          },
+          {
+            "name": "FindOrbRounding.binary64_roundingModel",
+            "axioms": [
+              "Classical.choice",
+              "Quot.sound",
+              "propext"
+            ]
+          },
+          {
+            "name": "FindOrbRounding.binary128_conservative_error",
+            "axioms": [
+              "Classical.choice",
+              "Quot.sound",
+              "propext"
+            ]
+          },
+          {
+            "name": "FindOrbRounding.binary128_bounded_error",
+            "axioms": [
+              "Classical.choice",
+              "Quot.sound",
+              "propext"
+            ]
+          }
+        ]
+      },
+      {
+        "source": "Binary64Bits.lean",
+        "sourceSHA256": "122b8cdea37ef8c154b3ed3b240c24543a257b6ef6ca99aed6dd58f35d6d0e82",
+        "moduleSHA256": "1f5ecde7dfed15643605f509a65b4e69c36dae7117705b508414b6296639aa58",
+        "theorems": [
+          {
+            "name": "FindOrbRounding.bits64_bounded",
+            "axioms": [
+              "Classical.choice",
+              "Quot.sound",
+              "propext"
+            ]
+          },
+          {
+            "name": "FindOrbRounding.bits64_fraction",
+            "axioms": [
+              "Classical.choice",
+              "Quot.sound",
+              "propext"
+            ]
+          },
+          {
+            "name": "FindOrbRounding.bits64_exponent",
+            "axioms": [
+              "Classical.choice",
+              "Quot.sound",
+              "propext"
+            ]
+          },
+          {
+            "name": "FindOrbRounding.bits64_sign",
+            "axioms": [
+              "Classical.choice",
+              "Quot.sound",
+              "propext"
+            ]
+          },
+          {
+            "name": "FindOrbRounding.decode64_encode",
+            "axioms": [
+              "Classical.choice",
+              "Quot.sound",
+              "propext"
+            ]
+          },
+          {
+            "name": "FindOrbRounding.encode64_decode",
+            "axioms": [
+              "Classical.choice",
+              "Quot.sound",
+              "propext"
+            ]
+          },
+          {
+            "name": "FindOrbRounding.bits64_significand_parity",
+            "axioms": [
+              "Classical.choice",
+              "Quot.sound",
+              "propext"
+            ]
+          },
+          {
+            "name": "FindOrbRounding.decode64_bit_value",
+            "axioms": [
+              "Classical.choice",
+              "Quot.sound",
+              "propext"
+            ]
+          },
+          {
+            "name": "FindOrbRounding.binary64_nearest_even_bits",
+            "axioms": [
+              "Classical.choice",
+              "Quot.sound",
+              "propext"
+            ]
+          }
+        ]
+      }
+    ],
+    "theoremCount": 32,
+    "centralRawReplayReport": "verification/kernel/evidence/report.json"
+  },
+  "negativeControls": [
+    {
+      "name": "odd-half-tie",
+      "rejected": true,
+      "exitCode": 1,
+      "mutationSHA256": "262fbef34df9face67731ed3d686f8c1ad085d80ca203867f9230d3ed0af15ab",
+      "expectedMessages": [
+        "error:",
+        "omega"
+      ]
+    },
+    {
+      "name": "lost-binade-carry",
+      "rejected": true,
+      "exitCode": 1,
+      "mutationSHA256": "803035bac70184201e3bc35aadf067f9453272884653deb3a6adf528b3bda22a",
+      "expectedMessages": [
+        "error:",
+        "unsolved goals"
+      ]
+    },
+    {
+      "name": "wrong-exponent-bit-shift",
+      "rejected": true,
+      "exitCode": 1,
+      "mutationSHA256": "2de11f8479b0a0be60d040c9d14c781542da23d3a7cd6f9075f498f242315fd0",
+      "expectedMessages": [
+        "error:",
+        "omega"
+      ]
+    },
+    {
+      "name": "halved-relative-error",
+      "rejected": true,
+      "exitCode": 1,
+      "mutationSHA256": "d24c7b51e78a2b4acdf1629871275a86096b69050ead805c20101c64a414d25f",
+      "expectedMessages": [
+        "error:",
+        "Type mismatch"
+      ]
+    },
+    {
+      "name": "deleted-subnormal-allowance",
+      "rejected": true,
+      "exitCode": 1,
+      "mutationSHA256": "c5b431d26c3bfe10c9e3ba517d533d5fbbd466432eede003b1416ad557feda40",
+      "expectedMessages": [
+        "error:",
+        "Type mismatch"
+      ]
+    },
+    {
+      "name": "fail-closed-PANIC",
+      "rejected": true
+    },
+    {
+      "name": "fail-closed-error",
+      "rejected": true
+    },
+    {
+      "name": "fail-closed-sorryAx",
+      "rejected": true
+    }
+  ],
+  "backendConformance": {
+    "schema": 1,
+    "passed": true,
+    "cases": 10868,
+    "subnormalExactResults": 1196,
+    "midpointTies": 504,
+    "roundedBinadeBoundaries": 1532,
+    "node": "v25.9.0",
+    "v8": "14.1.146.11-node.25",
+    "wasmBinarySHA256": "6d78f18348dd96c994474606b560802885183f8759086f7819bd8f23befc4e23",
+    "vectorsSHA256": "02aeb2da5eadf038e1851a60a726521cad9edcb47f7c7c9ed712a05084aea6be",
+    "scope": "Finite direct-WASM primitive conformance probes against exact rational nearest-even decoding; not a proof of the runtime or compiler. Signed zeros compared through the proved real-value quotient."
+  },
+  "integrationPremiseSHA256": "7c411e5bbff9b01e521ae59d6769832c0c0ace7d71223b2f15f4410db84baa5f",
+  "scope": "Universal finite nearest-representable rounding error, explicit even-significand tie preference, subnormal spacing and binade carry, binary64 field/word bijection, and concrete binary64/binary128 error predicates. Actual runtime/compiler implementation of IEEE semantics remains an external boundary; finite backend probes are conformance evidence only.",
+  "sources": [
+    "https://www.w3.org/TR/wasm-core/#floating-point-operations",
+    "https://www.w3.org/TR/wasm-core/#floating-point",
+    "https://github.com/leanprover-community/mathlib4/blob/f897ebcf72cd16f89ab4577d0c826cd14afaafc7/Mathlib/Algebra/Order/Floor/Ring.lean",
+    "https://github.com/leanprover-community/mathlib4/blob/f897ebcf72cd16f89ab4577d0c826cd14afaafc7/Mathlib/Data/Finset/Max.lean"
+  ]
+}

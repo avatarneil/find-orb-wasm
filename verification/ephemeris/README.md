@@ -4,6 +4,8 @@ This directory verifies the pinned Find_Orb JPL `interp()` arithmetic with exact
 
 The mathematical result is conditional: for every real rounding function satisfying the stated binary64 error envelope, every `tc` in `[-1, 1]`, and every coefficient vector within the scanned DE440 envelopes, the modeled source-ordered computation satisfies the final per-component error bound. Source-to-model translation, IEEE correspondence, compiled code, and successful I/O remain explicit obligations outside that theorem.
 
+The extended [finite-format proof](../rounding/README.md) now derives that rounding predicate for an explicit nearest-representable binary64 operation. The [production-slice validator](../production/README.md) separately connects all 114 component/quantity expressions to the retained interpolation instructions under explicit entry-state assumptions. These results narrow the model/implementation gap while preserving the remaining interpreter, IEEE implementation, I/O, and numerical-cache boundaries.
+
 ## Reproduce
 
 Run from the repository root after the normal engine build has acquired the pinned sources and full DE440 file:

@@ -28,6 +28,14 @@ PROOF_FILES = [
     "verification/ephemeris/BridgeSupport.lean",
     "verification/ephemeris/RoundedDAG.lean",
     "verification/kernel/IntegratorCertificates.lean",
+    "verification/rounding/FiniteFormat.lean",
+    "verification/rounding/SpacingBound.lean",
+    "verification/rounding/IEEEBounds.lean",
+    "verification/rounding/Binary64Bits.lean",
+    "verification/integrator_certified/LinearSupport.lean",
+    "verification/integrator_certified/RKFLinear.lean",
+    "verification/integrator_certified/PDLinear.lean",
+    "verification/integrator_certified/CanonicalLinear.lean",
 ]
 
 

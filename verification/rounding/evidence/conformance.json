@@ -1,0 +1,13 @@
+{
+  "schema": 1,
+  "passed": true,
+  "cases": 10868,
+  "subnormalExactResults": 1196,
+  "midpointTies": 504,
+  "roundedBinadeBoundaries": 1532,
+  "node": "v25.9.0",
+  "v8": "14.1.146.11-node.25",
+  "wasmBinarySHA256": "6d78f18348dd96c994474606b560802885183f8759086f7819bd8f23befc4e23",
+  "vectorsSHA256": "02aeb2da5eadf038e1851a60a726521cad9edcb47f7c7c9ed712a05084aea6be",
+  "scope": "Finite direct-WASM primitive conformance probes against exact rational nearest-even decoding; not a proof of the runtime or compiler. Signed zeros compared through the proved real-value quotient."
+}
