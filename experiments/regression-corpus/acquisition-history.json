@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "records": [
+    {
+      "objectId": "1000025",
+      "stage": "resolved-comet observer preflight",
+      "reason": "The nominal SBDB-derived Encke anchor had sub-millisecond precision. Horizons returned a UTC epoch shifted by approximately 0.35 ms, exceeding the original parser bound of 0.17 ms. Preserve this successful raw API response as history, then round the same predetermined supplemental anchor to the documented millisecond input precision and reacquire under a distinct cache key. No solver result was used.",
+      "rawFile": {
+        "path": "raw/horizons-1000025-record-90000091-observer-0.json.gz",
+        "sha256": "3f629398b5d3e71bf0f16fadd33e363264746ff09624de19dce8568b31caedbc",
+        "bytes": 6894,
+        "uncompressedSha256": "a1750960f1d4267af6d51873d27608fa16bf949cfeb1d1c0d282b0d2b8c14cdf",
+        "responseSha256": "cc7dddbfb5e1be8220046aacd8e3e9519c0a360ccbd4b7e76588a61788ff916e",
+        "retrievedAt": "2026-09-13T22:26:04.377Z"
+      }
+    }
+  ]
+}

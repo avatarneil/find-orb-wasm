@@ -1,0 +1,342 @@
+{
+  "schemaVersion": 1,
+  "frozenAt": "2026-09-13T22:22:51.776Z",
+  "selectionSha256": "352d63b5de114d201a83ed3b0bc37fb02a14dc6a7b67e20bc5cec73285ffcf1f",
+  "rule": "For an exact frozen comet identity with multiple Horizons apparition records, retain only rows whose MATCH DESIG equals its frozen SPK-ID and whose Primary Desig exactly matches its frozen primary designation. Choose greatest numeric Epoch-yr, then greatest numeric Record# as deterministic tie-break. Freeze the row before resolved-query or solver evaluation; use Record# followed by a semicolon for all observer/state/elements queries. Unique primary-ID ephemerides keep their already-pinned command. Never substitute another identity or select by fit/propagation outcomes.",
+  "documentation": "https://ssd.jpl.nasa.gov/horizons/manual.html#small-bodies",
+  "records": [
+    {
+      "objectId": "1000025",
+      "designation": "2P",
+      "mode": "explicit-apparition",
+      "command": "90000091;",
+      "chosenRow": {
+        "recordId": "90000091",
+        "epochYear": 2022,
+        "matchedDesignation": "1000025",
+        "primaryDesignation": "2P",
+        "name": "Encke",
+        "rawLine": "    90000091    2022    1000025        2P              Encke"
+      },
+      "exactIdentityCandidates": 61,
+      "lookup": {
+        "path": "raw/horizons-1000025-observer-0.json.gz",
+        "sha256": "f8e3bd67950844c3c184063b0b42c943bedcd9b87ceec73a4a68d3e66c7a86c8",
+        "bytes": 1491,
+        "uncompressedSha256": "0815b1f0e6e0c850e33e743c391143185ff5c368910b57860b028e4427ec6ef8",
+        "responseSha256": "7806a7b1e83e67d2466706825493d9903cede2c8b99f3f4a08d36ac53098e4c6",
+        "retrievedAt": "2026-09-13T22:18:25.471Z"
+      }
+    },
+    {
+      "objectId": "1000012",
+      "designation": "67P",
+      "mode": "explicit-apparition",
+      "command": "90000703;",
+      "chosenRow": {
+        "recordId": "90000703",
+        "epochYear": 2015,
+        "matchedDesignation": "1000012",
+        "primaryDesignation": "67P",
+        "name": "Churyumov-Gerasimenko",
+        "rawLine": "    90000703    2015    1000012        67P             Churyumov-Gerasimenko"
+      },
+      "exactIdentityCandidates": 9,
+      "lookup": {
+        "path": "raw/horizons-1000012-observer-0.json.gz",
+        "sha256": "e9d5b055e24af392066bb0d7b31df05c5ef36e8cb2d03411c249ea42e83b6eb6",
+        "bytes": 1194,
+        "uncompressedSha256": "08ddd9dc126e1809ed8b348a695f86ae2fdd136db9e1b442a2781fff11153fa9",
+        "responseSha256": "9eecda943619c786fc719078b9a0d29338dae0b4685a5b85ab3d7836b3781311",
+        "retrievedAt": "2026-09-13T22:18:26.177Z"
+      }
+    },
+    {
+      "objectId": "1000001",
+      "designation": "50P",
+      "mode": "explicit-apparition",
+      "command": "90000589;",
+      "chosenRow": {
+        "recordId": "90000589",
+        "epochYear": 2011,
+        "matchedDesignation": "1000001",
+        "primaryDesignation": "50P",
+        "name": "Arend",
+        "rawLine": "    90000589    2011    1000001        50P             Arend"
+      },
+      "exactIdentityCandidates": 9,
+      "lookup": {
+        "path": "raw/horizons-1000001-observer-0.json.gz",
+        "sha256": "f5eaf4a3124c286d497130e4e9b015f918524dca9efa56c41051969f6e0cd08d",
+        "bytes": 1180,
+        "uncompressedSha256": "a14ca4f56bebb37b5b89f344416bc5246fe31a65c7cf730dd9d6eef1d996e84c",
+        "responseSha256": "bb018743720112f8c70558c2a0c5543e56d4e2ff6d7813e435aa5bd7189af7e6",
+        "retrievedAt": "2026-09-13T22:18:26.938Z"
+      }
+    },
+    {
+      "objectId": "1000002",
+      "designation": "49P",
+      "mode": "explicit-apparition",
+      "command": "90000580;",
+      "chosenRow": {
+        "recordId": "90000580",
+        "epochYear": 2015,
+        "matchedDesignation": "1000002",
+        "primaryDesignation": "49P",
+        "name": "Arend-Rigaux",
+        "rawLine": "    90000580    2015    1000002        49P             Arend-Rigaux"
+      },
+      "exactIdentityCandidates": 10,
+      "lookup": {
+        "path": "raw/horizons-1000002-observer-0.json.gz",
+        "sha256": "17a92cb92056f5d34d5114c14cd073110ce0d559332bd8517b97116646dfc0dc",
+        "bytes": 1190,
+        "uncompressedSha256": "b3d7d445bb2b049bda3e3ba081d61d15f68ca403b12602ecfebafe3036224da3",
+        "responseSha256": "df956aa9b61f06f8b5e038693b6a9485df77fec95684e231ac5b4784e1840a9d",
+        "retrievedAt": "2026-09-13T22:18:27.626Z"
+      }
+    },
+    {
+      "objectId": "1000003",
+      "designation": "47P",
+      "mode": "explicit-apparition",
+      "command": "90000560;",
+      "chosenRow": {
+        "recordId": "90000560",
+        "epochYear": 2021,
+        "matchedDesignation": "1000003",
+        "primaryDesignation": "47P",
+        "name": "Ashbrook-Jackson",
+        "rawLine": "    90000560    2021    1000003        47P             Ashbrook-Jackson"
+      },
+      "exactIdentityCandidates": 12,
+      "lookup": {
+        "path": "raw/horizons-1000003-observer-0.json.gz",
+        "sha256": "165f2ec2882d4e3989e1254f27766114a101eb9e6dbdcb6d48a1562f1a5c7ff7",
+        "bytes": 1206,
+        "uncompressedSha256": "b75815e579e39600c14326a894678323ad99ba50905733f50a64354c8ef03f76",
+        "responseSha256": "cca1c7b422c9bf2b09ef85d82c157c14d350d95b97a9d664ab6e3dbdb700e00a",
+        "retrievedAt": "2026-09-13T22:18:28.341Z"
+      }
+    },
+    {
+      "objectId": "1000005",
+      "designation": "19P",
+      "mode": "explicit-apparition",
+      "command": "90000306;",
+      "chosenRow": {
+        "recordId": "90000306",
+        "epochYear": 2021,
+        "matchedDesignation": "1000005",
+        "primaryDesignation": "19P",
+        "name": "Borrelly",
+        "rawLine": "    90000306    2021    1000005        19P             Borrelly"
+      },
+      "exactIdentityCandidates": 14,
+      "lookup": {
+        "path": "raw/horizons-1000005-observer-0.json.gz",
+        "sha256": "3b6e37a784b4700ab3bec9d4c89f74781207b4850004e44bdb8e7ac247bd8ce3",
+        "bytes": 1211,
+        "uncompressedSha256": "6d116ccf75284da5114657c0c55935e31a1f82b4f0309ff82d0ebe2b60ab657a",
+        "responseSha256": "c55ae30b49131a88b75784b5a8ef266cbbd24f8677febe1e887a7534c35a6fae",
+        "retrievedAt": "2026-09-13T22:18:29.043Z"
+      }
+    },
+    {
+      "objectId": "1000036",
+      "designation": "1P",
+      "mode": "explicit-apparition",
+      "command": "90000030;",
+      "chosenRow": {
+        "recordId": "90000030",
+        "epochYear": 1968,
+        "matchedDesignation": "1000036",
+        "primaryDesignation": "1P",
+        "name": "Halley",
+        "rawLine": "    90000030    1968    1000036        1P              Halley"
+      },
+      "exactIdentityCandidates": 30,
+      "lookup": {
+        "path": "raw/horizons-1000036-observer-0.json.gz",
+        "sha256": "e433e306f105562553b50853a90b8e5463268ac59830b638cb6bd0682631899d",
+        "bytes": 1320,
+        "uncompressedSha256": "61072882740a04a762595b838fe02fc308789d9e91ce7a2cb001541a676d2f34",
+        "responseSha256": "6402d7dae83c5dfb6166bd1c535d0c7c5e7fef77f7cf82c419c48604de49d6fb",
+        "retrievedAt": "2026-09-13T22:18:29.759Z"
+      }
+    },
+    {
+      "objectId": "1000009",
+      "designation": "23P",
+      "mode": "explicit-apparition",
+      "command": "90000344;",
+      "chosenRow": {
+        "recordId": "90000344",
+        "epochYear": 1989,
+        "matchedDesignation": "1000009",
+        "primaryDesignation": "23P",
+        "name": "Brorsen-Metcalf",
+        "rawLine": "    90000344    1989    1000009        23P             Brorsen-Metcalf"
+      },
+      "exactIdentityCandidates": 3,
+      "lookup": {
+        "path": "raw/horizons-1000009-observer-0.json.gz",
+        "sha256": "31d349afb89ad40f35c0aa0347e589cff058ccf808d6767f198ac97ef58be877",
+        "bytes": 1147,
+        "uncompressedSha256": "1f639c147cd302f88d71f34579b65d5beeea7759db7fea13b33b083112ebc28e",
+        "responseSha256": "087d0d8c43faa6d2dd21d2f7d35cfc78e027b106593f11bd02d24f689d8274c2",
+        "retrievedAt": "2026-09-13T22:18:30.452Z"
+      }
+    },
+    {
+      "objectId": "1000016",
+      "designation": "27P",
+      "mode": "explicit-apparition",
+      "command": "90000383;",
+      "chosenRow": {
+        "recordId": "90000383",
+        "epochYear": 2002,
+        "matchedDesignation": "1000016",
+        "primaryDesignation": "27P",
+        "name": "Crommelin",
+        "rawLine": "    90000383    2002    1000016        27P             Crommelin"
+      },
+      "exactIdentityCandidates": 5,
+      "lookup": {
+        "path": "raw/horizons-1000016-observer-0.json.gz",
+        "sha256": "1a641413a7efa5af0a09aafa84ed907d01e031462339f5fd0ccc6d2ce814d0e5",
+        "bytes": 1159,
+        "uncompressedSha256": "9845a61bae943d24ea42e25e064551676e003f8161721f1764b64299f0f515d7",
+        "responseSha256": "996e2d3bf78f12332fd4d36fd6e78a6fa8060fb20bdb38ec6a117129c120dd25",
+        "retrievedAt": "2026-09-13T22:18:31.175Z"
+      }
+    },
+    {
+      "objectId": "1000042",
+      "designation": "161P",
+      "mode": "unique-primary-id",
+      "command": "DES=1000042;",
+      "lookup": {
+        "path": "raw/horizons-1000042-observer-0.json.gz",
+        "sha256": "6e2fb0aae4f6d9dbcf299ecff06e1491984ab046f1a53bd27dc6ebca6b7d5604",
+        "bytes": 6798,
+        "uncompressedSha256": "bb334a87e659c05b01022daeba861d49c583f9b4c7ae863abdc1d1e7b2d4b53f",
+        "responseSha256": "c7e0c3316d955d0b0f437d23a9537231a4e2c4a2b4f055b1e387ac7c7d0609d7",
+        "retrievedAt": "2026-09-13T22:18:32.081Z"
+      }
+    },
+    {
+      "objectId": "1000155",
+      "designation": "1996 N1",
+      "mode": "unique-primary-id",
+      "command": "DES=1000155;",
+      "lookup": {
+        "path": "raw/horizons-1000155-observer-0.json.gz",
+        "sha256": "b07986a516b13ba763e575ef5bdd682da1eb622d789b2066a81ac5c5c590427f",
+        "bytes": 6551,
+        "uncompressedSha256": "ff6d34f54a5ec34f051e99de16c357fd12fec744948cc531539ed8d248dfbccc",
+        "responseSha256": "1977de28cd58f0298666c6a52c3750c951d13e667a4ca94ee3a3a7cbb8b3807f",
+        "retrievedAt": "2026-09-13T22:18:35.659Z"
+      }
+    },
+    {
+      "objectId": "1000170",
+      "designation": "1997 J2",
+      "mode": "unique-primary-id",
+      "command": "DES=1000170;",
+      "lookup": {
+        "path": "raw/horizons-1000170-observer-0.json.gz",
+        "sha256": "678d41ede42fb8f2a7780986f9e2e24aab698629991f67b280fcdd548868376d",
+        "bytes": 6486,
+        "uncompressedSha256": "c5b8b941564d437ac264ada197028b32d0dd21b90908b216f82362c95144ebf4",
+        "responseSha256": "f3e93066c9cf94bde232fb61af9220fd2c918e8dc9d959e54818fc2e08659965",
+        "retrievedAt": "2026-09-13T22:18:39.010Z"
+      }
+    },
+    {
+      "objectId": "1000173",
+      "designation": "1997 D1",
+      "mode": "unique-primary-id",
+      "command": "DES=1000173;",
+      "lookup": {
+        "path": "raw/horizons-1000173-observer-0.json.gz",
+        "sha256": "2c2108eee4b624f258acf2dd44384926e19cedd87c3a40ffe16f804882250037",
+        "bytes": 6533,
+        "uncompressedSha256": "80fdd63dd75f145e8f1bb7150fbdac70a254e5f341975b7be9ba8615ccc30f39",
+        "responseSha256": "3bc755d964e5c6b0ffc72a77f0ec425ea2e259b669568f562b91b52daf362762",
+        "retrievedAt": "2026-09-13T22:18:42.936Z"
+      }
+    },
+    {
+      "objectId": "1000175",
+      "designation": "1996 E1",
+      "mode": "unique-primary-id",
+      "command": "DES=1000175;",
+      "lookup": {
+        "path": "raw/horizons-1000175-observer-0.json.gz",
+        "sha256": "e238dde4f775495e892c79b441b82324035b5ab5ccfd2e58b5a15f109179fc5f",
+        "bytes": 6503,
+        "uncompressedSha256": "bad74514772d51cfd54c7d5b2aa4055a7ae01cb612a4d10ab0a606ae9eadf8b9",
+        "responseSha256": "dbf87fbff14a889dc7d4dedac3ce844b0a98a03de3a223dfe4a2c3faf46cff3b",
+        "retrievedAt": "2026-09-13T22:18:46.488Z"
+      }
+    },
+    {
+      "objectId": "1000131",
+      "designation": "1996 B2",
+      "mode": "unique-primary-id",
+      "command": "DES=1000131;",
+      "lookup": {
+        "path": "raw/horizons-1000131-observer-0.json.gz",
+        "sha256": "d565b50cd1c25aaf7872d98ea0619b47f78998435893493ee8a24f13bd0cf128",
+        "bytes": 6744,
+        "uncompressedSha256": "ab7cc8053d6d0e8301d079097c0a0ebc58fd9642b42455d50d0afb539f0399e9",
+        "responseSha256": "72cb3a91d911431a1c6822871f9524a88d5e616199ee5c2d91de88d356e9974e",
+        "retrievedAt": "2026-09-13T22:18:50.011Z"
+      }
+    },
+    {
+      "objectId": "1000132",
+      "designation": "1995 O1",
+      "mode": "unique-primary-id",
+      "command": "DES=1000132;",
+      "lookup": {
+        "path": "raw/horizons-1000132-observer-0.json.gz",
+        "sha256": "0af77fa03cd104b7d5b31d57a9613b73c39cd8c682adbeae1fa4ca33cd58edbd",
+        "bytes": 6522,
+        "uncompressedSha256": "ad48f9422c94102b1d369ae485b31776bddc54876f361922ebe800abd6084f77",
+        "responseSha256": "31aaf1f1faccc554d311e9aee777ee4267c67ab7ec5d63ba29a414260e26ba35",
+        "retrievedAt": "2026-09-13T22:18:53.892Z"
+      }
+    },
+    {
+      "objectId": "1000171",
+      "designation": "1997 G2",
+      "mode": "unique-primary-id",
+      "command": "DES=1000171;",
+      "lookup": {
+        "path": "raw/horizons-1000171-observer-0.json.gz",
+        "sha256": "e46dc86c42abd2a5790dee57dbe38f0915ba093b1214c20a33f27aedb833072d",
+        "bytes": 6557,
+        "uncompressedSha256": "a23ef62fd7b61804fd9a1df01b37c75e37dc8b0124b2921362f22721bafab314",
+        "responseSha256": "598884d1bbbb3f8b8bf62c1b5feb6fedcef47d3201fcb4d7b01ef926548381da",
+        "retrievedAt": "2026-09-13T22:18:57.821Z"
+      }
+    },
+    {
+      "objectId": "1000174",
+      "designation": "1997 J1",
+      "mode": "unique-primary-id",
+      "command": "DES=1000174;",
+      "lookup": {
+        "path": "raw/horizons-1000174-observer-0.json.gz",
+        "sha256": "759315e01325bc1fa8bac38e78b81ec3ab96099b81185a71d2f8783b94342c60",
+        "bytes": 6541,
+        "uncompressedSha256": "ea684807af91982437273565169644abb91069cd6964bf4099532772782a8fcd",
+        "responseSha256": "807130eb8c5a66847cab29853b3773a19fa4a93d0677c3628853c6b1b3c54a01",
+        "retrievedAt": "2026-09-13T22:19:01.569Z"
+      }
+    }
+  ]
+}

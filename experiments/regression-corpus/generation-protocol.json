@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "observerBatchEpochs": 40,
+  "epochPrecision": "Horizons documents millisecond observer input precision. Round only the fractional SBDB-derived supplemental anchor to the nearest millisecond before acquisition, retaining its original nominal anchor. Preserve requested and returned epochs; observer epochs must agree within 1 ms and geometric JDTDB epochs within 2e-9 days. Matched epoch means agreement within this finite API precision, not exact real-number identity.",
+  "transportReason": "A 74-epoch GET request with a URL length of 2,382 characters returned HTTP 502, while 37 epochs and 1,383 characters succeeded. Batch at 40 epochs independently of scientific outcomes.",
+  "observer": {
+    "CENTER": "500@399",
+    "EPHEM_TYPE": "OBSERVER",
+    "TIME_TYPE": "UT",
+    "REF_SYSTEM": "ICRF",
+    "QUANTITIES": "1,20,23,30",
+    "ANG_FORMAT": "DEG",
+    "EXTRA_PREC": "YES",
+    "CSV_FORMAT": "YES"
+  },
+  "geometry": {
+    "CENTER": "500@10",
+    "TIME_TYPE": "TDB",
+    "REF_SYSTEM": "ICRF",
+    "REF_PLANE": "ECLIPTIC",
+    "OUT_UNITS": "AU-D",
+    "VEC_CORR": "NONE"
+  },
+  "timeConvention": "UTC reception epochs; TDB = UTC + Horizons quantity 30 / 86400, TT = UTC + 69.184 / 86400. Require absolute(TDB − UTC − 69.184) < 0.002 seconds over these dates. TT/TDB labels refer to the same instant; velocities remain au/TDB-day.",
+  "gravityApplicability": "Strict forward comparison requires a standard JPL# target, a DE440/441 Earth center and an explicit Small-body perts: Yes header, with no comet classification, no nonzero SBDB or Horizons nongravitational coefficient, no declared Horizons extra-force heading, and no catalog two-body flag. Otherwise the case is model-limited with explicit reasons; null SBDB coefficients remain unknown.",
+  "failures": "Transport, parser, identity, frame, time and checksum errors fail closed. Only a cached successful HTTP Horizons response explicitly lacking an ephemeris or carrying an API error becomes an unavailable reference. These objects and raw responses remain recorded without replacement."
+}
